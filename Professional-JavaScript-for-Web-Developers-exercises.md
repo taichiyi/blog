@@ -152,3 +152,35 @@
   <div>div.classList.add('disabled')</div>
 </details>
 
+### 11.3.2 焦点管理
+
+<details>
+  <summary>11.3.2-01 怎么得到DOM中当前获取焦点的元素？</summary>
+  <div>document.activeElement</div>
+</details>
+
+<details>
+  <summary>11.3.2-02 如何通过JavaScript让可获取焦点的元素获取焦点？</summary>
+  <div>element.focus()</div>
+</details>
+
+<details>
+  <summary>11.3.2-03 如何判断否个元素获取了焦点？</summary>
+  <div>element.hasFocus()</div>
+</details>
+
+### 11.3.3 HTMLDocument 的变化
+
+<details>
+  <summary>11.3.3-01 介绍一下HTML5 HTMLDocument的拓展属性readyState</summary>
+  <div>Document的readyState属性有两个可能的值：</div>
+  <div>- loading: 正在加载文档</div>
+  <div>- complete: 已加载完文档</div>
+  <div>一般document.readyState会借助onload事件使用</div>
+</details>
+
+<details>
+  <summary>11.3.3-02 介绍一下HTML5 新增的一个获取head元素的方式</summary>
+  <div>document.head</div>
+  <div>在此之前会使用：document.getElementsByTagName('head')[0]</div>
+</details>
