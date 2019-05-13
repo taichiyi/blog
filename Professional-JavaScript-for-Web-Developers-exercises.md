@@ -174,8 +174,8 @@
 <details>
   <summary>11.3.3-01 介绍一下HTML5 HTMLDocument的拓展属性readyState</summary>
   <div>Document的readyState属性有两个可能的值：</div>
-  <div>- loading: 正在加载文档</div>
-  <div>- complete: 已加载完文档</div>
+  <div>- loading: 正在加载文档</div>
+  <div>- complete: 已加载完文档</div>
   <div>一般document.readyState会借助onload事件使用</div>
 </details>
 
