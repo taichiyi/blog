@@ -132,3 +132,23 @@
   <summary>11.3.1-03 getElementsByClassName返回的HTMLCollection是动态的吗？</summary>
   <div>是</div>
 </details>
+
+<details>
+  <summary>11.3.1-04 HTML5 新增了一种操作类名的方式，这个方式是什么？这种操作类名的方式有几种方法？各方法的意义</summary>
+  <div>这个方式是为所有元素添加一个属性，属性名为classList，值为新集合类型DOMTokenList的实例（类数组）。</div>
+  <div>add(value): 将给定的字符串值添加到列表中。如果值已存在，就不添加了。</div>
+  <div>contains(value): 将给定的字符串值添加到列表中。如果值已存在，就不添加了。</div>
+  <div>remove(value): 从列表中删除给定的字符串。</div>
+  <div>toggle(value): 如果列表中已存在给定的值，删除它；如果不存在，添加它。</div>
+</details>
+
+<details>
+  <summary>11.3.1-05 已知一个元素赋给了名为div的变量，该元素的class为bd。此时需要添加一个名为disabled的类，列出可能的方式。</summary>
+  <div>1:</div>
+  <div>var classNames = div.className.split(/\s+/);</div>
+  <div>classNames.push('disabled')</div>
+  <div>div.classNames = classNames.join(' ')</div>
+  <div>2:</div>
+  <div>div.classList.add('disabled')</div>
+</details>
+
