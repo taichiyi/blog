@@ -207,12 +207,12 @@
 </details>
 
 <details>
-  <summary>11.3.5-03 如何获取自定义属性"myname"的值？</summary>
+  <summary>11.3.5-03 如何获取div元素自定义属性"myname"的值？</summary>
   <div>var myName = div.dataset.myname</div>
 </details>
 
 <details>
-  <summary>11.3.5-04 如何设置自定义属性"myname"的值？</summary>
+  <summary>11.3.5-04 如何设置div元素自定义属性"myname"的值？</summary>
   <div>div.dataset.myname = "taichiyi"</div>
 </details>
 
