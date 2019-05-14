@@ -192,3 +192,51 @@
   <div>document.head</div>
   <div>在此之前会使用：document.getElementsByTagName('head')[0]</div>
 </details>
+
+### 11.3.5 自定义数据属性
+
+<details>
+  <summary>11.3.5-01 HTML5中可以为元素添加非标准(自定义)属性，是添加前缀吗？什么前缀？</summary>
+  <div>data-</div>
+</details>
+
+<details>
+  <summary>11.3.5-02 可以通过元素的哪个属性名来访问元素自定义属性的集合？该属性值是哪个对象的实例？</summary>
+  <div>属性名：dataset</div>
+  <div>属性值对象：DOMStringMap</div>
+</details>
+
+<details>
+  <summary>11.3.5-03 如何获取自定义属性"myname"的值？</summary>
+  <div>var myName = div.dataset.myname</div>
+</details>
+
+<details>
+  <summary>11.3.5-04 如何设置自定义属性"myname"的值？</summary>
+  <div>div.dataset.myname = "taichiyi"</div>
+</details>
+
+### 11.3.6 插入标记
+
+<details>
+  <summary>11.3.6-01 介绍一下元素的innerHTML属性。有几种模式？分别代表什么含义？</summary>
+  <div>背景：</div>
+  <div>给文档插入大量新HTML标记的情况下，通过DOM操作非常麻烦。</div>
+  <div>读模式：innerHTML属性返回与调用元素的所有子节点（包括元素、注释和文本节点）对应的HTML标记。</div>
+  <div>写模式：innerHTML会根据指定的值创建新的DOM树，然后用这个DOM树完全替换原先所有子节点。</div>
+</details>
+
+<details>
+  <summary>11.3.6-02 介绍一下元素的outerHTML属性的读、写模式。</summary>
+  <div>读模式：outerHTML返回调用它的元素及所有子节点的HTML标签。</div>
+  <div>写模式：outerHTML会根据指定的HTML字符串创建新的DOM子树，然后用这个DOM字数完全替换调用元素。</div>
+</details>
+
+<details>
+  <summary>11.3.6-03 元素的inserAdjacentHTML方法，各个参数的意义？第一个参数的所有枚举？</summary>
+  <div>一参：插入位置；</div>
+  <div>"beforebegin"：在当前元素之前插入一个紧邻的同辈元素；</div>
+  <div>"afterbegin"：在当前元素之下插入一个新的子元素或在第一个子元素之前插入一个新的子元素；</div>
+  <div>"beforeend"：在当前元素之下插入一个新的子元素或在最后一个子元素之后插入一个新子元素；</div>
+  <div>"afterbegin"：在当前元素之后插入一个紧邻的同辈元素；</div>
+</details>
