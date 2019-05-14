@@ -31,6 +31,10 @@ react已组件的形式来实现模块化。所以组件这个概念在react中�
 - static getDerivedStateFromProps
 - getSnapshotBeforeUpdate
 
+### 为什么16.3去掉了3个生命周期函数，新增了2个生命周期函数？
+
+官方说：去掉的那3个生命周期往往会鼓励不安全的编码实践。这些生命周期方法经常被误解和巧妙地误用; 此外，我们预计，对于异步渲染，它们的潜在误用可能会更成问题。
+
 ## React.PureComponent
 
 React.PureComponent 与 React.Component 很相似。两者的区别在于 React.Component 并未实现 shouldComponentUpdate()，而 React.PureComponent 中以浅层对比 prop 和 state 的方式来实现了该函数。
