@@ -29,66 +29,74 @@
       <div>document.querySelector('body')</div>
     </details>
     <details>
-      <summary>11.1-03.02 ID为“myDiv”的元素。</summary>
-      <div>document.querySelectorAll('#myDiv')</div>
+      <summary>11.1-03.02 ID值等于“myDiv”的元素。</summary>
       <div>document.querySelectorAll('[id="myDiv"]')</div>
     </details>
     <details>
-      <summary>11.1-03.03 类为selected的元素。</summary>
-      <div>document.querySelectorAll('.selected')</div>
+      <summary>11.1-03.03 ID值包含“myDiv”的元素。</summary>
+      <div>document.querySelectorAll('#myDiv')</div>
+      <div>document.querySelectorAll('[id*="myDiv"]')</div>
+    </details>
+    <details>
+      <summary>11.1-03.04 类值等于selected的元素。</summary>
       <div>document.querySelectorAll('[class="selected"]')</div>
     </details>
     <details>
-      <summary>11.1-03.04 类为“button”的img元素。</summary>
+      <summary>11.1-03.05 类值包含selected的元素。</summary>
+      <div>document.querySelectorAll('.selected')</div>
+      <div>document.querySelectorAll('[class*="selected"]')</div>
+    </details>
+    <details>
+      <summary>11.1-03.06 类为“button”的img元素。</summary>
       <div>document.querySelectorAll('img.button')</div>
     </details>
     <details>
-      <summary>11.1-03.05 div元素下标签名为span的子元素。</summary>
+      <summary>11.1-03.07 div元素下标签名为span的子元素。</summary>
       <div>document.querySelectorAll('div > span')</div>
     </details>
     <details>
-      <summary>11.1-03.06 div元素下的span元素。</summary>
+      <summary>11.1-03.08 div元素下的span元素。</summary>
       <div>document.querySelectorAll('div span')</div>
     </details>
     <details>
-      <summary>11.1-03.07 a元素中属性名为target的元素。</summary>
+      <summary>11.1-03.09 a元素中属性名为target的元素。</summary>
       <div>document.querySelectorAll('a[target]')</div>
     </details>
     <details>
-      <summary>11.1-03.08 p元素中属性名为id，值为p1的元素。</summary>
+      <summary>11.1-03.10 p元素中属性名为id，值为p1的元素。</summary>
       <div>document.querySelectorAll('p[id="p1"]')</div>
       <div>document.querySelectorAll('p#p1')</div>
     </details>
     <details>
-      <summary>11.1-03.09 p元素中存在属性名为id，值为p开头的元素。</summary>
+      <summary>11.1-03.11 p元素中存在属性名为id，值为p开头的元素。</summary>
       <div>document.querySelectorAll('p[id^="p"]')</div>
     </details>
     <details>
-      <summary>11.1-03.10 p元素中存在属性名为id，值为p结尾的元素。</summary>
+      <summary>11.1-03.12 p元素中存在属性名为id，值为p结尾的元素。</summary>
       <div>document.querySelectorAll('p[id$="p"]')</div>
     </details>
     <details>
-      <summary>11.1-03.11 p元素中存在属性名为id，值含有p的元素。</summary>
+      <summary>11.1-03.13 p元素中存在属性名为id，值包含p的元素。</summary>
       <div>document.querySelectorAll('p[id*="p"]')</div>
     </details>
     <details>
-      <summary>11.1-03.12 p元素中存在属性名为id，值为p；属性名为class，值为classname的元素。</summary>
-      <div>document.querySelectorAll('p[id*="p"][class="classname"]')</div>
+      <summary>11.1-03.14 p元素中存在属性名为id，值为包含"p"；属性名为class，值包含"classname"的元素。</summary>
+      <div>document.querySelectorAll('p[id*="p"][class*="classname"]')</div>
     </details>
     <details>
-      <summary>11.1-03.13 div元素和span元素。</summary>
+      <summary>11.1-03.15 div元素和span元素。</summary>
       <div>document.querySelectorAll('div, span')</div>
     </details>
     <details>
-      <summary>11.1-03.14 div元素之后相邻siblings元素，名为span的元素。</summary>
+      <summary>11.1-03.16 div元素之后相邻siblings元素，名为span的元素。</summary>
       <div>document.querySelectorAll('div+span')</div>
     </details>
     <details>
-      <summary>11.1-03.15 div元素之后的siblings元素中名为span的元素。</summary>
+      <summary>11.1-03.17 div元素之后的siblings元素中名为span的元素。</summary>
       <div>document.querySelectorAll('div~span')</div>
     </details>
     <details>
-      <summary>11.1-03.16 所有元素。</summary>
+      <summary>11.1-03.18 所有元素。</summary>
       <div>document.querySelectorAll('*')</div>
     </details>
 </details>
@@ -119,11 +127,11 @@
 <details>
   <summary>11.3.1-02 请使用getElementsByClassName完成以下查找：</summary>
   <details>
-    <summary>11.3.1-02.01 所有类中含有“username”的元素</summary>
+    <summary>11.3.1-02.01 所有类中包含“username”的元素</summary>
     <div>document.getElementsByClassName('username')</div>
   </details>
   <details>
-    <summary>11.3.1-02.02 所有类中含有“username”和“current”的元素</summary>
+    <summary>11.3.1-02.02 所有类中包含“username”和“current”的元素</summary>
     <div>document.getElementsByClassName('username current')</div>
   </details>
 </details>
