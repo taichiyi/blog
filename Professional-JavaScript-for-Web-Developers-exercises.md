@@ -250,10 +250,10 @@
 ### 11.3.7 scrollIntoView()方法
 
 <details>
-  <summary>11.3.7-01 scrollIntoView方法的参数有哪些？分别代表什么意思？</summary>
+  <summary>11.3.7-01 scrollIntoView方法的参数有哪些？分别代表什么意思？</summary>
   <div>可传1个参数：true或false（默认true）</div>
-  <div>ture: 窗口滚动会让调用元素的顶部与视口顶部尽可能平齐。</div>
-  <div>false: 调用元素会尽可能全部出现在视口中（可能的话，调用元素的底部会与视口底部平齐）</div>
+  <div>ture: 窗口滚动会让调用元素的顶部与视口顶部尽可能平齐。</div>
+  <div>false: 调用元素会尽可能全部出现在视口中（可能的话，调用元素的底部会与视口底部平齐）</div>
 </details>
 
 ### 11.4 专有扩展
