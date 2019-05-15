@@ -233,10 +233,45 @@
 </details>
 
 <details>
-  <summary>11.3.6-03 元素的inserAdjacentHTML方法，各个参数的意义？第一个参数的所有枚举？</summary>
+  <summary>11.3.6-03 元素的insertAdjacentHTML方法，各个参数的意义？第一个参数的所有枚举？</summary>
   <div>一参：插入位置；</div>
   <div>"beforebegin"：在当前元素之前插入一个紧邻的同辈元素；</div>
   <div>"afterbegin"：在当前元素之下插入一个新的子元素或在第一个子元素之前插入一个新的子元素；</div>
   <div>"beforeend"：在当前元素之下插入一个新的子元素或在最后一个子元素之后插入一个新子元素；</div>
-  <div>"afterbegin"：在当前元素之后插入一个紧邻的同辈元素；</div>
+  <div>"afterend"：在当前元素之后插入一个紧邻的同辈元素；</div>
+  <div>二参：要插入的HTML文本；</div>
+</details>
+
+<details>
+  <summary>11.3.6-04 插入标记，一般有哪些性能问题？</summary>
+  <div>最好拼接好标记后一次性插入DOM，避免高频率将标记插入DOM</div>
+</details>
+
+### 11.3.7 scrollIntoView()方法
+
+<details>
+  <summary>11.3.7-01 scrollIntoView方法的参数有哪些？分别代表什么意思？</summary>
+  <div>可传1个参数：true或false（默认true）</div>
+  <div>ture: 窗口滚动会让调用元素的顶部与视口顶部尽可能平齐。</div>
+  <div>false: 调用元素会尽可能全部出现在视口中（可能的话，调用元素的底部会与视口底部平齐）</div>
+</details>
+
+### 11.4 专有扩展
+
+### 11.4.2 children 属性
+
+<details>
+  <summary>11.4.2 元素的children属性和childNodes属性有什么区别？children属性值是哪个对象的实例？</summary>
+  <div>childNodes: 包含所有类型节点（文本和注释节点）</div>
+  <div>children: 只包含元素节点</div>
+  <div></div>
+  <div>是HTMLCollection对象的实例</div>
+</details>
+
+### 11.4.3 contains()方法
+
+<details>
+  <summary>11.4.3 如何判断某个节点是不是另一个节点的后代？</summary>
+  <div>document.documentElement.contains(document.body)</div>
+  <div>返回值为boolean</div>
 </details>
