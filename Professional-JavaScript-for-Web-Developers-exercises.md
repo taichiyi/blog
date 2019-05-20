@@ -297,7 +297,7 @@
   <div>getPropertyPriority(propertyName): 返回给定属性使用了！important设置，则返回"important"；否则返回空字符串。</div>
   <div>getPropertyValue(propertyName): 返回给定属性的字符串值</div>
   <div>removeProperty(propertyName): 从样式中删除给定的属性，返回被删除的属性值</div>
-  <div>setProperty(propertyName, value, priority): 从样式中删除给定的属性，返回被删除的属性值</div>
+  <div>setProperty(propertyName, value, priority): 将给定的属性设置为相应的值，并加上优先权标志（"important"或一个空字符串）</div>
 </details>
 
 <details>
@@ -311,7 +311,7 @@
 
 <details>
   <summary>12.2.2-01 介绍一下"样式表"</summary>
-  <div>CSSStyleSheet 类型表示的是样式表，包括通过&lt;link&gt;元素包含的样式表和&lt;style&gl;元素中定义的样式表。</div>
+  <div>CSSStyleSheet 类型表示的是样式表，包括通过&lt;link&gt;元素包含的样式表和&lt;style&gt;元素中定义的样式表。</div>
   <div>访问样式表的属性：.xxx</div>
   <div>样式表的属性：</div>
   <div>disabled: (boolean)表示样式表是否被禁用。</div>
