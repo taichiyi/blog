@@ -7,7 +7,9 @@
 <!-- TODO
 - HTMLCollection和NodeList区别
 - NodeList 为动态会有性能问题？
- -->
+-->
+
+## 11 DOM 扩展
 
 ## 11.1 选择符API
 
@@ -281,6 +283,8 @@
   <div>- 写模式: 删除该元素的所有子节点，插入包含相应文本值的文本节点。</div>
 </details>
 
+## 12 DOM2 和 DOM3
+
 ### 12.2.1 访问元素的样式
 
 <details>
@@ -333,4 +337,116 @@
   <div>offsetWidth: 元素在水平方向上占用的空间大小。</div>
   <div>offsetLeft: 元素的左外边框至包含元素的左内边框之间的像素距离。</div>
   <div>offsetTop: 元素的上外边框至包含元素的上内边框之间的像素距离。</div>
+</details>
+
+<details>
+  <summary>12.2.3-02 元素的clientHeight包含padding吗？包含border吗？包含margin吗？</summary>
+  <div>- 包含padding</div>
+  <div>- 不包含border</div>
+  <div>- 不包含margin</div>
+</details>
+
+<details>
+  <summary>12.2.3-03 元素从里到外是什么顺序（content, padding, margin, border）</summary>
+  <div>content -> padding -> border -> margin</div>
+</details>
+
+<details>
+  <summary>12.2.3-04 html元素是不是自带滚动条？</summary>
+  <div>是</div>
+</details>
+
+<details>
+  <summary>12.2.3-05 介绍一下与滚动大小相关的属性</summary>
+  <div>scrollHeight: 元素内容的实际高度。在没有滚动条的情况下，等于clientHeight.</div>
+  <div>scrollWidth: 元素内容的实际宽度。在没有滚动条的情况下，等于clientWeight.</div>
+  <div>scrollLeft: 被隐藏在内容区域左侧的像素数。通过设置这个属性可以改变元素滚动位置。</div>
+  <div>scrollTop: 被隐藏在内容区域上方的像素数。通过设置这个属性可以改变元素滚动位置。</div>
+</details>
+
+<details>
+  <summary>12.2.3-06 介绍getBoundingClientRect()方法，的x,y,width,height</summary>
+  <div>x,y,width,height</div>
+</details>
+
+## 13 事件
+
+### 13.1 事件流
+
+<details>
+  <summary>13.1-01 JavaScript与HTML之间的交互是通过什么实现的?</summary>
+  <div>事件</div>
+</details>
+
+<details>
+  <summary>13.1-02 什么是事件冒泡？什么是事件捕获？</summary>
+  <div>- 事件冒泡: 事件开始时由文档中嵌套层次最深的那个节点接收，然后逐级向上传播。</div>
+  <div>- 事件捕获: 与事件冒泡相反。</div>
+</details>
+
+<details>
+  <summary>13.1-03 “DOM2级事件”规定的事件流包括三个阶段，哪三个阶段？</summary>
+  <div>事件捕获阶段、处于目标阶段和事件冒泡阶段</div>
+</details>
+
+### 13.2 事件处理程序
+
+<details>
+  <summary>13.2-01 事件处理程序有几种？</summary>
+  <div>- HTML: &lt;input type="button" onclick="alert(123)" /&gt;</div>
+  <div>- DOM0: </div>
+  <div>var btn = document.getElementById("myBtn")</div>
+  <div>btn.onclick = function() { alert(123) }</div>
+  <div>- DOM2: </div>
+  <div>var btn = document.getElementById("myBtn")</div>
+  <div>btn.addEventListener('click', function() { alert(123) }, false)</div>
+</details>
+
+<details>
+  <summary>13.2-02 addEventListener 同一个元素同一个事件可以添加多个吗？触发顺序？介绍下全部参数</summary>
+  <div>- 可以</div>
+  <div>- 先添加先触发</div>
+  <div>- 参数：</div>
+  <div>1参：事件名</div>
+  <div>2参：作为事件处理程序的函数</div>
+  <div>3参：boolean；false: 在冒泡阶段调用事件处理函数。true: 在捕获阶段调用事件处理函数</div>
+</details>
+
+### 13.3 事件对象
+
+<details>
+  <summary>13.3-01 介绍一下“事件对象”的常用属性和方法</summary>
+  <div>- bubbles: 事件是否冒泡</div>
+  <div>- cancelable: 是否可以取消事件的默认行为</div>
+  <div>- currentTarget: 当前正在处理事件的那个元素</div>
+  <div>- defaultPrevented: 为true表示已经调用preventDefault（）(DOM3级)</div>
+  <div>- preventDefault(): 取消事件的默认行为。如果cancelable是true才可以使用。</div>
+  <div>- stopImmediatePropagation(): 取消事件的进一步捕获或冒泡，同时阻止任何事件处理程序被调用。(DOM3级)</div>
+  <div>- stopPropagation(): 取消事件的进一步捕获或冒泡。如果bubbles为true才可以使用</div>
+</details>
+
+### 13.4 事件类型
+
+<details>
+  <summary>13.4-01 UI事件有哪些？及其意义</summary>
+  <div>- load: 1.当页面加载完后在window上面触发；2.当图像加载完毕在&lt;img&gt;元素上触发；3.当嵌入的内容加载完毕时在&lt;object&gt;元素上面触发</div>
+  <div>- unload: 卸载</div>
+  <div>- abort: 在用户停止下载过程中，如果嵌入的内容没有加载完，则在&lt;object&gt;元素上触发</div>
+  <div>- error: 1.当JavaScript错误时在window上面触发；2.当无法加载图像时在&lt;img&gt;元素上触发；3.当无法加载嵌入内容时在&lt;object&gt;元素上面触发</div>
+  <div>- select: 用户选择文本框(input或textarea元素)触发</div>
+  <div>- resize: 当窗口或框架的大小变化时在window或框架上面触发。</div>
+  <div>- scroll: 当在用户滚动带滚动条的元素中的内容时。</div>
+</details>
+
+<details>
+  <summary>13.4-02 焦点事件有哪些？及其意义</summary>
+  <div>- blur: 在元素失去焦点时触发。不会冒泡。</div>
+  <div>- focusout: 在元素失去焦点时触发。冒泡。</div>
+  <div>- focus: 在元素获得焦点时触发。不会冒泡。</div>
+  <div>- focusin: 在元素获得焦点时触发。冒泡。</div>
+</details>
+
+<details>
+  <summary>13.4-03 当焦点从页面中的一个元素移动到另一个元素，focusin,blur,focusout,focus的触发顺序?</summary>
+  <div>focusout -> focusin -> blur -> focus</div>
 </details>
