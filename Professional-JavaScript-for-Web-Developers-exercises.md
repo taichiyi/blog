@@ -450,3 +450,81 @@
   <summary>13.4-03 当焦点从页面中的一个元素移动到另一个元素，focusin,blur,focusout,focus的触发顺序?</summary>
   <div>focusout -> focusin -> blur -> focus</div>
 </details>
+
+<details>
+  <summary>13.4-04 鼠标事件有哪些？及其意义</summary>
+  <div>- click: 单击事件</div>
+  <div>- dblclick: 双击事件</div>
+  <div>- mousedown: 按下任意鼠标按钮</div>
+  <div>- mouseenter: 光标首次从元素外移动到元素范围之内时触发。不冒泡，后代元素不触发。</div>
+  <div>- mouseleave: 在位于元素上方的鼠标光标移动到元素范围(包括子元素)之外时触发。不冒泡</div>
+  <div>- mousemove: 当鼠标指针在元素内部移动时重复地触发。</div>
+  <div>- mouseout: 当鼠标指针位于一个元素上方，然后用户将其移入另一个元素时触发(包括子元素)。</div>
+  <div>- mouseover: 在鼠标指针位于一个元素外部，然后用户将其首次移入另一个元素（包括子元素）边界之内时触发。</div>
+  <div>- mouseup: 用户释放鼠标按钮时触发。</div>
+  <div>- mousewheel: 鼠标滚轮，触摸板。</div>
+</details>
+
+<details>
+  <summary>13.4-05 鼠标事件哪些会冒泡？</summary>
+  <div>- 除了mouseenter和mouseleave，所有鼠标事件都冒泡。</div>
+</details>
+
+<details>
+  <summary>13.4-06 mousedown,mouseup,click,dblclick的关系</summary>
+  <div>- 只有在同一个元素上相继触发 mousedown 和 mouseup 事件，才会触发 click 事件。只有触发两次 click 事件，才会触发 dblclick 事件。</div>
+</details>
+
+<details>
+  <summary>13.4-07 键盘事件有哪些？及其意义</summary>
+  <div>- keydown: 当用户按下键盘上任意键时触发，按住不放则重复触发。</div>
+  <div>- keypress: 当用户按下键盘上字符键时触发，按住不放则重复触发。</div>
+  <div>- keyup: 当用户释放键盘上字符键时触发。</div>
+</details>
+
+<details>
+  <summary>13.4-07 文本事件有哪些？及其意义</summary>
+  <div>- textInput: 在文本显示给用户前拦截文本。</div>
+</details>
+
+<details>
+  <summary>13.4-08 什么是复合事件？</summary>
+  <div>- 复合事件是DOM3级事件中新添加的一类事件，用于处理IME的输入序列。IME通常需要同时按住多个建，但最终只输入一个字符。</div>
+</details>
+
+<details>
+  <summary>13.4-09 介绍一下DOM3的3个变动事件</summary>
+  <div>- DOMSubtreeModified：在DOM结构中发生任何变化时触发。这个事件在其他任何事件触发后都会触发。</div>
+  <div>- DOMNodeInserted：在一个节点作为子节点被插入到另一个节点中时触发。</div>
+  <div>- DOMNodeRemoved：在节点从其父节点中被移除时触发。</div>
+</details>
+
+<details>
+  <summary>13.4-10 介绍一下 HTML5 事件</summary>
+  <div>- contextmenu : 监听鼠标右击事件，一般用于自定义菜单。</div>
+  <div>- DOMContentLoaded : 事件在形成完整的 DOM 树之后就会触发，不理会图像、JavaScript CSS 文件或其他资源是否加载完毕。</div>
+  <div>- readystatechange : document.readyState</div>
+  <div>- pageshow，pagehide : 页面显示与隐藏</div>
+  <div>- hashchange : “#”号后的所有字符串变动</div>
+</details>
+
+<details>
+  <summary>13.4-11 介绍一下 touch 事件</summary>
+  <div>- touchstart : </div>
+  <div>- touchmove : </div>
+  <div>- touchend : 当手指从屏幕上移开时触发</div>
+  <div>- touchcancel : 系统停止跟踪触摸时触发</div>
+</details>
+
+### 20 JSON
+
+<details>
+  <summary>20-1 JSON XML</summary>
+  <div>- 都是结构化数据</div>
+  <div>- XML的缺点：过于繁琐、冗长</div>
+</details>
+
+<details>
+  <summary>20-2 JSON 可表示的数据类型</summary>
+  <div>- 字符串、数值、布尔值和null</div>
+</details>
