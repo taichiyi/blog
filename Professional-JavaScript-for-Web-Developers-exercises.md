@@ -234,9 +234,9 @@
   <summary>11.3.6-03 元素的insertAdjacentHTML方法，各个参数的意义？第一个参数的所有枚举？</summary>
   <div>一参：插入位置；</div>
   <div>"beforebegin"：在当前元素之前插入一个紧邻的同辈元素；</div>
+  <div>"afterend"：在当前元素之后插入一个紧邻的同辈元素；</div>
   <div>"afterbegin"：在当前元素之下插入一个新的子元素或在第一个子元素之前插入一个新的子元素；</div>
   <div>"beforeend"：在当前元素之下插入一个新的子元素或在最后一个子元素之后插入一个新子元素；</div>
-  <div>"afterend"：在当前元素之后插入一个紧邻的同辈元素；</div>
   <div>二参：要插入的HTML文本；</div>
 </details>
 
