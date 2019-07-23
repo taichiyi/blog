@@ -333,8 +333,8 @@
 
 <details>
   <summary>12.2.3-01 涉及到元素偏移量的属性有哪些？各自的意义</summary>
-  <div>offsetHeight: 元素在垂直方向上占用的空间大小。</div>
-  <div>offsetWidth: 元素在水平方向上占用的空间大小。</div>
+  <div>offsetHeight: 元素在垂直方向上占用的空间大小。包含padding, border</div>
+  <div>offsetWidth: 元素在水平方向上占用的空间大小。包含padding, border</div>
   <div>offsetLeft: 元素的左外边框至包含元素的左内边框之间的像素距离。</div>
   <div>offsetTop: 元素的上外边框至包含元素的上内边框之间的像素距离。</div>
 </details>
@@ -409,7 +409,7 @@
   <div>- 参数：</div>
   <div>1参：事件名</div>
   <div>2参：作为事件处理程序的函数</div>
-  <div>3参：boolean；false: 在冒泡阶段调用事件处理函数。true: 在捕获阶段调用事件处理函数</div>
+  <div>3参：boolean；默认为false；false: 在冒泡阶段调用事件处理函数。true: 在捕获阶段调用事件处理函数</div>
 </details>
 
 ### 13.3 事件对象
