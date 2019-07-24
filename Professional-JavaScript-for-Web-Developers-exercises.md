@@ -9,6 +9,45 @@
 - NodeList 为动态会有性能问题？
 -->
 
+## 10 DOM
+
+## 10.1 节点层次
+
+<details>
+  <summary>10.1 Node对象的原型链</summary>
+  <div>- Node -> EventTarget -> Object</div>
+</details>
+
+<details>
+  <summary>10.1 HTMLElement对象的原型链</summary>
+  <div>- HTMLElement -> Element -> Node</div>
+</details>
+
+<details>
+  <summary>10.1 Text对象的原型链</summary>
+  <div>- Text -> CharacterData -> Node</div>
+</details>
+
+<details>
+  <summary>10.1 div元素的原型链</summary>
+  <div>- HTMLDivElement -> HTMLElement</div>
+</details>
+
+<details>
+  <summary>10.1 span元素的原型链</summary>
+  <div>- HTMLSpanElement -> HTMLElement</div>
+</details>
+
+<details>
+  <summary>10.1 p元素的原型链</summary>
+  <div>- HTMLParagraphElement -> HTMLElement</div>
+</details>
+
+<details>
+  <summary>10.1 script元素的原型链</summary>
+  <div>- HTMLScriptElement -> HTMLElement</div>
+</details>
+
 ## 11 DOM 扩展
 
 ## 11.1 选择符API
@@ -516,7 +555,52 @@
   <div>- touchcancel : 系统停止跟踪触摸时触发</div>
 </details>
 
-### 20 JSON
+<details>
+  <summary>13.5.1 介绍一下事件委托。主要用来解决什么问题？问题的背景？解决方法的原理</summary>
+  <div>- 是什么: 委托事件利用事件冒泡，只指定一个事件处理程序，就可以管理某一个类型的所有事件。</div>
+  <div>- 解决的问题: "事件处理程序过多"</div>
+  <div>- 背景: 添加到每一个DOM的事件处理函数都是对象都会占用内存 </div>
+  <div>- 原理 : 事件冒泡</div>
+</details>
+
+<details>
+  <summary>13.6.4 介绍一下自定义事件(模拟事件)</summary>
+  <div>- 创建事件: const event = new CustomEvent('click')</div>
+  <div>- 派发事件: obj.dispatchEvent(event)</div>
+</details>
+
+## 14 表单脚本
+
+<details>
+  <summary>14.1 介绍一下HTMLFormElement。包括不限于原型链，常用方法、属性</summary>
+  <div>- 原型链: HTMLFormElement -> HTMLElement</div>
+  <div>- 属性: </div>
+  <div>     action: 接受请求的URL</div>
+  <div>     elements: 表单中所有控件的集合</div>
+  <div>     enctype: 请求的编码类型</div>
+  <div>     method: 要发送HTTP请求类型</div>
+  <div>- 方法: </div>
+  <div>     reset: 将所有表单域充值为默认值</div>
+  <div>     submit: 提交表单</div>
+</details>
+
+<details>
+  <summary>14.1 HTMLFormContrlsCollection的原型链</summary>
+  <div>- 原型链: HTMLFormContrlsCollection -> HTMLCollection -> Object</div>
+</details>
+
+<details>
+  <summary>14.1.3 介绍一下表单共有的字段属性</summary>
+  <div>- disable: 是否被禁用</div>
+  <div>- form: 指向当前字段所属的表单指针</div>
+  <div>- name: 字段名称</div>
+  <div>- readOnly: 是否只读</div>
+  <div>- tabIndex: 切换（tab）序号</div>
+  <div>- type: 字段类型</div>
+  <div>- value: 字段值</div>
+</details>
+
+## 20 JSON
 
 <details>
   <summary>20-1 JSON XML</summary>
