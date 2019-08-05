@@ -612,3 +612,36 @@
   <summary>20-2 JSON 可表示的数据类型</summary>
   <div>- 字符串、数值、布尔值和null</div>
 </details>
+
+## 23 离线应用与客户端存储
+
+### 23.3 数据存储
+
+<details>
+  <summary>23.3.1.1 每个域的Cookie最大长度为多少字节</summary>
+  <div>- 4095B</div>
+</details>
+
+<details>
+  <summary>23.3.1.2 Cookie的名称是否区分大小写</summary>
+  <div>- 不区分</div>
+</details>
+
+<details>
+  <summary>23.3.1.2 Cookie由几块信息构成？分别介绍一下</summary>
+  <div>- 名称: name</div>
+  <div>- 域: domain</div>
+  <div>- 路径: path</div>
+  <div>- 失效时间: expires</div>
+  <div>- 安全标致: secure</div>
+</details>
+
+<details>
+  <summary>23.3.1.2 通过Set-Cookie让浏览器保存一个Cookie，名称为token、值为123456、域为wrox.com(包括多级子域名)、路径为不限、失效日期为2019年7月26日 07:10:24、使用SSL连接，代码该怎么写?</summary>
+  <div>Set-Cookie: tolen=123456; domain=.wrox.com; path=/; expires=Fri 26-Jul-2019 07:10:24 GMT; secure</div>
+</details>
+
+<details>
+  <summary>23.3.3.2 sessionStorage的访问权限</summary>
+  <div>sessionStorage对象绑定与某个服务器会话</div>
+</details>
