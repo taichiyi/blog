@@ -10,7 +10,7 @@
 - AsyncParallelBailHook
 - AsyncSeriesHook
 - AsyncSeriesBailHook
-- AsyncSeriesWaterfallHoo
+- AsyncSeriesWaterfallHook
 
 以上的API都继承了`Hook类`(node_modules/tapable/lib/Hook.js)
 
@@ -78,6 +78,8 @@ A: 如果只考虑动态生成执行代码的话，二者都可以；但是这�
 `SyncHook类`和`SyncBailHook类`的主要区别在各自的`compile方法`，而`compile方法`的区别在于`factory函数`，因为它决定了发布函数的内容
 
 ## SyncHook类
+
+调用订阅函数（先进先出）
 
 > 例子↓
 
@@ -191,7 +193,6 @@ function(SyncWaterfallHook_name) {
     return SyncWaterfallHook_name;
     // content(主要) -end-
 }
-
 ```
 
 ## SyncLoopHook
@@ -266,9 +267,9 @@ function(SyncLoopHook_name, second) {
 | tapAsync | callAsync |
 | tapPromise | promise |
 
-### tap,callAsync
+### tap,callAsync - AsyncParallelHook
 
-全部订阅函数被调用后，会立即调用发布函数
+全部订阅函数被调用后，会立即调用发布函数
 
 > 例子↓
 
@@ -355,7 +356,7 @@ function(AsyncParallelHook_name, _callback) {
 }
 ```
 
-### tapAsync,callAsync
+### tapAsync,callAsync - AsyncParallelHook
 
 每个订阅函数的最后一个参数为“订阅回调函数”
 
@@ -444,9 +445,13 @@ function(AsyncParallelHook_name, _callback) {
 }
 ```
 
-### tapPromise,promise
+### tapPromise,promise - AsyncParallelHook
 
 每个订阅函数的最后一个参数为“订阅回调函数”，“订阅回调函数”的返回值必须是Promise实例。
+
+如果每个“订阅回调函数”的状态都为“成功”，则会调用“订阅回调函数”的resolve方法。
+
+如果有一个“订阅回调函数”的状态都为“失败”，则会调用“订阅回调函数”的reject方法，并传入报错信息。
 
 ``` javascript
 const queue = new AsyncParallelHook(['AsyncParallelHook_name']);
@@ -556,5 +561,583 @@ function(AsyncParallelHook_name) {
         } while (false);
         _sync = false;
     });
+}
+```
+
+## AsyncParallelBailHook
+
+不关心订阅函数的返回值。
+
+发布函数最后一个参数必须为函数(全部订阅函数都调用过后，会调用此订阅函数)
+
+有三种订阅/发布的模式，如下
+
+| 订阅 | 发布 |
+| - | - |
+| tap | callAsync |
+| tapAsync | callAsync |
+| tapPromise | promise |
+
+### tap,callAsync - AsyncParallelBailHook
+
+发布函数的最后一个参数为“发布回调函数”
+
+如果其中一个订阅函数运行报错，不执行后面的订阅函数，调用“发布回调函数”并传入1个参数(错误信息)
+
+如果有一个订阅函数的返回值不为undefined，剩余的订阅函数将不会执行，调用“发布回调函数”并传入2个参数(错误信息，返回值)
+
+如果全部订阅函数的返回值都为undefined，调用“发布回调函数”不传入参数
+
+> 例子↓
+
+``` javascript
+const queue = new AsyncParallelBailHook(['AsyncParallelBailHook_name']);
+
+queue.tap('1', function (name) {
+    console.log(name, 1);
+});
+queue.tap('2', function (name) {
+    console.log(name, 2);
+});
+queue.tap('3', function (name) {
+    console.log(name, 3);
+});
+queue.callAsync('AsyncParallelBailHook_call', (a, b) => {
+    console.log(a);
+    console.log(b);
+});
+
+// 此函数内容是拼接而来的，供发布函数调用
+function(AsyncParallelBailHook_name, _callback) {
+    var _context;
+    var _x = this._x;
+
+    var _results = new Array(3); // 订阅函数数量
+    var _checkDone = () => {
+        for (var i = 0; i < _results.length; i++) {
+            var item = _results[i];
+            if (item === undefined) return false;
+            if (item.result !== undefined) {
+                _callback(null, item.result);
+                return true;
+            }
+            if (item.error) {
+                _callback(item.error);
+                return true;
+            }
+        }
+        return false;
+    }
+    do {
+        var _counter = 3; // 订阅函数数量
+        var _done = () => {
+            _callback();
+        };
+        if (_counter <= 0) break;
+        var _fn0 = _x[0]; // 第一个订阅函数
+        var _hasError0 = false;
+        try {
+            var _result0 = _fn0(AsyncParallelBailHook_name);
+        } catch (_err) {
+            _hasError0 = true;
+            if (_counter > 0) {
+                if (0 < _results.length && ((_results.length = 1), (_results[0] = {
+                        error: _err
+                    }), _checkDone())) {
+                    _counter = 0;
+                } else {
+                    if (--_counter === 0) _done();
+                }
+            }
+        }
+        if (!_hasError0) {
+            if (_counter > 0) {
+                if (0 < _results.length && (_result0 !== undefined && (_results.length = 1), (_results[0] = {
+                        result: _result0
+                    }), _checkDone())) {
+                    _counter = 0;
+                } else {
+                    if (--_counter === 0) _done();
+                }
+            }
+        }
+        if (_counter <= 0) break;
+        if (1 >= _results.length) {
+            if (--_counter === 0) _done();
+        } else {
+            var _fn1 = _x[1];
+            var _hasError1 = false;
+            try {
+                var _result1 = _fn1(AsyncParallelBailHook_name);
+            } catch (_err) {
+                _hasError1 = true;
+                if (_counter > 0) {
+                    if (1 < _results.length && ((_results.length = 2), (_results[1] = {
+                            error: _err
+                        }), _checkDone())) {
+                        _counter = 0;
+                    } else {
+                        if (--_counter === 0) _done();
+                    }
+                }
+            }
+            if (!_hasError1) {
+                if (_counter > 0) {
+                    if (1 < _results.length && (_result1 !== undefined && (_results.length = 2), (_results[1] = {
+                            result: _result1
+                        }), _checkDone())) {
+                        _counter = 0;
+                    } else {
+                        if (--_counter === 0) _done();
+                    }
+                }
+            }
+        }
+        if (_counter <= 0) break;
+        if (2 >= _results.length) {
+            if (--_counter === 0) _done();
+        } else {
+            var _fn2 = _x[2];
+            var _hasError2 = false;
+            try {
+                var _result2 = _fn2(AsyncParallelBailHook_name);
+            } catch (_err) {
+                _hasError2 = true;
+                if (_counter > 0) {
+                    if (2 < _results.length && ((_results.length = 3), (_results[2] = {
+                            error: _err
+                        }), _checkDone())) {
+                        _counter = 0;
+                    } else {
+                        if (--_counter === 0) _done();
+                    }
+                }
+            }
+            if (!_hasError2) {
+                if (_counter > 0) {
+                    if (2 < _results.length && (_result2 !== undefined && (_results.length = 3), (_results[2] = {
+                            result: _result2
+                        }), _checkDone())) {
+                        _counter = 0;
+                    } else {
+                        if (--_counter === 0) _done();
+                    }
+                }
+            }
+        }
+    } while (false);
+}
+```
+
+### tapAsync,callAsync - AsyncParallelBailHook
+
+每个订阅函数的最后一个参数为“订阅回调函数”
+
+“订阅回调函数”接受2个参数(err, result)：
+
+- 如果第一个参数为真值，则会直接调用“发布回调函数”，并把真值当做“发布回调函数”的参数，剩余的订阅函数将不会执行。
+
+- 如果第一个参数为假值，第二个参数不为undefined，剩余的订阅函数将不会执行，调用“发布回调函数”并传入2个参数(null，第二个参数)
+
+- 如果第一个参数为假值，第二个参数为undefined，执行下一个订阅函数。
+
+如果全部“订阅回调函数”的参数不传，则不传参调用“发布回调函数”
+
+> 例子↓
+
+``` javascript
+const queue = new AsyncParallelBailHook(['AsyncParallelBailHook_name']);
+
+queue.tapAsync('1', function (name, cb) {
+    console.log(name, 1);
+    cb();
+});
+queue.tapAsync('2', function (name, cb) {
+    console.log(name, 2);
+    cb();
+});
+queue.tapAsync('3', function (name, cb) {
+    console.log(name, 3);
+    cb();
+});
+queue.callAsync('AsyncParallelBailHook_call', (a, b) => {
+    console.log(a);
+    console.log(b);
+});
+
+// 此函数内容是拼接而来的，供发布函数调用
+function(AsyncParallelBailHook_name, _callback) {
+    var _context;
+    var _x = this._x;
+
+    var _results = new Array(3);
+    var _checkDone = () => {
+        for (var i = 0; i < _results.length; i++) {
+            var item = _results[i];
+            if (item === undefined) return false;
+            if (item.result !== undefined) {
+                _callback(null, item.result);
+                return true;
+            }
+            if (item.error) {
+                _callback(item.error);
+                return true;
+            }
+        }
+        return false;
+    }
+    do {
+        var _counter = 3;
+        var _done = () => {
+            _callback();
+        };
+        if (_counter <= 0) break;
+        var _fn0 = _x[0];
+        _fn0(AsyncParallelBailHook_name, (_err0, _result0) => {
+            if (_err0) {
+                if (_counter > 0) {
+                    if (0 < _results.length && ((_results.length = 1), (_results[0] = {
+                            error: _err0
+                        }), _checkDone())) {
+                        _counter = 0;
+                    } else {
+                        if (--_counter === 0) _done();
+                    }
+                }
+            } else {
+                if (_counter > 0) {
+                    if (0 < _results.length && (_result0 !== undefined && (_results.length = 1), (_results[0] = {
+                            result: _result0
+                        }), _checkDone())) {
+                        _counter = 0;
+                    } else {
+                        if (--_counter === 0) _done();
+                    }
+                }
+            }
+        });
+        if (_counter <= 0) break;
+        if (1 >= _results.length) {
+            if (--_counter === 0) _done();
+        } else {
+            var _fn1 = _x[1];
+            _fn1(AsyncParallelBailHook_name, (_err1, _result1) => {
+                if (_err1) {
+                    if (_counter > 0) {
+                        if (1 < _results.length && ((_results.length = 2), (_results[1] = {
+                                error: _err1
+                            }), _checkDone())) {
+                            _counter = 0;
+                        } else {
+                            if (--_counter === 0) _done();
+                        }
+                    }
+                } else {
+                    if (_counter > 0) {
+                        if (1 < _results.length && (_result1 !== undefined && (_results.length = 2), (_results[1] = {
+                                result: _result1
+                            }), _checkDone())) {
+                            _counter = 0;
+                        } else {
+                            if (--_counter === 0) _done();
+                        }
+                    }
+                }
+            });
+        }
+        if (_counter <= 0) break;
+        if (2 >= _results.length) {
+            if (--_counter === 0) _done();
+        } else {
+            var _fn2 = _x[2];
+            _fn2(AsyncParallelBailHook_name, (_err2, _result2) => {
+                if (_err2) {
+                    if (_counter > 0) {
+                        if (2 < _results.length && ((_results.length = 3), (_results[2] = {
+                                error: _err2
+                            }), _checkDone())) {
+                            _counter = 0;
+                        } else {
+                            if (--_counter === 0) _done();
+                        }
+                    }
+                } else {
+                    if (_counter > 0) {
+                        if (2 < _results.length && (_result2 !== undefined && (_results.length = 3), (_results[2] = {
+                                result: _result2
+                            }), _checkDone())) {
+                            _counter = 0;
+                        } else {
+                            if (--_counter === 0) _done();
+                        }
+                    }
+                }
+            });
+        }
+    } while (false);
+}
+```
+
+### tapPromise,promise - AsyncParallelBailHook
+
+每个订阅函数的最后一个参数为“订阅回调函数”，“订阅回调函数”的返回值必须是Promise实例。
+
+如果每个“订阅回调函数”的状态都为“成功”：
+
+- 并且resolve方法的第一个参数不为undefined，剩余的订阅函数将不会执行，调用“发布回调函数”并传入1个参数(resolve方法的第一个参数)
+
+- 并且resolve方法的第一个参数为undefined，执行下一个订阅函数
+
+如果有一个“订阅回调函数”的状态为“失败”，reject方法的第一个参数将会为调用“发布回调函数”参数。
+
+``` javascript
+const queue = new AsyncParallelBailHook(['AsyncParallelBailHook_name']);
+queue.tapPromise('1', async function (name) {
+    await new Promise(resolve => setTimeout(() => {
+        console.log(name, 1.1);
+        resolve();
+    }, 3000));
+    console.log(name, 1.2);
+});
+queue.tapPromise('2', function (name) {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log(name, 2);
+            resolve();
+        }, 1400);
+    });
+});
+queue.tapPromise('3', function (name) {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log(name, 3);
+            resolve();
+        }, 700);
+    });
+});
+queue.promise('AsyncParallelBailHook_callAsync').then(
+    () => {
+        // 没有参数传入
+        console.log('success');
+    },
+    (err) => {
+        console.log(err);
+        console.log('error');
+    },
+);
+
+// 此函数内容是拼接而来的，供发布函数调用
+function(AsyncParallelBailHook_name) {
+    "use strict";
+    return new Promise((_resolve, _reject) => {
+        var _sync = true;
+
+        function _error(_err) {
+            if (_sync)
+                _resolve(Promise.resolve().then(() => {
+                    throw _err;
+                }));
+            else
+                _reject(_err);
+        };
+        var _context;
+        var _x = this._x;
+        var _results = new Array(3);
+        var _checkDone = () => {
+            for (var i = 0; i < _results.length; i++) {
+                var item = _results[i];
+                if (item === undefined) return false;
+                if (item.result !== undefined) {
+                    _resolve(item.result);
+                    return true;
+                }
+                if (item.error) {
+                    _error(item.error);
+                    return true;
+                }
+            }
+            return false;
+        }
+        do {
+            var _counter = 3;
+            var _done = () => {
+                _resolve();
+            };
+            if (_counter <= 0) break;
+            var _fn0 = _x[0];
+            var _hasResult0 = false;
+            var _promise0 = _fn0(AsyncParallelBailHook_name);
+            if (!_promise0 || !_promise0.then)
+                throw new Error('Tap function (tapPromise) did not return promise (returned ' + _promise0 + ')');
+            _promise0.then(_result0 => {
+                _hasResult0 = true;
+                if (_counter > 0) {
+                    if (0 < _results.length && (_result0 !== undefined && (_results.length = 1), (_results[0] = {
+                            result: _result0
+                        }), _checkDone())) {
+                        _counter = 0;
+                    } else {
+                        if (--_counter === 0) _done();
+                    }
+                }
+            }, _err0 => {
+                if (_hasResult0) throw _err0;
+                if (_counter > 0) {
+                    if (0 < _results.length && ((_results.length = 1), (_results[0] = {
+                            error: _err0
+                        }), _checkDone())) {
+                        _counter = 0;
+                    } else {
+                        if (--_counter === 0) _done();
+                    }
+                }
+            });
+            if (_counter <= 0) break;
+            if (1 >= _results.length) {
+                if (--_counter === 0) _done();
+            } else {
+                var _fn1 = _x[1];
+                var _hasResult1 = false;
+                var _promise1 = _fn1(AsyncParallelBailHook_name);
+                if (!_promise1 || !_promise1.then)
+                    throw new Error('Tap function (tapPromise) did not return promise (returned ' + _promise1 + ')');
+                _promise1.then(_result1 => {
+                    _hasResult1 = true;
+                    if (_counter > 0) {
+                        if (1 < _results.length && (_result1 !== undefined && (_results.length = 2), (_results[1] = {
+                                result: _result1
+                            }), _checkDone())) {
+                            _counter = 0;
+                        } else {
+                            if (--_counter === 0) _done();
+                        }
+                    }
+                }, _err1 => {
+                    if (_hasResult1) throw _err1;
+                    if (_counter > 0) {
+                        if (1 < _results.length && ((_results.length = 2), (_results[1] = {
+                                error: _err1
+                            }), _checkDone())) {
+                            _counter = 0;
+                        } else {
+                            if (--_counter === 0) _done();
+                        }
+                    }
+                });
+            }
+            if (_counter <= 0) break;
+            if (2 >= _results.length) {
+                if (--_counter === 0) _done();
+            } else {
+                var _fn2 = _x[2];
+                var _hasResult2 = false;
+                var _promise2 = _fn2(AsyncParallelBailHook_name);
+                if (!_promise2 || !_promise2.then)
+                    throw new Error('Tap function (tapPromise) did not return promise (returned ' + _promise2 + ')');
+                _promise2.then(_result2 => {
+                    _hasResult2 = true;
+                    if (_counter > 0) {
+                        if (2 < _results.length && (_result2 !== undefined && (_results.length = 3), (_results[2] = {
+                                result: _result2
+                            }), _checkDone())) {
+                            _counter = 0;
+                        } else {
+                            if (--_counter === 0) _done();
+                        }
+                    }
+                }, _err2 => {
+                    if (_hasResult2) throw _err2;
+                    if (_counter > 0) {
+                        if (2 < _results.length && ((_results.length = 3), (_results[2] = {
+                                error: _err2
+                            }), _checkDone())) {
+                            _counter = 0;
+                        } else {
+                            if (--_counter === 0) _done();
+                        }
+                    }
+                });
+            }
+        } while (false);
+        _sync = false;
+    });
+}
+```
+
+## AsyncSeriesHook
+
+不关心订阅函数的返回值。
+
+发布函数最后一个参数必须为函数(全部订阅函数都调用过后，会调用此订阅函数)
+
+有三种订阅/发布的模式，如下
+
+| 订阅 | 发布 |
+| - | - |
+| tap | callAsync |
+| tapAsync | callAsync |
+| tapPromise | promise |
+
+### tap,callAsync - AsyncSeriesHook
+
+如果订阅函数运行报错，调用“发布回调函数”并传入1个参数(错误信息)
+
+订阅函数的返回值不会影响下一个订阅函数的调用和传参
+
+> 例子↓
+
+``` javascript
+const queue = new AsyncSeriesHook(['AsyncSeriesHook_name']);
+
+queue.tap('1', function (name) {
+    console.log(name, 1);
+});
+queue.tap('2', function (name) {
+    console.log(name, 2);
+});
+queue.tap('3', function (name) {
+    console.log(name, 3);
+});
+queue.callAsync('AsyncSeriesHook_call', (a, b) => {
+    console.log(a);
+    console.log(b);
+});
+
+// 此函数内容是拼接而来的，供发布函数调用
+function(AsyncSeriesHook_name, _callback) {
+    var _context;
+    var _x = this._x;
+
+    var _fn0 = _x[0];
+    var _hasError0 = false;
+    try {
+        _fn0(AsyncSeriesHook_name);
+    } catch (_err) {
+        _hasError0 = true;
+        _callback(_err);
+    }
+    if (!_hasError0) {
+        var _fn1 = _x[1];
+        var _hasError1 = false;
+        try {
+            _fn1(AsyncSeriesHook_name);
+        } catch (_err) {
+            _hasError1 = true;
+            _callback(_err);
+        }
+        if (!_hasError1) {
+            var _fn2 = _x[2];
+            var _hasError2 = false;
+            try {
+                _fn2(AsyncSeriesHook_name);
+            } catch (_err) {
+                _hasError2 = true;
+                _callback(_err);
+            }
+            if (!_hasError2) {
+                _callback();
+            }
+        }
+    }
 }
 ```
