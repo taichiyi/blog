@@ -1,6 +1,6 @@
 # 读Tapable模块源码总结
 
-开放了一下API，我们一个个的分析
+开放了以下API，我们一个个的分析
 
 - SyncHook
 - SyncBailHook
@@ -16,6 +16,36 @@
 
 new类时的数组的长度，决定了订阅函数和发布函数的参数个数(不含callback函数)
 
+class名包含`Sync`的class: "发布函数"接收返回值的方式为`同步`;
+
+class名包含`Async`的class: "发布函数"接收返回值的方式为`异步`;
+
+class名包含`Series`的class: "订阅函数"调用方式为`串行`;
+
+class名包含`Parallel`的class: "订阅函数"调用方式为`并行`;
+
+class名包含`Waterfall`的class:  
+
+- 如果"订阅函数"的返回值不等于undefined，则此返回值将作为下一个"订阅函数"的第一个参数；
+- 如果等于undefined，下一个"订阅函数"的参数为调call方法的参数
+
+class名包含`Bail`的class:  
+
+- "发布函数"要有返回值
+- 如果有一个"订阅函数"的返回值不为undefined，剩余的"订阅函数"将不会执行，"发布函数"会接受到当前返回值(同步或异步)
+
+| 比较 | SyncBailHook | SyncWaterfallHook | SyncLoopHook |
+| - | - | - | - | - |
+| SyncHook | 关不关心订阅函数的返回值 | 订阅函数的返回值是否可以传给下一个订阅函数当参数 | 是否根据订阅函数的返回值重复执行当前订阅函数 |
+
+| - | tap | tapAsync | tapPromise |
+| - | - | - | - |
+| 意义 | 无限制 | 订阅函数最后一个参数为函数 | 订阅函数的最后一个参数为函数，此函数的返回值必须是Promise实例 |
+
+| - | call | callAsync | promise |
+| - | - | - | - |
+| 意义 | 无限制 | 发布函数最后一个参数为函数 | 发布函数的返回值是Promise实例 |
+
 ## Hook类
 
 ### tap 方法
@@ -27,32 +57,6 @@ new类时的数组的长度，决定了订阅函数和发布函数的参数个�
 调用通过tap方法的添加的订阅函数
 
 实际上调用的是`HookCodeFactory类`的`setup方法` `create方法`
-
-例子：
-
-``` javascript
-queue.tap('1', function (name, name2) {// tap 的第一个参数是用来标识订阅的函数的
-    console.log(name, name2, 1);
-    return '1'
-});
-queue.tap('2', function (name) {
-    console.log(name, 2);
-});
-
-call 方法执行↓
-"use strict";
-// header -start-
-var _context;
-var _x = this._x;
-// header -end-
-
-// content(主要) -start-
-var _fn0 = _x[0];
-_fn0(name);
-var _fn1 = _x[1];
-_fn1(name);
-// content(主要) -end-
-```
 
 ## HookCodeFactory类
 
@@ -85,18 +89,20 @@ A: 如果只考虑动态生成执行代码的话，二者都可以；但是这�
 
 ``` javascript
 const queue = new SyncHook(['SyncHook_name']);
-queue.tap('1', function (name, name2) {
-    console.log(name, name2, 1);
-    return '1'
+queue.tap('1', function (name) {
+    console.log(name, 1);
 });
 queue.tap('2', function (name) {
     console.log(name, 2);
 });
-queue.call('webpack'); // 发布的时候触发订阅的函数 同时传入参数
+queue.tap('3', function (name) {
+    console.log(name, 3);
+});
+queue.call('SyncHook_call');
 
 // 此函数内容是拼接而来的，供发布函数调用
-    "use strict";
 function(SyncHook_name) {
+    "use strict";
     // header -start-
     var _context;
     var _x = this._x;
@@ -107,6 +113,8 @@ function(SyncHook_name) {
     _fn0(SyncHook_name);
     var _fn1 = _x[1];
     _fn1(SyncHook_name);
+    var _fn2 = _x[2];
+    _fn2(SyncHook_name);
     // content(主要) -end-
 }
 ```
@@ -114,6 +122,8 @@ function(SyncHook_name) {
 ## SyncBailHook
 
 如果有一个订阅函数的返回值不为undefined，则返回当前返回值，剩余的订阅函数将不会执行
+
+发布函数有返回值
 
 > 例子↓
 
@@ -202,19 +212,23 @@ function(SyncWaterfallHook_name) {
 > 例子↓
 
 ``` javascript
-const queue = new SyncLoopHook(['SyncLoopHook_name', 'second']);
+const queue = new SyncLoopHook(['SyncLoopHook_name']);
 
-queue.tap('1', function (name, ...rest) {
-    console.log(name, rest);
+queue.tap('1', function (name) {
+    console.log(name);
 });
-queue.tap('2', function (name, ...rest) {
-    console.log(name, rest);
-    return 'wrong'
+queue.tap('2', function (name) {
+    let loop = 3;
+    while (loop > 0) {
+        console.log(name);
+        --loop;
+    }
+    return loop > 0 ? 1 : undefined;
 });
-queue.tap('3', function (name, ...rest) {
-    console.log(name, rest);
+queue.tap('3', function (name) {
+    console.log(name);
 });
-queue.call('webpack', '234'); // 发布的时候触发订阅的函数 同时传入参数
+queue.call('SyncLoopHook_call');
 
 // 此函数内容是拼接而来的，供发布函数调用
 function(SyncLoopHook_name, second) {
@@ -229,17 +243,17 @@ function(SyncLoopHook_name, second) {
     do {
         _loop = false;
         var _fn0 = _x[0];
-        var _result0 = _fn0(SyncLoopHook_name, second);
+        var _result0 = _fn0(SyncLoopHook_name);
         if (_result0 !== undefined) {
             _loop = true;
         } else {
             var _fn1 = _x[1];
-            var _result1 = _fn1(SyncLoopHook_name, second);
+            var _result1 = _fn1(SyncLoopHook_name);
             if (_result1 !== undefined) {
                 _loop = true;
             } else {
                 var _fn2 = _x[2];
-                var _result2 = _fn2(SyncLoopHook_name, second);
+                var _result2 = _fn2(SyncLoopHook_name);
                 if (_result2 !== undefined) {
                     _loop = true;
                 } else {
@@ -250,14 +264,9 @@ function(SyncLoopHook_name, second) {
     } while (_loop);
     // content(主要) -end-
 }
-
 ```
 
 ## AsyncParallelHook
-
-不关心订阅函数的返回值。
-
-发布函数最后一个参数必须为函数(全部订阅函数都调用过后，会调用此订阅函数)
 
 有三种订阅/发布的模式，如下
 
@@ -565,10 +574,6 @@ function(AsyncParallelHook_name) {
 ```
 
 ## AsyncParallelBailHook
-
-不关心订阅函数的返回值。
-
-发布函数最后一个参数必须为函数(全部订阅函数都调用过后，会调用此订阅函数)
 
 有三种订阅/发布的模式，如下
 
@@ -1136,6 +1141,78 @@ function(AsyncSeriesHook_name, _callback) {
             }
             if (!_hasError2) {
                 _callback();
+            }
+        }
+    }
+}
+```
+
+## AsyncSeriesBailHook
+
+### tap,callAsync - AsyncSeriesBailHook
+
+> 例子↓
+
+``` javascript
+const queue = new AsyncSeriesBailHook(['AsyncSeriesBailHook_name']);
+queue.tap('1', async function (name) {
+    console.log(name, 1);
+});
+queue.tap('2', function (name) {
+    console.log(name, 2);
+});
+queue.tap('3', function (name) {
+    console.log(name, 3);
+});
+queue.callAsync('AsyncSeriesBailHook_callAsync', err => {
+    console.log(err);
+});
+
+// 此函数内容是拼接而来的，供发布函数调用
+function(AsyncSeriesHook_name, _callback) {
+    var _context;
+    var _x = this._x;
+
+    var _fn0 = _x[0];
+    var _hasError0 = false;
+    try {
+        var _result0 = _fn0(AsyncSeriesBailHook_name);
+    } catch (_err) {
+        _hasError0 = true;
+        _callback(_err);
+    }
+    if (!_hasError0) {
+        if (_result0 !== undefined) {
+            _callback(null, _result0);;
+        } else {
+            var _fn1 = _x[1];
+            var _hasError1 = false;
+            try {
+                var _result1 = _fn1(AsyncSeriesBailHook_name);
+            } catch (_err) {
+                _hasError1 = true;
+                _callback(_err);
+            }
+            if (!_hasError1) {
+                if (_result1 !== undefined) {
+                    _callback(null, _result1);;
+                } else {
+                    var _fn2 = _x[2];
+                    var _hasError2 = false;
+                    try {
+                        var _result2 = _fn2(AsyncSeriesBailHook_name);
+                    } catch (_err) {
+                        _hasError2 = true;
+                        _callback(_err);
+                    }
+                    if (!_hasError2) {
+                        if (_result2 !== undefined) {
+                            _callback(null, _result2);;
+                        } else {
+                            _callback();
+                        }
+                    }
+                }
             }
         }
     }
