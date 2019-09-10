@@ -16,6 +16,8 @@
 
 new类时的数组的长度，决定了订阅函数和发布函数的参数个数(不含callback函数)
 
+---
+
 class名包含`Sync`的class: "发布函数"接收返回值的方式为`同步`;
 
 class名包含`Async`的class: "发布函数"接收返回值的方式为`异步`;
@@ -33,6 +35,8 @@ class名包含`Bail`的class:
 
 - "发布函数"要有返回值
 - 如果有一个"订阅函数"的返回值不为undefined，剩余的"订阅函数"将不会执行，"发布函数"会接受到当前返回值(同步或异步)
+
+---
 
 | 比较 | SyncBailHook | SyncWaterfallHook | SyncLoopHook |
 | - | - | - | - | - |
