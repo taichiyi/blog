@@ -39,7 +39,7 @@ class名包含`Bail`的class:
 ---
 
 | 比较 | SyncBailHook | SyncWaterfallHook | SyncLoopHook |
-| - | - | - | - | - |
+| - | - | - | - |
 | SyncHook | 关不关心订阅函数的返回值 | 订阅函数的返回值是否可以传给下一个订阅函数当参数 | 是否根据订阅函数的返回值重复执行当前订阅函数 |
 
 | - | tap | tapAsync | tapPromise |
