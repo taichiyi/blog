@@ -1,6 +1,6 @@
 <!-- markdownlint-disable MD033 -->
 
-# JavaScript 高级程序设计 【习题与参考答案】
+# JavaScript 高级程序设计 第三版 【习题与参考答案】
 
 环境：chrome(74.0)
 
@@ -496,10 +496,10 @@
   <div>- dblclick: 双击事件</div>
   <div>- mousedown: 按下任意鼠标按钮</div>
   <div>- mouseenter: 光标首次从元素外移动到元素范围之内时触发。不冒泡，后代元素不触发。</div>
-  <div>- mouseleave: 在位于元素上方的鼠标光标移动到元素范围(包括子元素)之外时触发。不冒泡</div>
+  <div>- mouseleave: 在位于元素上方的鼠标光标移动到元素范围(包括子元素范围)之外时触发。不冒泡</div>
   <div>- mousemove: 当鼠标指针在元素内部移动时重复地触发。</div>
-  <div>- mouseout: 当鼠标指针位于一个元素上方，然后用户将其移入另一个元素时触发(包括子元素)。</div>
-  <div>- mouseover: 在鼠标指针位于一个元素外部，然后用户将其首次移入另一个元素（包括子元素）边界之内时触发。</div>
+  <div>- mouseout: 当鼠标指针位于当前元素上方，然后用户将其移入另一个元素时触发(包括子元素)。</div>
+  <div>- mouseover: 在鼠标指针位于当前元素外部，然后用户将其首次移入另一个元素（包括子元素）边界之内时触发。</div>
   <div>- mouseup: 用户释放鼠标按钮时触发。</div>
   <div>- mousewheel: 鼠标滚轮，触摸板。</div>
 </details>
@@ -598,6 +598,238 @@
   <div>- tabIndex: 切换（tab）序号</div>
   <div>- type: 字段类型</div>
   <div>- value: 字段值</div>
+</details>
+
+## 15 使用Canvas 绘图
+
+<details>
+  <summary>Canvas是一个可以使用__来绘制图形的 HTML 元素</summary>
+  <div>脚本</div>
+</details>
+
+<details>
+  <summary>通过判断Canvas元素是否存在__方法，来判断是否支持Canvas</summary>
+  <div>getContext</div>
+</details>
+
+<details>
+  <summary>Canvas 的默认大小为__像素×__像素</summary>
+  <div>300 150</div>
+</details>
+
+<details>
+  <summary>如果绘制出来的图像是扭曲的, 尝试用__和__属性为 Canvas 明确规定宽高，而不是使用__。</summary>
+  <div>width height CSS</div>
+</details>
+
+<details>
+  <summary>如果浏览器不支持 Canvas 元素，则将会显示__和__标签中的子DOM内容。</summary>
+  <div>开始 结束</div>
+</details>
+
+<details>
+  <summary>Canvas 元素创造了一个__的画布，它公开了一个或多个__，其可以用来绘制和处理要展示的内容。</summary>
+  <div>固定大小 绘图上下文对象</div>
+</details>
+
+## 15.2 2D上下文
+
+<details>
+  <summary>通过_A_方法获取 Canvas 元素的绘图上下文对象的引用。通过向_A_方法传入“__”获取 Canvas 元素的2D上下文对象的引用</summary>
+  <div>A:getContext 2d</div>
+</details>
+
+<details>
+  <summary>2D上下文的坐标原点位于 Canvas 元素的__角，坐标是（__,__）</summary>
+  <div>左上 0 0</div>
+</details>
+
+### 15.2.2 绘制矩形
+
+<details>
+  <summary>__形是唯一一种可以直接在2D上下文中绘制的形状。</summary>
+  <div>矩</div>
+</details>
+
+<details>
+  <summary>与矩形有关的是方法 __()、__()、__()。这就三个方法都能接受4个参数：矩形的__、矩形的__、矩形的__和矩形的__。</summary>
+  <div>fillRect strokeRect clearRect</div>
+  <div>x坐标 y坐标 宽度 高度</div>
+</details>
+
+<details>
+  <summary>在调用fillRect方法绘制矩形时，会根据当前上下文对象的__属性，来设置矩形的颜色。</summary>
+  <div>fillStyle</div>
+</details>
+
+<details>
+  <summary>在调用strokeRect方法绘制矩形时，会根据当前上下文对象的__属性，来设置矩形的颜色。</summary>
+  <div>strokeStyle</div>
+</details>
+
+### 15.2.3 绘制路径
+
+<details>
+  <summary>2D上下文对象支持很多在画布上绘制路径的方法。绘制路径前，必须调用 __() 方法，表示__。</summary>
+  <div>beginPath 开始绘制新路径</div>
+</details>
+
+<details>
+  <summary>可以调用 __() 方法对路径填充；可以调用 __() 方法对路径描边；可以调用 __() 方法在路径上创建一个剪切区域。</summary>
+  <div>fill stroke clip</div>
+</details>
+
+<details>
+  <summary>__(x, y, radius, startAngle, endAngle, counterclockwise): 以(x,y)为圆心绘制一条弧线，弧线的半径为 __，起始和结束角度（用__表示）发布为 __ 和 __。最后一个参数表示起始角度和结束角度是否按__时针方向计算，值为false表示按__时针方向计算，默认为__(__时针)</summary>
+  <div>arc radius 弧度 startAngle endAngle 逆 顺 false 顺</div>
+</details>
+
+<details>
+  <summary>__(x1, y1, x2, y2, radius)：从上一个点开始绘制一条弧线，到(x2,y2)为止，并且以给定的半径 redius 穿过 (__,__)。</summary>
+  <div>(注：这个方法比较复杂)arcTo x1 y1</div>
+</details>
+
+<details>
+  <summary>__(c1x, c1y, c2x, c2y, x, y)：从上一点开始绘制一条曲线，到(x,y)为止，并且以(__,__)和(__,__)为控制点。</summary>
+  <div>bezierCurveTo c1x c1y c2x c2y</div>
+</details>
+
+<details>
+  <summary>__(x, y)：从上一个点开始绘制一条直线，到(x,y)为止。</summary>
+  <div>lineTo</div>
+</details>
+
+<details>
+  <summary>__(x, y)：将绘图游标移动到(x,y)，不画线。</summary>
+  <div>moveTo</div>
+</details>
+
+<details>
+  <summary>__(cx, cy, x, y)：从上一点开始绘制一条二次曲线，到(x,y)为止，并且以(cx,cy)作为控制点。</summary>
+  <div>quadraticCurveTo</div>
+</details>
+
+<details>
+  <summary>__(x, y, width, height)：从(x,y)开始绘制一个矩形，宽度和高度分别由width和height指定。这是方法绘制的是矩形__，而不是 strokeRect() 和 fillRect()所绘制的独立的形状。</summary>
+  <div>rect 路径</div>
+</details>
+
+### 15.2.4 绘制文本
+
+<details>
+  <summary>绘制文本主要有两个方法：__()和__()。这两个方法都可以接收4个参数：__、__、__、__。这两个方法都以三个属性为基础：__、__、__。</summary>
+  <div>fillText strokeText</div>
+  <div>要绘制的文本字符串 x坐标 y坐标 最大像素宽度（可选）</div>
+  <div>font textAlign textBaseline</div>
+</details>
+
+<details>
+  <summary>2D 上下文提供了辅助确定文本大小的方法__()。这个方法接收一个参数，即要绘制的__。返回一个对象，对象有许多文本的度量属性。</summary>
+  <div>measureText 文本</div>
+</details>
+
+### 15.2.5 变换
+
+<details>
+  <summary>__(angle)：围绕圆点旋转图像 angle 弧度。</summary>
+  <div>rotate</div>
+</details>
+
+<details>
+  <summary>__(scaleX, scaleY)：缩放图像，在x方向乘以 scaleX，在y方向乘以 scaleY。scaleX和scaleY的默认值都是__。</summary>
+  <div>scale 1.0</div>
+</details>
+
+<details>
+  <summary>__(x, y)：将坐标原点移动到(x,y)。执行这个变换之后，坐标(0,0)会变成之前由(x,y)表示的点。</summary>
+  <div>translate</div>
+</details>
+
+<details>
+  <summary>[需要线性代数的知识]transform(m1_1, m1_2, m2_1, m2_2, dx, dy)：直接修改变换矩阵。</summary>
+  <div>需要线性代数的知识</div>
+</details>
+
+<details>
+  <summary>[需要线性代数的知识]setTransform(m1_1, m1_2, m2_1, m2_2, dx, dy)：将变换矩阵重围为默认状态，然后再调用transform()。</summary>
+  <div>需要线性代数的知识</div>
+</details>
+
+### 15.2.6 绘制画像
+
+<details>
+  <summary>2D绘图上下文对象内置了对图像的支持。如果你想把一幅图像绘制到画布上，可以使用 __()方法。可以使用__种不同的参数组合。</summary>
+  <div>drawImage 三</div>
+</details>
+
+<details>
+  <summary>（1）最简单的调用方式：drawImage方法的参数为:(_1_,_2_,_3_)。</summary>
+  <div>1:img元素</div>
+  <div>2:图像的x坐标</div>
+  <div>3:图像的y坐标</div>
+</details>
+
+<details>
+  <summary>（2）drawImage方法的参数为:(_1_,_2_,_3_,_4_,_5_)。</summary>
+  <div>1:img元素</div>
+  <div>2:图像的x坐标</div>
+  <div>3:图像的y坐标</div>
+  <div>4:图像的宽度</div>
+  <div>5:图像的高度</div>
+</details>
+
+<details>
+  <summary>（3）drawImage方法的参数为:(_1_,_2_,_3_,_4_,_5_,_6_,_7_,_8_,_9_)。6-9的参数如果填的话都要填。</summary>
+  <div>1:img元素</div>
+  <div>2:源图像的x坐标</div>
+  <div>3:源图像的y坐标</div>
+  <div>4:源图像的宽度</div>
+  <div>5:源图像的高度</div>
+  <div>6:目标图像的x坐标</div>
+  <div>7:目标图像的y坐标</div>
+  <div>8:目标图像的宽度</div>
+  <div>9:目标图像的高度</div>
+</details>
+
+<details>
+  <summary>drawImage() 方法传入 img元素外，还可以传入另一个__元素作为其第一个参数，这样，就可以把另一个画布内容绘制到当前画布上。</summary>
+  <div>canvas</div>
+</details>
+
+<details>
+  <summary>可用通过__()方法将canvas画布的内容导出为Data URLs，返回的图像的分辨率为__dpi。如果图像来自其他域，调通此方法会抛出错误。</summary>
+  <div>toDataURL 96</div>
+</details>
+
+<details>
+  <summary>canvas.toDataURL(type, encoderOptions);type为图片格式，默认为__。encoderOptions为压缩比例，取值范围是0-1，默认为__。</summary>
+  <div>image/png 0.92</div>
+</details>
+
+<details>
+  <summary>有3种情况会导致img元素无法绘制到画布上：(1)img元素的图片__；(2)img元素加载的图片为__文件；</summary>
+  <div>没有加载完成</div>
+  <div>本地</div>
+</details>
+
+### 15.2.7 阴影
+
+<details>
+  <summary>__: 用CSS颜色格式表示阴影颜色，默认为透明; __: 形状或路径x轴方向的阴影偏移量，默认为0; __: 形状或路径y轴方向的阴影偏移量，默认为0; __: 模糊的像素数，默认0，即不模糊。</summary>
+  <div>shadowColor</div>
+  <div>shadowOffsetX</div>
+  <div>shadowOffsetY</div>
+  <div>shadowBlur</div>
+</details>
+
+### 15.2.8 渐变
+
+<details>
+  <summary>要创建一个新的线性渐变，可以调用createLinearGradient()方法。这个方法接收4个参数: __坐标, __坐标, __坐标, __坐标。返回CanvasGradient对象。 </summary>
+  <div>起点的x</div>
+  <div>起点的y</div>
+  <div>终点的x</div>
+  <div>终点的y</div>
 </details>
 
 ## 20 JSON

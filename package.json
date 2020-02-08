@@ -1,0 +1,15 @@
+{
+  "name": "markdown",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "update": "git add . && git commit -m 'update' && git push gitee master"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitee.com/taichiyi/markdown.git"
+  },
+  "keywords": [],
+  "author": "taichiyi <taichiyi@foxmail.com>"
+}

@@ -187,6 +187,31 @@ add al,bl AX=000CH
 0ff0:0105(10008H) |  mov ax,[0002]  | 0ff0H | 2000H | 010BH | EA66H |   0   | AX=EA66H；IP=010BH
 0ff0:010B(1000BH) |                 | 0ff0H | 2000H | 010BH | EA66H |   0   | AX=EA66H；IP=010BH
 
+## 3.2
+
+（1）
+
+mov bx,2000H
+mov ss,bx
+mov sp,10H
+
+（2）
+
+mov bx,1000H
+mov ss,bx
+mov sp,0
+
+## 6.1
+
+（1）
+
+mov cs:[bx],ax
+
+（2）
+cs
+1Ah
+pop cs:[bx]
+
 ## 参考
 
 <https://blackdragonf.github.io/2017/03/05/王爽汇编语言第三版检测点答案>
