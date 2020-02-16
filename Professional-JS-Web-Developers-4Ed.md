@@ -44,14 +44,6 @@
 </details>
 
 <details>
-  <summary>199__年，ECMA的第__技术委员会(TC39)，开会敲定了ECMA-__标准，该标准定义了一种名为ECMA__的新脚本语言。</summary>
-  <div>7</div>
-  <div>39</div>
-  <div>262</div>
-  <div>Script</div>
-</details>
-
-<details>
   <summary>第一版 ECMA-262: 做了平台无关处理；支持__标准</summary>
   <div>Unicode</div>
 </details>
@@ -97,7 +89,7 @@
 </details>
 
 <details>
-  <summary>DOM Level 3 ...</summary>
+  <summary>DOM Level 3 未知</summary>
   <div></div>
 </details>
 
@@ -112,7 +104,7 @@
 </details>
 
 <details>
-  <summary>如果要 立即异步下载脚本文件 需要在script元素添加属性 __。</summary>
+  <summary>如果要 立即异步下载脚本文件(HTML5新增不能保证执行的先后顺序) 需要在script元素添加属性 __。</summary>
   <div>async</div>
 </details>
 </details>
@@ -128,7 +120,7 @@
 </details>
 
 <details>
-  <summary>如果要 立即下载脚本等到文档完全解析并显示完毕再执行此脚本(该脚本执行完后才触发DOMContentLoaded) 需要在script元素添加属性 __。</summary>
+  <summary>如果要 立即下载脚本等到文档完全解析并显示完毕再执行此脚本(该脚本执行完后才触发DOMContentLoaded;等到浏览器收到&lt;/ html&gt;标记后, 按照出现顺序执行) 需要在script元素添加属性 __。</summary>
   <div>defer</div>
 </details>
 
@@ -148,6 +140,41 @@
 </details>
 
 ## CHARPER 2 HTML中的JavaScript
+
+<details>
+  <summary>Internet Explorer 5.5 开始引入了__，后来发展出了多种文档模式，导致了同样的DOM内容在不同文档模式下不兼容，后面出了HTML__文档模式才统一了标准。</summary>
+  <div>文档模式(document modes)</div>
+  <div>5</div>
+</details>
+
+<details>
+  <summary>如果 当前浏览器不支持JavaScript时，会显示__标签中的内容。</summary>
+  <div>noscript</div>
+</details>
+
+## CHAPTER 3 JavaScript 基础知识
+
+<details>
+  <summary>__是变量，函数，属性或函数参数的名称。</summary>
+  <div>标识符</div>
+</details>
+
+<details>
+  <summary>标识符的第一个字符必须是__、__或__符号。</summary>
+  <div>字母</div>
+  <div>下划线</div>
+  <div>美元</div>
+</details>
+
+<details>
+  <summary>标识符中的字母可以包括ASCII或__字符</summary>
+  <div>Unicode</div>
+</details>
+
+<details>
+  <summary>按照惯例，标识符使用__式连接单词。</summary>
+  <div>驼峰</div>
+</details>
 
 ## CHAPTER 8 对象，类和面向对象编程
 
