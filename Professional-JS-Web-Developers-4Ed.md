@@ -176,6 +176,28 @@
   <div>驼峰</div>
 </details>
 
+<details>
+  <summary>严格模式是JavaScript的另一种__和执行模式，其中ECMAScript 3的某些不稳定行为已得到解决，并且为不安全的活动抛出了__。</summary>
+  <div>解析</div>
+  <div>错误</div>
+</details>
+
+<details>
+  <summary>为了兼容ECMAScript 3的语法、避免ES3的不稳定行为，如果要为整个脚本启用严格模式，只需在顶部添加"__"</summary>
+  <div>use strict</div>
+</details>
+
+<details>
+  <summary>为了兼容ECMAScript 3的语法、避免ES3的不稳定行为，如果要为整个脚本启用严格模式，只需在顶部添加"__"</summary>
+  <div>use strict</div>
+</details>
+
+<details>
+  <summary>建议始终在语句的末尾添加__，避免__错误，分号可以提高性能，避免解析器判断是否需要添加分号。</summary>
+  <div>分号</div>
+  <div>压缩</div>
+</details>
+
 ## CHAPTER 8 对象，类和面向对象编程
 
 <details>
