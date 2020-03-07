@@ -1,8 +1,6 @@
 
 # JavaScript
 
-[TOC]
-
 <!-- ## JSBridge
 
 待完善

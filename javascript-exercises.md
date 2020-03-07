@@ -37,3 +37,8 @@
   <div>- {...}</div>
   <div>- JSON.parse(JSON.stringify()) 必须为标准JSON，不支持undefined类型</div>
 </details>
+
+<details>
+  <summary>typeof null === 'object'是JavaScript第__个版本就存在的bug。</summary>
+  <div>1</div>
+</details>
