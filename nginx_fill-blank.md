@@ -46,6 +46,12 @@
 </details>
 
 <details>
+  <summary>`location`匹配的是URI的__部分，不包含__和域名</summary>
+  <div>pathname(locatoin.pathname)</div>
+  <div>参数</div>
+</details>
+
+<details>
   <summary>在匹配模式下，有4种修饰符：`~`、`~*`、`^~`、`=`。`~`的意义__；`~*`的意义__；`^~`的意义__；`=`的意义__；</summary>
   <div>`~` 后面接正则表达式，不区分大小写</div>
   <div>`~*` 后面接正则表达式，区分大小写</div>
