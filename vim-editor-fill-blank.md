@@ -166,6 +166,16 @@
 </details>
 
 <details>
+  <summary>怎么临时显示行号?</summary>
+  <div>:set number</div>
+</details>
+
+<details>
+  <summary>怎么临时隐藏行号?</summary>
+  <div>:set nonumber</div>
+</details>
+
+<details>
   <summary>在命令行模式下，输入完命令后，输入__执行命令。</summary>
   <div>回车</div>
 </details>
