@@ -231,6 +231,6 @@
 <details>
   <summary>如果是新加群组并保留原来所在的群组要用选项__。</summary>
   <div>-a</div>
-  <div>把用户shannon添加到群组groupA: shannon usermod -a -G groupA shannon</div>
-  <div>另一种写法: shannon usermod -aG groupA shannon</div>
+  <div>把用户shannon添加到群组groupA: usermod -a -G groupA shannon</div>
+  <div>另一种写法: usermod -aG groupA shannon</div>
 </details>
