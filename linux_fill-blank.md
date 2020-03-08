@@ -88,12 +88,12 @@
 </details>
 
 <details>
-  <summary>__命令可以修改文件的所属群组。</summary>
+  <summary>“__ [-R] dirname/filename”命令可以修改文件的所属群组。</summary>
   <div>chgrp(change group)</div>
 </details>
 
 <details>
-  <summary>__命令可以修改文件的拥有者。</summary>
+  <summary>“__ [-R] dirname/filename”命令可以修改文件的拥有者。</summary>
   <div>chown(change own)</div>
   <div>还可以顺便修改群组名称，用户名[:群组名]</div>
   <div>单独修改拥有者，用户名</div>
@@ -216,4 +216,21 @@
 <details>
   <summary>使用“__ 群组名称”命令删除一个群组。</summary>
   <div>groupdel</div>
+</details>
+
+<details>
+  <summary>查询某个群组里的用户:__。</summary>
+  <div>grep xxx /etc/group /etc/gshadow</div>
+</details>
+
+<details>
+  <summary>想要让 dmtsai 这个使用者，加入 vbird1, vbird2, vbird3 这三个群组，该如何动作？</summary>
+  <div>usermod -G vbird1,vbird2,vbird3 dmtsai</div>
+</details>
+
+<details>
+  <summary>如果是新加群组并保留原来所在的群组要用选项__。</summary>
+  <div>-a</div>
+  <div>把用户shannon添加到群组groupA: shannon usermod -a -G groupA shannon</div>
+  <div>另一种写法: shannon usermod -aG groupA shannon</div>
 </details>
