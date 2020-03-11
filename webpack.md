@@ -1,4 +1,4 @@
-# 读 webpack 模块 源码总结
+# webpack
 
 - @babel/preset-env 什么？
 - loader的读取顺序是从右至左
@@ -42,6 +42,20 @@ webpack-dev-server ≈ webpack-dev-middleware + express
 - 入口起点：使用 entry 配置手动地分离代码。
 - 防止重复：使用 SplitChunksPlugin 去重和分离 chunk。
 - 动态导入：通过模块中的内联函数调用来分离代码。
+
+### SplitChunksPlugin
+
+`SplitChunksPlugin`插件主要是用来拆包的。
+
+通过optimization.splitChunks配置`SplitChunksPlugin`插件。
+
+- priority
+
+  一个模块(例如React)可以属于多个cacheGroup。`optimization`将优先考虑具有更高优先级的cacheGroup。
+
+  如果A模块被优先级高的cacheGroup打包，则其他cacheGroup不会再打包A模块。
+
+  默认优先级为负，以允许自定义组获得更高的优先级（自定义组的默认值为0）。
 
 ### 入口起点
 

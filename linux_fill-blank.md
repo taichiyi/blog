@@ -88,7 +88,7 @@
 </details>
 
 <details>
-  <summary>“__ [-R] dirname/filename”命令可以修改文件的所属群组。</summary>
+  <summary>“__ [-R] groupname dirname/filename”命令可以修改文件的所属群组。</summary>
   <div>chgrp(change group)</div>
 </details>
 
@@ -197,7 +197,7 @@
 </details>
 
 <details>
-  <summary>使用“__ 用户名”命令删除一个用户的密码。如果需要删除用户的主文件夹需要加选项__。</summary>
+  <summary>使用“__ 用户名”命令删除一个用户。如果需要删除用户的主文件夹需要加选项__。</summary>
   <div>userdel</div>
   <div>-r</div>
 </details>
