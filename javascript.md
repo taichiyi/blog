@@ -279,7 +279,7 @@ n.a = 15;
 | MutationObserver | ✅ | ❌ |
 | Promise.then catch finally | ✅ | ✅ |
 
-## React的新功能Time Slice 和Suspense？
+## React的新功能Time Slice 和Suspense
 
 ### Time Slicing
 

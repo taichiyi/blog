@@ -42,3 +42,30 @@
   <summary>typeof null === 'object'是JavaScript第__个版本就存在的bug。</summary>
   <div>1</div>
 </details>
+
+<details>
+  <summary>JavaScript将数字存储为__位__数，但是所有位运算都将其操作数视为__位二进制。
+</summary>
+  <div>64</div>
+  <div>浮点</div>
+  <div>32</div>
+</details>
+
+<details>
+  <summary>JavaScript的不同类型的数据都是二进制存储在内存里的，为了区分数据的二进制数据的类型，会在二进制数据前面(低位)加__bit的标签。
+</summary>
+  <div>1-3</div>
+</details>
+
+<details>
+  <summary>有5中标签。在object前面加__；在string前面加__；在boolean前面加__；在number前面加__；</summary>
+  <div>000</div>
+  <div>100</div>
+  <div>110</div>
+  <div>010</div>
+</details>
+
+<details>
+  <summary>location对象的host属性和hostname属性有什么区别?</summary>
+  <div>hostname不包括端口</div>
+</details>

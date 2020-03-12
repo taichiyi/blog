@@ -45,3 +45,8 @@
 </details>
 
 ## MIME types -end-
+
+<details>
+  <summary>要设置HTTP资源缓存到浏览器的时间，可以在请求的响应头中添加__指令。</summary>
+  <div>Cache-Control</div>
+</details>

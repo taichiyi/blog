@@ -58,3 +58,12 @@
   <div>`^~` 后面接前缀字符串。如果是最长的前缀字符串匹配项，则不检查正则表达式。</div>
   <div>`=` 后面接前缀字符串。精确匹配，满足条件则停止任何匹配</div>
 </details>
+
+## try_files
+
+<details>
+  <summary>`try_files`主要用于没有__资源时的重定向，`try_files`可以在__和__上下文中使用。</summary>
+  <div>找到</div>
+  <div>server</div>
+  <div>location</div>
+</details>

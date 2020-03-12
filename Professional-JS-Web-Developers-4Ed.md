@@ -188,11 +188,6 @@
 </details>
 
 <details>
-  <summary>为了兼容ECMAScript 3的语法、避免ES3的不稳定行为，如果要为整个脚本启用严格模式，只需在顶部添加"__"</summary>
-  <div>use strict</div>
-</details>
-
-<details>
   <summary>建议始终在语句的末尾添加__，避免__错误，分号可以提高性能，避免解析器判断是否需要添加分号。</summary>
   <div>分号</div>
   <div>压缩</div>
