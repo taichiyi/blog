@@ -123,3 +123,7 @@ SubType.prototype.getSubValue = function() {
 const ins = new SubType();
 
 ```
+
+## 源代码到二进制文件-JavaScript引擎
+
+Sourcecode -> Abstract Syntax Tree -> Bytecode -> Binary
