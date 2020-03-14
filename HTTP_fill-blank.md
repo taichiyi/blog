@@ -50,3 +50,24 @@
   <summary>要设置HTTP资源缓存到浏览器的时间，可以在请求的响应头中添加__指令。</summary>
   <div>Cache-Control</div>
 </details>
+
+<details>
+  <summary>HTTP协议的全称是__。</summary>
+  <div>HyperText Transfer Protocol</div>
+</details>
+
+<details>
+  <summary>HTTPS协议的全称是__。</summary>
+  <div>HyperText Transfer Protocol Secure</div>
+</details>
+
+<details>
+  <summary>URI的全称是__。</summary>
+  <div>Uniform Resource Identifiers</div>
+</details>
+
+<details>
+  <summary>设计HTTP最初的目的是为了提供一种发布和接收__的方法。通过HTTP或者HTTPS协议请求的资源由__来标识。</summary>
+  <div>HTML页面</div>
+  <div>URI</div>
+</details>
