@@ -54,11 +54,13 @@
 <details>
   <summary>HTTP协议的全称是__。</summary>
   <div>HyperText Transfer Protocol</div>
+  <div>超文本传输协议</div>
 </details>
 
 <details>
   <summary>HTTPS协议的全称是__。</summary>
   <div>HyperText Transfer Protocol Secure</div>
+  <div>超文本传输安全协议</div>
 </details>
 
 <details>
@@ -207,7 +209,7 @@
 </details>
 
 <details>
-  <summary>TRACE: __服务器收到的请求，主要用于测试或诊断。</summary>
+  <summary>TRACE: __服务器收到的请求，主要用于测试或诊断。也可以用作一类称为跨站点跟踪的攻击的一部分。因此，通常的安全建议是在服务器配置中将其禁用。</summary>
   <div>回显</div>
 </details>
 
@@ -224,4 +226,42 @@
 <details>
   <summary>PATCH: 对资源进行__修改。</summary>
   <div>部分</div>
+</details>
+
+<details>
+  <summary>所有通用HTTP服务器都必须至少实现__和__方法，而所有其他方法在规范中都被认为是可选的。</summary>
+  <div>GET</div>
+  <div>HEAD</div>
+</details>
+
+<details>
+  <summary>可以被缓存的请求方法有：__、__、__。</summary>
+  <div>GET</div>
+  <div>POST</div>
+  <div>HEAD</div>
+</details>
+
+<details>
+  <summary>幂等(idempotent): 在相同输入下，多次运算的结果__。反之，非幂等。</summary>
+  <div>相等</div>
+</details>
+
+<details>
+  <summary>在HTTP/1.0及以后版本中，HTTP响应的第一行称为__行，并包括__状态代码。</summary>
+  <div>状态</div>
+  <div>数字</div>
+</details>
+
+<details>
+  <summary>数字状态码: 1XX __; 2XX __; 3XX __; 4XX __; 5XX __;</summary>
+  <div>1 信息的</div>
+  <div>2 成功的</div>
+  <div>3 重定向</div>
+  <div>4 客户端错误</div>
+  <div>5 服务端错误</div>
+</details>
+
+<details>
+  <summary>ETag（实体标签）标头字段用于确定请求资源的__是否与服务器上资源的当前版本相同。</summary>
+  <div>缓存版本</div>
 </details>
