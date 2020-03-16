@@ -46,9 +46,9 @@
 </details>
 
 <details>
-  <summary>`location`匹配的是URI的__部分，不包含__和域名</summary>
-  <div>pathname(locatoin.pathname)</div>
-  <div>参数</div>
+  <summary>`location`匹配的是URL的__部分，也就是不包含__和authority</summary>
+  <div>path</div>
+  <div>参数(query)</div>
 </details>
 
 <details>
@@ -66,4 +66,58 @@
   <div>找到</div>
   <div>server</div>
   <div>location</div>
+</details>
+
+## ngx_http_rewrite_module
+
+### break
+
+<details>
+  <summary>`break;`主要是为了停止处理当前的ngx_http_rewrite_module__，`break;`可以在__、__和__上下文中使用。</summary>
+  <div>指令集</div>
+  <div>server</div>
+  <div>location</div>
+  <div>if</div>
+</details>
+
+### rewrite
+
+<details>
+  <summary>`rewrite`主要用于修改URL，可以在__、__和__上下文中使用。</summary>
+  <div>server</div>
+  <div>location</div>
+  <div>if</div>
+</details>
+
+<details>
+  <summary>`rewrite`的语法: rewrite __ replacement [flag];</summary>
+  <div>regex</div>
+</details>
+
+<details>
+  <summary>如果`replacement`字符串以“http://”,“https://”或者“$scheme”开头，则停止执行其他指令，并__至`replacement`。数字状态码为__。</summary>
+  <div>重定向</div>
+  <div>302</div>
+</details>
+
+<details>
+  <summary>如果`regex`正则表达式含有“__”或“__”，则应该用单引号或双引号包裹起来。</summary>
+  <div>}</div>
+  <div>;</div>
+</details>
+
+<details>
+  <summary>`rewrite`只能返回两种数字状态码__和__。</summary>
+  <div>301</div>
+  <div>302</div>
+</details>
+
+<details>
+  <summary>如果想让数字状态码为301，则标签为__。</summary>
+  <div>permanent</div>
+</details>
+
+<details>
+  <summary>last标签的意义是：停止当前指令集，把__URI，重新进行`location`匹配。</summary>
+  <div>修改后的</div>
 </details>
