@@ -170,7 +170,67 @@
 
 <details>
   <summary></summary>
-  <div>电路</div>
-  <div>资源(缓存，链路传输速率)</div>
-  <div>分组</div>
+  <div></div>
+</details>
+
+## 第2章 应用层
+
+### 2.1 应用层协议原理
+
+#### 2.1.2 进程通信
+
+<details>
+  <summary>对于操作系统来说，程序的实例叫做__。</summary>
+  <div>进程(process)</div>
+</details>
+
+<details>
+  <summary>进行通信的实际上是进程(process)而不是程序。在两个不同的端系统上的进程，通过跨越计算机网络相互交换__而相互通信。</summary>
+  <div>报文(message)</div>
+</details>
+
+<details>
+  <summary>在一对进程之间的通话场景中，发起通信的进程被标识为__，在会话开始时等待联系的进程是__。</summary>
+  <div>客户</div>
+  <div>服务器</div>
+</details>
+
+<details>
+  <summary>进程通过一个叫__的软件接口向网络发送报文和从网络接收报文。套接字是同一台主机内应用层和传输层之间的接口。</summary>
+  <div>套接字(socket)</div>
+</details>
+
+<details>
+  <summary>除了知道报文发送目的地的主机地址外，发送进程还必须指定运行在接收主机上接收进程（更具体的说是，__）</summary>
+  <div>接收套接字</div>
+</details>
+
+#### 2.1.4 因特网提供的运输服务
+
+<details>
+  <summary>因特网为应用程序提供了两个运输层协议，即__和__。</summary>
+  <div>UDP</div>
+  <div>TCP</div>
+</details>
+
+<details>
+  <summary>当一个应用使用SSL时，发送进程向SSL套接字传递明文数据；在发送主机中的SSL则加密该数据并将加密的数据传递给TCP套接字。</summary>
+  <div>单向工作</div>
+</details>
+
+<details>
+  <summary>UDP的全称__。</summary>
+  <div>User Datagram Protocol</div>
+</details>
+
+<details>
+  <summary>UDP是__的，因为在两个进程通信前没有握过手</summary>
+  <div>无连接</div>
+</details>
+
+<details>
+  <summary>UDP的特点：报文不__能到达接收进程；到达接收进程的报文可能是__序到达的。没有__控制机制。</summary>
+  <div>保证</div>
+  <div>乱</div>
+  <div>拥塞</div>
 </details>

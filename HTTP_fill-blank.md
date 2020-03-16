@@ -139,42 +139,15 @@
 </details>
 
 <details>
-  <summary>互联网工程任务组，在19__年公布的 RFC 2616，该标准定义了HTTP协议中现今广泛使用的一个版本——HTTP/__。</summary>
-  <div>99</div>
-  <div>1.1</div>
-</details>
-
-<details>
-  <summary>HTTP是一个客户端（用户）和服务端（网站）之间__和__的标准，通常使用__协议。</summary>
+  <summary>HTTP是一个客户端（用户）和服务端（网站）之间__和__的标准。</summary>
   <div>请求</div>
   <div>应答</div>
-  <div>TCP</div>
 </details>
 
 <details>
   <summary>通常，由HTTP客户端发起一个请求，创建一个到服务器指定端口（默认是__端口）的__连接。</summary>
   <div>80</div>
   <div>TCP</div>
-</details>
-
-<details>
-  <summary>使用统一资源标识符（URI）协议http和https，通过统一资源定位符（URL）标识HTTP资源并将其放置在网络上。</summary>
-  <div>80</div>
-  <div>TCP</div>
-</details>
-
-<details>
-  <summary>HTTP/__协议新增了__种请求方法（也叫“动作”）来以不同方式操作指定的__。</summary>
-  <div>1.1</div>
-  <div>5</div>
-  <div>资源</div>
-</details>
-
-<details>
-  <summary>HTTP/__协议新增了__种请求方法（也叫“动作”）来以不同方式操作指定的__。</summary>
-  <div>1.1</div>
-  <div>5</div>
-  <div>资源</div>
 </details>
 
 <details>
@@ -264,4 +237,20 @@
 <details>
   <summary>ETag（实体标签）标头字段用于确定请求资源的__是否与服务器上资源的当前版本相同。</summary>
   <div>缓存版本</div>
+</details>
+
+<details>
+  <summary>全双工(全部同时双向工作): 允许数据在__个方向上__传输。</summary>
+  <div>两</div>
+  <div>同时</div>
+</details>
+
+<details>
+  <summary>半双工(一半同时双向工作): 两个方向都能发送数据，但是两个方向不能__发送。</summary>
+  <div>同时</div>
+</details>
+
+<details>
+  <summary>单工(__): 只有一个方向能发送数据。</summary>
+  <div>单向工作</div>
 </details>
