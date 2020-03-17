@@ -93,7 +93,7 @@
 </details>
 
 <details>
-  <summary>“__ [-R] dirname/filename”命令可以修改文件的拥有者。</summary>
+  <summary>“__ [-R] username[:groupname] dirname/filename”命令可以修改文件的拥有者。</summary>
   <div>chown(change own)</div>
   <div>还可以顺便修改群组名称，用户名[:群组名]</div>
   <div>单独修改拥有者，用户名</div>

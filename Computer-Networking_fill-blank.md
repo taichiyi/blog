@@ -234,3 +234,34 @@
   <div>乱</div>
   <div>拥塞</div>
 </details>
+
+#### 2.1.5 应用层协议
+
+<details>
+  <summary>应用层协议（英文名称:__）定义了运行在不同端系统上的应用程序__如何相互传递__。</summary>
+  <div>Application-layer protocol</div>
+  <div>进程</div>
+  <div>报文</div>
+</details>
+
+#### 2.1.6 本书涉及的网络应用
+
+<details>
+  <summary>说电子邮件比 Web 更复杂，是因为它使用了多个而不是一个__协议。</summary>
+  <div>应用层</div>
+</details>
+
+#### 2.2.2 非持续连接和持续连接
+
+<details>
+  <summary>现代浏览器大多运行每个域__个左右并行的__连接。</summary>
+  <div>6</div>
+  <div>TCP</div>
+</details>
+
+#### 2.2.3 非持续连接和持续连接
+
+<details>
+  <summary>HTTP 请求报文的第一行叫作__。</summary>
+  <div>请求行(request line)</div>
+</details>

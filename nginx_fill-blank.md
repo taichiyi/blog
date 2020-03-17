@@ -1,6 +1,12 @@
 <!-- markdownlint-disable MD033 -->
 # nginx 知识点 填空
 
+<details>
+  <summary>如果nginx的正则表达式含有“__”或“__”，则应该用单引号或双引号包裹起来。</summary>
+  <div>}</div>
+  <div>;</div>
+</details>
+
 ## location
 
 <details>
@@ -36,7 +42,7 @@
 </details>
 
 <details>
-  <summary>如果“正则表达式”和“前缀字符串”都有匹配项，则会使用谁的匹配项?</summary>
+  <summary>如果“正则表达式”和“前缀字符串”都有匹配项，则会使用谁的匹配项?(前缀字符串匹配项中没有^~的情况下)</summary>
   <div>正则表达式</div>
 </details>
 
@@ -53,8 +59,8 @@
 
 <details>
   <summary>在匹配模式下，有4种修饰符：`~`、`~*`、`^~`、`=`。`~`的意义__；`~*`的意义__；`^~`的意义__；`=`的意义__；</summary>
-  <div>`~` 后面接正则表达式，不区分大小写</div>
-  <div>`~*` 后面接正则表达式，区分大小写</div>
+  <div>`~` 后面接正则表达式，区分大小写</div>
+  <div>`~*` 后面接正则表达式，不区分大小写</div>
   <div>`^~` 后面接前缀字符串。如果是最长的前缀字符串匹配项，则不检查正则表达式。</div>
   <div>`=` 后面接前缀字符串。精确匹配，满足条件则停止任何匹配</div>
 </details>
@@ -101,12 +107,6 @@
 </details>
 
 <details>
-  <summary>如果`regex`正则表达式含有“__”或“__”，则应该用单引号或双引号包裹起来。</summary>
-  <div>}</div>
-  <div>;</div>
-</details>
-
-<details>
   <summary>`rewrite`只能返回两种数字状态码__和__。</summary>
   <div>301</div>
   <div>302</div>
@@ -120,4 +120,67 @@
 <details>
   <summary>last标签的意义是：停止当前指令集，把__URI，重新进行`location`匹配。</summary>
   <div>修改后的</div>
+</details>
+
+### if
+
+<details>
+  <summary>`if`可以在__、__和__上下文中使用。</summary>
+  <div>server</div>
+  <div>location</div>
+</details>
+
+<details>
+  <summary>`if`的语法: if (__) {...}。</summary>
+  <div>condition</div>
+</details>
+
+<details>
+  <summary>condition是一个变量时(字符串)，当变量为__或__时为假。</summary>
+  <div>空字符串</div>
+  <div>"0"</div>
+</details>
+
+<details>
+  <summary>condition含有“~”或“~*”时，则运算符的左边是__，右边是__。运算符可以取反__、__。</summary>
+  <div>变量</div>
+  <div>正则表达式</div>
+  <div>!~</div>
+  <div>!~*</div>
+</details>
+
+<details>
+  <summary>condition的正则表达式可以包含__，这些捕获可供以后在$1..$9变量中重用。</summary>
+  <div>捕获(captures)</div>
+</details>
+
+<details>
+  <summary>可以在condition的头部使用运算符__、__检查文件是否存在。</summary>
+  <div>-f</div>
+  <div>!-f</div>
+  <div>例子:if (!-f $request_filename) {...}</div>
+</details>
+
+<details>
+  <summary>可以在condition的头部使用运算符__、__检查目录是否存在。</summary>
+  <div>-d</div>
+  <div>!-d</div>
+</details>
+
+<details>
+  <summary>可以在condition的头部使用运算符__、__检查目录是否存在。</summary>
+  <div>-d</div>
+  <div>!-d</div>
+</details>
+
+<details>
+  <summary>可以在condition的头部使用运算符__、__检查目录或连接是否存在。</summary>
+  <div>-e</div>
+  <div>!-e</div>
+</details>
+
+<details>
+  <summary>可以在condition的头部使用运算符__、__检查是否为可执行文件。</summary>
+  <div>-x</div>
+  <div>!-x</div>
 </details>

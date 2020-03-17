@@ -254,3 +254,8 @@
   <summary>单工(__): 只有一个方向能发送数据。</summary>
   <div>单向工作</div>
 </details>
+
+<details>
+  <summary>HTTP报文只支持__编码。</summary>
+  <div>ASCII</div>
+</details>
