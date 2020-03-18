@@ -43,3 +43,5 @@ ReactDOM.render(
 ## Context
 
 > 背景在React应用中数据是通过props由上至下(父->子)传递的，最上层需要向最下层传递数据时，需要显示的层层传递，当存在多个组件嵌套时，这种方式非常繁琐。
+
+## Code Splitting

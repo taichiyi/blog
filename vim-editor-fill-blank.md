@@ -214,8 +214,3 @@
   <summary>撤销更改，返回到上一次保存的状态</summary>
   <div>:e!</div>
 </details>
-
-<details>
-  <summary>显示行号</summary>
-  <div>:set nu</div>
-</details>

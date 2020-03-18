@@ -125,7 +125,7 @@
 ### if
 
 <details>
-  <summary>`if`可以在__、__和__上下文中使用。</summary>
+  <summary>`if`可以在__和__上下文中使用。</summary>
   <div>server</div>
   <div>location</div>
 </details>
@@ -159,12 +159,6 @@
   <div>-f</div>
   <div>!-f</div>
   <div>例子:if (!-f $request_filename) {...}</div>
-</details>
-
-<details>
-  <summary>可以在condition的头部使用运算符__、__检查目录是否存在。</summary>
-  <div>-d</div>
-  <div>!-d</div>
 </details>
 
 <details>
