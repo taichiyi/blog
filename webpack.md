@@ -49,7 +49,7 @@ webpack-dev-server ≈ webpack-dev-middleware + express
 
 通过optimization.splitChunks配置`SplitChunksPlugin`插件。
 
-- priority
+- optimization.splitChunks.cacheGroups.{cacheGroup}.priority
 
   一个模块(例如React)可以属于多个cacheGroup。`optimization`将优先考虑具有更高优先级的cacheGroup。
 

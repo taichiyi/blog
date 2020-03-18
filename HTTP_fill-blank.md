@@ -221,7 +221,7 @@
 
 <details>
   <summary>在HTTP/1.0及以后版本中，HTTP响应的第一行称为__行，并包括__状态代码。</summary>
-  <div>状态</div>
+  <div>状态(status line)</div>
   <div>数字</div>
 </details>
 

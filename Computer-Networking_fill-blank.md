@@ -262,6 +262,20 @@
 #### 2.2.3 非持续连接和持续连接
 
 <details>
-  <summary>HTTP 请求报文的第一行叫作__。</summary>
+  <summary>HTTP 请求报文的第一行叫作__。后继的行叫作__。</summary>
   <div>请求行(request line)</div>
+  <div>首部行(header line)</div>
+</details>
+
+<details>
+  <summary>首部行(和附加的回车和换行)后有一个__。</summary>
+  <div>“实体体”(entity body)</div>
+  <div></div>
+</details>
+
+<details>
+  <summary>报文的状态行有3个字段, 左至右分别是: __、__、__。</summary>
+  <div>协议版本</div>
+  <div>数字状态码</div>
+  <div>状态文本</div>
 </details>
