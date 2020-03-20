@@ -7,7 +7,9 @@
   <div>;</div>
 </details>
 
-## location
+## ngx_http_core_module
+
+### location
 
 <details>
   <summary>`location`主要是为了匹配请求的__，`location`可以在__和__上下文中使用。</summary>
@@ -65,7 +67,7 @@
   <div>`=` 后面接前缀字符串。精确匹配，满足条件则停止任何匹配</div>
 </details>
 
-## try_files
+### try_files
 
 <details>
   <summary>`try_files`主要用于没有__资源时的重定向，`try_files`可以在__和__上下文中使用。</summary>
@@ -177,4 +179,25 @@
   <summary>可以在condition的头部使用运算符__、__检查是否为可执行文件。</summary>
   <div>-x</div>
   <div>!-x</div>
+</details>
+
+## ngx_http_proxy_module
+
+### proxy_pass
+
+<details>
+  <summary>`proxy_pass`可以在__、__ in location和__上下文中使用。</summary>
+  <div>location</div>
+  <div>if</div>
+  <div>limit_except</div>
+</details>
+
+<details>
+  <summary>`proxy_pass`的语法: proxy_pass __</summary>
+  <div>URL</div>
+</details>
+
+<details>
+  <summary>`proxy_pass`的作用: 转发__到的URL。URL可以指定为域名或IP地址，以及可选端口。</summary>
+  <div>请求</div>
 </details>

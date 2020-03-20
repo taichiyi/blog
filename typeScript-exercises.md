@@ -57,3 +57,9 @@
   <summary>介绍一下“泛型”（Generics）</summary>
   <div>泛型是指在定义函数、接口或类的时候，不预先指定具体的类型，而在使用的时候再指定类型的一种特性。</div>
 </details>
+
+<details>
+  <summary>实现（__）是面向对象中的一个重要概念。一般来讲，一个类只能继承自另一个类，有时候不同类之间可以有一些共有的特性，这时候就可以把特性提取成接口（interfaces），用 __ 关键字来实现。这个特性大大提高了面向对象的灵活性。</summary>
+  <div>implements</div>
+  <div>implements</div>
+</details>
