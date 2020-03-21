@@ -279,3 +279,46 @@
   <div>数字状态码</div>
   <div>状态文本</div>
 </details>
+
+<details>
+  <summary>在HTTP协议中的CR、LF、SP都是__中的一个码。</summary>
+  <div>ASCII</div>
+</details>
+
+<details>
+  <summary>CR: 代表回车，全称__，码值__。</summary>
+  <div>carriage return</div>
+  <div>13</div>
+</details>
+
+<details>
+  <summary>LF: 代表换行，全称__，码值__。</summary>
+  <div>linefeed</div>
+  <div>10</div>
+</details>
+
+<details>
+  <summary>SP: 代表空格，全称__，码值__。</summary>
+  <div>space</div>
+  <div>10</div>
+</details>
+
+<details>
+  <summary>响应首部行的Content-Length指示了被发送对象的__数。</summary>
+  <div>字节</div>
+</details>
+
+#### 2.2.4 用户与服务器的交互: cookie
+
+<details>
+  <summary>对于同一个请求的URL，很多情况下服务器想根据不同的身份返回不同的内容。但是HTTP是无状态的，所以无法通过一个请求的URL判断身份，所以有了__。</summary>
+  <div>cookie</div>
+</details>
+
+<details>
+  <summary>cookie技术有4个组件: 1.HTTP__报文首部行中的cookie；2.HTTP__报文首部行中的cookie；3.用户端系统中保留cookie文件，并由用户的__进行管理。4. 位于 Web 站点的一个后端__。</summary>
+  <div>响应</div>
+  <div>请求</div>
+  <div>浏览器</div>
+  <div>数据库</div>
+</details>

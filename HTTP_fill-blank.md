@@ -259,3 +259,16 @@
   <summary>HTTP报文只支持__编码。</summary>
   <div>ASCII</div>
 </details>
+
+<details>
+  <summary>在终端中打印www.so.com的响应报文:curl __ www.so.com</summary>
+  <div>-i</div>
+</details>
+
+## Cookie
+
+<details>
+  <summary>不同浏览器理论上是可以共用cookie的，但是主要出于__考虑没有共用，因为不同浏览器在本地储存cookie的__不一样。</summary>
+  <div>安全</div>
+  <div>位置</div>
+</details>
