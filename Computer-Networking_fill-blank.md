@@ -322,3 +322,29 @@
   <div>浏览器</div>
   <div>数据库</div>
 </details>
+
+#### 2.2.5 Web 缓存
+
+<details>
+  <summary>Web 缓冲器(Web cache)也叫__(__)，它是能够代表初始Web服务器来满足HTTP请求的网络实体。</summary>
+  <div>代理服务器</div>
+  <div>proxy server</div>
+</details>
+
+<details>
+  <summary>通过使用内容分发网络(__，CDN)，Web 缓存器正在因特网中发挥着越来越重要的作用。</summary>
+  <div>Content Distribution Network</div>
+</details>
+
+#### 2.2.6 条件 GET 方法
+
+<details>
+  <summary>HTTP协议有一种机制，允许缓存器证实它的对象是最新的。这个机制就是__方法。</summary>
+  <div>条件GET</div>
+  <div>conditional GET</div>
+</details>
+
+<details>
+  <summary>如果①请求报文使用GET方法；并且②请求报文中包含一个“__:”首部行。</summary>
+  <div>If-Modified-Since</div>
+</details>
