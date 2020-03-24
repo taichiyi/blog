@@ -295,4 +295,27 @@
   <summary>安全cookie(__ cookie)，只能传输一个__的连接(例如HTTPS)传输。</summary>
   <div>Secure</div>
   <div>加密</div>
+  <div>set-cookie: token=tcy;Domain=.aliyun.com;Path=/;Secure</div>
+</details>
+
+<details>
+  <summary>HttpOnly cookie：客户端api（如__）无法__`仅限http`的cookie。这种限制通过跨站点脚本（XSS）消除了cookie被盗的威胁。</summary>
+  <div>JavaScript</div>
+  <div>访问</div>
+    <div>set-cookie: token=tcy;Domain=.aliyun.com;Path=/;HttpOnly</div>
+</details>
+
+<details>
+  <summary>SameSite cookie：20__年，Chrome引入了一种新的cookie，它只能在与目标域源于同一个__的请求中发送。此限制减轻了跨站点请求伪造（XSRF）等攻击。通过将SameSite标志设置为__或__，cookie被赋予了此特性</summary>
+  <div>16</div>
+  <div>源</div>
+  <div>Strict</div>
+  <div>None</div>
+  <div>set-cookie: token=tcy;Domain=.aliyun.com;Path=/;SameSite=None<div>
+  <div>set-cookie: token=tcy;Domain=.aliyun.com;Path=/; (可以有空格)SameSite=Strict<div>
+</details>
+
+<details>
+  <summary>__是源于顶级域名(例如.com)，由于存在较大的安全隐患，所以基本都被浏览器禁用了。</summary>
+  <div>Supercookie</div>
 </details>

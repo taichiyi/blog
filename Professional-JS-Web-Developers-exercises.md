@@ -870,7 +870,7 @@
 
 <details>
   <summary>23.3.1.2 通过Set-Cookie让浏览器保存一个Cookie，名称为token、值为123456、域为wrox.com(包括多级子域名)、路径为不限、失效日期为2019年7月26日 07:10:24、使用SSL连接，代码该怎么写?</summary>
-  <div>Set-Cookie: tolen=123456; domain=.wrox.com; path=/; expires=Fri 26-Jul-2019 07:10:24 GMT; secure</div>
+  <div>Set-Cookie: tolen=123456;domain=.wrox.com;path=/;expires=Fri 26-Jul-2019 07:10:24 GMT;Secure</div>
 </details>
 
 <details>
