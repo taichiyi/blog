@@ -272,3 +272,27 @@
   <div>安全</div>
   <div>位置</div>
 </details>
+
+<details>
+  <summary>Cookie于__年在网络中使用。</summary>
+  <div>1994</div>
+  <div>位置</div>
+</details>
+
+<details>
+  <summary>会话cookie(__ cookie)也称为内存cookie、非持久cookie。当浏览器判断__结束，会删除该cookie。</summary>
+  <div>Session</div>
+  <div>会话</div>
+</details>
+
+<details>
+  <summary>持久性cookie(__ cookie)，会在指定__后删除或__一段时间后删除。</summary>
+  <div>日期</div>
+  <div>存在</div>
+</details>
+
+<details>
+  <summary>安全cookie(__ cookie)，只能传输一个__的连接(例如HTTPS)传输。</summary>
+  <div>Secure</div>
+  <div>加密</div>
+</details>
