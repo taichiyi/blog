@@ -277,7 +277,7 @@
   <summary>报文的状态行有3个字段, 左至右分别是: __、__、__。</summary>
   <div>协议版本</div>
   <div>数字状态码</div>
-  <div>状态文本</div>
+  <div>短语(状态文本)</div>
 </details>
 
 <details>
@@ -347,4 +347,50 @@
 <details>
   <summary>如果①请求报文使用GET方法；并且②请求报文中包含一个“__:”首部行。</summary>
   <div>If-Modified-Since</div>
+</details>
+
+<details>
+  <summary>如果①请求报文使用GET方法；并且②请求报文中包含一个“__:”首部行。</summary>
+  <div>If-Modified-Since</div>
+</details>
+
+<details>
+  <summary>如果响应数字状态码为__，则响应实体体为空。</summary>
+  <div>304</div>
+</details>
+
+### 2.3 因特网中的电子邮件
+
+<details>
+  <summary>SMTP的全称__。</summary>
+  <div>Simple Mail Transfer Protocol</div>
+</details>
+
+<details>
+  <summary>因特网电子邮件系统由3个主要部分组成：__、__、__。</summary>
+  <div>用户代理(user agent)</div>
+  <div>邮件服务器</div>
+  <div>简单邮件传送协议</div>
+</details>
+
+<details>
+  <summary>一个典型的邮件发送过程是: 从发送方的用户代理开始，传输到发送方的邮件服务器，再传输到接收方的邮件服务器，然后被分发到接收方的邮箱中。</summary>
+  <div>用户代理(user agent)</div>
+  <div>邮件服务器</div>
+  <div>简单邮件传送协议</div>
+</details>
+
+<details>
+  <summary>SMTP的RFC可以追溯到年。</summary>
+  <div>1982</div>
+</details>
+
+<details>
+  <summary>SMTP一般不使用__邮件服务器发送邮件。</summary>
+  <div>中间</div>
+</details>
+
+<details>
+  <summary>SMTP默认使用__端口。</summary>
+  <div>25</div>
 </details>
