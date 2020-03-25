@@ -350,11 +350,6 @@
 </details>
 
 <details>
-  <summary>如果①请求报文使用GET方法；并且②请求报文中包含一个“__:”首部行。</summary>
-  <div>If-Modified-Since</div>
-</details>
-
-<details>
   <summary>如果响应数字状态码为__，则响应实体体为空。</summary>
   <div>304</div>
 </details>
@@ -374,14 +369,15 @@
 </details>
 
 <details>
-  <summary>一个典型的邮件发送过程是: 从发送方的用户代理开始，传输到发送方的邮件服务器，再传输到接收方的邮件服务器，然后被分发到接收方的邮箱中。</summary>
-  <div>用户代理(user agent)</div>
-  <div>邮件服务器</div>
-  <div>简单邮件传送协议</div>
+  <summary>一个典型的邮件发送过程是: 从__方的用户代理开始，传输到__方的邮件服务器，再传输到接收方的__服务器，然后被分发到接收方的__中。</summary>
+  <div>发送</div>
+  <div>发送</div>
+  <div>邮件</div>
+  <div>邮箱</div>
 </details>
 
 <details>
-  <summary>SMTP的RFC可以追溯到年。</summary>
+  <summary>SMTP的RFC可以追溯到__年。</summary>
   <div>1982</div>
 </details>
 
@@ -393,4 +389,72 @@
 <details>
   <summary>SMTP默认使用__端口。</summary>
   <div>25</div>
+</details>
+
+### 2.3.2 与 HTTP 的对比
+
+<details>
+  <summary>HTTP 主要是一个__。SMTP主要是一个__。</summary>
+  <div>拉协议(pull protocol)</div>
+  <div>推协议(push protocol)</div>
+</details>
+
+<details>
+  <summary>POP3的全称__。</summary>
+  <div>Post Office Protocol--Version 3</div>
+  <div>第三方邮局协议</div>
+</details>
+
+<details>
+  <summary>IMAP的全称__。</summary>
+  <div>Internet Mail Access Protocol</div>
+  <div>因特网邮件访问协议</div>
+</details>
+
+<details>
+  <summary>SMTP用来将邮件从发送方的__传输到接收方的邮件服务器；SMTP 也用来将邮件从发送方的__传送到发送方的邮件服务器。</summary>
+  <div>邮件服务器</div>
+  <div>用户代理</div>
+</details>
+
+<details>
+  <summary>__、__或__用来将邮件从接收方的邮件服务器传送到接收方的用户代理。</summary>
+  <div>POP3</div>
+  <div>IMAP</div>
+  <div>HTTP</div>
+</details>
+
+<details>
+  <summary>POP3协议默认用的是__端口。</summary>
+  <div>110</div>
+</details>
+
+<details>
+  <summary>POP3 按照3个阶段进行工作: __、__和__。</summary>
+  <div>特许(authorization)</div>
+  <div>事务处理</div>
+  <div>更新</div>
+</details>
+
+<details>
+  <summary>POP3 在特许阶段后，用户代理可以使用4个命令__、__、__、__。</summary>
+  <div>list(邮件列表)</div>
+  <div>retr()</div>
+  <div>dele(删除)</div>
+  <div>quit(退出第二阶段)</div>
+</details>
+
+<details>
+  <summary>POP3 没有给用户代理提供创建远程__并为报文指派文件夹。</summary>
+  <div>文件夹</div>
+</details>
+
+<details>
+  <summary>IMAP 还为用户提供了远程文件夹中__邮件的命令，按指定条件去查询匹配的邮件。</summary>
+  <div>查询</div>
+</details>
+
+<details>
+  <summary>IMAP 允许用户代理获取报文的__。出于带宽考虑。</summary>
+  <div>某些部分</div>
 </details>

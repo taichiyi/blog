@@ -286,7 +286,7 @@
 </details>
 
 <details>
-  <summary>持久性cookie(__ cookie)，会在指定__后删除或__一段时间后删除。</summary>
+  <summary>持久性cookie，会在指定__后删除或__一段时间后删除。</summary>
   <div>日期</div>
   <div>存在</div>
 </details>
