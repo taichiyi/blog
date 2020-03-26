@@ -458,3 +458,53 @@
   <summary>IMAP 允许用户代理获取报文的__。出于带宽考虑。</summary>
   <div>某些部分</div>
 </details>
+
+<details>
+  <summary>当用户代理是普通的浏览器时，用户代理通过__协议向发送方服务器发送电子邮件报文。</summary>
+  <div>HTTP</div>
+</details>
+
+### 2.4 因特网对的目录服务
+
+### 2.4.1 DNS提供的服务
+
+<details>
+  <summary>DNS英文全称__，中文全称__。</summary>
+  <div>Domain Name System</div>
+  <div>域名系统</div>
+</details>
+
+<details>
+  <summary>在因特网中，识别主机有两种方式__或者__。</summary>
+  <div>主机名(host name)www.so.com</div>
+  <div>IP地址(IP address)</div>
+</details>
+
+<details>
+  <summary>路由器只认识__地址。</summary>
+  <div>IP</div>
+</details>
+
+<details>
+  <summary>DNS是：①一个由分层的DNS服务器实现的__数据库；②一个使得主机能够查询分布式数据库的__层协议。</summary>
+  <div>分布式</div>
+  <div>应用</div>
+</details>
+
+<details>
+  <summary>DNS服务器通常是运行BIND(Berkeley Internet Name Domain)软件的__机器。</summary>
+  <div>UNIX</div>
+</details>
+
+<details>
+  <summary>DNS协议运行在__协议之上，使用__号端口。</summary>
+  <div>UDP</div>
+  <div>53</div>
+</details>
+
+<details>
+  <summary>浏览器在发送HTTP请求报文之前，会从URL中抽取__，然后通过__想DNS服务器发送一个包含主机名的请求，从DNS服务器收到IP后，才会位于该IP地址80端口的HTTP服务器__发起一个TCP连接。</summary>
+  <div>主机名</div>
+  <div>DNS客户端</div>
+  <div>进程</div>
+</details>
