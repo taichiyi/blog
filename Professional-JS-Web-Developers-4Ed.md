@@ -373,6 +373,105 @@
   - 9.2.12 apply()
   - 9.2.13 construct()
 - 9.3 Proxy Patterns
+  - 9.3.1 Tracking Property Access
+  - 9.3.2 Hidden Properties
+  - 9.3.3 Property Validation
+  - 9.3.4 Function and Constructor Parameter Validation
+  - 9.3.5 Data Binding and Observables
+- 9.4 Summary
+
+第10章 FUNCTIONS
+
+- 10.1 Arrow Functions
+- 10.2 Function Names
+- 10.3 Understanding Arguments
+  - 10.3.1 Arguments in Arrow Functions
+- 10.4 No Overloading
+- 10.5 Default Parameter Values
+  - 10.5.1 Default Parameter Scope and Temporal Dead Zone
+- 10.6 Spread Arguments and Rest Parameters
+  - 10.6.1 Spread Arguments
+  - 10.6.2 Rest Parameter
+- 10.7 Function Declarations versus Function Expressions
+- 10.8 Functions as Values
+- 10.9 Function Internals
+  - 10.9.1 arguments
+  - 10.9.2 this
+  - 10.9.3 caller
+  - 10.9.4 new.target
+- 10.10 Function Properties and Methods
+- 10.11 Function Expressions
+- 10.12 Recursion
+- 10.13 Tail Call Optimization
+  - 10.13.1 Tail Call Optimization Requirements
+  - 10.13.2 Coding for Tail Call Optimization
+- 10.14 Closures
+  - 10.14.1 The this Object
+  - 10.14.2 Memory Leaks
+- 10.15 Immediately Invoked Function Expressions
+- 10.16 Private Variables
+  - 10.16.1 Static Private Variables
+  - 10.16.2 The Module Pattern
+  - 10.16.3 The Module-Augmentation Pattern
+- 10.17 Summary
+
+第11章 PROMISES AND ASYNC FUNCTIONS
+
+- 11.1 Introduction to Asynchronous Programming
+  - 11.1.1 Synchronous vs. Asynchronous JavaScript
+  - 11.1.2 Legacy Asynchronous Programming Patterns
+    - 11.1.2.1 Returning Asynchronous Values
+    - 11.1.2.2 Handling Failure
+    - 11.1.2.3 Nesting Asynchronous Callbacks
+- 11.2 Promises
+- 11.2.1 The Promises/A+ Specification
+- 11.2.2 Promise Basics
+  - 11.2.2.1 The Promise State Machine
+  - 11.2.2.2 Resolved Values, Rejection Reasons, and Utility of Promises
+  - 11.2.2.3 Controlling Promise State with the Executor
+  - 11.2.2.4 Promise Casting with Promise.resolve()
+  - 11.2.2.5 Promise Rejection with Promise.reject()
+  - 11.2.2.6 Synchronous/Asynchronous Execution Duality
+- 11.2.3 Promise Instance Methods
+  - 11.2.3.1 Implementing the Thenable Interface
+  - 11.2.3.2 Promise.prototype.then()
+  - 11.2.3.3 Promise.prototype.catch()
+  - 11.2.3.4 Promise.prototype.finally()
+  - 11.2.3.5 Non-Reentrant Promise Methods
+  - 11.2.3.6 Sibling Handler Order of Execution
+  - 11.2.3.7 Resolved Value and Rejected Reason Passing
+  - 11.2.3.8 Rejecting Promises and Rejection Error Handling
+- 11.2.4 Promise Chaining and Composition
+  - 11.2.4.1 Promise Chaining
+  - 11.2.4.2 Promise Graphs
+  - 11.2.4.3 Parallel Promise Composition with Promise.all() and Promise.race()
+  - 11.2.4.4 Serial Promise Composition
+- 11.2.5 Promise Extensions
+  - 11.2.5.1 Promise Canceling
+  - 11.2.5.2 Promise Progress Notifications
+- 11.3 Async Functions
+  - 11.3.1 Async Function Basics
+    - 11.3.1.1 The async keyword
+    - 11.3.1.2 The await keyword
+    - 11.3.1.3 Restrictions on await
+  - 11.3.2 Halting and Resuming Execution
+  - 11.3.3 Strategies for Async Functions
+    - 11.3.3.1 Implementing Sleep()
+    - 11.3.3.2 Maximizing Parallelization
+    - 11.3.3.3 Serial Promise Execution
+    - 11.3.3.4 Stack Traces and Memory Management
+- 11.4 Summary
+
+第12章 THE BROWSER OBJECT MODEL
+
+- 12.1 The window Object
+  - 12.1.1 The Global Scope
+  - 12.1.2 Window Relationships
+  - 12.1.3 Window Position and Pixel Ratio
+    - 12.1.3.1 Pixel Ratios
+  - 12.1.4 Window Size
+  - 12.1.5 Window Viewport Position
+  - 12.1.6 Navigating and Opening Windows
 
 ## 介绍
 

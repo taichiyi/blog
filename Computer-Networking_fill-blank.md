@@ -496,15 +496,74 @@
   <div>UNIX</div>
 </details>
 
-<details>
+<!-- <details>
   <summary>DNS协议运行在__协议之上，使用__号端口。</summary>
+  <div>UDP</div>
+  <div>53</div>
+</details> -->
+
+<details>
+  <summary>浏览器在发送HTTP请求报文之前，会从URL中抽取__，然后通过__向DNS服务器发送一个包含主机名的请求，从DNS服务器收到IP后，它能够向位于该IP地址80端口的HTTP服务器__发起一个TCP连接。</summary>
+  <div>主机名</div>
+  <div>DNS客户端</div>
+  <div>进程</div>
+</details>
+
+<details>
+  <summary>为了减少延时，IP地址通常会缓存在一个“附近的”__中。</summary>
+  <div>DNS服务器</div>
+</details>
+
+### 2.4.2 DNS工作机理概述
+
+<details>
+  <summary>在很多基于UNIX的机器上，应用程序为了执行这种转换需要调用函数 __()。</summary>
+  <div>gethostbyname</div>
+</details>
+
+<details>
+  <summary>DNS客户端接受到主机名后，向网络中发送一个DNS查询报文。所有的DNS请求和回答报文使用__数据报 经端口___发送。</summary>
   <div>UDP</div>
   <div>53</div>
 </details>
 
 <details>
-  <summary>浏览器在发送HTTP请求报文之前，会从URL中抽取__，然后通过__想DNS服务器发送一个包含主机名的请求，从DNS服务器收到IP后，才会位于该IP地址80端口的HTTP服务器__发起一个TCP连接。</summary>
-  <div>主机名</div>
-  <div>DNS客户端</div>
-  <div>进程</div>
+  <summary>DNS 的一种简单设计是在因特网只有一个DNS服务器，该服务器包含所有的__。</summary>
+  <div>映射</div>
+</details>
+
+<details>
+  <summary>单一DNS服务器的缺点: __；__；__。</summary>
+  <div>单点故障</div>
+  <div>带宽问题</div>
+  <div>延迟高</div>
+</details>
+
+<details>
+  <summary>DNS 是一个在__上实现的__数据库。</summary>
+  <div>因特网</div>
+  <div>分布式</div>
+</details>
+
+<details>
+  <summary>大量的 DNS 服务器，以__方式组织。</summary>
+  <div>层次</div>
+</details>
+
+<details>
+  <summary>__层次 DNS 服务器拥有因特网上所有的主机的映射。</summary>
+  <div>没有哪个</div>
+</details>
+
+<details>
+  <summary>有3种类型的DNS服务器：__DNS服务器、__DNS服务器和__DNS服务器。</summary>
+  <div>根</div>
+  <div>顶级域</div>
+  <div>权威</div>
+</details>
+
+<details>
+  <summary>TLD的英文全称__；中文全称__。</summary>
+  <div>Top-Level Domain</div>
+  <div>顶级域</div>
 </details>
