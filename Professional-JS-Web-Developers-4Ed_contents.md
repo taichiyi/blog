@@ -1,0 +1,1220 @@
+# 目录
+
+第1章 WHAT IS JAVASCRIPT?
+
+- 1.1 A Short History
+- 1.2 JavaScript Implementations
+  - 1.2.1 ECMAScript
+    - 1.2.1.1 ECMAScript Editions
+    - 1.2.1.2 What Does ECMAScript Conformance Mean?
+    - 1.2.1.3 ECMAScript Support in Web Browsers
+  - 1.2.2 The Document Object Model
+    - 1.2.2.1 Why the DOM Is Necessary
+    - 1.2.2.2 DOM Levels
+    - 1.2.2.3 Other DOMs
+    - 1.2.2.4 DOM Support in Web Browsers
+  - 1.2.3 The Browser Object Model
+- 1.3 JavaScript Versions
+- 1.4 Summary
+
+第2章 JAVASCRIPT IN HTML
+
+- 2.1 The &lt;script> Element
+  - 2.1.1 Tag Placement
+  - 2.1.2 Deferred Scripts
+  - 2.1.3 Asynchronous Scripts
+  - 2.1.4 Dynamic Script Loading
+  - 2.1.5 Changes in XHTML
+  - 2.1.6 Deprecated Syntax
+- 2.2 Inline Code versus External Files
+- 2.3 Document Modes
+- 2.4 The &lt;noscript> Element
+- 2.5 Summary
+
+第3章 LANGUAGE BASICS
+
+- 3.1 Syntax
+  - 3.1.1 Case-Sensitivity
+  - 3.1.2 Identifiers
+  - 3.1.3 Comments
+  - 3.1.4 Strict Mode
+  - 3.1.5 Statements
+- 3.2 Keywords and Reserved Words
+- 3.3 Variables
+  - 3.3.1 The ’var’ Keyword
+    - 3.3.1.1 var Declaration Scope
+    - 3.3.1.2 var Declaration Hoisting
+  - 3.3.2 ’let’ Declarations
+    - 3.3.2.1 Temporal Dead Zone
+    - 3.3.2.2 Global Declarations
+    - 3.3.2.3 Conditional Declaration
+    - 3.3.2.4 let Declaration in for Loops
+  - 3.3.3 ’const’ Declarations
+  - 3.3.4 Declaration Styles and Best Practices
+    - 3.3.4.1 Don’t Use var
+    - 3.3.4.2 Prefer const Over let
+- 3.4 Data Types
+  - 3.4.1 Data Types
+  - 3.4.2 The Undefined Type
+  - 3.4.3 The Null Type
+  - 3.4.4 The Boolean Type
+  - 3.4.5 The Number Type
+    - 3.4.5.1 Floating-Point Values
+    - 3.4.5.2 Range of Values
+    - 3.4.5.3 NaN
+    - 3.4.5.4 Number Conversions
+  - 3.4.6 The String Type
+    - 3.4.6.1 Character Literals
+    - 3.4.6.2 The Nature of Strings
+    - 3.4.6.3 Converting to a String
+    - 3.4.6.4 Template Literals
+    - 3.4.6.5 Interpolation
+    - 3.4.6.6 Template Literal Tag Functions
+    - 3.4.6.7 Raw Strings
+  - 3.4.7 The Symbol Type
+    - 3.4.7.1 Basic Symbol Use
+    - 3.4.7.2 Using the Global Symbol Registry
+    - 3.4.7.3 Using Symbols as Properties
+    - 3.4.7.4 Well-Known Symbols
+  - 3.4.8 The Object Type
+- 3.5 Operators
+  - 3.5.1 Unary Operators
+    - 3.5.1.1 Increment/Decrement
+    - 3.5.1.2 Unary Plus and Minus
+  - 3.5.2 Bitwise Operators
+    - 3.5.2.1 Bitwise NOT
+    - 3.5.2.2 Bitwise AND
+    - 3.5.2.3 Bitwise OR
+    - 3.5.2.4 Bitwise XOR
+    - 3.5.2.5 Left Shift
+    - 3.5.2.6 Signed Right Shift
+    - 3.5.2.7 Unsigned Right Shift
+  - 3.5.3 Boolean Operators
+    - 3.5.3.1 Logical NOT
+    - 3.5.3.2 Logical AND
+    - 3.5.3.3 Logical OR
+  - 3.5.4 Multiplicative Operators
+    - 3.5.4.1 Multiply
+    - 3.5.4.2 Divide
+    - 3.5.4.3 Modulus
+  - 3.5.5 Exponentiation Operator
+  - 3.5.6 Additive Operators
+    - 3.5.6.1 Add
+    - 3.5.6.2 Subtract
+  - 3.5.7 Relational Operators
+  - 3.5.8 Equality Operators
+    - 3.5.8.1 Equal and Not Equal
+    - 3.5.8.2 Identically Equal and Not Identically Equal
+  - 3.5.9 Conditional Operator
+  - 3.5.10 Assignment Operators
+  - 3.5.11 Comma Operator
+- 3.6 Statements
+  - 3.6.1 The if Statement
+  - 3.6.2 The do-while Statement
+  - 3.6.3 The while Statement
+  - 3.6.4 The for Statement
+  - 3.6.5 The for-in Statement
+  - 3.6.6 The for-of Statement
+  - 3.6.7 Labeled Statements
+  - 3.6.8 The break and continue Statements
+  - 3.6.9 The with Statement
+  - 3.6.10 The switch Statement
+- 3.7 Functions
+- 3.8 Summary
+
+第4章 VARIABLES, SCOPE, AND MEMORY
+
+- 4.1 Primitive and Reference Values
+  - 4.1.1 Dynamic Properties
+  - 4.1.2 Copying Values
+  - 4.1.3 Argument Passing
+  - 4.1.4 Determining Type
+- 4.2 Execution Context and Scope
+  - 4.2.1 Scope Chain Augmentation
+  - 4.2.2 Variable Declaration
+    - 4.2.2.1 Function Scope Declaration Using var
+    - 4.2.2.2 Block Scope Declaration Using let
+    - 4.2.2.3 Constant Declaration Using const
+    - 4.2.2.4 Identifier Lookup
+- 4.3 Garbage Collection
+  - 4.3.1 Mark-and-Sweep
+  - 4.3.2 Reference Counting
+  - 4.3.3 Performance
+  - 4.3.4 Managing Memory
+    - 4.3.4.1 Performance Boosts with const and let Declarations
+    - 4.3.4.2 Hidden Classes and the delete Operation
+    - 4.3.4.3 Memory Leaks
+    - 4.3.4.4 Static Allocation and Object Pools
+- 4.4 Summary
+
+第5章 BASIC REFERENCE TYPES
+
+- 5.1 The Date Type
+  - 5.1.1 Inherited Methods
+  - 5.1.2 Date-Formatting Methods
+  - 5.1.3 Date/Time Component Methods
+- 5.2 The RegExp Type
+  - 5.2.1 RegExp Instance Properties
+  - 5.2.2 RegExp Instance Methods
+  - 5.2.3 RegExp Constructor Properties
+  - 5.2.4 Pattern Limitations
+- 5.3 Primitive Wrapper Types
+  - 5.3.1 The Boolean Type
+  - 5.3.2 The Number Type
+  - 5.3.3 The isInteger() Method and Safe Integers
+- 5.4 The String Type
+  - 5.4.1 The JavaScript Character
+  - 5.4.2 The normalize() Method
+  - 5.4.3 String-Manipulation Methods
+  - 5.4.4 String Location Methods
+  - 5.4.5 String Inclusion Methods
+  - 5.4.6 The trim() Method
+  - 5.4.7 The repeat() Method
+  - 5.4.8 The padStart() and padEnd() Methods
+  - 5.4.9 String Iterators and Destructuring
+  - 5.4.10 String Case Methods
+  - 5.4.11 String Pattern-Matching Methods
+  - 5.4.12 The localeCompare() Method
+  - 5.4.13 HTML Methods
+- 5.5 Singleton Built-in Objects
+  - 5.5.1 The Global Object
+    - 5.5.1.1 URI-Encoding Methods
+    - 5.5.1.2 The eval() Method
+    - 5.5.1.3 Global Object Properties
+    - 5.5.1.4 The Window Object
+  - 5.5.2 The Math Object
+    - 5.5.2.1 Math Object Properties
+    - 5.5.2.2 The min() and max() Methods
+    - 5.5.2.3 Rounding Methods
+    - 5.5.2.4 The random() Method
+    - 5.5.2.5 Other Methods
+- 5.6 Summary
+
+第6章 COLLECTION REFERENCE TYPES
+
+- 6.1 The Object Type
+- 6.2 The Array Type
+  - 6.2.1 Creating Arrays
+  - 6.2.2 Array Holes
+  - 6.2.3 Indexing into Arrays
+  - 6.2.4 Detecting Arrays
+  - 6.2.5 Iterator Methods
+  - 6.2.6 Copy and Fill Methods
+  - 6.2.7 Conversion Methods
+  - 6.2.8 Stack Methods
+  - 6.2.9 Queue Methods
+  - 6.2.10 Reordering Methods
+  - 6.2.11 Manipulation Methods
+  - 6.2.12 Search and Location Methods
+    - 6.2.12.1 Strict Equivalence
+    - 6.2.12.2 Predicate Search
+  - 6.2.13 Iterative Methods
+  - 6.2.14 Reduction Methods
+- 6.3 Typed Arrays
+  - 6.3.1 History
+    - 6.3.1.1 WebGL
+    - 6.3.1.2 Emergence of Typed Arrays
+  - 6.3.2 Using ArrayBuffers
+  - 6.3.3 DataViews
+    - 6.3.3.1 ElementType
+    - 6.3.3.2 Big-Endian and Little-Endian
+    - 6.3.3.3 Corner Cases
+  - 6.3.4 Typed Arrays
+    - 6.3.4.1 Typed Array Behavior
+    - 6.3.4.2 Merging, Copying, and Changing Typed Arrays
+    - 6.3.4.3 Underflow and Overflow
+- 6.4 The Map Type
+  - 6.4.1 Basic API
+  - 6.4.2 Order and Iteration
+  - 6.4.3 Choosing Between Objects and Maps
+    - 6.4.3.1 Memory Profile
+    - 6.4.3.2 Insertion Performance
+    - 6.4.3.3 Lookup Performance
+    - 6.4.3.4 Delete Performance
+- 6.5 The WeakMap Type
+  - 6.5.1 Basic API
+  - 6.5.2 Weak Keys
+  - 6.5.3 Non-Iterable Keys
+  - 6.5.4 Utility
+    - 6.5.4.1 Private Variables
+    - 6.5.4.2 DOM Node Metadata
+- 6.6 The Set Type
+  - 6.6.1 Basic API
+  - 6.6.2 Order and Iteration
+  - 6.6.3 Defining Formal Set Operations
+- 6.7 The WeakSet Type
+  - 6.7.1 Basic API
+  - 6.7.2 Weak Keys
+  - 6.7.3 Non-Iterable Values
+  - 6.7.4 Utility
+- 6.8 Iteration and Spread Operators
+- 6.9 Summary
+
+第7章 ITERATORS AND GENERATORS
+
+- 7.1 Introduction to Iteration
+- 7.2 The Iterator Pattern
+  - 7.2.1 The Iterable Protocol
+  - 7.2.2 The Iterator Protocol
+  - 7.2.3 Custom Iterator Definition
+  - 7.2.4 Early Termination of Iterators
+- 7.3 Generators
+  - 7.3.1 Generator Basics
+  - 7.3.2 Interrupting Execution with “yield”
+    - 7.3.2.1 Using a Generator Object as an Iterable
+    - 7.3.2.2 Using “yield” for Input and Output
+    - 7.3.2.3 Yielding an Iterable
+    - 7.3.2.4 Recursive Algorithms Using yield*
+  - 7.3.3 Using a Generator as the Default Iterator
+  - 7.3.4 Early Termination of Generators
+    - 7.3.4.1 The return() Method
+    - 7.3.4.2 The throw() Method
+- 7.4 Summary
+
+第8章 OBJECTS, CLASSES, AND OBJECT-ORIENTED PROGRAMMING
+
+- 8.1 Understanding Objects
+  - 8.1.1 Types of Properties
+    - 8.1.1.1 Data Properties
+    - 8.1.1.2 Accessor Properties
+  - 8.1.2 Defining Multiple Properties
+  - 8.1.3 Reading Property Attributes
+  - 8.1.4 Merging Objects
+  - 8.1.5 Object Identity and Equality
+  - 8.1.6 Enhanced Object Syntax
+    - 8.1.6.1 Property Value Shorthand
+    - 8.1.6.2 Computed Property Keys
+    - 8.1.6.3 Concise Method Syntax
+  - 8.1.7 Object Destructuring
+    - 8.1.7.1 Nested Destructuring
+    - 8.1.7.2 Partial Destructuring Completion
+    - 8.1.7.3 Parameter Context Matching
+- 8.2 Object Creation
+  - 8.2.1 Overview
+  - 8.2.2 The Factory Pattern
+  - 8.2.3 The Function Constructor Pattern
+    - 8.2.3.1 Constructors as Functions
+    - 8.2.3.2 Problems with Constructors
+  - 8.2.4 The Prototype Pattern
+    - 8.2.4.1 How Prototypes Work
+    - 8.2.4.2 Understanding the Prototype Hierarchy
+    - 8.2.4.3 Prototypes and the “in” Operator
+    - 8.2.4.4 Property Enumeration Order
+  - 8.2.5 Object Iteration
+    - 8.2.5.1 Alternate Prototype Syntax
+    - 8.2.5.2 Dynamic Nature of Prototypes
+    - 8.2.5.3 Native Object Prototypes
+    - 8.2.5.4 Problems with Prototypes
+- 8.3 Inheritance
+  - 8.3.1 Prototype Chaining
+    - 8.3.1.1 Default Prototypes
+    - 8.3.1.2 Prototype and Instance Relationships
+    - 8.3.1.3 Working with Methods
+    - 8.3.1.4 Problems with Prototype Chaining
+  - 8.3.2 Constructor Stealing
+    - 8.3.2.1 Passing Arguments
+    - 8.3.2.2 Problems with Constructor Stealing
+  - 8.3.3 Combination Inheritance
+  - 8.3.4 Prototypal Inheritance
+  - 8.3.5 Parasitic Inheritance
+  - 8.3.6 Parasitic Combination Inheritance
+- 8.4 Classes
+  - 8.4.1 Class Definition Basics
+    - 8.4.1.1 Class Composition
+  - 8.4.2 The Class Constructor
+    - 8.4.2.1 Instantiation
+    - 8.4.2.2 Understanding Classes as Special Functions
+  - 8.4.3 Instance, Prototype, and Class Members
+    - 8.4.3.1 Instance Members
+    - 8.4.3.2 Prototype Methods and Accessors
+    - 8.4.3.3 Static Class Methods and Accessors
+    - 8.4.3.4 Non-Function Prototype and Class Members
+    - 8.4.3.5 Iterator and Generator Methods
+  - 8.4.4 Inheritance
+    - 8.4.4.1 Inheritance Basics
+    - 8.4.4.2 Constructors, HomeObjects, and super()
+    - 8.4.4.3 Abstract Base Classes
+    - 8.4.4.4 Inheriting from Built-in Types
+    - 8.4.4.5 Class Mixins
+- 8.5 Summary
+
+第9章  PROXIES AND REFLECT
+
+- 9.1 Proxy Fundamentals
+  - 9.1.1 Creating a Passthrough Proxy
+  - 9.1.2 Defining Traps
+  - 9.1.3 Trap Parameters and the Reflect API
+  - 9.1.4 Trap Invariants
+  - 9.1.5 Revocable Proxies
+  - 9.1.6 Utility of the Reflect API
+    - 9.1.6.1 Reflect API vs. Object API
+    - 9.1.6.2 Status Flags
+    - 9.1.6.3 Supplanting Operators with First-Class Functions
+    - 9.1.6.4 Safe Function Application
+  - 9.1.7 Proxying a Proxy
+  - 9.1.8 Proxy Considerations and Shortcomings
+    - 9.1.8.1 ’this’ Inside a Proxy
+    - 9.1.8.2 Proxies and Internal Slots
+- 9.2 Proxy Traps and Reflect Methods
+  - 9.2.1 get()
+  - 9.2.2 set()
+  - 9.2.3 has()
+  - 9.2.4 defineProperty()
+  - 9.2.5 getOwnPropertyDescriptor()
+  - 9.2.6 deleteProperty()
+  - 9.2.7 ownKeys()
+  - 9.2.8 getPrototypeOf()
+  - 9.2.9 setPrototypeOf()
+  - 9.2.10 isExtensible()
+  - 9.2.11 preventExtensions()
+  - 9.2.12 apply()
+  - 9.2.13 construct()
+- 9.3 Proxy Patterns
+  - 9.3.1 Tracking Property Access
+  - 9.3.2 Hidden Properties
+  - 9.3.3 Property Validation
+  - 9.3.4 Function and Constructor Parameter Validation
+  - 9.3.5 Data Binding and Observables
+- 9.4 Summary
+
+第10章 FUNCTIONS
+
+- 10.1 Arrow Functions
+- 10.2 Function Names
+- 10.3 Understanding Arguments
+  - 10.3.1 Arguments in Arrow Functions
+- 10.4 No Overloading
+- 10.5 Default Parameter Values
+  - 10.5.1 Default Parameter Scope and Temporal Dead Zone
+- 10.6 Spread Arguments and Rest Parameters
+  - 10.6.1 Spread Arguments
+  - 10.6.2 Rest Parameter
+- 10.7 Function Declarations versus Function Expressions
+- 10.8 Functions as Values
+- 10.9 Function Internals
+  - 10.9.1 arguments
+  - 10.9.2 this
+  - 10.9.3 caller
+  - 10.9.4 new.target
+- 10.10 Function Properties and Methods
+- 10.11 Function Expressions
+- 10.12 Recursion
+- 10.13 Tail Call Optimization
+  - 10.13.1 Tail Call Optimization Requirements
+  - 10.13.2 Coding for Tail Call Optimization
+- 10.14 Closures
+  - 10.14.1 The this Object
+  - 10.14.2 Memory Leaks
+- 10.15 Immediately Invoked Function Expressions
+- 10.16 Private Variables
+  - 10.16.1 Static Private Variables
+  - 10.16.2 The Module Pattern
+  - 10.16.3 The Module-Augmentation Pattern
+- 10.17 Summary
+
+第11章 PROMISES AND ASYNC FUNCTIONS
+
+- 11.1 Introduction to Asynchronous Programming
+  - 11.1.1 Synchronous vs. Asynchronous JavaScript
+  - 11.1.2 Legacy Asynchronous Programming Patterns
+    - 11.1.2.1 Returning Asynchronous Values
+    - 11.1.2.2 Handling Failure
+    - 11.1.2.3 Nesting Asynchronous Callbacks
+- 11.2 Promises
+- 11.2.1 The Promises/A+ Specification
+- 11.2.2 Promise Basics
+  - 11.2.2.1 The Promise State Machine
+  - 11.2.2.2 Resolved Values, Rejection Reasons, and Utility of Promises
+  - 11.2.2.3 Controlling Promise State with the Executor
+  - 11.2.2.4 Promise Casting with Promise.resolve()
+  - 11.2.2.5 Promise Rejection with Promise.reject()
+  - 11.2.2.6 Synchronous/Asynchronous Execution Duality
+- 11.2.3 Promise Instance Methods
+  - 11.2.3.1 Implementing the Thenable Interface
+  - 11.2.3.2 Promise.prototype.then()
+  - 11.2.3.3 Promise.prototype.catch()
+  - 11.2.3.4 Promise.prototype.finally()
+  - 11.2.3.5 Non-Reentrant Promise Methods
+  - 11.2.3.6 Sibling Handler Order of Execution
+  - 11.2.3.7 Resolved Value and Rejected Reason Passing
+  - 11.2.3.8 Rejecting Promises and Rejection Error Handling
+- 11.2.4 Promise Chaining and Composition
+  - 11.2.4.1 Promise Chaining
+  - 11.2.4.2 Promise Graphs
+  - 11.2.4.3 Parallel Promise Composition with Promise.all() and Promise.race()
+  - 11.2.4.4 Serial Promise Composition
+- 11.2.5 Promise Extensions
+  - 11.2.5.1 Promise Canceling
+  - 11.2.5.2 Promise Progress Notifications
+- 11.3 Async Functions
+  - 11.3.1 Async Function Basics
+    - 11.3.1.1 The async keyword
+    - 11.3.1.2 The await keyword
+    - 11.3.1.3 Restrictions on await
+  - 11.3.2 Halting and Resuming Execution
+  - 11.3.3 Strategies for Async Functions
+    - 11.3.3.1 Implementing Sleep()
+    - 11.3.3.2 Maximizing Parallelization
+    - 11.3.3.3 Serial Promise Execution
+    - 11.3.3.4 Stack Traces and Memory Management
+- 11.4 Summary
+
+第12章 THE BROWSER OBJECT MODEL
+
+- 12.1 The window Object
+  - 12.1.1 The Global Scope
+  - 12.1.2 Window Relationships
+  - 12.1.3 Window Position and Pixel Ratio
+    - 12.1.3.1 Pixel Ratios
+  - 12.1.4 Window Size
+  - 12.1.5 Window Viewport Position
+  - 12.1.6 Navigating and Opening Windows
+- 12.1 The window Object
+  - 12.1.1 The Global Scope
+  - 12.1.2 Window Relationships
+  - 12.1.3 Window Position and Pixel Ratio
+    - 12.1.3.1 Pixel Ratios
+  - 12.1.4 Window Size
+  - 12.1.5 Window Viewport Position
+  - 12.1.6 Navigating and Opening Windows
+    - 12.1.6.1 Popping Up Windows
+    - 12.1.6.2 Security Restrictions
+    - 12.1.6.3 Pop-up Blockers
+  - 12.1.7 Intervals and Timeouts
+  - 12.1.8 System Dialogs
+- 12.2 The location Object
+  - 12.2.1 Query String Arguments
+    - 12.2.1.1 URLSearchParams
+  - 12.2.2 Manipulating the Location
+- 12.3 The navigator Object
+  - 12.3.1 Detecting Plug-ins
+    - 12.3.1.1 Legacy Internet Explorer Plugin Detection
+  - 12.3.2 Registering Handlers
+- 12.4 The screen Object
+- 12.5 The history Object
+  - 12.5.1 Navigation
+  - 12.5.2 History State Management
+- 12.6 Summary
+
+第13章 CLIENT DETECTION
+
+- 13.1 Capability Detection
+  - 13.1.1 Safer Capability Detection
+  - 13.1.2 Using Capability Detection for Browser Analysis
+    - 13.1.2.1 Detecting Feature Support
+    - 13.1.2.2 Detecting Browser Identity
+    - 13.1.2.3 Capability Detection Limitations
+- 13.2 User-Agent Detection
+  - 13.2.1 History of User-Agent Composition
+    - 13.2.1.1 Early Browsers
+    - 13.2.1.2 Netscape Navigator 3 and Internet Explorer 3
+    - 13.2.1.3 Netscape Communicator 4 and Internet Explorer 4 Through 8
+    - 13.2.1.4 Gecko
+    - 13.2.1.5 WebKit
+    - 13.2.1.6 Konqueror
+    - 13.2.1.7 Chrome
+    - 13.2.1.8 Opera
+    - 13.2.1.9 iOS and Android
+  - 13.2.2 Using User-Agent for Browser Analysis
+    - 13.2.2.1 Spoofing a User-Agent
+    - 13.2.2.2 Using User-Agents for Browser Analysis
+- 13.3 Software and Hardware Detection
+  - 13.3.1 Browser and Operating System Identification
+    - 13.3.1.1 The navigator.oscpu Property
+    - 13.3.1.2 The navigator.vendor Property
+    - 13.3.1.3 The navigator.platform Property
+    - 13.3.1.4 The screen.colorDepth and screen.pixelDepth Properties
+    - 13.3.1.5 The screen.orientation Property
+  - 13.3.2 Browser Metadata
+    - 13.3.2.1 The Geolocation API
+    - 13.3.2.2 Connection State and the NetworkInformation API
+    - 13.3.2.3 Battery Status API
+  - 13.3.3 Hardware
+    - 13.3.3.1 Processor Cores
+    - 13.3.3.2 Device Memory
+    - 13.3.3.3 Maximum Touch Points
+- 13.4 Summary
+
+第14章 THE DOCUMENT OBJECT MODEL
+
+- 14.1 Hierarchy of Nodes
+  - 14.1.1 The Node Type
+    - 14.1.1.1 The nodeName and nodeValue Properties
+    - 14.1.1.2 Node Relationships
+    - 14.1.1.3 Manipulating Nodes
+    - 14.1.1.4 Other Methods
+  - 14.1.2 The Document Type
+    - 14.1.2.1 Document Children
+    - 14.1.2.2 Document Information
+    - 14.1.2.3 Locating Elements
+    - 14.1.2.4 Special Collections
+    - 14.1.2.5 ance Detection
+    - 14.1.2.6 Document Writing
+  - 14.1.3 The Element Type
+    - 14.1.3.1 HTML Elements
+    - 14.1.3.2 Getting Attributes
+    - 14.1.3.3 Setting Attributes
+    - 14.1.3.4 The attributes Property
+    - 14.1.3.5 Creating Elements
+    - 14.1.3.6 Element Children
+  - 14.1.4 The Text Type
+    - 14.1.4.1 Creating Text Nodes
+    - 14.1.4.2 Normalizing Text Nodes
+    - 14.1.4.3 Splitting Text Nodes
+  - 14.1.5 The Comment Type
+  - 14.1.6 The CDATASection Type
+  - 14.1.7 The DocumentType Type
+  - 14.1.8 The DocumentFragment Type
+  - 14.1.9 The Attr Type
+- 14.2 Working with the DOM
+  - 14.2.1 Dynamic Scripts
+  - 14.2.2 Dynamic Styles
+  - 14.2.3 Manipulating Tables
+  - 14.2.4 Using NodeLists
+- 14.3 Mutation Observers
+  - 14.3.1 Basic usage
+    - 14.3.1.1 The observe() method
+    - 14.3.1.2 Working with Callbacks and MutationRecords
+    - 14.3.1.3 The disconnect() method
+    - 14.3.1.4 Multiplexing a MutationObserver
+    - 14.3.1.5 Reusing a MutationObserver
+  - 14.3.2 Controlling the Observer scope with MutationObserverInit
+    - 14.3.2.1 Observing attribute mutations
+    - 14.3.2.2 Observing character data mutations
+    - 14.3.2.3 Observing child mutations
+    - 14.3.2.4 Observing subtree mutations
+  - 14.3.3 Async Callbacks and the Record Queue
+    - 14.3.3.1 Behavior of the Record Queue
+    - 14.3.3.2 The takeRecords() method
+  - 14.3.4 Performance, Memory, and Garbage Collection
+    - 14.3.4.1 MutationObserver References
+    - 14.3.4.2 MutationRecord References
+- 14.4 Summary
+
+第15章 DOM EXTENSIONS
+
+- 15.1 Selectors API
+  - 15.1.1 The querySelector() Method
+  - 15.1.2 The querySelectorAll() Method
+  - 15.1.3 The matches() Method
+- 15.2 Element Traversal
+- 15.3 HTML5
+  - 15.3.1 Class-Related Additions
+    - 15.3.1.1 The getElementsByClassName() Method
+    - 15.3.1.2 The classList Property
+  - 15.3.2 Focus Management
+  - 15.3.3 Changes to HTMLDocument
+    - 15.3.3.1 The readyState Property
+    - 15.3.3.2 Compatibility Mode
+    - 15.3.3.3 The head Property
+  - 15.3.4 Character Set Properties
+  - 15.3.5 Custom Data Attributes
+  - 15.3.6 Markup Insertion
+    - 15.3.6.1 The innerHTML Property
+    - 15.3.6.2 Using innerHTML in Legacy Internet Explorer
+    - 15.3.6.3 The outerHTML Property
+    - 15.3.6.4 The insertAdjacentHTML() and insertAdjacentText() Methods
+    - 15.3.6.5 Memory and Performance Issues
+    - 15.3.6.6 Cross-Site Scripting Considerations
+  - 15.3.7 The scrollIntoView() Method
+    - 15.3.7.1 Proprietary Extensions
+  - 15.3.8 The children Property
+  - 15.3.9 The contains() Method
+  - 15.3.10 Markup Insertion
+    - 15.3.10.1 The innerText Property
+    - 15.3.10.2 The outerText Property
+  - 15.3.11 Scrolling
+- 15.4 Summary
+
+第16章 DOM LEVELS 2 AND 3
+
+- 16.1 DOM Changes
+  - 16.1.1 XML Namespaces
+    - 16.1.1.1 Changes to Node
+    - 16.1.1.2 Changes to Document
+    - 16.1.1.3 Changes to Element
+    - 16.1.1.4 Changes to NamedNodeMap
+  - 16.1.2 Other Changes
+    - 16.1.2.1 Changes to DocumentType
+    - 16.1.2.2 Changes to Document
+    - 16.1.2.3 Changes to Node
+    - 16.1.2.4 Changes to iframes
+- 16.2 Styles
+  - 16.2.1 Accessing Element Styles
+    - 16.2.1.1 DOM Style Properties and Methods
+    - 16.2.1.2 Computed Styles
+  - 16.2.2 Working with Style Sheets
+    - 16.2.2.1 CSS Rules
+    - 16.2.2.2 Creating Rules
+    - 16.2.2.3 Deleting Rules
+  - 16.2.3 Element Dimensions
+    - 16.2.3.1 Offset Dimensions
+    - 16.2.3.2 Client Dimensions
+    - 16.2.3.3 Scroll Dimensions
+    - 16.2.3.4 Determining Element Dimensions
+- 16.3 Traversals
+  - 16.3.1 NodeIterator
+  - 16.3.2 TreeWalker
+- 16.4 Ranges
+  - 16.4.1 Ranges in the DOM
+  - 16.4.2 Simple Selection in DOM Ranges
+  - 16.4.3 Complex Selection in DOM Ranges
+  - 16.4.4 Interacting with DOM Range Content
+  - 16.4.5 Inserting DOM Range Content
+  - 16.4.6 Collapsing a DOM Range
+  - 16.4.7 Comparing DOM Ranges
+  - 16.4.8 Cloning DOM Ranges
+  - 16.4.9 Cleanup
+- 16.5 Summary
+
+第17章 EVENTS
+
+- 17.1 Event Flow
+  - 17.1.1 Event Bubbling
+  - 17.1.2 Event Capturing
+  - 17.1.3 DOM Event Flow
+- 17.2 Event Handlers
+  - 17.2.1 HTML Event Handlers
+  - 17.2.2 DOM Level 0 Event Handlers
+  - 17.2.3 DOM Level 2 Event Handlers
+  - 17.2.4 Internet Explorer Event Handlers
+  - 17.2.5 Cross-Browser Event Handlers
+- 17.3 The Event Object
+  - 17.3.1 The DOM Event Object
+  - 17.3.2 The Internet Explorer Event Object
+  - 17.3.3 The Cross-Browser Event Object
+- 17.4 Event Types
+  - 17.4.1 UI Events
+    - 17.4.1.1 The load Event
+    - 17.4.1.2 The unload Event
+    - 17.4.1.3 The resize Event
+    - 17.4.1.4 The scroll Event
+  - 17.4.2 Focus Events
+  - 17.4.3 Mouse and Wheel Events
+    - 17.4.3.1 Client Coordinates
+    - 17.4.3.2 Page Coordinates
+    - 17.4.3.3 Screen Coordinates
+    - 17.4.3.4 Modifier Keys
+    - 17.4.3.5 Related Elements
+    - 17.4.3.6 Buttons
+    - 17.4.3.7 Additional Event Information
+    - 17.4.3.8 eel Event
+    - 17.4.3.9 Touch Device Support
+    - 17.4.3.10 Accessibility Issues
+  - 17.4.4 Keyboard and Text Events
+    - 17.4.4.1 Key Codes
+    - 17.4.4.2 Character Codes
+    - 17.4.4.3 DOM Level 3 Changes
+    - 17.4.4.4 The textInput Event
+    - 17.4.4.5 Keyboard Events on Devices
+  - 17.4.5 Composition Events
+  - 17.4.6 Mutation Events
+  - 17.4.7 HTML5 Events
+    - 17.4.7.1 The contextmenu Event
+    - 17.4.7.2 The beforeunload Event
+    - 17.4.7.3 The DOMContentLoaded Event
+    - 17.4.7.4 The readystatechange Event
+    - 17.4.7.5 The pageshow and pagehide Events
+    - 17.4.7.6 The hashchange Event
+  - 17.4.8 Device Events
+    - 17.4.8.1 The orientationchange Event
+    - 17.4.8.2 The deviceorientation Event
+    - 17.4.8.3 The devicemotion Event
+  - 17.4.9 Touch and Gesture Events
+    - 17.4.9.1 Touch Events
+    - 17.4.9.2 Gesture Events
+  - 17.4.10 Event Reference
+- 17.5 Memory and Performance
+  - 17.5.1 Event Delegation
+  - 17.5.2 Removing Event Handlers
+- 17.6 Simulating Events
+  - 17.6.1 DOM Event Simulation
+    - 17.6.1.1 Simulating Mouse Events
+    - 17.6.1.2 Simulating Keyboard Events
+    - 17.6.1.3 Simulating Other Events
+    - 17.6.1.4 Custom DOM Events
+  - 17.6.2 Internet Explorer Event Simulation
+- 17.7 Summary
+
+第18章 ANIMATION AND GRAPHICS WITH CANVAS
+
+- 18.1 Using requestAnimationFrame
+  - 18.1.1 Early Animation Loops
+  - 18.1.2 Problems with Intervals
+  - 18.1.3 requestAnimationFrame
+  - 18.1.4 cancelAnimationFrame
+  - 18.1.5 Performance Throttling with requestAnimationFrame
+- 18.2 Basic Canvas Usage
+- 18.3 The 2D Context
+  - 18.3.1 Fills and Strokes
+  - 18.3.2 Drawing Rectangles
+  - 18.3.3 Drawing Paths
+  - 18.3.4 Drawing Text
+  - 18.3.5 Transformations
+  - 18.3.6 Drawing Images
+  - 18.3.7 Shadows
+  - 18.3.8 Gradients
+  - 18.3.9 Patterns
+  - 18.3.10 Working with Image Data
+  - 18.3.11 Compositing
+- 18.4 WebGL
+  - 18.4.1 The WebGL Context
+  - 18.4.2 WebGL Basics
+    - 18.4.2.1 Constants
+    - 18.4.2.2 Method Naming
+    - 18.4.2.3 Getting Ready to Draw
+    - 18.4.2.4 Viewports and Coordinates
+    - 18.4.2.5 Buffers
+    - 18.4.2.6 Errors
+    - 18.4.2.7 Shaders
+    - 18.4.2.8 Drawing
+    - 18.4.2.9 Textures
+    - 18.4.2.10 Reading Pixels
+  - 18.4.3 WebGL1 versus WebGL2
+- 18.5 Summary
+
+第19章 SCRIPTING FORMS
+
+- 19.1 Form Basics
+  - 19.1.1 Submitting Forms
+  - 19.1.2 Resetting Forms
+  - 19.1.3 Form Fields
+    - 19.1.3.1 Common Form-Field Properties
+    - 19.1.3.2 Common Form-Field Methods
+    - 19.1.3.3 Common Form-Field Events
+- 19.2 Scripting Text Boxes
+  - 19.2.1 Text Selection
+    - 19.2.1.1 The select Event
+    - 19.2.1.2 Retrieving Selected Text
+    - 19.2.1.3 Partial Text Selection
+  - 19.2.2 Input Filtering
+    - 19.2.2.1 Blocking Characters
+    - 19.2.2.2 Dealing with the Clipboard
+  - 19.2.3 Automatic Tab Forward
+- 19.2 HTML5 Constraint Validation API
+  - 19.2.1 Required Fields
+  - 19.2.2 Alternate Input Types
+  - 19.2.3 Numeric Ranges
+  - 19.2.4 Input Patterns
+  - 19.2.5 Checking Validity
+  - 19.2.6 Disabling Validation
+- 19.3 Scripting Select Boxes
+  - 19.3.1 Options Selection
+  - 19.3.2 Adding Options
+  - 19.3.3 Removing Options
+  - 19.3.4 Moving and Reordering Options
+- 19.4 Form Serialization
+- 19.5 Rich Text Editing
+  - 19.5.1 Using contenteditable
+  - 19.5.2 Interacting with Rich Text
+  - 19.5.3 Rich Text Selections
+  - 19.5.4 Rich Text in Forms
+- 19.6 Summary
+
+第20章 JAVASCRIPT APIS
+
+- 20.1 Atomics and SharedArrayBuffer
+  - 20.1.1 SharedArrayBuffer
+  - 20.1.2 Atomics Basics
+    - 20.1.2.1 Atomic Arithmetic and Bitwise Methods
+    - 20.1.2.2 Atomic Reads and Writes
+    - 20.1.2.3 Atomic Exchanges
+    - 20.1.2.4 Atomics Futex Operations and Locks
+- 20.2 Cross-Context Messaging
+- 20.3 Encoding API
+  - 20.3.1 Encoding Text
+    - 20.3.1.1 Bulk Encoding
+    - 20.3.1.2 Stream Encoding
+  - 20.3.2 Decoding Text
+    - 20.3.2.1 Bulk Decoding
+    - 20.3.2.2 Stream Decoding
+- 20.4 Blob and File APIs
+  - 20.4.1 The File Type
+  - 20.4.2 The FileReader Type
+  - 20.4.3 The FileReaderSync Type
+  - 20.4.4 Blobs and Partial Reads
+  - 20.4.5 Object URLs and Blobs
+  - 20.4.6 Drag-and-Drop File Reading
+- 20.5 Media Elements
+  - 20.5.1 Properties
+  - 20.5.2 Events
+  - 20.5.3 Custom Media Players
+  - 20.5.4 Codec Support Detection
+  - 20.5.5 The Audio Type
+- 20.6 Native Drag and Drop
+  - 20.6.1 Drag-and-Drop Events
+  - 20.6.2 Custom Drop Targets
+  - 20.6.3 The dataTransfer Object
+  - 20.6.4 dropEffect and effectAllowed
+  - 20.6.5 Draggability
+  - 20.6.6 Additional Members
+- 20.7 Notifications API
+  - 20.7.1 Notification Permissions
+  - 20.7.2 Showing and Hiding Notification
+  - 20.7.3 Notification Lifecycle Callbacks
+- 20.8 Page Visibility API
+- 20.9 Streams API
+  - 20.9.1 Introduction to Streams
+    - 20.9.1.1 Chunks, Internal Queues, and Backpressure
+  - 20.9.2 Readable Streams
+    - 20.9.2.1 Using the ReadableStreamDefaultController
+    - 20.9.2.2 Using the ReadableStreamDefaultReader
+  - 20.9.3 Writable Streams
+    - 20.9.3.1 Creating a WriteableStream
+    - 20.9.3..2 Using a WritableStreamDefaultWriter
+  - 20.9.4 Transform Streams
+  - 20.9.5 Piping Streams
+- 20.10 Timing APIs
+  - 20.10.1 High Resolution Time API
+  - 20.10.2 Performance Timeline API
+    - 20.10.2.1 User Timing API
+    - 20.10.2.2 Navigation Timing API
+    - 20.10.2.3 Resource Timing API
+- 20.11 Web Components
+  - 20.11.1 HTML Templates
+    - 20.11.1.1 Using a DocumentFragment
+    - 20.11.1.2 Using &lt;template> tags
+    - 20.11.1.3 Template Scripts
+  - 20.11.2 Shadow DOM
+    - 20.11.2.1 Introduction to Shadow DOM
+    - 20.11.2.2 Creating a Shadow DOM
+    - 20.11.2.3 Using a Shadow DOM
+    - 20.11.2.4 Composition and Shadow DOM Slots
+    - 20.11.2.5 Event Retargeting
+  - 20.11.3 Custom Elements
+    - 20.11.3.1 Defining a Custom Element
+    - 20.11.3.2 Adding Web Component Content
+    - 20.11.3.3 Using Custom Element Lifecycle Hooks
+    - 20.11.3.4 Reflecting Custom Element Attributes
+    - 20.11.3.5 Upgrading Custom Elements
+- 20.12 The Web Cryptography API
+  - 20.12.1 Random Number Generation
+  - 20.12.2 Using the SubtleCrypto Object
+    - 20.12.2.1 Generating Cryptographic Digests
+    - 20.12.2.2 CryptoKeys and Algorithms
+    - 20.12.2.3 Generating CryptoKeys
+    - 20.12.2.4 Exporting and Importing Keys
+    - 20.12.2.5 Deriving Keys from Master Keys
+    - 20.12.2.6 Signing and Verifying Messages with Asymmetric Keys
+    - 20.12.2.7 Encrypting and Decrypting with Symmetric Keys
+    - 20.12.2.8 Wrapping and Unwrapping a Key
+- 20.13 Summary
+
+第21章 ERROR HANDLING AND DEBUGGING
+
+- 21.1 Browser Error Reporting
+  - 21.1.1 Desktop Consoles
+  - 21.1.2 Mobile Consoles
+- 21.2 Error Handling
+  - 21.2.1 The try-catch Statement
+    - 21.2.1.1 The finally Clause
+    - 21.2.1.2 Error Types
+    - 21.2.1.3 Usage of try-catch
+  - 21.2.2 Throwing Errors
+    - 21.2.2.1 When to Throw Errors
+    - 21.2.2.2 Throwing Errors versus try-catch
+  - 21.2.3 The error Event
+  - 21.2.4 Error-Handling Strategies
+  - 21.2.5 Identify Where Errors Might Occur
+    - 21.2.5.1 Static Code Analyzer
+    - 21.2.5.2 Type Coercion Errors
+    - 21.2.5.3 Data Type Errors
+    - 21.2.5.4 Communication Errors
+  - 21.2.6 Distinguishing between Fatal and Nonfatal Errors
+  - 21.2.7 Log Errors to the Server
+- 21.3 Debugging Techniques
+  - 21.3.1 Logging Messages to a Console
+  - 21.3.2 Understanding the Console Runtime
+  - 21.3.3 Using the JavaScript Debugger
+  - 21.3.4 Logging Messages to the Page
+  - 21.3.5 Shimming Console Methods
+  - 21.3.6 Throwing Errors
+- 21.4 Common Legacy Internet Explorer Errors
+  - 21.4.1 Invalid Character
+  - 21.4.2 Member Not Found
+  - 21.4.3 Unknown Runtime Error
+  - 21.4.4 Syntax Error
+  - 21.4.5 The System Cannot Locate the Resource Specified
+- 21.5 Summary
+
+第22章 XML IN JAVASCRIPT
+
+- 22.1 XML DOM Support in Browsers
+  - 22.1.1 DOM Level 2 Core
+  - 22.1.2 The DOMParser Type
+  - 22.1.3 The XMLSerializer Type
+- 22.2 XPath Support in Browsers
+  - 22.2.1 DOM Level 3 XPath
+  - 22.2.2 Single Node Results
+  - 22.2.3 Simple Type Results
+  - 22.2.4 Default Type Results
+  - 22.2.5 Namespace Support
+- 22.3 XSLT Support in Browsers
+  - 22.3.1 The XSLTProcessor Type
+  - 22.3.2 Using Parameters
+  - 22.3.3 Resetting the Processor
+- 22.4 Summary
+
+第23章 JSON
+
+- 23.1 Syntax
+  - 23.1.1 Simple Values
+  - 23.1.2 Objects
+  - 23.1.3 Arrays
+- 23.2 Parsing and Serialization
+  - 23.2.1 The JSON Object
+  - 23.2.2 Serialization Options
+    - 23.2.2.1 Filtering Results
+    - 23.2.2.2 String Indentation
+    - 23.2.2.3 The toJSON() Method
+  - 23.2.3Parsing Options
+- 23.3 Summary
+
+第24章 NETWORK REQUESTS AND REMOTE RESOURCES
+
+- 24.1 The XMLHttpRequest Object
+  - 24.1.1 XHR Usage
+  - 24.1.2 HTTP Headers
+  - 24.1.3 GET Requests
+  - 24.1.4 POST Requests
+- 24.2 XMLHttpRequest Level 2
+  - 24.2.1 The FormData Type
+  - 24.2.2 Timeouts
+  - 24.2.3 The overrideMimeType() Method
+- 24.3 Progress Events
+  - 24.3.1 The load Event
+  - 24.3.2 The progress Event
+- 24.4 Cross-Origin Resource Sharing
+  - 24.4.1 Preflighted Requests
+  - 24.4.2 Credentialed Requests
+- 24.5 Alternate Cross-Domain Techniques
+  - 24.5.1 Image Pings
+  - 24.5.2 JSONP
+- 24.6 The Fetch API
+  - 24.6.1 Basic API Utilization
+    - 24.6.1.1 Dispatching a Request
+    - 24.6.1.2 Reading a Response
+    - 24.6.1.3 Handling Status Codes and Request Failures
+    - 24.6.1.4 Custom Fetch Options
+  - 24.6.2 Common Fetch Patterns
+    - 24.6.2.1 Sending JSON Data
+    - 24.6.2.2 Sending Parameters in a Request Body
+    - 24.6.2.3 Sending Files
+    - 24.6.2.4 Loading Files as Blobs
+    - 24.6.2.5 Sending a Cross-Origin Request
+    - 24.6.2.6 Aborting a Request
+  - 24.6.3 The Headers Object
+    - 24.6.3.1 Exploring Headers-Map Similarity
+    - 24.6.3.2 Unique Features of the Headers Object
+    - 24.6.3.3 Header Guards
+  - 24.6.4 The Request Object
+    - 24.6.4.1 Creating Request Objects
+    - 24.6.4.2 Cloning Request Objects
+    - 24.6.4.3 Using Request Objects with fetch()
+  - 24.6.5 The Response Object
+    - 24.6.5.1 Creating Response Objects
+    - 24.6.5.2 Reading Response Status Information
+    - 24.6.5.3 Cloning Response Objects
+  - 24.6.6 Requests, Responses, and the Body Mixin
+    - 24.6.6.1 Body.text()
+    - 24.6.6.2 Body.json()
+    - 24.6.6.3 Body.formData()
+    - 24.6.6.4 Body.arrayBuffer()
+    - 24.6.6.5 Body.blob()
+    - 24.6.6.6 Single-Use Streams
+    - 24.6.6.7 Using a ReadableStream Body
+- 24.7 The Beacon API
+- 24.8 Web Sockets
+  - 24.8.1 The API
+  - 24.8.2 Sending/Receiving Data
+  - 24.8.3 Other Events
+- 24.9 Security
+- 24.10 Summary
+
+第25章 CLIENT-SIDE STORAGE
+
+- 25.1 Cookies
+  - 25.1.1 Restrictions
+  - 25.1.2 Cookie Parts
+  - 25.1.3 Cookies in JavaScript
+  - 25.1.4 Subcookies
+  - 25.1.5 Cookie Considerations
+- 25.2 Web Storage
+  - 25.2.1 The Storage Type
+  - 25.2.2 The sessionStorage Object
+  - 25.2.3 The localStorage Object
+  - 25.2.4 The storage Event
+  - 25.2.5 Limits and Restrictions
+- 25.3 IndexedDB
+  - 25.3.1 Databases
+  - 25.3.2 Object Stores
+  - 25.3.3 Transactions
+  - 25.3.4 Insertion
+  - 25.3.5 Querying with Cursors
+  - 25.3.6 Key Ranges
+  - 25.3.7 Setting Cursor Direction
+  - 25.3.8 Indexes
+  - 25.3.9 Concurrency Issues
+  - 25.3.10 Limits and Restrictions
+- 25.4 Summary
+
+第26章 MODULES
+
+- 26.1 Understanding the module pattern
+  - 26.1.1 Module Identifiers
+  - 26.1.2 Module Dependencies
+  - 26.1.3 Module Loading
+  - 26.1.4 Entry Points
+  - 26.1.5 Asynchronous Dependencies
+  - 26.1.6 Programmatic Dependencies
+  - 26.1.7 Static Analysis
+  - 26.1.8 Circular Dependencies
+- 26.2 Improvising Module Systems
+- 26.3 Working with pre-ES6 module loaders
+  - 26.3.1 CommonJS
+  - 26.3.2 Asynchronous Module Definition
+  - 26.3.3 Universal Module Definition
+  - 26.3.4 Module Loader Deprecation
+- 26.4 Working with ES6 modules
+  - 26.4.1 Module Tagging and Definition
+  - 26.4.2 Module Loading
+  - 26.4.3 Module Behavior
+  - 26.4.4 Module Exports
+  - 26.4.5 Module Imports
+  - 26.4.6 Module Passthrough Exports
+  - 26.4.7 Worker Modules
+  - 26.4.8 Backwards Compatibility
+- 26.5 Summary
+
+第27章 WORKERS
+
+- 27.1 Introduction to Workers
+  - 27.1.1 Comparing Workers and Threads
+  - 27.1.2 Types of Workers
+    - 27.1.2.1 Dedicated Web Worker
+    - 27.1.2.2 Shared Web Worker
+    - 27.1.2.3 Service Worker
+  - 27.1.3 The WorkerGlobalScope
+    - 27.1.3.1 WorkerGlobalScope Properties and Methods
+    - 27.1.3.2 Subclasses of WorkerGlobalScope
+- 27.2 Dedicated Workers
+  - 27.2.1 Dedicated Worker Basics
+    - 27.2.1.1 Creating a Dedicated Worker
+    - 27.2.1.2 Worker Security Restrictions
+    - 27.2.1.3 Using the Worker Object
+    - 27.2.1.4 The DedicatedWorkerGlobalScope
+  - 27.2.2 Dedicated Workers and Implicit MessagePorts
+  - 27.2.3 Understanding the Dedicated Worker Lifecycle
+  - 27.2.4 Configuring Worker Options
+  - 27.2.5 Creating a Worker from Inline JavaScript
+  - 27.2.6 Dynamic Script Execution Inside a Worker
+  - 27.2.7 Delegating Tasks to Subworkers
+  - 27.2.8 Handling Worker Errors
+  - 27.2.9 Communicating with a Dedicated Worker
+    - 27.2.9.1 Communicating with postMessage()
+    - 27.2.9.2 Communicating with MessageChannel
+    - 27.2.9.3 Communicating with BroadcastChannel
+  - 27.2.10 Worker Data Transfer
+    - 27.2.10.1 Structured Clone Algorithm
+    - 27.2.10.2 Transferable Objects
+    - 27.2.10.3 SharedArrayBuffer
+  - 27.2.11 Worker Pools
+- 27.3 Shared Workers
+  - 27.3.1 Shared Worker Basics
+  - 27.3.2 Creating a Shared Worker
+  - 27.3.3 SharedWorker Identity and Single Occupancy
+  - 27.3.4 Using the SharedWorker Object
+  - 27.3.5 The SharedWorkerGlobalScope
+  - 27.3.6 Understanding the Shared Worker Lifecycle
+  - 27.3.7 Connecting to a Shared Worker
+- 27.4 Service Workers
+  - 27.4.1 Service Worker Basics
+    - 27.4.1.1 The ServiceWorkerContainer
+    - 27.4.1.2 Creating a Service Worker
+    - 27.4.1.3 Using the ServiceWorkerContainer Object
+    - 27.4.1.4 Using the ServiceWorkerRegistration Object
+    - 27.4.1.5 Using the ServiceWorker Object
+    - 27.4.1.6 Service Worker Security Restrictions
+    - 27.4.1.7 The ServiceWorkerGlobalScope
+    - 27.4.1.8 Service Worker Scope Limitations
+  - 27.4.2 The Service Worker Cache
+    - 27.4.2.1 The CacheStorage Object
+    - 27.4.2.2 The Cache Object
+    - 27.4.2.3 Maximum Cache Storage
+  - 27.4.3 Service Worker Clients
+  - 27.4.4 Service Workers and Consistency
+  - 27.4.5 Understanding the Service Worker Lifecycle
+    - 27.4.5.1 The Parsed State
+    - 27.4.5.2 The Installing State
+    - 27.4.5.3 The Installed State
+    - 27.4.5.4 The Activating State
+    - 27.4.5.5 The Activated State
+    - 27.4.5.6 The Redundant State
+    - 27.4.5.7 Updating a Service Worker
+  - 27.4.6 Inversion of Control and Service Worker Persistence
+  - 27.4.7 Managing Service Worker File Caching with
+  - 27.4.8 updateViaCache
+  - 27.4.9 Forced Service Worker Operation
+  - 27.4.10 Service Worker Messaging
+  - 27.4.11 Intercepting a fetch Event
+    - 27.4.11.1 Return from Network
+    - 27.4.11.2 Return from Cache
+    - 27.4.11.3 Return from Network with Cache Fallback
+    - 27.4.11.4 Return from Cache with Network Fallback
+    - 27.4.11.5 Generic Fallback
+  - 27.4.12 Push Notifications
+    - 27.4.12.1 Displaying Notifications
+    - 27.4.12.2 Handling Notification Events
+    - 27.4.12.3 Subscribing to Push Events
+    - 27.4.12.4 Handling Push Events
+- 27.5 Summary
+
+第28章 BEST PRACTICES
+
+- 28.1 Maintainability
+  - 28.1.1 What Is Maintainable Code?
+  - 28.1.2 Code Conventions
+    - 28.1.2.1 Readability
+    - 28.1.2.2 Variable and Function Naming
+    - 28.1.2.3 Variable Type Transparency
+  - 28.1.3 Loose Coupling
+    - 28.1.3.1 Decouple HTML/JavaScript
+    - 28.1.3.2 Decouple CSS/JavaScript
+    - 28.1.3.3 Decouple Application Logic/Event Handlers
+  - 28.1.4 Programming Practices
+    - 28.1.4.1 Respect Object Ownership
+    - 28.1.4.2 Avoid Globals
+    - 28.1.4.3 Avoid Null Comparisons
+    - 28.1.4.4 Use Constants
+- 28.2 Performance
+  - 28.2.1 Be Scope-Aware
+    - 28.2.1.1 Avoid Global Lookups
+    - 28.2.1.2 Avoid the with Statement
+  - 28.2.2 Choose the Right Approach
+    - 28.2.2.1 Avoid Unnecessary Property Lookup
+    - 28.2.2.2 Optimize Loops
+    - 28.2.2.3 Unrolling Loops
+    - 28.2.2.4 Avoid Double Interpretation
+    - 28.2.2.5 Other Performance Considerations
+  - 28.2.3 Minimize Statement Count
+    - 28.2.3.1 Multiple Variable Declarations
+    - 28.2.3.2 Insert Iterative Values
+    - 28.2.3.3 Use Array and Object Literals
+  - 28.2.4 Optimize DOM Interactions
+    - 28.2.4.1 Minimize Live Updates
+    - 28.2.4.2 Use innerHTML
+    - 28.2.4.3 Use Event Delegation
+    - 28.2.4.4 Beware of HTMLCollections
+- 28.3 Deployment
+  - 28.3.1 Build Process
+    - 28.3.1.1 File Structure
+    - 28.3.1.2 Task Runners
+    - 28.3.1.3 Tree Shaking
+    - 28.3.1.4 Module Bundlers
+  - 28.3.2 Validation
+  - 28.3.3 Compression
+  - 28.3.4 Code Minification
+  - 28.3.5 JavaScript Compilation
+  - 28.3.6 JavaScript Transpilation
+  - 28.3.7 HTTP Compression
+- 28.4 Summary
