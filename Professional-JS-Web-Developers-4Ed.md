@@ -133,10 +133,22 @@
   <div></div>
 </details>
 
+### 1.2.3 The Browser Object Model
+
+<details>
+  <summary>BOM模型允许__和__浏览器窗口。</summary>
+  <div>访问</div>
+  <div>操作</div>
+</details>
+
 <details>
   <summary>随着__的引入，才将BOM标准化。</summary>
   <div>HTML5</div>
 </details>
+
+第2章 JAVASCRIPT IN HTML
+
+## 2.1 The &lt;script> Element
 
 <details>
   <summary>将JavaScript插入HTML页面的主要方法是通过&lt;__&gt;元素。该元素有__个属性。</summary>
@@ -144,7 +156,7 @@
 </details>
 
 <details>
-  <summary>如果要 立即异步下载脚本文件(HTML5新增不能保证执行的先后顺序) 需要在script元素添加属性 __。</summary>
+  <summary>如果要 立即异步下载脚本文件(不能保证执行的先后顺序)，需要在script元素添加属性 __。</summary>
   <div>async</div>
 </details>
 </details>
@@ -179,7 +191,28 @@
   <div>type</div>
 </details>
 
-## CHARPER 2 HTML中的JavaScript
+### 2.1.2 Deferred Scripts
+
+<details>
+  <summary>HTML __.01为&lt;script>元素定义了一个名为defer的属性。</summary>
+  <div>4</div>
+</details>
+
+### 2.1.3 Asynchronous Scripts
+
+<details>
+  <summary>HTML__为&lt;script>元素引入了async属性。</summary>
+  <div>5</div>
+</details>
+
+<details>
+  <summary>通过createElement创建的脚本添加到DOM时，才会发出__。默认情况下，是__步脚本请求。但不是所有的浏览器都支持异步脚本请求，如果要统一动态脚本加载行为，则需要改为同步请求，async属性等于__。</summary>
+  <div>请求</div>
+  <div>异</div>
+  <div>false</div>
+</details>
+
+<!-- ## CHARPER 2 HTML中的JavaScript -->
 
 <details>
   <summary>Internet Explorer 5.5 开始引入了__，后来发展出了多种文档模式，导致了同样的DOM内容在不同文档模式下不兼容，后面出了HTML__文档模式才统一了标准。</summary>
