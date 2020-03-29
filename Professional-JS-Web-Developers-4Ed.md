@@ -212,7 +212,37 @@
   <div>false</div>
 </details>
 
-<!-- ## CHARPER 2 HTML中的JavaScript -->
+### 2.1.6 Deprecated Syntax
+
+<details>
+  <summary>自19__年Netscape 2发布以来，所有浏览器都将JavaScript用作其默认__。</summary>
+  <div>95</div>
+  <div>编程语言</div>
+</details>
+
+<details>
+  <summary>script标签的type属性使用__类型字符串来标识&lt;script>的__，但是MIME类型并未在浏览器之间进行标准化。在某些情况下，type属性的MIME类型值无效或无法识别也会导致某些浏览器__相关代码的执行。因此，除非您使用XHTML或&lt;script>标记请求或包装__，否则最佳实践是根本不指定类型(type)属性。</summary>
+  <div>MIME</div>
+  <div>内容</div>
+  <div>跳过/忽略</div>
+  <div>非JavaScript</div>
+</details>
+
+## 2.2 Inline Code versus External Files
+
+<details>
+  <summary>react vs vue 中的“vs”英文全称是__，中文全称是__。</summary>
+  <div>versus</div>
+  <div>与...相比</div>
+</details>
+
+<details>
+  <summary>相对于内嵌脚本，引入外部脚本的优势有: __；__；</summary>
+  <div>可维护性好</div>
+  <div>浏览器缓存</div>
+</details>
+
+## 2.3 Document Modes
 
 <details>
   <summary>Internet Explorer 5.5 开始引入了__，后来发展出了多种文档模式，导致了同样的DOM内容在不同文档模式下不兼容，后面出了HTML__文档模式才统一了标准。</summary>
@@ -220,12 +250,18 @@
   <div>5</div>
 </details>
 
+## 2.4 The &lt;noscript> Element
+
 <details>
   <summary>如果 当前浏览器不支持JavaScript时，会显示__标签中的内容。</summary>
   <div>noscript</div>
 </details>
 
-## CHAPTER 3 JavaScript 基础知识
+# CHAPTER 3 JavaScript 基础知识
+
+## 3.1 Syntax
+
+### 3.1.2 Identifiers
 
 <details>
   <summary>__是变量，函数，属性或函数参数的名称。</summary>
@@ -249,6 +285,8 @@
   <div>驼峰</div>
 </details>
 
+### 3.1.4 Strict Mode
+
 <details>
   <summary>严格模式是JavaScript的另一种__和执行模式，其中ECMAScript 3的某些不稳定行为已得到解决，并且为不安全的活动抛出了__。</summary>
   <div>解析</div>
@@ -260,11 +298,15 @@
   <div>use strict</div>
 </details>
 
+### 3.1.5 Statements
+
 <details>
   <summary>建议始终在语句的末尾添加__，避免__错误，分号可以提高性能，避免解析器判断是否需要添加分号。</summary>
   <div>分号</div>
   <div>压缩</div>
 </details>
+
+### 3.2 Keywords and Reserved Words
 
 ## CHAPTER 8 对象，类和面向对象编程
 
