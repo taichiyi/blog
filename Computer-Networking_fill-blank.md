@@ -567,3 +567,32 @@
   <div>Top-Level Domain</div>
   <div>顶级域</div>
 </details>
+
+<details>
+  <summary>本地DNS服务器属不属于DNS服务器层次结构？</summary>
+  <div>不属于</div>
+</details>
+
+<details>
+  <summary>主机名获取IP地址先后访问DNS服务器顺序: __服务器->__服务器->__服务器->__服务器。最终__服务器会根据主机名返回IP地址。</summary>
+  <div>本地</div>
+  <div>根</div>
+  <div>顶级</div>
+  <div>权威</div>
+  <div>权威</div>
+</details>
+
+<details>
+  <summary>当主机发出DNS请求时，改请求被发往__DNS服务器，它起着__的作用，并将该请求转发到DNS服务器层次结构中。</summary>
+  <div>本地</div>
+  <div>代理</div>
+  <div>本地代理服务器例子：8.8.8.8</div>
+  <div>本地代理服务器例子：223.6.6.6</div>
+</details>
+
+<details>
+  <summary>当某DNS服务器接收到一个DNS回答时，它能将映射__在本地存储器中。</summary>
+  <div>缓存</div>
+</details>
+
+### 2.4.3 DNS 记录和报文
