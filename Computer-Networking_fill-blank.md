@@ -1,9 +1,9 @@
 <!-- markdownlint-disable MD033 -->
 # 计算机网络 自顶向下方法 (第7版) 填空
 
-## 第1章 计算机网络和互联网
+# 第1章 计算机网络和互联网
 
-### 1.1 什么是互联网
+## 1.1 什么是互联网
 
 <details>
   <summary>智能手机、笔记本电脑、台式机、服务器，等能连接到互联网的设备，都称为__或__。</summary>
@@ -31,7 +31,7 @@
   <div>Request For Comment</div>
 </details>
 
-### 1.2 网络边缘
+## 1.2 网络边缘
 
 <details>
   <summary>端系统也称为主机(host)，因为它们能运行应用程序。主机又可以划分为: __和__。</summary>
@@ -112,7 +112,7 @@
   <div>空气或外层空间</div>
 </details>
 
-### 1.3 网络核心
+## 1.3 网络核心
 
 <details>
   <summary>在各种网络应用中，端系统彼此交换报文(message)。为了从源端系统向目的端系统发送一个报文，源将报文划分为较小的数据块，称之为__。</summary>
@@ -166,18 +166,18 @@
   <div>分组</div>
 </details>
 
-### 1.5 协议层次及其服务模型
+## 1.5 协议层次及其服务模型
 
 <details>
   <summary></summary>
   <div></div>
 </details>
 
-## 第2章 应用层
+# 第2章 应用层
 
-### 2.1 应用层协议原理
+## 2.1 应用层协议原理
 
-#### 2.1.2 进程通信
+### 2.1.2 进程通信
 
 <details>
   <summary>对于操作系统来说，程序的实例叫做__。</summary>
@@ -205,7 +205,7 @@
   <div>接收套接字</div>
 </details>
 
-#### 2.1.4 因特网提供的运输服务
+### 2.1.4 因特网提供的运输服务
 
 <details>
   <summary>因特网为应用程序提供了两个运输层协议，即__和__。</summary>
@@ -235,7 +235,7 @@
   <div>拥塞</div>
 </details>
 
-#### 2.1.5 应用层协议
+### 2.1.5 应用层协议
 
 <details>
   <summary>应用层协议（英文名称:__）定义了运行在不同端系统上的应用程序__如何相互传递__。</summary>
@@ -244,14 +244,14 @@
   <div>报文</div>
 </details>
 
-#### 2.1.6 本书涉及的网络应用
+### 2.1.6 本书涉及的网络应用
 
 <details>
   <summary>说电子邮件比 Web 更复杂，是因为它使用了多个而不是一个__协议。</summary>
   <div>应用层</div>
 </details>
 
-#### 2.2.2 非持续连接和持续连接
+### 2.2.2 非持续连接和持续连接
 
 <details>
   <summary>现代浏览器大多运行每个域__个左右并行的__连接。</summary>
@@ -259,7 +259,7 @@
   <div>TCP</div>
 </details>
 
-#### 2.2.3 非持续连接和持续连接
+### 2.2.3 非持续连接和持续连接
 
 <details>
   <summary>HTTP 请求报文的第一行叫作__。后继的行叫作__。</summary>
@@ -308,7 +308,7 @@
   <div>字节</div>
 </details>
 
-#### 2.2.4 用户与服务器的交互: cookie
+### 2.2.4 用户与服务器的交互: cookie
 
 <details>
   <summary>对于同一个请求的URL，很多情况下服务器想根据不同的身份返回不同的内容。但是HTTP是无状态的，所以无法通过一个请求的URL判断身份，所以有了__。</summary>
@@ -323,7 +323,7 @@
   <div>数据库</div>
 </details>
 
-#### 2.2.5 Web 缓存
+### 2.2.5 Web 缓存
 
 <details>
   <summary>Web 缓冲器(Web cache)也叫__(__)，它是能够代表初始Web服务器来满足HTTP请求的网络实体。</summary>
@@ -336,7 +336,7 @@
   <div>Content Distribution Network</div>
 </details>
 
-#### 2.2.6 条件 GET 方法
+### 2.2.6 条件 GET 方法
 
 <details>
   <summary>HTTP协议有一种机制，允许缓存器证实它的对象是最新的。这个机制就是__方法。</summary>
@@ -596,3 +596,38 @@
 </details>
 
 ### 2.4.3 DNS 记录和报文
+
+## 2.5 P2P 文件分发
+
+<!-- 有点难度，暂时略过，和区块链相关 -->
+
+## 2.6 视频流和内容分发网
+
+### 2.6.1 因特网视频
+
+<details>
+  <summary>[延伸]比特率(俗称“码率”)是指每秒传送的__数。单位为bps，英文全称__。</summary>
+  <div>比特(bit)</div>
+  <div>Bit Per Second</div>
+</details>
+
+<details>
+  <summary>[延伸]1kbs的意思是每秒传送__个比特。注意这里的k不是计算机存储容量的__。</summary>
+  <div>1000</div>
+  <div>1024</div>
+</details>
+
+<details>
+  <summary>视频是一系列的__，通常以一种恒定的__(如每秒20或30张)来展现。</summary>
+  <div>图像</div>
+  <div>速率</div>
+</details>
+
+<details>
+  <summary>视频的一个重要特征是它能被__，因此可用__来权衡视频质量。越高越__。</summary>
+  <div>压缩</div>
+  <div>比特率</div>
+  <div>好</div>
+</details>
+
+### 2.6.2 HTTP 流和 DASH
