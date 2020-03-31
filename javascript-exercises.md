@@ -69,3 +69,12 @@
   <summary>location对象的host属性和hostname属性有什么区别?</summary>
   <div>hostname不包括端口</div>
 </details>
+
+<details>
+  <summary>Chrome memory cache vs disk cache? 速度?</summary>
+  <div>顾名思义</div>
+  <div>memory: 从内存中读取的。</div>
+  <div>disk: 从磁盘中读取的。</div>
+  <div>memory: 0ms</div>
+  <div>disk: 100~200ms</div>
+</details>

@@ -308,6 +308,11 @@
 
 ### 3.2 Keywords and Reserved Words
 
+<details>
+  <summary>关键字有特定的用途，不能用作__。</summary>
+  <div>标识符</div>
+</details>
+
 ## CHAPTER 8 对象，类和面向对象编程
 
 <details>
