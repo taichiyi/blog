@@ -503,7 +503,7 @@
 </details> -->
 
 <details>
-  <summary>浏览器在发送HTTP请求报文之前，会从URL中抽取__，然后通过__向DNS服务器发送一个包含主机名的请求，从DNS服务器收到IP后，它能够向位于该IP地址80端口的HTTP服务器__发起一个TCP连接。</summary>
+  <summary>浏览器在发送HTTP请求报文之前，会从URL中抽取__，然后通过__向DNS服务器发送一个包含主机名的请求，从DNS服务器收到IP后，它能够向位于该IP地址80端口的HTTP服务器的__发起一个TCP连接。</summary>
   <div>主机名</div>
   <div>DNS客户端</div>
   <div>进程</div>
@@ -583,7 +583,7 @@
 </details>
 
 <details>
-  <summary>当主机发出DNS请求时，改请求被发往__DNS服务器，它起着__的作用，并将该请求转发到DNS服务器层次结构中。</summary>
+  <summary>当主机发出DNS请求时，该请求被发往__DNS服务器，它起着__的作用，并将该请求转发到DNS服务器层次结构中。</summary>
   <div>本地</div>
   <div>代理</div>
   <div>本地代理服务器例子：8.8.8.8</div>
@@ -618,9 +618,20 @@
 </details>
 
 <details>
+  <summary>[延伸]流式传输是指通过因特网传送__的技术总称。英文名称__。</summary>
+  <div>流媒体</div>
+  <div>Stream Transfer</div>
+</details>
+
+<details>
   <summary>视频是一系列的__，通常以一种恒定的__(如每秒20或30张)来展现。</summary>
   <div>图像</div>
   <div>速率</div>
+</details>
+
+<details>
+  <summary>一般服务器端的视频会被__成多个版本，每个版本有不同的质量等级。</summary>
+  <div>压缩</div>
 </details>
 
 <details>
@@ -631,3 +642,19 @@
 </details>
 
 ### 2.6.2 HTTP 流和 DASH
+
+<details>
+  <summary>HTTP流切换版本后，需要从视频的__开始传输数据。</summary>
+  <div>头</div>
+</details>
+
+<details>
+  <summary>HTTP流有严重缺陷，就是不能__的切换视频质量版本；不能动态的请求__的数据块。</summary>
+  <div>动态</div>
+  <div>部分</div>
+</details>
+
+<details>
+  <summary>DASH的中文全称__。</summary>
+  <div>经HTTP的动态适应性流</div>
+</details>

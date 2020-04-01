@@ -177,8 +177,15 @@
 </details>
 
 <details>
-  <summary>如果要 检测脚本的完整性 需要在script元素添加属性 __。</summary>
+  <summary>如果要 让浏览器检测脚本的完整性 需要在script元素添加属性 __。</summary>
   <div>integrity</div>
+  <div>&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.13.1/umd/react-dom.production.min.js" integrity="sha256-vFt3l+illeNlwThbDUdoPTqF81M8WNSZZZt3HEjsbSU=" crossorigin="anonymous">&lt;/script></div>
+</details>
+
+<details>
+  <summary>[延伸]SRI的中文全称__，英文全称__。</summary>
+  <div>Subresource Integrity</div>
+  <div>子资源完整性</div>
 </details>
 
 <details>

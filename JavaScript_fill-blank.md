@@ -1,5 +1,5 @@
 <!-- markdownlint-disable MD033 -->
-# javascript-exercises
+# JavaScript 知识点 填空
 
 <details>
   <summary>为什么JavaScript是单线程</summary>

@@ -13,6 +13,124 @@
 
 继承问题的一种解决方案 -->
 
+## React和ReactDOM是两个东西
+
+平时说的虚拟DOM指的是React创建出来的相互嵌套的对象"{}"
+
+## babel的cli
+
+`--out-file`=`-o`
+`--out-dir`=`-d`
+`--watch`=`-w`
+`--source-maps`=`-s`
+
+## 配置babel的几种方式
+
+`配置文件: babel.config.js .babelrc .babelrc.js package.json`
+
+babel.config.js (`官方推荐`)
+
+``` javascript
+module.exports = function (api) {
+  api.cache(true);
+
+  const presets = [ ... ];
+  const plugins = [ ... ];
+
+  return {
+    presets,
+    plugins
+  };
+}
+```
+
+.babelrc
+
+``` json
+{
+  "presets": [...],
+  "plugins": [...]
+}
+```
+
+package.json
+
+``` json
+{
+  "name": "my-package",
+  "version": "1.0.0",
+  "babel": {
+    "presets": [ ... ],
+    "plugins": [ ... ],
+  }
+}
+```
+
+.babelrc.js
+
+``` javascript
+const presets = [ ... ];
+const plugins = [ ... ];
+
+module.exports = { presets, plugins };
+```
+
+`命令行CLI`
+
+``` bash
+babel --plugins @babel/plugin-transform-arrow-functions script.js
+```
+
+`API (@babel/core)`
+
+``` javascript
+require("@babel/core").transform("code", {
+  plugins: ["@babel/plugin-transform-arrow-functions"]
+});
+```
+
+## MutationObserver
+
+监听DOM变化最开始用的是Mutation events，但是这个设计有缺陷，会导致性能变慢1.5~7倍；而且浏览器的兼容性也不好。然后MutationObserver取而代之。
+
+<https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver>
+
+## browserify是什么
+
+Browserify：提供在浏览器环境下require()npm模块的支持。
+
+## 关于Promise
+
+- 是什么?
+
+Promise是以最简单的方式处理异步操作的理想选择。Promise是一个ployfill
+
+- 为什么？
+
+在promise之前，使用了事件(Event)和回调函数(Callback)。
+
+事件(Event)：对于在同一对象上可以多次发生的事情（keyup，touchstart等），事件非常有用。
+
+promise相对于回调函数(Callback)的优点：
+1.提高代码可读性
+2.避免回调地狱
+3.更好的异步逻辑控制
+4.更好的异常处理
+
+Promise有一个标准叫做“Promises/A+”，有很多JS库根据这个标准实现了Promise，如：RSVP.js、when。
+
+每个Promise实例的状态都处于三种状态中的一个:
+
+- pending: 进行中
+- fulfilled: 已实现
+- rejected: 已拒绝
+
+## 什么是polyfill
+
+polyfill可以形象的称为“腻子”，就是装修的时候，可以把缺损的地方填充抹平。例如:
+
+querySelectorAll是很多现代浏览器都支持的原生Web API，但是有些古老的浏览器并不支持，那么假设有人写了库，只要用了这个库， 你就可以在古老的浏览器里面使用document.querySelectorAll，使用方法跟现代浏览器原生API无异。那么这个库就可以称为Polyfill或者Polyfiller。
+
 ## 前端性能优化
 
 - 减少请求(image, css, js)
