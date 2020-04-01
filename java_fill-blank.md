@@ -68,3 +68,20 @@
   <div>JIT(即时)</div>
   <div>native code</div>
 </details>
+
+<details>
+  <summary>JAR文件的全称是__。</summary>
+  <div>Java ARchive</div>
+</details>
+
+<details>
+  <summary>JAR是一种__文件格式，通常用于将许多Java类文件以及相关的元数据和资源（文本，图像等）聚合到一个文件中进行__。基于__格式构建。</summary>
+  <div>打包</div>
+  <div>分发</div>
+  <div>ZIP</div>
+</details>
+
+<details>
+  <summary>JAR文件可以通过__解释。</summary>
+  <div>JVM</div>
+</details>

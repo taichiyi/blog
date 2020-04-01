@@ -4,6 +4,7 @@
 <details>
   <summary>svn __(简称__):从服务器拉取svn库</summary>
   <div>checkout co</div>
+  <div>svn co http://47.75.114.192:8090/svn/payment/trunk/management --username tcy</div>
 </details>
 
 <details>
