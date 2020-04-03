@@ -658,3 +658,32 @@
   <summary>DASH的中文全称__。</summary>
   <div>经HTTP的动态适应性流</div>
 </details>
+
+<details>
+  <summary>使用DASH后，每个视频版本存储在HTTP服务器中，每个版本都有一个不同的__。HTTP服务器特有一个告示文件(__ file)，为每个版本提供了一个URL及其__。</summary>
+  <div>URL</div>
+  <div>manifest</div>
+  <div>比特率</div>
+</details>
+
+<details>
+  <summary>客户首先请求该告示文件以得知各个__。然后客户通过在HTTP GET 请求中队每块指定一个URL和一个__，一次选择一__。在下载块的同时，客户会通过一个“__算法”来决定下次请求的块。</summary>
+  <div>版本</div>
+  <div>字节范围</div>
+  <div>块</div>
+  <div>速率决定</div>
+</details>
+
+### 2.6.3 内容分发网
+
+<details>
+  <summary>为了应对向分布于世界各地的用户__巨量视频数据的挑战，几乎所有主要的视频流公司都利用__。</summary>
+  <div>分发</div>
+  <div>内容分发网(CDN)</div>
+</details>
+
+<details>
+  <summary>CDN__分布在多个地理位置上的__，在它的服务器中存储文件对象的__。</summary>
+  <div>管理</div>
+  <div>副本</div>
+</details>
