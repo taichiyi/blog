@@ -271,7 +271,7 @@
 ### 3.1.2 Identifiers
 
 <details>
-  <summary>__是变量，函数，属性或函数参数的名称。</summary>
+  <summary>__是变量，函数，属性或函数参数的总称。</summary>
   <div>标识符</div>
 </details>
 

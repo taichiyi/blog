@@ -20,3 +20,10 @@
   <div>Unicode</div>
   <div>14</div>
 </details>
+
+<details>
+  <summary>在软件编程中“foo”相当于一个__。常用于一些__代码中，因为这样可以更专注于代码功能，不用花时间去取__。</summary>
+  <div>占位符</div>
+  <div>示例</div>
+  <div>名字</div>
+</details>

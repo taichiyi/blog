@@ -76,5 +76,59 @@
   <div>memory: 从内存中读取的。</div>
   <div>disk: 从磁盘中读取的。</div>
   <div>memory: 0ms</div>
-  <div>disk: 100~200ms</div>
+  <div>disk: 10~200ms</div>
+</details>
+
+<details>
+  <summary>undefined既不是__字也不是__字。</summary>
+  <div>关键</div>
+  <div>保留</div>
+</details>
+
+<details>
+  <summary>void pointer的中文意思是__。</summary>
+  <div>空指针</div>
+  <div>void /vɔɪd/</div>
+</details>
+
+<details>
+  <summary>在JavaScript中void是一个__符，后面跟着一个运算对象。void表达式返回值总是为__。</summary>
+  <div>操作</div>
+  <div>undifined</div>
+</details>
+
+<details>
+  <summary>标识符就是一个__，通过__语句将指针(标识符)指向__。没有赋过值的标识符就是一个__。</summary>
+  <div>指针</div>
+  <div>赋值</div>
+  <div>内存地址</div>
+  <div>空指针</div>
+</details>
+
+<details>
+  <summary>为了避免undefined被重写我们可以使用“__”，它和undefined等价的。</summary>
+  <div>void 0</div>
+  <div>等效写法：void (0)</div>
+</details>
+
+<details open>
+  <summary>下面代码打印值为__、__ __、__。</summary>
+  <pre>
+    &lt;script>
+    var undefined = '123';
+    (function () {
+      console.log(undefined);
+      var undefined = 'foo';
+      console.log(undefined, typeof undefined);
+      console.log(window.undefined);
+    })();
+    &lt;/script>
+  </pre>
+  <details>
+    <summary>答案</summary>
+    <div>undefined</div>
+    <div>foo</div>
+    <div>string</div>
+    <div>undefined</div>
+  </details>
 </details>
