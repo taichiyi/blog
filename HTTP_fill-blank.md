@@ -52,6 +52,12 @@
 </details>
 
 <details>
+  <summary>如果请求不想让代理服务器缓存，可在请求首部行添加Cache-Control属性，并且在值中添加__，想缓存则添加__。</summary>
+  <div>private</div>
+  <div>public</div>
+</details>
+
+<details>
   <summary>HTTP协议的全称是__。</summary>
   <div>HyperText Transfer Protocol</div>
   <div>超文本传输协议</div>
