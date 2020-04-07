@@ -46,6 +46,8 @@
 
 ## MIME types -end-
 
+## HTTP -start-
+
 <details>
   <summary>要设置HTTP资源缓存到浏览器的时间，可以在请求的响应头中添加__指令。</summary>
   <div>Cache-Control</div>
@@ -231,11 +233,6 @@
 </details>
 
 <details>
-  <summary>幂等(idempotent): 在相同输入下，多次运算的结果__。反之，非幂等。</summary>
-  <div>相等</div>
-</details>
-
-<details>
   <summary>在HTTP/1.0及以后版本中，HTTP响应的第一行称为__行，并包括__状态代码。</summary>
   <div>状态(status line)</div>
   <div>数字</div>
@@ -255,33 +252,9 @@
   <div>缓存版本</div>
 </details>
 
-<details>
-  <summary>全双工(全部同时双向工作): 允许数据在__个方向上__传输。</summary>
-  <div>两</div>
-  <div>同时</div>
-</details>
+## HTTP -end-
 
-<details>
-  <summary>半双工(一半同时双向工作): 两个方向都能发送数据，但是两个方向不能__发送。</summary>
-  <div>同时</div>
-</details>
-
-<details>
-  <summary>单工(__): 只有一个方向能发送数据。</summary>
-  <div>单向工作</div>
-</details>
-
-<details>
-  <summary>HTTP报文只支持__编码。</summary>
-  <div>ASCII</div>
-</details>
-
-<details>
-  <summary>在终端中打印www.so.com的响应报文:curl __ www.so.com</summary>
-  <div>-i</div>
-</details>
-
-## Cookie
+## Cookie -start-
 
 <details>
   <summary>不同浏览器理论上是可以共用cookie的，但是主要出于__考虑没有共用，因为不同浏览器在本地储存cookie的__不一样。</summary>
@@ -334,6 +307,34 @@
 <details>
   <summary>__是源于顶级域名(例如.com)，由于存在较大的安全隐患，所以基本都被浏览器禁用了。</summary>
   <div>Supercookie</div>
+</details>
+
+## Cookie -end-
+
+<details>
+  <summary>全双工(全部同时双向工作): 允许数据在__个方向上__传输。</summary>
+  <div>两</div>
+  <div>同时</div>
+</details>
+
+<details>
+  <summary>半双工(一半同时双向工作): 两个方向都能发送数据，但是两个方向不能__发送。</summary>
+  <div>同时</div>
+</details>
+
+<details>
+  <summary>单工(__): 只有一个方向能发送数据。</summary>
+  <div>单向工作</div>
+</details>
+
+<details>
+  <summary>HTTP报文只支持__编码。</summary>
+  <div>ASCII</div>
+</details>
+
+<details>
+  <summary>在终端中打印www.so.com的响应报文:curl __ www.so.com</summary>
+  <div>-i</div>
 </details>
 
 <details>

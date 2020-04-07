@@ -1,19 +1,6 @@
 <!-- markdownlint-disable MD033 -->
 # 计算机科学 知识点 填空
 
-<details>
-  <summary>回文子串: 是指这个字符串无论从左读还是从右读，所读的__是一样的，或者说是__的。</summary>
-  <div>顺序</div>
-  <div>对称</div>
-</details>
-
-<details>
-  <summary>在软件编程中“foo”相当于一个__。常用于一些__代码中，因为这样可以更专注于代码功能，不用花时间去取__。</summary>
-  <div>占位符</div>
-  <div>示例</div>
-  <div>名字</div>
-</details>
-
 ## Unicode -start-
 
 <details>
@@ -193,3 +180,21 @@
 </details>
 
 ## Unicode -end-
+
+<details>
+  <summary>幂等(idempotent): 在相同输入下，多次运算的结果__。反之，非幂等。</summary>
+  <div>相等</div>
+</details>
+
+<details>
+  <summary>回文子串: 是指这个字符串无论从左读还是从右读，所读的__是一样的，或者说是__的。</summary>
+  <div>顺序</div>
+  <div>对称</div>
+</details>
+
+<details>
+  <summary>在软件编程中“foo”相当于一个__。常用于一些__代码中，因为这样可以更专注于代码功能，不用花时间去取__。</summary>
+  <div>占位符</div>
+  <div>示例</div>
+  <div>名字</div>
+</details>
