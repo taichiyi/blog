@@ -335,3 +335,10 @@
   <summary>__是源于顶级域名(例如.com)，由于存在较大的安全隐患，所以基本都被浏览器禁用了。</summary>
   <div>Supercookie</div>
 </details>
+
+<details>
+  <summary>1 kB = __ bytes</summary>
+  <summary>1 KiB = __ bytes</summary>
+  <div>1000</div>
+  <div>1024</div>
+</details>
