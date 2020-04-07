@@ -214,8 +214,8 @@
 </details>
 
 <details>
-  <summary>当一个应用使用SSL时，发送进程向SSL套接字传递明文数据；在发送主机中的SSL则加密该数据并将加密的数据传递给TCP套接字。</summary>
-  <div>单向工作</div>
+  <summary>当一个应用使用SSL时，发送进程向__传递明文数据；在发送主机中的SSL则加密该数据并将加密的数据传递给TCP套接字。</summary>
+  <div>SSL套接字</div>
 </details>
 
 <details>
