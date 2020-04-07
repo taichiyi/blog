@@ -268,9 +268,28 @@
 </details>
 
 <details>
-  <summary>首部行(和附加的回车和换行)后有一个__。</summary>
-  <div>“实体体”(entity body)</div>
+  <summary>[延伸]HTTP 响应报文的第一行叫作__。后继的行叫作__。</summary>
+  <div>响应行(response line)</div>
+  <div>响应行(header line)</div>
+</details>
+
+<details>
+  <summary>实体首部行(和附加的回车和换行)后有一个__。</summary>
+  <div>“实体主体”(entity body)</div>
   <div></div>
+</details>
+
+<details>
+  <summary>[延伸]首部行又分为__、__和__。</summary>
+  <div>请求首部(Request headers)</div>
+  <div>普通首部(General headers)</div>
+  <div>实体首部(Entity headers)</div>
+</details>
+
+<details>
+  <summary>[延伸]实体主体主要由2个实体首部定义:__和__定义。</summary>
+  <div>Content-Type</div>
+  <div>Content-Length</div>
 </details>
 
 <details>
@@ -304,8 +323,9 @@
 </details>
 
 <details>
-  <summary>响应首部行的Content-Length指示了被发送对象的__数。</summary>
+  <summary>实体首部行的Content-Length指示了__的__数。</summary>
   <div>字节</div>
+  <div>实体主体</div>
 </details>
 
 ### 2.2.4 用户与服务器的交互: cookie

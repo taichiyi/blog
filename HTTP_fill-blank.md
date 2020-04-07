@@ -162,6 +162,16 @@
 </details>
 
 <details>
+  <summary>首部行的键区分大小写？</summary>
+  <div>不是</div>
+</details>
+
+<details>
+  <summary>如果请求没有实体主体，可以不用发送实体首部？</summary>
+  <div>是</div>
+</details>
+
+<details>
   <summary>GET: 应仅__数据，而没有其他效果。</summary>
   <div>检索（获取）</div>
 </details>
