@@ -34,6 +34,11 @@
 </details>
 
 <details>
+  <summary>1991年，ISO/IEC 10646 项目 和 Unicode组织项目 __相互兼容。</summary>
+  <div>码表</div>
+</details>
+
+<details>
   <summary>UCS-2和UCS-4分别采用__和__个字节编码。</summary>
   <div>2</div>
   <div>4</div>
