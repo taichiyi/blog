@@ -185,7 +185,7 @@
 
 <details>
   <summary>POST: 通过__向服务器发送数据。</summary>
-  <div>请求主体</div>
+  <div>实体主体</div>
 </details>
 
 <details>
