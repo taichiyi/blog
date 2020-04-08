@@ -343,3 +343,8 @@
   <div>1000</div>
   <div>1024</div>
 </details>
+
+<details>
+  <summary>socket是一种操作系统提供的__间通信机制</summary>
+  <div>进程</div>
+</details>

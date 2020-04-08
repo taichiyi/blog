@@ -270,7 +270,7 @@
 <details>
   <summary>[延伸]HTTP 响应报文的第一行叫作__。后继的行叫作__。</summary>
   <div>响应行(response line)</div>
-  <div>响应行(header line)</div>
+  <div>首部行(header line)</div>
 </details>
 
 <details>
@@ -319,13 +319,13 @@
 <details>
   <summary>SP: 代表空格，全称__，码值__。</summary>
   <div>space</div>
-  <div>10</div>
+  <div>32</div>
 </details>
 
 <details>
   <summary>实体首部行的Content-Length指示了__的__数。</summary>
-  <div>字节</div>
   <div>实体主体</div>
+  <div>字节</div>
 </details>
 
 ### 2.2.4 用户与服务器的交互: cookie
