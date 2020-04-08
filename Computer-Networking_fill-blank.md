@@ -707,3 +707,45 @@
   <div>管理</div>
   <div>副本</div>
 </details>
+
+<details>
+  <summary>CDN 可以是__ CDN(__ CDN)，即它有内容提供商自己拥有。</summary>
+  <div>专用</div>
+  <div>private</div>
+</details>
+
+<details>
+  <summary>另一种 CDN 是__CDN，如cdnjs.cloudflare.com</summary>
+  <div>第三方</div>
+</details>
+
+<details>
+  <summary>CDN有两种不同的服务器安置原则__和__。</summary>
+  <div>深入</div>
+  <div>邀请做客</div>
+</details>
+
+<details>
+  <summary>深入CDN是在__中部署服务器集群。</summary>
+  <div>ISP</div>
+</details>
+
+<details>
+  <summary>邀请做客CDN是通过在少量关键位置(例如: __)建造大集群邀请__做客。</summary>
+  <div>因特网交换点IXP</div>
+  <div>ISP</div>
+</details>
+
+### 2.2.2 TCP 套接字编程
+
+<details>
+  <summary>将服务器端口号和套接字关联起来。对于TCP而言是__套接字，欢迎套接字称为serverSocket的TCP套接字对象。</summary>
+  <div>欢迎</div>
+</details>
+
+<details>
+  <summary>欢迎套接字听到敲门后会生成新的__套接字。</summary>
+  <div>连接（connectionSocket）</div>
+</details>
+
+### 3 运输层
