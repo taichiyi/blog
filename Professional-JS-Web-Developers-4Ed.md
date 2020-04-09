@@ -1,6 +1,10 @@
 <!-- markdownlint-disable MD033 MD026 -->
 # Professional JavaScript For Web Developers 4Ed 填空
 
+哪些知识点必须记?
+
+- 不掌握该知识点，开发时引发相关错误，却难以发现的。
+
 <details>
   <summary>W3C 中英文全称</summary>
   <div>World Wide Web Consortium</div>
@@ -354,6 +358,11 @@
 </details>
 
 #### 3.3.2.2 Global Declarations
+
+<details>
+  <summary>与var关键字不同，在全局上下文中使用let声明变量时，变量不会像使用var那样添加到__。</summary>
+  <div>window对象</div>
+</details>
 
 ## CHAPTER 8 对象，类和面向对象编程
 

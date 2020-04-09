@@ -130,4 +130,25 @@
 
 #### 3.3.2.2 Global Declarations
 
+<details open>
+  <summary>下面代码打印值为__、__。</summary>
+  <pre>
+    &lt;script>
+      var a = 1;
+      let b = 2;
+      console.log(window.a);
+      console.log(window.b);
+    &lt;/script>
+  </pre>
+  <details>
+    <summary>答案</summary>
+    <div>1</div>
+    <div>undefined</div>
+    <pre>
+    知识点:
+    - let的全局声明
+    </pre>
+  </details>
+</details>
+
 ## CHAPTER 8 对象，类和面向对象编程
