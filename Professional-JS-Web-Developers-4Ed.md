@@ -320,6 +320,41 @@
   <div>标识符</div>
 </details>
 
+## 3.3 Variables
+
+<details>
+  <summary>ECMAScript变量是__类型的，这意味着变量可以是__类型的数据。</summary>
+  <div>松散</div>
+  <div>任何</div>
+</details>
+
+<details>
+  <summary>可以使用三个关键字来声明变量：__以及 __和__（在ECMAScript __引入）。</summary>
+  <div>var</div>
+  <div>const</div>
+  <div>let</div>
+  <div>6</div>
+</details>
+
+### 3.3.1 The ’var’ Keyword
+
+#### 3.3.1.2 var Declaration Hoisting
+
+<details>
+  <summary>使用var声明的变量，会被提升到作用域的__部。</summary>
+  <div>顶</div>
+</details>
+
+### 3.3.2 ’let’ Declarations
+
+<details>
+  <summary>let是__作用域的，而var是__作用域的。</summary>
+  <div>块</div>
+  <div>函数</div>
+</details>
+
+#### 3.3.2.2 Global Declarations
+
 ## CHAPTER 8 对象，类和面向对象编程
 
 <details>

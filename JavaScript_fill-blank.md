@@ -79,6 +79,8 @@
   <div>disk: 10~200ms</div>
 </details>
 
+## undefined 和 void操作符 -start-
+
 <details>
   <summary>undefined既不是__字也不是__字。</summary>
   <div>关键</div>
@@ -130,5 +132,38 @@
     <div>foo</div>
     <div>string</div>
     <div>undefined</div>
+    <pre>
+    知识点:
+    - undefined既不是关键字也不是保留字
+    - widnow的undefined属性是只读的
+    </pre>
+  </details>
+</details>
+
+## undefined 和 void操作符 -end-
+
+<details open>
+  <summary>下面代码打印值为__、__、__。</summary>
+  <pre>
+    &lt;script>
+    let a = 1;
+    let b = a++;
+    let c = (a++,a);
+    console.log(a);
+    console.log(b);
+    console.log(c);
+    &lt;/script>
+  </pre>
+  <details>
+    <summary>答案</summary>
+    <div>3</div>
+    <div>1</div>
+    <div>3</div>
+    <pre>
+    知识点:
+    - 序列点
+    - 逗号运算符
+    - 递增运算符的后缀模式
+    </pre>
   </details>
 </details>
