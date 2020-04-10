@@ -72,11 +72,11 @@
   <div>二进制</div>
 </details>
 
-<details>
+<!-- <details>
   <summary>Unicode通常用__个字节表示一个字符，原有的英文编码从单字节变成双字节，只需要把高字节全部填为__就可以。</summary>
   <div>两</div>
   <div>0</div>
-</details>
+</details> -->
 
 <details>
   <summary>阿拉伯数字在不在ASCII码里？</summary>
@@ -103,6 +103,16 @@
   <div>10FFFF</div>
   <div>平面（Plane）</div>
   <div>码位</div>
+  <pre>
+  0号平面 U+0000 - U+FFFF
+  1号平面 U+10000 - U+1FFFF
+  2号平面 U+20000 - U+2FFFF
+  3号平面 U+30000 - U+3FFFF
+  4号平面 - 13号平面 U+40000 - U+DFFFF
+  14号平面 U+E0000 - U+EFFFF
+  15号平面 U+F0000 - U+FFFFF
+  16号平面 U+100000 - U+10FFFF
+  </pre>
 </details>
 
 <details>
@@ -131,8 +141,9 @@
 </details>
 
 <details>
-  <summary>UTF-8仅涵盖__号平面，也就是包含了16^4个码点。</summary>
-  <div>零</div>
+  <summary>UTF-8对Unicode第__平面(也就是码值小于__)的字符编码效率较高</summary>
+  <div>领</div>
+  <div>FFFF</div>
 </details>
 
 <details>
@@ -176,11 +187,11 @@
 <details>
   <summary>Unicode到UTF-8的编码方式如下：</summary>
   <pre>
-  Unicode编码(十六进制)　 UTF-8 字节流(二进制)
-  000000-00007F         0xxxxxxx
-  000080-0007FF         110xxxxx 10xxxxxx
-  000800-00FFFF         1110xxxx 10xxxxxx 10xxxxxx
-  010000-10FFFF         11110xxx 10xxxxxx 10xxxxxx 10xxxxxx
+  Unicode编码范围  位数  字节数　UTF-8 字节流(二进制)
+  000000-00007F    7    1     0xxxxxxx
+  000080-0007FF   11    2     110xxxxx 10xxxxxx
+  000800-00FFFF   16    3     1110xxxx 10xxxxxx 10xxxxxx
+  010000-10FFFF   21    4     11110xxx 10xxxxxx 10xxxxxx 10xxxxxx
   </pre>
 </details>
 

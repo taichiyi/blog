@@ -463,6 +463,50 @@
   <div>36</div>
 </details>
 
+### 3.4.7 The Symbol Type
+
+<details>
+  <summary>Symbol的实例是__且__的。</summary>
+  <div>唯一</div>
+  <div>不可变</div>
+</details>
+
+<details>
+  <summary>Symbol目的是成为对象属性的有保证的__标识符，而不会冒属性冲突的危险。</summary>
+  <div>唯一</div>
+</details>
+
+#### 3.4.7.1 Basic Symbol Use
+
+<details>
+  <summary>可以提供一个可选字符串，该字符串可用于在调试时__符号实例。</summary>
+  <div>标识</div>
+  <div>【let fooSymbol = Symbol('foo');】</div>
+</details>
+
+#### 3.4.7.2 Using the Global Symbol Registry
+
+<details>
+  <summary>在运行时的不同部分希望共享和重用Symbol实例的情况下，可以在通过__()方法在全局Symbol注册表中创建和重用Symbol。</summary>
+  <div>Symbol.for</div>
+</details>
+
+<details>
+  <summary>Symbol.for方法是__方法。</summary>
+  <div>幂等</div>
+</details>
+
+<details>
+  <summary>可以使用__（）方法来检查全局Symbol注册表，该方法接受一个Symbol实例并将返回关联的键，如果该Symbol实例不是全局Symbol，则为__。</summary>
+  <div>Symbol.keyFor</div>
+  <div>undefined</div>
+</details>
+
+<details>
+  <summary>如果直接创建Symbol实例并将其用作属性，可以通过__()访问该Symbol属性。</summary>
+  <div>Object.getOwnPropertySymbols</div>
+</details>
+
 ## CHAPTER 8 对象，类和面向对象编程
 
 <details>
