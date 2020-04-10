@@ -54,7 +54,7 @@
     - 3.3.4.1 Don’t Use var
     - 3.3.4.2 Prefer const Over let
 - 3.4 Data Types
-  - 3.4.1 Data Types
+  - 3.4.1 The typeof Operator
   - 3.4.2 The Undefined Type
   - 3.4.3 The Null Type
   - 3.4.4 The Boolean Type

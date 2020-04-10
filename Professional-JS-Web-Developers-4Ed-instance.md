@@ -151,4 +151,85 @@
   </details>
 </details>
 
+### 3.4.5 The Number Type
+
+<details open>
+  <summary>下面代码打印值为__、__、__。</summary>
+  <pre>
+    &lt;script>
+      console.log(010 === 10);
+      console.log(0xf === 0Xf);
+      console.log(0xf === 0xF);
+    &lt;/script>
+  </pre>
+  <details>
+    <summary>答案</summary>
+    <div>false</div>
+    <div>true</div>
+    <div>true</div>
+    <pre>
+    知识点:
+    - 八进制和十六进制的表示
+    </pre>
+  </details>
+</details>
+
+#### 3.4.5.1 Floating-Point Values
+
+<details open>
+  <summary>下面代码打印值为__。</summary>
+  <pre>
+    &lt;script>
+      console.log(0.1+0.2 === 0.3);
+    &lt;/script>
+  </pre>
+  <details>
+    <summary>答案</summary>
+    <div>false</div>
+    <pre>
+    知识点:
+    - 浮点数的精度
+    </pre>
+  </details>
+</details>
+
+#### 3.4.5.2 Range of Values
+
+<details open>
+  <summary>下面代码打印值为__。</summary>
+  <pre>
+    &lt;script>
+      console.log(1/0);
+    &lt;/script>
+  </pre>
+  <details>
+    <summary>Infinity</summary>
+    <pre>
+    知识点:
+    - ECMAScript无穷大小数字的表示
+    </pre>
+  </details>
+</details>
+
+#### 3.4.5.3 NaN
+
+<details open>
+  <summary>下面代码打印值为：</summary>
+  <pre>
+    &lt;script>
+      console.log(''/0+1);
+      console.log(NaN===NaN);
+    &lt;/script>
+  </pre>
+  <details>
+    <summary>答案</summary>
+    <div>NaN</div>
+    <div>false</div>
+    <pre>
+    知识点:
+    - 浮点数的精度
+    </pre>
+  </details>
+</details>
+
 ## CHAPTER 8 对象，类和面向对象编程

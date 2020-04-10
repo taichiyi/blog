@@ -3,7 +3,7 @@
 
 哪些知识点必须记?
 
-- 不掌握该知识点，开发时引发相关错误，却难以发现的。
+- 不掌握该知识点时，开发时引发相关错误，却难以发现。
 
 <details>
   <summary>W3C 中英文全称</summary>
@@ -362,6 +362,105 @@
 <details>
   <summary>与var关键字不同，在全局上下文中使用let声明变量时，变量不会像使用var那样添加到__。</summary>
   <div>window对象</div>
+</details>
+
+## 3.4 Data Types
+
+<details>
+  <summary>ECMAScript有7中数据类型__、__、__、__、__、__、__、__。</summary>
+  <div>undefined</div>
+  <div>Boolean</div>
+  <div>String</div>
+  <div>Number</div>
+  <div>Object</div>
+  <div>Function</div>
+  <div>Symbol(ES6)</div>
+  <div>BigInt(ES10)</div>
+</details>
+
+### 3.4.2 The Undefined Type
+
+<details>
+  <summary>undefined是ES__才加入的，是为了区分__和__之间的差异。</summary>
+  <div>3</div>
+  <div>空对象指针</div>
+  <div>未初始化变量</div>
+</details>
+
+### 3.4.4 The Boolean Type
+
+<details>
+  <summary>Boolean(x)，x等于_1_、_2_、_3_、_4_、_5_、_6_时为false？</summary>
+  <div>false</div>
+  <div>''</div>
+  <div>null</div>
+  <div>0</div>
+  <div>NaN</div>
+  <div>undefined</div>
+</details>
+
+### 3.4.5 The Number Type
+
+<details>
+  <summary>ECMAScript使用__格式表示整数和浮点值。</summary>
+  <div>IEEE–754</div>
+</details>
+
+<details>
+  <summary>__开头的整数表示为八进制；__开头的整数表示为十六进制。</summary>
+  <div>0</div>
+  <div>0x(X)</div>
+</details>
+
+#### 3.4.5.1 Floating-Point Values
+
+<details>
+  <summary>浮点值可以精确到小数点后__位。</summary>
+  <div>17</div>
+</details>
+
+#### 3.4.5.2 Range of Values
+
+<details>
+  <summary>由于__限制，可以在ECMAScript中表示的最小数字存储在Number.__中；最大的数字存储在Number.__。</summary>
+  <div>内存</div>
+  <div>MIN_VALUE</div>
+  <div>MAX_VALUE</div>
+</details>
+
+<details>
+  <summary>如果计算得出的数字无法用JavaScript的数字范围表示，则该数字会自动获得__的特殊值。 任何无法表示的负数是__，而任何无法表示的正数是__。</summary>
+  <div>Infinity</div>
+  <div>–Infinity（负无穷大）</div>
+  <div>Infinity（正无穷大）</div>
+</details>
+
+#### 3.4.5.3 NaN
+
+<details>
+  <summary>在ECMAScript中，将数字除以0将返回__，任何涉及NaN的操作都始终返回__（例如NaN / 10）。NaN不等于__值。</summary>
+  <div>NaN</div>
+  <div>NaN</div>
+  <div>任何</div>
+</details>
+
+#### 3.4.6.3 Converting to a String
+
+<details>
+  <summary>有两种方法可以将值转换为字符串:__和__。</summary>
+  <div>toString()</div>
+  <div>String()</div>
+</details>
+
+<details>
+  <summary>String()可以接受任何值，如果有__方法，则不带参数调用。如果值为null返回“null”，undefined返回“undefined”。</summary>
+  <div>toString()</div>
+</details>
+
+<details>
+  <summary>当toString()在值上使用时，则接受一个参数表示输出数字的基数。 默认为10(十进制)，可以使2-__进制。</summary>
+  <div>数</div>
+  <div>36</div>
 </details>
 
 ## CHAPTER 8 对象，类和面向对象编程

@@ -336,7 +336,7 @@
 </details>
 
 <details>
-  <summary>cookie技术有4个组件: 1.HTTP__报文首部行中的cookie；2.HTTP__报文首部行中的cookie；3.用户端系统中保留cookie文件，并由用户的__进行管理。4. 位于 Web 站点的一个后端__。</summary>
+  <summary>cookie技术有4个部分: 1.HTTP__报文首部行中的cookie；2.HTTP__报文首部行中的cookie；3.用户端系统中保留cookie文件，并由用户的__进行管理。4. 位于 Web 站点的一个后端__。</summary>
   <div>响应</div>
   <div>请求</div>
   <div>浏览器</div>
