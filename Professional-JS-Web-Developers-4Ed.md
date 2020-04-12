@@ -150,7 +150,7 @@
   <div>HTML5</div>
 </details>
 
-第2章 JAVASCRIPT IN HTML
+# 第2章 JAVASCRIPT IN HTML
 
 ## 2.1 The &lt;script> Element
 
@@ -504,6 +504,13 @@
 
 <details>
   <summary>如果直接创建Symbol实例并将其用作属性，可以通过__()访问该Symbol属性。</summary>
+  <div>Object.getOwnPropertySymbols</div>
+</details>
+
+#### 3.4.7.4 Well-Known Symbols
+
+<details>
+  <summary></summary>
   <div>Object.getOwnPropertySymbols</div>
 </details>
 
