@@ -566,11 +566,45 @@
 </details>
 
 <details>
-  <summary>Symbol.__ 用作一个对象的属性，属性值为方法。方法返回对象的默认__。方法用过__语句被调用。</summary>
+  <summary>Symbol.__ 用作一个对象的属性，属性值为方法。方法返回对象的默认__。方法通过__语句被调用。</summary>
   <div>iterator</div>
   <div>Iterator</div>
   <div>for-of循环</div>
 </details>
+
+<details>
+  <summary>Symbol.__ 用作一个对象的属性，属性值为方法。方法通过__语句被调用。</summary>
+  <div>match</div>
+  <div>str.match(obj)</div>
+</details>
+
+<details>
+  <summary>Symbol.match 可以用于标识对象是否具有__表达式的行为。为Boolean(value)为__时，不具有正则表达式行为(一般当做字符串处理)。</summary>
+  <div>match</div>
+  <div>正则</div>
+  <div>false</div>
+</details>
+
+### 3.4.8 The Object Type
+
+<details>
+  <summary>每个对象的实例都有7个属性和方法：_1_、_2_、_3_、_4_、_5_、_6_、_7_。</summary>
+  <div>constructor</div>
+  <div>hasOwnProperty()</div>
+  <div>isPrototypeof(object)</div>
+  <div>propertyIsEnumerable(propertyName)</div>
+  <div>toLocaleString()</div>
+  <div>toString()</div>
+  <div>valueOf()</div>
+</details>
+
+<details>
+  <summary>BOM和DOM等__对象(host objects)不归ECMA-262管，所以主机对象不一定从__继承。</summary>
+  <div>主机</div>
+  <div>Object</div>
+</details>
+
+## 3.5 Operators
 
 ## CHAPTER 8 对象，类和面向对象编程
 
