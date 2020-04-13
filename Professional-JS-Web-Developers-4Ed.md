@@ -106,6 +106,12 @@
 </details>
 
 <details>
+  <summary>[延伸]渲染之前叫标签，渲染之后叫__或__。</summary>
+  <div>元素(Element)</div>
+  <div>对象(Object)</div>
+</details>
+
+<details>
   <summary>有了DOM后，开发人员可以可以更改网页的__和__，而无需重新加载网页。</summary>
   <div>外观</div>
   <div>内容</div>
@@ -155,8 +161,8 @@
 ## 2.1 The &lt;script> Element
 
 <details>
-  <summary>将JavaScript插入HTML页面的主要方法是通过&lt;__&gt;元素。该元素有__个属性。</summary>
-  <div>6</div>
+  <summary>将JavaScript插入HTML页面的主要方法是通过&lt;__&gt;元素。</summary>
+  <div>script</div>
 </details>
 
 <details>
@@ -171,7 +177,7 @@
 </details>
 
 <details>
-  <summary>如果要 脚本加载错误要获取错误信息的话(window.onerror) 需要在script元素添加属性 __。</summary>
+  <summary>对于没有通过CORS检查的脚本，脚本元素会将最少的信息传给window.onerror。若要允许对使用单独域的静态媒体进行站点的错误进行记录，请使用__属性</summary>
   <div>crossorigin</div>
 </details>
 
@@ -510,8 +516,60 @@
 #### 3.4.7.4 Well-Known Symbols
 
 <details>
-  <summary></summary>
-  <div>Object.getOwnPropertySymbols</div>
+  <summary>除了自己创建的symbol，JavaScript还内建了一些在ECMAScript 6 之前没有暴露给开发者的symbol，它们代表了内部语言行为。它们可以通过Symbol的__访问。</summary>
+  <div>属性</div>
+</details>
+
+<details>
+  <summary>如果一个对象设置了Symbol.__属性，则这个对象就是异步可迭代对象。属性值是一个方法，该方法返回对象的默认__。该方法返回一个实现了__ API的对象。</summary>
+  <div>asyncIterator</div>
+  <div>AsyncIterator(异步迭代器)</div>
+  <div>Iterator</div>
+</details>
+
+<details>
+  <summary>[延伸]Symbol.asyncIterator是一个用于访问对象的__方法的内建符号。</summary>
+  <div>@@asyncIterator</div>
+</details>
+
+<details>
+  <summary>[延伸]目前有默认设定了[Symbol.asyncIterator]属性的JavaScript内建的对象吗？</summary>
+  <div>没有</div>
+</details>
+
+<details>
+  <summary>__语句，可以利用Symbol.asyncIterator执行异步迭代。</summary>
+  <div>for-await-of循环</div>
+</details>
+
+<details>
+  <summary>__ Symbol作为构造函数的属性时，属性方法用于识别对象是否为构造函数的实例之一。通过__调用。</summary>
+  <div>Symbol.hasInstance</div>
+  <div>instanceof</div>
+</details>
+
+<details>
+  <summary>在支持Symbol的情况下，“f instanceof Foo”还可以写作__。</summary>
+  <div>Foo[Symbol.hasInstance](f)</div>
+</details>
+
+<details>
+  <summary>每个构造函数都有默认的__ Symbol。</summary>
+  <div>Symbol.hasInstance</div>
+</details>
+
+<details>
+  <summary>Symbol.__ Symbol用于配置某对象作为Array.prototype.__()方法的参数时是否展开其数组元素。Symbol属性值为__值。</summary>
+  <div>isConcatSpreadable</div>
+  <div>concat</div>
+  <div>布尔</div>
+</details>
+
+<details>
+  <summary>Symbol.__ 用作一个对象的属性，属性值为方法。方法返回对象的默认__。方法用过__语句被调用。</summary>
+  <div>iterator</div>
+  <div>Iterator</div>
+  <div>for-of循环</div>
 </details>
 
 ## CHAPTER 8 对象，类和面向对象编程
