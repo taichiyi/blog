@@ -112,7 +112,7 @@
 </details>
 
 <details>
-  <summary>有了DOM后，开发人员可以可以更改网页的__和__，而无需重新加载网页。</summary>
+  <summary>有了DOM后，开发人员可以更改网页的__和__，而无需重新加载网页。</summary>
   <div>外观</div>
   <div>内容</div>
 </details>
