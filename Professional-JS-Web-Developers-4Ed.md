@@ -637,6 +637,60 @@
   <div>valueOf</div>
 </details>
 
+#### 3.5.1.2 Unary Plus and Minus
+
+<details>
+  <summary>将一元加号应用于非数字值时，它将执行__函数强制转换类型。</summary>
+  <div>Number()</div>
+</details>
+
+<details>
+  <summary>一元减运算符的主要用途是__。</summary>
+  <div>取反数值</div>
+</details>
+
+<details>
+  <summary>[延伸]一元运算符包括_1_、_2_、_3_、4_、_5_、_6_、_7_。</summary>
+  <div>1. delete</div>
+  <div>2. void</div>
+  <div>3. typeof</div>
+  <div>4. +</div>
+  <div>5. -</div>
+  <div>6. ~</div>
+  <div>7. !</div>
+</details>
+
+### 3.5.2 Bitwise Operators
+
+<details>
+  <summary>ECMAScript中的所有数字都以IEEE–754 __位格式存储。</summary>
+  <div>64</div>
+</details>
+
+<details>
+  <summary>按位运算不能直接在__位表示形式上运算。将值转换为__位整数，然后进行运算，然后将结果转换回__位。</summary>
+  <div>64</div>
+  <div>32</div>
+  <div>64</div>
+</details>
+
+<details>
+  <summary>有符号整数使用32位中的前__位来表示整数的数值。第__位代表数字的符号(又称为__位)：0表示__，1表示__。</summary>
+  <div>31</div>
+  <div>32</div>
+  <div>符号</div>
+  <div>正</div>
+  <div>负</div>
+</details>
+
+<details>
+  <summary>数字__的32位可表示为00000000000000000000000000010010，其中第二位为__，可以简洁的表示为__，这几位被称为__位。</summary>
+  <div>18</div>
+  <div>1</div>
+  <div>10010</div>
+  <div>有效</div>
+</details>
+
 ## CHAPTER 8 对象，类和面向对象编程
 
 <details>

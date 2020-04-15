@@ -79,7 +79,13 @@
   <div>disk: 10~200ms</div>
 </details>
 
-## undefined 和 void操作符 -start-
+## undefined 和 void运算符 -start-
+
+<details>
+  <summary>void pointer 的中文意思是__。</summary>
+  <div>空指针</div>
+  <div>void /vɔɪd/</div>
+</details>
 
 <details>
   <summary>undefined既不是__字也不是__字。</summary>
@@ -88,14 +94,13 @@
 </details>
 
 <details>
-  <summary>void pointer的中文意思是__。</summary>
-  <div>空指针</div>
-  <div>void /vɔɪd/</div>
+  <summary>在JavaScript中void是一个__符，后面跟着一个运算对象。</summary>
+  <div>运算</div>
 </details>
 
 <details>
-  <summary>在JavaScript中void是一个__符，后面跟着一个运算对象。void表达式返回值总是为__。</summary>
-  <div>操作</div>
+  <summary>void 运算符表示表达式放弃__，所以void运算符返回值总是为__。</summary>
+  <div>返回值</div>
   <div>undifined</div>
 </details>
 
@@ -140,7 +145,7 @@
   </details>
 </details>
 
-## undefined 和 void操作符 -end-
+## undefined 和 void运算符 -end-
 
 <details open>
   <summary>下面代码打印值为__、__、__。</summary>
