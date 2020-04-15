@@ -738,6 +738,11 @@
 #### 3.5.2.1 Bitwise NOT
 
 <details>
+  <summary>符号“~”表示__运算符。</summary>
+  <div>按位非</div>
+</details>
+
+<details>
   <summary>对数值X使用按位非运算符返回结果为__。</summary>
   <div>-X-1</div>
 </details>
@@ -753,6 +758,13 @@
 <details>
   <summary>补码系统中 -5 的表示方式为(4bit)__。</summary>
   <div>1011</div>
+</details>
+
+#### 3.5.2.2 Bitwise AND
+
+<details>
+  <summary>符号“&”表示__运算符。</summary>
+  <div>按位与</div>
 </details>
 
 ## CHAPTER 8 对象，类和面向对象编程
