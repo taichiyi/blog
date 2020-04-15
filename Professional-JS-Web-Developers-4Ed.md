@@ -373,7 +373,7 @@
 ## 3.4 Data Types
 
 <details>
-  <summary>ECMAScript有7中数据类型__、__、__、__、__、__、__、__。</summary>
+  <summary>ECMAScript有8种数据类型__、__、__、__、__、__、__、__。</summary>
   <div>undefined</div>
   <div>Boolean</div>
   <div>String</div>
@@ -396,7 +396,7 @@
 ### 3.4.4 The Boolean Type
 
 <details>
-  <summary>Boolean(x)，x等于_1_、_2_、_3_、_4_、_5_、_6_时为false？</summary>
+  <summary>Boolean(x)，x等于_1_、_2_、_3_、_4_、_5_、_6_时为false。</summary>
   <div>false</div>
   <div>''</div>
   <div>null</div>
@@ -566,16 +566,14 @@
 </details>
 
 <details>
-  <summary>Symbol.__ 用作一个对象的属性，属性值为方法。方法返回对象的默认__。方法通过__语句被调用。</summary>
+  <summary>Symbol.__ 用作一个对象的属性，属性值为方法。方法返回对象的默认Iterator。方法通过__语句被调用。</summary>
   <div>iterator</div>
-  <div>Iterator</div>
   <div>for-of循环</div>
 </details>
 
 <details>
-  <summary>Symbol.__ 用作一个对象的属性，属性值为方法。方法通过__语句被调用。</summary>
+  <summary>Symbol.__ 用作一个对象的属性，属性值为方法。方法通过str.match(obj)语句被调用。</summary>
   <div>match</div>
-  <div>str.match(obj)</div>
 </details>
 
 <details>
@@ -604,7 +602,7 @@
   <div>Object</div>
 </details>
 
-## 3.5 Operators
+## 3.5 Operators(运算符)
 
 ## CHAPTER 8 对象，类和面向对象编程
 
