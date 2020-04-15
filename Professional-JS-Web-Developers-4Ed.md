@@ -707,13 +707,13 @@
 </details>
 
 <details>
-  <summary>[拓展]补码(英语：__)就是原二进制进行反码然后加__。</summary>
+  <summary>[拓展]数字的补码(英语：__)就是数字的二进制进行反码然后加__。</summary>
   <div>2's complement</div>
   <div>1</div>
 </details>
 
 <details>
-  <summary>[拓展]二进制1001，无符号比特：__；有符号比特:__；一的补码：__。</summary>
+  <summary>[拓展]二进制1001，为无符号比特：__；为有符号比特:__；为一的补码：__。</summary>
   <div>9</div>
   <div>-1</div>
   <div>-6</div>
@@ -733,6 +733,26 @@
 <details>
   <summary>按运算符应用于非数字值时，会首先使用__函数将该值转换为数字。</summary>
   <div>Number()</div>
+</details>
+
+#### 3.5.2.1 Bitwise NOT
+
+<details>
+  <summary>对数值X使用按位非运算符返回结果为__。</summary>
+  <div>-X-1</div>
+</details>
+
+<details>
+  <summary>为什么25按位非运算(~)后的值为-26？25的8位二进制位为0001 1001，然后按位非运算(就是__)，反码后的值为1110 __，因为最高位是1所以是负数，负数以二进制补码的格式存储在二进制代码中。然后问题就变成已知二进制补码求数值。先减1，然后__，注意反码后的值是还是__。</summary>
+  <div>反码</div>
+  <div>0110</div>
+  <div>反码</div>
+  <div>负数</div>
+</details>
+
+<details>
+  <summary>补码系统中 -5 的表示方式为(4bit)__。</summary>
+  <div>1011</div>
 </details>
 
 ## CHAPTER 8 对象，类和面向对象编程
