@@ -232,4 +232,50 @@
   </details>
 </details>
 
+#### 3.5.1.1 Increment/Decrement
+
+<details open>
+  <summary>下面代码打印值为：</summary>
+  <pre>
+    &lt;script>
+      let a = 1;
+      let b = 5;
+      let c = (b++,a++) + b;
+      console.log(c);
+    &lt;/script>
+  </pre>
+  <details>
+    <summary>答案</summary>
+    <div>7</div>
+    <pre>
+    知识点:
+    - 序列点
+    - 逗号运算符
+    </pre>
+  </details>
+</details>
+
+<details open>
+  <summary>下面代码打印值为：</summary>
+  <pre>
+    &lt;script>
+      let o = {
+        valueOf() {
+          return -1;
+        }
+      };
+      console.log(o++);
+    &lt;/script>
+  </pre>
+  <details>
+    <summary>答案</summary>
+    <div>-1</div>
+    <pre>
+    知识点:
+    - 序列点
+    - 逗号运算符
+    </pre>
+  </details>
+</details>
+
 ## CHAPTER 8 对象，类和面向对象编程

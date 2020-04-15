@@ -604,6 +604,39 @@
 
 ## 3.5 Operators(运算符)
 
+<details>
+  <summary>ECMA-262描述了一组可用于操纵__的运算符。包括:__运算符、__运算符、__运算符、__运算符、__运算符。</summary>
+  <div>数据值</div>
+  <div>算术</div>
+  <div>位</div>
+  <div>关系</div>
+  <div>相等</div>
+</details>
+
+### 3.5.1 Unary Operators
+
+<details>
+  <summary>仅对__进行运算的运算符称为一元运算符。</summary>
+  <div>一个值</div>
+</details>
+
+#### 3.5.1.1 Increment/Decrement
+
+<details>
+  <summary>递增和递减运算符直接来自于__语言。</summary>
+  <div>C</div>
+</details>
+
+<details>
+  <summary>仅对__进行运算的运算符称为一元运算符。</summary>
+  <div>一个值</div>
+</details>
+
+<details>
+  <summary>递增递减四个运算符可以用于任何值。当值为对象时，会调用其__()方法以获取一个可用的值。</summary>
+  <div>valueOf</div>
+</details>
+
 ## CHAPTER 8 对象，类和面向对象编程
 
 <details>
