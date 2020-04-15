@@ -675,7 +675,8 @@
 </details>
 
 <details>
-  <summary>有符号整数使用32位中的前__位来表示整数的数值。第__位代表数字的符号(又称为__位)：0表示__，1表示__。</summary>
+  <summary>__整数使用32位中的前__位来表示整数的数值。第__位代表数字的符号(又称为__位)：0表示__，1表示__。</summary>
+  <div>有符号</div>
   <div>31</div>
   <div>32</div>
   <div>符号</div>
@@ -689,6 +690,49 @@
   <div>1</div>
   <div>10010</div>
   <div>有效</div>
+</details>
+
+<details>
+  <summary>[拓展]所有的按位运算符的运算数都会被转成__形式的__符号__位整数。</summary>
+  <div>补码（two's complement）</div>
+  <div>有</div>
+  <div>32</div>
+</details>
+
+<details>
+  <summary>[拓展]将二进制数每个数字反转，得到的数即为原二进制的__码，也称为__码（英语：__）。</summary>
+  <div>一的补</div>
+  <div>反</div>
+  <div>1's complement</div>
+</details>
+
+<details>
+  <summary>[拓展]补码(英语：__)就是原二进制进行反码然后加__。</summary>
+  <div>2's complement</div>
+  <div>1</div>
+</details>
+
+<details>
+  <summary>[拓展]二进制1001，无符号比特：__；有符号比特:__；一的补码：__。</summary>
+  <div>9</div>
+  <div>-1</div>
+  <div>-6</div>
+</details>
+
+<details>
+  <summary>负数也存储在二进制代码中，但格式为二进制__码。</summary>
+  <div>补</div>
+</details>
+
+<details>
+  <summary>按位运算中使用时，特殊值__和__都被视为等于0。</summary>
+  <div>NaN</div>
+  <div>Infinity</div>
+</details>
+
+<details>
+  <summary>按运算符应用于非数字值时，会首先使用__函数将该值转换为数字。</summary>
+  <div>Number()</div>
 </details>
 
 ## CHAPTER 8 对象，类和面向对象编程
