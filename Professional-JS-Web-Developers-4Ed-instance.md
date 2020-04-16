@@ -238,7 +238,7 @@
   <summary>下面代码打印值为：</summary>
   <pre>
     &lt;script>
-      let a = 1;
+      let a = 2;
       let b = 5;
       let c = (b++,a++) + b;
       console.log(c);
@@ -246,7 +246,7 @@
   </pre>
   <details>
     <summary>答案</summary>
-    <div>7</div>
+    <div>8</div>
     <pre>
     知识点:
     - 序列点
@@ -274,6 +274,68 @@
     知识点:
     - 序列点
     - 逗号运算符
+    </pre>
+  </details>
+</details>
+
+#### 3.5.2.1 Bitwise NOT
+
+<details open>
+  <summary>下面代码打印值为：</summary>
+  <pre>
+    &lt;script>
+      const a = 7;
+      const b = ~a;
+      console.log(a);
+    &lt;/script>
+  </pre>
+  <details>
+    <summary>答案</summary>
+    <div>-8</div>
+    <pre>
+    知识点:
+    - 按位非运算
+    </pre>
+  </details>
+</details>
+
+#### 3.5.2.2 Bitwise AND
+
+<details open>
+  <summary>下面代码打印值为：</summary>
+  <pre>
+    &lt;script>
+      const a = 26 & 3;
+      console.log(a);
+    &lt;/script>
+  </pre>
+  <details>
+    <summary>答案</summary>
+    <div>2</div>
+    <pre>
+    知识点:
+    - 按位与运算
+    </pre>
+  </details>
+</details>
+
+#### 3.5.2.5 Left Shift
+
+<details open>
+  <summary>下面代码打印值为：</summary>
+  <pre>
+    &lt;script>
+      const a = -25 << 2;
+      console.log(a);
+    &lt;/script>
+  </pre>
+  <details>
+    <summary>答案</summary>
+    <div>100</div>
+    <pre>
+    知识点:
+    - 左移运算
+    - 补领
     </pre>
   </details>
 </details>

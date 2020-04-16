@@ -580,8 +580,21 @@
 </details>
 
 <details>
+  <summary>[拓展]对表达式__时，有时会发生副作用。</summary>
+  <div>求值</div>
+</details>
+
+<details>
   <summary>序列点(sequence point)是程序执行的点，在该点上，所有的__都在进入到下一步之前发生。在语言中，语句中的分号标记了一个序列点。有一些运算符也有序列点，任何一个完整表达式的结束也是一个序列点。</summary>
   <div>副作用</div>
+</details>
+
+<details>
+  <summary>[拓展]“__”，“__”,“__”,三元运算符的“__”会产生序列点。</summary>
+  <div>,</div>
+  <div>&&</div>
+  <div>||</div>
+  <div>?</div>
 </details>
 
 <details>

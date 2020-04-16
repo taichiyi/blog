@@ -375,11 +375,11 @@
 <details>
   <summary>ECMAScript有8种数据类型__、__、__、__、__、__、__、__。</summary>
   <div>undefined</div>
+  <div>null</div>
   <div>Boolean</div>
   <div>String</div>
   <div>Number</div>
   <div>Object</div>
-  <div>Function</div>
   <div>Symbol(ES6)</div>
   <div>BigInt(ES10)</div>
 </details>
@@ -464,7 +464,7 @@
 </details>
 
 <details>
-  <summary>当toString()在值上使用时，则接受一个参数表示输出数字的基数。 默认为10(十进制)，可以使2-__进制。</summary>
+  <summary>当toString()在数值上使用时，则接受一个参数表示输出数字的基数。 默认为10(十进制)，可以使2-__进制。</summary>
   <div>数</div>
   <div>36</div>
 </details>
@@ -605,12 +605,12 @@
 ## 3.5 Operators(运算符)
 
 <details>
-  <summary>ECMA-262描述了一组可用于操纵__的运算符。包括:__运算符、__运算符、__运算符、__运算符、__运算符。</summary>
-  <div>数据值</div>
-  <div>算术</div>
-  <div>位</div>
-  <div>关系</div>
-  <div>相等</div>
+  <summary>ECMA-262描述了一组可用于操纵_1_的运算符。包括:_2_运算符、_3_运算符、_4_运算符、_5_运算符。</summary>
+  <div>1. 数据值</div>
+  <div>2. 算术</div>
+  <div>3. 位</div>
+  <div>4. 关系</div>
+  <div>5. 相等</div>
 </details>
 
 ### 3.5.1 Unary Operators
@@ -738,8 +738,9 @@
 #### 3.5.2.1 Bitwise NOT
 
 <details>
-  <summary>符号“~”表示__运算符。</summary>
+  <summary>符号“~”表示__运算符，是__元运算符。</summary>
   <div>按位非</div>
+  <div>一</div>
 </details>
 
 <details>
@@ -748,7 +749,7 @@
 </details>
 
 <details>
-  <summary>为什么25按位非运算(~)后的值为-26？25的8位二进制位为0001 1001，然后按位非运算(就是__)，反码后的值为1110 __，因为最高位是1所以是负数，负数以二进制补码的格式存储在二进制代码中。然后问题就变成已知二进制补码求数值。先减1，然后__，注意反码后的值是还是__。</summary>
+  <summary>为什么25按位非运算(~)后的值为-26？25的8位二进制位为0001 1001，然后按位非运算(就是__)，反码后的值为1111 1111 1111 1111 1111 1111 1110 __，因为最高位是1所以是负数，负数以二进制补码的格式存储在二进制代码中。然后问题就变成已知二进制补码求数值。先减1，然后__，注意反码后的值是还是__。</summary>
   <div>反码</div>
   <div>0110</div>
   <div>反码</div>
@@ -763,8 +764,196 @@
 #### 3.5.2.2 Bitwise AND
 
 <details>
-  <summary>符号“&”表示__运算符。</summary>
+  <summary>符号“&”表示__运算符，是__元运算符。</summary>
   <div>按位与</div>
+  <div>二</div>
+</details>
+
+<details>
+  <summary>如果两个位都为1，则按位与运算将返回__；如果任何位为0，则将返回__。</summary>
+  <div>1</div>
+  <div>0</div>
+</details>
+
+#### 3.5.2.3 Bitwise OR
+
+<details>
+  <summary>符号“|”表示__运算符，是__元运算符。</summary>
+  <div>按位或</div>
+  <div>二</div>
+</details>
+
+<details>
+  <summary>如果至少一位为__，则按位或运算将返回1；仅当两位均为__时，才返回0。</summary>
+  <div>1</div>
+  <div>0</div>
+</details>
+
+#### 3.5.2.4 Bitwise XOR
+
+<details>
+  <summary>符号“^”表示__运算符，是__元运算符。</summary>
+  <div>按位异或</div>
+  <div>二</div>
+</details>
+
+<details>
+  <summary>按位异或运算，仅当恰好一位的值为__时，它才返回__（如果两个位都包含1，则返回__）。</summary>
+  <div>1</div>
+  <div>1</div>
+  <div>0</div>
+</details>
+
+#### 3.5.2.5 Left Shift
+
+<details>
+  <summary>符号“<<”表示__运算符，是__元运算符。</summary>
+  <div>左移</div>
+  <div>一</div>
+</details>
+
+<details>
+  <summary>左移运算符，将一个__中的所有位向左移动指定的__，右侧用__补充，符号位__变。</summary>
+  <div>数字</div>
+  <div>位数</div>
+  <div>0</div>
+  <div>不</div>
+</details>
+
+#### 3.5.2.6 Signed Right Shift
+
+<details>
+  <summary>符号“>>”表示__运算符，是__元运算符。</summary>
+  <div>有符号右移</div>
+  <div>一</div>
+</details>
+
+<details>
+  <summary>有符号右移运算符，将一个__中的所有位向右移动指定的位数，左侧用__补充，符号位__变。</summary>
+  <div>数字</div>
+  <div>0</div>
+  <div>不</div>
+</details>
+
+#### 3.5.2.7 Unsigned Right Shift
+
+<details>
+  <summary>符号“>>>”表示__运算符，是__元运算符。</summary>
+  <div>无符号右移</div>
+  <div>一</div>
+</details>
+
+<details>
+  <summary>无符号右移运算符，将一个__中的所有位向右移动指定的位数，左侧用__补充，符号位__变。</summary>
+  <div>数字</div>
+  <div>0</div>
+  <div>改</div>
+</details>
+
+### 3.5.3 Boolean Operators
+
+<details>
+  <summary>共有三个布尔运算符：__，__和__。</summary>
+  <div>NOT</div>
+  <div>AND</div>
+  <div>OR</div>
+</details>
+
+#### 3.5.3.1 Logical NOT
+
+<details>
+  <summary>逻辑NOT运算符由__号表示，，是__元运算符。</summary>
+  <div>感叹(!)</div>
+  <div>一</div>
+</details>
+
+<details>
+  <summary>逻辑NOT运算符可以应用于ECMAScript中的__值。无论使用哪种数据类型，此运算符始终返回__值。</summary>
+  <div>任何</div>
+  <div>布尔</div>
+</details>
+
+#### 3.5.3.2 Logical AND
+
+<details>
+  <summary>逻辑AND运算符由__号表示，是__元运算符。</summary>
+  <div>双与(&&)</div>
+  <div>二</div>
+</details>
+
+<details>
+  <summary>如果第一个表达式为假，则短路，__执行第二个表达式，并返回第__个表达式的值。</summary>
+  <div>不</div>
+  <div>一</div>
+</details>
+
+<details>
+  <summary>如果第一个表达式为__，则执行第二个表达式，并返回第二个表达式的值。</summary>
+  <div>真</div>
+</details>
+
+#### 3.5.3.3 Logical OR
+
+<details>
+  <summary>逻辑OR运算符由__表示，是__元运算符。</summary>
+  <div>双管道(||)</div>
+  <div>二</div>
+</details>
+
+#### 3.5.4.3 Modulus
+
+<details>
+  <summary>取模（__）运算__号表示。</summary>
+  <div>余数</div>
+  <div>百分(%)</div>
+</details>
+
+### 3.5.5 Exponentiation Operator
+
+<details>
+  <summary>求幂运算__号表示。ES7新增了Math.__()，与其行为等价。</summary>
+  <div>**</div>
+  <div>pow</div>
+</details>
+
+#### 3.5.6.1 Add
+
+<details>
+  <summary>加运算符的两个操作数为__时，才会进行加法运算，否则进行字符串拼接。</summary>
+  <div>number</div>
+</details>
+
+<details>
+  <summary>如果操作数是对象，数字或布尔值，则调用其__（）方法以获取字符串值。undefined和null，分别调用__（）函数取字符串值。</summary>
+  <div>toString</div>
+  <div>String</div>
+</details>
+
+### 3.5.7 Relational Operators
+
+<details>
+  <summary>数学中的关系运算符有__、__、__、__，每个运算符都返回__值。</summary>
+  <div><</div>
+  <div>></div>
+  <div><=</div>
+  <div>>=</div>
+  <div>布尔</div>
+</details>
+
+### 3.5.8 Equality Operators
+
+<details>
+  <summary>相等运算符和全等运算符的区别是，全等运算符在比较两个值之前，不进行__。</summary>
+  <div>类型转换</div>
+</details>
+
+### 3.5.10 Assignment Operators
+
+<details>
+  <summary>简单的赋值是用__号完成的，并将右边的__简单赋给左边的__。</summary>
+  <div>等(=)</div>
+  <div>值</div>
+  <div>变量</div>
 </details>
 
 ## CHAPTER 8 对象，类和面向对象编程
