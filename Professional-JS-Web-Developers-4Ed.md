@@ -373,15 +373,15 @@
 ## 3.4 Data Types
 
 <details>
-  <summary>ECMAScript有8种数据类型__、__、__、__、__、__、__、__。</summary>
-  <div>undefined</div>
-  <div>null</div>
-  <div>Boolean</div>
-  <div>String</div>
-  <div>Number</div>
-  <div>Object</div>
-  <div>Symbol(ES6)</div>
-  <div>BigInt(ES10)</div>
+  <summary>ECMAScript有8种数据类型。七种原始类型_1_、_2_、_3_、_4_、_5_、_6_、_7_和一种引用类型_8_。</summary>
+  <div>1. Undefined(ES3)</div>
+  <div>2. Null</div>
+  <div>3. Boolean</div>
+  <div>4. String</div>
+  <div>5. Number</div>
+  <div>6. Symbol(ES6)</div>
+  <div>7. BigInt(ES10)</div>
+  <div>8. Object</div>
 </details>
 
 ### 3.4.2 The Undefined Type
@@ -955,6 +955,151 @@
   <div>值</div>
   <div>变量</div>
 </details>
+
+### 3.5.11 Comma Operator
+
+<details>
+  <summary>逗号运算符允许在一个__中执行多个__。</summary>
+  <div>语句</div>
+  <div>表达式</div>
+</details>
+
+### 3.6.5 The for-in Statement
+
+<details>
+  <summary>for...in语句以__顺序遍历一个对象的除__以外的可__属性。</summary>
+  <div>任意</div>
+  <div>Symbol</div>
+  <div>枚举</div>
+</details>
+
+### 3.6.6 The for-of Statement
+
+<details>
+  <summary>for...of语句在可__对象（包括 Array，Map，Set，String，TypedArray，arguments 对象等等）上创建一个迭代循环，调用自定义迭代钩子，并为每个不同属性的值执行语句。</summary>
+  <div>迭代</div>
+</details>
+
+<details>
+  <summary>在ES2018中，for-of语句被扩展为__循环，以支持产生承诺的异步可迭代对象。</summary>
+  <div>for-await-of</div>
+</details>
+
+### 3.6.7 Labeled Statements
+
+<details>
+  <summary>标记语句可以和 __ 或 __ 语句一起使用。标记就是在一条语句前面加个可以引用的__。</summary>
+  <div>break</div>
+  <div>continue</div>
+  <div>标识符</div>
+</details>
+
+## 3.7 Functions
+
+<details>
+  <summary>函数是__语言的核心，因为它们允许封装可以在任何地方任何时间运行的__。</summary>
+  <div>任何</div>
+  <div>语句</div>
+</details>
+
+<details>
+  <summary>最佳实践表明，函数要么__返回值，要么__返回值。</summary>
+  <div>总是</div>
+  <div>从不</div>
+</details>
+
+# 第4章 VARIABLES, SCOPE, AND MEMORY
+
+## 4.1 Primitive and Reference Values
+
+<details>
+  <summary>ECMAScript变量可能包含两种不同类型的数据：__类型和__类型。</summary>
+  <div>原始(primitive)</div>
+  <div>引用(reference values)</div>
+</details>
+
+<details>
+  <summary>引用类型是可以由多个值组成的__。</summary>
+  <div>对象</div>
+</details>
+
+<details>
+  <summary>引用值是存储在内存中的__。与其他语言不同，JavaScript不允许直接访问__位置，因此不允许直接操纵对象的内存空间。</summary>
+  <div>对象</div>
+  <div>内存</div>
+</details>
+
+<details>
+  <summary>在许多语言中，字符串由__表示，因此被视为引用类型。ECMAScript打破了这一传统。</summary>
+  <div>对象</div>
+</details>
+
+### 4.1.3 Argument Passing
+
+<details>
+  <summary>ECMAScript中的所有函数参数均按__传递。</summary>
+  <div>值</div>
+</details>
+
+### 4.1.4 Determining Type
+
+<details>
+  <summary>__运算符是确定变量是否为__类型的最佳方法。</summary>
+  <div>typeof</div>
+  <div>原始</div>
+</details>
+
+<details>
+  <summary>根据定义，所有引用值都是__的实例</summary>
+  <div>Object</div>
+</details>
+
+<details>
+  <summary>ECMA-262指定实现内部[[__]]方法的任何对象都应从typeof返回“function”。</summary>
+  <div>Call</div>
+</details>
+
+## 4.2 Execution Context and Scope
+
+<details>
+  <summary>每个执行上下文都有一个关联的__，所有已定义的变量和函数都存在于该对象上。该对象无法通过代码访问。</summary>
+  <div>变量对象</div>
+</details>
+
+<details>
+  <summary>每个函数调用都有其自己的执行上下文。每当代码__进入函数中时，函数的__就会被压入上下文堆栈。函数完成执行后，将__，将__返回到先前执行的上下文。</summary>
+  <div>执行流</div>
+  <div>上下文</div>
+  <div>弹出堆栈</div>
+  <div>控制权</div>
+</details>
+
+<details>
+  <summary>通过在搜索__名称的导航范围链来解析标识符。搜索始终从链的开头开始，然后一直向后进行，直到找到标识符为止。（如果找不到标识符，通常会发生错误。）</summary>
+  <div>标识符</div>
+  <div>上下文</div>
+  <div>弹出堆栈</div>
+  <div>控制权</div>
+</details>
+
+### 4.2.1 Scope Chain Augmentation
+
+<details>
+  <summary>有3种执行上下文类型：__、__和__。</summary>
+  <div>全局</div>
+  <div>函数</div>
+  <div>eval()</div>
+</details>
+
+<details>
+  <summary>但是还有其他方法可以扩展作用域链。某些语句会导致临时添加到作用域链的__，然后在代码执行后将其__。分别是__和__。</summary>
+  <div>前端</div>
+  <div>删除</div>
+  <div>try-catch语句中的catch块</div>
+  <div>with语句</div>
+</details>
+
+### 4.2.2 Variable Declaration
 
 ## CHAPTER 8 对象，类和面向对象编程
 
