@@ -628,11 +628,6 @@
 </details>
 
 <details>
-  <summary>仅对__进行运算的运算符称为一元运算符。</summary>
-  <div>一个值</div>
-</details>
-
-<details>
   <summary>递增递减四个运算符可以用于任何值。当值为对象时，会调用其__()方法以获取一个可用的值。</summary>
   <div>valueOf</div>
 </details>
@@ -1060,10 +1055,10 @@
 </details>
 
 <details>
-  <summary>每个函数调用都有其自己的执行上下文。每当代码__进入函数中时，函数的__就会被压入上下文堆栈。函数完成执行后，将__，将__返回到先前执行的上下文。</summary>
+  <summary>每个函数调用都有其自己的执行上下文。每当代码__进入函数中时，函数的__就会被压入上下文堆栈。函数完成执行后，将函数__堆栈，将__返回到先前执行的上下文。</summary>
   <div>执行流</div>
   <div>上下文</div>
-  <div>弹出堆栈</div>
+  <div>弹出</div>
   <div>控制权</div>
 </details>
 
@@ -1092,7 +1087,63 @@
   <div>with语句</div>
 </details>
 
-### 4.2.2 Variable Declaration
+#### 4.2.2.3 Constant Declaration Using const
+
+<details>
+  <summary>如果希望使整个对象不可变，则可以使用__()。</summary>
+  <div>Object.freeze</div>
+</details>
+
+<details>
+  <summary>由于const声明暗示该值是单一类型且不可变，因此JavaScript运行时编译器可以用其__替换其所有实例，而不用通过查找表执行变量查找。 Google Chrome V8引擎执行了这样的优化。</summary>
+  <div>实际值</div>
+</details>
+
+#### 4.2.2.4 Identifier Lookup(标识符查找)
+
+<details>
+  <summary>如果当前上下文的__中没有搜索到对应的标识符，则将搜索下一个上下文的变量对象，直到找到全局上下文的变量对象，如果还没有的话会报错“xxx is not defined”</summary>
+  <div>变量对象</div>
+</details>
+
+<details>
+  <summary>[拓展]执行上下文(execution context)的数据（变量，函数声明和函数的形参）被存储为变量对象的__。每次进入上下文时都会__并用__填充变量对象，并且其更新发生在代码__阶段。</summary>
+  <div>属性</div>
+  <div>创建</div>
+  <div>初始值</div>
+  <div>执行</div>
+</details>
+
+## 4.3 Garbage Collection
+
+<details>
+  <summary>[拓展]像C语言这样的底层语言一般都有底层的__接口。相反，JavaScript是在创建变量时自动进行了分配内存，并且在不使用它们时“自动”释放。释放的过程称为__。</summary>
+  <div>内存管理</div>
+  <div>垃圾回收</div>
+</details>
+
+<details>
+  <summary>JavaScript是一种自动管理内存的语言，这意味着__负责用于管理代码执行期间所需的内存。</summary>
+  <div>执行环境</div>
+</details>
+
+### 4.3.1 Mark-and-Sweep
+
+<details>
+  <summary>JavaScript最受欢迎的垃圾收集形式称为__。</summary>
+  <div>标记扫描(Mark-and-Sweep)</div>
+</details>
+
+### 4.3.4 Managing Memory
+
+<details>
+  <summary>当不再需要数据时，最好将值设置为__，以释放引用，这称为__。该建议主要适用于__值和__的属性。当__变量脱离上下文时，它们会自动取消引用。</summary>
+  <div>null</div>
+  <div>取消引用值</div>
+  <div>全局</div>
+  <div>全局对象</div>
+  <div>局部</div>
+</details>
 
 ## CHAPTER 8 对象，类和面向对象编程
 
