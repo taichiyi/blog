@@ -1145,6 +1145,79 @@
   <div>局部</div>
 </details>
 
+# 第5章 BASIC REFERENCE TYPES
+
+<details>
+  <summary>引用值（object）是特定__类型的__。在ECMAScript中，引用类型是用于将__和__组合在一起的结构，通常被错误地称为__。</summary>
+  <div>引用</div>
+  <div>实例</div>
+  <div>数据</div>
+  <div>方法</div>
+  <div>类</div>
+</details>
+
+## 5.1 The Date Type
+
+<details>
+  <summary>日期类型可以准确地表示UTC1970年1月1日之前或之后的__万年的日期。精确到__数。</summary>
+  <div>28</div>
+  <div>毫秒</div>
+</details>
+
+## 5.2 The RegExp Type
+
+<details>
+  <summary>当用作 pattern 的一部分时，所有__字符都必须转义。</summary>
+  <div>元</div>
+</details>
+
+<details>
+  <summary>元字符有，位置字符_1_、点字符_2_、选择符_3_、转义符_4_、范围符_5_、次数符_6_。</summary>
+  <div>1. ^ $</div>
+  <div>2. .</div>
+  <div>3. |</div>
+  <div>4. \</div>
+  <div>5. ( ) { } [ ]</div>
+  <div>6. ? * +</div>
+</details>
+
+### 5.3 Primitive Wrapper Types
+
+<details>
+  <summary>原始类型的“__”:设计了三种特殊的引用类型以简化与__值的交互：__类型，__类型和__类型。</summary>
+  <div>包装对象</div>
+  <div>原始</div>
+  <div>布尔</div>
+  <div>数字</div>
+  <div>字符串</div>
+</details>
+
+<details>
+  <summary>每当以__模式访问字符串值时，都会发生以下三个步骤:①__。②__。③__。</summary>
+  <div>读取</div>
+  <div>new String('foo')</div>
+  <div>在实例上调用指定的方法</div>
+  <div>销毁实例</div>
+</details>
+
+### 5.3.3 The isInteger() Method and Safe Integers
+
+<details>
+  <summary>ES6中新引入的__()方法能够辨别数字值是否存储为整数。</summary>
+  <div>Number.isInteger</div>
+</details>
+
+<details>
+  <summary>[拓展]IEEE 754中规定的双精度浮点数数据类型，而这一数据类型能够安全存储 -(2^__ - 1) 到 2^53 - 1 之间的数值（包含边界值）。安全存储的意思是指能够准确区分两个__的值。</summary>
+  <div>53</div>
+  <div>不相同</div>
+</details>
+
+<details>
+  <summary>ES6中新引入的__()方法用来判断一个数值值是否是一个“__整数”。</summary>
+  <div>安全</div>
+</details>
+
 ## CHAPTER 8 对象，类和面向对象编程
 
 <details>

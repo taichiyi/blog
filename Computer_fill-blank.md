@@ -197,6 +197,42 @@
 
 ## Unicode -end-
 
+## IEEE 754 -start-
+
+<details>
+  <summary>IEEE 754（全称IEEE__）是20世纪__年代以来最广泛使用的浮点数运算标准。</summary>
+  <div>二进制浮点数算术标准</div>
+  <div>80</div>
+</details>
+
+<details>
+  <summary>IEEE 754规定了四种表示浮点数值的方式：__确度（__位）、__确度（__位）、延伸单精确度（43比特以上，很少使用）与延伸双精确度（79比特以上，通常以80位实现）。</summary>
+  <div>单精</div>
+  <div>32</div>
+  <div>双精</div>
+  <div>64</div>
+</details>
+
+<details>
+  <summary>32位单精度</summary>
+  <pre>
+  1            8                           23位长
+  S         Exponent                      Fraction
+  31 30至23 偏正值（实际的指数大小+127） 22至0位编号（从右边开始为0）
+  </pre>
+</details>
+
+<details>
+  <summary>64位双精度</summary>
+  <pre>
+  1            11                           52位长
+  S          Exponent                      Fraction
+  31 62至52 偏正值（实际的指数大小+1023） 51至0位编号（从右边开始为0）
+  </pre>
+</details>
+
+## IEEE 754 -end-
+
 <details>
   <summary>幂等(idempotent): 在相同输入下，多次运算的结果__。反之，非幂等。</summary>
   <div>相等</div>
