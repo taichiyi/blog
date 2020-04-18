@@ -1032,9 +1032,8 @@
 ### 4.1.4 Determining Type
 
 <details>
-  <summary>__运算符是确定变量是否为__类型的最佳方法。</summary>
+  <summary>__运算符是确定变量是否为原始类型的最佳方法。</summary>
   <div>typeof</div>
-  <div>原始</div>
 </details>
 
 <details>
@@ -1216,6 +1215,36 @@
 <details>
   <summary>ES6中新引入的__()方法用来判断一个数值值是否是一个“__整数”。</summary>
   <div>安全</div>
+</details>
+
+## 5.4 The String Type
+
+<details>
+  <summary>字符串包含双字节字符（与仅使用一个字节的ASCII字符相反），每个字符被视为__个长度。</summary>
+  <div>一</div>
+</details>
+
+### 5.4.1 The JavaScript Character
+
+<details>
+  <summary>一个字符由__个Bit组成。</summary>
+  <div>16</div>
+</details>
+
+<details>
+  <summary>2个字节只能支持基本多语种平面(BMP，零平面)，为了引入更多的字符，Unicode定义了一种策略，该策略使用每个字符额外的__位来选择辅助平面或星体平面。</summary>
+  <div>16</div>
+</details>
+
+<details>
+  <summary>每个字符使用__个__位代码单元称为代理对。</summary>
+  <div>两</div>
+  <div>16</div>
+</details>
+
+<details>
+  <summary>charAt()只能用于零平面，为了用在多种平面不报错，可以用__()。</summary>
+  <div>codePointAt</div>
 </details>
 
 ## CHAPTER 8 对象，类和面向对象编程
