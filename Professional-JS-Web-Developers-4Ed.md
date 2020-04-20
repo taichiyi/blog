@@ -1251,10 +1251,42 @@
 </details>
 
 <details>
-  <summary>[延伸]“𤭢”的码点是U+24B62，因为码点大于U+FFFF，所以在UTF-16中不能直接表示，需要通过代理对表示，“𤭢”在UTF-16的代理对是 辅助平面码位的字符是如何</summary>
-  <div>码元(代码单元)</div>
-  <div>4</div>
-  <div>代理（Surrogate Pair）</div>
+  <summary>[延伸]代理对是怎么计算得来的呢？①减去第__平面(BMP)的码位 0x10000 个，然后的码位范围是U+0000至U+FFFFF(1114112-65536=1048576个码位)，使用__个比特就能表示。</summary>
+  <div>零</div>
+  <div>20</div>
+</details>
+
+<details>
+  <summary>[接上条]②高位的10比特(共__个码位)的值（值的范围为 0-0x3FF）被加上 0x__ 得到第一个码元或称作__，值的范围是 0xD800-0xDBFF。</summary>
+  <div>1024</div>
+  <div>D800</div>
+  <div>前导代理（lead surrogates）</div>
+</details>
+
+<details>
+  <summary>[接上条]③低位的10比特(共1024个码位)的值（值的范围为 0-0x3FF）被加上 0x__ 得到第二个码元或称作__，值的范围是 0xDC00-0xDFFF。</summary>
+  <div>1024</div>
+  <div>DC00</div>
+  <div>后尾代理（trail surrogates）</div>
+</details>
+
+<details>
+  <summary>[延伸]“𤭢”的码位是U+24B62，因为码位大于`U+__`，所以在UTF-16中不能直接表示，需要通过__表示，“𤭢”在UTF-16的代理对是`U+D852 U+DF62`。</summary>
+  <div>FFFF</div>
+  <div>代理对</div>
+</details>
+
+<details>
+  <summary>[接上条]①0x24B62 减去 0x__，结果为0x14B62，二进制为 `0001010010``1101100010`。②前导代理:0x0052(0001010010)+0x__=0xD852。③后尾代理:0x0362(1101100010)+0x__=0xDF62。</summary>
+  <div>10000</div>
+  <div>D800</div>
+  <div>DC00</div>
+</details>
+
+<details>
+  <summary>[接上条]所以“𤭢”，小端字节序为“0x__ 0x__”；大端字节序为“0xD852 0xDF62”。</summary>
+  <div>52D8</div>
+  <div>62DF</div>
 </details>
 
 <details>

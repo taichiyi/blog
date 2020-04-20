@@ -39,7 +39,13 @@
 </details>
 
 <details>
-  <summary>Unicode标准规定U+__-U+__(有__个码点)的值不对应于任何字符。因为UCS-2的时代，U+D800-U+DFFF内的值被占用，1991年为了相互兼容，所以这一段码点被废弃。但是UTF-16编码解码还是能把这些不符合Unicode标准的字符映射正确的辨识、转换成合规的码元。</summary>
+  <summary>在字符编码术语中，__或称__，即英文的code point或code position，是组成码空间（或代码页）的数值。</summary>
+  <div>码位</div>
+  <div>编码位置</div>
+</details>
+
+<details>
+  <summary>Unicode标准规定U+__-U+__(有__个码位)的值不对应于任何字符。因为UCS-2的时代，U+D800-U+DFFF内的值被占用，1991年为了相互兼容，所以这一段码位被废弃。但是UTF-16编码解码还是能把这些不符合Unicode标准的字符映射正确的辨识、转换成合规的码元。</summary>
   <div>D800</div>
   <div>DFFF</div>
   <div>2047</div>
@@ -171,7 +177,7 @@
 </details>
 
 <details>
-  <summary>在Unicode中，中文的码点范围是__-__。</summary>
+  <summary>在Unicode中，中文的码位范围是__-__。</summary>
   <div>4E00</div>
   <div>9FA5</div>
 </details>
