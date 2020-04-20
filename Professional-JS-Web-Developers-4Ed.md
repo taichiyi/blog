@@ -182,7 +182,7 @@
 </details>
 
 <details>
-  <summary>如果要 立即下载脚本等到文档完全解析并显示完毕再执行此脚本(该脚本执行完后才触发DOMContentLoaded;等到浏览器收到&lt;/ html&gt;标记后, 按照出现顺序执行) 需要在script元素添加属性 __。</summary>
+  <summary>如果要 立即异步下载脚本等到文档完全解析并显示完毕再执行此脚本(该脚本执行完后才触发DOMContentLoaded;等到浏览器收到&lt;/ html&gt;标记后, 按照出现顺序执行) 需要在script元素添加属性 __。</summary>
   <div>defer</div>
 </details>
 
@@ -904,6 +904,12 @@
   <div>pow</div>
 </details>
 
+<details>
+  <summary>[拓展]aⁿ：a称为__数，ⁿ称为__数。</summary>
+  <div>底</div>
+  <div>指</div>
+</details>
+
 #### 3.5.6.1 Add
 
 <details>
@@ -1227,7 +1233,32 @@
 ### 5.4.1 The JavaScript Character
 
 <details>
-  <summary>一个字符由__个Bit组成。</summary>
+  <summary>在ECMAScript中一个字符由__个bit组成。</summary>
+  <div>16</div>
+</details>
+
+<details>
+  <summary>[延伸]非BMP字符也被称为__字符或__字符。</summary>
+  <div>辅助</div>
+  <div>星体</div>
+</details>
+
+<details>
+  <summary>[延伸]辅助平面中的码位，在UTF-16中被编码为一对16比特长的__（__字节），称作__对。</summary>
+  <div>码元(代码单元)</div>
+  <div>4</div>
+  <div>代理（Surrogate Pair）</div>
+</details>
+
+<details>
+  <summary>[延伸]“𤭢”的码点是U+24B62，因为码点大于U+FFFF，所以在UTF-16中不能直接表示，需要通过代理对表示，“𤭢”在UTF-16的代理对是 辅助平面码位的字符是如何</summary>
+  <div>码元(代码单元)</div>
+  <div>4</div>
+  <div>代理（Surrogate Pair）</div>
+</details>
+
+<details>
+  <summary>JavaScript字符串使用两种Unicode编码的混合策略：UCS-2和UTF-16。对于__位（BMP）编码的字符，这两种编码实际上是相同的。</summary>
   <div>16</div>
 </details>
 

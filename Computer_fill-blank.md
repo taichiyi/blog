@@ -39,7 +39,14 @@
 </details>
 
 <details>
-  <summary>UCS-2和UCS-4分别采用__和__个字节编码。</summary>
+  <summary>Unicode标准规定U+__-U+__(有__个码点)的值不对应于任何字符。因为UCS-2的时代，U+D800-U+DFFF内的值被占用，1991年为了相互兼容，所以这一段码点被废弃。但是UTF-16编码解码还是能把这些不符合Unicode标准的字符映射正确的辨识、转换成合规的码元。</summary>
+  <div>D800</div>
+  <div>DFFF</div>
+  <div>2047</div>
+</details>
+
+<details>
+  <summary>UCS-2和UCS-4分别采用__和__个固定长度的字节编码。</summary>
   <div>2</div>
   <div>4</div>
 </details>
@@ -72,12 +79,6 @@
   <div>二进制</div>
 </details>
 
-<!-- <details>
-  <summary>Unicode通常用__个字节表示一个字符，原有的英文编码从单字节变成双字节，只需要把高字节全部填为__就可以。</summary>
-  <div>两</div>
-  <div>0</div>
-</details> -->
-
 <details>
   <summary>阿拉伯数字在不在ASCII码里？</summary>
   <div>在</div>
@@ -91,7 +92,7 @@
 </details>
 
 <details>
-  <summary>在表示一个Unicode的字符时，通常会用“__”然后紧接着一组__进制的数字来表示这一个字符。</summary>
+  <summary>表示一个UCS或Unicode值的十六进制数时，通常会用“__”然后紧接着一组__进制的数字来表示这一个字符。</summary>
   <div>U+</div>
   <div>十六</div>
 </details>
