@@ -630,3 +630,79 @@ async+await:
 - 完美
 
 > async / await 函数就是 Generator 函数的语法糖
+
+## 箭头函数 -start-
+
+箭头函数没有this、arguments、super
+
+如果箭头函数内使用this，this将沿着作用域链往上找最近的可用作用域对象
+
+主要作用：更简短的函数，不绑定this。
+
+### 例子
+
+``` javascript
+function Person() {
+  // Person() 构造函数定义 `this`作为它自己的实例.
+  this.age = 0;
+
+  setInterval(function growUp() {
+    // 在非严格模式, growUp()函数定义 `this`作为全局对象,
+    // 与在 Person()构造函数中定义的 `this`并不相同.
+    this.age++;
+  }, 1000);
+}
+var p = new Person();
+```
+
+### new 操作符
+
+箭头函数不能用作构造器，和 new一起用会抛出错误。
+
+### prototype属性
+
+箭头函数没有prototype属性。
+
+## 箭头函数 -end-
+
+## Object 循环 -start-
+
+### 循环 `实例+原型` `可枚举` 的属性
+
+- for in
+
+### 循环 `实例` `可枚举` 的属性
+
+- for in + hasOwnProperty
+
+- Object.keys()
+
+### 循环 `实例` `可枚举 + 不枚举` 的属性
+
+- Oject.getOwnPropertyNames()
+
+## Object 循环 -end-
+
+## 关于 NW.js 和 Electron -start-
+
+- 两者都可以用来编写跨平台的应用
+- 两者都是基于Chromium和Node.js构建的
+
+Electron 优势：
+
+- 社区活跃
+- 企业支持：Github、Microsoft
+- 开箱即用的自动更新机制
+- 构建过程更容易一些，不必构建整个Chromium
+
+NW.js 优势：
+
+- 支持Windows XP和旧版Mac OS
+- NW.js更加面向浏览器
+- 在JavaScript上下文方面有一个简单而强大的机制。
+- 支持chrome扩展
+- 使用Chrome PDF原生插件支持开箱即用的PDF文件
+- 有一个源保护工具。允许将JavaScript编译为V8字节码
+- 还支持所有Chromium命令行开关
+
+## 关于 NW.js 和 Electron -end-
