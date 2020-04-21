@@ -123,17 +123,22 @@
 </details>
 
 <details>
+  <summary>非BMP平面也被称为__平面或__平面。</summary>
+  <div>辅助</div>
+  <div>星体</div>
+</details>
+
+<details>
   <summary>BMP英文全称__，中文全称__。又简称__平面(英文__)。</summary>
   <div>Basic Multilingual Plane</div>
-  <div>在基本多文种平面</div>
+  <div>基本多文种平面</div>
   <div>零号</div>
   <div>plane 0</div>
 </details>
 
 <details>
-  <summary>在基本多文种平面(BMP)里的所有字符，要用__位十六进制数（共16^4个字符）；在零号平面以外的字符则需要大于__位十六进制数了。</summary>
+  <summary>在基本多文种平面(BMP)里的所有字符，要用__位数(十六进制)表示（共16^4个字符）；在辅助平面的字符则需要大于四位十六进制数了。</summary>
   <div>四【例如U+4AE0】</div>
-  <div>四</div>
 </details>
 
 <details>

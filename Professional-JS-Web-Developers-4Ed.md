@@ -1233,7 +1233,7 @@
 ### 5.4.1 The JavaScript Character
 
 <details>
-  <summary>在ECMAScript中一个字符由__个bit组成。</summary>
+  <summary>在ECMAScript中一个字符由__个bit组成，因为</summary>
   <div>16</div>
 </details>
 
@@ -1245,12 +1245,6 @@
 <details>
   <summary>2个字节只能支持基本多语种平面(BMP，零平面)，为了引入更多的字符，Unicode定义了一种策略，该策略使用每个字符额外的__位来选择辅助平面或星体平面。</summary>
   <div>16</div>
-</details>
-
-<details>
-  <summary>[延伸]非BMP字符也被称为__字符或__字符。</summary>
-  <div>辅助</div>
-  <div>星体</div>
 </details>
 
 <details>
@@ -1297,6 +1291,16 @@
   <summary>[接上条]所以“𤭢”，小端字节序为“0x__ 0x__”；大端字节序为“0xD852 0xDF62”。</summary>
   <div>52D8</div>
   <div>62DF</div>
+</details>
+
+<details>
+  <summary>如果想查看某个零平面字符的码位，可以使用__()。</summary>
+  <div>String.prototype.charCodeAt</div>
+</details>
+
+<details>
+  <summary>如果想通过码位在字符串(UTF-16)中创建字符，可以使用__()方法。</summary>
+  <div>String.fromCharCode</div>
 </details>
 
 <details>
