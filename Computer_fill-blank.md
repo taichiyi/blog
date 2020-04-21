@@ -172,8 +172,37 @@
 </details>
 
 <details>
-  <summary>为了解决不同环境读取字节顺序的差异，Unicode 标准建议用__来区分字节序。</summary>
+  <summary>为了解决不同环境读取字节顺序的差异，Unicode 标准建议用__(英文全称__)来区分字节序。</summary>
   <div>BOM</div>
+  <div>Byte Order Mark</div>
+</details>
+
+<details>
+  <summary>从Unicode__开始，U+FEFF只能出现在字节流的开头，只能用于标识字节序。</summary>
+  <div>3.2</div>
+</details>
+
+<details>
+  <summary>一般来说，以Macintosh制作或存储的文字使用__字节序，以Microsoft或Linux制作或存储的文字使用__字节序。</summary>
+  <div>大端(BE)</div>
+  <div>小端(LE)</div>
+</details>
+
+<details>
+  <summary>U+__字符在UNICODE中代表的意义是 ZERO WIDTH NO-BREAK SPACE，顾名思义，它是个没有宽度也没有断字的空白。</summary>
+  <div>FEFF</div>
+</details>
+
+<details>
+  <summary>为了弄清楚UTF-16文件的大小端字节序，在UTF-16文件的__，都会放置一个U+FEFF字符作为Byte Order Mark（UTF-16 LE以 __ 代表，UTF-16 BE以 FE FF 代表），以显示这个文本文件是以UTF-16编码。</summary>
+  <div>开头</div>
+  <div>FF FE</div>
+</details>
+
+<details>
+  <summary>如果一个文件开头的__个二进制的值转为十进制等于65279，则为__端字节序；等于665534，则为小端字节序。</summary>
+  <div>16</div>
+  <div>大</div>
 </details>
 
 <details>
