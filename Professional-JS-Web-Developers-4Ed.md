@@ -1238,6 +1238,16 @@
 </details>
 
 <details>
+  <summary>JavaScript字符串使用两种Unicode编码的混合策略：UCS-2和UTF-16。对于__位（BMP）编码的字符，这两种编码实际上是相同的。</summary>
+  <div>16</div>
+</details>
+
+<details>
+  <summary>2个字节只能支持基本多语种平面(BMP，零平面)，为了引入更多的字符，Unicode定义了一种策略，该策略使用每个字符额外的__位来选择辅助平面或星体平面。</summary>
+  <div>16</div>
+</details>
+
+<details>
   <summary>[延伸]非BMP字符也被称为__字符或__字符。</summary>
   <div>辅助</div>
   <div>星体</div>
@@ -1287,22 +1297,6 @@
   <summary>[接上条]所以“𤭢”，小端字节序为“0x__ 0x__”；大端字节序为“0xD852 0xDF62”。</summary>
   <div>52D8</div>
   <div>62DF</div>
-</details>
-
-<details>
-  <summary>JavaScript字符串使用两种Unicode编码的混合策略：UCS-2和UTF-16。对于__位（BMP）编码的字符，这两种编码实际上是相同的。</summary>
-  <div>16</div>
-</details>
-
-<details>
-  <summary>2个字节只能支持基本多语种平面(BMP，零平面)，为了引入更多的字符，Unicode定义了一种策略，该策略使用每个字符额外的__位来选择辅助平面或星体平面。</summary>
-  <div>16</div>
-</details>
-
-<details>
-  <summary>每个字符使用__个__位代码单元称为代理对。</summary>
-  <div>两</div>
-  <div>16</div>
 </details>
 
 <details>
