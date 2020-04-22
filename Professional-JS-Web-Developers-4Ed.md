@@ -1323,7 +1323,7 @@
 ### 5.4.2 The normalize() Method
 
 <details>
-  <summary>某些Unicode字符可以用多种方式编码。有时，一个字符可以由一个__字符或一个__表示。例如：</summary>
+  <summary>(1/2)某些Unicode字符可以用多种方式编码。有时，一个字符可以由一个__字符或一个__表示。例如：</summary>
   <pre>
   String.fromCharCode(0x0041); //A
   String.fromCharCode(0x030A); //̊
@@ -1335,9 +1335,37 @@
 </details>
 
 <details>
-  <summary>Unicode通过提供四种规范化形式来解决这一问题：NFC、NFD、NFKC、NFKD。通过__方法使用。</summary>
+  <summary>(2/2)所以存在一个问题：以上3中字符视觉和语义上都等价，但是 JavaScript 不能识别。然后Unicode通过提供四种正规形式来解决这一问题：NFC(默认)、NFD、NFKC、NFKD。通过__方法使用。</summary>
   <div>String.prototype.normalize()</div>
 </details>
+
+<details>
+  <summary>NFC：表示“__”，返回多个简单字符的合成字符。所谓“标准等价”指的是视觉和语义上的等价。其他的正规形式不需要掌握。</summary>
+  <div>标准等价合成</div>
+</details>
+
+### 5.4.3 String-Manipulation Methods
+
+<details>
+  <summary>在大多数情况下，使用二元加法运算符拼接字符串，其实际性能也比__()方法更好。</summary>
+  <div>concat</div>
+</details>
+
+<details>
+  <summary>ECMAScript提供了三种从__创建字符串值的方法：slice（），substr（）和substring（）。使用slice方法比较好用，用slice就行。</summary>
+  <div>子字符串</div>
+</details>
+
+### 5.4.4 String Location Methods
+
+<details>
+  <summary>有两种方法可以在字符串中搜索给定的子字符串并返回位置（如果找不到子字符串，则返回–1）。__方法返回第一次出现的位置，__方法返回最后一次出现的位置。</summary>
+  <div>子字符串</div>
+  <div>indexOf</div>
+  <div>lastIndexOf</div>
+</details>
+
+### 5.4.5 String Inclusion Methods
 
 ## CHAPTER 8 对象，类和面向对象编程
 
