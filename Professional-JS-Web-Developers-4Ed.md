@@ -1067,14 +1067,6 @@
   <div>控制权</div>
 </details>
 
-<details>
-  <summary>通过在搜索__名称的导航范围链来解析标识符。搜索始终从链的开头开始，然后一直向后进行，直到找到标识符为止。（如果找不到标识符，通常会发生错误。）</summary>
-  <div>标识符</div>
-  <div>上下文</div>
-  <div>弹出堆栈</div>
-  <div>控制权</div>
-</details>
-
 ### 4.2.1 Scope Chain Augmentation
 
 <details>
@@ -1294,17 +1286,18 @@
 </details>
 
 <details>
-  <summary>如果想查看某个零平面字符的码位，可以使用__()。</summary>
+  <summary>如果想查看某个(零平面)字符的码位，可以使用__()。</summary>
   <div>String.prototype.charCodeAt</div>
 </details>
 
 <details>
-  <summary>如果想通过码位在字符串(UTF-16)中创建字符，可以使用__()方法。</summary>
+  <summary>如果想通过(零平面)码位在字符串(UTF-16)中创建字符，可以使用__()方法。</summary>
   <div>String.fromCharCode</div>
 </details>
 
 <details>
-  <summary>charAt()只能用于零平面，为了用在多种平面不报错，可以用__()。</summary>
+  <summary>想从一个字符串中返回指定的(零平面)字符，可以使用__()方法。charAt()只能用于零平面，为了用在多种平面不报错，可以用__()。</summary>
+  <div>String.prototype.charAt</div>
   <div>codePointAt</div>
 </details>
 

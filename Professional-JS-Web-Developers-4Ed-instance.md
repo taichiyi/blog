@@ -227,7 +227,8 @@
     <div>false</div>
     <pre>
     知识点:
-    - 浮点数的精度
+    - 类型的转换
+    - NaN的特性
     </pre>
   </details>
 </details>
