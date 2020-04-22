@@ -588,7 +588,7 @@
 <details>
   <summary>每个对象的实例都有7个方法和属性：_1_、_2_、_3_、_4_、_5_、_6_、_7_。</summary>
   <div>constructor</div>
-  <div>hasOwnProperty()</div>
+  <div>hasOwnProperty(propertyName)</div>
   <div>isPrototypeof(object)</div>
   <div>propertyIsEnumerable(propertyName)</div>
   <div>toLocaleString()</div>
