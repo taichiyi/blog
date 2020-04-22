@@ -273,8 +273,7 @@
     <div>-1</div>
     <pre>
     知识点:
-    - 序列点
-    - 逗号运算符
+    - 对象的运算
     </pre>
   </details>
 </details>
