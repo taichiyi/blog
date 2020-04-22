@@ -586,7 +586,7 @@
 ### 3.4.8 The Object Type
 
 <details>
-  <summary>每个对象的实例都有7个方法和属性：_1_、_2_、_3_、_4_、_5_、_6_、_7_。</summary>
+  <summary>每个Object构造函数的实例都有7个方法和属性：_1_、_2_、_3_、_4_、_5_、_6_、_7_。</summary>
   <div>constructor</div>
   <div>hasOwnProperty(propertyName)</div>
   <div>isPrototypeof(object)</div>
