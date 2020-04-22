@@ -478,7 +478,7 @@
 </details>
 
 <details>
-  <summary>Symbol目的是成为对象属性的有保证的__标识符，而不会冒属性冲突的危险。</summary>
+  <summary>Symbol目的是成为对象属性有保证的__标识符，而不会冒属性冲突的危险。</summary>
   <div>唯一</div>
 </details>
 
