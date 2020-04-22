@@ -340,4 +340,23 @@
   </details>
 </details>
 
+### 5.4.1 The JavaScript Character
+
+<details open>
+  <summary>下面代码打印值为：</summary>
+  <pre>
+    &lt;script>
+      console.log('1𤭢3'.length);
+    &lt;/script>
+  </pre>
+  <details>
+    <summary>答案</summary>
+    <div>4</div>
+    <pre>
+    知识点:
+    - UTF-16代理对
+    </pre>
+  </details>
+</details>
+
 ## CHAPTER 8 对象，类和面向对象编程

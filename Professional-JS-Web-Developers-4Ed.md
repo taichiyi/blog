@@ -1225,6 +1225,16 @@
 ### 5.4.1 The JavaScript Character
 
 <details>
+  <summary>字符“/”称为：__杠。</summary>
+  <div>斜</div>
+</details>
+
+<details>
+  <summary>字符“\”称为：__杠。</summary>
+  <div>反斜</div>
+</details>
+
+<details>
   <summary>在ECMAScript中一个字符由__个bit组成，因为</summary>
   <div>16</div>
 </details>
@@ -1247,58 +1257,86 @@
 </details>
 
 <details>
-  <summary>[延伸]代理对是怎么计算得来的呢？①减去第__平面(BMP)的码点 0x10000 个，然后的码点范围是U+0000至U+FFFFF(1114112-65536=1048576个码点)，使用__个比特就能表示。</summary>
+  <summary>[延伸](1/3)代理对是怎么计算得来的呢？①减去第__平面(BMP)的码点 0x10000 个，然后的码点范围是U+0000至U+FFFFF(1114112-65536=1048576个码点)，使用__个比特就能表示。</summary>
   <div>零</div>
   <div>20</div>
 </details>
 
 <details>
-  <summary>[接上条]②高位的10比特(共__个码点)的值（值的范围为 0-0x3FF）被加上 0x__ 得到第一个码元或称作__，值的范围是 0xD800-0xDBFF。</summary>
+  <summary>(2/3)②高位的10比特(共__个码点)的值（值的范围为 0-0x3FF）被加上 0x__ 得到第一个码元或称作__，值的范围是 0xD800-0xDBFF。</summary>
   <div>1024</div>
   <div>D800</div>
   <div>前导代理（lead surrogates）</div>
 </details>
 
 <details>
-  <summary>[接上条]③低位的10比特(共1024个码点)的值（值的范围为 0-0x3FF）被加上 0x__ 得到第二个码元或称作__，值的范围是 0xDC00-0xDFFF。</summary>
+  <summary>(3/3)③低位的10比特(共1024个码点)的值（值的范围为 0-0x3FF）被加上 0x__ 得到第二个码元或称作__，值的范围是 0xDC00-0xDFFF。</summary>
   <div>1024</div>
   <div>DC00</div>
   <div>后尾代理（trail surrogates）</div>
 </details>
 
 <details>
-  <summary>[延伸]“𤭢”的码点是U+24B62，因为码点大于`U+__`，所以在UTF-16中不能直接表示，需要通过__表示，“𤭢”在UTF-16的代理对是`U+D852 U+DF62`。</summary>
+  <summary>[延伸](1/3)“𤭢”的码点是U+24B62，因为码点大于`U+__`，所以在UTF-16中不能直接表示，需要通过__表示，“𤭢”在UTF-16的代理对是`U+D852 U+DF62`。</summary>
   <div>FFFF</div>
   <div>代理对</div>
 </details>
 
 <details>
-  <summary>[接上条]①0x24B62 减去 0x__，结果为0x14B62，二进制为 `0001010010``1101100010`。②前导代理:0x0052(0001010010)+0x__=0xD852。③后尾代理:0x0362(1101100010)+0x__=0xDF62。</summary>
+  <summary>(2/3)①0x24B62 减去 0x__，结果为0x14B62，二进制为 `0001010010``1101100010`。②前导代理:0x0052(0001010010)+0x__=0xD852。③后尾代理:0x0362(1101100010)+0x__=0xDF62。</summary>
   <div>10000</div>
   <div>D800</div>
   <div>DC00</div>
 </details>
 
 <details>
-  <summary>[接上条]所以“𤭢”，小端字节序为“0x__ 0x__”；大端字节序为“0xD852 0xDF62”。</summary>
+  <summary>(3/3)所以“𤭢”，小端字节序为“0x__ 0x__”；大端字节序为“0xD852 0xDF62”。</summary>
   <div>52D8</div>
   <div>62DF</div>
 </details>
 
 <details>
-  <summary>如果想查看某个(零平面)字符的码点，可以使用__()。</summary>
+  <summary>(1/2)如果想查看某个(零平面)字符的码点，可以使用__()。</summary>
   <div>String.prototype.charCodeAt</div>
 </details>
 
 <details>
-  <summary>如果想通过(零平面)码点在字符串(UTF-16)中创建字符，可以使用__()方法。</summary>
+  <summary>(2/2)ES6新增了一个方法支持查看(全部平面)字符的码点__()。</summary>
+  <div>String.prototype.codePointAt</div>
+</details>
+
+<details>
+  <summary>(1/2)如果想使用(零平面)码点序列创建的字符串(UTF-16)，可以使用__()方法。</summary>
   <div>String.fromCharCode</div>
 </details>
 
 <details>
-  <summary>想从一个字符串中返回指定的(零平面)字符，可以使用__()方法。charAt()只能用于零平面，为了用在多种平面不报错，可以用__()。</summary>
+  <summary>(2/2)如果想使用(全部平面)码点序列创建的字符串(UTF-16)，可以使用__()ES6新增的方法。</summary>
+  <div>String.fromCodePoint</div>
+</details>
+
+<details>
+  <summary>从一个字符串中返回指定的(零平面)字符，可以使用__()方法。</summary>
   <div>String.prototype.charAt</div>
-  <div>codePointAt</div>
+</details>
+
+### 5.4.2 The normalize() Method
+
+<details>
+  <summary>某些Unicode字符可以用多种方式编码。有时，一个字符可以由一个__字符或一个__表示。例如：</summary>
+  <pre>
+  String.fromCharCode(0x0041); //A
+  String.fromCharCode(0x030A); //̊
+  String.fromCharCode(0x0041, 0x030A); //Å
+  String.fromCharCode(0x00C5); //Å
+  </pre>
+  <div>BMP</div>
+  <div>代理对</div>
+</details>
+
+<details>
+  <summary>Unicode通过提供四种规范化形式来解决这一问题：NFC、NFD、NFKC、NFKD。通过__方法使用。</summary>
+  <div>String.prototype.normalize()</div>
 </details>
 
 ## CHAPTER 8 对象，类和面向对象编程
