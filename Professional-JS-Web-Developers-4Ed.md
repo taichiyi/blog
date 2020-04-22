@@ -1240,34 +1240,34 @@
 </details>
 
 <details>
-  <summary>[延伸]辅助平面中的码位，在UTF-16中被编码为一对16比特长的__（__字节），称作__对。</summary>
+  <summary>[延伸]辅助平面中的码点，在UTF-16中被编码为一对16比特长的__（__字节），称作__对。</summary>
   <div>码元(代码单元)</div>
   <div>4</div>
   <div>代理（Surrogate Pair）</div>
 </details>
 
 <details>
-  <summary>[延伸]代理对是怎么计算得来的呢？①减去第__平面(BMP)的码位 0x10000 个，然后的码位范围是U+0000至U+FFFFF(1114112-65536=1048576个码位)，使用__个比特就能表示。</summary>
+  <summary>[延伸]代理对是怎么计算得来的呢？①减去第__平面(BMP)的码点 0x10000 个，然后的码点范围是U+0000至U+FFFFF(1114112-65536=1048576个码点)，使用__个比特就能表示。</summary>
   <div>零</div>
   <div>20</div>
 </details>
 
 <details>
-  <summary>[接上条]②高位的10比特(共__个码位)的值（值的范围为 0-0x3FF）被加上 0x__ 得到第一个码元或称作__，值的范围是 0xD800-0xDBFF。</summary>
+  <summary>[接上条]②高位的10比特(共__个码点)的值（值的范围为 0-0x3FF）被加上 0x__ 得到第一个码元或称作__，值的范围是 0xD800-0xDBFF。</summary>
   <div>1024</div>
   <div>D800</div>
   <div>前导代理（lead surrogates）</div>
 </details>
 
 <details>
-  <summary>[接上条]③低位的10比特(共1024个码位)的值（值的范围为 0-0x3FF）被加上 0x__ 得到第二个码元或称作__，值的范围是 0xDC00-0xDFFF。</summary>
+  <summary>[接上条]③低位的10比特(共1024个码点)的值（值的范围为 0-0x3FF）被加上 0x__ 得到第二个码元或称作__，值的范围是 0xDC00-0xDFFF。</summary>
   <div>1024</div>
   <div>DC00</div>
   <div>后尾代理（trail surrogates）</div>
 </details>
 
 <details>
-  <summary>[延伸]“𤭢”的码位是U+24B62，因为码位大于`U+__`，所以在UTF-16中不能直接表示，需要通过__表示，“𤭢”在UTF-16的代理对是`U+D852 U+DF62`。</summary>
+  <summary>[延伸]“𤭢”的码点是U+24B62，因为码点大于`U+__`，所以在UTF-16中不能直接表示，需要通过__表示，“𤭢”在UTF-16的代理对是`U+D852 U+DF62`。</summary>
   <div>FFFF</div>
   <div>代理对</div>
 </details>
@@ -1286,12 +1286,12 @@
 </details>
 
 <details>
-  <summary>如果想查看某个(零平面)字符的码位，可以使用__()。</summary>
+  <summary>如果想查看某个(零平面)字符的码点，可以使用__()。</summary>
   <div>String.prototype.charCodeAt</div>
 </details>
 
 <details>
-  <summary>如果想通过(零平面)码位在字符串(UTF-16)中创建字符，可以使用__()方法。</summary>
+  <summary>如果想通过(零平面)码点在字符串(UTF-16)中创建字符，可以使用__()方法。</summary>
   <div>String.fromCharCode</div>
 </details>
 
