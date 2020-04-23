@@ -586,7 +586,7 @@
 ### 3.4.8 The Object Type
 
 <details>
-  <summary>每个Object构造函数的实例都有7个方法和属性：_1_、_2_、_3_、_4_、_5_、_6_、_7_。</summary>
+  <summary>每个Object构造函数的实例都有1个属性和6个方法：_1_、_2_、_3_、_4_、_5_、_6_、_7_。</summary>
   <div>constructor</div>
   <div>hasOwnProperty(propertyName)</div>
   <div>isPrototypeof(object)</div>
@@ -1060,7 +1060,7 @@
 </details>
 
 <details>
-  <summary>每个函数调用都有其自己的执行上下文。每当代码__进入函数中时，函数的__就会被压入上下文堆栈。函数完成执行后，将函数__堆栈，将__返回到先前执行的上下文。</summary>
+  <summary>每个函数调用都有其自己的执行上下文。每当代码__进入函数中时，函数的__就会被压入上下文堆栈。函数完成执行后，将函数上下文__堆栈，将__返回到先前执行的上下文。</summary>
   <div>执行流</div>
   <div>上下文</div>
   <div>弹出</div>
@@ -1077,7 +1077,7 @@
 </details>
 
 <details>
-  <summary>但是还有其他方法可以扩展作用域链。某些语句会导致临时添加到作用域链的__，然后在代码执行后将其__。分别是__和__。</summary>
+  <summary>但是还有其他方法可以扩展作用域链。某些语句会导致某个上下文临时添加到作用域链的__，然后在代码执行后将其__。分别是__和__。</summary>
   <div>前端</div>
   <div>删除</div>
   <div>try-catch语句中的catch块</div>
@@ -1099,7 +1099,7 @@
 #### 4.2.2.4 Identifier Lookup(标识符查找)
 
 <details>
-  <summary>如果当前上下文的__中没有搜索到对应的标识符，则将搜索下一个上下文的变量对象，直到找到全局上下文的变量对象，如果还没有的话会报错“xxx is not defined”</summary>
+  <summary>如果在当前上下文的__中没有搜索到对应的标识符，则将搜索下一个上下文的变量对象，直到找到全局上下文的变量对象，如果还没有的话会报错“xxx is not defined”</summary>
   <div>变量对象</div>
 </details>
 
