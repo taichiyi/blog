@@ -92,7 +92,7 @@
 </details>
 
 <details>
-  <summary>第六版 ECMA-262: 201506发布；俗称ES6 ES2015；新增classes(类), modules(模块), iterators(迭代器), generators(生成器), arrow functions(箭头函数), promises, reflection, proxies, 新数据类型</summary>
+  <summary>第六版 ECMA-262: 201506发布；俗称ES6 ES2015；新增classes(类), modules(模块), Iterators(迭代器), generators(生成器), arrow functions(箭头函数), promises, reflection, proxies, 新数据类型</summary>
 </details>
 
 ### 1.2.2 The Document Object Model
@@ -566,7 +566,13 @@
 </details>
 
 <details>
-  <summary>Symbol.__ 用作一个对象的属性，属性值为方法。方法返回对象的默认Iterator。方法通过__语句被调用。</summary>
+  <summary>[拓展]iterator(中文：__)是一个__，</summary>
+  <div>迭代器</div>
+  <div>对象</div>
+</details>
+
+<details>
+  <summary>Symbol.__ 用作一个对象的属性，属性值为方法。方法返回对象的Iterator。方法通过__语句被自动调用。</summary>
   <div>iterator</div>
   <div>for-of循环</div>
 </details>
@@ -1366,6 +1372,55 @@
 </details>
 
 ### 5.4.5 String Inclusion Methods
+
+<details>
+  <summary>(ES6)3个方法用来确定一个字符串是否包含在另外一个字符串中：__()、__()、__()。3个方法返回值都为__值。</summary>
+  <div>String.prototype.startsWith</div>
+  <div>String.prototype.endsWith</div>
+  <div>String.prototype.includes</div>
+  <div>布尔</div>
+</details>
+
+<details>
+  <summary>如果想判断当前字符串是否已给定的子字符串开头，可以用__()方法。</summary>
+  <div>String.prototype.startsWith</div>
+</details>
+
+<details>
+  <summary>如果想判断当前字符串是否已给定的子字符串结尾，可以用__()方法。</summary>
+  <div>String.prototype.endsWith</div>
+</details>
+
+### 5.4.7 The repeat() Method
+
+<details>
+  <summary>(ES6)将一个字符串复制多次，可以用__()方法。</summary>
+  <div>String.prototype.repeat</div>
+</details>
+
+### 5.4.8 The padStart() and padEnd() Methods
+
+<details>
+  <summary>(ES6)用另一个字符串在填充到当前字符串(开头)至指定的长度，可以用__()方法。</summary>
+  <div>String.prototype.padStart</div>
+</details>
+
+<details>
+  <summary>(ES6)用另一个字符串在填充到当前字符串(尾部)至指定的长度，可以用__()方法。</summary>
+  <div>String.prototype.padEnd</div>
+</details>
+
+### 5.4.9 String Iterators and Destructuring
+
+<details>
+  <summary>字符串原型公开了一个__方法，该方法允许通过单个字符进行迭代。</summary>
+  <div>@@iterator</div>
+</details>
+
+<details>
+  <summary>字符串迭代器允许和__运算符进行相互操作。</summary>
+  <div>解构</div>
+</details>
 
 ## CHAPTER 8 对象，类和面向对象编程
 
