@@ -1422,6 +1422,39 @@
   <div>解构</div>
 </details>
 
+## 5.5 Singleton Built-in Objects(单例内置对象)
+
+<details>
+  <summary>由ECMAScript实现提供的任何对象，独立于宿主环境，在执行ECMAScript程序开始时就已被__。例如：Object、Array、String、Global和Math。</summary>
+  <div>实例化</div>
+</details>
+
+### 5.5.1 The Global Object
+
+#### 5.5.1.1 URI-Encoding Methods
+
+<details>
+  <summary>因为URI支持全部Unicode，但是HTTP只支持ASCII码所以，URI需要编码，才可以传输。用特殊的UTF-8编码替换所有无效字符。可以使用__()和__()方法进行编码。</summary>
+  <div>encodeURIComponent</div>
+  <div>encodeURI</div>
+</details>
+
+<details>
+  <summary>因为URI支持全部Unicode，但是HTTP只支持ASCII码所以，URI需要编码，才可以传输。用特殊的UTF-8编码替换所有无效字符。可以使用__()和__()方法进行编码。</summary>
+  <div>encodeURIComponent</div>
+  <div>encodeURI</div>
+</details>
+
+<details>
+  <summary>两者都不编码字符：①__②数字和字母：A-Z a-z 0-9。</summary>
+  <div>- _ . ! ~ * ' ( ) $</div>
+</details>
+
+<details>
+  <summary>encodeURI不编码字符：①__②#。</summary>
+  <div>; , / ? : @ & = + $</div>
+</details>
+
 ## CHAPTER 8 对象，类和面向对象编程
 
 <details>
