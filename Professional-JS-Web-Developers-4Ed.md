@@ -1488,6 +1488,20 @@
   <div>解释编译</div>
 </details>
 
+#### 5.5.2.3 Rounding Methods
+
+<details>
+  <summary>如果过想把64位浮点数转为32位，可以使用__()方法。</summary>
+  <div>Math.fround</div>
+</details>
+
+#### 5.5.2.4 The random() Method
+
+<details>
+  <summary>如果过想把64位浮点数转为32位，可以使用__()方法。</summary>
+  <div>Math.fround</div>
+</details>
+
 ## CHAPTER 8 对象，类和面向对象编程
 
 <details>
