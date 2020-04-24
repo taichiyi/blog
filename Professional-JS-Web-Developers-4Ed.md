@@ -1455,6 +1455,39 @@
   <div>; , / ? : @ & = + $</div>
 </details>
 
+#### 5.5.1.2 The eval() Method
+
+<details>
+  <summary>当解释器找到eval（）调用时，相当于在当前位置插入__，然后把代码插入到{}中。</summary>
+  <div>{}</div>
+</details>
+
+<details>
+  <summary>在严格模式下，无法在eval（）内部创建的__和__，外部无法访问。</summary>
+  <div>变量</div>
+  <div>函数</div>
+</details>
+
+<details>
+  <summary>如果你间接的使用 eval()，比如通过一个引用来调用它，而不是直接的调用 eval。 从 ECMAScript5 起，它工作在__作用域下，而不是__作用域中。</summary>
+  <div>全局</div>
+  <div>局部</div>
+</details>
+
+<details>
+  <summary>尽量使用__替代eval。</summary>
+  <div>Function</div>
+</details>
+
+### 5.5.2 The Math Object
+
+<details>
+  <summary>Math 是一个内置对象，它拥有一些数学常数属性和数学函数方法。与其他全局对象不同的是，Math 不是一个__。Math 的所有属性与方法都是__的。都是预先__好的。</summary>
+  <div>构造器</div>
+  <div>静态</div>
+  <div>解释编译</div>
+</details>
+
 ## CHAPTER 8 对象，类和面向对象编程
 
 <details>

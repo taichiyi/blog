@@ -359,4 +359,32 @@
   </details>
 </details>
 
+#### 5.5.1.2 The eval() Method
+
+<details open>
+  <summary>下面代码打印值为：</summary>
+  <pre>
+    &lt;script>
+      "use strict";
+      const str = '1';
+      ((str) => {
+        const geval = eval;
+        eval("console.log(str);");
+        window.eval("console.log(str);");
+        geval("console.log(str);");
+      })('2');
+    &lt;/script>
+  </pre>
+  <details>
+    <summary>答案</summary>
+    <div>2</div>
+    <div>1</div>
+    <div>1</div>
+    <pre>
+    知识点:
+    - eval函数
+    </pre>
+  </details>
+</details>
+
 ## CHAPTER 8 对象，类和面向对象编程

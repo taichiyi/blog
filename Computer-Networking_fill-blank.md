@@ -154,12 +154,6 @@
 </details>
 
 <details>
-  <summary>通过网络链路和交换机移动数据有两种方法: __交换(circuit switching)和__交换(packet switching)。</summary>
-  <div>电路</div>
-  <div>分组</div>
-</details>
-
-<details>
   <summary>在__交换网络中，在端系统间通信会话期间，预留了端系统间沿路径通信所需要的__。在__交换网络中，这些资源则不会预留的。</summary>
   <div>电路</div>
   <div>资源(缓存，链路传输速率)</div>
@@ -167,11 +161,6 @@
 </details>
 
 ## 1.5 协议层次及其服务模型
-
-<details>
-  <summary></summary>
-  <div></div>
-</details>
 
 # 第2章 应用层
 

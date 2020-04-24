@@ -112,6 +112,15 @@
   <div>空指针</div>
 </details>
 
+
+<details>
+  <summary>标识符就是一个__，通过__语句将指针(标识符)指向__。没有赋过值的标识符就是一个__。</summary>
+  <div>指针</div>
+  <div>赋值</div>
+  <div>内存地址</div>
+  <div>空指针</div>
+</details>
+
 <details>
   <summary>为了避免undefined被重写我们可以使用“__”，它和undefined等价的。</summary>
   <div>void 0</div>
