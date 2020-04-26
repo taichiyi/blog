@@ -521,15 +521,10 @@
 </details>
 
 <details>
-  <summary>如果一个对象设置了Symbol.__属性，则这个对象就是异步可迭代对象。属性值是一个方法，该方法返回对象的默认__。该方法返回一个实现了__ API的对象。</summary>
+  <summary>如果一个对象设置了Symbol.__属性，则这个对象就是异步可迭代对象。属性值是一个方法，该方法返回对象的__。该方法返回一个实现了__ 的对象。</summary>
   <div>asyncIterator</div>
   <div>AsyncIterator(异步迭代器)</div>
-  <div>Iterator</div>
-</details>
-
-<details>
-  <summary>[延伸]Symbol.asyncIterator是一个用于访问对象的__方法的内建符号。</summary>
-  <div>@@asyncIterator</div>
+  <div>迭代器协议</div>
 </details>
 
 <details>
@@ -563,12 +558,6 @@
   <div>isConcatSpreadable</div>
   <div>concat</div>
   <div>布尔</div>
-</details>
-
-<details>
-  <summary>[拓展]iterator(中文：__)是一个__，</summary>
-  <div>迭代器</div>
-  <div>对象</div>
 </details>
 
 <details>
@@ -1150,8 +1139,14 @@
 ### 4.3.1 Mark-and-Sweep
 
 <details>
-  <summary>JavaScript最受欢迎的垃圾收集形式称为__。</summary>
-  <div>标记扫描(Mark-and-Sweep)</div>
+  <summary>浏览器中使用了两种策略：__和__。</summary>
+  <div>标记清除(Mark-and-Sweep)</div>
+  <div>引用计数(reference counting)</div>
+</details>
+
+<details>
+  <summary>到2008年为止，IE, Firefox, Opera, Chrome, and Safari 都是使用__策略。</summary>
+  <div>标记清除</div>
 </details>
 
 ### 4.3.4 Managing Memory
@@ -1431,7 +1426,7 @@
 
 <details>
   <summary>字符串原型公开了一个__方法，该方法允许通过单个字符进行迭代。</summary>
-  <div>@@iterator</div>
+  <div>Symbol.iterator</div>
 </details>
 
 <details>
@@ -1559,6 +1554,34 @@
 </details>
 
 ### 6.2.5 Iterator Methods
+
+<details>
+  <summary>[拓展]iterator(中文：__)是一个__。</summary>
+  <div>迭代器</div>
+  <div>对象</div>
+</details>
+
+<details>
+  <summary>[拓展]作为ECMAScript 2015的新增功能，迭代协议不是新的内置函数或语法，而是__。只需遵循一些约定，任何对象都可以实现这些协议。有两种协议：__协议和__协议。</summary>
+  <div>协议</div>
+  <div>可迭代(iterable)</div>
+  <div>迭代器(iterator)</div>
+</details>
+
+<details>
+  <summary>[拓展]要成为可迭代对象，一个对象必须实现 @@__ 方法。这意味着对象（包括原型链）必须有一个键为 @@iterator 的属性，可通过常量 __ 访问该属性。</summary>
+  <div>Symbol.iterator</div>
+</details>
+
+<details>
+  <summary>[拓展]要成为可迭代对象，一个对象必须实现 @@__ 方法。这意味着对象（包括原型链）必须有一个键为 @@iterator 的属性，可通过常量 __ 访问该属性。</summary>
+  <div>Symbol.iterator</div>
+</details>
+
+<details>
+  <summary>[拓展]迭代器协议定义了产生一系列值的标准方式。当对象实现了一个键为next的方法，该方法每次都返回一个对象，对象有done（boolean）和value两个属性时，它是一个迭代器。</summary>
+  <div>Symbol.iterator</div>
+</details>
 
 <details>
   <summary>在ES6中，数组原型上公开了三种新方法，可以查看数组的内容：__（），__（）和__（）。将返回数组的__。</summary>
@@ -1690,9 +1713,66 @@
 </details>
 
 <details>
-  <summary>[延伸]如果想创建一个没有原型的对象，可以使用__。</summary>
-  <div>Object.create(null)</div>
+  <summary>Map和Object的区别主要有6个方面：__、__、__、__、__、__。</summary>
+  <div>意外</div>
+  <div>类型</div>
+  <div>顺序</div>
+  <div>数量</div>
+  <div>迭代</div>
+  <div>性能</div>
 </details>
+
+<details>
+  <summary>Map与Object相比在频繁__和__的场景下，效率会高于Object尤其是__操作。</summary>
+  <div>添加</div>
+  <div>删除</div>
+  <div>删除</div>
+</details>
+
+<details>
+  <summary>[延伸]“@@iterator”和“Symbol.iterator”的区别，一个意思，“@@iterator”只会出现在__中，“Symbol.iterator”只会出现__中。</summary>
+  <div>文档</div>
+  <div>代码</div>
+</details>
+
+<details>
+  <summary>[延伸](1/2)Map有2个主要的缺点：①赋值和搜索操作都是 __(n) 的时间复杂度( n 是__的个数)，因为这两个操作都需要__全部整个数组来进行匹配。</summary>
+  <div>O</div>
+  <div>键值对</div>
+  <div>遍历</div>
+</details>
+
+<details>
+  <summary>(2/2)②另外一个缺点是可能会导致内存泄漏，因为数组会一直__着每个键和值。这种引用使得垃圾回收算法不能回收处理他们，即使没有其他(除了数组自身)任何引用存在。</summary>
+  <div>引用</div>
+</details>
+
+## 6.5 The WeakMap Type
+
+<details>
+  <summary>WeakMap和Map的主要区别是，WeakMap的键只能是__类型。null 会被当做 __。</summary>
+  <div>引用</div>
+  <div>undefined</div>
+</details>
+
+<details>
+  <summary>WeakMap 持有的是每个键对象的“__引用”，这意味着在没有__引用存在时垃圾回收能正确进行。</summary>
+  <div>弱</div>
+  <div>其他</div>
+</details>
+
+<details>
+  <summary>强引用、弱引用只跟引用类型有关系，跟原始类型没关系。弱引用不会被垃圾回收机制__。</summary>
+  <div>标记</div>
+</details>
+
+<details>
+  <summary>由于__引用，WeakMap 的 key 是不可__的。</summary>
+  <div>弱</div>
+  <div>枚举</div>
+</details>
+
+# 第7章 ITERATORS AND GENERATORS
 
 <!-- # CHAPTER 8 对象，类和面向对象编程
 

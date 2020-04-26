@@ -274,6 +274,57 @@
 
 ## IEEE 754 -end-
 
+## 算法的时间复杂度 -start-
+
+<details>
+  <summary>在计算机科学中，算法的时间复杂度（Time complexity）是一个__，它定性描述该算法的运行__。</summary>
+  <div>函数</div>
+  <div>时间</div>
+</details>
+
+<details>
+  <summary>大O符号（英语：Big O notation），又称为__符号，是用于描述函数渐近行为的数学符号。</summary>
+  <div>渐进</div>
+</details>
+
+<details>
+  <summary>搜索对象的值为例：时间复杂度为O(n)，其中n为对象的__个数。</summary>
+  <div>键值对</div>
+</details>
+
+<details>
+  <summary>时间复杂度名称：__；运行时间：O(__)；算法举例：访问数组中的单个元素、判断一个二进制数的奇偶。</summary>
+  <div>常数时间</div>
+  <div>1</div>
+</details>
+
+<details>
+  <summary>时间复杂度名称：__；运行时间：O(__)；算法举例：无序数组的搜索。</summary>
+  <div>线性时间</div>
+  <div>n</div>
+</details>
+
+<details>
+  <summary>时间复杂度名称：__；运行时间：O(__)；算法举例：冒泡排序、插入排序。</summary>
+  <div>二次时间</div>
+  <div>n^2</div>
+</details>
+
+<details>
+  <summary>常见函数的时间复杂度（图片）</summary>
+  <div>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Comparison_computational_complexity.svg/300px-Comparison_computational_complexity.svg.png" />
+  </div>
+</details>
+
+<details>
+  <summary>相同大小的不同输入值仍可能造成算法的运行时间不同，因此我们通常使用算法的最坏情况复杂度，记为 __(n) ，定义为任何大小的输入 __ 所需的最大运行时间。</summary>
+  <div>T</div>
+  <div>n</div>
+</details>
+
+## 算法的时间复杂度 -end-
+
 <details>
   <summary>幂等(idempotent): 在相同输入下，多次运算的结果__。反之，非幂等。</summary>
   <div>相等</div>
