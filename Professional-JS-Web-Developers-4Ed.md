@@ -1701,10 +1701,34 @@
 </details>
 
 <details>
-  <summary>Map键的比较除了__其他的值都是根据__运算符判断的。在Map键比较中NaN__于NaN。</summary>
-  <div>NaN</div>
-  <div>全等</div>
-  <div>等</div>
+  <summary>ES2015中有四种相等算法: ①__；②__；③__；④__。</summary>
+  <div>严格相等</div>
+  <div>非严格相等</div>
+  <div>同值相等</div>
+  <div>零值相等</div>
+</details>
+
+<details>
+  <summary>严格相等：NaN===NaN（值为__），+0===-0（值为__）。</summary>
+  <div>false</div>
+  <div>true</div>
+</details>
+
+<details>
+  <summary>同值相等：__()方法可以实现。+0和-0__等，NaN和NaN__等。</summary>
+  <div>Object.is</div>
+  <div>不相</div>
+  <div>相</div>
+</details>
+
+<details>
+  <summary>零值相等：与同值相等类似，除了一点，+0与-0__等。</summary>
+  <div>相</div>
+</details>
+
+<details>
+  <summary>键的比较是基于 __ 算法。</summary>
+  <div>零值相等(sameValueZero)</div>
 </details>
 
 <details>
@@ -1772,7 +1796,72 @@
   <div>枚举</div>
 </details>
 
+## 6.6 The Set Type
+
+<details>
+  <summary>键的比较是基于 __ 算法。</summary>
+  <div>零值相等(sameValueZero)</div>
+</details>
+
+<details>
+  <summary>Set对象是__类型的__的集合，你可以按照__迭代它的元素。Set 中的元素是__的。</summary>
+  <div>任何</div>
+  <div>值</div>
+  <div>插入的顺序</div>
+  <div>唯一</div>
+</details>
+
+<details>
+  <summary>如果传递一个__对象，它的所有元素将不重复地被添加到新的 Set中。如果不指定此参数或其值为__，则新的 Set为空。</summary>
+  <div>可迭代</div>
+  <div>null</div>
+</details>
+
+## 6.8 Iteration and Spread Operators
+
+<details>
+  <summary>(ES6)符号“...”表示__运算符，是__元运算符。</summary>
+  <div>展开</div>
+  <div>一</div>
+</details>
+
+<details>
+  <summary>展开运算符可以将一个可__的对象在函数调用的位置展开成为多个__,或者在数组字面量中展开成多个数组__。</summary>
+  <div>迭代</div>
+  <div>参数</div>
+  <div>元素</div>
+</details>
+
+<details>
+  <summary>apply 执行的是调用 [[__]] , new 关键字 执行的是调用 [[__]]）。</summary>
+  <div>Call</div>
+  <div>Construct</div>
+</details>
+
+<details>
+  <summary>展开语法和 __() 行为一致, 执行的都是__拷贝(遍历__层)。</summary>
+  <div>Object.assign</div>
+  <div>浅</div>
+  <div>一</div>
+</details>
+
+<details>
+  <summary>Object.assign() 函数会触发 __，而展开语法则不会。</summary>
+  <div>setters</div>
+</details>
+
+<details>
+  <summary>剩余参数语法(Rest syntax)允许我们将一个不定数量的参数表示为__。</summary>
+  <div>一个数组</div>
+</details>
+
 # 第7章 ITERATORS AND GENERATORS
+
+<details>
+  <summary></summary>
+  <div>弱</div>
+  <div>枚举</div>
+</details>
 
 <!-- # CHAPTER 8 对象，类和面向对象编程
 
