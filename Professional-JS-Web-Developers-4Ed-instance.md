@@ -387,4 +387,28 @@
   </details>
 </details>
 
+### 6.2.4 Detecting Arrays
+
+<details open>
+  <summary>下面代码打印值为：</summary>
+  <pre>
+    &lt;script>
+      "use strict";
+      const iframe = document.createElement('iframe');
+      document.body.append(iframe);
+      console.log(Array === window.Array);
+      console.log(window.frames[0].Array === window.Array);
+    &lt;/script>
+  </pre>
+  <details>
+    <summary>答案</summary>
+    <div>true</div>
+    <div>false</div>
+    <pre>
+    知识点:
+    - 全局上下文
+    </pre>
+  </details>
+</details>
+
 ## CHAPTER 8 对象，类和面向对象编程

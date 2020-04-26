@@ -147,7 +147,7 @@
     - 4.3.4.4 Static Allocation and Object Pools
 - 4.4 Summary
 
-第5章 BASIC REFERENCE TYPES
+第5章 BASIC REFERENCE TYPES(基本引用类型)
 
 - 5.1 The Date Type
   - 5.1.1 Inherited Methods
@@ -190,7 +190,7 @@
     - 5.5.2.5 Other Methods
 - 5.6 Summary
 
-第6章 COLLECTION REFERENCE TYPES
+第6章 COLLECTION REFERENCE TYPES(引用类型集合)
 
 - 6.1 The Object Type
 - 6.2 The Array Type

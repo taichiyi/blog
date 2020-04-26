@@ -578,6 +578,11 @@
 </details>
 
 <details>
+  <summary>[拓展]如果要手动迭代，可以使用迭代器的__方法。</summary>
+  <div>next</div>
+</details>
+
+<details>
   <summary>Symbol.__ 用作一个对象的属性，属性值为方法。方法通过str.match(obj)语句被调用。</summary>
   <div>match</div>
 </details>
@@ -947,6 +952,11 @@
   <div>类型转换</div>
 </details>
 
+<details>
+  <summary>[延伸]在ECMAScript中 -0 和 +0 被认为是__等的。</summary>
+  <div>相</div>
+</details>
+
 ### 3.5.10 Assignment Operators
 
 <details>
@@ -967,7 +977,7 @@
 ### 3.6.5 The for-in Statement
 
 <details>
-  <summary>for...in语句以__顺序遍历一个对象的除__以外的可__属性。</summary>
+  <summary>for-in语句以__顺序遍历一个对象的除__以外的可__属性。</summary>
   <div>任意</div>
   <div>Symbol</div>
   <div>枚举</div>
@@ -976,8 +986,15 @@
 ### 3.6.6 The for-of Statement
 
 <details>
-  <summary>for...of语句在可__对象（包括 Array，Map，Set，String，TypedArray，arguments 对象等等）上创建一个迭代循环，调用自定义迭代钩子，并为每个不同属性的值执行语句。</summary>
+  <summary>for-of语句在可__对象（包括 Array，Map，Set，String，TypedArray，arguments 对象等等）上创建一个迭代循环，调用自定义迭代钩子，并为每个不同属性的值执行语句。</summary>
   <div>迭代(Iterator)</div>
+  <pre>
+    例子：
+    for (const [idx, element] of ['a', 'b', 'c'].entries()) {
+      console.log(idx);
+      console.log(element);
+    }
+  </pre>
 </details>
 
 <details>
@@ -1498,13 +1515,188 @@
 #### 5.5.2.4 The random() Method
 
 <details>
-  <summary>如果过想把64位浮点数转为32位，可以使用__()方法。</summary>
-  <div>Math.fround</div>
+  <summary>如果想获得一个[0，1)之间的一个随机数，可以使用__()方法。</summary>
+  <div>Math.random</div>
 </details>
 
-## CHAPTER 8 对象，类和面向对象编程
+# CHAPTER 6 COLLECTION REFERENCE TYPES
+
+## 6.1 The Object Type
+
+<details>
+  <summary>大多数引用类型__都是 Object 类型的实例。创建 Object 实例的方式有两种：①new 操作符后跟 __；②__表示法。</summary>
+  <div>值</div>
+  <div>Object 构造函数</div>
+  <div>对象字面量</div>
+</details>
+
+<details>
+  <summary>[延伸]伪数组对象：拥有一个length属性的对象。</summary>
+  <div>值</div>
+  <div>Object 构造函数</div>
+  <div>对象字面量</div>
+</details>
+
+## 6.2 The Array Type
+
+### 6.2.1 Creating Arrays
+
+<details>
+  <summary>(ES6)如果把伪数组对象和可迭代对象转为数组，可以使用__()方法。</summary>
+  <div>Array.from</div>
+</details>
+
+<details>
+  <summary>(ES6)由于使用new Array()生成的数组，在浏览器中行为不一致，所以新加了个Array.__()方法用来创建数组。</summary>
+  <div>of</div>
+</details>
+
+### 6.2.4 Detecting Arrays
+
+<details>
+  <summary>instanceof的一个问题是它假设只有一个全局执行上下文。没有考虑网页中有多个frame的情况。为此ECMAScript新增了一个__()方法用来解决这个问题。</summary>
+  <div>Array.isArray</div>
+</details>
+
+### 6.2.5 Iterator Methods
+
+<details>
+  <summary>在ES6中，数组原型上公开了三种新方法，可以查看数组的内容：__（），__（）和__（）。将返回数组的__。</summary>
+  <div>keys</div>
+  <div>values</div>
+  <div>entrys</div>
+  <div>迭代器</div>
+</details>
+
+### 6.2.6 Copy and Fill Methods
+
+<details>
+  <summary>(ES6)如果想使用一个固定的值覆盖现有数组的元素，可以使用__()。</summary>
+  <div>Array.prototype.fill</div>
+</details>
+
+<details>
+  <summary>(ES6)如果想浅复制数组的一部分到自身的另一个位置，可以使用__()。</summary>
+  <div>Array.prototype.copyWithin</div>
+</details>
+
+### 6.2.7 Conversion Methods
+
+<details>
+  <summary>如果数组中的项目为null或未定义，则在join（），toLocaleString（），toString（）和valueOf（）的结果中用__表示。</summary>
+  <div>空字符串</div>
+</details>
+
+### 6.2.8 Stack Methods
+
+<details>
+  <summary>ECMAScript数组提供__（）和__（）来允许类似栈的行为。</summary>
+  <div>push</div>
+  <div>pop</div>
+</details>
+
+<details>
+  <summary>栈数据结构的访问规则是__(__进__出)。</summary>
+  <div>LIFO</div>
+  <div>后</div>
+  <div>先</div>
+</details>
+
+### 6.2.9 Queue Methods
+
+<details>
+  <summary>队列数据结构的访问规则是__(__进__出)。</summary>
+  <div>FIFO(先进先出)</div>
+  <div>先</div>
+  <div>先</div>
+  <div></div>
+</details>
+
+<details>
+  <summary>使用__()和__()方法，可以实现队列访问规则。</summary>
+  <div>shift</div>
+  <div>push</div>
+</details>
+
+### 6.2.10 Reordering Methods
+
+<details>
+  <summary>可以使用__()和__()方法使数组的元素的顺序重新排序。</summary>
+  <div>reverse</div>
+  <div>sort</div>
+</details>
+
+#### 6.2.12.2 Predicate Search
+
+<details>
+  <summary>__() 方法返回数组中满足提供的测试函数的第一个元素的值。否则返回__。</summary>
+  <div>find</div>
+  <div>undefined</div>
+</details>
+
+### 6.2.13 Iterative Methods
+
+<details>
+  <summary>ECMAScript为数组定义了五个迭代(iterator)方法：_1_、_2_、_3_、_4_、_5_。</summary>
+  <div>every</div>
+  <div>some</div>
+  <div>map</div>
+  <div>forEach</div>
+  <div>filter</div>
+</details>
+
+### 6.2.14 Reduction Methods
+
+<details>
+  <summary>reducer 函数接收__个参数：_1_、_2_、_3_、_4_。</summary>
+  <div>4</div>
+  <div>1. Accumulator (acc) (累计器)</div>
+  <div>2. Current Value (cur) (当前值)</div>
+  <div>3. Current Index (idx) (当前索引)</div>
+  <div>4. Source Array (src) (源数组)</div>
+</details>
+
+<details>
+  <summary>__() 方法对数组中的每个元素执行一个reducer函数(__序执行)，将其结果汇总为单个返回值。反之，降序使用__()方法</summary>
+  <div>reduce</div>
+  <div>升</div>
+  <div>reduceRight</div>
+</details>
+
+## 6.3 Typed Arrays <!-- TODO 不理解使用场景 -->
+
+## 6.4 The Map Type(ES6)
+
+<details>
+  <summary>在ES6之前都是使用__来实现键/值存储。</summary>
+  <div>Object</div>
+</details>
+
+<details>
+  <summary>Mapb迭代时将以插入顺序的。__值可以用作键或值。</summary>
+  <div>任何</div>
+</details>
+
+<details>
+  <summary>Map键的比较除了__其他的值都是根据__运算符判断的。在Map键比较中NaN__于NaN。</summary>
+  <div>NaN</div>
+  <div>全等</div>
+  <div>等</div>
+</details>
+
+<details>
+  <summary>[延伸]如果想创建一个没有原型的对象，可以使用__。</summary>
+  <div>Object.create(null)</div>
+</details>
+
+<details>
+  <summary>[延伸]如果想创建一个没有原型的对象，可以使用__。</summary>
+  <div>Object.create(null)</div>
+</details>
+
+<!-- # CHAPTER 8 对象，类和面向对象编程
 
 <details>
   <summary>Q</summary>
   <div>A</div>
-</details>
+</details> -->

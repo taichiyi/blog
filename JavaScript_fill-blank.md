@@ -112,7 +112,6 @@
   <div>空指针</div>
 </details>
 
-
 <details>
   <summary>标识符就是一个__，通过__语句将指针(标识符)指向__。没有赋过值的标识符就是一个__。</summary>
   <div>指针</div>
