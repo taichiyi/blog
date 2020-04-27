@@ -293,7 +293,7 @@
 </details>
 
 <details>
-  <summary>标识符中的字母可以包括ASCII或__字符</summary>
+  <summary>标识符中的字母可以包括__字符</summary>
   <div>Unicode</div>
 </details>
 
@@ -1229,7 +1229,8 @@
 </details>
 
 <details>
-  <summary>ES6中新引入的__()方法用来判断一个数值值是否是一个“__整数”。</summary>
+  <summary>ES6中新引入的__()方法用来判断一个数值是否是一个“__整数”。</summary>
+  <div>Number.isSafeInteger</div>
   <div>安全</div>
 </details>
 
