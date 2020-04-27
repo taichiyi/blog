@@ -1883,8 +1883,148 @@
 ### 7.2.2 The Iterator Protocol
 
 <details>
-  <summary>迭代器协议定义了产生一系列值的标准方式。当对象实现了一个键为next的方法，该方法每次都返回一个对象，对象有done（boolean）和value两个属性时，它是一个迭代器。</summary>
-  <div>Symbol.iterator</div>
+  <summary>迭代器协议定义了产生一系列值的标准方式。当对象实现了一个键为next的方法，该方法每次都返回一个__对象，对象有done（boolean）和value两个属性时，它是一个迭代器。</summary>
+  <div>IteratorResult</div>
+</details>
+
+<details>
+  <summary>一旦迭代器达到done：__状态，则调用next（）是__等的。</summary>
+  <div>true</div>
+  <div>幂</div>
+</details>
+
+<details>
+  <summary>迭代器会对可迭代对象进行__引用。</summary>
+  <div>强</div>
+</details>
+
+<details>
+  <summary>可选的__（）方法允许指定仅在迭代器过早关闭时才会执行的行为。触发场景包括 for-of 时的__，__和__。</summary>
+  <div>return</div>
+  <div>break</div>
+  <div>return</div>
+  <div>throw</div>
+</details>
+
+## 7.3 Generators【薄弱】
+
+<details>
+  <summary>生成器对象是由一个 __ 函数返回的,并且它符合__协议和__协议。</summary>
+  <div>generator(生成器)</div>
+  <div>可迭代</div>
+  <div>迭代器</div>
+</details>
+
+### 7.3.1 Generator Basics
+
+<details>
+  <summary>具有在单个函数中__和__代码执行的功能。</summary>
+  <div>暂停</div>
+  <div>恢复</div>
+</details>
+
+<details>
+  <summary>生成器采用函数的形式，并且生成器指定带有__号。</summary>
+  <div>星（*）</div>
+</details>
+
+<details>
+  <summary>__函数不能用作生成器函数。</summary>
+  <div>箭头</div>
+</details>
+
+<details>
+  <summary>默认迭代器是__引用的。</summary>
+  <div>自</div>
+  <pre>
+  function* generatorFn() {}
+  const g = generatorFn();
+  console.log(g === g[Symbol.iterator]());
+  </pre>
+</details>
+
+### 7.3.2 Interrupting Execution with “yield”
+
+<details>
+  <summary>遇到__关键字时，将暂停执行并保留功能的__状态。仅在__上调用next（）方法时，执行才会恢复。</summary>
+  <div>yield</div>
+  <div>作用域</div>
+  <div>生成器对象</div>
+</details>
+
+<details>
+  <summary>yield关键字不能在非__函数内部使用；</summary>
+  <div>generator(生成器)</div>
+</details>
+
+#### 7.3.2.2 Using “yield” for Input and Output
+
+<details>
+  <summary>yield关键字可以输入和输出。输出值通过__(param)方法传入。</summary>
+  <div>next</div>
+</details>
+
+#### 7.3.2.3 Yielding an Iterable
+
+<details open>
+  <summary>增强yield的行为</summary>
+  <pre>
+  function* generatorFn() {
+    for (const x of [1, 2, 3]) {
+      yield x;
+    }
+  }
+  </pre>
+  <details>
+    <summary>写出等价写法：</summary>
+    <pre>
+    function* generatorFn() {
+      yield* [1, 2, 3];
+    }
+    </pre>
+  </details>
+</details>
+
+#### 7.3.2.4 Recursive Algorithms(递归算法) Using yield*
+
+<details open>
+  <summary></summary>
+  <pre>
+    function* nTimes(n) {
+      if (n > 0) {
+        yield* nTimes(n - 1);
+        yield n - 1;
+      }
+    }
+    for (const x of nTimes(3)) {
+      console.log(x);
+    }
+    // 0
+    // 1
+    // 2
+  </pre>
+</details>
+
+### 7.3.3 Using a Generator as the Default Iterator
+
+<details>
+  <summary>因为生成器对象实现了Iterable接口，并且由于生成器函数和默认迭代器均被调用以生成迭代器，所以__非常适合用作默认迭代器。</summary>
+  <div>生成器</div>
+</details>
+
+### 7.3.4 Early Termination of Generators
+
+<details>
+  <summary>__（）和__（）方法是可用于将生成器对象关闭。</summary>
+  <div>return</div>
+  <div>throw</div>
+</details>
+
+#### 7.3.4.2 The throw() Method
+
+<details>
+  <summary>如果抛出的错误是在生成器函数中捕获的，则错误不会关闭生成器对象并且可以恢复执行。错误处理将__该yield。</summary>
+  <div>跳过</div>
 </details>
 
 <!-- # CHAPTER 8 对象，类和面向对象编程
