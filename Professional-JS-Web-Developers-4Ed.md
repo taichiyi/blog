@@ -2027,9 +2027,46 @@
   <div>跳过</div>
 </details>
 
-<!-- # CHAPTER 8 对象，类和面向对象编程
+# 第8章 OBJECTS, CLASSES, AND OBJECT-ORIENTED PROGRAMMING
+<!-- # CHAPTER 8 对象，类和面向对象编程 -->
+
+## 8.1 Understanding Objects
 
 <details>
-  <summary>Q</summary>
-  <div>A</div>
-</details> -->
+  <summary>我们可以把ECMAScript的对象想象成__表：零到多组键值对，其中的值可以是数据或函数。</summary>
+  <div>散列</div>
+</details>
+
+### 8.1.1 Types of Properties
+
+<details>
+  <summary>内部属性不能通过JavaScript直接访问，内部属性一般通过__号将属性名称括起来，例如[[Enumerrable]]。</summary>
+  <div>方括</div>
+</details>
+
+<details>
+  <summary>ECMAScript的属性有两种：__属性和__属性。</summary>
+  <div>数据</div>
+  <div>访问器</div>
+</details>
+
+<details>
+  <summary>数据属性包含数据值的位置。从该位置可以__和__值。</summary>
+  <div>读取</div>
+  <div>写入</div>
+</details>
+
+<details>
+  <summary>数据属性有4个描述其行为的特性：__、__、__、__。</summary>
+  <div>[[Configurable]]</div>
+  <div>[[Enumerable]]</div>
+  <div>[[Writable]]</div>
+  <div>[[Value]]</div>
+</details>
+
+<details>
+  <summary>[[Configurable]]：表示能否通过__运算符 删除属性，能否从数据属性修改为__属性，默认为__。</summary>
+  <div>delete</div>
+  <div>访问器</div>
+  <div>true</div>
+</details>
