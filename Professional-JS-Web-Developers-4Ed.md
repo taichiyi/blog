@@ -2050,6 +2050,8 @@
   <div>访问器</div>
 </details>
 
+#### 8.1.1.1 Data Properties
+
 <details>
   <summary>数据属性包含数据值的位置。从该位置可以__和__值。</summary>
   <div>读取</div>
@@ -2065,8 +2067,78 @@
 </details>
 
 <details>
-  <summary>[[Configurable]]：表示能否通过__运算符 删除属性，能否从数据属性修改为__属性，默认为__。</summary>
+  <summary>[[configurable]]：表示能否通过__运算符 删除属性，能否从数据属性修改为__属性，默认为__。</summary>
   <div>delete</div>
   <div>访问器</div>
   <div>true</div>
+</details>
+
+<details>
+  <summary>[[enumerable]]：表示能否可__，能否通过__循环返回属性。默认为__。</summary>
+  <div>枚举</div>
+  <div>for-in</div>
+  <div>true</div>
+</details>
+
+<details>
+  <summary>[[writable]]：表示能否修改属性的__。默认为__。</summary>
+  <div>值</div>
+  <div>true</div>
+</details>
+
+<details>
+  <summary>[[value]]：表示属性的__。默认为__。</summary>
+  <div>数据值</div>
+  <div>undefined</div>
+</details>
+
+<details>
+  <summary>要修改属性默认的特性，必须使用ES5的__()方法。如果configurable、enumerable、writable不传，默认为__。</summary>
+  <div>Object.defineProperty</div>
+  <div>false</div>
+  <pre>
+  Object.defineProperty({}, "name", {
+    writable: false,
+    value: "Nicholas"
+  });
+  </pre>
+</details>
+
+#### 8.1.1.2 Accessor Properties
+
+<details>
+  <summary>访问器属性不包含__。</summary>
+  <div>数据值</div>
+</details>
+
+<details>
+  <summary>访问器属性有4个描述其行为的特性：__、__、__、__。</summary>
+  <div>[[configurable]]</div>
+  <div>[[enumerable]]</div>
+  <div>[[get]]</div>
+  <div>[[set]]</div>
+</details>
+
+<details>
+  <summary>[[get]]：表示在__属性时的调用的函数。默认为__。</summary>
+  <div>读取</div>
+  <div>undefined</div>
+</details>
+
+<details>
+  <summary>[[set]]：表示在__属性时的调用的函数。默认为__。</summary>
+  <div>写入</div>
+  <div>undefined</div>
+</details>
+
+<details>
+  <summary>_year前面的下划线是一种常用的记号，用于表示只能通过对象__访问的属性。</summary>
+  <div>方法</div>
+</details>
+
+### 8.1.2 Defining Multiple Properties
+
+<details>
+  <summary>如果想在对象上同时定义多个属性，ES5提供了__（）方法。</summary>
+  <div>Object.defineProperties</div>
 </details>
