@@ -561,8 +561,10 @@
 </details>
 
 <details>
-  <summary>Symbol.__ 用作一个对象的属性，属性值为方法。方法返回对象的Iterator。方法通过__语句被自动调用。</summary>
+  <summary>Symbol.__ 用作一个对象的属性，属性值为方法。方法返回对象的Iterator(默认迭代器)。此默认迭代器属性必须引用迭代器__，该函数将在调用时产生一个新的__。方法通过__语句被自动调用。</summary>
   <div>iterator</div>
+  <div>工厂函数</div>
+  <div>迭代器</div>
   <div>for-of循环</div>
 </details>
 
@@ -1557,34 +1559,6 @@
 ### 6.2.5 Iterator Methods
 
 <details>
-  <summary>[拓展]iterator(中文：__)是一个__。</summary>
-  <div>迭代器</div>
-  <div>对象</div>
-</details>
-
-<details>
-  <summary>[拓展]作为ECMAScript 2015的新增功能，迭代协议不是新的内置函数或语法，而是__。只需遵循一些约定，任何对象都可以实现这些协议。有两种协议：__协议和__协议。</summary>
-  <div>协议</div>
-  <div>可迭代(iterable)</div>
-  <div>迭代器(iterator)</div>
-</details>
-
-<details>
-  <summary>[拓展]要成为可迭代对象，一个对象必须实现 @@__ 方法。这意味着对象（包括原型链）必须有一个键为 @@iterator 的属性，可通过常量 __ 访问该属性。</summary>
-  <div>Symbol.iterator</div>
-</details>
-
-<details>
-  <summary>[拓展]要成为可迭代对象，一个对象必须实现 @@__ 方法。这意味着对象（包括原型链）必须有一个键为 @@iterator 的属性，可通过常量 __ 访问该属性。</summary>
-  <div>Symbol.iterator</div>
-</details>
-
-<details>
-  <summary>[拓展]迭代器协议定义了产生一系列值的标准方式。当对象实现了一个键为next的方法，该方法每次都返回一个对象，对象有done（boolean）和value两个属性时，它是一个迭代器。</summary>
-  <div>Symbol.iterator</div>
-</details>
-
-<details>
   <summary>在ES6中，数组原型上公开了三种新方法，可以查看数组的内容：__（），__（）和__（）。将返回数组的__。</summary>
   <div>keys</div>
   <div>values</div>
@@ -1858,10 +1832,59 @@
 
 # 第7章 ITERATORS AND GENERATORS
 
+## 7.1 Introduction to Iteration
+
 <details>
-  <summary></summary>
-  <div>弱</div>
-  <div>枚举</div>
+  <summary>“迭代(iteration)”是指按__重复执行多次过程，并且通常期望终止。 ES6规范引入了两个高级功能（__器和__器），以实现更简洁，更快和更容易的迭代。</summary>
+  <div>顺序</div>
+  <div>迭代</div>
+  <div>生成</div>
+</details>
+
+<details>
+  <summary>最简单的迭代语句是__语句。</summary>
+  <div>for</div>
+</details>
+
+<details>
+  <summary>for语句的不理想的地方：①需要事先了解迭代对象的__，需要使用[]运算符。②递增整数以访问顺序索引特定于数组类型，并且不能推广到具有__排序的其他数据结构。</summary>
+  <div>数据结构</div>
+  <div>隐式</div>
+</details>
+
+<details>
+  <summary>ES5引入了Array.prototype.forEach，不理想的地方：①无法__迭代。②仅限于__。</summary>
+  <div>提前终止</div>
+  <div>数组</div>
+</details>
+
+## 7.2 The Iterator Pattern
+
+### 7.2.1 The Iterable Protocol
+
+<details>
+  <summary>iterator(中文：__)是一个__。</summary>
+  <div>迭代器</div>
+  <div>对象</div>
+</details>
+
+<details>
+  <summary>作为ECMAScript 2015的新增功能，迭代协议不是新的内置函数或语法，而是__。只需遵循一些约定，任何对象都可以实现这些协议。有两种协议：__协议和__协议。</summary>
+  <div>协议</div>
+  <div>可迭代(iterable)</div>
+  <div>迭代器(iterator)</div>
+</details>
+
+<details>
+  <summary>要成为可迭代对象，一个对象必须实现 @@__ 方法。这意味着对象（包括原型链）必须有一个键为 @@iterator 的属性，可通过常量 __ 访问该属性。</summary>
+  <div>Symbol.iterator</div>
+</details>
+
+### 7.2.2 The Iterator Protocol
+
+<details>
+  <summary>迭代器协议定义了产生一系列值的标准方式。当对象实现了一个键为next的方法，该方法每次都返回一个对象，对象有done（boolean）和value两个属性时，它是一个迭代器。</summary>
+  <div>Symbol.iterator</div>
 </details>
 
 <!-- # CHAPTER 8 对象，类和面向对象编程
