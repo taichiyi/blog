@@ -181,6 +181,22 @@
 </details>
 
 <details>
+  <summary>如果想已某种编码打开文件或已某中编码重新打开文件</summary>
+  <div>:edit ++enc=&lt;encoding> [filename]</div>
+</details>
+
+<details>
+  <summary>如果想将当前文件的编码修改并保存或修改并另存为。</summary>
+  <div>:write ++enc=&lt;encoding> [filename]</div>
+  <div>加[filename]，则另存为</div>
+</details>
+
+<details>
+  <summary>如果想显示当前光标处的码点</summary>
+  <div>:as</div>
+</details>
+
+<details>
   <summary>保存</summary>
   <div>:w</div>
 </details>
