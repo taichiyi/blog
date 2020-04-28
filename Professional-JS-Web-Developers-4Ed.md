@@ -1670,14 +1670,17 @@
 </details>
 
 <details>
-  <summary>严格相等：NaN===NaN（值为__），+0===-0（值为__）。</summary>
+  <summary>严格相等：NaN===NaN（值为__），+0===-0（值为__）。当值为0时，不判断__位。</summary>
   <div>false</div>
   <div>true</div>
+  <div>符号</div>
 </details>
 
 <details>
-  <summary>同值相等：__()方法可以实现。+0和-0__等，NaN和NaN__等。</summary>
+  <summary>同值相等：__()方法可以实现。+0和-0__等，+0和0__等，-0和0__等，NaN和NaN__等。当值为0时，判断符号位。</summary>
   <div>Object.is</div>
+  <div>相</div>
+  <div>相</div>
   <div>不相</div>
   <div>相</div>
 </details>
@@ -2118,7 +2121,7 @@
 </details>
 
 <details>
-  <summary>_year前面的下划线是一种常用的记号，用于表示只能通过对象__访问的属性。</summary>
+  <summary>year_ 后面的下划线是一种常用的记号，用于表示应该通过对象__访问的属性。</summary>
   <div>方法</div>
 </details>
 
@@ -2127,4 +2130,51 @@
 <details>
   <summary>如果想在对象上同时定义多个属性，ES5提供了__（）方法。</summary>
   <div>Object.defineProperties</div>
+  <pre>
+  Object.defineProperties({}, {
+    year_: {
+      value: 2017
+    },
+    edition: {
+      value: 1
+    },
+    year: {
+      get() {
+        return this.year_;
+      },
+      set(newValue) {
+        if (newValue > 2017) {
+          this.year_ = newValue;
+          this.edition += newValue - 2017;
+        }
+      }
+    },
+  });
+  </pre>
 </details>
+
+### 8.1.3 Reading Property Attributes
+
+<details>
+  <summary>(ES5)如果想获取对象某个属性的特性，可以使用__(obj, prop)。</summary>
+  <div>Object.getOwnPropertyDescriptor</div>
+</details>
+
+<details>
+  <summary>(ES8)如果想获取对象全部属性的特性，可以使用__(obj)。</summary>
+  <div>Object.getOwnPropertyDescriptors</div>
+</details>
+
+### 8.1.4 Merging Objects
+
+<details>
+  <summary>ES6 引入了Object.assign（）方法来合并对象。此方法接受一个目标对象和一个或多个源对象，并且对于每个源对象，将可枚举（Object.__返回true）和拥有（Object.__返回true）属性复制到目标对象。对于每个合适的属性，该方法将使用__从__对象中检索值，并使用__对象上的__来分配值。</summary>
+  <div>propertyIsEnumerable</div>
+  <div>hasOwnProperty</div>
+  <div>[[Get]]</div>
+  <div>源</div>
+  <div>目标</div>
+  <div>[[Set]]</div>
+</details>
+
+### 8.1.6 Enhanced Object Syntax
