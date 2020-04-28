@@ -1027,11 +1027,6 @@
 </details>
 
 <details>
-  <summary>引用类型是可以由多个值组成的__。</summary>
-  <div>对象</div>
-</details>
-
-<details>
   <summary>引用值是存储在内存中的__。与其他语言不同，JavaScript不允许直接访问__位置，因此不允许直接操纵对象的内存空间。</summary>
   <div>对象</div>
   <div>内存</div>
@@ -1074,7 +1069,7 @@
 </details>
 
 <details>
-  <summary>每个函数调用都有其自己的执行上下文。每当代码__进入函数中时，函数的__就会被压入上下文堆栈。函数完成执行后，将函数上下文__堆栈，将__返回到先前执行的上下文。</summary>
+  <summary>每个函数被调用时都有其自己的执行上下文。每当代码__进入函数中时，函数的__就会被压入上下文堆栈。函数完成执行后，将函数上下文__堆栈，将__返回到先前执行的上下文。</summary>
   <div>执行流</div>
   <div>上下文</div>
   <div>弹出</div>
@@ -1101,7 +1096,7 @@
 #### 4.2.2.3 Constant Declaration Using const
 
 <details>
-  <summary>如果希望使整个对象不可变，则可以使用__()。</summary>
+  <summary>如果希望使整个对象不可变，则可以使用__(obj)。</summary>
   <div>Object.freeze</div>
 </details>
 
@@ -1173,14 +1168,6 @@
   <div>类</div>
 </details>
 
-## 5.1 The Date Type
-
-<details>
-  <summary>日期类型可以准确地表示UTC1970年1月1日之前或之后的__万年的日期。精确到__数。</summary>
-  <div>28</div>
-  <div>毫秒</div>
-</details>
-
 ## 5.2 The RegExp Type
 
 <details>
@@ -1231,9 +1218,8 @@
 </details>
 
 <details>
-  <summary>ES6中新引入的__()方法用来判断一个数值是否是一个“__整数”。</summary>
+  <summary>ES6中新引入的__()方法用来判断一个数值是否是一个“安全整数”。</summary>
   <div>Number.isSafeInteger</div>
-  <div>安全</div>
 </details>
 
 ## 5.4 The String Type
@@ -1256,7 +1242,7 @@
 </details>
 
 <details>
-  <summary>在ECMAScript中一个字符由__个bit组成，因为</summary>
+  <summary>在ECMAScript中一个字符由__个bit组成，因为是UTF-16呀~</summary>
   <div>16</div>
 </details>
 
