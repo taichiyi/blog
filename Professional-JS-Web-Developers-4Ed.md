@@ -1225,7 +1225,7 @@
 ## 5.4 The String Type
 
 <details>
-  <summary>字符串包含双字节字符（与仅使用一个字节的ASCII字符相反），每个字符被视为__个长度。</summary>
+  <summary>字符串包含双字节字符（与仅使用一个字节的ASCII字符相反），每个字符(码点)被视为__个长度。</summary>
   <div>一</div>
 </details>
 
@@ -1242,8 +1242,9 @@
 </details>
 
 <details>
-  <summary>在ECMAScript中一个字符由__个bit组成，因为是UTF-16呀~</summary>
+  <summary>在ECMAScript中一个字符(码点)由__个或__个bit组成。</summary>
   <div>16</div>
+  <div>32</div>
 </details>
 
 <details>
@@ -1252,7 +1253,7 @@
 </details>
 
 <details>
-  <summary>2个字节只能支持基本多语种平面(BMP，零平面)，为了引入更多的字符，Unicode定义了一种策略，该策略使用每个字符额外的__位来选择辅助平面或星体平面。</summary>
+  <summary>2个字节只能支持基本多语种平面(BMP，零平面)，为了引入更多的字符，Unicode定义了一种策略，该策略使用每个字符额外的__位来选择辅助平面(又称星体平面)。</summary>
   <div>16</div>
 </details>
 
@@ -1935,7 +1936,7 @@
 ### 7.3.2 Interrupting Execution with “yield”
 
 <details>
-  <summary>遇到__关键字时，将暂停执行并保留功能的__状态。仅在__上调用next（）方法时，执行才会恢复。</summary>
+  <summary>遇到__关键字时，将暂停执行并保留函数的__状态。仅在__上调用next（）方法时，执行才会恢复。</summary>
   <div>yield</div>
   <div>作用域</div>
   <div>生成器对象</div>
