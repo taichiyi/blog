@@ -1222,12 +1222,12 @@
   <div>Number.isSafeInteger</div>
 </details>
 
-## 5.4 The String Type
+<!-- ## 5.4 The String Type
 
 <details>
   <summary>字符串包含双字节字符（与仅使用一个字节的ASCII字符相反），每个字符(码点)被视为__个长度。</summary>
   <div>一</div>
-</details>
+</details> -->
 
 ### 5.4.1 The JavaScript Character
 
@@ -1516,10 +1516,8 @@
 </details>
 
 <details>
-  <summary>[延伸]伪数组对象：拥有一个length属性的对象。</summary>
-  <div>值</div>
-  <div>Object 构造函数</div>
-  <div>对象字面量</div>
+  <summary>[延伸]伪数组对象：拥有一个__属性的对象。</summary>
+  <div>length</div>
 </details>
 
 ## 6.2 The Array Type
@@ -2179,3 +2177,115 @@
 </details>
 
 ### 8.1.6 Enhanced Object Syntax
+
+#### 8.1.6.1 Property Value Shorthand
+
+<details>
+  <summary>(ES6){ name: name }的等价写法</summary>
+  <div>{ name }</div>
+</details>
+
+#### 8.1.6.3 Concise Method Syntax
+
+<details>
+  <summary>(ES6){ sayName: function(name){...} }的等价写法</summary>
+  <div>{ sayName(name){...} }</div>
+</details>
+
+### 8.1.7 Object Destructuring
+
+<details>
+  <summary>ES6 引入了__解构。</summary>
+  <div>对象</div>
+</details>
+
+<details>
+  <summary>在解构是，将尝试把源转为__。</summary>
+  <div>对象</div>
+</details>
+
+<details open>
+  <summary>(ES6)等价写法</summary>
+  <pre>
+    let personName, personAge;
+    let person = {
+      name: 'Matt',
+      age: 27,
+    };
+    personName = person.name;
+    personAge = person.age;
+  </pre>
+  <details>
+    <summary>答案</summary>
+    <pre>
+    let personName, personAge;
+    let person = {
+      name: 'Matt',
+      age: 27,
+    };
+    ({ name: personName, age: personAge } = person);
+    </pre>
+  </details>
+</details>
+
+#### 8.1.7.1 Nested Destructuring
+
+<details open>
+  <summary>(ES6)等价写法</summary>
+  <pre>
+    let person = {
+      name: 'Matt', age: 27,
+      job: {
+        title: 'Software engineer'
+      }
+    };
+    let title = person.job.title;
+  </pre>
+  <details>
+    <summary>答案</summary>
+    <pre>
+    let person = {
+      name: 'Matt', age: 27,
+      job: {
+        title: 'Software engineer'
+      }
+    };
+    let title = person.job.title;
+    let { job: { title } } = person;
+    </pre>
+  </details>
+</details>
+
+## 8.2 Object Creation
+
+### 8.2.2 The Factory Pattern(工厂模式)
+
+<details>
+  <summary>工厂模式是一种众所周知的设计模式，在软件工程中用于抽象化创建特定__的过程。 </summary>
+  <div>对象</div>
+</details>
+
+<details>
+  <summary>工厂模式创建对象的缺点是：无法判断__和所创建对象的关系。</summary>
+  <div>工厂函数</div>
+</details>
+
+### 8.2.3 The Function Constructor Pattern(构造函数模式)
+
+<details>
+  <summary>构造函数模式解决了工厂模式的缺点，可以根据的实例的__判断与构造函数的关系。</summary>
+  <div>构造函数</div>
+</details>
+
+<details>
+  <summary>每个函数都有一个__对象。</summary>
+  <div>原型</div>
+</details>
+
+<details>
+  <summary>调用构造函数后，创建一个新对象，然后将新对象赋值到__，将新对象的原型(prototype)属性指向__，构造函数的原型对象有个__属性，属性值为__。</summary>
+  <div>this关键字</div>
+  <div>构造函数的原型对象</div>
+  <div>constructor</div>
+  <div>构造函数</div>
+</details>
