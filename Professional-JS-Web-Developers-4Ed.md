@@ -969,8 +969,9 @@
 ### 3.6.5 The for-in Statement
 
 <details>
-  <summary>for-in语句以__顺序遍历一个对象的除__以外的可__属性。</summary>
+  <summary>for-in语句以__顺序遍历一个对象(实例和__)的除__以外的可__属性。</summary>
   <div>任意</div>
+  <div>原型</div>
   <div>Symbol</div>
   <div>枚举</div>
 </details>
@@ -2318,4 +2319,26 @@
 <details>
   <summary>如果想修改某个对象的原型并返回一个新对象（不改变原对象），可以使用__(proto[, propertiesObject])方法。</summary>
   <div>Object.create</div>
+</details>
+
+#### 8.2.4.3 Prototypes and the “in” Operator
+
+<details>
+  <summary>有两种使用in运算符的方式：单独使用或作为__使用。</summary>
+  <div>for-in循环</div>
+</details>
+
+<details>
+  <summary>判断某个属性是否存在于实例和原型上，可以使用__运算符。</summary>
+  <div>in</div>
+</details>
+
+<details>
+  <summary>判断某个属性是否存在于实例上，可以使用__()方法。</summary>
+  <div>实例.hasOwnProperty</div>
+</details>
+
+<details>
+  <summary>要检索对象上所有可枚举实例属性的列表，可以使用__（）方法。</summary>
+  <div>Object.keys</div>
 </details>
