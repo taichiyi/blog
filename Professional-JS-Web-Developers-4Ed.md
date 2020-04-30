@@ -588,10 +588,11 @@
 ### 3.4.8 The Object Type
 
 <details>
-  <summary>每个Object构造函数的实例都有1个属性和6个方法：_1_、_2_、_3_、_4_、_5_、_6_、_7_。</summary>
+  <summary>Object构造函数的__有这7个对键值，所以每个Object构造函数的实例都有1个属性和6个方法：_1_、_2_、_3_、_4_、_5_、_6_、_7_。</summary>
+  <div>原型</div>
   <div>constructor</div>
   <div>hasOwnProperty(propertyName)</div>
-  <div>isPrototypeof(object)</div>
+  <div>isPrototypeOf(object):当前对象是否在另一个对象的原型链上。</div>
   <div>propertyIsEnumerable(propertyName)</div>
   <div>toLocaleString()</div>
   <div>toString()</div>
@@ -2283,7 +2284,7 @@
 </details>
 
 <details>
-  <summary>调用构造函数后，创建一个新对象，然后将新对象赋值到__，将新对象的原型(prototype)属性指向__，构造函数的原型对象有个__属性，属性值为__。</summary>
+  <summary>调用构造函数后，创建一个新对象，然后将新对象赋值到__，将新对象的原型(prototype)属性指向__，构造函数的原型对象默认有个__属性，属性值为__。</summary>
   <div>this关键字</div>
   <div>构造函数的原型对象</div>
   <div>constructor</div>
@@ -2291,6 +2292,30 @@
 </details>
 
 <details>
-  <summary>构造函数模式创建对象的缺点是：每个实例的方法都是独立的，不能共用一个方法。</summary>
-  <div>构造函数</div>
+  <summary>构造函数模式创建对象的缺点是：每个实例的方法都是独立的，不能__一个方法。</summary>
+  <div>共用</div>
+</details>
+
+### 8.2.4 The Prototype Pattern
+
+<details>
+  <summary>原型模式解决了构造函数模式的缺点，可以把构造函数的公共方法添加到__上。</summary>
+  <div>原型对象</div>
+</details>
+
+#### 8.2.4.1 How Prototypes Work
+
+<details>
+  <summary>ES5，获取某个对象的原型可以使用__（object）的方法。</summary>
+  <div>Object.getPrototypeOf</div>
+</details>
+
+<details>
+  <summary>ES5，往某个对象的原型上添加新值可以使用__（）的方法。警告：由于现代引擎会对属性访问做优化，创建后更改原型对象，会极大的影响性能。</summary>
+  <div>Object.setPrototypeOf</div>
+</details>
+
+<details>
+  <summary>如果想修改某个对象的原型并返回一个新对象（不改变原对象），可以使用__(proto[, propertiesObject])方法。</summary>
+  <div>Object.create</div>
 </details>
