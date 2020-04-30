@@ -2,6 +2,53 @@
 # nginx 知识点 填空
 
 <details>
+  <summary>NGINX是用于__、__、__、__等的开源软件。</summary>
+  <div>web服务</div>
+  <div>反向代理</div>
+  <div>缓存</div>
+  <div>负载平衡</div>
+</details>
+
+<details>
+  <summary>nginx由配置文件中指定的指令控制的模块组成。指令分为__指令和__指令。</summary>
+  <div>简单</div>
+  <div>块</div>
+</details>
+
+<details>
+  <summary>一个简单的指令由__和__组成，这些名称和参数之间用__分隔，并以__结尾。</summary>
+  <div>名称</div>
+  <div>参数</div>
+  <div>空格</div>
+  <div>分号（;）</div>
+</details>
+
+<details>
+  <summary>块指令是用__括号括起来的一条或多条简单指令。如果块指令在大括号中包含其他指令，则称为__（示例：events，http，server和location）。</summary>
+  <div>花</div>
+  <div>上下文</div>
+</details>
+
+<details>
+  <summary>放置在任何上下文外部的指令均被视为位于__上下文中。例如__指令和__指令都位于main上下文中。</summary>
+  <div>主(main)</div>
+  <div>上下文</div>
+  <div>events</div>
+  <div>http</div>
+</details>
+
+<details>
+  <summary>配置文件可以包括多个服务器块，这些服务器块由它们侦听的__和__区分。</summary>
+  <div>端口</div>
+  <div>服务器名称</div>
+</details>
+
+<details>
+  <summary>如果要让server_name匹配全部服务器，则使用__。</summary>
+  <div>_</div>
+</details>
+
+<details>
   <summary>如果nginx的正则表达式含有“__”或“__”，则应该用单引号或双引号包裹起来。</summary>
   <div>}</div>
   <div>;</div>

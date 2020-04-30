@@ -2200,7 +2200,7 @@
 </details>
 
 <details>
-  <summary>在解构是，将尝试把源转为__。</summary>
+  <summary>在解构时，将尝试把源转为__。</summary>
   <div>对象</div>
 </details>
 
@@ -2273,7 +2273,7 @@
 ### 8.2.3 The Function Constructor Pattern(构造函数模式)
 
 <details>
-  <summary>构造函数模式解决了工厂模式的缺点，可以根据的实例的__判断与构造函数的关系。</summary>
+  <summary>构造函数模式解决了工厂模式的缺点，可以根据的实例原型的__判断与构造函数的关系。</summary>
   <div>构造函数</div>
 </details>
 
@@ -2287,5 +2287,10 @@
   <div>this关键字</div>
   <div>构造函数的原型对象</div>
   <div>constructor</div>
+  <div>构造函数</div>
+</details>
+
+<details>
+  <summary>构造函数模式创建对象的缺点是：每个实例的方法都是独立的，不能共用一个方法。</summary>
   <div>构造函数</div>
 </details>
