@@ -707,7 +707,7 @@
   <summary>[拓展]二进制1001（有效值），为无符号比特：__；为有符号比特:__；为一的补码(反码)：__。</summary>
   <div>9</div>
   <div>-1</div>
-  <div>-6</div>
+  <div>6</div>
 </details>
 
 <details>
@@ -2297,11 +2297,16 @@
   <div>共用</div>
 </details>
 
-### 8.2.4 The Prototype Pattern
+### 8.2.4 The Prototype Pattern(原型模式)
 
 <details>
-  <summary>原型模式解决了构造函数模式的缺点，可以把构造函数的公共方法添加到__上。</summary>
+  <summary>原型模式解决了构造函数模式的缺点，可以把构造函数的公共属性添加到__上。</summary>
   <div>原型对象</div>
+</details>
+
+<details>
+  <summary>普通属性不适合放在原型上，一般是__放在原型上，所以很少单独使用原型模式。</summary>
+  <div>公共方法</div>
 </details>
 
 #### 8.2.4.1 How Prototypes Work
@@ -2339,6 +2344,68 @@
 </details>
 
 <details>
-  <summary>要检索对象上所有可枚举实例属性的列表，可以使用__（）方法。</summary>
+  <summary>要检索对象上所有可枚举实例属性，可以使用__（）方法。</summary>
   <div>Object.keys</div>
+</details>
+
+<details>
+  <summary>要检索对象上所有可枚举和不可枚举实例属性(不包括Symbol)，可以使用__（）方法。</summary>
+  <div>Object.getOwnPropertyNames</div>
+</details>
+
+### 8.2.5 Object Iteration
+
+<details>
+  <summary>ES8 引入了__（）和__（）种静态方法，用于将对象的内容转换为可迭代格式。</summary>
+  <div>Object.values</div>
+  <div>Object.entry</div>
+</details>
+
+#### 8.2.5.1 Alternate Prototype Syntax
+
+<details>
+  <summary>默认情况下，原生构造函数属性(constructor)__枚举。</summary>
+  <div>不可</div>
+</details>
+
+## 8.3 Inheritance(继承)
+
+<details>
+  <summary>许多OO语言支持两种继承：__继承（仅继承方法签名）和__继承（继承实际方法）。</summary>
+  <div>接口</div>
+  <div>实现</div>
+</details>
+
+<details>
+  <summary>ECMAScript中无法进行接口继承，因为函数没有签名。实现继承是ECMAScript支持的唯一继承类型，这主要是通过使用__来完成的。</summary>
+  <div>原型链</div>
+</details>
+
+### 8.3.1 Prototype Chaining
+
+<details>
+  <summary>A对象可以有一个原型对象，A对象可以作为B对象的原型对象。这样一个套一个就成了链，__链。</summary>
+  <div>原型</div>
+</details>
+
+#### 8.3.1.1 Default Prototypes
+
+<details>
+  <summary>任何函数的默认原型都是__。</summary>
+  <div>Object的实例</div>
+</details>
+
+#### 8.3.1.2 Prototype and Instance Relationships
+
+<details>
+  <summary>instanceof 运算符用于检测构造函数的__属性是否出现在某个实例对象的__上。</summary>
+  <div>prototype</div>
+  <div>原型链</div>
+</details>
+
+#### 8.3.1.4 Problems with Prototype Chaining
+
+<details>
+  <summary></summary>
+  <div>Object的实例</div>
 </details>
