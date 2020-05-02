@@ -1339,6 +1339,7 @@
   String.fromCharCode(0x030A); //̊
   String.fromCharCode(0x0041, 0x030A); //Å
   String.fromCharCode(0x00C5); //Å
+  String.fromCharCode(0x212B); //Å
   </pre>
   <div>BMP</div>
   <div>代理对</div>
@@ -1405,25 +1406,26 @@
 ### 5.4.8 The padStart() and padEnd() Methods
 
 <details>
-  <summary>(ES6)用另一个字符串在填充到当前字符串(开头)至指定的长度，可以用__()方法。</summary>
+  <summary>(ES6)用另一个字符串填充到当前字符串(开头)至指定的长度，可以用__()方法。</summary>
   <div>String.prototype.padStart</div>
 </details>
 
 <details>
-  <summary>(ES6)用另一个字符串在填充到当前字符串(尾部)至指定的长度，可以用__()方法。</summary>
+  <summary>(ES6)用另一个字符串填充到当前字符串(尾部)至指定的长度，可以用__()方法。</summary>
   <div>String.prototype.padEnd</div>
 </details>
 
 ### 5.4.9 String Iterators and Destructuring
 
 <details>
-  <summary>字符串原型公开了一个__方法，该方法允许通过单个字符进行迭代。</summary>
+  <summary>字符串原型公开了一个__属性，该属性方法允许通过每个字符进行迭代。</summary>
   <div>Symbol.iterator</div>
 </details>
 
 <details>
   <summary>字符串迭代器允许和__运算符进行相互操作。</summary>
   <div>解构</div>
+  <div>[...'abc'] => ['a','b','c']</div>
 </details>
 
 ## 5.5 Singleton Built-in Objects(单例内置对象)
