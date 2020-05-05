@@ -589,8 +589,8 @@
   <div>原型</div>
   <div>constructor</div>
   <div>hasOwnProperty(propertyName)</div>
-  <div>isPrototypeOf(object):当前对象是否在另一个对象的原型链上。</div>
   <div>propertyIsEnumerable(propertyName)</div>
+  <div>isPrototypeOf(object):当前对象是否在另一个对象的原型链上。</div>
   <div>toLocaleString()</div>
   <div>toString()</div>
   <div>valueOf()</div>
