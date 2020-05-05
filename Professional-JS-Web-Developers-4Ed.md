@@ -1340,7 +1340,7 @@
   </pre>
   <div>BMP</div>
   <div>代理对</div>
-</details>s
+</details>
 
 <details>
   <summary>(2/2)所以存在一个问题：以上3种字符视觉和语义上都等价，但是 JavaScript 不能识别。然后Unicode通过提供四种正规形式来解决这一问题：NFC(默认)、NFD、NFKC、NFKD。通过__方法使用。</summary>
@@ -1449,12 +1449,12 @@
 </details>
 
 <details>
-  <summary>两者都不编码字符：①__②数字和字母：A-Z a-z 0-9。</summary>
-  <div>- _ . ! ~ * ' ( ) $</div>
+  <summary>两者都不编码的字符：①__②数字和字母：A-Z a-z 0-9。</summary>
+  <div>- _ . ! ~ * ' ( )</div>
 </details>
 
 <details>
-  <summary>encodeURI不编码字符：①__②#。</summary>
+  <summary>encodeURI不编码的字符：①__②#。</summary>
   <div>; , / ? : @ & = + $</div>
 </details>
 
@@ -1466,7 +1466,7 @@
 </details>
 
 <details>
-  <summary>在严格模式下，无法在eval（）内部创建的__和__，外部无法访问。</summary>
+  <summary>在严格模式下，在eval（）内部创建的__和__，外部无法访问。</summary>
   <div>变量</div>
   <div>函数</div>
 </details>
@@ -1494,7 +1494,7 @@
 #### 5.5.2.3 Rounding Methods
 
 <details>
-  <summary>如果过想把64位浮点数转为32位，可以使用__()方法。</summary>
+  <summary>如果过想把64位浮点数转为32位(单精度)，可以使用__()方法。</summary>
   <div>Math.fround</div>
 </details>
 
@@ -2380,7 +2380,7 @@
   <div>原型链</div>
 </details>
 
-### 8.3.1 Prototype Chaining
+### 8.3.1 Prototype Chaining(原型链)
 
 <details>
   <summary>A对象可以有一个原型对象，A对象可以作为B对象的原型对象。这样一个套一个就成了链，__链。</summary>
@@ -2411,13 +2411,95 @@
 </details>
 
 <details>
-  <summary>原型链的第二个问题是，创建subtype实例时，不能将__传递给supertype构造函数。</summary>
+  <summary>原型链的第二个问题是，创建子类型实例时，不能将__传递给超类型构造函数。</summary>
   <div>参数</div>
 </details>
 
 ### 8.3.2 Constructor Stealing(借用构造函数)
 
 <details>
-  <summary>为了解决原型链的问题</summary>
-  <div></div>
+  <summary>为了解决原型链的两个问题，可以使用__构造函数。</summary>
+  <div>借用</div>
 </details>
+
+<details>
+  <summary>借用构造函数，即子类型构造函数的内部调用__。来实现对__的继承。</summary>
+  <div>超类型构造函数</div>
+  <div>超类属性</div>
+</details>
+
+<details>
+  <summary>函数是在特定环境中执行__的__。</summary>
+  <div>代码</div>
+  <div>对象</div>
+</details>
+
+#### 8.3.2.2 Problems with Constructor Stealing
+
+<details>
+  <summary>借用构造函数的缺点：①子类型的实例，__无法共用。②超类型__中的方法，子类型不可访问。</summary>
+  <div>方法</div>
+  <div>原型</div>
+</details>
+
+### 8.3.3 Combination Inheritance(组合继承)
+
+<details>
+  <summary>组合继承是将__和__技术组合到一起。</summary>
+  <div>原型链</div>
+  <div>借用构造函数</div>
+</details>
+
+<details>
+  <summary>组合继承的缺点：调用了两次超类型的构造函数：new超类型，却没有用来超类的__，只用了超类型的原型。</summary>
+  <div>属性</div>
+</details>
+
+### 8.3.4 Prototypal Inheritance(原型式继承)
+
+<details>
+  <summary>原型式继承：先创建了一个临时的__函数，然后将传入的对象作为这个构造函数的__，最后返回这个临时构造函数的__。</summary>
+  <div>构造</div>
+  <div>原型</div>
+  <div>实例</div>
+</details>
+
+<details>
+  <summary>ES5新增__(proto[, propertiesObject])方法规范化原型式继承。对于原型式继承只需要用到第__个参数。</summary>
+  <div>Object.create</div>
+  <div>一</div>
+</details>
+
+### 8.3.5 Parasitic Inheritance(寄生式继承)
+
+<details>
+  <summary>ES5新增__(proto[, propertiesObject])方法规范化寄生式继承。对于寄生式继承需要用到__个参数。</summary>
+  <div>Object.create</div>
+  <div>两</div>
+</details>
+
+<details>
+  <summary>寄生式继承缺点：为对象(注意不是原型)添加函数时，每个实例的函数没有被共用。</summary>
+  <div>Object.create</div>
+  <div>一</div>
+</details>
+
+### 8.3.6 Parasitic Combination Inheritance
+
+<details>
+  <summary>__式继承，能克服寄生式继承的缺点。</summary>
+  <div>寄生组合</div>
+</details>
+
+<details>
+  <summary>寄生组合式继承：即通过__来继承属性，通过__来继承方法。</summary>
+  <div>借用构造函数</div>
+  <div>原型链的混成形式</div>
+</details>
+
+<details>
+  <summary>__继承，被认为是引用类型最理想的继承范例。</summary>
+  <div>寄生组合式</div>
+</details>
+
+## 8.4 Classes
