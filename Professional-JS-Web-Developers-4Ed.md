@@ -211,7 +211,7 @@
 ### 2.1.2 Deferred Scripts
 
 <details>
-  <summary>HTML __.01为&lt;script>元素定义了一个名为defer的属性。</summary>
+  <summary>HTML __ 为&lt;script>元素定义了一个名为defer的属性。</summary>
   <div>4</div>
 </details>
 
@@ -286,15 +286,12 @@
 </details>
 
 <details>
-  <summary>标识符的第一个字符必须是__、__或__符号。</summary>
-  <div>字母</div>
+  <summary>标识符的必须是__字母、__、__或__符号。第一个字符不能是__。</summary>
+  <div>Unicode</div>
+  <div>数字</div>
   <div>下划线</div>
   <div>美元</div>
-</details>
-
-<details>
-  <summary>标识符中的字母可以包括__字符</summary>
-  <div>Unicode</div>
+  <div>数字</div>
 </details>
 
 <details>
@@ -1260,7 +1257,7 @@
 </details>
 
 <details>
-  <summary>[延伸]辅助平面中的码点，在UTF-16中被编码为一对16比特长的__（__字节），称作__对。</summary>
+  <summary>[延伸]辅助平面中的码点，在UTF-16中被编码为一对16bit长的__（__字节），称作__对。</summary>
   <div>码元(代码单元)</div>
   <div>4</div>
   <div>代理（Surrogate Pair）</div>
@@ -1343,10 +1340,10 @@
   </pre>
   <div>BMP</div>
   <div>代理对</div>
-</details>
+</details>s
 
 <details>
-  <summary>(2/2)所以存在一个问题：以上3中字符视觉和语义上都等价，但是 JavaScript 不能识别。然后Unicode通过提供四种正规形式来解决这一问题：NFC(默认)、NFD、NFKC、NFKD。通过__方法使用。</summary>
+  <summary>(2/2)所以存在一个问题：以上3种字符视觉和语义上都等价，但是 JavaScript 不能识别。然后Unicode通过提供四种正规形式来解决这一问题：NFC(默认)、NFD、NFKC、NFKD。通过__方法使用。</summary>
   <div>String.prototype.normalize()</div>
 </details>
 
@@ -2405,9 +2402,22 @@
   <div>原型链</div>
 </details>
 
-#### 8.3.1.4 Problems with Prototype Chaining
+#### 8.3.1.4 Problems with Prototype Chaining(原型链的问题)
 
 <details>
-  <summary></summary>
-  <div>Object的实例</div>
+  <summary>原型链第一个问题：当实例的原型对象，有个属性的值为__类型时，则意味则，所有实例都会共享这个属性，其中一个实例对该属性值的修改(例如:push)都会对__产生影响。</summary>
+  <div>引用</div>
+  <div>其他所有实例</div>
+</details>
+
+<details>
+  <summary>原型链的第二个问题是，创建subtype实例时，不能将__传递给supertype构造函数。</summary>
+  <div>参数</div>
+</details>
+
+### 8.3.2 Constructor Stealing(借用构造函数)
+
+<details>
+  <summary>为了解决原型链的问题</summary>
+  <div></div>
 </details>
