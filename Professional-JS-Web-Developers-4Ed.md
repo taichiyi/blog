@@ -490,7 +490,7 @@
 #### 3.4.7.2 Using the Global Symbol Registry
 
 <details>
-  <summary>在运行时的不同部分希望共享和重用Symbol实例的情况下，可以在通过__()方法在全局Symbol注册表中创建和重用Symbol。</summary>
+  <summary>在运行时的不同部分希望共享和重用Symbol实例的情况下，可以在通过__(key)方法在全局Symbol注册表中创建和重用Symbol。</summary>
   <div>Symbol.for</div>
 </details>
 
@@ -500,7 +500,7 @@
 </details>
 
 <details>
-  <summary>可以使用__（）方法来检查全局Symbol注册表，该方法接受一个Symbol实例并将返回关联的键，如果该Symbol实例不是全局Symbol，则为__。</summary>
+  <summary>可以使用__（sym）方法来检查全局Symbol注册表，该方法接受一个Symbol实例并将返回关联的键，如果该Symbol实例不是全局Symbol，则为__。</summary>
   <div>Symbol.keyFor</div>
   <div>undefined</div>
 </details>
@@ -1384,31 +1384,31 @@
 </details>
 
 <details>
-  <summary>如果想判断当前字符串是否已给定的子字符串开头，可以用__()方法。</summary>
+  <summary>如果想判断当前字符串是否已给定的子字符串开头，可以用__(searchString[, position])方法。</summary>
   <div>String.prototype.startsWith</div>
 </details>
 
 <details>
-  <summary>如果想判断当前字符串是否已给定的子字符串结尾，可以用__()方法。</summary>
+  <summary>如果想判断当前字符串是否已给定的子字符串结尾，可以用__(searchString[, position])方法。</summary>
   <div>String.prototype.endsWith</div>
 </details>
 
 ### 5.4.7 The repeat() Method
 
 <details>
-  <summary>(ES6)将一个字符串复制多次，可以用__()方法。</summary>
+  <summary>(ES6)将一个字符串复制多次，可以用__(count)方法。</summary>
   <div>String.prototype.repeat</div>
 </details>
 
 ### 5.4.8 The padStart() and padEnd() Methods
 
 <details>
-  <summary>(ES6)用另一个字符串填充到当前字符串(开头)至指定的长度，可以用__()方法。</summary>
+  <summary>(ES6)用另一个字符串填充到当前字符串(开头)至指定的长度，可以用__(targetLength [, padString])方法。</summary>
   <div>String.prototype.padStart</div>
 </details>
 
 <details>
-  <summary>(ES6)用另一个字符串填充到当前字符串(尾部)至指定的长度，可以用__()方法。</summary>
+  <summary>(ES6)用另一个字符串填充到当前字符串(尾部)至指定的长度，可以用__(targetLength [, padString])方法。</summary>
   <div>String.prototype.padEnd</div>
 </details>
 
@@ -2484,7 +2484,7 @@
   <div>一</div>
 </details>
 
-### 8.3.6 Parasitic Combination Inheritance
+### 8.3.6 Parasitic Combination Inheritance(寄生组合式继承)
 
 <details>
   <summary>__式继承，能克服寄生式继承的缺点。</summary>
@@ -2498,8 +2498,101 @@
 </details>
 
 <details>
-  <summary>__继承，被认为是引用类型最理想的继承范例。</summary>
+  <summary>__继承，被认为是引用类型最理想的继承范例。例子：</summary>
   <div>寄生组合式</div>
+  <pre>
+    function SuperType(name) {
+      this.name = name;
+      this.colors = ["red", "blue", "green"];
+    }
+    SuperType.prototype.sayName = function () {
+      console.log(this.name);
+    };
+    function SubType(name, age) {
+      SuperType.call(this, name);
+      this.age = age;
+    }
+    function inheritPrototype(subType, superType) {
+      let prototype = object(superType.prototype); // create object
+      prototype.constructor = subType; // augment object
+      subType.prototype = prototype; // assign object
+    }
+    inheritPrototype(SubType, SuperType);
+    SubType.prototype.sayAge = function () {
+      console.log(this.age);
+    };
+  </pre>
 </details>
 
 ## 8.4 Classes
+
+<details>
+  <summary>前面描述了很多在ES5中模仿类行为的方式。缺点是__和__。ES6提供了__关键字来定义类。class是语法糖，背后还是用过构造函数和原型实现的。</summary>
+  <div>语法冗长</div>
+  <div>混乱</div>
+  <div>class</div>
+</details>
+
+### 8.4.1 Class Definition Basics
+
+<details>
+  <summary>与函数类型类似，定义类有两种主要方法：__和__。</summary>
+  <div>类声明</div>
+  <div>类表达式</div>
+</details>
+
+<details>
+  <summary>类声明会有__行为，函数声明会有声明提升行为。类声明是__作用域。</summary>
+  <div>暂时性死区</div>
+  <div>块</div>
+</details>
+
+#### 8.4.1.1 Class Composition
+
+<details>
+  <summary>class中的内容默认是以__模式执行的。</summary>
+  <div>严格</div>
+</details>
+
+<details>
+  <summary>和function关键字一样，当class表达式分配给变量时，不能在class范围之外访问class标识符本身。例如：</summary>
+  <div>严格</div>
+  <pre>
+    const foo1 = function foo(a) {
+      console.log(a);
+    }
+    foo('foo'); // ReferenceError: foo is not defined
+  </pre>
+</details>
+
+### 8.4.2 The Class Constructor
+
+<details>
+  <summary>选择不定义构造函数和定义为__相同。</summary>
+  <div>空函数</div>
+</details>
+
+#### 8.4.2.1 Instantiation
+
+<details>
+  <summary>new Functin 和 new Class 的唯一可知区别是，new Class 会调用__函数。</summary>
+  <div>constructor</div>
+</details>
+
+<details>
+  <summary>使用new调用类构造函数将执行以下操作：①__；②__；③__；④__；⑤__。</summary>
+  <div>1. 在内存中创建一个新对象</div>
+  <div>2. 将新对象的内部[[Prototype]]指针分配为构造函数的prototype属性</div>
+  <div>3. 构造函数的this值分配给新对象（因此在构造函数内部被引用时指向新对象）</div>
+  <div>4. 执行构造函数中的代码（将属性添加到新对象）</div>
+  <div>5. 如果构造函数返回一个对象，则返回该对象。 否则，新返回刚刚创建的对象</div>
+</details>
+
+<details>
+  <summary>当选择不使用new运算符时，构造函数将在构造函数内部this将指向__。</summary>
+  <div>全局对象（通常是window对象）</div>
+</details>
+
+#### 8.4.2.2 Understanding Classes as Special Functions
+
+### 8.4.3 Instance, Prototype, and Class Members
