@@ -2655,3 +2655,8 @@
 </details>
 
 #### 8.4.4.2 Constructors, HomeObjects, and super()
+
+<details>
+  <summary>在构造函数内部使用__关键字来控制何时调用父类构造函数。</summary>
+  <div>super</div>
+</details>
