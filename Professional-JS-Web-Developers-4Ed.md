@@ -1443,12 +1443,6 @@
 </details>
 
 <details>
-  <summary>因为URI支持全部Unicode，但是HTTP只支持ASCII码所以，URI需要编码，才可以传输。用特殊的UTF-8编码替换所有无效字符。可以使用__()和__()方法进行编码。</summary>
-  <div>encodeURIComponent</div>
-  <div>encodeURI</div>
-</details>
-
-<details>
   <summary>两者都不编码的字符：①__②数字和字母：A-Z a-z 0-9。</summary>
   <div>- _ . ! ~ * ' ( )</div>
 </details>
@@ -2527,7 +2521,7 @@
 ## 8.4 Classes
 
 <details>
-  <summary>前面描述了很多在ES5中模仿类行为的方式。缺点是__和__。ES6提供了__关键字来定义类。class是语法糖，背后还是用过构造函数和原型实现的。</summary>
+  <summary>前面描述了很多在ES5中模仿类行为的方式。缺点是__和__。ES6提供了__关键字来定义类。class是语法糖，背后还是用构造函数和原型实现的。</summary>
   <div>语法冗长</div>
   <div>混乱</div>
   <div>class</div>
@@ -2596,3 +2590,68 @@
 #### 8.4.2.2 Understanding Classes as Special Functions
 
 ### 8.4.3 Instance, Prototype, and Class Members
+
+#### 8.4.3.1 Instance Members
+
+<details>
+  <summary>constructor函数返回的对象为__对象。</summary>
+  <div>实例</div>
+</details>
+
+#### 8.4.3.2 Prototype Methods and Accessors
+
+<details>
+  <summary>类__中定义的所有内容都会添加到原型对象上。</summary>
+  <div>主体</div>
+</details>
+
+#### 8.4.3.3 Static Class Methods and Accessors
+
+<details>
+  <summary>如果为静态成员，则直接添加到__对象上。</summary>
+  <div>构造函数</div>
+</details>
+
+#### 8.4.3.4 Non-Function Prototype and Class Members
+
+<details>
+  <summary>也可以在类定义__把属性添加到类或类的原型。一般不这么做是因为，实例需要通过this关键词引用数据，在类定义之外的属性`this`无法访问。</summary>
+  <div>之外</div>
+</details>
+
+#### 8.4.3.5 Iterator and Generator Methods
+
+<details>
+  <summary>由于支持生成器方法，因此可以通过添加__迭代器来使类实例可迭代。例子：</summary>
+  <div>默认</div>
+  <pre>
+  class Person {
+    constructor() {
+      this.nicknames = ['Jack', 'Jake', 'J-Dog'];
+    }
+    *[Symbol.iterator]() {
+      yield* this.nicknames.entries();
+    }
+  }
+  let p = new Person();
+  for (let [idx, nickname] of p) {
+    console.log(nickname);
+  }
+  </pre>
+</details>
+
+### 8.4.4 Inheritance
+
+<details>
+  <summary>在前面，我们介绍了使用ES5机制实现继承的繁琐细节。尽管ES6类继承使用了新的语法，但它仍然在背后使用__。</summary>
+  <div>原型链</div>
+</details>
+
+#### 8.4.4.1 Inheritance Basics
+
+<details>
+  <summary>类通过__关键字实现继承。</summary>
+  <div>extends</div>
+</details>
+
+#### 8.4.4.2 Constructors, HomeObjects, and super()

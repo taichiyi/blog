@@ -411,4 +411,54 @@
   </details>
 </details>
 
-## CHAPTER 8 对象，类和面向对象编程
+# CHAPTER 8 对象，类和面向对象编程
+
+## 8.4 Classes
+
+### 8.4.3 Instance, Prototype, and Class Members
+
+#### 8.4.3.2 Prototype Methods and Accessors
+
+<details open>
+  <summary>下面代码打印值为：</summary>
+  <pre>
+    &lt;script>
+      class Foo {
+        constructor() {
+          this.desc = 'tcy'
+        }
+        age = 3
+        getName = () => {
+          return this.desc;
+        }
+        getAge() {
+          return this.age;
+        }
+        set name(newName) {
+          this.name_ = newName;
+        }
+        get name() {
+          return this.name_;
+        }
+      }
+      const ins = new Foo;
+      console.log(Foo.prototype.hasOwnProperty('age'));
+      console.log(Foo.prototype.hasOwnProperty('getName'));
+      console.log(Foo.prototype.hasOwnProperty('getAge'));
+      console.log(Foo.prototype.hasOwnProperty('name'));
+      console.log(ins.hasOwnProperty('name'));
+    &lt;/script>
+  </pre>
+  <details>
+    <summary>答案</summary>
+    <div>false</div>
+    <div>false</div>
+    <div>true</div>
+    <div>true</div>
+    <div>false</div>
+    <pre>
+    知识点:
+    - class
+    </pre>
+  </details>
+</details>
