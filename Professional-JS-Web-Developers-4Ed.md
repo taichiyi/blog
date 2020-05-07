@@ -2714,4 +2714,11 @@
   <div>在继承中进行组合</div>
 </details>
 
-# 第9章  PROXIES AND REFLECT
+# 第9章 PROXIES AND REFLECT
+
+<details>
+  <summary>无法通过__让ES6以前的编译器支持代理功能。</summary>
+  <div>垫片(polyfill)</div>
+</details>
+
+## 9.1 Proxy Fundamentals
