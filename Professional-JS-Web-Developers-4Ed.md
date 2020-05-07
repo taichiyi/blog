@@ -1651,14 +1651,14 @@
 </details>
 
 <details>
-  <summary>Mapb迭代时将以插入顺序的。__值可以用作键或值。</summary>
+  <summary>Map迭代时将以插入顺序迭代。__值可以用作键或值。</summary>
   <div>任何</div>
 </details>
 
 <details>
   <summary>ES2015中有四种相等算法: ①__；②__；③__；④__。</summary>
+  <div>宽松相等</div>
   <div>严格相等</div>
-  <div>非严格相等</div>
   <div>同值相等</div>
   <div>零值相等</div>
 </details>
@@ -1673,7 +1673,7 @@
 <details>
   <summary>同值相等：__()方法可以实现。+0和-0__等，+0和0__等，-0和0__等，NaN和NaN__等。当值为0时，判断符号位。</summary>
   <div>Object.is</div>
-  <div>相</div>
+  <div>不相</div>
   <div>相</div>
   <div>不相</div>
   <div>相</div>
@@ -1696,11 +1696,11 @@
 
 <details>
   <summary>Map和Object的区别主要有6个方面：__、__、__、__、__、__。</summary>
-  <div>意外</div>
-  <div>类型</div>
-  <div>顺序</div>
-  <div>数量</div>
-  <div>迭代</div>
+  <div>意外(Object有原型个干扰)</div>
+  <div>类型(Map的键可以是任意类型)</div>
+  <div>顺序(Map可以按照顺序迭代)</div>
+  <div>数量(Map方便获取数量)</div>
+  <div>迭代(Map方便迭代)</div>
   <div>性能</div>
 </details>
 
@@ -1712,21 +1712,21 @@
 </details>
 
 <details>
-  <summary>[延伸]“@@iterator”和“Symbol.iterator”的区别，一个意思，“@@iterator”只会出现在__中，“Symbol.iterator”只会出现__中。</summary>
+  <summary>[延伸]“@@iterator”和“Symbol.iterator”的区别：其实是一个意思，“@@iterator”只会出现在__中，“Symbol.iterator”只会出现__中。</summary>
   <div>文档</div>
   <div>代码</div>
 </details>
 
 <details>
-  <summary>[延伸](1/2)Map有2个主要的缺点：①赋值和搜索操作都是 __(n) 的时间复杂度( n 是__的个数)，因为这两个操作都需要__全部整个数组来进行匹配。</summary>
+  <summary>[延伸](1/2)Map有2个主要的缺点：①赋值和搜索操作都是 __(n) 的时间复杂度( n 是__的个数)，因为这两个操作都需要__整个数组来进行匹配。</summary>
   <div>O</div>
   <div>键值对</div>
   <div>遍历</div>
 </details>
 
 <details>
-  <summary>(2/2)②另外一个缺点是可能会导致内存泄漏，因为数组会一直__着每个键和值。这种引用使得垃圾回收算法不能回收处理他们，即使没有其他(除了数组自身)任何引用存在。</summary>
-  <div>引用</div>
+  <summary>(2/2)②另外一个缺点是可能会导致内存泄漏，因为数组会一直__着每个键和值。这种引用使得垃圾回收算法不能回收处理他们，即使键和值没有其他(除了数组自身)任何引用存在。</summary>
+  <div>强引用</div>
 </details>
 
 ## 6.5 The WeakMap Type
@@ -1762,10 +1762,10 @@
 </details>
 
 <details>
-  <summary>Set对象是__类型的__的集合，你可以按照__迭代它的元素。Set 中的元素是__的。</summary>
+  <summary>Set对象是__类型的集合，只有__没有键，你可以按照__顺序迭代它的元素。Set 中的元素是__的。</summary>
   <div>任何</div>
   <div>值</div>
-  <div>插入的顺序</div>
+  <div>插入的</div>
   <div>唯一</div>
 </details>
 
@@ -2722,3 +2722,113 @@
 </details>
 
 ## 9.1 Proxy Fundamentals
+
+### 9.1.1 Creating a Passthrough Proxy
+
+<details>
+  <summary>默认情况下，对代理对象执行的所有操作都将透明地传播到__对象。</summary>
+  <div>目标</div>
+</details>
+
+<details>
+  <summary>代理是使用__构造函数创建的。</summary>
+  <div>Proxy</div>
+</details>
+
+### 9.1.2 Defining Traps(定义陷阱)
+
+<details>
+  <summary>每个处理器对象由零个，一个或多个__组成。</summary>
+  <div>陷阱</div>
+</details>
+
+<details>
+  <summary>“陷阱”一词是从操作系统领域借来的，陷阱是__流中的__中断。</summary>
+  <div>程序</div>
+  <div>同步</div>
+</details>
+
+### 9.1.3 Trap Parameters and the Reflect API
+
+<details>
+  <summary>每个处理器对象的__(target, property, receiver)方法用于拦截对象的读取属性操作。</summary>
+  <div>get</div>
+</details>
+
+<details>
+  <summary>陷阱方法的原始行为被包装在全局__对象上的同名方法中。例如：</summary>
+  <div>Reflect</div>
+  <pre>
+  const handler = {
+    get: Reflect.get
+  };
+  </pre>
+</details>
+
+<details>
+  <summary>如果希望创建一个真正的直通代理来捕获所有可用方法并将每个方法转发给其对应的__ API函数，则不需要定义显式处理程序对象，例如：</summary>
+  <div>Reflect</div>
+  <pre>
+  const target = {
+    foo: 'bar'
+  };
+  const proxy = new Proxy(target, Reflect);
+  </pre>
+</details>
+
+### 9.1.4 Trap Invariants
+
+<details>
+  <summary>如果目标对象具有不可配置和不可写的数据属性，则当您尝试从陷阱中返回与目标对象属性不同的值时，将引发__。</summary>
+  <div>TypeError</div>
+</details>
+
+### 9.1.5 Revocable Proxies
+
+<details>
+  <summary>new Proxy（）创建的普通代理，目标对象和代理对象的关联将持续到__的生存期。</summary>
+  <div>代理对象</div>
+</details>
+
+<details>
+  <summary>如果想解除关联，可以使用Proxy的__方法创建代理对象。</summary>
+  <div>revocable</div>
+</details>
+
+### 9.1.6 Utility of the Reflect API
+
+#### 9.1.6.3 Supplanting Operators with First-Class Functions
+
+<details>
+  <summary>Reflect.__() 获取对象身上某个属性的值。</summary>
+  <div>get</div>
+</details>
+
+<details>
+  <summary>Reflect.__() 将值分配给属性的函数。返回一个Boolean。</summary>
+  <div>set</div>
+</details>
+
+<details>
+  <summary>Reflect.__() 判断一个对象是否存在某个属性，和 in 运算符 的功能完全相同。</summary>
+  <div>has</div>
+</details>
+
+<details>
+  <summary>Reflect.__() 作为函数的delete操作符，相当于执行 delete target[name]。</summary>
+  <div>deleteProperty</div>
+</details>
+
+<details>
+  <summary>Reflect.__() 对构造函数进行 new 操作，相当于执行 new target(...args)。</summary>
+  <div>construct</div>
+</details>
+
+#### 9.1.6.4 Safe Function Application
+
+<details>
+  <summary>如果Function.prototype.apply方法可能被重写，为了避免重写导致错误，可以使用___.apply（myFunc，thisVal，argumentsList）。</summary>
+  <div>Reflect</div>
+</details>
+
+### 9.1.8 Proxy Considerations and Shortcomings

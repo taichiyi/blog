@@ -88,6 +88,11 @@
 </details>
 
 <details>
+  <summary>不同的浏览器和CDN，对URI的长度是有不同的限制的，如果想兼容所有，请把URI的长度控制在__字节以下。</summary>
+  <div>2000</div>
+</details>
+
+<details>
   <summary>URN和URL是URI的__集。URN以__前缀开头。</summary>
   <div>urn:</div>
 </details>
