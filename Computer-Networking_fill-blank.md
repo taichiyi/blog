@@ -263,9 +263,13 @@
 </details>
 
 <details>
+  <summary>[延伸]首部行只支持__字符集。</summary>
+  <div>ASCII</div>
+</details>
+
+<details>
   <summary>实体首部行(和附加的回车和换行)后有一个__。</summary>
   <div>“实体主体”(entity body)</div>
-  <div></div>
 </details>
 
 <details>
@@ -279,6 +283,11 @@
   <summary>[延伸]实体主体主要由2个实体首部定义:__和__定义。</summary>
   <div>Content-Type</div>
   <div>Content-Length</div>
+</details>
+
+<details>
+  <summary>[延伸]实体主体的编码方式由实体首部__指定。</summary>
+  <div>Content-Type</div>
 </details>
 
 <details>

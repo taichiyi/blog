@@ -83,6 +83,11 @@
 </details>
 
 <details>
+  <summary>URI只支持__字符集。</summary>
+  <div>ASCII</div>
+</details>
+
+<details>
   <summary>URN和URL是URI的__集。URN以__前缀开头。</summary>
   <div>urn:</div>
 </details>
@@ -325,11 +330,6 @@
 <details>
   <summary>单工(__): 只有一个方向能发送数据。</summary>
   <div>单向工作</div>
-</details>
-
-<details>
-  <summary>HTTP报文只支持__编码。</summary>
-  <div>ASCII</div>
 </details>
 
 <details>

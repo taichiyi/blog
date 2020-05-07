@@ -1525,7 +1525,7 @@
 </details>
 
 <details>
-  <summary>(ES6)由于使用new Array()生成的数组，在浏览器中行为不一致，所以新加了个Array.__()方法用来创建数组。</summary>
+  <summary>(ES6)由于使用new Array()生成的数组，在浏览器中行为不一致，所以新加了个Array.__(element0[, ...[, elementN]])方法用来创建数组。</summary>
   <div>of</div>
 </details>
 
@@ -1540,21 +1540,21 @@
 
 <details>
   <summary>在ES6中，数组原型上公开了三种新方法，可以查看数组的内容：__（），__（）和__（）。将返回数组的__。</summary>
-  <div>keys</div>
-  <div>values</div>
-  <div>entrys</div>
+  <div>Array.prototype.keys</div>
+  <div>Array.prototype.values</div>
+  <div>Array.prototype.entrys</div>
   <div>迭代器</div>
 </details>
 
 ### 6.2.6 Copy and Fill Methods
 
 <details>
-  <summary>(ES6)如果想使用一个固定的值覆盖现有数组的元素，可以使用__()。</summary>
+  <summary>(ES6)如果想使用一个固定的值覆盖现有数组从起始索引到终止索引内的全部元素，可以使用__()。</summary>
   <div>Array.prototype.fill</div>
 </details>
 
 <details>
-  <summary>(ES6)如果想浅复制数组的一部分到自身的另一个位置，可以使用__()。</summary>
+  <summary>(ES6)如果想浅复制数组的一部分到自身的另一个位置，可以使用__(target[, start[, end]])。</summary>
   <div>Array.prototype.copyWithin</div>
 </details>
 
@@ -1607,8 +1607,8 @@
 #### 6.2.12.2 Predicate Search
 
 <details>
-  <summary>__() 方法返回数组中满足提供的测试函数的第一个元素的值。否则返回__。</summary>
-  <div>find</div>
+  <summary>__(callback[, thisArg]) 方法返回数组中满足提供的测试函数的第一个元素的值。否则返回__。</summary>
+  <div>Array.prototype.find</div>
   <div>undefined</div>
 </details>
 
@@ -1616,11 +1616,11 @@
 
 <details>
   <summary>ECMAScript为数组定义了五个迭代(iterator)方法：_1_、_2_、_3_、_4_、_5_。</summary>
-  <div>every</div>
-  <div>some</div>
-  <div>map</div>
-  <div>forEach</div>
-  <div>filter</div>
+  <div>Array.prototype.every</div>
+  <div>Array.prototype.some</div>
+  <div>Array.prototype.map</div>
+  <div>Array.prototype.forEach</div>
+  <div>Array.prototype.filter</div>
 </details>
 
 ### 6.2.14 Reduction Methods
