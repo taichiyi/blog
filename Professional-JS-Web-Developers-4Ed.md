@@ -1797,7 +1797,7 @@
 </details>
 
 <details>
-  <summary>展开语法和 __() 行为一致, 执行的都是__拷贝(遍历__层)。</summary>
+  <summary>展开语法和 __(target, ...sources) 行为一致, 执行的都是__拷贝(遍历__层)。</summary>
   <div>Object.assign</div>
   <div>浅</div>
   <div>一</div>
@@ -2660,3 +2660,58 @@
   <summary>在构造函数内部使用__关键字来控制何时调用父类构造函数。</summary>
   <div>super</div>
 </details>
+
+<details>
+  <summary>在静态方法内部还可以使用__来调用在继承的类上定义的静态方法。例子：</summary>
+  <div>super</div>
+  <pre>
+  class Vehicle {
+    static identify() {
+      console.log('vehicle');
+    }
+  }
+  class Bus extends Vehicle {
+    static identify() {
+      super.identify();
+    }
+  }
+  Bus.identify(); // vehicle
+  </pre>
+</details>
+
+#### 8.4.4.3 Abstract Base Classes(抽象基类)
+
+<details>
+  <summary>__属性允许你检测函数或构造方法是否是通过new运算符被调用的。</summary>
+  <div>new.target</div>
+</details>
+
+<details>
+  <summary>在通过new运算符被初始化的函数或__中，new.target返回一个指向构造方法或函数的引用。在普通的函数调用中，new.target的值是__。</summary>
+  <div>构造函数</div>
+  <div>undefined</div>
+</details>
+
+<details>
+  <summary>如果你想定义一个只能被继承，不能直接实例化的类。可以使用__实现。</summary>
+  <div>new.target</div>
+</details>
+
+#### 8.4.4.5 Class Mixins(继承多个类)
+
+<details>
+  <summary>由于extends后可以接表达式，可以通过在表达式内链接多个mixin元素来实现__模式。</summary>
+  <div>mixin</div>
+</details>
+
+<details>
+  <summary>如果某个类Person需要合并mixins A，B和C，则您将以某种形式设计一个模式，该模式将B配置为从A继承，C配置为从B继承，__配置为从C继承。</summary>
+  <div>Person</div>
+</details>
+
+<details>
+  <summary>许多JavaScript框架，尤其是React，正在从mixin(混合)模式向组合结构转变（以将方法提取到单独的类和实用程序中的形式，并将这些零碎的部分合并而无需使用继承）。这反映了众所周知的“__”的软件原理，许多人认为该原理可提供出色的灵活性和代码设计。</summary>
+  <div>在继承中进行组合</div>
+</details>
+
+# 第9章  PROXIES AND REFLECT
