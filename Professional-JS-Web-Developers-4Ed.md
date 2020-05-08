@@ -3028,3 +3028,36 @@
   <summary>Proxy开启了__编程和抽象的全新领域。</summary>
   <div>元</div>
 </details>
+
+# 第10章 FUNCTIONS
+
+<details>
+  <summary>定义函数的方式有3中：__、__和__。</summary>
+  <div>函数声明</div>
+  <div>函数表达式</div>
+  <div>Function构造函数</div>
+</details>
+
+<details>
+  <summary>不建议使用Function构造函数语法定义函数，因为它会引起代码的双重解释（第一次是__的解释，第二次是对__的解释），因此会影响性能。</summary>
+  <div>对常规ECMAScript代码</div>
+  <div>传递给构造函数的字符串</div>
+</details>
+
+## 10.1 Arrow Functions
+
+<details>
+  <summary>箭头函数提供了更__语法。</summary>
+  <div>简洁</div>
+</details>
+
+<details>
+  <summary>如果只有__个参数，则箭头函数不需要括号。</summary>
+  <div>一</div>
+</details>
+
+<details>
+  <summary>如果箭头函数不使用花括号的话，只能使用__个表达式，__将隐式返回。</summary>
+  <div>一</div>
+  <div>该表达式的值</div>
+</details>
