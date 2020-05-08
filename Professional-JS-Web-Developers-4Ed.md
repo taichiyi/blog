@@ -1756,6 +1756,11 @@
   <div>枚举</div>
 </details>
 
+<details>
+  <summary>可以使用WeakMap实现对象的__变量。</summary>
+  <div>私有</div>
+</details>
+
 ## 6.6 The Set Type
 
 <details>
@@ -2834,3 +2839,55 @@
 </details>
 
 ### 9.1.8 Proxy Considerations and Shortcomings
+
+#### 9.1.8.1 ’this’ Inside a Proxy
+
+<details>
+  <summary>在代理对象调用方法时，this总是指向__对象，而不是代理对象。</summary>
+  <div>目标</div>
+</details>
+
+#### 9.1.8.2 Proxies and Internal Slots
+
+<details>
+  <summary>一个典型的例子是日期类型。根据ECMAScript规范，在执行方法时，日期类型依赖于this值上名为[[NumberData]]的“__”的存在。因为内部插槽在代理上不存在，并且由于无法通过正常的get和set操作访问这些内部插槽值，否则代理可能会拦截并重定向到目标，因此该方法将抛出TypeError。</summary>
+  <div>内部插槽(Internal Slots)</div>
+</details>
+
+## 9.2 Proxy Traps and Reflect Methods
+
+<details>
+  <summary>代理能够__13种不同的基本操作。</summary>
+  <div>捕获</div>
+</details>
+
+### 9.2.1 get()
+
+<details>
+  <summary>从代理对象__的属性时，会调用get(target, property, receiver)陷阱。其对应的Reflect API方法是__（）。</summary>
+  <div>读取</div>
+  <div>Reflect.get</div>
+</details>
+
+### 9.2.2 set()
+
+<details>
+  <summary>给代理对象的属性分配值时，会调用set(target, property, value, receiver)陷阱。其对应的Reflect API方法是__（）。</summary>
+  <div>读取</div>
+  <div>Reflect.set</div>
+</details>
+
+### 9.2.3 has()
+
+<details>
+  <summary>对代理对象使用 __运算符时，会调用has(target, propertyKey)陷阱。其对应的Reflect API方法是__（）。</summary>
+  <div>in</div>
+  <div>Reflect.has</div>
+</details>
+
+<details>
+  <summary>__语句也可以触发has()陷阱。</summary>
+  <div>with</div>
+</details>
+
+### 9.2.4 defineProperty()
