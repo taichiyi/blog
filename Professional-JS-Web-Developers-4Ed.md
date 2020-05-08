@@ -1532,18 +1532,17 @@
 ### 6.2.4 Detecting Arrays
 
 <details>
-  <summary>instanceof的一个问题是它假设只有一个全局执行上下文。没有考虑网页中有多个frame的情况。为此ECMAScript新增了一个__()方法用来解决这个问题。</summary>
+  <summary>x instanceof Array在大多数情况下可以用来判断x是否为数组，但是instanceof的一个问题是它假设只有一个全局执行上下文。没有考虑网页中有多个frame的情况。为此ECMAScript新增了一个__()方法用来解决这个问题。</summary>
   <div>Array.isArray</div>
 </details>
 
 ### 6.2.5 Iterator Methods
 
 <details>
-  <summary>在ES6中，数组原型上公开了三种新方法，可以查看数组的内容：__（），__（）和__（）。将返回数组的__。</summary>
+  <summary>在ES6中，数组原型上公开了三种新方法，可以查看数组的内容：__（），__（）和__（）。将返回数组的迭代器。</summary>
   <div>Array.prototype.keys</div>
   <div>Array.prototype.values</div>
   <div>Array.prototype.entrys</div>
-  <div>迭代器</div>
 </details>
 
 ### 6.2.6 Copy and Fill Methods
@@ -1607,9 +1606,12 @@
 #### 6.2.12.2 Predicate Search
 
 <details>
-  <summary>__(callback[, thisArg]) 方法返回数组中满足提供的测试函数的第一个元素的值。否则返回__。</summary>
+  <summary>__(callback(element[, index[, array]])[, thisArg]) 方法返回数组中满足提供的测试函数的第一个元素的值。否则返回__。例子：</summary>
   <div>Array.prototype.find</div>
   <div>undefined</div>
+  <pre>
+  [5, 12, 8, 130, 44].find(element => element > 10) // 12
+  </pre>
 </details>
 
 ### 6.2.13 Iterative Methods
@@ -1636,9 +1638,9 @@
 
 <details>
   <summary>__() 方法对数组中的每个元素执行一个reducer函数(__序执行)，将其结果汇总为单个返回值。反之，降序使用__()方法</summary>
-  <div>reduce</div>
+  <div>Array.prototype.reduce</div>
   <div>升</div>
-  <div>reduceRight</div>
+  <div>Array.prototype.reduceRight</div>
 </details>
 
 ## 6.3 Typed Arrays <!-- TODO 不理解使用场景 -->
@@ -1671,7 +1673,7 @@
 </details>
 
 <details>
-  <summary>同值相等：__()方法可以实现。+0和-0__等，+0和0__等，-0和0__等，NaN和NaN__等。当值为0时，判断符号位。</summary>
+  <summary>同值相等：__(value1, value2)方法可以实现。+0和-0__等，+0和0__等，-0和0__等，NaN和NaN__等。当值为0时，判断符号位。</summary>
   <div>Object.is</div>
   <div>不相</div>
   <div>相</div>
@@ -1725,7 +1727,7 @@
 </details>
 
 <details>
-  <summary>(2/2)②另外一个缺点是可能会导致内存泄漏，因为数组会一直__着每个键和值。这种引用使得垃圾回收算法不能回收处理他们，即使键和值没有其他(除了数组自身)任何引用存在。</summary>
+  <summary>(2/2)②另外一个缺点是可能会导致内存泄漏，因为数组会一直__着每个引用类型的键和值。这种引用使得垃圾回收算法不能回收处理他们，即使键和值没有其他(除了数组自身)任何引用存在。</summary>
   <div>强引用</div>
 </details>
 
