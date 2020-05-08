@@ -2728,6 +2728,16 @@
   <div>垫片(polyfill)</div>
 </details>
 
+<details>
+  <summary>Proxy 属于一种“元编程”（meta programming），即对__进行编程。</summary>
+  <div>编程语言</div>
+</details>
+
+<details>
+  <summary>在__对象之前加了一层。</summary>
+  <div>目标</div>
+</details>
+
 ## 9.1 Proxy Fundamentals
 
 ### 9.1.1 Creating a Passthrough Proxy
@@ -2872,17 +2882,15 @@
 ### 9.2.2 set()
 
 <details>
-  <summary>给代理对象的属性分配值时，会调用set(target, property, value, receiver)陷阱。其对应的Reflect API方法是__（）。</summary>
+  <summary>给代理对象的属性分配值时，会调用set(target, property, value, receiver)陷阱。其对应的Reflect API方法是Reflect.set（）。</summary>
   <div>读取</div>
-  <div>Reflect.set</div>
 </details>
 
 ### 9.2.3 has()
 
 <details>
-  <summary>对代理对象使用 __运算符时，会调用has(target, propertyKey)陷阱。其对应的Reflect API方法是__（）。</summary>
+  <summary>对代理对象使用 __运算符时，会调用has(target, propertyKey)陷阱。其对应的Reflect API方法是Reflect.has（）。</summary>
   <div>in</div>
-  <div>Reflect.has</div>
 </details>
 
 <details>
@@ -2891,3 +2899,132 @@
 </details>
 
 ### 9.2.4 defineProperty()
+
+<details>
+  <summary>Object.__()对代理对象使用时，会调用defineProperty(target, propertyKey, attributes)陷阱。其对应的Reflect API方法是Reflect.defineProperty（）。</summary>
+  <div>defineProperty</div>
+</details>
+
+<details>
+  <summary>静态方法 Reflect.defineProperty() 基本等同于 Object.defineProperty() 方法，唯一不同是返回 __ 值。</summary>
+  <div>Boolean</div>
+</details>
+
+### 9.2.5 getOwnPropertyDescriptor()
+
+<details>
+  <summary>静态方法 Reflect.getOwnPropertyDescriptor() 等同于 Object.__() 方法。</summary>
+  <div>getOwnPropertyDescriptor</div>
+</details>
+
+### 9.2.6 deleteProperty()
+
+<details>
+  <summary>对代理对象使用 __运算符时，会调用deleteProperty(target, propertyKey)陷阱。其对应的Reflect API方法是Reflect.deleteProperty（）。</summary>
+  <div>delete</div>
+</details>
+
+### 9.2.7 ownKeys()
+
+<details>
+  <summary>Object.__()对代理对象使用时，会调用ownKeys(target)陷阱。其对应的Reflect API方法是Reflect.ownKeys（）。</summary>
+  <div>keys</div>
+</details>
+
+### 9.2.8 getPrototypeOf()
+
+<details>
+  <summary>当读取代理对象的__时，会调用getPrototypeOf(target)陷阱。其对应的Reflect API方法是Reflect.getPrototypeOf()。</summary>
+  <div>原型</div>
+</details>
+
+### 9.2.9 setPrototypeOf()
+
+<details>
+  <summary>Object.setPrototypeOf()对代理对象使用时，会调用setPrototypeOf(target, prototype)陷阱。其对应的Reflect API方法是Reflect.setPrototypeOf（）。</summary>
+  <div>keys</div>
+</details>
+
+### 9.2.10 isExtensible()
+
+<details>
+  <summary>Object.__()对代理对象使用时，会调用isExtensible(target)陷阱。</summary>
+  <div>isExtensible</div>
+</details>
+
+<details>
+  <summary>Object.isExtensible() 方法判断一个对象是否是可__的（是否可以在它上面__）。</summary>
+  <div>扩展</div>
+  <div>添加新的属性</div>
+</details>
+
+### 9.2.11 preventExtensions()
+
+<details>
+  <summary>Object.__()对代理对象使用时，会调用preventExtensions(target)陷阱。</summary>
+  <div>preventExtensions</div>
+</details>
+
+<details>
+  <summary>Object.preventExtensions()方法让一个对象变为，也就是永远不能再添加新的属性。</summary>
+  <div>不可扩展</div>
+</details>
+
+### 9.2.12 apply()
+
+<details>
+  <summary>代理对象中的方法被调用时，会调用__(target, thisArgument, argumentsList)陷阱。</summary>
+  <div>apply</div>
+</details>
+
+### 9.2.13 construct()
+
+<details>
+  <summary>new 操作符用在代理对象时，会调用__(target, argumentsList[, newTarget])陷阱。</summary>
+  <div>construct</div>
+</details>
+
+## 9.3 Proxy Patterns
+
+<details>
+  <summary></summary>
+  <div>construct</div>
+</details>
+
+### 9.3.1 Tracking Property Access
+
+<details>
+  <summary>可以通过Proxy可以实现对代理对象__访问的追踪。</summary>
+  <div>属性</div>
+</details>
+
+### 9.3.2 Hidden Properties
+
+<details>
+  <summary>可以通过Proxy可以实现对代理对象指定属性的隐__。</summary>
+  <div>藏</div>
+</details>
+
+### 9.3.3 Property Validation
+
+<details>
+  <summary>因为所有分配都必须通过__（）陷阱，所以您可以基于预期值的内容来允许或拒绝分配。</summary>
+  <div>set</div>
+</details>
+
+### 9.3.4 Function and Constructor Parameter Validation
+
+### 9.3.5 Data Binding and Observables
+
+<details>
+  <summary>可以通过Proxy可以实现__绑定和__模式</summary>
+  <div>双向数据</div>
+  <div>观察者</div>
+</details>
+
+## 9.4 Summary
+
+<details>
+  <summary>Proxy开启了__编程和抽象的全新领域。</summary>
+  <div>元</div>
+</details>
