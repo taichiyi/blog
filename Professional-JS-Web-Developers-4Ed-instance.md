@@ -462,3 +462,37 @@
     </pre>
   </details>
 </details>
+
+## 10.3 Understanding Arguments(理解Arguments对象)
+
+<details open>
+  <summary>下面代码打印值为：</summary>
+  <pre>
+    &lt;script>
+      function foo(a) {
+        a = 3;
+        console.log(a);
+        console.log(arguments[0]);
+      }
+      function foo1(a) {
+        'use strict';
+        a = 3;
+        console.log(a);
+        console.log(arguments[0]);
+      }
+      foo(1);
+      foo1(1);
+    &lt;/script>
+  </pre>
+  <details>
+    <summary>答案</summary>
+    <div>3</div>
+    <div>3</div>
+    <div>3</div>
+    <div>1</div>
+    <pre>
+    知识点:
+    - arguments对象
+    </pre>
+  </details>
+</details>

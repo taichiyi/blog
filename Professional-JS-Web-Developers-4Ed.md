@@ -1522,7 +1522,7 @@
 ### 6.2.1 Creating Arrays
 
 <details>
-  <summary>(ES6)如果把伪数组对象和可迭代对象转为数组，可以使用__()方法。</summary>
+  <summary>(ES6)如果把伪数组对象和可迭代对象转为数组，可以使用__(arrayLike [, mapFn [, thisArg]])方法。</summary>
   <div>Array.from</div>
 </details>
 
@@ -1793,7 +1793,7 @@
 </details>
 
 <details>
-  <summary>展开运算符可以将一个可__的对象在函数调用的位置展开成为多个__,或者在数组字面量中展开成多个数组__。</summary>
+  <summary>展开运算符可以将一个可__的对象在函数调用的位置展开成为多个__,或者在数组字面量中展开成多个数组__。还可以在构造字面量对象时, 将对象表达式按key-value的方式展开。</summary>
   <div>迭代</div>
   <div>参数</div>
   <div>元素</div>
@@ -3062,4 +3062,142 @@
   <summary>如果箭头函数不使用花括号的话，只能使用__个表达式，__将隐式返回。</summary>
   <div>一</div>
   <div>该表达式的值</div>
+</details>
+
+<details>
+  <summary>箭头函数中不允许使用__、__和__。不能作为__。</summary>
+  <div>arguments</div>
+  <div>super</div>
+  <div>new.target</div>
+  <div>构造函数</div>
+</details>
+
+<details>
+  <summary>箭头语法创建的函数对象未定义__。</summary>
+  <div>原型(prototype)</div>
+</details>
+
+<details>
+  <summary>箭头语法与this之间的关系???</summary>
+  <div></div>
+</details>
+
+## 10.2 Function Names
+
+<details>
+  <summary>函数名称类似于变量，都有一个对应的__，指针指向某个内存地址。这意味着一个函数可以有多个__。</summary>
+  <div>指针</div>
+  <div>名称</div>
+</details>
+
+<details>
+  <summary>通过函数声明定义函数时，如果没有定义函数名称，则称这个函数为__函数。</summary>
+  <div>匿名</div>
+</details>
+
+<details>
+  <summary>如果函数是一个getter和setter或通过bind()实例化，则会在函数名前加一个对应的标识。例如：“bound foo” “get foo”</summary>
+  <div>匿名</div>
+</details>
+
+## 10.3 Understanding Arguments(理解Arguments对象)
+
+<details>
+  <summary>ECMAScript中函数的参数在内部表示为__。例子：</summary>
+  <div>数组</div>
+  <pre>
+  function foo(a,b) {
+    // 相当于
+    arguments = [{},1,'a',false];
+    let [a,b] = arguments;
+    //
+    console.log(a); // {}
+    console.log(b); // 1
+  }
+  foo({},1,'a',false);
+  </pre>
+</details>
+
+<details>
+  <summary>arguments对象的行为类似于数组（尽管它不是__的实例）。</summary>
+  <div>Array</div>
+</details>
+
+<details>
+  <summary>在严格模式下，arguments对象的值不再与函数的__之间共享。</summary>
+  <div>实际形参</div>
+</details>
+
+<details>
+  <summary>在严格模式下，arguments关键字被__会报SyntaxError。</summary>
+  <div>赋值</div>
+</details>
+
+### 10.3.1 Arguments in Arrow Functions
+
+<details>
+  <summary>使用箭头符号定义函数时，无法使用__关键字访问传递给该函数的参数。 </summary>
+  <div>arguments</div>
+</details>
+
+## 10.4 No Overloading(没有重载)
+
+<details>
+  <summary>重载：一个函数的有两个定义，也就是函数名相同，而__不同。</summary>
+  <div>签名（接受的参数的类型和数量）</div>
+</details>
+
+## 10.5 Default Parameter Values
+
+<details>
+  <summary>函数默认参数允许在__或__被传入时使用默认形参。</summary>
+  <div>没有值</div>
+  <div>undefined</div>
+</details>
+
+<details>
+  <summary>在函数被调用时，参数默认值会被解析，所以等号(=)后面是一个__。</summary>
+  <div>表达式</div>
+</details>
+
+<details>
+  <summary>默认参数可用于后面的默认参数吗?</summary>
+  <div>是</div>
+</details>
+
+### 10.5.1 Default Parameter Scope and Temporal Dead Zone
+
+## 10.6 Spread Arguments and Rest Parameters
+
+### 10.6.1 Spread Arguments
+
+### 10.6.2 Rest Parameter
+
+<details>
+  <summary>可以使用展开运算符，将可变长度的形式参数范围组合到单个__中。</summary>
+  <div>数组</div>
+</details>
+
+<details>
+  <summary>由于rest参数的大小可变，因此您只能将其用作__一个形式参数。</summary>
+  <div>最后</div>
+</details>
+
+## 10.7 Function Declarations versus Function Expressions(函数声明与函数表达式的比较)
+
+<details>
+  <summary>在对代码进行__时，JavaScript引擎会首先进行函数声明，并将其拉到__的顶部。</summary>
+  <div>评估</div>
+  <div>源树</div>
+</details>
+
+## 10.8 Functions as Values
+
+## 10.9 Function Internals
+
+<details>
+  <summary>在ES5中，函数内部有两个特殊的对象__和__。ES6中新加了一个__属性。</summary>
+  <div>arguments</div>
+  <div>this</div>
+  <div>new.target</div>
 </details>
