@@ -713,9 +713,10 @@
 </details>
 
 <details>
-  <summary>特殊值__和__，为按位运算的操作数时，都被视为等于0。</summary>
+  <summary>特殊值__和__，为按位运算的操作数时，都被视为等于__。</summary>
   <div>NaN</div>
   <div>Infinity</div>
+  <div>0</div>
 </details>
 
 <details>
@@ -891,7 +892,7 @@
 #### 3.5.4.3 Modulus
 
 <details>
-  <summary>取模（__）运算__号表示。</summary>
+  <summary>取模（__）运算用__号表示。</summary>
   <div>余数</div>
   <div>百分(%)</div>
 </details>
@@ -899,7 +900,7 @@
 ### 3.5.5 Exponentiation Operator
 
 <details>
-  <summary>求幂运算__号表示。ES7新增了Math.__()，与其行为等价。</summary>
+  <summary>求幂运算用__号表示。ES7新增了Math.__()，与其行为等价。</summary>
   <div>**</div>
   <div>pow</div>
 </details>
@@ -1437,7 +1438,8 @@
 #### 5.5.1.1 URI-Encoding Methods
 
 <details>
-  <summary>因为URI支持全部Unicode，但是HTTP只支持ASCII码所以，URI需要编码，才可以传输。用特殊的UTF-8编码替换所有无效字符。可以使用__()和__()方法进行编码。</summary>
+  <summary>URI只支持__字符集，所以需要对URI进行编码，才可以传输。需要用特殊的UTF-8编码替换所有无效字符。可以使用__()和__()方法进行编码。</summary>
+  <div>ASCII</div>
   <div>encodeURIComponent</div>
   <div>encodeURI</div>
 </details>
