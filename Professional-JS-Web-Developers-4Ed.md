@@ -1862,7 +1862,7 @@
 
 <details>
   <summary>作为ECMAScript 2015的新增功能，迭代协议不是新的内置函数或语法，而是__。只需遵循一些约定，任何对象都可以实现这些协议。有两种协议：__协议和__协议。</summary>
-  <div>协议</div>
+  <div>约定（协议）</div>
   <div>可迭代(iterable)</div>
   <div>迭代器(iterator)</div>
 </details>
@@ -1910,7 +1910,7 @@
 ### 7.3.1 Generator Basics
 
 <details>
-  <summary>具有在单个函数中__和__代码执行的功能。</summary>
+  <summary>生成器函数具有在单个函数中__和__代码执行的功能。</summary>
   <div>暂停</div>
   <div>恢复</div>
 </details>
@@ -1926,7 +1926,7 @@
 </details>
 
 <details>
-  <summary>默认迭代器是__引用的。</summary>
+  <summary>默认迭代器是__引用的。例子：</summary>
   <div>自</div>
   <pre>
   function* generatorFn() {}
@@ -1952,8 +1952,20 @@
 #### 7.3.2.2 Using “yield” for Input and Output
 
 <details>
-  <summary>yield关键字可以输入和输出。输出值通过__(param)方法传入。</summary>
+  <summary>yield关键字可以输入和输出。输出值通过__(param)方法传入。例子：</summary>
   <div>next</div>
+  <pre>
+  function* generatorFn(initial) {
+    console.log(initial); // foo
+    console.log(yield 'a'); // baz
+    console.log(yield 'b'); // qux
+    return 'c';
+  }
+  let generatorObject = generatorFn('foo');
+  console.log(generatorObject.next()); // {value: "a", done: false}
+  console.log(generatorObject.next('baz')); // {value: "b", done: false}
+  console.log(generatorObject.next('qux')); // {value: "c", done: true}
+  </pre>
 </details>
 
 #### 7.3.2.3 Yielding an Iterable
@@ -2007,7 +2019,7 @@
 ### 7.3.4 Early Termination of Generators
 
 <details>
-  <summary>__（）和__（）方法是可用于将生成器对象关闭。</summary>
+  <summary>生成器对象的__（）和__（）方法是可用于将生成器对象关闭。</summary>
   <div>return</div>
   <div>throw</div>
 </details>
@@ -2015,7 +2027,7 @@
 #### 7.3.4.2 The throw() Method
 
 <details>
-  <summary>如果抛出的错误是在生成器函数中捕获的，则错误不会关闭生成器对象并且可以恢复执行。错误处理将__该yield。</summary>
+  <summary>如果抛出的错误是在生成器函数中捕获的，则错误不会关闭生成器对象并且可以恢复执行。错误处理将__这个yield。</summary>
   <div>跳过</div>
 </details>
 
@@ -3164,12 +3176,6 @@
   <summary>默认参数可用于后面的默认参数吗?</summary>
   <div>是</div>
 </details>
-
-### 10.5.1 Default Parameter Scope and Temporal Dead Zone
-
-## 10.6 Spread Arguments and Rest Parameters
-
-### 10.6.1 Spread Arguments
 
 ### 10.6.2 Rest Parameter
 
