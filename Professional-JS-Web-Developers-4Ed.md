@@ -598,7 +598,7 @@
 
 <details>
   <summary>BOM和DOM等__对象(host objects)不归ECMA-262管，所以主机对象不一定从__继承。</summary>
-  <div>主机</div>
+  <div>宿主</div>
   <div>Object</div>
 </details>
 
@@ -1601,8 +1601,8 @@
 
 <details>
   <summary>可以使用__()和__()方法使数组的元素的顺序重新排序。</summary>
-  <div>reverse</div>
-  <div>sort</div>
+  <div>Array.prototype.reverse</div>
+  <div>Array.prototype.sort</div>
 </details>
 
 #### 6.2.12.2 Predicate Search
@@ -1869,6 +1869,7 @@
 
 <details>
   <summary>要成为可迭代对象，一个对象必须实现 @@__ 方法。这意味着对象（包括原型链）必须有一个键为 @@iterator 的属性，可通过常量 __ 访问该属性。</summary>
+  <div>iterator</div>
   <div>Symbol.iterator</div>
 </details>
 
@@ -2703,19 +2704,17 @@
 #### 8.4.4.3 Abstract Base Classes(抽象基类)
 
 <details>
-  <summary>__属性允许你检测函数或构造方法是否是通过new运算符被调用的。</summary>
+  <summary>如果你想定义一个只能被继承，不能直接实例化的类。可以使用__实现。例子：</summary>
   <div>new.target</div>
-</details>
-
-<details>
-  <summary>在通过new运算符被初始化的函数或__中，new.target返回一个指向构造方法或函数的引用。在普通的函数调用中，new.target的值是__。</summary>
-  <div>构造函数</div>
-  <div>undefined</div>
-</details>
-
-<details>
-  <summary>如果你想定义一个只能被继承，不能直接实例化的类。可以使用__实现。</summary>
-  <div>new.target</div>
+  <pre>
+  class Foo {
+    constructor() {
+      if (new.target === Foo) {
+        throw new Error('Foo cannot be directly instantiated');
+      }
+    }
+  }
+  </pre>
 </details>
 
 #### 8.4.4.5 Class Mixins(继承多个类)
@@ -3206,4 +3205,109 @@
   <div>arguments</div>
   <div>this</div>
   <div>new.target</div>
+</details>
+
+### 10.9.1 arguments
+
+<details>
+  <summary>arguments对象还具有一个名为__的属性，该属性是指向拥有arguments对象的函数的指针。</summary>
+  <div>callee</div>
+</details>
+
+### 10.9.2 this
+
+<details>
+  <summary>在标准函数内部，它通常是对__的引用，该函数正在对其进行操作，称为this值。</summary>
+  <div>上下文对象</div>
+</details>
+
+<details>
+  <summary>在箭头函数内部，this引用__的上下文对象。</summary>
+  <div>定义箭头函数表达式</div>
+</details>
+
+### 10.9.4 new.target(ES6)
+
+<details>
+  <summary>__属性允许你检测函数或构造方法是否是通过new运算符被调用的。</summary>
+  <div>new.target</div>
+</details>
+
+<details>
+  <summary>在通过new运算符被初始化的函数或__中，new.target返回一个指向构造方法或函数的引用。在普通的函数调用中，new.target的值是__。</summary>
+  <div>构造函数</div>
+  <div>undefined</div>
+</details>
+
+## 10.10 Function Properties and Methods
+
+<details>
+  <summary>函数的length属性，是__参的数量。</summary>
+  <div>形</div>
+</details>
+
+<details>
+  <summary>有两种附加的函数方法：__（）和__（）。 这两种方法都使用特定的this值调用函数。</summary>
+  <div>apply</div>
+  <div>call</div>
+</details>
+
+<details>
+  <summary>ES5定义了一个名为bind的方法。 bind（thisArg）方法创建一个新的函数实例，实例的this将指向__。</summary>
+  <div>thisArg对象</div>
+</details>
+
+<details>
+  <summary>bind方法实际是封装了__或__方法。</summary>
+  <div>call</div>
+  <div>apply</div>
+</details>
+
+## 10.12 Recursion
+
+<details>
+  <summary>为了避免变量的改变，导致递归函数内部无法访问自身，可以使用arguments对象的__方法，访问函数自身的指针。</summary>
+  <div>callee</div>
+</details>
+
+<details>
+  <summary>但是在__下，无法使用callee方法。可以通过“命名函数表达式”来替代callee。例子：</summary>
+  <div>严格模式</div>
+  <pre>
+   const foo = function foo(num) {
+     if (num > 0) {
+       console.log(num);
+       num--;
+       foo(num)
+     }
+   }
+   foo(10);
+  </pre>
+</details>
+
+## 10.13 Tail Call Optimization(尾部调用优化,TCO)
+
+<details>
+  <summary>ES6 规范还引入了内存管理优化功能，该功能允许JavaScript引擎在满足某些条件时重用__。具体而言，这种优化适用于“尾部调用”，其中外部函数的返回值是内部函数的返回值。</summary>
+  <div>堆栈帧</div>
+</details>
+
+<details>
+  <summary>尾部调用优化的目的是__，尤其是深层递归。</summary>
+  <div>节省内存</div>
+</details>
+
+<details>
+  <summary>引擎认为代码符合__，则会自动优化修改代码。</summary>
+  <div>尾部调用优化</div>
+</details>
+
+### 10.13.1 Tail Call Optimization Requirements
+
+<details>
+  <summary>在满足这4个条件时，引擎才会执行尾部调用优化。1.__; 2.__; 3.__; 4.__。</summary>
+  <div>1. 在严格模式下</div>
+  <div>2. 外部函数的返回值是被调用的尾部调用函数</div>
+  <div>3. 尾部调用函数返回后，无需进一步执行</div>
+  <div>4. 尾部调用函数不是引用外部函数范围内的变量的闭包</div>
 </details>
