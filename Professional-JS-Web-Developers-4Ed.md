@@ -1,4 +1,4 @@
-<!-- markdownlint-disable MD033 MD026 -->
+<!-- markdownlint-disable MD033 MD026 MD037 -->
 # Professional JavaScript For Web Developers 4Ed 填空
 
 哪些知识点必须记?
