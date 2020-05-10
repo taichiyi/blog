@@ -597,7 +597,7 @@
 </details>
 
 <details>
-  <summary>BOM和DOM等__对象(host objects)不归ECMA-262管，所以主机对象不一定从__继承。</summary>
+  <summary>BOM和DOM等__对象(host objects)不归ECMA-262管，所以宿主对象不一定从__继承。</summary>
   <div>宿主</div>
   <div>Object</div>
 </details>
@@ -1069,6 +1069,21 @@
 </details>
 
 <details>
+  <summary>全局执行上下文(Global execution context)是最__的上下文。就像一个圆圈套一个圆圈。</summary>
+  <div>外层</div>
+</details>
+
+<details>
+  <summary>全局执行上下文(Global execution context)的由__环境确定，在web浏览器中全局对象上下文(Global context)被称为Window对象上下文。</summary>
+  <div>宿主</div>
+</details>
+
+<details>
+  <summary>执行上下文中的代码时，将创建变量对象的__。</summary>
+  <div>作用域链</div>
+</details>
+
+<details>
   <summary>每个函数被调用时都有其自己的执行上下文。每当代码__进入函数中时，函数的__就会被压入上下文堆栈。函数完成执行后，将函数上下文__堆栈，将__返回到先前执行的上下文。</summary>
   <div>执行流</div>
   <div>上下文</div>
@@ -1081,7 +1096,7 @@
 <details>
   <summary>有3种执行上下文类型：__、__和__。</summary>
   <div>全局</div>
-  <div>函数</div>
+  <div>局部(函数)</div>
   <div>eval()</div>
 </details>
 
@@ -1827,7 +1842,7 @@
 ## 7.1 Introduction to Iteration
 
 <details>
-  <summary>“迭代(iteration)”是指按__重复执行多次过程，并且通常期望终止。 ES6规范引入了两个高级功能（__器和__器），以实现更简洁，更快和更容易的迭代。</summary>
+  <summary>“迭代(iteration)”是指按__重复执行多次过程。ES6规范引入了两个高级功能（__器和__器），以实现更简洁，更快和更容易的迭代。</summary>
   <div>顺序</div>
   <div>迭代</div>
   <div>生成</div>
@@ -1845,7 +1860,8 @@
 </details>
 
 <details>
-  <summary>ES5引入了Array.prototype.forEach，不理想的地方：①无法__迭代。②仅限于__。</summary>
+  <summary>为了方便数组迭代，ES5引入了Array.prototype.__，不理想的地方：①无法__迭代。②仅限于__。</summary>
+  <div>forEach</div>
   <div>提前终止</div>
   <div>数组</div>
 </details>
@@ -1892,7 +1908,7 @@
 </details>
 
 <details>
-  <summary>可选的__（）方法允许指定仅在迭代器过早关闭时才会执行的行为。触发场景包括 for-of 时的__，__和__。</summary>
+  <summary>迭代器过早关闭时，会执行迭代器对象的__（）方法(可选)。触发场景包括 for-of 时的__，__和__。</summary>
   <div>return</div>
   <div>break</div>
   <div>return</div>
@@ -2137,8 +2153,8 @@
 </details>
 
 <details>
-  <summary>year_ 后面的下划线是一种常用的记号，用于表示应该通过对象__访问的属性。</summary>
-  <div>方法</div>
+  <summary>year_ 后面的下划线是一种常用的记号，用于表示该属性应该通过对应的__方法读写。</summary>
+  <div>访问器</div>
 </details>
 
 ### 8.1.2 Defining Multiple Properties
