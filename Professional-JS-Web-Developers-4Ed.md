@@ -363,7 +363,7 @@
 #### 3.3.2.2 Global Declarations
 
 <details>
-  <summary>与var关键字不同，在全局上下文中使用let声明变量时，变量不会像使用var那样添加到__。</summary>
+  <summary>与var关键字不同，在全局执行上下文中使用let声明变量时，变量不会像使用var那样添加到__。</summary>
   <div>window对象</div>
 </details>
 
@@ -1064,17 +1064,22 @@
 ## 4.2 Execution Context and Scope
 
 <details>
+  <summary>ECMAScript中有很多上下文，其中一种叫__上下文。</summary>
+  <div>执行</div>
+</details>
+
+<details>
   <summary>每个执行上下文都有一个关联的__，所有已定义的变量和函数都存在于该对象上。该对象无法通过代码访问。</summary>
   <div>变量对象</div>
 </details>
 
 <details>
-  <summary>全局执行上下文(Global execution context)是最__的上下文。就像一个圆圈套一个圆圈。</summary>
+  <summary>全局执行上下文(Global execution context)是最__的执行上下文。就像一个圆圈套一个圆圈。</summary>
   <div>外层</div>
 </details>
 
 <details>
-  <summary>全局执行上下文(Global execution context)的由__环境确定，在web浏览器中全局对象上下文(Global context)被称为Window对象上下文。</summary>
+  <summary>全局执行上下文(Global execution context)由__环境决定，在web浏览器中全局执行上下文(Global context)被称为Window执行上下文。</summary>
   <div>宿主</div>
 </details>
 
@@ -1084,11 +1089,214 @@
 </details>
 
 <details>
-  <summary>每个函数被调用时都有其自己的执行上下文。每当代码__进入函数中时，函数的__就会被压入上下文堆栈。函数完成执行后，将函数上下文__堆栈，将__返回到先前执行的上下文。</summary>
+  <summary> 每当代码__进入函数中时，函数的__就会被压入执行上下文栈。函数完成执行后，将函数上下文__栈，将__返回到先前执行上下文。</summary>
   <div>执行流</div>
   <div>上下文</div>
   <div>弹出</div>
   <div>控制权</div>
+</details>
+
+<details>
+  <summary>执行上下文栈就是其他编程语言所说的__栈。</summary>
+  <div>调用栈(call stack)</div>
+</details>
+
+<details>
+  <summary>创建执行上下文有两个阶段：1) __阶段 和 2) __阶段。</summary>
+  <div>创建(Creation Phase)</div>
+  <div>执行(Execution Phase)</div>
+</details>
+
+<details>
+  <summary>“创建阶段”主要发生了两个事情：1)创建__环境组件。2)创建__环境组件。</summary>
+  <div>词法(LexicalEnvironment)</div>
+  <div>变量(VariableEnvironment)</div>
+</details>
+
+<details>
+  <summary>词法环境是保存“标识符—变量”映射的结构。（这里的标识符是指__和__的名称，变量是__值或__值）。例子：</summary>
+  <div>变量</div>
+  <div>函数</div>
+  <div>引用类型</div>
+  <div>原始类型</div>
+  <pre>
+  var a = 20;
+  var b = 40;
+  function foo() {
+    console.log('bar');
+  }
+  // 上面片段的词法环境如下所示：
+  lexicalEnvironment = {
+    a: 20,
+    b: 40,
+    foo: < ref. to foo function >
+  }
+  </pre>
+</details>
+
+<details>
+  <summary>每个词法环境有三个组成部分：1)__ 2)__ 3)__。</summary>
+  <div>环境记录(Environment Record)</div>
+  <div>引用外部环境(Reference to the outer environment)</div>
+  <div>绑定this(This binding)</div>
+</details>
+
+<details>
+  <summary>环境记录：记录了多个__映射__。</summary>
+  <div>标识符</div>
+  <div>到值</div>
+</details>
+
+<!-- 不理解，暂时注释 -->
+<!-- <details>
+  <summary>环境记录有两种类型：声明式环境记录和对象环境记录。</summary>
+  <div></div>
+</details>
+
+<details>
+  <summary>声明式环境记录：存储变量、函数声明和参数。函数代码的词法环境包含声明性环境记录。</summary>
+  <div></div>
+</details>
+
+<details>
+  <summary>对象环境记录：用来存储变量with语句和全局上下文中的变量和函数。</summary>
+  <div></div>
+</details> -->
+
+<details>
+  <summary>引用外部环境：外部执行上下文的__。对外部环境的引用意味着它可以访问其外部词法环境。这意味着，如果在当前词法环境中找不到变量，则JavaScript引擎可以在外部环境中查找变量。</summary>
+  <div>变量对象</div>
+</details>
+
+<details>
+  <summary>绑定this：分两种执行上下文，全局执行上下文或函数执行上下文。如果在前者中，则this指向全局对象；如果在后者，则取决于调用的方式：作为对象的方法调用，则指向这个对象；否则指向全局对象或__。</summary>
+  <div>undefined(严格模式下)</div>
+</details>
+
+<details>
+  <summary>变量环境：形式上和__环境只有一个区别，就是LexicalEnvironment换成了VariableEnvironment。</summary>
+  <div>词法</div>
+</details>
+
+<details>
+  <summary>在ES6中，LexicalEnvironment组件和VariableEnvironment组件之间的区别是前者用于存储__和变量（let和const），而后者仅用于存储变量（__）。</summary>
+  <div>函数声明</div>
+  <div>var</div>
+</details>
+
+<details>
+  <summary>执行阶段：完成对__的分配，并最终执行代码。</summary>
+  <div>所有变量</div>
+</details>
+
+<details>
+  <summary>通过一个例子来理解。在创建阶段和执行阶段，变量环境和词法环境的使用。例子：</summary>
+  <pre>
+  let a = 20;
+  const b = 30;
+  var c;
+  function multiply(e, f) {
+    var g = 20;
+    return e * f * g;
+  }
+  c = multiply(20, 30);
+  <!--  -->
+  // 创建阶段
+  GlobalExectionContext = {
+    LexicalEnvironment: {
+      EnvironmentRecord: {
+        Type: "Object",
+        // Identifier bindings go here
+        a: < uninitialized >, // 使用为初始化(uninitialized)的变量，会报错
+        b: < uninitialized >,
+        multiply: < func >
+      }
+      outer: < null >,
+      ThisBinding: < Global Object>
+    },
+    VariableEnvironment: {
+      EnvironmentRecord: {
+        Type: "Object",
+        // Identifier bindings go here
+        c: undefined,
+      }
+      outer: < null>,
+      ThisBinding: < Global Object >
+    }
+  }
+  <!--  -->
+  // 执行阶段
+  GlobalExectionContext = {
+    LexicalEnvironment: {
+      EnvironmentRecord: {
+        Type: "Object",
+        // Identifier bindings go here
+        a: 20,
+        b: 30,
+        multiply: < func >
+      }
+      outer: < null >,
+      ThisBinding: < Global Object >
+    },
+    VariableEnvironment: {
+      EnvironmentRecord: {
+        Type: "Object",
+        // Identifier bindings go here
+        c: undefined,
+      }
+      outer: < null >,
+      ThisBinding: < Global Object >
+    }
+  }
+
+  // 当遇到对函数multiple（20，30）的调用时，将创建一个新的函数执行上下文来执行功能代码。
+  // 创建阶段
+  FunctionExectionContext = {
+    LexicalEnvironment: {
+      EnvironmentRecord: {
+        Type: "Declarative",
+        // Identifier bindings go here
+        Arguments: {0: 20, 1: 30, length: 2},
+      },
+      // 外部上下文的变量对象
+      outer: < GlobalLexicalEnvironment >,
+      // 如果是箭头函数创建的执行上下文则为undefined，
+      // ThisBinding为undefined时如果再上下文中调用this，
+      // 因为this是undefined所以使用上一个上下文绑定的this
+      ThisBinding: < Global Object or undefined >,
+    },
+    VariableEnvironment: {
+      EnvironmentRecord: {
+        Type: "Declarative",
+        // Identifier bindings go here
+        g: undefined
+      },
+      outer: < GlobalLexicalEnvironment >,
+      ThisBinding: < Global Object or undefined >
+    }
+  }
+  // 执行阶段
+  FunctionExectionContext = {
+    LexicalEnvironment: {
+      EnvironmentRecord: {
+        Type: "Declarative",
+        // Identifier bindings go here
+        Arguments: {0: 20, 1: 30, length: 2},
+      },
+      outer: < GlobalLexicalEnvironment >,
+      ThisBinding: < Global Object or undefined >,
+    },
+    VariableEnvironment: {
+      EnvironmentRecord: {
+        Type: "Declarative",
+        // Identifier bindings go here
+        g: 20
+      },
+      outer: < GlobalLexicalEnvironment >,
+      ThisBinding: < Global Object or undefine d>
+    }
+  }
+  </pre>
 </details>
 
 ### 4.2.1 Scope Chain Augmentation
@@ -1101,7 +1309,7 @@
 </details>
 
 <details>
-  <summary>但是还有其他方法可以扩展作用域链。某些语句会导致某个上下文临时添加到作用域链的__，然后在代码执行后将其__。分别是__和__。</summary>
+  <summary>但是还有其他方法可以扩展作用域链。某些语句会导致某个执行上下文临时添加到作用域链的__，然后在代码执行后将其__。分别是__和__。</summary>
   <div>前端</div>
   <div>删除</div>
   <div>try-catch语句中的catch块</div>
@@ -1123,12 +1331,12 @@
 #### 4.2.2.4 Identifier Lookup(标识符查找)
 
 <details>
-  <summary>如果在当前上下文的__中没有搜索到对应的标识符，则将搜索下一个上下文的变量对象，直到找到全局上下文的变量对象，如果还没有的话会报错“xxx is not defined”</summary>
+  <summary>[疑问，不是作用域链吗？为什么是上下文？]如果在当前执行上下文的__中没有搜索到对应的标识符，则将搜索下一个执行上下文的变量对象，直到找到全局执行上下文的变量对象，如果还没有的话会报错“xxx is not defined”</summary>
   <div>变量对象</div>
 </details>
 
 <details>
-  <summary>[拓展]执行上下文(execution context)的数据（变量，函数声明和函数的形参）被存储为变量对象的__。每次进入上下文时都会__并用__填充变量对象，并且其更新发生在代码__阶段。</summary>
+  <summary>[拓展]执行上下文(execution context)的数据（变量，函数声明和函数的形参）被存储为变量对象的__。每次进入执行上下文时都会__并用__填充变量对象，并且其更新发生在代码__阶段。</summary>
   <div>属性</div>
   <div>创建</div>
   <div>初始值</div>
@@ -1143,10 +1351,10 @@
   <div>垃圾回收</div>
 </details>
 
-<details>
+<!-- <details>
   <summary>JavaScript是一种自动管理内存的语言，这意味着__负责用于管理代码执行期间所需的内存。</summary>
   <div>执行环境</div>
-</details>
+</details> -->
 
 ### 4.3.1 Mark-and-Sweep
 
@@ -1164,7 +1372,7 @@
 ### 4.3.4 Managing Memory
 
 <details>
-  <summary>当不再需要数据时，最好将值设置为__，以释放引用，这称为__。该建议主要适用于__值和__的属性。当__变量脱离上下文时，它们会自动取消引用。</summary>
+  <summary>当不再需要数据时，最好将值设置为__，以释放引用，这称为__。该建议主要适用于__值和__的属性。当__变量所在的执行上下文脱离执行上下文栈时，它们会自动取消引用。</summary>
   <div>null</div>
   <div>取消引用值</div>
   <div>全局</div>
@@ -2080,7 +2288,7 @@
 </details>
 
 <details>
-  <summary>数据属性有4个描述其行为的特性：__、__、__、__。</summary>
+  <summary>数据属性有4个描述其行为的描述符：__、__、__、__。</summary>
   <div>[[Configurable]]</div>
   <div>[[Enumerable]]</div>
   <div>[[Writable]]</div>
@@ -2114,7 +2322,7 @@
 </details>
 
 <details>
-  <summary>要修改属性默认的特性，必须使用ES5的__()方法。如果configurable、enumerable、writable不传，默认为__。</summary>
+  <summary>要修改属性默认的描述符，必须使用ES5的__()方法。如果configurable、enumerable、writable不传，默认为__。</summary>
   <div>Object.defineProperty</div>
   <div>false</div>
   <pre>
@@ -2133,7 +2341,7 @@
 </details>
 
 <details>
-  <summary>访问器属性有4个描述其行为的特性：__、__、__、__。</summary>
+  <summary>访问器属性有4个描述其行为的描述符：__、__、__、__。</summary>
   <div>[[configurable]]</div>
   <div>[[enumerable]]</div>
   <div>[[get]]</div>
@@ -2188,12 +2396,12 @@
 ### 8.1.3 Reading Property Attributes
 
 <details>
-  <summary>(ES5)如果想获取对象某个属性的特性，可以使用__(obj, prop)。</summary>
+  <summary>(ES5)如果想获取对象某个属性的描述符，可以使用__(obj, prop)。</summary>
   <div>Object.getOwnPropertyDescriptor</div>
 </details>
 
 <details>
-  <summary>(ES8)如果想获取对象全部属性的特性，可以使用__(obj)。</summary>
+  <summary>(ES8)如果想获取对象全部属性的描述符，可以使用__(obj)。</summary>
   <div>Object.getOwnPropertyDescriptors</div>
 </details>
 
@@ -3301,11 +3509,11 @@
   </pre>
 </details>
 
-## 10.13 Tail Call Optimization(尾部调用优化,TCO)
+## 10.13 Tail Call Optimization(尾部调用优化,TCO)【薄弱】
 
 <details>
   <summary>ES6 规范还引入了内存管理优化功能，该功能允许JavaScript引擎在满足某些条件时重用__。具体而言，这种优化适用于“尾部调用”，其中外部函数的返回值是内部函数的返回值。</summary>
-  <div>堆栈帧</div>
+  <div>栈帧</div>
 </details>
 
 <details>
@@ -3321,9 +3529,63 @@
 ### 10.13.1 Tail Call Optimization Requirements
 
 <details>
-  <summary>在满足这4个条件时，引擎才会执行尾部调用优化。1.__; 2.__; 3.__; 4.__。</summary>
+  <summary>在满足这4个条件时，引擎才会执行尾部调用优化。1.__; 2.__; 3.__; 4.__。例子：</summary>
   <div>1. 在严格模式下</div>
   <div>2. 外部函数的返回值是被调用的尾部调用函数</div>
   <div>3. 尾部调用函数返回后，无需进一步执行</div>
   <div>4. 尾部调用函数不是引用外部函数范围内的变量的闭包</div>
+  <pre>
+  function outerFunction() {
+    return innerFunction(); // tail call
+  }
+  </pre>
+</details>
+
+<details>
+  <summary>需要严格模式的原因是，非严格模式下函数允许使用f.caller，它是对外部函数的栈框架的引用。所以不可能进行优化。</summary>
+  <div>尾部调用优化</div>
+</details>
+
+### 10.13.2 Coding for Tail Call Optimization
+
+<details>
+  <summary>尾部调用优化的实例(斐波那契)：</summary>
+  <pre>
+    // 未优化
+    function fib(n) {
+      if (n < 2) {
+        return n;
+      }
+      debugger;
+      return fib(n - 1) + fib(n - 2);
+    }
+    console.log(fib(43)); // 约计算8秒
+    <!--  -->
+    // 优化
+    // base case
+    function fib(n) {
+      return fibImpl(0, 1, n);
+    }
+    // recursive case
+    function fibImpl(a, b, n) {
+      if (n === 0) {
+        return a;
+      }
+      debugger;
+      return fibImpl(b, a + b, n - 1);
+    }
+    console.log(fib(43)); // 约计算0.5秒
+  </pre>
+</details>
+
+## 10.14 Closures(闭包)
+
+<details>
+  <summary>闭包是__的函数。</summary>
+  <div>可以从另一个函数的作用域访问变量</div>
+</details>
+
+<details>
+  <summary>调用函数时，将创建一个执行上下文，并创建其__。</summary>
+  <div>作用域链</div>
 </details>
