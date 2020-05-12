@@ -496,3 +496,35 @@
     </pre>
   </details>
 </details>
+
+### 10.14.1 The this Object
+
+<details open>
+  <summary>下面代码打印值为：</summary>
+  <pre>
+    &lt;script>
+    window.identity = 'a';
+    window.age = 1;
+    let foo = {
+      identity: 'b',
+      getIdentityFunc() {
+        let age =  2;
+        return function () {
+          console.log(age);
+          console.log(this.identity);
+        };
+      },
+    };
+    foo.getIdentityFunc()();
+    &lt;/script>
+  </pre>
+  <details>
+    <summary>答案</summary>
+    <div>2</div>
+    <div>a</div>
+    <pre>
+    知识点:
+    - 递归
+    </pre>
+  </details>
+</details>

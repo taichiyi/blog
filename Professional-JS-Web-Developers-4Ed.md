@@ -1084,12 +1084,7 @@
 </details>
 
 <details>
-  <summary>执行上下文中的代码时，将创建变量对象的__。</summary>
-  <div>作用域链</div>
-</details>
-
-<details>
-  <summary> 每当代码__进入函数中时，函数的__就会被压入执行上下文栈。函数完成执行后，将函数上下文__栈，将__返回到先前执行上下文。</summary>
+  <summary> 每当代码__进入函数中时，函数的__就会被压入执行上下文栈。函数完成执行后，将函数执行上下文__栈，将__返回到先前执行上下文。</summary>
   <div>执行流</div>
   <div>上下文</div>
   <div>弹出</div>
@@ -1210,7 +1205,7 @@
         a: < uninitialized >, // 使用为初始化(uninitialized)的变量，会报错
         b: < uninitialized >,
         multiply: < func >
-      }
+      },
       outer: < null >,
       ThisBinding: < Global Object>
     },
@@ -1219,8 +1214,8 @@
         Type: "Object",
         // Identifier bindings go here
         c: undefined,
-      }
-      outer: < null>,
+      },
+      outer: < null >,
       ThisBinding: < Global Object >
     }
   }
@@ -1234,7 +1229,7 @@
         a: 20,
         b: 30,
         multiply: < func >
-      }
+      },
       outer: < null >,
       ThisBinding: < Global Object >
     },
@@ -1243,12 +1238,11 @@
         Type: "Object",
         // Identifier bindings go here
         c: undefined,
-      }
+      },
       outer: < null >,
       ThisBinding: < Global Object >
     }
   }
-
   // 当遇到对函数multiple（20，30）的调用时，将创建一个新的函数执行上下文来执行功能代码。
   // 创建阶段
   FunctionExectionContext = {
@@ -1314,6 +1308,11 @@
   <div>删除</div>
   <div>try-catch语句中的catch块</div>
   <div>with语句</div>
+</details>
+
+<details>
+  <summary>在 ES5 __中“with语句”已被禁止。</summary>
+  <div>严格模式</div>
 </details>
 
 #### 4.2.2.3 Constant Declaration Using const
@@ -3587,5 +3586,19 @@
 
 <details>
   <summary>调用函数时，将创建一个执行上下文，并创建其__。</summary>
-  <div>作用域链</div>
+  <div>作用域</div>
 </details>
+
+## 10.15 Immediately Invoked Function Expressions
+
+<details>
+  <summary>立即调用的__通常被称为立即调用的函数表达式（IIFE），常用来模拟块作用域。例子：</summary>
+  <div>匿名函数</div>
+  <pre>
+  (function() {
+    // block code here
+  })();
+  </pre>
+</details>
+
+## 10.16 Private Variables
