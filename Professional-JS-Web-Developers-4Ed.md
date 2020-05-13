@@ -585,13 +585,13 @@
 <details>
   <summary>Object构造函数的__有这7个对键值，所以每个Object构造函数的实例都有1个属性和6个方法：_1_、_2_、_3_、_4_、_5_、_6_、_7_。</summary>
   <div>原型</div>
-  <div>constructor</div>
-  <div>hasOwnProperty(propertyName)</div>
-  <div>propertyIsEnumerable(propertyName)</div>
-  <div>isPrototypeOf(object):当前对象是否在另一个对象的原型链上。</div>
-  <div>toLocaleString()</div>
-  <div>toString()</div>
-  <div>valueOf()</div>
+  <div>Object.prototype.constructor</div>
+  <div>Object.prototype.hasOwnProperty(propertyName)</div>
+  <div>Object.prototype.propertyIsEnumerable(propertyName)</div>
+  <div>Object.prototype.isPrototypeOf(object):当前对象是否在另一个对象的原型链上。</div>
+  <div>Object.prototype.toLocaleString()</div>
+  <div>Object.prototype.toString()</div>
+  <div>Object.prototype.valueOf()</div>
 </details>
 
 <details>
@@ -2413,8 +2413,8 @@
 
 <details>
   <summary>ES6 引入了Object.assign（）方法来合并对象。此方法接受一个目标对象和一个或多个源对象，并且对于每个源对象，将可枚举（Object.__返回true）和拥有（Object.__返回true）属性复制到目标对象。对于每个合适的属性，该方法将使用__从__对象中检索值，并使用__对象上的__来分配值。</summary>
-  <div>propertyIsEnumerable</div>
-  <div>hasOwnProperty</div>
+  <div>Object.prototype.propertyIsEnumerable</div>
+  <div>Object.prototype.hasOwnProperty</div>
   <div>[[Get]]</div>
   <div>源</div>
   <div>目标</div>
@@ -2565,15 +2565,15 @@
 </details>
 
 <details>
-  <summary>如果想修改某个对象的原型并返回一个新对象（不改变原对象），可以使用__(proto[, propertiesObject])方法。</summary>
+  <summary>如果想创建一个新对象并指定新对象的原型，可以使用__(proto[, propertiesObject])方法。</summary>
   <div>Object.create</div>
 </details>
 
 #### 8.2.4.3 Prototypes and the “in” Operator
 
 <details>
-  <summary>有两种使用in运算符的方式：单独使用或作为__使用。</summary>
-  <div>for-in循环</div>
+  <summary>有两种使用in运算符的方式：单独使用或作为__循环使用。</summary>
+  <div>for-in</div>
 </details>
 
 <details>
@@ -2583,7 +2583,7 @@
 
 <details>
   <summary>判断某个属性是否存在于实例上，可以使用__()方法。</summary>
-  <div>实例.hasOwnProperty</div>
+  <div>Object.prototype.hasOwnProperty</div>
 </details>
 
 <details>
