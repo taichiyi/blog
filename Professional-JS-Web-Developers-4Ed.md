@@ -558,10 +558,8 @@
 </details>
 
 <details>
-  <summary>Symbol.__ 用作一个对象的属性，属性值为方法。方法返回对象的Iterator(默认迭代器)。此默认迭代器属性必须引用迭代器__，该函数将在调用时产生一个新的__。方法通过__语句被自动调用。</summary>
+  <summary>Symbol.__ 用作一个对象的属性，属性值为默认迭代器。调用默认迭代器后返回的对象是一个Iterator(迭代器)，方法通过__语句被自动调用。</summary>
   <div>iterator</div>
-  <div>工厂函数</div>
-  <div>迭代器</div>
   <div>for-of循环</div>
 </details>
 
@@ -1159,8 +1157,8 @@
 </details> -->
 
 <details>
-  <summary>引用外部环境：外部执行上下文的__。对外部环境的引用意味着它可以访问其外部词法环境。这意味着，如果在当前词法环境中找不到变量，则JavaScript引擎可以在外部环境中查找变量。</summary>
-  <div>变量对象</div>
+  <summary>引用外部环境：外部执行上下文。对外部环境的引用意味着它可以访问其外部词法环境。这意味着，如果在当前__环境中找不到变量，则JavaScript引擎可以在外部环境中查找变量。</summary>
+  <div>词法</div>
 </details>
 
 <details>
@@ -1252,7 +1250,7 @@
         // Identifier bindings go here
         Arguments: {0: 20, 1: 30, length: 2},
       },
-      // 外部上下文的变量对象
+      // 外部执行上下文
       outer: < GlobalLexicalEnvironment >,
       // 如果是箭头函数创建的执行上下文则为undefined，
       // ThisBinding为undefined时如果再上下文中调用this，
@@ -1815,8 +1813,8 @@
 
 <details>
   <summary>使用__()和__()方法，可以实现队列访问规则。</summary>
-  <div>shift</div>
   <div>push</div>
+  <div>shift</div>
 </details>
 
 ### 6.2.10 Reordering Methods
@@ -2099,6 +2097,11 @@
 ### 7.2.2 The Iterator Protocol
 
 <details>
+  <summary>对象有个Symbol.iterator的键，对应的值是一个工厂函数，每次调用工厂函数都返回一个自身对象的迭代器，这个工厂函数称为__。</summary>
+  <div>默认迭代器</div>
+</details>
+
+<details>
   <summary>迭代器协议定义了产生一系列值的标准方式。当对象实现了一个键为next的方法，该方法每次都返回一个__对象，对象有done（boolean）和value两个属性时，它是一个迭代器。</summary>
   <div>IteratorResult</div>
 </details>
@@ -2125,10 +2128,18 @@
 ## 7.3 Generators【薄弱】
 
 <details>
-  <summary>生成器对象是由一个 __ 函数返回的,并且它符合__协议和__协议。</summary>
+  <summary>生成器对象是由一个 __ 函数返回的，生成器对象并且它符合__协议和__协议。例子：</summary>
   <div>generator(生成器)</div>
   <div>可迭代</div>
   <div>迭代器</div>
+  <pre>
+  function* generatorFn() {}
+  const g = generatorFn();
+  <!--  -->
+  console.log(g); // generatorFn {<suspended>}
+  console.log(g === g[Symbol.iterator]()); // true
+  console.log(g.next()); // {value: undefined, done: true}
+  </pre>
 </details>
 
 ### 7.3.1 Generator Basics
@@ -2147,16 +2158,6 @@
 <details>
   <summary>__函数不能用作生成器函数。</summary>
   <div>箭头</div>
-</details>
-
-<details>
-  <summary>默认迭代器是__引用的。例子：</summary>
-  <div>自</div>
-  <pre>
-  function* generatorFn() {}
-  const g = generatorFn();
-  console.log(g === g[Symbol.iterator]());
-  </pre>
 </details>
 
 ### 7.3.2 Interrupting Execution with “yield”
@@ -2243,9 +2244,13 @@
 ### 7.3.4 Early Termination of Generators
 
 <details>
-  <summary>生成器对象的__（）和__（）方法是可用于将生成器对象关闭。</summary>
-  <div>return</div>
-  <div>throw</div>
+  <summary>生成器对象的__（value）方法返回给定的值并结束生成器。</summary>
+  <div>generator.return</div>
+</details>
+
+<details>
+  <summary>__() 方法用来向生成器抛出异常，并恢复生成器的执行，返回带有 done 及 value 两个属性的对象。</summary>
+  <div>generator.throw</div>
 </details>
 
 #### 7.3.4.2 The throw() Method
@@ -2513,8 +2518,8 @@
 ### 8.2.3 The Function Constructor Pattern(构造函数模式)
 
 <details>
-  <summary>构造函数模式解决了工厂模式的缺点，可以根据的实例原型的__判断与构造函数的关系。</summary>
-  <div>构造函数</div>
+  <summary>构造函数模式解决了工厂模式的缺点，可以根据的实例的__与构造函数的原型判断之间的关系。</summary>
+  <div>原型</div>
 </details>
 
 <details>
@@ -2594,9 +2599,9 @@
 ### 8.2.5 Object Iteration
 
 <details>
-  <summary>ES8 引入了__（）和__（）种静态方法，用于将对象的内容转换为可迭代格式。</summary>
+  <summary>ES8 引入了__（obj）和__（obj）种静态方法，用于将对象的内容转换为可迭代格式。</summary>
   <div>Object.values</div>
-  <div>Object.entry</div>
+  <div>Object.entries</div>
 </details>
 
 #### 8.2.5.1 Alternate Prototype Syntax
@@ -3601,4 +3606,51 @@
   </pre>
 </details>
 
-## 10.16 Private Variables
+# 第11章 PROMISES AND ASYNC FUNCTIONS
+
+<details>
+  <summary>ES 6引入了一个正式的Promise引用类型，允许优雅地定义和组织__行为。更高的版本还使用__和__关键字扩展了该语言以支持异步功能。</summary>
+  <div>异步</div>
+  <div>async</div>
+  <div>await</div>
+</details>
+
+## 11.1 Introduction to Asynchronous Programming
+
+<details>
+  <summary>同步和异步行为之间的对偶是计算机科学中的基本概念，尤其是在__循环模型（如JavaScript）中。面对高延迟操作，异步行为不再需要针对更高的计算吞吐量进行优化。</summary>
+  <div>单线程事件</div>
+</details>
+
+<details>
+  <summary>异步操作不一定是计算密集型操作或高延迟操作。它可以在不需要__执行线程以等待异步行为发生的任何地方使用。</summary>
+  <div>阻塞</div>
+</details>
+
+## 11.3 Async Functions
+
+<details>
+  <summary>异步函数是用__关键字声明的函数。ES__规范引入了对“async/await”的支持。</summary>
+  <div>async</div>
+  <div>7</div>
+</details>
+
+<details>
+  <summary>异步函数是构造函数__的实例，其中允许__关键字。</summary>
+  <div>AsyncFunction</div>
+  <div>await</div>
+</details>
+
+<details>
+  <summary>Promise有个不便之处：需要把其余部分的代码写到 promise handler 中。</summary>
+  <div>AsyncFunction</div>
+  <div>await</div>
+</details>
+
+### 11.3.1 Async Function Basics
+
+<details>
+  <summary>ES7的async / await旨在直接解决使用异步构造的组织代码的问题。</summary>
+  <div>AsyncFunction</div>
+  <div>await</div>
+</details>
