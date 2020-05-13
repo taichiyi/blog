@@ -155,6 +155,31 @@
 
 ## undefined 和 void运算符 -end-
 
+## 堆 和 栈 -start-
+
+<details>
+  <summary>与其他编程语言一样，JavaScript运行时有一个__内存和一个__内存。</summary>
+  <div>栈</div>
+  <div>堆</div>
+</details>
+
+<details>
+  <summary>在队列或栈中，任务的执行是有先后顺序的。但是在有的场景下，每个任务同样重要，不需要有先后顺序，__即为解决此类问题设计的一种数据结构。</summary>
+  <div>堆</div>
+</details>
+
+<details>
+  <summary>JavaScript运行时实际上由2个组件组成：__和__。消息队列也称为回调队列或任务队列。</summary>
+  <div>事件循环</div>
+  <div>消息队列</div>
+</details>
+
+![https://oss.taichiyi.com/markdown/1_lZ-KXoVNUSOwaq7q8zUBDg.png](https://oss.taichiyi.com/markdown/1_lZ-KXoVNUSOwaq7q8zUBDg.png)
+
+![https://oss.taichiyi.com/markdown/1_9mv-g9E-87Sji9j7YR08Fw.gif](https://oss.taichiyi.com/markdown/1_9mv-g9E-87Sji9j7YR08Fw.gif)
+
+## 堆 和 栈 -end-
+
 <details open>
   <summary>下面代码打印值为__、__、__。</summary>
   <pre>

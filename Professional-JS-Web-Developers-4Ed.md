@@ -1345,7 +1345,7 @@
 <details>
   <summary>[拓展]像C语言这样的底层语言一般都有底层的__接口。相反，JavaScript是在创建变量时自动进行了分配内存，并且在不使用它们时“自动”释放。释放的过程称为__。</summary>
   <div>内存管理</div>
-  <div>垃圾回收</div>
+  <div>垃圾回收(garbage-collected，简称GC)</div>
 </details>
 
 <!-- <details>
@@ -2074,6 +2074,19 @@
 ## 7.2 The Iterator Pattern
 
 ### 7.2.1 The Iterable Protocol
+
+<details>
+  <summary>有些原生语言结构会自动调用工厂函数来生成迭代器，包括：9个__。</summary>
+  <div>for...of loop</div>
+  <div>Array destructuring(数组结构)</div>
+  <div>The spread operator(展开运算符)</div>
+  <div>Array.from()</div>
+  <div>Set construction(构建)</div>
+  <div>Map construction(构建)</div>
+  <div>Promise.all(), which expects an iterable of promises</div>
+  <div>Promise.race(), which expects an iterable of promises</div>
+  <div>The yield* operator, used in generators</div>
+</details>
 
 <details>
   <summary>iterator(中文：__)是一个__。</summary>
@@ -3650,7 +3663,85 @@
 ### 11.3.1 Async Function Basics
 
 <details>
-  <summary>ES7的async / await旨在直接解决使用异步构造的组织代码的问题。</summary>
-  <div>AsyncFunction</div>
+  <summary>ES7的“async/await”旨在解决异步编程的__问题。</summary>
+  <div>组织代码</div>
+</details>
+
+#### 11.3.1.1 The async keyword
+
+<details>
+  <summary>在异步函数中，无论使用return关键字返回的什么值都将通过__（）转换为promise对象。</summary>
+  <div>Promise.resolve</div>
+</details>
+
+#### 11.3.1.2 The await keyword
+
+<details>
+  <summary>使用__关键字可以暂停执行程序，等待Promise完成后才继续。例子：</summary>
   <div>await</div>
+  <pre>
+    let p = new Promise((resolve, reject) => setTimeout(resolve, 1000, 3));
+    p.then((x) => console.log(x)); // 3
+  </pre>
+</details>
+
+<details>
+  <summary>使用Promise和使用async/await的区别，例子：</summary>
+  <pre>
+  function promiseFn() {
+    let p = new Promise((resolve, reject) => setTimeout(resolve, 1000, 3));
+    p.then((x) => console.log(x)); // 3
+  }
+  promiseFn();
+  <!--  -->
+  async function asyncAwaitFn() {
+    let p = new Promise((resolve, reject) => setTimeout(resolve, 1000, 3));
+    console.log(await p); // 3
+  }
+  asyncAwaitFn();
+  </pre>
+</details>
+
+<details>
+  <summary>关键字await将暂停异步函数的执行，从而释放JavaScript运行时的执行线程。此行为与生成器函数中的__关键字相同。</summary>
+  <div>yield</div>
+</details>
+
+### 11.3.2 Halting and Resuming Execution
+
+<details>
+  <summary>充分理解await关键字的关键在于，它不仅要等待某个值可用。遇到await关键字时，JavaScript运行时可以准确跟踪暂停执行的位置。当await右侧的值准备就绪时，JavaScript运行时将在__上推送一个任务，该任务将异步恢复该函数的执行。例子：</summary>
+  <div>消息队列</div>
+  <pre>
+  async function foo() {
+    console.log(2);
+    await null; // 暂停执行并将任务添加到消息队列中
+    // JavaScript运行时，开始执行消息队列中的任务(task)。
+    // 为await提供了null值（此处未使用）。
+    console.log(4);
+  }
+  console.log(1);
+  foo()
+  console.log(3);
+  // 同步执行线程完成。
+  
+  // 1
+  // 2
+  // 3
+  // 4
+  </pre>
+</details>
+
+<!-- <details>
+  <summary>await与promise是两个单独的__任务。</summary>
+  <div>消息队列</div>
+</details> -->
+
+### 11.3.3 Strategies for Async Functions(异步函数的策略)
+
+#### 11.3.3.4 Stack Traces and Memory Management
+
+<details>
+  <summary>Primose和Async Function提供的功能有相当程度的重叠，但是在__中如何表示它们方面却有很大差异。</summary>
+  <div>内存</div>
 </details>
