@@ -1581,8 +1581,8 @@
 </details>
 
 <details>
-  <summary>ECMAScript提供了三种从__创建字符串值的方法：slice（），substr（）和substring（）。使用slice方法比较好用，用slice就行。</summary>
-  <div>子字符串</div>
+  <summary>ECMAScript提供了三种提取字符串的一部分的方法：slice（），substr（）和substring（）。用__(beginIndex[, endIndex])就行，其他两种行为诡异。</summary>
+  <div>String.prototypr.slice</div>
 </details>
 
 ### 5.4.4 String Location Methods
@@ -1636,7 +1636,7 @@
 ### 5.4.9 String Iterators and Destructuring
 
 <details>
-  <summary>字符串原型公开了一个__属性，该属性方法允许通过每个字符进行迭代。</summary>
+  <summary>字符串原型公开了一个__属性，该属性为字符串的默认迭代器。</summary>
   <div>Symbol.iterator</div>
 </details>
 
@@ -2662,13 +2662,13 @@
 #### 8.3.1.4 Problems with Prototype Chaining(原型链的问题)
 
 <details>
-  <summary>原型链第一个问题：当实例的原型对象，有个属性的值为__类型时，则意味则，所有实例都会共享这个属性，其中一个实例对该属性值的修改(例如:push)都会对__产生影响。</summary>
+  <summary>原型链的第一个问题：当实例的原型对象，有个属性的值为__类型时，则所有实例都会共享这个属性，其中一个实例对该属性值的修改(例如:push)都会对__产生影响。</summary>
   <div>引用</div>
   <div>其他所有实例</div>
 </details>
 
 <details>
-  <summary>原型链的第二个问题是，创建子类型实例时，不能将__传递给超类型构造函数。</summary>
+  <summary>原型链的第二个问题是：创建子类型实例时，不能将__传递给超类型构造函数。</summary>
   <div>参数</div>
 </details>
 
@@ -2708,7 +2708,7 @@
 </details>
 
 <details>
-  <summary>组合继承的缺点：调用了两次超类型的构造函数：new超类型，却没有用来超类的__，只用了超类型的原型。</summary>
+  <summary>组合继承的缺点：调用了两次超类型的构造函数，1) new超类型，只用了超类型的原型，却没有用超类的__；2)通过call方法调用了一次。</summary>
   <div>属性</div>
 </details>
 
