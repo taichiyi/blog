@@ -1864,7 +1864,7 @@
   <div>Array.prototype.reduceRight</div>
 </details>
 
-## 6.3 Typed Arrays <!-- TODO 不理解使用场景 -->
+## 6.3 Typed Arrays【TODO 不理解使用场景】
 
 ## 6.4 The Map Type(ES6)
 
@@ -3748,3 +3748,187 @@
 </details>
 
 # 第12章 THE BROWSER OBJECT MODEL
+
+## 12.1 The window Object
+
+<details>
+  <summary>BOM的核心是__对象，window对象表示浏览器的一个__。</summary>
+  <div>window</div>
+  <div>实例</div>
+</details>
+
+<details>
+  <summary>window对象在浏览器中有双重用途，充当__和__的JavaScript接口。</summary>
+  <div>浏览器窗口</div>
+  <div>ECMAScript Global对象</div>
+</details>
+
+### 12.1.3 Window Position and Pixel Ratio
+
+<details>
+  <summary>要获取浏览器左边界到操作系统桌面左边界的水平距离(单位为像素)，可以通过__属性获取。</summary>
+  <div>window.screenLeft</div>
+</details>
+
+<details>
+  <summary>要获取浏览器上边界到操作系统桌面上边界的垂直距离(单位为像素)，可以通过__属性获取。</summary>
+  <div>window.screenTop</div>
+</details>
+
+### 12.1.4 Window Size
+
+<details>
+  <summary>要获取浏览器窗口的宽度(包括垂直滚动条)，可以通过__属性获取。</summary>
+  <div>window.innerWidth</div>
+</details>
+
+<details>
+  <summary>要获取浏览器窗口的高度(包括水平滚动条和工具栏)，可以通过__属性获取。</summary>
+  <div>window.innerHeight</div>
+</details>
+
+<details>
+  <summary>要获取页面视口的宽度(不包括垂直滚动条)，可以通过__属性获取。</summary>
+  <div>document.documentElement.clientWidth</div>
+</details>
+
+<details>
+  <summary>要获取页面视口的高度(不包括水平滚动条和工具栏)，可以通过__属性获取。</summary>
+  <div>document.documentElement.clientHeight</div>
+</details>
+
+### 12.1.5 Window Viewport Position
+
+<details>
+  <summary>由于浏览器窗口通常不够大，无法一次显示整个渲染的文档，因此用户可以使用有限的视口在文档周围滚动。</summary>
+  <div>document.documentElement.clientHeight</div>
+</details>
+
+<details>
+  <summary>要获取页面视口左边界到浏览器左边界的水平距离(单位为像素)，可以通过__属性获取。</summary>
+  <div>window.scrollX</div>
+</details>
+
+<details>
+  <summary>要获取页面视口上边界到浏览器上边界的垂平距离(单位为像素)，可以通过__属性获取。</summary>
+  <div>window.scrollY</div>
+</details>
+
+// 剩下的先忽略，先弄未知的
+
+# 第13章 CLIENT DETECTION(客户端检测)【先略过】
+
+# 第14章 THE DOCUMENT OBJECT MODEL【先略过】
+
+<details>
+  <summary>文档对象模型（DOM）是HTML和XML文档的__。</summary>
+  <div>应用程序编程接口（API）</div>
+</details>
+
+先略过中间的章节
+
+# 第17章 EVENTS(DOM事件)
+
+<details>
+  <summary>JavaScript与HTML的交互是通过__处理的。</summary>
+  <div>事件</div>
+</details>
+
+<details>
+  <summary>__程序，也就是事件触发时会被调用的函数。添加事件处理程序被称为__事件。这种模型在传统软件工程中被称为“__模式”</summary>
+  <div>事件处理</div>
+  <div>订阅</div>
+  <div>观察者</div>
+</details>
+
+## 17.1 Event Flow
+
+<details>
+  <summary>事件流描述了页面上事件__的顺序。</summary>
+  <div>触发</div>
+</details>
+
+### 17.1.1 Event Bubbling(事件冒泡)
+
+<details>
+  <summary>IE浏览器的事件流称为事件冒泡，事件始于__。例子：</summary>
+  <div>最具体的元素（文档树中可能的最深点）</div>
+  <pre>div -> body -> html -> document</pre>
+</details>
+
+### 17.1.2 Event Capturing(事件捕获)
+
+<details>
+  <summary>网景浏览器的事件流称为事件捕获，事件始于__。例子：</summary>
+  <div>最外层祖先元素</div>
+  <pre>document -> html -> body -> div</pre>
+</details>
+
+### 17.1.3 DOM Event Flow
+
+<details>
+  <summary>DOM2级事件指定的事件流具有三个阶段，先后为：__、__和__。</summary>
+  <div>捕获</div>
+  <div>目标</div>
+  <div>冒泡</div>
+</details>
+
+## 17.2 Event Handlers(事件处理程序)
+
+<details>
+  <summary>订阅事件的方式有两种：__事件处理程序和__事件处理程序。</summary>
+  <div>DOM0级</div>
+  <div>DOM2级</div>
+</details>
+
+### 17.2.1 HTML Event Handlers
+
+<details>
+  <summary>HTML事件处理程序，例子：</summary>
+  <pre>
+  &lt;input type="button" value="提交" onclick="alert('Click')" />
+  </pre>
+</details>
+
+### 17.2.2 DOM Level 0 Event Handlers
+
+<details>
+  <summary>DOM0级事件处理程序，例子：</summary>
+  <pre>
+  let btn = document.getElementById("myBtn");
+  btn.onclick = function () {
+    console.log("Clicked");
+  };
+  </pre>
+</details>
+
+<details>
+  <summary>DOM0级事件处理程序和__事件处理程序实际是一个东西。单个事件只能添加一个DOM0级事件处理程序。</summary>
+  <div>HTML</div>
+</details>
+
+<details>
+  <summary>DOM0级事件处理程序不能通过__阶段触发。</summary>
+  <div>捕获</div>
+</details>
+
+### 17.2.3 DOM Level 2 Event Handlers
+
+<details>
+  <summary>DOM2级事件处理程序，例子：</summary>
+  <pre>
+  let btn = document.getElementById("myBtn");
+  btn.addEventListener("click", () => {
+    console.log(this.id);
+  }, false);
+  </pre>
+</details>
+
+<details>
+  <summary>当事件会处于“__阶段”时，会触发该元素（即事件目标）上的所有监听器，而不在乎这个监听器到底在注册时__参数值是true还是false。useCapture默认为__。</summary>
+  <div>目标</div>
+  <div>useCapture</div>
+  <div>false</div>
+</details>
+
+## 17.3 The Event Object(事件对象)
