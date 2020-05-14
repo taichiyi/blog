@@ -3740,7 +3740,11 @@
 
 #### 11.3.3.4 Stack Traces and Memory Management
 
+## 11.4 Summary
+
 <details>
-  <summary>Primose和Async Function提供的功能有相当程度的重叠，但是在__中如何表示它们方面却有很大差异。</summary>
-  <div>内存</div>
+  <summary>异步函数是将__范式应用于JavaScript函数的结果。</summary>
+  <div>promise</div>
 </details>
+
+# 第12章 THE BROWSER OBJECT MODEL

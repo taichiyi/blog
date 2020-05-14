@@ -1,4 +1,4 @@
-<!-- markdownlint-disable MD033 -->
+<!-- markdownlint-disable MD033 MD037 -->
 
 # JavaScript 高级程序设计 第三版 【习题与参考答案】
 
