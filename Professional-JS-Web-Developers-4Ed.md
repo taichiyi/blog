@@ -3932,3 +3932,35 @@
 </details>
 
 ## 17.3 The Event Object(事件对象)
+
+<details>
+  <summary>无论DOM0级还是DOM2级都会将一个__传入事件处理程序中。</summary>
+  <div>event对象</div>
+</details>
+
+<details open>
+  <summary>解释以下“事件对象”的属性：</summary>
+  <pre>
+  1) bubbles
+  2) cancelable
+  3) currentTarget
+  4) defaultPrevented
+  5) detail
+  6) eventPhase
+  7) target
+  8) trusted
+  9) type
+  </pre>
+  <details>
+    <summary>点击查看答案：</summary>
+    <div>1) 事件是否冒泡</div>
+    <div>2) 是否可以取消事件的默认行为</div>
+    <div>3) 事件目标</div>
+    <div>4) 为true表示已经调用了preventDefault()【DOM3】</div>
+    <div>5) 与事件相关的细节</div>
+    <div>6) 事件所处阶段</div>
+    <div>7) 事件目标</div>
+    <div>8) 为true表示事件对象是浏览器生成的</div>
+    <div>9) 事件类型。如：click</div>
+  </details>
+</details>
