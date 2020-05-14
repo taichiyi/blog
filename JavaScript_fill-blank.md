@@ -174,6 +174,18 @@
   <div>消息队列</div>
 </details>
 
+<details>
+  <summary>事件循环先__任务队列再执行宏任务队列。</summary>
+  <div>微</div>
+</details>
+
+<details>
+  <summary>调用函数时，它会被压入栈。如果该函数包含Web API调用，则JavaScript将使用回调函数将其控制权委托给__，然后移至下一行执行，直到函数返回内容。一旦函数遇到return语句，该函数将从栈中弹出并移至下一个栈条目。同时，Web API在后台执行任务，并记住与该任务相关联的回调函数。执行完成后，Web API将该执行的__绑定到__，并使用该回调将消息发布到消息队列（AKA回调队列）。事件循环的唯一工作是查看回调队列，一旦回调队列中有待处理的事件，就将该回调推入栈。一旦栈为空，事件循环就一次将一个回调函数推入栈。稍后，栈将执行回调函数。</summary>
+  <div>Web API</div>
+  <div>结果</div>
+  <div>回调函数</div>
+</details>
+
 ![https://oss.taichiyi.com/markdown/1_lZ-KXoVNUSOwaq7q8zUBDg.png](https://oss.taichiyi.com/markdown/1_lZ-KXoVNUSOwaq7q8zUBDg.png)
 
 ![https://oss.taichiyi.com/markdown/1_9mv-g9E-87Sji9j7YR08Fw.gif](https://oss.taichiyi.com/markdown/1_9mv-g9E-87Sji9j7YR08Fw.gif)
