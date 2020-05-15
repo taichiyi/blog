@@ -2140,7 +2140,7 @@
 ## 7.3 Generators【薄弱】
 
 <details>
-  <summary>生成器对象是由一个 __ 函数返回的，生成器对象并且它符合__协议和__协议。例子：</summary>
+  <summary>生成器对象是由一个 __ 函数返回的，并且生成器对象符合__协议和__协议。例子：</summary>
   <div>generator(生成器)</div>
   <div>可迭代</div>
   <div>迭代器</div>
@@ -2148,7 +2148,7 @@
   function* generatorFn() {}
   const g = generatorFn();
   <!--  -->
-  console.log(g); // generatorFn {<suspended>}
+  console.log(g); // generatorFn {< suspended >}
   console.log(g === g[Symbol.iterator]()); // true
   console.log(g.next()); // {value: undefined, done: true}
   </pre>
@@ -2647,7 +2647,7 @@
 
 <details>
   <summary>任何函数的默认原型都是__。</summary>
-  <div>Object的实例</div>
+  <div>Object构造函数的实例</div>
 </details>
 
 #### 8.3.1.2 Prototype and Instance Relationships
@@ -2812,7 +2812,6 @@
 
 <details>
   <summary>和function关键字一样，当class表达式分配给变量时，不能在class范围之外访问class标识符本身。例如：</summary>
-  <div>严格</div>
   <pre>
     const foo1 = function foo(a) {
       console.log(a);
@@ -2846,7 +2845,7 @@
 
 <details>
   <summary>当选择不使用new运算符时，构造函数将在构造函数内部this将指向__。</summary>
-  <div>全局对象（通常是window对象）</div>
+  <div>严格模式下为undefined；否则为全局对象（在浏览器中是window对象）</div>
 </details>
 
 #### 8.4.2.2 Understanding Classes as Special Functions
@@ -3962,5 +3961,16 @@
     <div>7) 事件目标</div>
     <div>8) 为true表示事件对象是浏览器生成的</div>
     <div>9) 事件类型。如：click</div>
+  </details>
+</details>
+
+<details open>
+  <summary>解释以下“事件对象”的方法：</summary>
+  <pre>
+  1) preventDefault
+  </pre>
+  <details>
+    <summary>点击查看答案：</summary>
+    <div>1) </div>
   </details>
 </details>
