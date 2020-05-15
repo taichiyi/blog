@@ -4217,8 +4217,13 @@
 </details>
 
 <details>
-  <summary>CommonJS规范加载模块是__步的。</summary>
-  <div>同</div>
+  <summary>node.js的模块系统，就是参照__规范实现的。</summary>
+  <div>CommonJS</div>
+</details>
+
+<details>
+  <summary>CommonJS规范加载模块是__步的。因为模块在__加载很快，所以不用异步。</summary>
+  <div>本地</div>
 </details>
 
 <details>
@@ -4261,6 +4266,76 @@
   <div>require</div>
 </details>
 
-### 26.3.2 Asynchronous Module Definition(AMD)
+### 26.3.2 Asynchronous Module Definition(AMD，异步模块定义)
 
-### 26.3.3 Universal Module Definition(UMD)
+<details>
+  <summary>AMD是为了在浏览器加载模块定义的一种__步加载模块的规范。</summary>
+  <div>异</div>
+</details>
+
+<details>
+  <summary>require([module], __)加载模块语句不用与CommonJS的地方是，需要两个参数。</summary>
+  <div>callback</div>
+</details>
+
+<details>
+  <summary>Javascript库__.js实现了AMD规范</summary>
+  <div>require</div>
+</details>
+
+<details>
+  <summary>AMD是依赖前置，在定义模块的时候就要声明其依赖的模块。</summary>
+  <div>require</div>
+</details>
+
+<details>
+  <summary>AMD在加载模块完成后(看网络速度，哪个先下载下来，哪个先执行)就会__该模块，所有模块都加载执行完后会进入require的回调函数，执行主逻辑，这样的效果就是依赖模块的执行顺序和书写顺序不一定一致。</summary>
+  <div>执行</div>
+</details>
+
+<details>
+  <summary>模块通过 __(id?: String, dependencies?: String[], factory: Function|Object) 函数定义。</summary>
+  <div>define</div>
+</details>
+
+### 26.3.3 Universal Module Definition(UMD，通用模块定义)
+
+<details>
+  <summary>UMD，就是一种javascript通用模块定义规范，让你的模块能在javascript所有运行环境(CommonJS, AMD, CMD)中发挥作用。</summary>
+  <div>define</div>
+</details>
+
+### Common Module Definition(CMD)
+
+<details>
+  <summary>Javascript库__.js实现了AMD规范</summary>
+  <div>Sea</div>
+</details>
+
+<details>
+  <summary>CMD是就近依赖，只有在用到某个模块的时候再去__。</summary>
+  <div>require</div>
+</details>
+
+<details>
+  <summary>CMD加载完某个依赖模块后并不执行，只是__而已，在所有依赖模块加载完成后进入主逻辑，遇到__语句的时候才执行对应的模块，这样模块的执行顺序和__顺序是完全一致的。</summary>
+  <div>下载</div>
+  <div>require</div>
+  <div>书写</div>
+</details>
+
+## 26.4 Working with ES6 modules
+
+### 26.4.1 Module Tagging and Definition
+
+<details>
+  <summary>当script的type属性为__时，浏览器将把代码作为__执行，而不是传统的__执行。</summary>
+  <div>module</div>
+  <div>模块</div>
+  <div>脚本</div>
+</details>
+
+<details>
+  <summary>模块的执行顺序与__的相同，延迟执行直到文档被完全解析为止。</summary>
+  <div>defer</div>
+</details>
