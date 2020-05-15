@@ -1,23 +1,31 @@
 <!-- markdownlint-disable MD033 MD026 MD037 -->
 # Professional JavaScript For Web Developers 4Ed 填空
 
-哪些知识点必须记?
+<!-- 哪些知识点必须记?
 
 - 不掌握该知识点时，开发时引发相关错误，却难以发现。
+- 面试常问的。
+-->
+
+# CHAPTER 1 什么是JavaScript?
 
 <details>
-  <summary>W3C 中英文全称</summary>
+  <summary>W3C：英文全称__；中文全称__。</summary>
   <div>World Wide Web Consortium</div>
   <div>万维网联盟</div>
 </details>
 
 <details>
-  <summary>CSS 中英文全称</summary>
+  <summary>CSS：英文全称__；中文全称__。</summary>
   <div>Cascading Style Sheets</div>
   <div>层叠样式表</div>
 </details>
 
-# CHAPTER 1 什么是JavaScript?
+<details>
+  <summary>HTML：英文全称__；中文全称__。</summary>
+  <div>HyperText Markup Language</div>
+  <div>超文本标记语言</div>
+</details>
 
 ## 1.1 A Short History
 
@@ -47,19 +55,19 @@
 ### 1.2.1 ECMAScript
 
 <details>
-  <summary>DOM 中英文全称</summary>
+  <summary>DOM：英文全称__；中文全称__。</summary>
   <div>Document Object Model</div>
   <div>文档对象模型</div>
 </details>
 
 <details>
-  <summary>BOM 中英文全称</summary>
+  <summary>BOM：英文全称__；中文全称__。</summary>
   <div>Browser Object Model</div>
   <div>浏览器对象模型</div>
 </details>
 
 <details>
-  <summary>ECMA 中英文全称</summary>
+  <summary>ECMA：英文全称__；中文全称__。</summary>
   <div>European Computer Manufacturer’s Association</div>
   <div>欧洲计算机制造商协会</div>
 </details>
@@ -193,7 +201,7 @@
 </details>
 
 <details>
-  <summary>[延伸]SRI的中文全称__，英文全称__。</summary>
+  <summary>[延伸]SRI：英文全称__；中文全称__。</summary>
   <div>Subresource Integrity</div>
   <div>子资源完整性</div>
 </details>
@@ -1978,7 +1986,7 @@
 </details>
 
 <details>
-  <summary>可以使用WeakMap实现对象的__变量。</summary>
+  <summary>可以使用WeakMap实现对象的__属性。</summary>
   <div>私有</div>
 </details>
 
@@ -3765,34 +3773,34 @@
 ### 12.1.3 Window Position and Pixel Ratio
 
 <details>
-  <summary>要获取浏览器左边界到操作系统桌面左边界的水平距离(单位为像素)，可以通过__属性获取。</summary>
+  <summary>要获取浏览器左边界到操作系统桌面左边界的水平距离(单位为像素)，可以通过__属性。</summary>
   <div>window.screenLeft</div>
 </details>
 
 <details>
-  <summary>要获取浏览器上边界到操作系统桌面上边界的垂直距离(单位为像素)，可以通过__属性获取。</summary>
+  <summary>要获取浏览器上边界到操作系统桌面上边界的垂直距离(单位为像素)，可以通过__属性。</summary>
   <div>window.screenTop</div>
 </details>
 
 ### 12.1.4 Window Size
 
 <details>
-  <summary>要获取浏览器窗口的宽度(包括垂直滚动条)，可以通过__属性获取。</summary>
+  <summary>要获取浏览器窗口的宽度(包括垂直滚动条)，可以通过__属性。</summary>
   <div>window.innerWidth</div>
 </details>
 
 <details>
-  <summary>要获取浏览器窗口的高度(包括水平滚动条和工具栏)，可以通过__属性获取。</summary>
+  <summary>要获取浏览器窗口的高度(包括水平滚动条和工具栏)，可以通过__属性。</summary>
   <div>window.innerHeight</div>
 </details>
 
 <details>
-  <summary>要获取页面视口的宽度(不包括垂直滚动条)，可以通过__属性获取。</summary>
+  <summary>要获取页面视口的宽度(不包括垂直滚动条)，可以通过__属性。</summary>
   <div>document.documentElement.clientWidth</div>
 </details>
 
 <details>
-  <summary>要获取页面视口的高度(不包括水平滚动条和工具栏)，可以通过__属性获取。</summary>
+  <summary>要获取页面视口的高度(不包括水平滚动条和工具栏)，可以通过__属性。</summary>
   <div>document.documentElement.clientHeight</div>
 </details>
 
@@ -3932,6 +3940,8 @@
 
 ## 17.3 The Event Object(事件对象)
 
+### 17.3.1 The DOM Event Object
+
 <details>
   <summary>无论DOM0级还是DOM2级都会将一个__传入事件处理程序中。</summary>
   <div>event对象</div>
@@ -3968,9 +3978,289 @@
   <summary>解释以下“事件对象”的方法：</summary>
   <pre>
   1) preventDefault
+  2) stopImmediatePropagation
+  3) stopPropagation
   </pre>
   <details>
     <summary>点击查看答案：</summary>
-    <div>1) </div>
+    <div>1) 取消事件的默认行为。如果cancelable是true，则可以使用这个方法。</div>
+    <div>2) 取消事件的进一步捕获或冒泡，同时阻止任何事件处理程序被调用【DOM3】</div>
+    <div>3) 取消事件的进一步捕获或冒泡。如果bubbles为true，则可以使用这个方法。</div>
   </details>
 </details>
+
+## 17.4 Event Types
+
+<details>
+  <summary>web浏览器中发生的事件有很多__。DOM3级事件规定了9类事件：1)__ 2)__ 3)__ 4)__ 5)__ 6)__ 7)__</summary>
+  <div>UI事件：一般的浏览器事件，可能与BOM有一些交互。</div>
+  <div>焦点事件</div>
+  <div>鼠标事件</div>
+  <div>滚轮事件</div>
+  <div>文本事件</div>
+  <div>键盘事件</div>
+  <div>合成事件</div>
+</details>
+
+## 17.5 Memory and Performance
+
+### 17.5.1 Event Delegation
+
+<details>
+  <summary>针对“事件处理程序过多”问题的解决方案就是__。</summary>
+  <div>事件委托</div>
+</details>
+
+<details>
+  <summary>事件委托利用了事件流的__。</summary>
+  <div>事件冒泡</div>
+</details>
+
+## 17.6 Simulating Events(模拟事件)
+
+<details>
+  <summary>可以使用构造函数CustomEvent(typeArg, customEventInit)来创建事件。</summary>
+  <div>事件委托</div>
+</details>
+
+<details>
+  <summary>向一个指定的事件目标派发一个事件，可以用__(event)方法。</summary>
+  <div>targetElement.dispatchEvent</div>
+</details>
+
+# 第18章 ANIMATION AND GRAPHICS WITH CANVAS(动画和图形与Canvas)
+
+## 18.1 Using requestAnimationFrame
+
+<details>
+  <summary>长期以来，()方法一直是基于JavaScript的动画的最新技术。</summary>
+  <div>setInterval</div>
+</details>
+
+<details>
+  <summary>尽管CSS的transition和__使Web开发人员可以轻松地使用某些动画，但这些年来，基于JavaScript的动画领域几乎没有改变。</summary>
+  <div>animation</div>
+</details>
+
+### 18.1.1 Early Animation Loops
+
+<details>
+  <summary>__()方法向浏览器指示正在发生动画，以便浏览器可以依次确定安排重新绘制的最佳方法。</summary>
+  <div>requestAnimationFrame</div>
+</details>
+
+<details>
+  <summary>大多数计算机的显示器的刷新率为__，意味着每秒刷新60次。浏览器会限制__频率，使之不超过显示器的刷新频率。</summary>
+  <div>60Hz</div>
+  <div>重绘</div>
+</details>
+
+<details>
+  <summary>因此，最流畅的动画的最佳间隔是__ / __，即大约17ms。您将以这种速度看到最流畅的动画，因为您将更紧密地反映浏览器的功能。可能需要限制多个动画，以便在使用间隔为17ms的动画循环时不会太快完成。</summary>
+  <div>1000ms</div>
+  <div>60</div>
+</details>
+
+### 18.1.2 Problems with Intervals
+
+<details>
+  <summary>用setInterval来做动画有两个问题：1)__ 2)无法确保某一帧在下一次刷新前绘制完成。</summary>
+  <div>无法获取刷新频率</div>
+</details>
+
+<details>
+  <summary>保证何时能在浏览器中绘制__，是平滑动画的关键。</summary>
+  <div>下一帧</div>
+</details>
+
+### 18.1.3 requestAnimationFrame
+
+<details>
+  <summary>requestAnimationFrame（callback）方法接受单个参数，该参数是在浏览器__之前调用的函数。例子：</summary>
+  <div>重新绘制屏幕</div>
+  <pre>
+  let requestID = window.requestAnimationFrame(() => {
+    console.log('Repaint!');
+  });
+  window.cancelAnimationFrame(requestID);
+  </pre>
+</details>
+
+### 18.1.5 Performance Throttling with requestAnimationFrame
+
+<details>
+  <summary>由于requestAnimationFrame的回调函数的调用的频率是固定了，所以可以用来做一些__发生频率的事情。</summary>
+  <div>限制</div>
+</details>
+
+// 此章剩下的先略过
+
+# 第19章 SCRIPTING FORMS
+
+<details>
+  <summary>JavaScript的原始用途之一是将一些__处理职责转移到浏览器上，而不是依靠__来完成所有这些工作。</summary>
+  <div>表单</div>
+  <div>服务器</div>
+</details>
+
+## 19.1 Form Basics
+
+<details>
+  <summary>在HTML中，表单由form元素表示的，而在JavaScript中，表单对应是的__类型的对象。</summary>
+  <div>HTMLFormElement</div>
+</details>
+
+<details>
+  <summary>HTMLFormElement对象一些独有的重要属性的方法：1)__：所有表单元素的集合 2)reset() 3)submit()</summary>
+  <div>elements</div>
+</details>
+
+// 此章剩下的先略过
+
+# 第20章 JAVASCRIPT APIS
+
+// 此章先略过
+
+# 第21章 ERROR HANDLING AND DEBUGGING
+
+## 21.2 Error Handling
+
+### 21.2.1 The try-catch Statement
+
+<details>
+  <summary>第三版ECMA-262引入了try-catch语句，作为处理JavaScript中__的一种方式。与Java中的try-catch语句相同。</summary>
+  <div>异常</div>
+</details>
+
+#### 21.2.1.1 The finally Clause
+
+<details>
+  <summary>无论如何，try-catch语句的可选__子句始终运行其代码。并且try-catch语句中的__语句也无法中断。</summary>
+  <div>finally</div>
+  <div>return</div>
+</details>
+
+// 此章剩下的先略过
+
+# 第26章 MODULES
+
+<details>
+  <summary>历史上，JavaScript 一直没有模块（module）体系，无法将一个大程序拆分成互相依赖的__，再用简单的方法__起来。这对开发大型的、复杂的项目形成了巨大障碍。</summary>
+  <div>小文件</div>
+  <div>拼装</div>
+</details>
+
+<details>
+  <summary>在 ES6 之前，社区制定了一些模块加载方案，最主要的有 __ 和 __ 两种。前者用于__，后者用于浏览器。ES6 模块功能将成为浏览器和服务器通用的模块解决方案。</summary>
+  <div>CommonJS</div>
+  <div>AMD</div>
+  <div>服务器</div>
+</details>
+
+## 26.1 Understanding the module pattern(了解模块化)
+
+<details>
+  <summary>模块化的中心思想：将逻辑分解为完全从代码其余部分封装的片段，允许每个片段显式定义其自身的哪些部分暴露于外部片段，并允许每个片段显式定义其需要执行的外部片段</summary>
+  <div></div>
+</details>
+
+### 26.1.1 Module Identifiers
+
+<details>
+  <summary>所有模块系统的共同点是模块__的概念。模块系统本质上是键值实体，其中每个模块都有一个可用于引用它的标识符。在模拟模块系统的情况下，此令牌有时是，在本地实施模块系统的情况下，它可能是模块__的实际路径。</summary>
+  <div>标识符</div>
+  <div>字符串</div>
+  <div>文件</div>
+</details>
+
+### 26.1.3 Module Loading
+
+### 26.1.4 Entry Points(入口点)
+
+<details>
+  <summary>相互依赖的模块网络必须指定一个模块作为“__”，从此处开始执行路径。 </summary>
+  <div>入口点</div>
+</details>
+
+<details>
+  <summary>模块加载是“__的”，这意味着直到操作完成，才能继续执行。每个模块在其脚本有效负载交付给浏览器之后将逐步加载，并且其所有依赖项均已加载并__。</summary>
+  <div>同步</div>
+  <div>初始化</div>
+</details>
+
+### 26.1.5 Asynchronous Dependencies
+
+<details>
+  <summary>因为JavaScript是一种__步语言，所以通过允许JavaScript代码指示模块系统加载新模块，并在模块准备好后将其提供给回调，将其按需加载也很有用。</summary>
+  <div>异</div>
+</details>
+
+### 26.1.8 Circular Dependencies
+
+<details>
+  <summary>包括CommonJS，AMD和ES6在内的所有模块系统都支持周期性依赖关系。在具有依赖周期的应用程序中，模块的加载__可能与您期望的不一样。 </summary>
+  <div>顺序</div>
+</details>
+
+## 26.3 Working with pre-ES6 module loaders(ES6之前的模块加载器)
+
+### 26.3.1 CommonJS
+
+<details>
+  <summary>CommonJS是以在__环境之外构建JavaScript生态系统为目标在2009年产生的项目。</summary>
+  <div>浏览器</div>
+</details>
+
+<details>
+  <summary>CommonJS 规范是为了解决 JavaScript 的__问题而定义的模块形式，可以使每个模块它自身的命名空间中执行。</summary>
+  <div>作用域</div>
+</details>
+
+<details>
+  <summary>CommonJS规范加载模块是__步的。</summary>
+  <div>同</div>
+</details>
+
+<details>
+  <summary>每个文件就是一个__。</summary>
+  <div>模块</div>
+</details>
+
+<details>
+  <summary>每个模块内部，都有一个__对象，代表当前模块。module对象是Module构造函数的实例。</summary>
+  <div>module</div>
+</details>
+
+<details>
+  <summary>module对象的属性主要有6个：1)id 2)filename 3)loaded 4)parent 5)children 6)exports。</summary>
+  <div>1) id 模块标识符</div>
+  <div>2) filename 模块文件名，绝对路径</div>
+  <div>3) loaded 模块是否已加载</div>
+  <div>4) parent 调用该模块的对象</div>
+  <div>5) children 该模块依赖的其他模块</div>
+  <div>6) exports 对外输出的对象</div>
+</details>
+
+<details>
+  <summary>如果module.parent为__，则该模块为入口模块。</summary>
+  <div>null</div>
+</details>
+
+<details>
+  <summary>Node为每个模块提供一个__变量，指向module.exports。</summary>
+  <div>exports</div>
+</details>
+
+<details>
+  <summary>__方法用于加载模块。</summary>
+  <div>require</div>
+</details>
+
+<details>
+  <summary>模块可以多次加载，但是只会在第一次加载时运行一次，然后运行结果就被缓存了。</summary>
+  <div>require</div>
+</details>
+
+### 26.3.2 Asynchronous Module Definition(AMD)
+
+### 26.3.3 Universal Module Definition(UMD)
