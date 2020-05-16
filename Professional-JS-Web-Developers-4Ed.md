@@ -1328,7 +1328,7 @@
 #### 4.2.2.3 Constant Declaration Using const
 
 <details>
-  <summary>如果希望使整个对象不可变，则可以使用__(obj)。</summary>
+  <summary>如果希望使整个对象不可变，则可以使用__(obj)。不能新增删除属性，已有的属性的描述符configuable和writable改为false。</summary>
   <div>Object.freeze</div>
 </details>
 
@@ -2425,12 +2425,12 @@
 ### 8.1.3 Reading Property Attributes
 
 <details>
-  <summary>(ES5)如果想获取对象某个属性的描述符，可以使用__(obj, prop)。</summary>
+  <summary>(ES5)如果想获取对象某个属性的描述符，可以使用__(obj, prop)。仅获取一层！</summary>
   <div>Object.getOwnPropertyDescriptor</div>
 </details>
 
 <details>
-  <summary>(ES8)如果想获取对象全部属性的描述符，可以使用__(obj)。</summary>
+  <summary>(ES8)如果想获取对象全部属性的描述符，可以使用__(obj)。仅获取一层！</summary>
   <div>Object.getOwnPropertyDescriptors</div>
 </details>
 
@@ -3142,8 +3142,11 @@
 #### 9.1.6.4 Safe Function Application
 
 <details>
-  <summary>如果Function.prototype.apply方法可能被重写，为了避免重写导致错误，可以使用___.apply（myFunc，thisVal，argumentsList）。</summary>
+  <summary>如果Function.prototype.apply方法可能被重写，为了避免重写导致错误，可以使用___.apply（myFunc，thisVal，argumentsList）。例子：</summary>
   <div>Reflect</div>
+  <pre>
+  Reflect.apply(String.fromCharCode, undefined, [104, 101, 108, 108, 111]); // "hello"
+  </pre>
 </details>
 
 ### 9.1.8 Proxy Considerations and Shortcomings
@@ -3649,6 +3652,11 @@
 <details>
   <summary>调用函数时，将创建一个执行上下文，并创建其__。</summary>
   <div>作用域</div>
+</details>
+
+<details>
+  <summary>闭包的用途：1)私有变量 2)__化</summary>
+  <div>模块</div>
 </details>
 
 ## 10.15 Immediately Invoked Function Expressions
@@ -4373,7 +4381,156 @@
   <div>脚本</div>
 </details>
 
+### 26.4.2 Module Loading
+
 <details>
   <summary>模块的执行顺序与__的相同，延迟执行直到文档被完全解析为止。</summary>
   <div>defer</div>
+</details>
+
+### 26.4.3 Module Behavior
+
+<details>
+  <summary>模块代码仅在__时执行。</summary>
+  <div>加载</div>
+</details>
+
+<details>
+  <summary>一个模块只能加载一次。模块是__例模式。</summary>
+  <div>单</div>
+</details>
+
+<details>
+  <summary>支持__依赖。</summary>
+  <div>循环</div>
+</details>
+
+<details>
+  <summary>ES6模块以__模式执行。</summary>
+  <div>严格</div>
+</details>
+
+<details>
+  <summary>ES6模块__享全局命名空间。</summary>
+  <div>不共</div>
+</details>
+
+<details>
+  <summary>ES6模块是__步加载的。</summary>
+  <div>异</div>
+</details>
+
+<details>
+  <summary>两种情况下将被浏览器视为模块：__和__。</summary>
+  <div>type=module</div>
+  <div>通过import语句加载</div>
+</details>
+
+### 26.4.4 Module Exports
+
+<details>
+  <summary>__关键字用于控制模块的哪些部分对外部模块可见。export始终返回一个对象。</summary>
+  <div>export</div>
+</details>
+
+<details>
+  <summary>export会被__到模块的顶部，必须声明在模块的最__层.</summary>
+  <div>提升</div>
+  <div>外</div>
+</details>
+
+<details>
+  <summary>ES6模块中有两种 exports 导出方式：__和__。</summary>
+  <div>export</div>
+  <div>export default</div>
+</details>
+
+<details>
+  <summary>导出时可以通过__提供别名。</summary>
+  <div>as(alias)</div>
+</details>
+
+<details>
+  <summary>export const foo = 'foo';等效于：</summary>
+  <pre>
+  export {
+    foo: foo,
+  }
+  </pre>
+</details>
+
+<details>
+  <summary>const foo = 'foo'; export { foo }; export default foo;等效于：</summary>
+  <pre>
+  export {
+    foo,
+    default: foo,
+  }
+  </pre>
+</details>
+
+<details>
+  <summary>const foo = 'foo'; export { foo as myFoo };等效于：</summary>
+  <pre>
+  export {
+    myFoo: foo,
+  }
+  </pre>
+</details>
+
+### 26.4.5 Module Imports
+
+<details>
+  <summary>import会被__到模块的顶部。</summary>
+  <div>提升</div>
+</details>
+
+<details>
+  <summary>模块标识符可以是从__模块到该模块文件的相对路径，也可以是从基本路径到该模块文件的绝对路径。它必须是一个__字符串；标识符不能__计算。</summary>
+  <div>当前</div>
+  <div>纯</div>
+  <div>动态</div>
+</details>
+
+<details>
+  <summary>如果模块是通过模块标识符中的路径本地加载到浏览器中的，则需要__才能引用正确的文件。</summary>
+  <div>.js扩展名</div>
+</details>
+
+<details>
+  <summary>只想执行foo模块，不需要使用foo模块的export对象，可以这样子导入模块：__ './foo.js';</summary>
+  <div>import</div>
+</details>
+
+<details>
+  <summary>import foo from './fooModule.js';等效于：</summary>
+  <pre>
+  // import foo from './fooModule.js';
+  Object.freeze(fooModule);
+  const { default : foo } = fooModule;
+
+  // 如果 fooModule.js 没有导出 default 会报错
+  // The requested module './fooModule.js' does not provide an export named 'default'
+  </pre>
+</details>
+
+<details>
+  <summary>import a, * as b './foo.js';等效于：</summary>
+  <pre>
+  Object.freeze(foo);
+  const { default: a } = foo;
+  const b = foo;
+  </pre>
+</details>
+
+#### import() 动态导入
+
+<details>
+  <summary>import()返回一个 __ 对象。</summary>
+  <div>Promise</div>
+</details>
+
+<details>
+  <summary>import()函数不仅仅用在模块，非模块的__也可以使用。</summary>
+  <div>脚本</div>
 </details>
