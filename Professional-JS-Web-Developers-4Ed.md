@@ -4446,7 +4446,7 @@
 </details>
 
 <details>
-  <summary>导出时可以通过__提供别名。</summary>
+  <summary>导出时可以通过__关键字提供别名。</summary>
   <div>as(alias)</div>
 </details>
 
@@ -4483,6 +4483,17 @@
 <details>
   <summary>import会被__到模块的顶部。</summary>
   <div>提升</div>
+</details>
+
+<details>
+  <summary>模块下载完后，会立即执行。</summary>
+  <div>提升</div>
+</details>
+
+<details>
+  <summary>由于import是__执行，就是创建执行上下文的 __阶段 执行。</summary>
+  <div>静态</div>
+  <div>创建</div>
 </details>
 
 <details>
@@ -4534,3 +4545,105 @@
   <summary>import()函数不仅仅用在模块，非模块的__也可以使用。</summary>
   <div>脚本</div>
 </details>
+
+### 26.4.6 Module Passthrough Exports
+
+<details>
+  <summary>如果想把导入的模块，在直接导出。可以使用`export __ './foo.js';`</summary>
+  <div>* from</div>
+</details>
+
+### 26.4.7 Worker Modules
+
+// 不理解 Worker 是干嘛的
+
+### 26.4.8 Backwards Compatibility
+
+<details>
+  <summary>为了兼容不支持模块的浏览器，可以在 script 的 __ 属性。例子：</summary>
+  <div>nomodule</div>
+  <pre>
+  // Modern browser will execute this
+  // Legacy browser will not execute this
+  &lt;script type="module" src="module.js"></script>
+  <!--  -->
+  // Modern browser will not execute this
+  // Legacy browser will execute this
+  &lt;script nomodule src="script.js"></script>
+  </pre>
+</details>
+
+# 第27章 WORKERS
+
+<details>
+  <summary>这种单线程范例具有固有的局限性，因为它阻止了在可以将工作委派给单独的线程或进程的语言中可行的编程模式。</summary>
+  <div></div>
+</details>
+
+<details>
+  <summary>其中存在工作者的核心价值主张：允许主执行线程将工作委托给单独的实体，而无需更改现有的单线程模型。</summary>
+  <div></div>
+</details>
+
+## 27.1 Introduction to Workers
+
+<details>
+  <summary>单个JavaScript环境本质上是在主机操作系统内部运行的虚拟化环境。浏览器中的每个打开页面都分配有自己的环境。沙盒化。</summary>
+  <div></div>
+</details>
+
+<details>
+  <summary>使用workers，浏览器可以分配与原始页面环境完全分开的第二个子环境。该子环境可以避免与依赖单线程的结构（例如DOM）进行交互，但可以自由地与父环境__行执行代码。</summary>
+  <div>并</div>
+</details>
+
+### 27.1.1 Comparing Worker and Thread(对比 运行者 和 线程)
+
+<details>
+  <summary>运行者和线程的共同点：1) Worker被实现为实际线程。 2) Worker并行执行。 3) Worker可以共享一些内存。</summary>
+  <div></div>
+</details>
+
+<details>
+  <summary>运行者和线程的不同点：1) Worker不共享所有内存。 2) Worker线程不一定是同一进程的一部分。 3) Worker线程的创建成本更高。</summary>
+  <div></div>
+</details>
+
+<details>
+  <summary>什么时候使用 worker ：Worker相对较重，不打算大量使用。例如，为四百万像素图像的每个像素启动一个worker是不合适的。通常用在：预计worker寿命长，启动性能成本高以及每实例内存成本高。</summary>
+  <div></div>
+</details>
+
+### 27.1.2 Types of Workers
+
+<details>
+  <summary>worker 主要有三种类型：1) __ Web Worker。 2) __ Web Worker。 3) __ Worker。</summary>
+  <div>Dedicated</div>
+  <div>Shared</div>
+  <div>Service</div>
+</details>
+
+#### 27.1.2.1 Dedicated Web Worker
+
+<details>
+  <summary>专用的 Web worker，通常仅称为专用的worker，web worker或只是worker，是一种实用工具，它允许脚本生成单独的JavaScript__程并将任务委托给它。 顾名思义，专用的worker只能由产生它的页面访问。</summary>
+  <div>线</div>
+</details>
+
+#### 27.1.2.2 Shared Web Worker
+
+<details>
+  <summary>共享的Web worker的行为非常类似于专用的worker。主要区别在于可以跨多个上下文（包括不同的页面）访问__的worker。</summary>
+  <div>共享</div>
+</details>
+
+#### 27.1.2.3 Service Worker
+
+<details>
+  <summary>它的主要目的是充当网络请求仲裁程序，能够拦截，重定向和修改由页面调度的__。</summary>
+  <div>请求</div>
+</details>
+
+// Worker 挺重要 但先放一放
+
+# 第28章 BEST PRACTICES
