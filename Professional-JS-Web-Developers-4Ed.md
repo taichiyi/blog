@@ -351,6 +351,11 @@
   <div>6</div>
 </details>
 
+<details>
+  <summary>使用const声明变量后，该变量指向的内存地址就不可改变了。</summary>
+  <div></div>
+</details>
+
 ### 3.3.1 The ’var’ Keyword
 
 #### 3.3.1.2 var Declaration Hoisting
@@ -2831,7 +2836,7 @@
 ### 8.4.2 The Class Constructor
 
 <details>
-  <summary>选择不定义构造函数和定义为__相同。</summary>
+  <summary>选择不定义constructor函数和定义为__相同。</summary>
   <div>空函数</div>
 </details>
 
@@ -2845,14 +2850,14 @@
 <details>
   <summary>使用new调用类构造函数将执行以下操作：①__；②__；③__；④__；⑤__。</summary>
   <div>1. 在内存中创建一个新对象</div>
-  <div>2. 将新对象的内部[[Prototype]]指针分配为构造函数的prototype属性</div>
-  <div>3. 构造函数的this值分配给新对象（因此在构造函数内部被引用时指向新对象）</div>
-  <div>4. 执行构造函数中的代码（将属性添加到新对象）</div>
-  <div>5. 如果构造函数返回一个对象，则返回该对象。 否则，新返回刚刚创建的对象</div>
+  <div>2. 将新对象的内部[[Prototype]]指针分配为constructor函数的prototype属性</div>
+  <div>3. constructor函数的this值分配给新对象（因此在constructor函数内部被引用时指向新对象）</div>
+  <div>4. 执行constructor函数中的代码（将属性添加到新对象）</div>
+  <div>5. 如果constructor函数返回一个对象，则返回该对象。 否则，新返回刚刚创建的对象</div>
 </details>
 
 <details>
-  <summary>当选择不使用new运算符时，构造函数将在构造函数内部this将指向__。</summary>
+  <summary>当选择不使用new运算符时，构造函数将在constructor函数内部this将指向__。</summary>
   <div>严格模式下为undefined；否则为全局对象（在浏览器中是window对象）</div>
 </details>
 
@@ -2870,7 +2875,7 @@
 #### 8.4.3.2 Prototype Methods and Accessors
 
 <details>
-  <summary>类__中定义的所有内容都会添加到原型对象上。</summary>
+  <summary>类__中定义的所有内容都会添加到类的原型对象上。</summary>
   <div>主体</div>
 </details>
 
@@ -2878,7 +2883,7 @@
 
 <details>
   <summary>如果为静态成员，则直接添加到__对象上。</summary>
-  <div>构造函数</div>
+  <div>类构造函数</div>
 </details>
 
 #### 8.4.3.4 Non-Function Prototype and Class Members
@@ -2926,7 +2931,7 @@
 #### 8.4.4.2 Constructors, HomeObjects, and super()
 
 <details>
-  <summary>在构造函数内部使用__关键字来控制何时调用父类构造函数。</summary>
+  <summary>在constructor函数内部使用__关键字来控制何时调用父类constructor函数。</summary>
   <div>super</div>
 </details>
 
@@ -3077,28 +3082,61 @@
 #### 9.1.6.3 Supplanting Operators with First-Class Functions
 
 <details>
-  <summary>Reflect.__() 获取对象身上某个属性的值。</summary>
+  <summary>Reflect.__(target, propertyKey[, receiver]) 获取对象身上某个属性的值。例子：</summary>
   <div>get</div>
+  <pre>
+  var obj = { x: 1, y: 2 };
+  Reflect.get(obj, "x"); // 1
+  </pre>
 </details>
 
 <details>
-  <summary>Reflect.__() 将值分配给属性的函数。返回一个Boolean。</summary>
+  <summary>Reflect.__(target, propertyKey, value[, receiver]) 将值分配给属性的函数。返回一个Boolean。例子：</summary>
   <div>set</div>
+  <pre>
+  var obj = {};
+  Reflect.set(obj, "prop", "value"); // true
+  obj.prop; // "value"
+  </pre>
 </details>
 
 <details>
-  <summary>Reflect.__() 判断一个对象是否存在某个属性，和 in 运算符 的功能完全相同。</summary>
+  <summary>Reflect.__(target, propertyKey) 判断一个对象是否存在某个属性，和 in 运算符 的功能完全相同。例子：</summary>
   <div>has</div>
+  <pre>
+  Reflect.has({x: 0}, "x"); // true
+  </pre>
 </details>
 
 <details>
-  <summary>Reflect.__() 作为函数的delete操作符，相当于执行 delete target[name]。</summary>
+  <summary>Reflect.__(target, propertyKey) 作为函数的delete操作符，相当于执行 delete target[name]。例子：</summary>
   <div>deleteProperty</div>
+  <pre>
+  var obj = { x: 1, y: 2 };
+  Reflect.deleteProperty(obj, "x"); // true
+  obj; // { y: 2 }
+  </pre>
 </details>
 
 <details>
-  <summary>Reflect.__() 对构造函数进行 new 操作，相当于执行 new target(...args)。</summary>
+  <summary>Reflect.__(target, argumentsList[, newTarget]) 对构造函数进行 new 操作，相当于执行 new target(...args)。</summary>
   <div>construct</div>
+  <pre>
+  function OneClass() {
+      this.name = 'one';
+  }
+
+  function OtherClass() {
+      this.name = 'other';
+  }
+
+  // 创建一个对象:
+  var obj1 = Reflect.construct(OneClass, args, OtherClass);
+
+  // 与上述方法等效:
+  var obj2 = Object.create(OtherClass.prototype);
+  OneClass.apply(obj2, args);
+  </pre>
 </details>
 
 #### 9.1.6.4 Safe Function Application
