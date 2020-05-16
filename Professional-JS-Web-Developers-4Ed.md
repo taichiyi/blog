@@ -1141,9 +1141,9 @@
 
 <details>
   <summary>每个词法环境有三个组成部分：1)__ 2)__ 3)__。</summary>
-  <div>环境记录(Environment Record)</div>
-  <div>引用外部环境(Reference to the outer environment)</div>
-  <div>绑定this(This binding)</div>
+  <div>环境记录 EnvironmentRecord(Environment Record)</div>
+  <div>引用外部环境 outer(Reference to the outer environment)</div>
+  <div>绑定this ThisBinding(This binding)</div>
 </details>
 
 <details>
@@ -1153,20 +1153,21 @@
 </details>
 
 <!-- 不理解，暂时注释 -->
-<!-- <details>
-  <summary>环境记录有两种类型：声明式环境记录和对象环境记录。</summary>
+<details>
+  <summary>环境记录有两种类型：声明式环境记录(declarative)和对象环境记录(object)。</summary>
   <div></div>
 </details>
 
 <details>
-  <summary>声明式环境记录：存储变量、函数声明和参数。函数代码的词法环境包含声明性环境记录。</summary>
+  <summary>声明式环境记录：存储变量、函数声明和参数。</summary>
+  <!-- 函数代码的词法环境包含声明性环境记录。 -->
   <div></div>
 </details>
 
 <details>
   <summary>对象环境记录：用来存储变量with语句和全局上下文中的变量和函数。</summary>
   <div></div>
-</details> -->
+</details>
 
 <details>
   <summary>引用外部环境：外部执行上下文。对外部环境的引用意味着它可以访问其外部词法环境。这意味着，如果在当前__环境中找不到变量，则JavaScript引擎可以在外部环境中查找变量。</summary>
@@ -1207,7 +1208,7 @@
   c = multiply(20, 30);
   <!--  -->
   // 创建阶段
-  GlobalExectionContext = {
+  GlobalExecutionContext = {
     LexicalEnvironment: {
       EnvironmentRecord: {
         Type: "Object",
@@ -1231,7 +1232,7 @@
   }
   <!--  -->
   // 执行阶段
-  GlobalExectionContext = {
+  GlobalExecutionContext = {
     LexicalEnvironment: {
       EnvironmentRecord: {
         Type: "Object",
@@ -1255,7 +1256,7 @@
   }
   // 当遇到对函数multiple（20，30）的调用时，将创建一个新的函数执行上下文来执行功能代码。
   // 创建阶段
-  FunctionExectionContext = {
+  FunctionExecutionContext = {
     LexicalEnvironment: {
       EnvironmentRecord: {
         Type: "Declarative",
@@ -1280,7 +1281,7 @@
     }
   }
   // 执行阶段
-  FunctionExectionContext = {
+  FunctionExecutionContext = {
     LexicalEnvironment: {
       EnvironmentRecord: {
         Type: "Declarative",
@@ -2548,7 +2549,8 @@
 </details>
 
 <details>
-  <summary>每个函数都有一个__对象。</summary>
+  <summary>除了__函数外，每个函数都有一个__对象。</summary>
+  <div>箭头</div>
   <div>原型</div>
 </details>
 
@@ -3368,17 +3370,29 @@
   <div>arguments</div>
   <div>super</div>
   <div>new.target</div>
-  <div>构造函数</div>
+  <div>构造函数(因为没有内部方法[[Construct]])</div>
 </details>
 
 <details>
-  <summary>箭头语法创建的函数对象未定义__。</summary>
+  <summary>箭头函数对象没有__属性。</summary>
   <div>原型(prototype)</div>
 </details>
 
 <details>
-  <summary>箭头语法与this之间的关系???</summary>
-  <div></div>
+  <summary>箭头函数执行上下文的`ThisBinding`为__。</summary>
+  <div>undefined</div>
+</details>
+
+<details>
+  <summary>=>被称作__箭头，->被称作__箭头。</summary>
+  <div>胖</div>
+  <div>廋</div>
+</details>
+
+<details>
+  <summary>箭头函数和普通函数的区别：1)箭头函数的上下文</summary>
+  <div>胖</div>
+  <div>廋</div>
 </details>
 
 ## 10.2 Function Names
@@ -3503,6 +3517,11 @@
 </details>
 
 ### 10.9.2 this
+
+<details>
+  <summary>执行上下文的this指向，是在__阶段才确定的。</summary>
+  <div>执行</div>
+</details>
 
 <details>
   <summary>在标准函数内部，它通常是对__的引用，该函数正在对其进行操作，称为this值。</summary>
@@ -4647,3 +4666,5 @@
 // Worker 挺重要 但先放一放
 
 # 第28章 BEST PRACTICES
+
+// 此章先略过
