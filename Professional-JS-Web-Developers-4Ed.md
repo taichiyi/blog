@@ -1196,6 +1196,11 @@
 </details>
 
 <details>
+  <summary>在ES6前，声明变量都是通过var关键字声明的，在ES6中则提倡使用let和const来声明变量，为了__var的写法，于是使用变量环境(VariableEnvironment)来存储var声明的变量。</summary>
+  <div>兼容</div>
+</details>
+
+<details>
   <summary>通过一个例子来理解。在创建阶段和执行阶段，变量环境和词法环境的使用。例子：</summary>
   <pre>
   let a = 20;
@@ -1744,7 +1749,7 @@
 ## 6.1 The Object Type
 
 <details>
-  <summary>大多数引用类型__都是 Object 类型的实例。创建 Object 实例的方式有两种：①new 操作符后跟 __；②__表示法。</summary>
+  <summary>大多数引用类型__都是 Object 类型的实例。创建 Object 实例的方式有两种：①new 运算符后跟 __；②__表示法。</summary>
   <div>值</div>
   <div>Object 构造函数</div>
   <div>对象字面量</div>
@@ -3117,7 +3122,7 @@
 </details>
 
 <details>
-  <summary>Reflect.__(target, propertyKey) 作为函数的delete操作符，相当于执行 delete target[name]。例子：</summary>
+  <summary>Reflect.__(target, propertyKey) 作为函数的delete运算符，相当于执行 delete target[name]。例子：</summary>
   <div>deleteProperty</div>
   <pre>
   var obj = { x: 1, y: 2 };
@@ -3289,7 +3294,7 @@
 ### 9.2.13 construct()
 
 <details>
-  <summary>new 操作符用在代理对象时，会调用__(target, argumentsList[, newTarget])陷阱。</summary>
+  <summary>new 运算符用在代理对象时，会调用__(target, argumentsList[, newTarget])陷阱。</summary>
   <div>construct</div>
 </details>
 
@@ -3530,8 +3535,48 @@
 </details>
 
 <details>
-  <summary>在标准函数内部，它通常是对__的引用，该函数正在对其进行操作，称为this值。</summary>
-  <div>上下文对象</div>
+  <summary>this的值为__值。</summary>
+  <div>任何</div>
+</details>
+
+<details>
+  <summary>绑定this: 分两种执行上下文，1)__执行上下文 2)__执行上下文。</summary>
+  <div>全局</div>
+  <div>函数</div>
+</details>
+
+<details>
+  <summary>全局执行上下文: this的值为__。</summary>
+  <div>全局对象</div>
+</details>
+
+<details>
+  <summary>函数执行上下文，则取决于调用的方式：1)__调用 2)__调用 3)__调用 4)__调用。</summary>
+  <div>new运算符</div>
+  <div>apply和call</div>
+  <div>作为对象方法</div>
+  <div>其他</div>
+</details>
+
+<details>
+  <summary>new运算符调用: this的值为__。</summary>
+  <div>空对象</div>
+</details>
+
+<details>
+  <summary>apply和call调用: this的值为__。</summary>
+  <div>调用时传入的值</div>
+</details>
+
+<details>
+  <summary>作为对象方法调用: this的值为__。</summary>
+  <div>该对象</div>
+</details>
+
+<details>
+  <summary>其他调用: 分严格模式和非严格模式。严格模式下this值为__；非严格模式下this值为__。</summary>
+  <div>undefined</div>
+  <div>全局对象</div>
 </details>
 
 <details>
