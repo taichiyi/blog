@@ -1504,6 +1504,11 @@
 </details>
 
 <details>
+  <summary>高位10个bit和低位10个bit是通过不是通过加法运算得到20个bit的，是通过__。</summary>
+  <div>字符串拼接</div>
+</details>
+
+<details>
   <summary>(2/3)②高位的10比特(共__个码点)的值（值的范围为 0-0x3FF）被加上 0x__ 得到第一个码元或称作__，值的范围是 0xD800-0xDBFF。</summary>
   <div>1024</div>
   <div>D800</div>
@@ -1682,10 +1687,10 @@
   <div>- _ . ! ~ * ' ( )</div>
 </details>
 
-<details>
+<!-- <details> 不需要记
   <summary>encodeURI不编码的字符：①__②#。</summary>
   <div>; , / ? : @ & = + $</div>
-</details>
+</details> -->
 
 #### 5.5.1.2 The eval() Method
 
@@ -2555,7 +2560,7 @@
 </details>
 
 <details>
-  <summary>调用构造函数后，创建一个新对象，然后将新对象赋值到__，将新对象的原型(prototype)属性指向__，构造函数的原型对象默认有个__属性，属性值为__。</summary>
+  <summary>调用构造函数后，创建一个新对象，然后将新对象赋值到__，将__赋值到新对象的原型(prototype)属性，构造函数的原型对象默认有个__属性，属性值为__。</summary>
   <div>this关键字</div>
   <div>构造函数的原型对象</div>
   <div>constructor</div>
@@ -2661,8 +2666,8 @@
 #### 8.3.1.1 Default Prototypes
 
 <details>
-  <summary>任何函数的默认原型都是__。</summary>
-  <div>Object构造函数的实例</div>
+  <summary>任何原型都是__构造函数的实例。</summary>
+  <div>Object</div>
 </details>
 
 #### 8.3.1.2 Prototype and Instance Relationships
@@ -2708,7 +2713,7 @@
 #### 8.3.2.2 Problems with Constructor Stealing
 
 <details>
-  <summary>借用构造函数的缺点：①子类型的实例，__无法共用。②超类型__中的方法，子类型不可访问。</summary>
+  <summary>借用构造函数的缺点：①子类型实例的__无法共用。②超类型__中的方法，子类型不可访问。</summary>
   <div>方法</div>
   <div>原型</div>
 </details>
@@ -2722,7 +2727,7 @@
 </details>
 
 <details>
-  <summary>组合继承的缺点：调用了两次超类型的构造函数，1) new超类型，只用了超类型的原型，却没有用超类的__；2)通过call方法调用了一次。</summary>
+  <summary>组合继承的缺点：调用了两次超类型的构造函数，1) new超类型，只用了超类型的原型，却没有用超类的__；2)通过call或apply方法调用了一次。</summary>
   <div>属性</div>
 </details>
 
@@ -2853,15 +2858,15 @@
   <summary>使用new调用类构造函数将执行以下操作：①__；②__；③__；④__；⑤__。</summary>
   <div>1. 在内存中创建一个新对象</div>
   <div>2. 将新对象的内部[[Prototype]]指针分配为constructor函数的prototype属性</div>
-  <div>3. constructor函数的this值分配给新对象（因此在constructor函数内部被引用时指向新对象）</div>
+  <div>3. 新对象赋值给constructor函数的this。</div>
   <div>4. 执行constructor函数中的代码（将属性添加到新对象）</div>
   <div>5. 如果constructor函数返回一个对象，则返回该对象。 否则，新返回刚刚创建的对象</div>
 </details>
 
-<details>
+<!-- <details>问题重复了
   <summary>当选择不使用new运算符时，构造函数将在constructor函数内部this将指向__。</summary>
   <div>严格模式下为undefined；否则为全局对象（在浏览器中是window对象）</div>
-</details>
+</details> -->
 
 #### 8.4.2.2 Understanding Classes as Special Functions
 
@@ -2995,15 +3000,15 @@
   <div>垫片(polyfill)</div>
 </details>
 
-<details>
+<!-- <details> 没必要记
   <summary>Proxy 属于一种“元编程”（meta programming），即对__进行编程。</summary>
   <div>编程语言</div>
-</details>
+</details> -->
 
-<details>
+<!-- <details> 没必要记
   <summary>在__对象之前加了一层。</summary>
   <div>目标</div>
-</details>
+</details> -->
 
 ## 9.1 Proxy Fundamentals
 
@@ -3093,8 +3098,9 @@
 </details>
 
 <details>
-  <summary>Reflect.__(target, propertyKey, value[, receiver]) 将值分配给属性的函数。返回一个Boolean。例子：</summary>
+  <summary>Reflect.__(target, propertyKey, value[, receiver]) 将值分配给属性的函数。返回一个__类型值。例子：</summary>
   <div>set</div>
+  <div>Boolean</div>
   <pre>
   var obj = {};
   Reflect.set(obj, "prop", "value"); // true
@@ -3156,7 +3162,7 @@
 #### 9.1.8.1 ’this’ Inside a Proxy
 
 <details>
-  <summary>在代理对象调用方法时，this总是指向__对象，而不是代理对象。</summary>
+  <summary>在代理对象调用方法时，__对象总是赋值到this，而不是代理对象。</summary>
   <div>目标</div>
 </details>
 
@@ -3519,7 +3525,7 @@
 ### 10.9.2 this
 
 <details>
-  <summary>执行上下文的this指向，是在__阶段才确定的。</summary>
+  <summary>执行上下文中的ThisBinding，是在__阶段才确定的。</summary>
   <div>执行</div>
 </details>
 
@@ -3560,7 +3566,7 @@
 </details>
 
 <details>
-  <summary>ES5定义了一个名为bind的方法。 bind（thisArg）方法创建一个新的函数实例，实例的this将指向__。</summary>
+  <summary>ES5定义了一个名为bind的方法。 bind（thisArg）方法创建一个新的函数实例，将__赋值给实例的this。</summary>
   <div>thisArg对象</div>
 </details>
 
