@@ -423,6 +423,11 @@
 </details>
 
 <details>
+  <summary>Number.parseInt === window.parseInt。值为__。</summary>
+  <div>true</div>
+</details>
+
+<details>
   <summary>__开头的整数表示为八进制；__开头的整数表示为十六进制。</summary>
   <div>0</div>
   <div>0x(X)</div>
@@ -1809,6 +1814,11 @@
   <div>空字符串</div>
 </details>
 
+<details>
+  <summary>Array.prototype.toString()相当于Array.prototype.join(__)。</summary>
+  <div>','</div>
+</details>
+
 ### 6.2.8 Stack Methods
 
 <details>
@@ -3181,16 +3191,15 @@
 ## 9.2 Proxy Traps and Reflect Methods
 
 <details>
-  <summary>代理能够__13种不同的基本操作。</summary>
+  <summary>代理对象能够__13种不同的基本操作。</summary>
   <div>捕获</div>
 </details>
 
 ### 9.2.1 get()
 
 <details>
-  <summary>从代理对象__的属性时，会调用get(target, property, receiver)陷阱。其对应的Reflect API方法是__（）。</summary>
+  <summary>从代理对象__的属性时，会调用get(target, property, receiver)陷阱。其对应的Reflect API方法是Reflect.get（）。</summary>
   <div>读取</div>
-  <div>Reflect.get</div>
 </details>
 
 ### 9.2.2 set()
@@ -3207,10 +3216,10 @@
   <div>in</div>
 </details>
 
-<details>
+<!-- <details> 没必要掌握
   <summary>__语句也可以触发has()陷阱。</summary>
   <div>with</div>
-</details>
+</details> -->
 
 ### 9.2.4 defineProperty()
 
@@ -3255,8 +3264,8 @@
 ### 9.2.9 setPrototypeOf()
 
 <details>
-  <summary>Object.setPrototypeOf()对代理对象使用时，会调用setPrototypeOf(target, prototype)陷阱。其对应的Reflect API方法是Reflect.setPrototypeOf（）。</summary>
-  <div>keys</div>
+  <summary>Object.__()对代理对象使用时，会调用setPrototypeOf(target, prototype)陷阱。其对应的Reflect API方法是Reflect.setPrototypeOf（）。</summary>
+  <div>setPrototypeOf</div>
 </details>
 
 ### 9.2.10 isExtensible()
@@ -3280,8 +3289,9 @@
 </details>
 
 <details>
-  <summary>Object.preventExtensions()方法让一个对象变为，也就是永远不能再添加新的属性。</summary>
-  <div>不可扩展</div>
+  <summary>Object.__()方法让一个对象变为不可扩展，也就是永远不能再添加新的属性。是否可以删除属性？</summary>
+  <div>preventExtensions</div>
+  <div>是</div>
 </details>
 
 ### 9.2.12 apply()
