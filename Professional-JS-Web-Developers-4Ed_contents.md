@@ -1,6 +1,7 @@
+<!-- markdownlint-disable MD026  -->
 # 目录
 
-第1章 WHAT IS JAVASCRIPT?
+## 第1章 WHAT IS JAVASCRIPT?
 
 - 1.1 A Short History
 - 1.2 JavaScript Implementations
@@ -17,7 +18,7 @@
 - 1.3 JavaScript Versions
 - 1.4 Summary
 
-第2章 JAVASCRIPT IN HTML
+## 第2章 JAVASCRIPT IN HTML
 
 - 2.1 The &lt;script> Element
   - 2.1.1 Tag Placement
@@ -31,7 +32,7 @@
 - 2.4 The &lt;noscript> Element
 - 2.5 Summary
 
-第3章 LANGUAGE BASICS
+## 第3章 LANGUAGE BASICS
 
 - 3.1 Syntax
   - 3.1.1 Case-Sensitivity
@@ -122,7 +123,7 @@
 - 3.7 Functions
 - 3.8 Summary
 
-第4章 VARIABLES, SCOPE, AND MEMORY
+## 第4章 VARIABLES, SCOPE, AND MEMORY
 
 - 4.1 Primitive and Reference Values
   - 4.1.1 Dynamic Properties
@@ -147,7 +148,7 @@
     - 4.3.4.4 Static Allocation and Object Pools
 - 4.4 Summary
 
-第5章 BASIC REFERENCE TYPES(基本引用类型)
+## 第5章 BASIC REFERENCE TYPES(基本引用类型)
 
 - 5.1 The Date Type
   - 5.1.1 Inherited Methods
@@ -190,7 +191,7 @@
     - 5.5.2.5 Other Methods
 - 5.6 Summary
 
-第6章 COLLECTION REFERENCE TYPES(引用类型集合)
+## 第6章 COLLECTION REFERENCE TYPES(引用类型集合)
 
 - 6.1 The Object Type
 - 6.2 The Array Type
@@ -250,7 +251,7 @@
 - 6.8 Iteration and Spread Operators
 - 6.9 Summary
 
-第7章 ITERATORS AND GENERATORS
+## 第7章 ITERATORS AND GENERATORS
 
 - 7.1 Introduction to Iteration
 - 7.2 The Iterator Pattern
@@ -271,7 +272,7 @@
     - 7.3.4.2 The throw() Method
 - 7.4 Summary
 
-第8章 OBJECTS, CLASSES, AND OBJECT-ORIENTED PROGRAMMING
+## 第8章 OBJECTS, CLASSES, AND OBJECT-ORIENTED PROGRAMMING
 
 - 8.1 Understanding Objects
   - 8.1.1 Types of Properties
@@ -338,7 +339,7 @@
     - 8.4.4.5 Class Mixins
 - 8.5 Summary
 
-第9章  PROXIES AND REFLECT
+## 第9章 PROXIES AND REFLECT
 
 - 9.1 Proxy Fundamentals
   - 9.1.1 Creating a Passthrough Proxy
@@ -377,7 +378,7 @@
   - 9.3.5 Data Binding and Observables
 - 9.4 Summary
 
-第10章 FUNCTIONS
+## 第10章 FUNCTIONS
 
 - 10.1 Arrow Functions
 - 10.2 Function Names
@@ -412,7 +413,7 @@
   - 10.16.3 The Module-Augmentation Pattern
 - 10.17 Summary
 
-第11章 PROMISES AND ASYNC FUNCTIONS
+## 第11章 PROMISES AND ASYNC FUNCTIONS
 
 - 11.1 Introduction to Asynchronous Programming
   - 11.1.1 Synchronous vs. Asynchronous JavaScript
@@ -459,7 +460,7 @@
     - 11.3.3.4 Stack Traces and Memory Management
 - 11.4 Summary
 
-第12章 THE BROWSER OBJECT MODEL
+## 第12章 THE BROWSER OBJECT MODEL
 
 - 12.1 The window Object
   - 12.1.1 The Global Scope
@@ -488,7 +489,7 @@
   - 12.5.2 History State Management
 - 12.6 Summary
 
-第13章 CLIENT DETECTION
+## 第13章 CLIENT DETECTION
 
 - 13.1 Capability Detection
   - 13.1.1 Safer Capability Detection
@@ -527,7 +528,7 @@
     - 13.3.3.3 Maximum Touch Points
 - 13.4 Summary
 
-第14章 THE DOCUMENT OBJECT MODEL
+## 第14章 THE DOCUMENT OBJECT MODEL
 
 - 14.1 Hierarchy of Nodes
   - 14.1.1 The Node Type
@@ -583,7 +584,7 @@
     - 14.3.4.2 MutationRecord References
 - 14.4 Summary
 
-第15章 DOM EXTENSIONS
+## 第15章 DOM EXTENSIONS
 
 - 15.1 Selectors API
   - 15.1.1 The querySelector() Method
@@ -618,7 +619,7 @@
   - 15.3.11 Scrolling
 - 15.4 Summary
 
-第16章 DOM LEVELS 2 AND 3
+## 第16章 DOM LEVELS 2 AND 3
 
 - 16.1 DOM Changes
   - 16.1.1 XML Namespaces
@@ -659,7 +660,7 @@
   - 16.4.9 Cleanup
 - 16.5 Summary
 
-第17章 EVENTS
+## 第17章 EVENTS
 
 - 17.1 Event Flow
   - 17.1.1 Event Bubbling
@@ -728,7 +729,7 @@
   - 17.6.2 Internet Explorer Event Simulation
 - 17.7 Summary
 
-第18章 ANIMATION AND GRAPHICS WITH CANVAS
+## 第18章 ANIMATION AND GRAPHICS WITH CANVAS
 
 - 18.1 Using requestAnimationFrame
   - 18.1.1 Early Animation Loops
@@ -765,7 +766,7 @@
   - 18.4.3 WebGL1 versus WebGL2
 - 18.5 Summary
 
-第19章 SCRIPTING FORMS
+## 第19章 SCRIPTING FORMS
 
 - 19.1 Form Basics
   - 19.1.1 Submitting Forms
@@ -803,7 +804,7 @@
   - 19.5.4 Rich Text in Forms
 - 19.6 Summary
 
-第20章 JAVASCRIPT APIS
+## 第20章 JAVASCRIPT APIS
 
 - 20.1 Atomics and SharedArrayBuffer
   - 20.1.1 SharedArrayBuffer
@@ -892,7 +893,7 @@
     - 20.12.2.8 Wrapping and Unwrapping a Key
 - 20.13 Summary
 
-第21章 ERROR HANDLING AND DEBUGGING
+## 第21章 ERROR HANDLING AND DEBUGGING
 
 - 21.1 Browser Error Reporting
   - 21.1.1 Desktop Consoles
@@ -929,7 +930,7 @@
   - 21.4.5 The System Cannot Locate the Resource Specified
 - 21.5 Summary
 
-第22章 XML IN JAVASCRIPT
+## 第22章 XML IN JAVASCRIPT
 
 - 22.1 XML DOM Support in Browsers
   - 22.1.1 DOM Level 2 Core
@@ -947,7 +948,7 @@
   - 22.3.3 Resetting the Processor
 - 22.4 Summary
 
-第23章 JSON
+## 第23章 JSON
 
 - 23.1 Syntax
   - 23.1.1 Simple Values
@@ -962,7 +963,7 @@
   - 23.2.3Parsing Options
 - 23.3 Summary
 
-第24章 NETWORK REQUESTS AND REMOTE RESOURCES
+## 第24章 NETWORK REQUESTS AND REMOTE RESOURCES
 
 - 24.1 The XMLHttpRequest Object
   - 24.1.1 XHR Usage
@@ -1023,7 +1024,7 @@
 - 24.9 Security
 - 24.10 Summary
 
-第25章 CLIENT-SIDE STORAGE
+## 第25章 CLIENT-SIDE STORAGE
 
 - 25.1 Cookies
   - 25.1.1 Restrictions
@@ -1050,7 +1051,7 @@
   - 25.3.10 Limits and Restrictions
 - 25.4 Summary
 
-第26章 MODULES
+## 第26章 MODULES
 
 - 26.1 Understanding the module pattern
   - 26.1.1 Module Identifiers
@@ -1078,7 +1079,7 @@
   - 26.4.8 Backwards Compatibility
 - 26.5 Summary
 
-第27章 WORKERS
+## 第27章 WORKERS
 
 - 27.1 Introduction to Workers
   - 27.1.1 Comparing Workers and Threads
@@ -1161,7 +1162,7 @@
     - 27.4.12.4 Handling Push Events
 - 27.5 Summary
 
-第28章 BEST PRACTICES
+## 第28章 BEST PRACTICES
 
 - 28.1 Maintainability
   - 28.1.1 What Is Maintainable Code?

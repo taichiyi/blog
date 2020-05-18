@@ -1,4 +1,4 @@
-<!-- markdownlint-disable MD033 -->
+<!-- markdownlint-disable MD033 MD037 -->
 # 汇编语言(第3版) 填空
 
 验证知识点的掌握程度
