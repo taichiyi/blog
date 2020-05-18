@@ -1,5 +1,7 @@
-<!-- markdownlint-disable MD033 -->
+<!-- markdownlint-disable MD033 MD037 -->
 # 计算机科学 知识点 填空
+
+目的：记住一些知识点，然后把他们打通，串联起来。
 
 ## Unicode -start-
 
@@ -347,3 +349,65 @@
   <summary>编译：源代码 -> __代码。</summary>
   <div>可执行</div>
 </details>
+
+## 计算机中的时间 -start-
+
+<details>
+  <summary>时间戳(timestamp)是指格林尼治时间19__年01月01日00时00分00秒起至现在的__。</summary>
+  <div>70</div>
+  <div>总秒数</div>
+</details>
+
+<details>
+  <summary>时间戳和Unix__定义一样。</summary>
+  <div>时间戳</div>
+</details>
+
+<details>
+  <summary>GMT的英文全称__，中文全称__。</summary>
+  <div>Greenwich Mean Time</div>
+  <div>格林尼治平均时间</div>
+</details>
+
+<details>
+  <summary>GMT是指位于英国伦敦郊区的皇家格林尼治天文台当地的平太阳时，因为本初子午线被定义为通过那里的__线。</summary>
+  <div>经</div>
+</details>
+
+<details>
+  <summary>由于地球每天的自转正在缓慢__速，因此GMT的误差越来越大，已被__钟报时的UTC取代。</summary>
+  <div>减</div>
+  <div>原子</div>
+</details>
+
+<details>
+  <summary>UTC的英文全称__，中文全称__。</summary>
+  <div>Coordinated Universal Time</div>
+  <div>协调世界时间</div>
+  <pre>由于英文（CUT）和法文（TUC）的缩写不同，作为妥协，简称UTC。</pre>
+</details>
+
+<details>
+  <summary>UTC的误差不会超过__秒。</summary>
+  <div>1</div>
+</details>
+
+<details>
+  <summary>为了统一世界各地的日期，18__年规定了国际日期变更线，它在太平洋中的__°__线上。</summary>
+  <div>84</div>
+  <div>180</div>
+  <div>经</div>
+</details>
+
+<details>
+  <summary>如果北京是12月3号07点整，伦敦是12月__号__点整。</summary>
+  <div>2</div>
+  <div>23</div>
+</details>
+
+<details>
+  <summary>伦敦的程序员和北京的程序员，同时运行JS代码`Date.now()`，他们看到的输出值是一样的吗？如果不一样，差多少？</summary>
+  <div>是</div>
+</details>
+
+## 计算机中的时间 -end-
