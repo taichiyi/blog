@@ -1,4 +1,4 @@
-<!-- markdownlint-disable MD033 -->
+<!-- markdownlint-disable MD033 MD037 -->
 # C Primer Plus（第6版）填空
 
 ## 第1章 初识 C 语言

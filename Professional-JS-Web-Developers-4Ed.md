@@ -917,7 +917,7 @@
 </details>
 
 <details>
-  <summary>[拓展]aⁿ：a称为__数，ⁿ称为__数。</summary>
+  <summary>[拓展]幂运算aⁿ：a称为__数，ⁿ称为__数。</summary>
   <div>底</div>
   <div>指</div>
 </details>
