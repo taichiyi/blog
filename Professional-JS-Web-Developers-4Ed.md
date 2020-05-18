@@ -445,7 +445,7 @@
 </details>
 
 <details>
-  <summary>如果计算得出的数字无法用JavaScript的数字范围表示，则该数字会自动获得__的特殊值。 任何无法表示的负数是__，而任何无法表示的正数是__。</summary>
+  <summary>如果计算得出的数字无法用JavaScript的数字范围表示，则该数字会自动获得__的特殊值。 无穷大的负数表示为__，无穷大的正数表示为__。</summary>
   <div>Infinity</div>
   <div>–Infinity（负无穷大）</div>
   <div>Infinity（正无穷大）</div>
@@ -1793,7 +1793,7 @@
 ### 6.2.6 Copy and Fill Methods
 
 <details>
-  <summary>(ES6)如果想使用一个固定的值覆盖现有数组从起始索引到终止索引内的全部元素，可以使用__()。</summary>
+  <summary>(ES6)如果想使用一个固定的值覆盖现有数组从起始索引到终止索引内的全部元素，可以使用__(value[, start[, end]])。</summary>
   <div>Array.prototype.fill</div>
 </details>
 
