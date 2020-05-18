@@ -3300,11 +3300,6 @@
 
 ## 9.3 Proxy Patterns
 
-<details>
-  <summary></summary>
-  <div>construct</div>
-</details>
-
 ### 9.3.1 Tracking Property Access
 
 <details>
@@ -3401,9 +3396,12 @@
 </details>
 
 <details>
-  <summary>箭头函数和普通函数的区别：1)箭头函数的上下文</summary>
-  <div>胖</div>
-  <div>廋</div>
+  <summary>箭头函数和普通函数的区别：1)箭头函数的上下文没有 __、__、__、__。 2)箭头函数没有__型。</summary>
+  <div>arguments</div>
+  <div>super</div>
+  <div>this</div>
+  <div>new.target</div>
+  <div>原</div>
 </details>
 
 ## 10.2 Function Names
