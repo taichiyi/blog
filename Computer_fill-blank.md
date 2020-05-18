@@ -410,4 +410,10 @@
   <div>是</div>
 </details>
 
+<details>
+  <summary>CST的英文全称__，中文全称__。</summary>
+  <div>China Standard Time (CST)</div>
+  <div>中国标准时间</div>
+</details>
+
 ## 计算机中的时间 -end-
