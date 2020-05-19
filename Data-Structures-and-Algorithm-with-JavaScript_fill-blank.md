@@ -363,6 +363,12 @@
   <div>右</div>
 </details>
 
+<details>
+  <summary>二叉查找树是一种特殊的二叉树，相对较小的值保存在__节点中，较大的值保存在__节点中。</summary>
+  <div>左</div>
+  <div>右</div>
+</details>
+
 ### 10.2.1 实现二叉查找树
 
 <details>
@@ -386,3 +392,50 @@
 </details>
 
 ### 10.2.2 遍历二叉查找树
+
+<details>
+  <summary>有三种遍历 BST 的方式:__序、__序和__序。</summary>
+  <div>中</div>
+  <img src="https://oss.taichiyi.com/markdown/QQ20200519-174528%402x.jpg" />
+  <div>先</div>
+  <img src="https://oss.taichiyi.com/markdown/QQ20200519-174826-xianxu.jpg" />
+  <div>后</div>
+  <img src="https://oss.taichiyi.com/markdown/QQ20200519-174927-houxu.jpg" />
+</details>
+
+<details>
+  <summary>中序遍历按照节点上的键值，以升序访问 BST 上的所有节点。</summary>
+  <div>Binary Search Tree</div>
+  <div>二叉查找树</div>
+</details>
+
+<details>
+  <summary>先序遍历先访问根节点，然后以同样方式访问左子树和右子树。</summary>
+  <div>Binary Search Tree</div>
+  <div>二叉查找树</div>
+</details>
+
+<details>
+  <summary>后序遍历先访问叶子节点，从左子树到右子树，再到根节点。</summary>
+  <div>Binary Search Tree</div>
+  <div>二叉查找树</div>
+</details>
+
+## 10.3 在二叉查找树上进行查找
+
+<details>
+  <summary>对 BST 通常有下列三种类型的查找: 1)查找__值 2)查找__值 3)查找__值</summary>
+  <div>给定</div>
+  <div>最大</div>
+  <div>最小</div>
+</details>
+
+### 10.3.1 查找最小值和最大值
+
+剩下的先略过
+
+# 第12章 排序算法
+
+## 12.2 基本排序算法
+
+### 12.2.1 冒泡排序
