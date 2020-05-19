@@ -479,8 +479,8 @@
 </details>
 
 <details>
-  <summary>当toString()在数值上使用时，则接受一个参数表示输出数字的基数。 默认为10(十进制)，可以使2-__进制。</summary>
-  <div>数</div>
+  <summary>当toString()在数值上使用时，则接受一个参数表示输出数字的__数。默认基数为10(十进制)，可以是2-__进制。</summary>
+  <div>基</div>
   <div>36</div>
 </details>
 
