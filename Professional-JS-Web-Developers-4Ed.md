@@ -518,9 +518,13 @@
 </details>
 
 <details>
-  <summary>可以使用__（sym）方法来检查全局Symbol注册表，该方法接受一个Symbol实例并将返回关联的键，如果该Symbol实例不是全局Symbol，则为__。</summary>
+  <summary>可以使用__（sym）方法来检查全局Symbol注册表，该方法接受一个Symbol实例并将返回关联的键，如果该Symbol实例不是全局Symbol，则为__。例子：</summary>
   <div>Symbol.keyFor</div>
   <div>undefined</div>
+  <pre>
+  var globalSym = Symbol.for("foo");
+  Symbol.keyFor(globalSym); // "foo"
+  </pre>
 </details>
 
 <details>
@@ -553,7 +557,7 @@
 </details>
 
 <details>
-  <summary>__ Symbol作为构造函数的属性时，属性方法用于识别对象是否为构造函数的实例之一。通过__调用。</summary>
+  <summary>__ Symbol作为Function构造函数的实例属性时，属性方法用于识别对象是否为构造函数的实例之一。通过__调用。</summary>
   <div>Symbol.hasInstance</div>
   <div>instanceof</div>
 </details>
@@ -564,7 +568,7 @@
 </details>
 
 <details>
-  <summary>每个构造函数都有默认的__ Symbol。</summary>
+  <summary>每个Function构造函数的实例都有默认的__ Symbol。</summary>
   <div>Symbol.hasInstance</div>
 </details>
 
@@ -1514,7 +1518,7 @@
 </details>
 
 <details>
-  <summary>高位10个bit和低位10个bit是通过不是通过加法运算得到20个bit的，是通过__。</summary>
+  <summary>20个bit不是通过高位10个bit和低位10个bit加法运算得到，是通过__。</summary>
   <div>字符串拼接</div>
 </details>
 
@@ -2024,9 +2028,8 @@
 </details>
 
 <details>
-  <summary>Set对象是__类型的集合，只有__没有键，你可以按照__顺序迭代它的元素。Set 中的元素是__的。</summary>
+  <summary>Set对象是__类型的值集合，你可以按照__顺序迭代它的元素。Set 中的元素是__的。</summary>
   <div>任何</div>
-  <div>值</div>
   <div>插入的</div>
   <div>唯一</div>
 </details>
@@ -2624,7 +2627,7 @@
 </details>
 
 <details>
-  <summary>判断某个属性是否存在于实例和原型上，可以使用__运算符。</summary>
+  <summary>判断某个可枚举或不可枚举属性是否存在于实例和原型上，可以使用__运算符。</summary>
   <div>in</div>
 </details>
 
@@ -2639,7 +2642,7 @@
 </details>
 
 <details>
-  <summary>要检索对象上所有可枚举和不可枚举实例属性(不包括Symbol)，可以使用__（）方法。</summary>
+  <summary>要检索对象上所有可枚举或不可枚举实例属性(不包括Symbol)，可以使用__（）方法。</summary>
   <div>Object.getOwnPropertyNames</div>
 </details>
 
@@ -2654,7 +2657,7 @@
 #### 8.2.5.1 Alternate Prototype Syntax
 
 <details>
-  <summary>默认情况下，原生构造函数属性(constructor)__枚举。</summary>
+  <summary>默认情况下，构造函数原型的属性(constructor)__枚举。</summary>
   <div>不可</div>
 </details>
 
@@ -2911,7 +2914,7 @@
 #### 8.4.3.4 Non-Function Prototype and Class Members
 
 <details>
-  <summary>也可以在类定义__把属性添加到类或类的原型。一般不这么做是因为，实例需要通过this关键词引用数据，在类定义之外的属性`this`无法访问。</summary>
+  <summary>也可以在类定义__把属性添加到类构造函数。一般不这么做是因为，实例需要通过this关键字引用数据，在类定义之外的属性`this`无法访问。</summary>
   <div>之外</div>
 </details>
 
