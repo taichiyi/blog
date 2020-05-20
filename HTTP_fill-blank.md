@@ -49,17 +49,6 @@
 ## HTTP -start-
 
 <details>
-  <summary>要设置HTTP资源缓存到浏览器的时间，可以在请求的响应头中添加__指令。</summary>
-  <div>Cache-Control</div>
-</details>
-
-<details>
-  <summary>如果请求不想让代理服务器缓存，可在请求首部行添加Cache-Control属性，并且在值中添加__，想缓存则添加__。</summary>
-  <div>private</div>
-  <div>public</div>
-</details>
-
-<details>
   <summary>HTTP协议的全称是__。</summary>
   <div>HyperText Transfer Protocol</div>
   <div>超文本传输协议</div>
@@ -80,6 +69,68 @@
   <summary>统一资源标识符（URI）是一个字符串，用于标识Internet上的__或__。</summary>
   <div>名称</div>
   <div>资源</div>
+</details>
+
+<details>
+  <summary>浏览器缓存主要分为__缓存和__缓存。</summary>
+  <div>强（也称本地缓存）</div>
+  <div>协商（也称弱缓存）</div>
+</details>
+
+<details>
+  <summary>强缓存通过__和__两种响应头实现。</summary>
+  <div>Expires</div>
+  <div>Cache-Control</div>
+</details>
+
+<details>
+  <summary>__ 响应头包含日期或时间即在此时候之后，资源过期。如果在Cache-Control响应头设置了 "max-age" 或者 "s-max-age" 指令，那么 Expires 头会被忽略。</summary>
+  <div>Expires</div>
+</details>
+
+<details>
+  <summary>协商缓存是利用的是 __和__ 或 __和__ 这两对请求头来管理的。例子：图片：</summary>
+  <div>Last-Modified</div>
+  <div>If-Modified-Since</div>
+  <div>ETag</div>
+  <div>If-None-Match</div>
+  <pre>
+  请求首部:
+  If-Modified-Since: Fri, 15 May 2020 02:20:38 GMT
+  If-None-Match: W/"5ebdfc76-7ab"
+
+  响应首部:
+  ETag: W/"5ebdfc76-7ab"
+  Last-Modified: Fri, 15 May 2020 02:20:38 GMT
+  </pre>
+  <img src="https://oss.taichiyi.com/markdown/2926334056-56fe382bb7a63_articlex.png" />
+</details>
+
+<details>
+  <summary> __ 响应首部是HTTP/1.1新增的，包含源头服务器认定的资源做出修改的日期及时间。由于精确度比 ETag 要低，所以这是一个备用机制。例子：</summary>
+  <div>Last-Modified</div>
+  <pre>
+  Last-Modified: Fri, 15 May 2020 02:20:38 GMT
+  </pre>
+</details>
+
+<details>
+  <summary> __ 响应首部是HTTP/1.1新增的，是资源的特定版本的标识符。可以理解为文件的散列值。例子：</summary>
+  <div>ETag</div>
+  <pre>
+  ETag: W/"a3ccf58c54b75ad418072b76737b9bb9"
+  </pre>
+</details>
+
+<details>
+  <summary>要设置HTTP资源缓存到浏览器的时间，可以在请求的响应头中添加__指令。</summary>
+  <div>Cache-Control</div>
+</details>
+
+<details>
+  <summary>如果请求不想让代理服务器缓存，可在请求首部行添加Cache-Control属性，并且在值中添加__，想缓存则添加__。</summary>
+  <div>private</div>
+  <div>public</div>
 </details>
 
 <details>
@@ -255,11 +306,6 @@
   <div>3 重定向</div>
   <div>4 客户端错误</div>
   <div>5 服务端错误</div>
-</details>
-
-<details>
-  <summary>ETag（实体标签）标头字段用于确定请求资源的__是否与服务器上资源的当前版本相同。</summary>
-  <div>缓存版本</div>
 </details>
 
 ## HTTP -end-

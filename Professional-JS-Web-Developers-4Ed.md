@@ -2069,7 +2069,7 @@
 </details>
 
 <details>
-  <summary>Object.assign() 函数会触发 __，而展开语法则不会。</summary>
+  <summary>Object.assign(target, ...sources) 函数会触发 __，而展开语法则不会。</summary>
   <div>setters</div>
 </details>
 
@@ -2298,8 +2298,8 @@
 </details>
 
 <details>
-  <summary>__() 方法用来向生成器抛出异常，并恢复生成器的执行，返回带有 done 及 value 两个属性的对象。</summary>
-  <div>generator.throw</div>
+  <summary>__() 方法用来向生成器对象抛出异常，并恢复生成器对象的执行，返回带有 done 及 value 两个属性的对象。</summary>
+  <div>Generator.prototype.throw</div>
 </details>
 
 #### 7.3.4.2 The throw() Method
@@ -2461,7 +2461,7 @@
 ### 8.1.4 Merging Objects
 
 <details>
-  <summary>ES6 引入了Object.assign（）方法来合并对象。此方法接受一个目标对象和一个或多个源对象，并且对于每个源对象，将可枚举（Object.__返回true）和拥有（Object.__返回true）属性复制到目标对象。对于每个合适的属性，该方法将使用__从__对象中检索值，并使用__对象上的__来分配值。</summary>
+  <summary>ES6 引入了Object.assign（target, ...sources）方法来合并对象。此方法接受一个目标对象和一个或多个源对象，并且对于每个源对象，将可枚举（Object.__返回true）和拥有（Object.__返回true）属性复制到目标对象。对于每个合适的属性，该方法将使用__从__对象中检索值，并使用__对象上的__来分配值。</summary>
   <div>Object.prototype.propertyIsEnumerable</div>
   <div>Object.prototype.hasOwnProperty</div>
   <div>[[Get]]</div>
@@ -3316,15 +3316,15 @@
 ### 9.3.1 Tracking Property Access
 
 <details>
-  <summary>可以通过Proxy可以实现对代理对象__访问的追踪。</summary>
+  <summary>通过Proxy可以实现对代理对象__访问的追踪。</summary>
   <div>属性</div>
 </details>
 
 ### 9.3.2 Hidden Properties
 
 <details>
-  <summary>可以通过Proxy可以实现对代理对象指定属性的隐__。</summary>
-  <div>藏</div>
+  <summary>通过Proxy可以实现__代理对象指定的属性。</summary>
+  <div>隐藏</div>
 </details>
 
 ### 9.3.3 Property Validation
@@ -3752,10 +3752,29 @@
   </pre>
 </details>
 
+## 10.18 函数柯里化(function Currying)
+
+<details>
+  <summary>在数学和计算机科学中，柯里化是一种将多个参数的一个函数转换成一系列使用__个参数的函数的技术。例子:</summary>
+  <div>一</div>
+  <pre>
+  function add(a, b) {
+    return a + b;
+  }
+
+  // 执行 add 函数，一次传入两个参数即可
+  add(1, 2) // 3
+
+  // 假设有一个 curry 函数可以做到柯里化
+  var addCurry = curry(add);
+  addCurry(1)(2) // 3
+  </pre>
+</details>
+
 # 第11章 PROMISES AND ASYNC FUNCTIONS
 
 <details>
-  <summary>ES 6引入了一个正式的Promise引用类型，允许优雅地定义和组织__行为。更高的版本还使用__和__关键字扩展了该语言以支持异步功能。</summary>
+  <summary>ES6 引入了一个正式的Promise引用类型，允许优雅地定义和组织__行为。更高的版本还使用__和__关键字扩展了该语言以支持异步功能。</summary>
   <div>异步</div>
   <div>async</div>
   <div>await</div>
