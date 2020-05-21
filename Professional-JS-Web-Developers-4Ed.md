@@ -1637,12 +1637,12 @@
 </details>
 
 <details>
-  <summary>如果想判断当前字符串是否已给定的子字符串开头，可以用__(searchString[, position])方法。</summary>
+  <summary>如果想判断当前字符串是否以另外一个给定的子字符串开头，可以用__(searchString[, position])方法。</summary>
   <div>String.prototype.startsWith</div>
 </details>
 
 <details>
-  <summary>如果想判断当前字符串是否已给定的子字符串结尾，可以用__(searchString[, position])方法。</summary>
+  <summary>如果想判断当前字符串是否以另外一个给定的子字符串结尾，可以用__(searchString[, position])方法。</summary>
   <div>String.prototype.endsWith</div>
 </details>
 
@@ -2849,7 +2849,8 @@
 </details>
 
 <details>
-  <summary>和function关键字一样，当class表达式分配给变量时，不能在class范围之外访问class标识符本身。例如：</summary>
+  <summary>和function关键字一样，当class表达式分配给变量时，不能在class范围之外访问__。例如：</summary>
+  <div>class标识符本身</div>
   <pre>
     const foo1 = function foo(a) {
       console.log(a);
@@ -2868,7 +2869,7 @@
 #### 8.4.2.1 Instantiation
 
 <details>
-  <summary>new Functin 和 new Class 的唯一可知区别是，new Class 会调用__函数。</summary>
+  <summary>new Function 和 new Class 的唯一可知区别是，new Class 会调用__函数。</summary>
   <div>constructor</div>
 </details>
 
@@ -3398,9 +3399,14 @@
 </details>
 
 <details>
+  <summary>箭头函数执行上下文可能没有`__`。</summary>
+  <div>ThisBinding</div>
+</details>
+
+<!-- <details>
   <summary>箭头函数执行上下文的`ThisBinding`为__。</summary>
   <div>undefined</div>
-</details>
+</details> -->
 
 <details>
   <summary>=>被称作__箭头，->被称作__箭头。</summary>
@@ -3431,8 +3437,12 @@
 </details>
 
 <details>
-  <summary>如果函数是一个getter和setter或通过bind()实例化，则会在函数名前加一个对应的标识。例如：“bound foo” “get foo”</summary>
-  <div>匿名</div>
+  <summary>如果函数是一个getter和setter或通过bind()实例化，则会在函数名前加一个对应的__。例如：</summary>
+  <div>标识</div>
+  <pre>
+  "bound foo"
+  "get foo"
+  </pre>
 </details>
 
 ## 10.3 Understanding Arguments(理解Arguments对象)
@@ -3541,12 +3551,12 @@
 ### 10.9.2 this
 
 <details>
-  <summary>执行上下文中的ThisBinding，是在__阶段才确定的。</summary>
+  <summary>执行上下文中的ThisBinding，是在执行上下文的__阶段才确定的。</summary>
   <div>执行</div>
 </details>
 
 <details>
-  <summary>this的值为__值。</summary>
+  <summary>this的值为__类型值。</summary>
   <div>任何</div>
 </details>
 

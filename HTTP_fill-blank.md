@@ -9,8 +9,18 @@
 </details>
 
 <details>
-  <summary>Data URLs 由四个部分组成：__:[&lt;__&gt;][;__],&lt;__&gt;。</summary>
+  <summary>Data URLs 由四个部分组成：__:[&lt;__&gt;][;__],&lt;__&gt;。例子：</summary>
   <div>data mediatype base64 data</div>
+  <pre>
+  [data:data]
+  data:,Hello%2C%20World!
+  <!--  -->
+  [data:mediatype;base64,data]
+  data:text/plain;base64,SGVsbG8sIFdvcmxkIQ==
+  <!--  -->
+  [data:mediatype,data]
+  data:text/html;charset=utf8,%3Ch1%3EHello%2C%20World %E7%BE%BD%E7%BF%BC!%3C%2Fh1%3E
+  </pre>
 </details>
 
 <details>
