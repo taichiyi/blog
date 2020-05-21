@@ -1343,8 +1343,13 @@
 #### 4.2.2.3 Constant Declaration Using const
 
 <details>
-  <summary>如果希望使整个对象不可变，则可以使用__(obj)。不能新增删除属性，已有的属性的描述符configuable和writable改为false。</summary>
+  <summary>如果希望使整个对象不可变，不能新增删除属性，已有的属性的描述符configuable和writable改为false，可以使用__(obj)。</summary>
   <div>Object.freeze</div>
+</details>
+
+<details>
+  <summary>如果希望封闭整个对象，不能新增和删除属性，已有的属性的描述符configuable改为false。可以使用__(obj)。</summary>
+  <div>Object.seal</div>
 </details>
 
 <details>
