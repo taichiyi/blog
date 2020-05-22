@@ -2426,7 +2426,7 @@
 ### 8.1.2 Defining Multiple Properties
 
 <details>
-  <summary>如果想在对象上同时定义多个属性，ES5提供了__（）方法。</summary>
+  <summary>如果想在对象上同时定义多个属性的描述符，ES5提供了__（）方法。</summary>
   <div>Object.defineProperties</div>
   <pre>
   Object.defineProperties({}, {
@@ -3044,7 +3044,7 @@
 </details>
 
 <details>
-  <summary>代理是使用__构造函数创建的。</summary>
+  <summary>代理对象是使用__构造函数创建的。</summary>
   <div>Proxy</div>
 </details>
 
@@ -3454,17 +3454,17 @@
 
 <details>
   <summary>ECMAScript中函数的参数在内部表示为__。例子：</summary>
-  <div>数组</div>
+  <div>对象</div>
   <pre>
-  function foo(a,b) {
+  function foo(a, b) {
     // 相当于
-    arguments = [{},1,'a',false];
-    let [a,b] = arguments;
+    // arguments = {0:{}, 1:1, 2:"a", 3:false, callee:'(...)', length:4};
+    // let [a, b] = arguments;
     //
     console.log(a); // {}
     console.log(b); // 1
   }
-  foo({},1,'a',false);
+  foo({}, 1, 'a', false);
   </pre>
 </details>
 
@@ -3606,8 +3606,8 @@
 </details>
 
 <details>
-  <summary>在箭头函数内部，this引用__的上下文对象。</summary>
-  <div>定义箭头函数表达式</div>
+  <summary>箭头函数的执行上下文没有ThisBinding，所以箭头函数中的this将沿着outer寻找__的ThisBinding。</summary>
+  <div>外层执行上下文</div>
 </details>
 
 ### 10.9.4 new.target(ES6)
@@ -3618,8 +3618,8 @@
 </details>
 
 <details>
-  <summary>在通过new运算符被初始化的函数或__中，new.target返回一个指向构造方法或函数的引用。在普通的函数调用中，new.target的值是__。</summary>
-  <div>构造函数</div>
+  <summary>在通过__运算符被调用的函数中，new.target返回一个指向构造方法或函数的引用。非new运算符调用，函数中new.target的值是__。</summary>
+  <div>new</div>
   <div>undefined</div>
 </details>
 
