@@ -586,7 +586,7 @@
 </details>
 
 <details>
-  <summary>[拓展]如果要手动迭代，可以使用迭代器的__方法。</summary>
+  <summary>如果要手动迭代，可以使用迭代器的__方法。</summary>
   <div>next</div>
 </details>
 
@@ -708,20 +708,20 @@
 </details>
 
 <details>
-  <summary>[拓展]将二进制数每个数字反转，得到的数即为原二进制的__码，也称为__码（英语：__）。</summary>
+  <summary>将二进制数每个数字反转，得到的数即为原二进制的__码，也称为__码（英语：__）。</summary>
   <div>一的补</div>
   <div>反</div>
   <div>1's complement</div>
 </details>
 
 <details>
-  <summary>[拓展]数字的补码(英语：__)就是数字的二进制进行反码然后加__。</summary>
+  <summary>数字的补码(英语：__)就是数字的二进制进行反码然后加__。</summary>
   <div>2's complement</div>
   <div>1</div>
 </details>
 
 <details>
-  <summary>[拓展]二进制1001（有效值），为无符号比特：__；为有符号比特:__；为一的补码(反码)：__。</summary>
+  <summary>二进制1001（有效值），为无符号比特：__；为有符号比特:__；为一的补码(反码)：__。</summary>
   <div>9</div>
   <div>-1</div>
   <div>6</div>
@@ -926,7 +926,7 @@
 </details>
 
 <details>
-  <summary>[拓展]幂运算aⁿ：a称为__数，ⁿ称为__数。</summary>
+  <summary>幂运算aⁿ：a称为__数，ⁿ称为__数。</summary>
   <div>底</div>
   <div>指</div>
 </details>
@@ -1365,7 +1365,7 @@
 </details>
 
 <details>
-  <summary>[拓展]执行上下文(execution context)的数据（变量，函数声明和函数的形参）被存储为变量对象的__。每次进入执行上下文时都会__并用__填充变量对象，并且其更新发生在代码__阶段。</summary>
+  <summary>执行上下文(execution context)的数据（变量，函数声明和函数的形参）被存储为变量对象的__。每次进入执行上下文时都会__并用__填充变量对象，并且其更新发生在代码__阶段。</summary>
   <div>属性</div>
   <div>创建</div>
   <div>初始值</div>
@@ -1375,7 +1375,7 @@
 ## 4.3 Garbage Collection
 
 <details>
-  <summary>[拓展]像C语言这样的底层语言一般都有底层的__接口。相反，JavaScript是在创建变量时自动进行了分配内存，并且在不使用它们时“自动”释放。释放的过程称为__。</summary>
+  <summary>像C语言这样的底层语言一般都有底层的__接口。相反，JavaScript是在创建变量时自动进行了分配内存，并且在不使用它们时“自动”释放。释放的过程称为__。</summary>
   <div>内存管理</div>
   <div>垃圾回收(garbage-collected，简称GC)</div>
 </details>
@@ -1464,7 +1464,7 @@
 </details>
 
 <details>
-  <summary>[拓展]IEEE 754中规定的双精度浮点数数据类型，而这一数据类型能够安全存储 -(2^__ - 1) 到 2^53 - 1 之间的数值（包含边界值）。安全存储的意思是指能够准确区分两个__的值。</summary>
+  <summary>IEEE 754中规定的双精度浮点数数据类型，而这一数据类型能够安全存储 -(2^__ - 1) 到 2^53 - 1 之间的数值（包含边界值）。安全存储的意思是指能够准确区分两个__的值。</summary>
   <div>53</div>
   <div>不相同</div>
 </details>
@@ -3374,10 +3374,10 @@
 
 ## 10.1 Arrow Functions
 
-<details>
+<!-- <details>
   <summary>箭头函数提供了更__语法。</summary>
   <div>简洁</div>
-</details>
+</details> -->
 
 <details>
   <summary>如果只有__个参数，则箭头函数不需要括号。</summary>
@@ -3442,7 +3442,7 @@
 </details>
 
 <details>
-  <summary>如果函数是一个getter和setter或通过bind()实例化，则会在函数名前加一个对应的__。例如：</summary>
+  <summary>如果函数是一个getter和setter或通过bind()调用，则会在函数名前加一个对应的__。例如：</summary>
   <div>标识</div>
   <pre>
   "bound foo"
@@ -3500,7 +3500,7 @@
 ## 10.5 Default Parameter Values
 
 <details>
-  <summary>函数默认参数允许在__或__被传入时使用默认形参。</summary>
+  <summary>函数默认参数允许__或__被传入时使用默认形参。</summary>
   <div>没有值</div>
   <div>undefined</div>
 </details>
@@ -3530,9 +3530,8 @@
 ## 10.7 Function Declarations versus Function Expressions(函数声明与函数表达式的比较)
 
 <details>
-  <summary>在对代码进行__时，JavaScript引擎会首先进行函数声明，并将其拉到__的顶部。</summary>
-  <div>评估</div>
-  <div>源树</div>
+  <summary>在执行上下文的__阶段，JavaScript引擎会首先进行函数声明和赋值。</summary>
+  <div>创建</div>
 </details>
 
 ## 10.8 Functions as Values
@@ -3746,7 +3745,7 @@
 </details>
 
 <details>
-  <summary>调用函数时，将创建一个执行上下文，并创建其__。</summary>
+  <summary>声明一个函数时，将创建一个执行上下文，此时函数的__已经确定，调用函数时，将执行函数执行上下文。</summary>
   <div>作用域</div>
 </details>
 
