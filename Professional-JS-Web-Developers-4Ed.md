@@ -2654,7 +2654,7 @@
 ### 8.2.5 Object Iteration
 
 <details>
-  <summary>ES8 引入了__（obj）和__（obj）种静态方法，用于将对象的内容转换为可迭代格式。</summary>
+  <summary>ES8 引入了__（obj）和__（obj）静态方法，用于将对象的内容转换为可迭代格式。</summary>
   <div>Object.values</div>
   <div>Object.entries</div>
 </details>
@@ -4205,8 +4205,13 @@
 ### 18.1.1 Early Animation Loops
 
 <details>
-  <summary>__()方法向浏览器指示正在发生动画，以便浏览器可以依次确定安排重新绘制的最佳方法。</summary>
-  <div>requestAnimationFrame</div>
+  <summary>__(callback)方法向浏览器指示正在发生动画，以便浏览器可以依次确定安排重新绘制的最佳方法。</summary>
+  <div>window.requestAnimationFrame</div>
+</details>
+
+<details>
+  <summary>可以通过window.__(requestID)方法取消回调函数。</summary>
+  <div>cancelAnimationFrame</div>
 </details>
 
 <details>
@@ -4279,7 +4284,26 @@
 
 # 第20章 JAVASCRIPT APIS
 
-// 此章先略过
+## 20.10 Timing APIs
+
+<details>
+  <summary>Performance 接口可以获取到当前页面中与__相关的信息。</summary>
+  <div>性能</div>
+</details>
+
+### 20.10.1 High Resolution Time API
+
+<details>
+  <summary>Date.now()精度为毫秒级，如果想要更高的时间精度可以使用window.__（）,该函数返回一个精度为__级的浮点数。</summary>
+  <div>perforcece.now</div>
+  <div>微妙</div>
+</details>
+
+<details>
+  <summary>window.performance.now()的起始时间为__的时间或__的创建时间，从0开始计时。</summary>
+  <div>页面打开</div>
+  <div>worker</div>
+</details>
 
 # 第21章 ERROR HANDLING AND DEBUGGING
 
