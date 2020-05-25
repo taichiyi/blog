@@ -3611,12 +3611,12 @@
 ### 10.9.4 new.target(ES6)
 
 <details>
-  <summary>__属性允许你检测函数或构造方法是否是通过new运算符被调用的。</summary>
+  <summary>__属性允许你检测函数或构造函数是否是通过new运算符被调用的。</summary>
   <div>new.target</div>
 </details>
 
 <details>
-  <summary>在通过__运算符被调用的函数中，new.target返回一个指向构造方法或函数的引用。非new运算符调用，函数中new.target的值是__。</summary>
+  <summary>在通过__运算符被调用的函数中，new.target返回一个指向构造函数或函数的引用。非new运算符调用，函数中new.target的值是__。</summary>
   <div>new</div>
   <div>undefined</div>
 </details>
