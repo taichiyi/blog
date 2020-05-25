@@ -3306,14 +3306,14 @@
 
 <details>
   <summary>代理对象中的方法被调用时，会调用__(target, thisArgument, argumentsList)陷阱。</summary>
-  <div>apply</div>
+  <div>Reflect.apply</div>
 </details>
 
 ### 9.2.13 construct()
 
 <details>
   <summary>new 运算符用在代理对象时，会调用__(target, argumentsList[, newTarget])陷阱。</summary>
-  <div>construct</div>
+  <div>Reflect.construct</div>
 </details>
 
 ## 9.3 Proxy Patterns
