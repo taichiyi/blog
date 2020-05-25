@@ -2778,9 +2778,8 @@
 </details>
 
 <details>
-  <summary>寄生式继承缺点：为对象(注意不是原型)添加函数时，每个实例的函数没有被共用。</summary>
-  <div>Object.create</div>
-  <div>一</div>
+  <summary>寄生式继承缺点：为对象(注意不是原型)添加函数时，每个__的函数没有被共用。</summary>
+  <div>实例</div>
 </details>
 
 ### 8.3.6 Parasitic Combination Inheritance(寄生组合式继承)
@@ -3821,9 +3820,8 @@
 </details>
 
 <details>
-  <summary>Promise有个不便之处：需要把其余部分的代码写到 promise handler 中。</summary>
-  <div>AsyncFunction</div>
-  <div>await</div>
+  <summary>Promise有个不便之处：需要把其余部分的代码写到__中。</summary>
+  <div>promise handler</div>
 </details>
 
 ### 11.3.1 Async Function Basics
@@ -3847,7 +3845,7 @@
   <div>await</div>
   <pre>
     let p = new Promise((resolve, reject) => setTimeout(resolve, 1000, 3));
-    p.then((x) => console.log(x)); // 3
+    await p;
   </pre>
 </details>
 
