@@ -1,4 +1,4 @@
-<!-- markdownlint-disable MD033 -->
+<!-- markdownlint-disable MD033 MD037 -->
 # react 填空
 
 <details>
@@ -145,7 +145,47 @@
   <div>虚拟栈帧</div>
 </details>
 
+<details>
+  <summary>Fiber的架构有两个主要阶段：__和__。在源码中，协调阶段通常被称为“渲染阶段”。</summary>
+  <div>协调/渲染</div>
+  <div>提交</div>
+</details>
+
+<details>
+  <summary>你可以将单个Fiber视为一个虚拟栈的__。</summary>
+  <div>帧(元素)</div>
+</details>
+
 ## 协调(reconciliation)
+
+<details>
+  <summary>reconcilers(协调器)：即便 React DOM 和 React Native 渲染器的区别很大，但也需要共享一些逻辑。不同的渲染器彼此共享一些代码。我们称 React 的这一部分为 “__”。</summary>
+  <div>reconciler</div>
+</details>
+
+<details>
+  <summary>当处理类似于 setState() 这样的更新时，reconciler 会调用树中组件上的 __()，然后决定是否进行挂载，更新或是卸载操作。</summary>
+  <div>render</div>
+</details>
+
+<details>
+  <summary>reconciler有两个: __ reconciler 和 __ reconciler，Fiber 从 React 16 开始作为默认的 reconciler。</summary>
+  <div>Stack</div>
+  <div>Fiber</div>
+</details>
+
+<details>
+  <summary>为了从 Stack reconciler 到 Fiber reconciler: 1)__ 2)__。</summary>
+  <div>无法增量更新</div>
+  <div>没有优先级</div>
+</details>
+
+<details>
+  <summary>在React新的协调算法的上下文中，包含这些__、__和__字段的数据结构称为Fiber。</summary>
+  <div>child(第一个子节点的引用)</div>
+  <div>sibling(第一个兄弟节点的引用)</div>
+  <div>return(父节点的引用)</div>
+</details>
 
 ### 背景
 
