@@ -1184,8 +1184,8 @@
 </details>
 
 <details>
-  <summary>绑定this：分两种执行上下文，全局执行上下文或函数执行上下文。如果在前者中，则this指向全局对象；如果在后者，则取决于调用的方式：作为对象的方法调用，则指向这个对象；否则指向全局对象或__。</summary>
-  <div>undefined(严格模式下)</div>
+  <summary>绑定this：__函数应该没有这个属性。</summary>
+  <div>箭头</div>
 </details>
 
 <details>
@@ -1328,7 +1328,7 @@
 </details>
 
 <details>
-  <summary>但是还有其他方法可以扩展作用域链。某些语句会导致某个执行上下文临时添加到作用域链的__，然后在代码执行后将其__。分别是__和__。</summary>
+  <summary>但是还有其他方法可以扩展函数执行上下文(作用域链)。<!-- 某些语句会导致某个执行上下文临时添加到作用域链的__，然后在代码执行后将其__。-->分别是__和__。</summary>
   <div>前端</div>
   <div>删除</div>
   <div>try-catch语句中的catch块</div>
@@ -1360,7 +1360,7 @@
 #### 4.2.2.4 Identifier Lookup(标识符查找)
 
 <details>
-  <summary>[疑问，不是作用域链吗？为什么是上下文？]如果在当前执行上下文的__中没有搜索到对应的标识符，则将搜索下一个执行上下文的变量对象，直到找到全局执行上下文的变量对象，如果还没有的话会报错“xxx is not defined”</summary>
+  <summary>如果在当前执行上下文的__中没有搜索到对应的标识符，则将搜索下一个执行上下文的变量对象，直到找到全局执行上下文的变量对象，如果还没有的话会报错“xxx is not defined”</summary>
   <div>变量对象</div>
 </details>
 
@@ -2856,10 +2856,12 @@
   <summary>和function关键字一样，当class表达式分配给变量时，不能在class范围之外访问__。例如：</summary>
   <div>class标识符本身</div>
   <pre>
-    const foo1 = function foo(a) {
-      console.log(a);
+  const Foo = class Foo1 {
+    constructor() {
+      console.log(Foo1); // 不会报错
     }
-    foo('foo'); // ReferenceError: foo is not defined
+  }
+  console.log(new Foo1); // ReferenceError: Foo1 is not defined
   </pre>
 </details>
 
@@ -3965,8 +3967,8 @@
 ### 12.1.5 Window Viewport Position
 
 <details>
-  <summary>由于浏览器窗口通常不够大，无法一次显示整个渲染的文档，因此用户可以使用有限的视口在文档周围滚动。</summary>
-  <div>document.documentElement.clientHeight</div>
+  <summary>由于浏览器窗口通常不够大，无法一次__整个文档，因此用户可以使用有限的视口在文档周围滚动。</summary>
+  <div>显示</div>
 </details>
 
 <details>
