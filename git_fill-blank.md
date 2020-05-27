@@ -1,4 +1,4 @@
-<!-- markdownlint-disable MD033 -->
+<!-- markdownlint-disable MD033 MD037 -->
 # git-commands_fill-blank
 
 <details>
@@ -28,4 +28,10 @@
   <summary>将tag“v1.4”推送到远程主机“origin”：git __ origin __。</summary>
   <div>push</div>
   <div>v1.4</div>
+</details>
+
+<details>
+  <summary>将Index中的内容追加到最后的commit上，git add 后，git __ __。</summary>
+  <div>commit</div>
+  <div>-amend</div>
 </details>

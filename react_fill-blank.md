@@ -147,13 +147,52 @@
 
 <details>
   <summary>Fiber的架构有两个主要阶段：__和__。在源码中，协调阶段通常被称为“渲染阶段”。</summary>
-  <div>协调/渲染</div>
-  <div>提交</div>
+  <div>协调/渲染(render)</div>
+  <div>提交(commit)</div>
 </details>
 
 <details>
   <summary>你可以将单个Fiber视为一个虚拟栈的__。</summary>
   <div>帧(元素)</div>
+</details>
+
+<details>
+  <summary>在React中，对于 span 元素，其被称为 __ 组件（DOM节点）。</summary>
+  <div>host</div>
+</details>
+
+<details>
+  <summary>每一个 React 元素，根据其类型转为对应类型的 __ 节点，Fiber 节点的类型告诉 React 要对此类节点做些什么。</summary>
+  <div>Fiber</div>
+</details>
+
+<details>
+  <summary>在第一次渲染完成后，React 最终生成 fiber tree。fiber tree 的引用变量通常是 current。当 React 开始更新操作时，它会又会构建一棵被称为 workInProgress 的新树。workInProgress 接下来将会替换 current变量所引用的旧的 fiber tree，然后随之会被刷新到屏幕上。</summary>
+  <div></div>
+</details>
+
+<details>
+  <summary>React 会为 render方法返回的每一个 __ 创建一个 fiber 对象。</summary>
+  <div>React Element</div>
+</details>
+
+<details>
+  <summary>render 阶段调用的生命周期方法：_1_、_2_、_3_。</summary>
+  <div>1 getDerivedStateFromProps</div>
+  <div>2 shouldComponentUpdate</div>
+  <div>3 render</div>
+</details>
+
+<details>
+  <summary>在16.3版本以后，废弃了render阶段的一些生命周期方法：componentWillMount、componentWillReceiveProps、componentWillUpdate。因为 render 阶段的更新不应该产生__的__，如：DOM更新。</summary>
+  <div>用户视觉可见</div>
+  <div>副作用</div>
+</details>
+
+<details>
+  <summary>被使用 UNSAFE 标记的生命周期方法经常会被开发者错误的使用，甚至滥用。开发者倾向于将包含副作用的代码放置到这些方法中，这样就可能导致新的异步渲染被触发，例如：在 componentWillUpdate函数中调用 setState 方法就会导致错误产生。甚至程序无限循环，直至奔溃。</summary>
+  <div>用户视觉可见</div>
+  <div>副作用</div>
 </details>
 
 ## 协调(reconciliation)
