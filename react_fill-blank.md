@@ -141,7 +141,7 @@
 </details>
 
 <details>
-  <summary>Fiber是栈的重新实现，专门用于React组件。您可以将单个Fiber视为__。</summary>
+  <summary>Fiber 通过单链表重新实现了虚拟栈，专门用于React组件。您可以将单个Fiber视为__。</summary>
   <div>虚拟栈帧</div>
 </details>
 
@@ -181,10 +181,22 @@
 </details>
 
 <details>
+  <summary>Stack reconciler 依赖于__的同步__来遍历树。</summary>
+  <div>内置栈</div>
+  <div>递归</div>
+</details>
+
+<details>
+  <summary>Fiber reconciler 依赖于__来遍历树。</summary>
+  <div>单链表</div>
+</details>
+
+<details>
   <summary>在React新的协调算法的上下文中，包含这些__、__和__字段的数据结构称为Fiber。</summary>
   <div>child(第一个子节点的引用)</div>
   <div>sibling(第一个兄弟节点的引用)</div>
   <div>return(父节点的引用)</div>
+  <img src="https://oss.taichiyi.com/markdown/1_7dsyUaUpKbFG7EoNR9Cu2w.png" />
 </details>
 
 ### 背景

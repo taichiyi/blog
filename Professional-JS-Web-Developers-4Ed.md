@@ -2914,8 +2914,44 @@
 #### 8.4.3.3 Static Class Methods and Accessors
 
 <details>
+  <summary>通过 __ 关键字让变量或方法变成静态的。</summary>
+  <div>static</div>
+</details>
+
+<details>
   <summary>如果为静态成员，则直接添加到__对象上。</summary>
   <div>类构造函数</div>
+</details>
+
+<details>
+  <summary>使用 static 实现单例模式，例子：</summary>
+  <pre>
+  class Email {
+    static instance = null;
+    constructor(keys) {
+      this.keys = keys;
+    }
+
+    static getInstance(keys) {
+      if (this.instance === null) this.instance = new Email(keys);
+      return this.instance;
+    }
+  }
+  </pre>
+</details>
+
+<details>
+  <summary>使用 ES5 语法实现单例模式，例子：</summary>
+  <pre>
+  const Email = function(keys) {
+    this.keys = keys;
+  }
+  Email.instance = null;
+  Email.getInstance = function getInstance(keys) {
+    if (this.instance === null) this.instance = new Email(keys);
+    return this.instance;
+  }
+  </pre>
 </details>
 
 #### 8.4.3.4 Non-Function Prototype and Class Members
@@ -4092,7 +4128,7 @@
 </details>
 
 <details>
-  <summary>当事件会处于“__阶段”时，会触发该元素（即事件目标）上的所有监听器，而不在乎这个监听器到底在注册时__参数值是true还是false。useCapture默认为__。</summary>
+  <summary>当事件会处于“__阶段”时，会触发该元素（即事件目标）上对应事件的所有监听器，而不在乎这个监听器到底在注册时__参数值是true还是false。useCapture默认为__。</summary>
   <div>目标</div>
   <div>useCapture</div>
   <div>false</div>
@@ -4122,13 +4158,13 @@
   </pre>
   <details>
     <summary>点击查看答案：</summary>
-    <div>1) 事件是否冒泡</div>
+    <div>1) 当前事件是否会向DOM树上层元素冒泡</div>
     <div>2) 是否可以取消事件的默认行为</div>
-    <div>3) 事件目标</div>
+    <div>3) 事件当前所处的元素</div>
     <div>4) 为true表示已经调用了preventDefault()【DOM3】</div>
     <div>5) 与事件相关的细节</div>
-    <div>6) 事件所处阶段</div>
-    <div>7) 事件目标</div>
+    <div>6) 事件所处阶段: “0: 事件没有被正在处理; 1: 捕获阶段; 2: 事件处于目标阶段; 3: 冒泡阶段”。</div>
+    <div>7) 事件触发的元素</div>
     <div>8) 为true表示事件对象是浏览器生成的</div>
     <div>9) 事件类型。如：click</div>
   </details>

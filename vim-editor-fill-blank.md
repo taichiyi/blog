@@ -44,7 +44,7 @@
 </details>
 
 <details>
-  <summary>[N]__(从当前行开始删除N行)</summary>
+  <summary>[N]__(从当前行开始剪切N行)</summary>
   <div>dd</div>
 </details>
 
