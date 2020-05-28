@@ -2112,21 +2112,21 @@
   <div>数组</div>
 </details>
 
-## 7.2 The Iterator Pattern
+## 7.2 The Iterator Pattern(迭代器模式)
 
 ### 7.2.1 The Iterable Protocol
 
 <details>
   <summary>有些原生语言结构会自动调用工厂函数来生成迭代器，包括：9个__。</summary>
-  <div>for...of loop</div>
+  <div>for...of loop。例子：for </div>
   <div>Array destructuring(数组结构)</div>
   <div>The spread operator(展开运算符)</div>
   <div>Array.from()</div>
   <div>Set construction(构建)</div>
   <div>Map construction(构建)</div>
-  <div>Promise.all(), which expects an iterable of promises</div>
-  <div>Promise.race(), which expects an iterable of promises</div>
-  <div>The yield* operator, used in generators</div>
+  <div>Promise.all()</div>
+  <div>Promise.race()</div>
+  <div>yield* operator</div>
 </details>
 
 <details>
@@ -2151,8 +2151,10 @@
 ### 7.2.2 The Iterator Protocol
 
 <details>
-  <summary>对象有个Symbol.iterator的键，对应的值是一个工厂函数，每次调用工厂函数都返回一个自身对象的迭代器，这个工厂函数称为__。</summary>
+  <summary>对象有个Symbol.iterator的键，对应的值是一个工厂函数，每次调用工厂函数都返回一个自身对象的迭代器，这个工厂函数称为__。例子:</summary>
   <div>默认迭代器</div>
+  <pre123
+  </pre>
 </details>
 
 <details>
@@ -3613,7 +3615,18 @@
 </details>
 
 <details>
-  <summary>函数执行上下文，则取决于调用的方式：1)__调用 2)__调用 3)__调用 4)__调用。</summary>
+  <summary>函数执行上下文，分为__函数执行上下文和__函数执行上下文。</summary>
+  <div>箭头</div>
+  <div>非箭头</div>
+</details>
+
+<details>
+  <summary>箭头函数执行上下文: this的值为__执行上下文的this值。</summary>
+  <div>外层</div>
+</details>
+
+<details>
+  <summary>非箭头函数执行上下文，则取决于调用的方式：1)__调用 2)__调用 3)__调用 4)__调用。</summary>
   <div>new运算符</div>
   <div>apply和call</div>
   <div>作为对象方法</div>
@@ -4015,6 +4028,14 @@
 <details>
   <summary>要获取页面视口上边界到浏览器上边界的垂平距离(单位为像素)，可以通过__属性获取。</summary>
   <div>window.scrollY</div>
+</details>
+
+### 12.7 setTimeout and setInterval
+
+<details>
+  <summary>在严格模式下，setTimeout和setInterval()的回调函数里面的this默认指向__，并不是__。</summary>
+  <div>window对象</div>
+  <div>undefined</div>
 </details>
 
 // 剩下的先忽略，先弄未知的
