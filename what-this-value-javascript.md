@@ -133,7 +133,7 @@ foo.getName();
   - 所以函数的调用方式应该为“apply或call”。
   我给出 setTimeout 的假设代码：
   window.setTimeout = function(callback,time) {
-    // 过了time时间后，运行下面的函数
+    // 过了time时间后，运行下面的函数
     callback.call(this);
   };
     </pre>
