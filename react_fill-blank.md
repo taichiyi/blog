@@ -190,9 +190,17 @@
 </details>
 
 <details>
-  <summary>被使用 UNSAFE 标记的生命周期方法经常会被开发者错误的使用，甚至滥用。开发者倾向于将包含副作用的代码放置到这些方法中，这样就可能导致新的异步渲染被触发，例如：在 componentWillUpdate函数中调用 setState 方法就会导致错误产生。甚至程序无限循环，直至奔溃。</summary>
-  <div>用户视觉可见</div>
-  <div>副作用</div>
+  <summary>被使用 UNSAFE 标记的生命周期方法经常会被开发者错误的使用，甚至滥用。开发者倾向于将包含副作用的代码放置到这些方法中，这样就可能导致__被触发，例如：在 componentWillUpdate函数中调用 setState 方法就会导致错误产生。甚至程序无限循环，直至奔溃。</summary>
+  <div>新的异步渲染</div>
+</details>
+
+<details>
+  <summary>commit 阶段调用的生命周期方法：_1_、_2_、_3_、_4_。这些方法都是__步执行的。</summary>
+  <div>1 getSnapshotBeforeUpdate</div>
+  <div>2 componentDidMount</div>
+  <div>3 componentDidUpdate</div>
+  <div>4 componentWillUnmount</div>
+  <div>同</div>
 </details>
 
 ## 协调(reconciliation)

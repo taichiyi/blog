@@ -4189,7 +4189,7 @@
 
 <details>
   <summary>web浏览器中发生的事件有很多__。DOM3级事件规定了9类事件：1)__ 2)__ 3)__ 4)__ 5)__ 6)__ 7)__</summary>
-  <div>UI事件：一般的浏览器事件，可能与BOM有一些交互。</div>
+  <div>类型</div>
   <div>焦点事件</div>
   <div>鼠标事件</div>
   <div>滚轮事件</div>

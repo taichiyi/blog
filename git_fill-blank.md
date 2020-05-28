@@ -33,5 +33,5 @@
 <details>
   <summary>将Index中的内容追加到最后的commit上，git add 后，git __ __。</summary>
   <div>commit</div>
-  <div>-amend</div>
+  <div>--amend</div>
 </details>
