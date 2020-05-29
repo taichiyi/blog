@@ -56,6 +56,22 @@
   <div>子节点</div>
 </details>
 
+<details>
+  <summary>React运行时存在3种实例：1)__ 2)__ 3)__。</summary>
+  <div>DOM 真实DOM节点</div>
+  <div>Instances React维护的vDOM tree node</div>
+  <div>Elements 描述UI长什么样子（type, props）</div>
+</details>
+
+<details>
+  <summary>React和React DOM运行时存在的实例：1)__ 2)__ 3)__ 4)__ 5)__。</summary>
+  <div>DOM: 真实DOM节点</div>
+  <div>effect: 1)每个workInProgress tree节点上都有一个effect list 2)用来存放diff结果 3)当前节点更新完毕会向上merge effect list（queue收集diff结果）</div>
+  <div>workInProgress: 1)workInProgress tree是reconcile过程中从fiber tree建立的当前进度快照，用于断点恢复</div>
+  <div>fiber: fiber tree与vDOM tree类似，用来描述增量更新所需的上下文信息</div>
+  <div>Elements: 描述UI长什么样子（type, props）</div>
+</details>
+
 ## react.dom.js
 
 <details>
@@ -203,6 +219,21 @@
   <div>同</div>
 </details>
 
+<details>
+  <summary>commit 阶段，它有__棵树和副作用列表。第一棵树就是是当前已经刷新到屏幕上 UI 对应的状态。另一颗备用树就是在 render 阶段构建的，在源码中它通常称之为finishedWork 或  workInProgress ，在接下来的 commit 阶段会替换之前的旧树，将新的状态刷新到屏幕上。</summary>
+  <div>两</div>
+</details>
+
+<details>
+  <summary>finishedWork 树的上通过 nextEffect 指针连接的 fiber节点构成副作用列表。_副作用列表可以看做是 render阶段运行产生的成果。_渲染的意义就是去决定节点的插入，更新，删除，或是组件生命周期函数的调用。这些就是副作用列表将要告诉我们的，也是接下来提交阶段需要遍历的节点集合。</summary>
+  <div>两</div>
+</details>
+
+<details>
+  <summary>fiber tree（workInProgress tree）</summary>
+  <div>两</div>
+</details>
+
 ## 协调(reconciliation)
 
 <details>
@@ -244,6 +275,16 @@
   <div>sibling(第一个兄弟节点的引用)</div>
   <div>return(父节点的引用)</div>
   <img src="https://oss.taichiyi.com/markdown/1_7dsyUaUpKbFG7EoNR9Cu2w.png" />
+</details>
+
+<details>
+  <summary>协调算法的执行总是从顶层的 HostRoot节点开始执行工作，通过调用  renderRoot 方法开始。然而 React 会跳过那些被处理过的 fiber 节点，直到找到还未被处理的节点。例如，如果你在组件树的某一处调用了 setState ，React 会从顶部开始遍历，但是会快速的跳过它的祖先节点，直到找到触发 setState 的组件为止。</summary>
+  <div>单链表</div>
+</details>
+
+<details>
+  <summary>协调过程实际就是遍历整个 Fiber 树的时候，通过从 React Element 中获取到的改变后的数据，然后将这些数据更新到其所对应的 fiber 节点上，不存在对应的fiber 节点时，则创建新的，然后通过数据计算判断出该 fiber 节点在 commit 阶段需要做的事情，添加上对应的 effectTag ,同时该节点也会被添加到副作用列表中。在遍历完成之后会生成一棵新Fiber 树，该树中的 fiber 节点一些是新创建的，一些则是复用 old fiber tree 中的，具体情况取决于返回的 React Element 。在 commit 阶段就是遍历副作用列表并执行 effectTag 标记的工作。</summary>
+  <div>单链表</div>
 </details>
 
 ### 背景

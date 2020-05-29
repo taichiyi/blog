@@ -2153,7 +2153,27 @@
 <details>
   <summary>对象有个Symbol.iterator的键，对应的值是一个工厂函数，每次调用工厂函数都返回一个自身对象的迭代器，这个工厂函数称为__。例子:</summary>
   <div>默认迭代器</div>
-  <pre123
+  <pre>
+  const fooArr = ['t', 'c', 'y'];
+  fooArr[Symbol.iterator] = function () {
+    let nextIndex = 0;
+    return {
+      next: () => {
+        return nextIndex < this.length ? {
+          value: this[nextIndex++],
+          done: false
+        } : {
+            done: true
+          };
+      },
+    };
+  };
+  for (const iterator of fooArr) {
+    console.log(iterator);
+  }
+  // t
+  // c
+  // y
   </pre>
 </details>
 
@@ -2181,7 +2201,7 @@
   <div>throw</div>
 </details>
 
-## 7.3 Generators【薄弱】
+## 7.3 Generators
 
 <details>
   <summary>生成器对象是由一个 __ 函数返回的，并且生成器对象符合__协议和__协议。例子：</summary>
@@ -2207,7 +2227,7 @@
 </details>
 
 <details>
-  <summary>生成器采用函数的形式，并且生成器指定带有__号。</summary>
+  <summary>生成器采用函数的形式，并且生成器函数指定带有__号。</summary>
   <div>星（*）</div>
 </details>
 
@@ -2301,7 +2321,7 @@
 
 <details>
   <summary>生成器对象的__（value）方法返回给定的值并结束生成器。</summary>
-  <div>generator.return</div>
+  <div>Generator.prototype.return</div>
 </details>
 
 <details>
@@ -3718,7 +3738,7 @@
   </pre>
 </details>
 
-## 10.13 Tail Call Optimization(尾部调用优化,TCO)【薄弱】
+## 10.13 Tail Call Optimization(尾部调用优化,TCO)
 
 <details>
   <summary>ES6 规范还引入了内存管理优化功能，该功能允许JavaScript引擎在满足某些条件时重用__。具体而言，这种优化适用于“尾部调用”，其中外部函数的返回值是内部函数的返回值。</summary>
@@ -4149,7 +4169,7 @@
 </details>
 
 <details>
-  <summary>当事件会处于“__阶段”时，会触发该元素（即事件目标）上对应事件的所有监听器，而不在乎这个监听器到底在注册时__参数值是true还是false。useCapture默认为__。</summary>
+  <summary>当事件处于“__阶段”时，会触发该元素（即事件目标）上对应事件的所有监听器，而不在乎这个监听器到底在注册时__参数值是true还是false。useCapture默认为__。</summary>
   <div>目标</div>
   <div>useCapture</div>
   <div>false</div>
@@ -4164,30 +4184,37 @@
   <div>event对象</div>
 </details>
 
+<details>
+  <summary>如果一个元素的某个事件类型的事件处理程序，既有DOM0级也有DOM2级，将按照__先后调用处理程序。</summary>
+  <div>添加的顺序</div>
+</details>
+
 <details open>
-  <summary>解释以下“事件对象”的属性：</summary>
+  <summary>解释以下“事件对象”的属性[Read only]：</summary>
   <pre>
-  1) bubbles
-  2) cancelable
-  3) currentTarget
-  4) defaultPrevented
-  5) detail
-  6) eventPhase
-  7) target
-  8) trusted
-  9) type
+   1) bubbles
+   2) cancelable
+   3) currentTarget
+   4) defaultPrevented
+   5) detail
+   6) eventPhase
+   7) target
+   8) isTrusted
+   9) type
+  10) composed
   </pre>
   <details>
     <summary>点击查看答案：</summary>
     <div>1) 当前事件是否会向DOM树上层元素冒泡</div>
-    <div>2) 是否可以取消事件的默认行为</div>
+    <div>2) 是否可以取消事件的默认行为，例如：a标签的点击跳转行为；form表单中submit类型的提交行为。</div>
     <div>3) 事件当前所处的元素</div>
     <div>4) 为true表示已经调用了preventDefault()【DOM3】</div>
-    <div>5) 与事件相关的细节</div>
+    <div>5) 接口 CustomEvent 的只读属性 detail （详情）返回在初始化事件对象时传递过来的任何类型数据。</div>
     <div>6) 事件所处阶段: “0: 事件没有被正在处理; 1: 捕获阶段; 2: 事件处于目标阶段; 3: 冒泡阶段”。</div>
     <div>7) 事件触发的元素</div>
     <div>8) 为true表示事件对象是浏览器生成的</div>
     <div>9) 事件类型。如：click</div>
+    <div>10) 默认值为 false，指示事件是否会在影子DOM根节点之外触发侦听器。</div>
   </details>
 </details>
 
@@ -4201,8 +4228,8 @@
   <details>
     <summary>点击查看答案：</summary>
     <div>1) 取消事件的默认行为。如果cancelable是true，则可以使用这个方法。</div>
-    <div>2) 取消事件的进一步捕获或冒泡，同时阻止任何事件处理程序被调用【DOM3】</div>
-    <div>3) 取消事件的进一步捕获或冒泡。如果bubbles为true，则可以使用这个方法。</div>
+    <div>2) 取消事件的进一步捕获或冒泡，把事件对象的bubbles改为false，[DOM3]如果有多个相同类型事件的事件处理函数绑定到同一个元素，当该类型的事件触发时，它们会按照被添加的顺序执行。如果其中某个监听函数执行了 event.stopImmediatePropagation() 方法，则当前元素剩下的监听函数将不会被执行。</div>
+    <div>3) 取消事件的进一步捕获或冒泡。把事件对象的bubbles改为false。</div>
   </details>
 </details>
 
@@ -4236,8 +4263,16 @@
 ## 17.6 Simulating Events(模拟事件)
 
 <details>
-  <summary>可以使用构造函数CustomEvent(typeArg, customEventInit)来创建事件。</summary>
+  <summary>可以使用构造函数CustomEvent(typeArg[, customEventInit])来创建事件。</summary>
   <div>事件委托</div>
+</details>
+
+<details>
+  <summary>参数customEventInit是一个对象，有四个属性: __ 默认为null; __ 默认为false; __ 默认为false; __ 默认为false。</summary>
+  <div>detail</div>
+  <div>bubbles</div>
+  <div>cancelable</div>
+  <div>composed</div>
 </details>
 
 <details>
@@ -4272,6 +4307,11 @@
 </details>
 
 <details>
+  <summary>赫兹是电，磁，声波和机械振动周期循环时频率的单位。即每秒的__次数(周期/秒)。</summary>
+  <div>周期</div>
+</details>
+
+<details>
   <summary>大多数计算机的显示器的刷新率为__，意味着每秒刷新60次。浏览器会限制__频率，使之不超过显示器的刷新频率。</summary>
   <div>60Hz</div>
   <div>重绘</div>
@@ -4281,6 +4321,18 @@
   <summary>因此，最流畅的动画的最佳间隔是__ / __，即大约17ms。您将以这种速度看到最流畅的动画，因为您将更紧密地反映浏览器的功能。可能需要限制多个动画，以便在使用间隔为17ms的动画循环时不会太快完成。</summary>
   <div>1000ms</div>
   <div>60</div>
+</details>
+
+<details>
+  <summary>FPS：英文全称__；中文全称__。</summary>
+  <div>Frames Per Second</div>
+  <div>每秒传输帧数</div>
+</details>
+
+<details>
+  <summary>FPS 也可以理解为我们常说的“刷新率（单位为Hz）”</summary>
+  <div>Frames Per Second</div>
+  <div>每秒传输帧数</div>
 </details>
 
 ### 18.1.2 Problems with Intervals
