@@ -151,6 +151,18 @@
   <div></div>
 </details>
 
+#### 1.2.2.4 node.nodeType
+
+<details>
+  <summary>__ 属性可用来区分不同类型的DOM节点。</summary>
+  <div>nodeType</div>
+</details>
+
+<details>
+  <summary><pre>节点类型的常量值<pre></summary>
+  <div>nodeType</div>
+</details>
+
 ### 1.2.3 The Browser Object Model
 
 <details>
