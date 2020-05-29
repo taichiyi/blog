@@ -88,7 +88,7 @@ foo();
 例1：
 
 <details open>
-  <summary>下面代码打印值依次为：</summary>
+  <summary>下面代码依次打印的值是什么？</summary>
   <pre>
 'use strict';
 var age = 18;
@@ -143,7 +143,7 @@ foo.getName();
 例2：
 
 <details open>
-  <summary>下面代码打印值依次为：</summary>
+  <summary>下面代码依次打印的值是什么？</summary>
   <pre>
 var age = 18;
 const foo = {
@@ -182,7 +182,7 @@ foo.getName();
 例3：
 
 <details open>
-  <summary>下面代码打印值依次为：</summary>
+  <summary>下面代码依次打印的值是什么？</summary>
   <pre>
 var age = 18;
 const foo = {
@@ -207,7 +207,7 @@ foo.getName()();
 例4：
 
 <details open>
-  <summary>下面代码打印值依次为：</summary>
+  <summary>下面代码依次打印的值是什么？</summary>
   <pre>
 'use strict';
 var age = 18;
