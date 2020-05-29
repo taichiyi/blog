@@ -4,7 +4,7 @@
 
 ``` javascript
 import Button from '@material-ui/core';
-var react = require('@tarojs/taro');
+var taro = require('@tarojs/taro');
 ```
 
 ``` json

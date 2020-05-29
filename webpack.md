@@ -51,7 +51,7 @@ webpack-dev-server ≈ webpack-dev-middleware + express
 
 - optimization.splitChunks.cacheGroups.{cacheGroup}.priority
 
-  一个模块(例如React)可以属于多个cacheGroup。`optimization`将优先考虑具有更高优先级的cacheGroup。
+  一个模块(例如antd)可以属于多个cacheGroup。`optimization`将优先考虑具有更高优先级的cacheGroup。
 
   如果A模块被优先级高的cacheGroup打包，则其他cacheGroup不会再打包A模块。
 

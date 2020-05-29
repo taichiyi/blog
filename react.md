@@ -44,8 +44,6 @@ ReactDOM.render(
 
 > 背景在React应用中数据是通过props由上至下(父->子)传递的，最上层需要向最下层传递数据时，需要显示的层层传递，当存在多个组件嵌套时，这种方式非常繁琐。
 
-## Code Splitting
-
 ## react 生命周期 -start-
 
 react已组件的形式来实现模块化。所以组件这个概念在react中非常重要，需要深入了解。
@@ -130,3 +128,114 @@ export default React.memo(MyComponent, areEqual);
 >与 class 组件中 shouldComponentUpdate() 方法不同的是，如果 props 相等，areEqual 会返回 true；如果 props 不相等，则返回 false。这与 shouldComponentUpdate 方法的返回值相反。
 
 ## react 生命周期 -end-
+
+## react生命周期(lifeCycle)
+
+分三个阶段
+
+- 挂载阶段(Mounting)
+
+- 更新阶段(Updating)
+
+- 卸载阶段(Unmounting)
+
+![react声明周期](https://oss.taichiyi.com/markdown/QQ20190410-0.jpg)
+
+constructor
+
+- 初始化state对象
+- 给自定义方法绑定this
+
+getDerivedStateFromProps
+
+## react和vue区别
+
+数据流：
+
+- react: 单向数据流
+
+- vue: 双向数据流(也就是典型的MVVM模式)，不过用vuex也能redux的单向数据流。
+
+页面渲染：
+
+- react: 根据两个虚拟DOM树的差，来修改DOM树。
+- vue: 通过监听数据变化，来修改DOM树。
+
+模板:
+
+- react: 通过原生JS实现模板中的常见语法，比如插值，条件，循环等
+- vue: 通过拓展的HTML语法（如v-html, v-if, v-for）来实现模板的常见语法
+
+## React的新功能Time Slice 和Suspense
+
+### Time Slicing
+
+- 时间分片
+
+- 简单的来说，react的异步渲染其实就是拉长了render的时间，一次跑一点，所以机器性能很差的，会看到react渲染时有稍微的延迟，但是不是卡顿。
+
+### Suspense
+
+- 主要解决的就是网络IO问题。网络IO问题其实就是我们现在用Redux+saga等等一系列乱七八糟的库来解决的「副作用」问题。
+
+- 引入新的api，可以使得任何state更新暂停，直到条件满足时，再渲染（像async/await）
+
+## 关于React v16.3 新生命周期
+
+react v16.3终于出来了，最大的变动莫过于生命周期去掉了以下三个
+
+- componentWillMount
+- componentWillReceiveProps
+- componentWillUpdate
+
+同时为了弥补失去上面三个周期的不足又加了两个
+
+- static getDerivedStateFromProps
+- getSnapshotBeforeUpdate
+
+### static getDerivedStateFromProps
+
+- 组件每次被rerender的时候，包括在组件构建之后(render之前最后执行)，每次获取新的props或state之后
+- 每次接收新的props之后都会返回一个对象作为新的state，返回null则说明不需要更新state.
+- 配合componentDidUpdate，可以覆盖componentWillReceiveProps的所有用法
+
+``` javascript
+static getDerivedStateFromProps(nextProps, prevState) {
+    // 没错，这是一个static
+}
+```
+
+### getSnapshotBeforeUpdate
+
+- 触发时间: update发生的时候，在render之后，在组件dom渲染之前。
+- 返回一个值，作为componentDidUpdate的第三个参数。
+- 配合getDerivedStateFromProps, 可以覆盖componentWillReceiveProps的所有用法。
+
+``` javascript
+class Example extends React.Component {
+  getSnapshotBeforeUpdate(prevProps, prevState) {
+    // ...
+  }
+}
+```
+
+## PureComponent和FunctionComponent区别
+
+Functional Component
+
+- 对于不需要内部状态，且用不到生命周期函数的组件，我们可以使用这种方式定义组件，比如展示性的列表组件，可以将列表项定义为Stateless Functional Component。
+
+pureComponent
+
+- PureComponent的自动为我们添加的shouldComponentUpate函数，只是对props和state进行浅比较(shadow comparison)
+
+## 虚拟DOM
+
+- 与直接频繁的操作DOM相比，虚拟DOM可以最小化地操作DOM。
+
+- 而且和DOM操作比起来，js 计算是非常便宜的。
+
+- 虚拟DOM，才催生出了RN。也应证了 Learn Once, Write Anywhere 这句口号。
+
+diff算法: 两个树的完全的diff算法是一个时间复杂度为 O(n3) 的问题。 但是在前端中，你会很少跨层地移动DOM元素，所以真实的DOM算法会对同一个层级的元素进行对比。
+
