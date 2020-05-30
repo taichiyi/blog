@@ -159,8 +159,25 @@
 </details>
 
 <details>
-  <summary><pre>节点类型的常量值<pre></summary>
-  <div>nodeType</div>
+  <summary>
+  <pre>
+  节点类型的常量值:
+  <!--  -->
+  常量                         值       描述
+  Node.ELEMENT_NODE            1       _1_。
+  Node.TEXT_NODE               3       _2_。
+  Node.COMMENT_NODE            8       _3_。
+  Node.DOCUMENT_NODE           9       _4_。
+  Node.DOCUMENT_TYPE_NODE      10      _5_。
+  Node.DOCUMENT_FRAGMENT_NODE  11      _6_。
+  <pre>
+  </summary>
+  <div>1) 一个 元素 节点，例如 < p > 和 < div ></div>
+  <div>2）Element 或者 Attr 中实际的 文字</div>
+  <div>3）一个 Comment 节点</div>
+  <div>4）一个 Document 节点</div>
+  <div>5）描述文档类型的 DocumentType 节点。例如 < !DOCTYPE html >  就是用于 HTML5 的</div>
+  <div>6）一个 DocumentFragment 节点</div>
 </details>
 
 ### 1.2.3 The Browser Object Model
@@ -4297,8 +4314,8 @@
 ## 18.1 Using requestAnimationFrame
 
 <details>
-  <summary>长期以来，()方法一直是基于JavaScript的动画的最新技术。</summary>
-  <div>setInterval</div>
+  <summary>长期以来，__(func, delay, [arg1, ...])方法一直是基于JavaScript的动画的最新技术。</summary>
+  <div>window.setInterval</div>
 </details>
 
 <details>
@@ -4342,9 +4359,8 @@
 </details>
 
 <details>
-  <summary>FPS 也可以理解为我们常说的“刷新率（单位为Hz）”</summary>
-  <div>Frames Per Second</div>
-  <div>每秒传输帧数</div>
+  <summary>FPS 也可以理解为我们常说的“__率（单位为Hz）”</summary>
+  <div>刷新</div>
 </details>
 
 ### 18.1.2 Problems with Intervals

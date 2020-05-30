@@ -24,7 +24,7 @@
 </details>
 
 <details>
-  <summary>在JSX会将以小写字母开头的组件视为__。</summary>
+  <summary>在JSX中会将以小写字母开头的组件视为__。</summary>
   <div>原生 DOM 标签</div>
 </details>
 
@@ -32,27 +32,27 @@
 
 <details>
   <summary>react.js 主要用来创建__。</summary>
-  <div>虚拟DOM树</div>
+  <div>React DOM树</div>
 </details>
 
 <details>
-  <summary>React.createElement(type, [config], [...children])方法是用来创建虚拟DOM树的__。</summary>
+  <summary>React.createElement(type [,config] [,...children])方法是用来创建 React DOM 树的__。</summary>
   <div>节点</div>
 </details>
 
 <details>
   <summary>
-  type: 字符串，必填，节点的类型，分为两类: 1)如果是字符串则是原生 DOM 标签。2)如果是构造函数则是__。</summary>
-  <div>虚拟 DOM</div>
+  type: 节点的类型，分为两类: 1)如果是字符串则是原生 DOM 标签。2)如果是构造函数则是__。</summary>
+  <div>组件</div>
 </details>
 
 <details>
-  <summary>config: 对象，选填，节点的__。</summary>
+  <summary>config: 节点的__。</summary>
   <div>属性</div>
 </details>
 
 <details>
-  <summary>...children: 对象数组，选填，节点的__。</summary>
+  <summary>...children: 节点的__。</summary>
   <div>子节点</div>
 </details>
 
@@ -66,7 +66,7 @@
 <details>
   <summary>React和React DOM运行时存在的实例：1)__ 2)__ 3)__ 4)__ 5)__。</summary>
   <div>DOM: 真实DOM节点</div>
-  <div>effect: 1)每个workInProgress tree节点上都有一个effect list 2)用来存放diff结果 3)当前节点更新完毕会向上merge effect list（queue收集diff结果）</div>
+  <div>effect: 1)每个workInProgress tree节点上都有一个 effect list; 2)用来存放diff结果; 3)当前节点更新完毕会向上merge effect list（queue收集diff结果）</div>
   <div>workInProgress: 1)workInProgress tree是reconcile过程中从fiber tree建立的当前进度快照，用于断点恢复</div>
   <div>fiber: fiber tree与vDOM tree类似，用来描述增量更新所需的上下文信息</div>
   <div>Elements: 描述UI长什么样子（type, props）</div>
@@ -75,8 +75,8 @@
 ## react.dom.js
 
 <details>
-  <summary>react.dom.js 渲染DOM树。</summary>
-  <div>虚拟DOM树</div>
+  <summary>react.dom.js 把React DOM 树换成 DOM 树。</summary>
+  <div></div>
 </details>
 
 <details>
@@ -122,7 +122,7 @@
   <div>React.forwardRef</div>
   <div>其组件树下</div>
   <pre>
-  123
+  ...
   </pre>
 </details>
 
@@ -226,12 +226,12 @@
 
 <details>
   <summary>finishedWork 树的上通过 nextEffect 指针连接的 fiber节点构成副作用列表。_副作用列表可以看做是 render阶段运行产生的成果。_渲染的意义就是去决定节点的插入，更新，删除，或是组件生命周期函数的调用。这些就是副作用列表将要告诉我们的，也是接下来提交阶段需要遍历的节点集合。</summary>
-  <div>两</div>
+  <div></div>
 </details>
 
 <details>
   <summary>fiber tree（workInProgress tree）</summary>
-  <div>两</div>
+  <div></div>
 </details>
 
 ## 协调(reconciliation)
@@ -253,7 +253,7 @@
 </details>
 
 <details>
-  <summary>为了从 Stack reconciler 到 Fiber reconciler: 1)__ 2)__。</summary>
+  <summary>为什么从 Stack reconciler 到 Fiber reconciler: 1)__ 2)__。</summary>
   <div>无法增量更新</div>
   <div>没有优先级</div>
 </details>
@@ -278,7 +278,7 @@
 </details>
 
 <details>
-  <summary>协调算法的执行总是从顶层的 HostRoot节点开始执行工作，通过调用  renderRoot 方法开始。然而 React 会跳过那些被处理过的 fiber 节点，直到找到还未被处理的节点。例如，如果你在组件树的某一处调用了 setState ，React 会从顶部开始遍历，但是会快速的跳过它的祖先节点，直到找到触发 setState 的组件为止。</summary>
+  <summary>协调算法的执行总是从顶层的 HostRoot 节点开始执行工作，通过调用 renderRoot 方法开始。然而 React 会跳过那些被处理过的 fiber 节点，直到找到还未被处理的节点。例如，如果你在组件树的某一处调用了 setState ，React 会从顶部开始遍历，但是会快速的跳过它的祖先节点，直到找到触发 setState 的组件为止。</summary>
   <div>单链表</div>
 </details>
 
