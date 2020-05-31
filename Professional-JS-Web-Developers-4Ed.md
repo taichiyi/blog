@@ -4432,7 +4432,7 @@
 
 <details>
   <summary>Date.now()精度为毫秒级，如果想要更高的时间精度可以使用window.__（）,该函数返回一个精度为__级的浮点数。</summary>
-  <div>perforcece.now</div>
+  <div>performance.now</div>
   <div>微妙</div>
 </details>
 
