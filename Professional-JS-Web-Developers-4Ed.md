@@ -1565,7 +1565,6 @@
 
 <details>
   <summary>(3/3)③低位的10比特(共1024个码点)的值（值的范围为 0-0x3FF）被加上 0x__ 得到第二个码元或称作__，值的范围是 0xDC00-0xDFFF。</summary>
-  <div>1024</div>
   <div>DC00</div>
   <div>后尾代理（trail surrogates）</div>
 </details>
@@ -2761,7 +2760,7 @@
 </details>
 
 <details>
-  <summary>原型链的第二个问题是：创建子类型实例时，不能将__传递给超类型构造函数。</summary>
+  <summary>原型链的第二个问题是：创建子类实例时，不能将__传递给超类构造函数。</summary>
   <div>参数</div>
 </details>
 
@@ -2773,8 +2772,8 @@
 </details>
 
 <details>
-  <summary>借用构造函数，即子类型构造函数的内部调用__。来实现对__的继承。</summary>
-  <div>超类型构造函数</div>
+  <summary>借用构造函数，即子类构造函数的内部调用__。来实现对__的继承。</summary>
+  <div>超类构造函数</div>
   <div>超类属性</div>
 </details>
 
@@ -2787,7 +2786,7 @@
 #### 8.3.2.2 Problems with Constructor Stealing
 
 <details>
-  <summary>借用构造函数的缺点：①子类型实例的__无法共用。②超类型__中的方法，子类型不可访问。</summary>
+  <summary>借用构造函数的缺点：①子类实例的__无法共用。②超类__中的方法，子类不可访问。</summary>
   <div>方法</div>
   <div>原型</div>
 </details>
@@ -2801,7 +2800,7 @@
 </details>
 
 <details>
-  <summary>组合继承的缺点：调用了两次超类型的构造函数，1) new超类型，只用了超类型的原型，却没有用超类的__；2)通过call或apply方法调用了一次。</summary>
+  <summary>组合继承的缺点：调用了两次超类的构造函数，1) new超类，只用了超类的原型，却没有用超类的__；2)通过call或apply方法调用了一次。</summary>
   <div>属性</div>
 </details>
 
@@ -2933,7 +2932,7 @@
 <details>
   <summary>使用new调用类构造函数将执行以下操作：①__；②__；③__；④__；⑤__。</summary>
   <div>1. 在内存中创建一个新对象</div>
-  <div>2. 将新对象的内部[[Prototype]]指针分配为constructor函数的prototype属性</div>
+  <div>2. 将新对象的内部[[Prototype]]指针指向class构造函数的prototype属性</div>
   <div>3. 新对象赋值给constructor函数的this。</div>
   <div>4. 执行constructor函数中的代码（将属性添加到新对象）</div>
   <div>5. 如果constructor函数返回一个对象，则返回该对象。 否则，新返回刚刚创建的对象</div>
@@ -3281,7 +3280,7 @@
 #### 9.1.8.2 Proxies and Internal Slots
 
 <details>
-  <summary>一个典型的例子是日期类型。根据ECMAScript规范，在执行方法时，日期类型依赖于this值上名为[[NumberData]]的“__”的存在。因为内部插槽在代理上不存在，并且由于无法通过正常的get和set操作访问这些内部插槽值，否则代理可能会拦截并重定向到目标，因此该方法将抛出TypeError。</summary>
+  <summary>一个典型的例子是日期类。根据ECMAScript规范，在执行方法时，日期类依赖于this值上名为[[NumberData]]的“__”的存在。因为内部插槽在代理上不存在，并且由于无法通过正常的get和set操作访问这些内部插槽值，否则代理可能会拦截并重定向到目标，因此该方法将抛出TypeError。</summary>
   <div>内部插槽(Internal Slots)</div>
 </details>
 
@@ -4558,13 +4557,23 @@
 </details>
 
 <details>
-  <summary>module对象的属性主要有6个：1)id 2)filename 3)loaded 4)parent 5)children 6)exports。</summary>
-  <div>1) id 模块标识符</div>
-  <div>2) filename 模块文件名，绝对路径</div>
-  <div>3) loaded 模块是否已加载</div>
-  <div>4) parent 调用该模块的对象</div>
-  <div>5) children 该模块依赖的其他模块</div>
-  <div>6) exports 对外输出的对象</div>
+  <summary>
+  <pre>
+  module对象的属性主要有6个：
+  1) id __
+  2) filename __
+  3) loaded __
+  4) parent __
+  5) children __
+  6) exports __
+  </pre>
+  </summary>
+  <div>1) 模块标识符</div>
+  <div>2) 模块文件名，绝对路径</div>
+  <div>3) 模块是否已加载</div>
+  <div>4) 调用该模块的对象</div>
+  <div>5) 该模块依赖的其他模块</div>
+  <div>6) 对外输出的对象</div>
 </details>
 
 <details>
