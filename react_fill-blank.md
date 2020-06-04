@@ -19,13 +19,13 @@
 
 <details>
   <summary>假设你的 HTML 文件某处有一个 &lt;div id="root">&lt;/div>。我们将其称为“__” DOM 节点，因为该节点内的所有内容都将由__管理。</summary>
-  <div>根</div>
+  <div>根(HostRoot)</div>
   <div>React DOM</div>
 </details>
 
 <details>
   <summary>在JSX中会将以小写字母开头的组件视为__。</summary>
-  <div>原生 DOM 标签</div>
+  <div>原生 DOM 标签(host component)</div>
 </details>
 
 ## react.js
@@ -58,9 +58,9 @@
 
 <details>
   <summary>React运行时存在3种实例：1)__ 2)__ 3)__。</summary>
-  <div>DOM 真实DOM节点</div>
-  <div>Instances React维护的vDOM tree node</div>
-  <div>Elements 描述UI长什么样子（type, props）</div>
+  <div>DOM: 真实DOM节点</div>
+  <div>Instances: React维护的vDOM tree node</div>
+  <div>Elements: 描述UI长什么样子（type, props）</div>
 </details>
 
 <details>
@@ -158,18 +158,13 @@
 
 <details>
   <summary>Fiber 通过单链表重新实现了虚拟栈，专门用于React组件。您可以将单个Fiber视为__。</summary>
-  <div>虚拟栈帧</div>
+  <div>帧(元素)</div>
 </details>
 
 <details>
   <summary>Fiber的架构有两个主要阶段：__和__。在源码中，协调阶段通常被称为“渲染阶段”。</summary>
   <div>协调/渲染(render)</div>
   <div>提交(commit)</div>
-</details>
-
-<details>
-  <summary>你可以将单个Fiber视为一个虚拟栈的__。</summary>
-  <div>帧(元素)</div>
 </details>
 
 <details>
@@ -225,8 +220,8 @@
 </details>
 
 <details>
-  <summary>finishedWork 树的上通过 nextEffect 指针连接的 fiber节点构成副作用列表。_副作用列表可以看做是 render阶段运行产生的成果。_渲染的意义就是去决定节点的插入，更新，删除，或是组件生命周期函数的调用。这些就是副作用列表将要告诉我们的，也是接下来提交阶段需要遍历的节点集合。</summary>
-  <div></div>
+  <summary>finishedWork 树的上通过 nextEffect 指针连接的 fiber节点构成副作用列表。_副作用列表可以看做是 render阶段运行产生的成果。__渲染的意义就是去决定节点的插入，更新，删除，或是组件生命周期函数的调用。这些就是副作用列表将要告诉我们的，也是接下来提交阶段需要遍历的节点集合。</summary>
+  <div>异步</div>
 </details>
 
 <details>

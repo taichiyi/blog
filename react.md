@@ -46,7 +46,7 @@ ReactDOM.render(
 
 ## react 生命周期 -start-
 
-react已组件的形式来实现模块化。所以组件这个概念在react中非常重要，需要深入了解。
+react以组件的形式来实现模块化。所以组件这个概念在react中非常重要，需要深入了解。
 
 生命周期又是组件的一个重要概念。
 
@@ -238,4 +238,3 @@ pureComponent
 - 虚拟DOM，才催生出了RN。也应证了 Learn Once, Write Anywhere 这句口号。
 
 diff算法: 两个树的完全的diff算法是一个时间复杂度为 O(n3) 的问题。 但是在前端中，你会很少跨层地移动DOM元素，所以真实的DOM算法会对同一个层级的元素进行对比。
-
