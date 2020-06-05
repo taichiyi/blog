@@ -1630,7 +1630,7 @@
 
 <details>
   <summary>(2/2)所以存在一个问题：以上3种字符视觉和语义上都等价，但是 JavaScript 不能识别。然后Unicode通过提供四种正规形式来解决这一问题：NFC(默认)、NFD、NFKC、NFKD。通过__方法使用。</summary>
-  <div>String.prototype.normalize()</div>
+  <div>String.prototype.normalize([form])</div>
 </details>
 
 <details>
@@ -4604,7 +4604,7 @@
 </details>
 
 <details>
-  <summary>require([module], __)加载模块语句不用与CommonJS的地方是，需要两个参数。</summary>
+  <summary>AMD require([module], __)加载模块语句与 CommonJS require()不同的地方是，需要两个参数。</summary>
   <div>callback</div>
 </details>
 
