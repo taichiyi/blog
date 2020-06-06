@@ -4775,7 +4775,7 @@
 </details>
 
 <details>
-  <summary>由于import是__执行，就是创建执行上下文的 __阶段 执行。</summary>
+  <summary>由于import是__执行，就是执行上下文的 __阶段 执行的。</summary>
   <div>静态</div>
   <div>创建</div>
 </details>
@@ -4844,7 +4844,7 @@
 ### 26.4.8 Backwards Compatibility
 
 <details>
-  <summary>为了兼容不支持模块的浏览器，可以在 script 的 __ 属性。例子：</summary>
+  <summary>为了兼容不支持模块的浏览器，可以用 script 的 __ 属性。例子：</summary>
   <div>nomodule</div>
   <pre>
   // Modern browser will execute this
