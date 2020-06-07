@@ -4256,7 +4256,7 @@
   <details>
     <summary>点击查看答案：</summary>
     <div>1) 取消事件的默认行为。如果cancelable是true，则可以使用这个方法。</div>
-    <div>2) 取消事件的进一步捕获或冒泡，把事件对象的bubbles改为false，[DOM3]如果有多个相同类型事件的事件处理函数绑定到同一个元素，当该类型的事件触发时，它们会按照被添加的顺序执行。如果其中某个监听函数执行了 event.stopImmediatePropagation() 方法，则当前元素剩下的监听函数将不会被执行。</div>
+    <div>2) 取消事件的进一步捕获或冒泡，把事件对象的bubbles改为false，[DOM3]如果有多个相同类型事件的事件处理程序绑定到同一个元素，当该类型的事件触发时，它们会按照被添加的顺序执行。如果其中某个监听函数执行了 event.stopImmediatePropagation() 方法，则当前元素剩下的监听函数将不会被执行。</div>
     <div>3) 取消事件的进一步捕获或冒泡。把事件对象的bubbles改为false。</div>
   </details>
 </details>
