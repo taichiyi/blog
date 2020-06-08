@@ -94,7 +94,7 @@
 </details>
 
 <details>
-  <summary>__ 响应头包含日期或时间即在此时候之后，资源过期。如果在Cache-Control响应头设置了 "max-age" 或者 "s-max-age" 指令，那么 Expires 头会被忽略。</summary>
+  <summary>__ 响应头包含日期/时间，即在此时候之后，响应过期。如果在Cache-Control响应头设置了 "max-age" 或者 "s-max-age" 指令，那么 Expires 头会被忽略。</summary>
   <div>Expires</div>
 </details>
 
@@ -138,9 +138,10 @@
 </details>
 
 <details>
-  <summary>如果请求不想让代理服务器缓存，可在请求首部行添加Cache-Control属性，并且在值中添加__，想缓存则添加__。</summary>
+  <summary>如果请求不想让代理服务器缓存，可在请求首部行添加Cache-Control属性，并且在值中添加__，想缓存则添加__。例子：</summary>
   <div>private</div>
   <div>public</div>
+  <pre>Cache-Control: public, max-age=31536000</pre>
 </details>
 
 <details>

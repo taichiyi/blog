@@ -363,8 +363,28 @@
 </details>
 
 <details>
-  <summary>React.lazy要被__组件包裹。因为等待惰性组件加载时，需要显示一些__内容(fallback content)
-。</summary>
+  <summary>React.lazy要被__组件包裹。因为等待惰性组件加载时，需要显示一些__内容(fallback content)。</summary>
   <div>Suspense</div>
   <div>后备</div>
+</details>
+
+<details>
+  <summary>
+  <pre>
+
+  FiberNode 构造函数属性说明：
+  [alternate]保存它在另一棵树中对应节点的引用。也就是说一个来自  current 树的节点会指向  workInProgress 树中相对应的节点，反之亦然。
+  [key]相同层级孩子节点唯一标记，可以优化提升 React 对子节点更新，添加，删处的判断效率。与它具体功能相关的官方文档可以看这里。https://zh-hans.reactjs.org/docs/lists-and-keys.html#keys
+
+  [stateNode]用于保存类组件的实例，宿主组件的 DOM 实例等。通常我们也可以说这个属性是用来保存与该 fiber 相对应的的本地状态 。
+  [type]定义了与该 fiber node 相对应的是一个函数组件还是一个类组件。如果是一个类组件该属性指向这个类的构造函数。如果是一个 DOM 元素，该属性则是与之相对应的 HTML 标签。使用这个域很容易就能理解与该 fiber 节点相关联的元素是什么。
+  [tag]定义了当前 fiber 的类型。协调算法用它来判断具体需要做什么工作。像之前说的这个工作的类型还是基于 React Element 的类型。createFiberFromTypeAndProps 函数映射一个 React Element 到与之相对应的 fiber node 类型。在我们的示例中， ClickCounter 组件的属性 tag 是 1，表示  ClassComponent ， span 元素的 tag 是5 ，表示  HostComponent。
+  [updateQueue]一个状态更新队列，包括回调 和 DOM 更新。
+  [memoizedState]已经被使用渲染的过的 fiber State。也就是当前屏幕上 UI  状态的映射。
+  [memoizedProps]已经使用渲染过的 fiber Props，也是构成当前屏幕 UI  状态映射的一部分。
+  [pendingProps]保存着最近一次从 render 方法返回的 React Element 中拿到的数据，等待随后被应用到子组件或是 DOM 元素上。
+
+  </pre>
+  </summary>
+  <div></div>
 </details>

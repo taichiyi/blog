@@ -4097,6 +4097,15 @@
   <div>应用程序编程接口（API）</div>
 </details>
 
+## 14.1 Hierarchy of Nodes
+
+### 14.1.1 The Node Type
+
+<details>
+  <summary>Node.__ 只读属性会返回当前节点的顶层的 document 对象。</summary>
+  <div>ownerDocument</div>
+</details>
+
 先略过中间的章节
 
 # 第17章 EVENTS(DOM事件)
@@ -4631,14 +4640,14 @@
 ### 26.3.3 Universal Module Definition(UMD，通用模块定义)
 
 <details>
-  <summary>UMD，就是一种javascript通用模块定义规范，让你的模块能在javascript所有运行环境(CommonJS, AMD, CMD)中发挥作用。</summary>
-  <div>define</div>
+  <summary>UMD，就是一种javascript通用模块定义规范，能让__在javascript所有模块协议(CommonJS, AMD, CMD)中发挥作用。</summary>
+  <div>模块</div>
 </details>
 
 ### Common Module Definition(CMD)
 
 <details>
-  <summary>Javascript库__.js实现了AMD规范</summary>
+  <summary>Javascript库__.js实现了CMD规范</summary>
   <div>Sea</div>
 </details>
 
@@ -4655,6 +4664,16 @@
 </details>
 
 ## 26.4 Working with ES6 modules
+
+<details>
+  <summary>每一个模块文件，相当一个__函数。</summary>
+  <div>匿名</div>
+</details>
+
+<details>
+  <summary>在执行上下文创建阶段，分析 import 和 export 语句，产生一个模块调用__。</summary>
+  <div>栈</div>
+</details>
 
 ### 26.4.1 Module Tagging and Definition
 
