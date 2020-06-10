@@ -114,7 +114,7 @@
 </details>
 
 <details>
-  <summary>[延伸]渲染之前叫标签，渲染之后叫__或__。</summary>
+  <summary>渲染之前叫标签，渲染之后叫__或__。</summary>
   <div>元素(Element)</div>
   <div>对象(Object)</div>
 </details>
@@ -230,7 +230,7 @@
 </details>
 
 <details>
-  <summary>[延伸]SRI：英文全称__；中文全称__。</summary>
+  <summary>SRI：英文全称__；中文全称__。</summary>
   <div>Subresource Integrity</div>
   <div>子资源完整性</div>
 </details>
@@ -576,7 +576,7 @@
 </details>
 
 <details>
-  <summary>[延伸]目前有默认设定了[Symbol.asyncIterator]属性的JavaScript内建的对象吗？</summary>
+  <summary>目前有默认设定了[Symbol.asyncIterator]属性的JavaScript内建的对象吗？</summary>
   <div>没有</div>
 </details>
 
@@ -694,7 +694,7 @@
 </details>
 
 <details>
-  <summary>[延伸]一元运算符包括_1_、_2_、_3_、4_、_5_、_6_、_7_。</summary>
+  <summary>一元运算符包括_1_、_2_、_3_、4_、_5_、_6_、_7_。</summary>
   <div>1. delete</div>
   <div>2. void</div>
   <div>3. typeof</div>
@@ -992,7 +992,7 @@
 </details>
 
 <details>
-  <summary>[延伸]在ECMAScript中 -0 和 +0 被认为是__等的。</summary>
+  <summary>在ECMAScript中 -0 和 +0 被认为是__等的。</summary>
   <div>相</div>
 </details>
 
@@ -1539,14 +1539,14 @@
 </details>
 
 <details>
-  <summary>[延伸]辅助平面中的码点，在UTF-16中被编码为一对16bit长的__（__字节），称作__对。</summary>
+  <summary>辅助平面中的码点，在UTF-16中被编码为一对16bit长的__（__字节），称作__对。</summary>
   <div>码元(代码单元)</div>
   <div>4</div>
   <div>代理（Surrogate Pair）</div>
 </details>
 
 <details>
-  <summary>[延伸](1/3)代理对是怎么计算得来的呢？①减去第__平面(BMP)的码点 0x10000 个，然后的码点范围是U+0000至U+FFFFF(1114112-65536=1048576个码点)，使用__个比特就能表示。</summary>
+  <summary>(1/3)代理对是怎么计算得来的呢？①减去第__平面(BMP)的码点 0x10000 个，然后的码点范围是U+0000至U+FFFFF(1114112-65536=1048576个码点)，使用__个比特就能表示。</summary>
   <div>零</div>
   <div>20</div>
 </details>
@@ -1570,7 +1570,7 @@
 </details>
 
 <details>
-  <summary>[延伸](1/3)“𤭢”的码点是U+24B62，因为码点大于`U+__`，所以在UTF-16中不能直接表示，需要通过__表示，“𤭢”在UTF-16的代理对是`U+D852 U+DF62`。</summary>
+  <summary>(1/3)“𤭢”的码点是U+24B62，因为码点大于`U+__`，所以在UTF-16中不能直接表示，需要通过__表示，“𤭢”在UTF-16的代理对是`U+D852 U+DF62`。</summary>
   <div>FFFF</div>
   <div>代理对</div>
 </details>
@@ -1798,7 +1798,7 @@
 </details>
 
 <details>
-  <summary>[延伸]伪数组对象：拥有一个__属性的对象。</summary>
+  <summary>伪数组对象：拥有一个__属性的对象。</summary>
   <div>length</div>
 </details>
 
@@ -1984,7 +1984,7 @@
 </details>
 
 <details>
-  <summary>[延伸]如果想创建一个没有原型的对象，可以使用__。</summary>
+  <summary>如果想创建一个没有原型的对象，可以使用__。</summary>
   <div>Object.create(null)</div>
 </details>
 
@@ -2006,13 +2006,13 @@
 </details>
 
 <details>
-  <summary>[延伸]“@@iterator”和“Symbol.iterator”的区别：其实是一个意思，“@@iterator”只会出现在__中，“Symbol.iterator”只会出现__中。</summary>
+  <summary>“@@iterator”和“Symbol.iterator”的区别：其实是一个意思，“@@iterator”只会出现在__中，“Symbol.iterator”只会出现__中。</summary>
   <div>文档</div>
   <div>代码</div>
 </details>
 
 <details>
-  <summary>[延伸](1/2)Map有2个主要的缺点：①赋值和搜索操作都是 __(n) 的时间复杂度( n 是__的个数)，因为这两个操作都需要__整个数组来进行匹配。</summary>
+  <summary>(1/2)Map有2个主要的缺点：①赋值和搜索操作都是 __(n) 的时间复杂度( n 是__的个数)，因为这两个操作都需要__整个数组来进行匹配。</summary>
   <div>O</div>
   <div>键值对</div>
   <div>遍历</div>
@@ -4355,7 +4355,7 @@
 </details>
 
 <details>
-  <summary>因此，最流畅的动画的最佳间隔是__ / __，即大约17ms。您将以这种速度看到最流畅的动画，因为您将更紧密地反映浏览器的功能。可能需要限制多个动画，以便在使用间隔为17ms的动画循环时不会太快完成。</summary>
+  <summary>因此，最流畅的动画的最佳间隔是__ / __，即大约17ms。</summary>
   <div>1000ms</div>
   <div>60</div>
 </details>
@@ -4640,7 +4640,7 @@
 ### 26.3.3 Universal Module Definition(UMD，通用模块定义)
 
 <details>
-  <summary>UMD，就是一种javascript通用模块定义规范，能让__在javascript所有模块协议(CommonJS, AMD, CMD)中发挥作用。</summary>
+  <summary>UMD，是一种javascript通用模块定义规范，能让__在javascript所有模块协议(CommonJS, AMD, CMD)中发挥作用。</summary>
   <div>模块</div>
 </details>
 
@@ -4671,8 +4671,8 @@
 </details>
 
 <details>
-  <summary>在执行上下文创建阶段，分析 import 和 export 语句，产生一个模块调用__。</summary>
-  <div>栈</div>
+  <summary>在执行上下文创建阶段，深度优先遍历分析 import 和 export 语句，产生一个模块调用__。</summary>
+  <div>队列</div>
 </details>
 
 ### 26.4.1 Module Tagging and Definition

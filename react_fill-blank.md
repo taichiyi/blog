@@ -383,8 +383,70 @@
   [memoizedState]已经被使用渲染的过的 fiber State。也就是当前屏幕上 UI  状态的映射。
   [memoizedProps]已经使用渲染过的 fiber Props，也是构成当前屏幕 UI  状态映射的一部分。
   [pendingProps]保存着最近一次从 render 方法返回的 React Element 中拿到的数据，等待随后被应用到子组件或是 DOM 元素上。
+  [mode]
 
   </pre>
   </summary>
+  <div></div>
+</details>
+
+<details>
+  <summary>
+  <pre>
+  状态更新队列的元素结构：
+  
+  [expirationTime]“更新”的过期时间
+  [suspenseConfig]
+  [tag]优先级
+  [payload]纯函数，用于修改state
+  [callback]更新后的回调
+  [next]指向下一个更新
+  [nextEffect]指向下一个`side effect`
+  </pre>
+  </summary>
+  <div></div>
+</details>
+
+<details>
+  <summary>
+  <pre>
+  状态更新队列结构：
+  
+  [baseState]每次操作完更新之后的`state`
+  [firstUpdate]队列中的第一个`Update`
+  [lastUpdate]队列中的最后一个`Update`
+  [firstCapturedUpdate]第一个捕获类型的`Update`
+  [lastCapturedUpdate]最后一个捕获类型的`Update`
+  [firstEffect]第一个`side effect`
+  [lastEffect]第一个`side effect`
+  [firstCapturedEffect]第一个捕获产生的`side effect`
+  [lastCapturedEffect]最后一个捕获产生的`side effect`
+  </pre>
+  </summary>
+  <div></div>
+</details>
+
+<details>
+  <summary>React 是怎么处理 DOM 事件的？</summary>
+  <div>React 通过在 Document 节点 添加事件处理程序来实现事件委托的。</div>
+</details>
+
+<details>
+  <summary>React 具体怎么委托事件的？例如点击页面的一个按钮，到调用时间处理函数，中间发生了什么？</summary>
+  <div>React 通过在 Document 节点 添加事件处理程序来实现事件委托的。</div>
+</details>
+
+<details>
+  <summary>bookKeeping 是什么?</summary>
+  <div></div>
+</details>
+
+<details>
+  <summary>ReactDom 创建的 DOM 节点 会添加 __reactInternalInstance 和 __reactEventHandlers 属性，InternalInstance的值为 __，EventHandlers 的值为属性。</summary>
+  <div>FiberNode</div>
+</details>
+
+<details>
+  <summary>如果是容器的话，ReactDom 创建的 DOM 节点 会添加 __reactContainere 为属性。</summary>
   <div></div>
 </details>
