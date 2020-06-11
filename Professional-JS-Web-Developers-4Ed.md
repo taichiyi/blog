@@ -3819,17 +3819,16 @@
     console.log(fib(43)); // 约计算8秒
     <!--  -->
     // 优化
-    // base case
-    function fib(n) {
-      return fibImpl(0, 1, n);
-    }
     // recursive case
     function fibImpl(a, b, n) {
       if (n === 0) {
         return a;
       }
-      debugger;
       return fibImpl(b, a + b, n - 1);
+    }
+    // base case
+    function fib(n) {
+      return fibImpl(0, 1, n);
     }
     console.log(fib(43)); // 约计算0.5秒
   </pre>
