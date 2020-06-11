@@ -1140,7 +1140,7 @@
 </details>
 
 <details>
-  <summary>执行上下文栈就是其他编程语言所说的__栈。</summary>
+  <summary>执行上下文栈就是其他编程语言所说的__栈。别称有：执行栈（execution stack）、控制栈（control stack）、运行时栈（run-time stack）与机器栈（machine stack）</summary>
   <div>调用栈(call stack)</div>
 </details>
 
@@ -3799,14 +3799,14 @@
 </details>
 
 <details>
-  <summary>需要严格模式的原因是，非严格模式下函数允许使用f.caller，它是对外部函数的栈框架的引用。所以不可能进行优化。</summary>
-  <div>尾部调用优化</div>
+  <summary>需要严格模式的原因是，非严格模式下函数允许使用__，它是对外部函数的栈框架的引用。所以不可能进行优化。</summary>
+  <div>f.caller</div>
 </details>
 
 ### 10.13.2 Coding for Tail Call Optimization
 
 <details>
-  <summary>尾部调用优化的实例(斐波那契)：</summary>
+  <summary>尾部调用优化的实例(斐波那契Fibonacci)：</summary>
   <pre>
     // 未优化
     function fib(n) {
@@ -4619,11 +4619,6 @@
 
 <details>
   <summary>Javascript库__.js实现了AMD规范</summary>
-  <div>require</div>
-</details>
-
-<details>
-  <summary>AMD是依赖前置，在定义模块的时候就要声明其依赖的模块。</summary>
   <div>require</div>
 </details>
 

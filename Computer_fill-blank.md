@@ -417,3 +417,32 @@
 </details>
 
 ## 计算机中的时间 -end-
+
+## 四种类型的数字 -start-
+
+<details>
+  <summary>4中常用的进制: _1_、_2_、_3_、_4_。</summary>
+  <div>二进制(Binary)</div>
+  <div>八进制(Octal)</div>
+  <div>十进制(Plain decimal)</div>
+  <div>十六进制(Hexadecimal)</div>
+</details>
+
+<details>
+  <summary>
+  <pre>
+  纯十进制，必须以非__数字开头。
+  八进制，任何以__开头的数字（包括纯0）。
+  二进制，要求前缀__或__。
+  十六进制，要求前缀__或0X。
+  </pre>
+  </summary>
+  <div>零</div>
+  <div>零</div>
+  <div>0b</div>
+  <div>0B</div>
+  <div>0x</div>
+  <div>0x</div>
+</details>
+
+## 四种类型的数字 -end-
