@@ -1,4 +1,4 @@
-<!-- markdownlint-disable MD033 MD037 -->
+<!-- markdownlint-disable MD033 MD037 MD032 -->
 # 计算机科学 知识点 填空
 
 目的：记住一些知识点，然后把他们打通，串联起来。
@@ -446,3 +446,60 @@
 </details>
 
 ## 四种类型的数字 -end-
+
+## 递归 -start-
+
+<details>
+  <summary>如果在函数中存在着调用__的情况，这种现象就叫递归。</summary>
+  <div>函数本身</div>
+</details>
+
+<details>
+  <summary>「递」的意思是将问题__来解决。</summary>
+  <div>拆解成子问题</div>
+</details>
+
+<details>
+  <summary>「归」的意思是__解决后，子问题一层一层的回归。</summary>
+  <div>最小的子问题</div>
+</details>
+
+<details>
+  <summary>
+  <pre>
+  递归有以下两个特点:
+  1. 一个问题可以分解成具有__的子问题，子子问题，换句话说这些问题都能调用同一个函数。
+  2. 经过层层分解的子问题最后一定是有一个不能再分解的固定值的（即终止条件）。
+  </pre>
+  </summary>
+  <div>相同解决思路</div>
+  <img src="https://oss.taichiyi.com/markdown/c7103bc4ded24320badbf88a9e4e43c6.png" />
+</details>
+
+## 递归 -end-
+
+## 阶乘 -start-
+
+<details>
+  <summary>一个正整数的阶乘（factorial）是所有小于及等于该数的正整数的__。</summary>
+  <div>积</div>
+</details>
+
+<details>
+  <summary>积(数学用语)，一般指"乘法"运算的__。</summary>
+  <div>结果</div>
+</details>
+
+<details>
+  <summary>0的阶乘为__。</summary>
+  <div>1</div>
+  <div>0!=1</div>
+</details>
+
+<details>
+  <summary>自然数n的阶乘写作__。</summary>
+  <div>n!</div>
+  <div>0!=1，n!=(n-1)!×n。</div>
+</details>
+
+## 阶乘 -end-

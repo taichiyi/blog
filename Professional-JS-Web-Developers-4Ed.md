@@ -4519,8 +4519,8 @@
 ### 26.1.5 Asynchronous Dependencies
 
 <details>
-  <summary>因为JavaScript是一种__步语言，所以通过允许JavaScript代码指示模块系统加载新模块，并在模块准备好后将其提供给回调，将其按需加载也很有用。</summary>
-  <div>异</div>
+  <summary>因为JavaScript是一种__线程语言，所以通过允许JavaScript代码指示模块系统加载新模块，并在模块准备好后将其提供给回调，将其按需加载也很有用。</summary>
+  <div>单</div>
 </details>
 
 ### 26.1.8 Circular Dependencies

@@ -524,7 +524,8 @@
     <div>a</div>
     <pre>
     知识点:
-    - 递归
+    - this
+    - 闭包
     </pre>
   </details>
 </details>
