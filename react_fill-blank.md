@@ -374,7 +374,7 @@
 
   FiberNode 构造函数属性说明：
   [alternate]保存它在另一棵树中对应节点的引用。也就是说一个来自  current 树的节点会指向  workInProgress 树中相对应的节点，反之亦然。
-  [key]相同层级孩子节点唯一标记，可以优化提升 React 对子节点更新，添加，删处的判断效率。与它具体功能相关的官方文档可以看这里。https://zh-hans.reactjs.org/docs/lists-and-keys.html#keys
+  [key]相同层级孩子节点唯一标记，可以优化提升 React 对子节点更新，添加，删处的判断效率。与它具体功能相关的官方文档可以看这里。<https://zh-hans.reactjs.org/docs/lists-and-keys.html#keys>
 
   [stateNode]用于保存类组件的实例，宿主组件的 DOM 实例等。通常我们也可以说这个属性是用来保存与该 fiber 相对应的的本地状态 。
   [type]定义了与该 fiber node 相对应的是一个函数组件还是一个类组件。如果是一个类组件该属性指向这个类的构造函数。如果是一个 DOM 元素，该属性则是与之相对应的 HTML 标签。使用这个域很容易就能理解与该 fiber 节点相关联的元素是什么。

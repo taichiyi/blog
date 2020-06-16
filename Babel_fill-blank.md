@@ -41,3 +41,75 @@
   <summary>如果corejs的proposals为true，将对"Stage __"阶段代码进行转换。</summary>
   <div>4</div>
 </details>
+
+## babel的cli
+
+`--out-file`=`-o`
+`--out-dir`=`-d`
+`--watch`=`-w`
+`--source-maps`=`-s`
+
+## 配置babel的几种方式
+
+`配置文件: babel.config.js .babelrc .babelrc.js package.json`
+
+babel.config.js (`官方推荐`)
+
+``` javascript
+module.exports = function (api) {
+  api.cache(true);
+
+  const presets = [ ... ];
+  const plugins = [ ... ];
+
+  return {
+    presets,
+    plugins
+  };
+}
+```
+
+.babelrc
+
+``` json
+{
+  "presets": [...],
+  "plugins": [...]
+}
+```
+
+package.json
+
+``` json
+{
+  "name": "my-package",
+  "version": "1.0.0",
+  "babel": {
+    "presets": [ ... ],
+    "plugins": [ ... ],
+  }
+}
+```
+
+.babelrc.js
+
+``` javascript
+const presets = [ ... ];
+const plugins = [ ... ];
+
+module.exports = { presets, plugins };
+```
+
+`命令行CLI`
+
+``` bash
+babel --plugins @babel/plugin-transform-arrow-functions script.js
+```
+
+`API (@babel/core)`
+
+``` javascript
+require("@babel/core").transform("code", {
+  plugins: ["@babel/plugin-transform-arrow-functions"]
+});
+```

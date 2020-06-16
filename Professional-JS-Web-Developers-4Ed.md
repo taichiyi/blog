@@ -4688,11 +4688,6 @@
 ### 26.4.3 Module Behavior
 
 <details>
-  <summary>模块代码仅在__时执行。</summary>
-  <div>加载</div>
-</details>
-
-<details>
   <summary>一个模块只能加载一次。模块是__例模式。</summary>
   <div>单</div>
 </details>

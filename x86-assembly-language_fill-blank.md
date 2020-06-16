@@ -1,4 +1,4 @@
-<!-- markdownlint-disable MD033 -->
+<!-- markdownlint-disable MD033 MD037 -->
 # x86 汇编语言 从实模式到保护模式 填空
 
 第1部分 预备知识

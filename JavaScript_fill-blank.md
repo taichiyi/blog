@@ -159,14 +159,54 @@
 
 <details>
   <summary>与其他编程语言一样，JavaScript运行时有一个__内存和一个__内存。</summary>
-  <div>栈</div>
-  <div>堆</div>
+  <div>栈(stack)</div>
+  <div>堆(heap)</div>
 </details>
 
 <details>
   <summary>在队列或栈中，任务的执行是有先后顺序的。但是在有的场景下，每个任务同样重要，不需要有先后顺序，__即为解决此类问题设计的一种数据结构。</summary>
   <div>堆</div>
 </details>
+
+<details>
+  <summary>栈是__性数据结构，而堆是__数据结构。</summary>
+  <div>线</div>
+  <div>分层</div>
+</details>
+
+<details>
+  <summary>栈内存永远不会碎片化，而堆内存可能会碎片化，因为先分配然后释放内存块。</summary>
+  <div>线</div>
+  <div>分层</div>
+</details>
+
+<details>
+  <summary>栈变量不能调整_A_，而堆变量可以调整_A_。</summary>
+  <div>大小</div>
+</details>
+
+<details>
+  <summary>栈内存按__分配，而堆内存按__分配。</summary>
+  <div>连续块</div>
+  <div>任意随机顺序</div>
+</details>
+
+<details>
+  <summary>栈不需要取消_A_变量，而在堆中则需要取消_A_。</summary>
+  <div>分配</div>
+</details>
+
+<details>
+  <summary>栈分配和取消分配由__完成，而堆分配和重新分配由__完成。</summary>
+  <div>编译器指令</div>
+  <div>程序员</div>
+</details>
+
+![7c13147ecfecd8a6ce7f0b5a9782dd30](https://oss.taichiyi.com/markdown/7c13147ecfecd8a6ce7f0b5a9782dd30.jpg)
+
+## 堆 和 栈 -end-
+
+## 事件循环 -start-
 
 <details>
   <summary>JavaScript运行时实际上由2个组件组成：__和__。消息队列也称为回调队列或任务队列。</summary>
@@ -190,7 +230,7 @@
 
 ![https://oss.taichiyi.com/markdown/1_9mv-g9E-87Sji9j7YR08Fw.gif](https://oss.taichiyi.com/markdown/1_9mv-g9E-87Sji9j7YR08Fw.gif)
 
-## 堆 和 栈 -end-
+## 事件循环 -end-
 
 <details open>
   <summary>下面代码打印值为__、__、__。</summary>
