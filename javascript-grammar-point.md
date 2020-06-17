@@ -11,7 +11,7 @@
 
 ### 创建Object实例的方式
 
-创建Object实例的方式有两种: new 操作符后跟Object构造函数 和 对象字面量表示法。
+创建Object实例的方式有两种: new 运算符后跟Object构造函数 和 对象字面量表示法。
 
 - new Object();
 

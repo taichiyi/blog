@@ -381,8 +381,8 @@
 </details>
 
 <details>
-  <summary>使用const声明变量后，该变量指向的内存地址就不可改变了。</summary>
-  <div></div>
+  <summary>使用const声明变量后，该变量指向的__就不可改变了。</summary>
+  <div>内存地址</div>
 </details>
 
 ### 3.3.1 The ’var’ Keyword
@@ -2633,7 +2633,7 @@
 </details>
 
 <details>
-  <summary>调用构造函数后，创建一个新对象，然后将新对象赋值到__，将__赋值到新对象的原型(prototype)属性，构造函数的原型对象默认有个__属性，属性值为__。</summary>
+  <summary>使用 new 运算符调用构造函数，在执行上下文创建阶段，创建一个新对象，然后将新对象赋值到__，将__赋值到新对象的原型(prototype)属性，构造函数的原型对象默认有个__属性，属性值为__。</summary>
   <div>this关键字</div>
   <div>构造函数的原型对象</div>
   <div>constructor</div>
@@ -2687,7 +2687,7 @@
 </details>
 
 <details>
-  <summary>判断某个属性是否存在于实例上，可以使用__()方法。</summary>
+  <summary>判断某个属性(可枚举或不可枚举)是否存在于实例上，可以使用__()方法。</summary>
   <div>Object.prototype.hasOwnProperty</div>
 </details>
 
