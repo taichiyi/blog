@@ -757,6 +757,20 @@
 </details>
 
 <details>
+  <summary>移码（又叫__）是对真值补码的__取反。</summary>
+  <div>增码</div>
+  <div>符号位</div>
+</details>
+
+<details>
+  <summary>比如，以一个字节 8bits 来表示 -3，那么[-3]原 = __; [-3]反 = __; [-3]补 = __; [-3]移 = __。</summary>
+  <div>1000 0011</div>
+  <div>1111 1100</div>
+  <div>1111 1101</div>
+  <div>0111 1101</div>
+</details>
+
+<details>
   <summary>负数也存储在二进制代码中，但格式为二进制__码。</summary>
   <div>补</div>
 </details>
@@ -4778,8 +4792,8 @@
 </details>
 
 <details>
-  <summary>模块下载完后，会立即执行。</summary>
-  <div>提升</div>
+  <summary>模块下载完后，会__执行。</summary>
+  <div>立即</div>
 </details>
 
 <details>
