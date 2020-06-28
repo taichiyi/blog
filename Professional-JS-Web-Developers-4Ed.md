@@ -3780,6 +3780,11 @@
   </pre>
 </details>
 
+<details>
+  <summary>“命名函数表达式”的函数名相当于通过 __ 声明。</summary>
+  <div>const</div>
+</details>
+
 ## 10.13 Tail Call Optimization(尾部调用优化,TCO)
 
 <details>
