@@ -35,3 +35,14 @@
   <div>commit</div>
   <div>--amend</div>
 </details>
+
+<details>
+  <summary>查看所有配置信息，git config __。</summary>
+  <div>--list</div>
+</details>
+
+<details>
+  <summary>编辑全局级配置，git config --__ --__。</summary>
+  <div>global</div>
+  <div>edit</div>
+</details>

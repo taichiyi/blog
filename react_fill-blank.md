@@ -450,3 +450,26 @@
   <summary>如果是容器的话，ReactDom 创建的 DOM 节点 会添加 __reactContainere 为属性。</summary>
   <div></div>
 </details>
+
+<details>
+  <summary>React Element 对象的属性:</summary>
+  <pre>
+  const element = {
+    __: '属性 React 对象 中的什么类型',
+    __: 'React 元素的类型',
+    __: '关键值',
+    __: 'DOM node',
+    __: '传入的参数',
+    __: owner,
+  };
+  </pre>
+  <div>$$typeof</div>
+  <div>type</div>
+  <div>key</div>
+  <div>ref</div>
+  <div>props</div>
+  <div>_owner</div>
+</details>
+
+首次渲染
+WorkInProgress = work-in-progress

@@ -1661,7 +1661,7 @@
 
 <details>
   <summary>ECMAScript提供了三种提取字符串的一部分的方法：slice（），substr（）和substring（）。用__(beginIndex[, endIndex])就行，其他两种行为诡异。</summary>
-  <div>String.prototypr.slice</div>
+  <div>String.prototype.slice</div>
 </details>
 
 ### 5.4.4 String Location Methods
