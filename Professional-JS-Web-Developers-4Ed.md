@@ -1744,8 +1744,8 @@
 </details>
 
 <details>
-  <summary>两者都不编码的字符：①__②数字和字母：A-Z a-z 0-9。</summary>
-  <div>- _ . ! ~ * ' ( )</div>
+  <summary>两者都不编码的字符：①- _ . ! ~ * ' ( )②数字和字母：A-Z a-z 0-9。</summary>
+  <div></div>
 </details>
 
 <!-- <details> 不需要记
