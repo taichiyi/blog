@@ -4860,7 +4860,7 @@
 ### 26.4.6 Module Passthrough Exports
 
 <details>
-  <summary>如果想把导入的模块，在直接导出。可以使用`export __ './foo.js';`</summary>
+  <summary>如果想把导入的模块，再直接导出。可以使用`export __ './foo.js';`</summary>
   <div>* from</div>
 </details>
 

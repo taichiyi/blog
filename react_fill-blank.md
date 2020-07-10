@@ -473,3 +473,5 @@
 
 首次渲染
 WorkInProgress = work-in-progress
+
+不明白 FiberStack.js 和 ReactFiberScope.js 是用途
