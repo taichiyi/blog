@@ -475,3 +475,5 @@
 WorkInProgress = work-in-progress
 
 不明白 FiberStack.js 和 ReactFiberScope.js 是用途
+
+什么时候调用 class 的？

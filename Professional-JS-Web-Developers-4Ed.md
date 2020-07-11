@@ -3118,6 +3118,49 @@
   <div>在继承中进行组合</div>
 </details>
 
+<details>
+  <summary>代码复用的几种方式: 1. __; 2. __; 3. __.</summary>
+  <div>1.Mixin</div>
+  <div>2.高阶组件（HOC）</div>
+  <div>3.Hooks</div>
+</details>
+
+<details>
+  <summary>通过 Mixins 复用代码，有这些缺点：1. Mixin 可能会相互__，相互__，不利于代码维护 。2. 不同的Mixin中的__可能会相互冲突 。</summary>
+  <div>依赖</div>
+  <div>耦合</div>
+  <div>方法名称</div>
+</details>
+
+<details>
+  <summary>高阶组件可以看作React对__模式的一种实现，高阶组件就是一个__，且该函数接受一个__作为参数，并返回一个新的组件。</summary>
+  <div>装饰</div>
+  <div>函数</div>
+  <div>组件</div>
+</details>
+
+<details>
+  <summary>HOC 的注意事项: 1. 传递静态__; 2. 不要在__内创建高阶组件; 3. 高阶组件是__函数; 4. 不要透传不相关的__; 5. 为了方便调试，加__.</summary>
+  <div>属性和refs</div>
+  <div>render方法</div>
+  <div>纯</div>
+  <div>props</div>
+  <div>displayName</div>
+</details>
+
+<details>
+  <summary>HOC的缺陷: 1. 如果大量使用HOC，多层嵌套会让__变得非常困难; 2. HOC可以劫持__，在不遵守约定的情况下可能造成冲突。</summary>
+  <div>调试</div>
+  <div>props</div>
+</details>
+
+<details>
+  <summary>Hook的动机: 1. 减少__复用的风险; 2. 避免HOC__; 3. Hook更__。</summary>
+  <div>状态逻辑</div>
+  <div>地狱式嵌套</div>
+  <div>轻量</div>
+</details>
+
 # 第9章 PROXIES AND REFLECT
 
 <details>
