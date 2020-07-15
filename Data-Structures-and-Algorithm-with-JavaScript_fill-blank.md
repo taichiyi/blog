@@ -22,10 +22,10 @@
 ## 2.1 JavaScript中对数组的定义
 
 <details>
-  <summary>数组定义:一个存储元素的__集合(collection)，每个元素都有一个序号，这个序号从__开始，称为__或索引，索引通常是数字，用来计算元素之间存储位置的偏移量。线性的意思是元素在内存中是__的。</summary>
+  <summary>计算机中数组的定义: 一个存储元素的__集合(collection)，每个元素都有一个序号，这个序号从__开始，称为__或索引，索引通常是数字，用来计算元素之间存储位置的偏移量。线性的意思是元素在内存中是__的。</summary>
+  <div>线性</div>
   <div>0</div>
   <div>下标</div>
-  <div>线性</div>
   <div>连续</div>
 </details>
 
@@ -439,3 +439,57 @@
 ## 12.2 基本排序算法
 
 ### 12.2.1 冒泡排序
+
+## 补充
+
+<details>
+  <summary>计算机科学中，集合是一组__变数量的数据项(也可能是0个)的__。</summary>
+  <div>可</div>
+  <div>组合</div>
+</details>
+
+<details>
+  <summary>集合的种类包括__，__，多重集，__和图。</summary>
+  <div>列表</div>
+  <div>集</div>
+  <div>树</div>
+</details>
+
+<details>
+  <summary>在列表中，数据项的顺序是__定的，__可以存在多个相同的数据项。</summary>
+  <div>确</div>
+  <div>是</div>
+</details>
+
+<details>
+  <summary>列表，根据访问方式还可以分为__和__。</summary>
+  <div>队列</div>
+  <div>栈</div>
+</details>
+
+<details>
+  <summary>在集中，数据项是__序的，__可以存在相同数据项。</summary>
+  <div>无</div>
+  <div>不</div>
+</details>
+
+<details>
+  <summary>多重集和集的唯一区别是，__可以存在相同数据项。</summary>
+  <div>是</div>
+</details>
+
+<details>
+  <summary>如果变量值的大小是可变的，则该值在内存中可能是__连续的。</summary>
+  <div>不</div>
+</details>
+
+<details>
+  <summary>关联数组和数组的唯一区别是，关联数组的__不是非负的整数而是任意的标量。JavaScript的对象就是一个关联数组。</summary>
+  <div>索引值</div>
+</details>
+
+<details>
+  <summary>关联数组也称为，__和__。</summary>
+  <div>查找表</div>
+  <div>字典</div>
+</details>

@@ -474,6 +474,16 @@
 首次渲染
 WorkInProgress = work-in-progress
 
+双缓冲
+
 不明白 FiberStack.js 和 ReactFiberScope.js 是用途
 
-什么时候调用 class 的？
+↓调用完 class 的 render 后获得下一代孩子(react elemnt)，然后调用 reconcileChildren 函数 把 react element 转为 fiber
+nextChildren = instance.render();
+
+- 更新队列
+- 双缓冲
+- 链表
+- 副作用
+
+= 写个教程：一个熟练的JS开发者如果快速读懂React源码？
