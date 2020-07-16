@@ -493,3 +493,10 @@
   <div>查找表</div>
   <div>字典</div>
 </details>
+
+<details>
+  <summary>在图中，每个数据项都可以与__个或__个其它数据项联系起来，其中每个节点都是__等的。</summary>
+  <div>一</div>
+  <div>多</div>
+  <div>平</div>
+</details>
