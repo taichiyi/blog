@@ -486,4 +486,6 @@ nextChildren = instance.render();
 - 链表
 - 副作用
 
+fiber 的遍历是广度优先还是深度优先？深度优先
+
 = 写个教程：一个熟练的JS开发者如果快速读懂React源码？

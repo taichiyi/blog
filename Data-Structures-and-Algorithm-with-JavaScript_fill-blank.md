@@ -338,6 +338,7 @@
   <div>根</div>
   <div>父</div>
   <div>叶子</div>
+  <img src="https://oss.taichiyi.com/markdown/ormxk70j.png" alt="img">
 </details>
 
 <details>

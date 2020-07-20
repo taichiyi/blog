@@ -2904,9 +2904,8 @@
 </details>
 
 <details>
-  <summary>类声明会有__行为，函数声明会有声明提升行为。类声明是__作用域。</summary>
+  <summary>类声明会有__行为，函数声明会有声明提升行为。</summary>
   <div>暂时性死区</div>
-  <div>块</div>
 </details>
 
 #### 8.4.1.1 Class Composition
@@ -2971,7 +2970,7 @@
 #### 8.4.3.2 Prototype Methods and Accessors
 
 <details>
-  <summary>类__中定义的所有内容都会添加到类的原型对象上。</summary>
+  <summary>类__中定义的属性和方法都会添加到类的原型对象上。</summary>
   <div>主体</div>
 </details>
 
@@ -2995,7 +2994,6 @@
     constructor(keys) {
       this.keys = keys;
     }
-
     static getInstance(keys) {
       if (this.instance === null) this.instance = new Email(keys);
       return this.instance;
@@ -3049,7 +3047,7 @@
 ### 8.4.4 Inheritance
 
 <details>
-  <summary>在前面，我们介绍了使用ES5机制实现继承的繁琐细节。尽管ES6类继承使用了新的语法，但它仍然在背后使用__。</summary>
+  <summary>在前面，我们介绍了使用 ES5 实现继承的繁琐细节。尽管ES6类继承使用了新的语法，但它仍然在背后使用__。</summary>
   <div>原型链</div>
 </details>
 
