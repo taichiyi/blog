@@ -6,21 +6,15 @@
 ## Unicode -start-
 
 <details>
-  <summary>Unicode是一种__标准，用于对世界上大多数书写系统中表示的文本进行一致的__、表示和处理。</summary>
-  <div>信息技术</div>
-  <div>编码</div>
-</details>
-
-<details>
-  <summary>Unicode标准由__联盟维护，截至2020年3月，最新版本Unicode 13.0包含__万个字符</summary>
-  <div>Unicode</div>
-  <div>14</div>
+  <summary>Unicode是_1_里的一项业界标准。用于对世界上大多数书写系统中表示的文本进行一致的_2_、表示和处理。</summary>
+  <div>1. 计算机科学领域</div>
+  <div>2. 编码</div>
 </details>
 
 <details>
   <summary>UTF的英文全称__，中文全称__。</summary>
   <div>Unicode Transformation Format</div>
-  <div>Unicode转换格式</div>
+  <div>Unicode 转换格式</div>
 </details>
 
 <details>
@@ -30,27 +24,25 @@
 </details>
 
 <details>
-  <summary>计算机科学领域主要有2套字符编码标准分别是__和__。</summary>
+  <summary>计算机科学领域主要有2套字符编码标准分别是__和__，分别由__和__制定，1991年开始两者相互兼容码表。</summary>
   <div>Unicode</div>
   <div>UCS</div>
+  <div>Unicode 联盟</div>
+  <div>ISO</div>
 </details>
 
 <details>
-  <summary>1991年，ISO/IEC 10646 项目 和 Unicode组织项目 __相互兼容。</summary>
-  <div>码表</div>
-</details>
-
-<details>
-  <summary>在字符编码术语中，__或称__，即英文的code point或code position，是组成码空间（或代码页）的数值。</summary>
+  <summary>在字符编码术语中，__或称编码位置，即英文的code point或code position，是组成码空间（或代码页）的数值。</summary>
   <div>码点</div>
-  <div>编码位置</div>
 </details>
 
 <details>
-  <summary>Unicode标准规定U+__-U+__(有__个码点)的值不对应于任何字符。因为UCS-2的时代，U+D800-U+DFFF内的值被占用，1991年为了相互兼容，所以这一段码点被废弃。但是UTF-16编码解码还是能把这些不符合Unicode标准的字符映射正确的辨识、转换成合规的码元。</summary>
+  <summary>Unicode 标准规定 U+__ - U+__ (包含__个码点)的码点不对应于任何字符。因为UCS-2时代，U+D800-U+DFFF内的值被占用，__年为了相互兼容，所以这一段码点被废弃。但是UTF-16的__会使用这段码点。</summary>
   <div>D800</div>
   <div>DFFF</div>
-  <div>2047</div>
+  <div>2048</div>
+  <div>1991</div>
+  <div>代理对</div>
 </details>
 
 <details>
@@ -60,21 +52,14 @@
 </details>
 
 <details>
-  <summary>统一码(Unicode)为每一个字__而非字__定义唯一的代码（即一个__）。</summary>
+  <summary>统一码(Unicode)为每一个字__而非字__定义唯一的码点。也就是一个偏旁可能也是一个字符。</summary>
   <div>符</div>
   <div>形</div>
-  <div>整数</div>
 </details>
 
 <details>
   <summary>Unicode 的实现方式称为__。</summary>
   <div>Unicode转换格式</div>
-</details>
-
-<details>
-  <summary>一个字符的 Unicode __是确定的。</summary>
-  <div>编码</div>
-  <div>14</div>
 </details>
 
 <details>
@@ -87,17 +72,16 @@
   <div>二进制</div>
 </details>
 
-<details>
+<!-- <details>
   <summary>阿拉伯数字在不在ASCII码里？</summary>
   <div>在</div>
-  <div>因为阿拉伯数字不仅包含0和1</div>
-</details>
+</details> -->
 
-<details>
+<!-- <details>
   <summary>但是在实际传输过程中，由于不同系统平台的设计不一定一致，以及出于节省__的目的，对 Unicode 编码的__方式有所不同。</summary>
   <div>空间</div>
   <div>实现</div>
-</details>
+</details> -->
 
 <details>
   <summary>表示一个UCS或Unicode值的十六进制数时，通常会用“__”然后紧接着一组__进制的数字来表示这一个字符。</summary>
@@ -106,12 +90,12 @@
 </details>
 
 <details>
-  <summary>目前的Unicode字符分为__组编排，0x__ 至 0x__，每组称为__，而每平面拥有65536(16^4)个__。</summary>
-  <div>17</div>
-  <div>0000</div>
-  <div>10FFFF</div>
-  <div>平面（Plane）</div>
-  <div>码点</div>
+  <summary>目前的Unicode字符分为_1_组编排，0x_2_ 至 0x_3_，每组称为_4_，而每平面拥有65536(16^4)个_5_。</summary>
+  <div>1. 17</div>
+  <div>2. 0000</div>
+  <div>3. 10FFFF</div>
+  <div>4. 平面（Plane）</div>
+  <div>5. 码点</div>
   <pre>
   0号平面 U+0000 - U+FFFF
   1号平面 U+10000 - U+1FFFF
@@ -138,25 +122,32 @@
   <div>plane 0</div>
 </details>
 
-<details>
-  <summary>在基本多文种平面(BMP)里的所有字符，要用__位数(十六进制)表示（共16^4个字符）；在辅助平面的字符则需要大于四位十六进制数了。</summary>
-  <div>四【例如U+4AE0】</div>
-</details>
+<!-- <details>
+  <summary>在基本多文种平面里的所有字符，用__位十六进制数表示（共16^4个字符），辅助平面5或6位十六进制表示。</summary>
+  <div>4【例如U+4AE0】</div>
+</details> -->
 
 <details>
-  <summary>UTF-8的特点是对不同__的字符使用不同__的编码。</summary>
+  <summary>UTF-8的特点是对不同__的字符使用不同__的编码。Unicode到UTF-8的编码方式如下：</summary>
   <div>范围</div>
   <div>长度</div>
+  <pre>
+  Unicode编码范围  位数  字节数　UTF-8 字节流(二进制)
+  000000-00007F    7    1     0xxxxxxx
+  000080-0007FF   11    2     110xxxxx 10xxxxxx
+  000800-00FFFF   16    3     1110xxxx 10xxxxxx 10xxxxxx
+  010000-10FFFF   21    4     11110xxx 10xxxxxx 10xxxxxx 10xxxxxx
+  </pre>
 </details>
 
-<details>
+<!-- <details>
   <summary>UTF-8编码的最大长度是__个字节。</summary>
   <div>4</div>
-</details>
+</details> -->
 
 <details>
-  <summary>UTF-8对Unicode第__平面(也就是码值小于__)的字符编码效率较高</summary>
-  <div>领</div>
+  <summary>UTF-8对Unicode第__平面(也就是码值小于等于__)的字符编码效率较高。</summary>
+  <div>0</div>
   <div>FFFF</div>
 </details>
 
@@ -167,75 +158,68 @@
 </details>
 
 <details>
-  <summary>BE英文全称__，中文全称__。</summary>
+  <summary>BE(字节序相关)英文全称__，中文全称__。顺序为从__到__。</summary>
   <div>Big Endian</div>
   <div>大端字节序</div>
+  <div>左</div>
+  <div>右</div>
 </details>
 
 <details>
-  <summary>LE英文全称__，中文全称__。</summary>
+  <summary>LE(字节序相关)英文全称__，中文全称__。顺序为从__到__。</summary>
   <div>Little Endian</div>
   <div>小端字节序</div>
+  <div>右</div>
+  <div>左</div>
 </details>
 
 <details>
-  <summary>为了解决不同环境读取字节顺序的差异，Unicode 标准建议用__(英文全称__)来区分字节序。</summary>
-  <div>BOM</div>
+  <summary>BOM(字节序相关)英文全称__，中文全称__。</summary>
   <div>Byte Order Mark</div>
+  <div>字节顺序标记</div>
 </details>
 
 <details>
-  <summary>从Unicode__开始，U+FEFF只能出现在字节流的开头，只能用于标识字节序。</summary>
+  <summary>为了解决不同环境读取字节顺序的差异，Unicode 标准建议用__来区分字节序。</summary>
+  <div>BOM</div>
+</details>
+
+<!-- <details>
+  <summary>从Unicode__开始，U+FEFF 只能出现在字节流的开头，只能用于标识字节序。</summary>
   <div>3.2</div>
-</details>
+</details> -->
 
 <details>
-  <summary>一般来说，以Macintosh制作或存储的文字使用__字节序，以Microsoft或Linux制作或存储的文字使用__字节序。</summary>
+  <summary>一般来说，以 Macintosh 制作或存储的文字使用__字节序，以 Microsoft 或 Linux 制作或存储的文字使用__字节序。</summary>
   <div>大端(BE)</div>
   <div>小端(LE)</div>
 </details>
 
 <details>
-  <summary>U+__字符在UNICODE中代表的意义是 ZERO WIDTH NO-BREAK SPACE，顾名思义，它是个没有宽度也没有断字的空白。</summary>
+  <summary>U+__字符在 unicode 中代表的意义是 ZERO WIDTH NO-BREAK SPACE，顾名思义，它是个没有宽度也没有断字的空白。</summary>
   <div>FEFF</div>
 </details>
 
 <details>
-  <summary>为了弄清楚UTF-16文件的大小端字节序，在UTF-16文件的__，都会放置一个U+FEFF字符作为Byte Order Mark（UTF-16 LE以 __ 代表，UTF-16 BE以 FE FF 代表），以显示这个文本文件是以UTF-16编码。</summary>
+  <summary>为了弄清楚UTF-16文件的大小端字节序，所以在UTF-16文件的__，都会放置一个U+FEFF字符作为BOM，以显示这个文本文件是以UTF-16编码。如果一个文件开头的__个二进制的值转为十进制等于65279，则为__端字节序；等于665534，则为小端字节序。</summary>
   <div>开头</div>
-  <div>FF FE</div>
-</details>
-
-<details>
-  <summary>如果一个文件开头的__个二进制的值转为十进制等于65279，则为__端字节序；等于665534，则为小端字节序。</summary>
   <div>16</div>
   <div>大</div>
 </details>
 
-<details>
+<!-- <details>
   <summary>在Unicode中，中文的码点范围是__-__。</summary>
   <div>4E00</div>
   <div>9FA5</div>
-</details>
+</details> -->
 
 <details>
-  <summary>XML及其子集__采用UTF-8作为标准字集，理论上我们可以在各种支持XML标准的浏览器上显示任何地区文字的网页，只要电脑本身安装有合适的__即可。可以利用__nnn;的格式显示特定的字符。nnn代表该字符的十进制 Unicode 代码。如果采用十六进制代码，在编码之前加上__（例如__）字符即可。但部分旧版本的浏览器可能无法识别十六进制代码。</summary>
+  <summary>XML及其子集__采用UTF-8作为标准字集，理论上我们可以在各种支持XML标准的浏览器上显示任何地区文字的网页，只要电脑本身安装有合适的__即可。可以利用 __nnn; 的格式显示特定的字符。nnn代表该字符的十进制 Unicode 代码。如果采用十六进制代码，在编码之前加上__（例如__）字符即可。但部分旧版本的浏览器可能无法识别十六进制代码。</summary>
   <div>HTML</div>
   <div>字体</div>
   <div>&#</div>
   <div>x</div>
   <div>&#x8449</div>
-</details>
-
-<details>
-  <summary>Unicode到UTF-8的编码方式如下：</summary>
-  <pre>
-  Unicode编码范围  位数  字节数　UTF-8 字节流(二进制)
-  000000-00007F    7    1     0xxxxxxx
-  000080-0007FF   11    2     110xxxxx 10xxxxxx
-  000800-00FFFF   16    3     1110xxxx 10xxxxxx 10xxxxxx
-  010000-10FFFF   21    4     11110xxx 10xxxxxx 10xxxxxx 10xxxxxx
-  </pre>
 </details>
 
 ## Unicode -end-
@@ -350,9 +334,8 @@
 </details>
 
 <details>
-  <summary>回文子串: 是指这个字符串无论从左读还是从右读，所读的__是一样的，或者说是__的。</summary>
+  <summary>回文子串: 是指这个字符串无论从左读还是从右读，所读的__是一样的。</summary>
   <div>顺序</div>
-  <div>对称</div>
 </details>
 
 <details>
@@ -375,10 +358,10 @@
   <div>总秒数</div>
 </details>
 
-<details>
+<!-- <details>
   <summary>时间戳和Unix__定义一样。</summary>
   <div>时间戳</div>
-</details>
+</details> -->
 
 <details>
   <summary>GMT的英文全称__，中文全称__。</summary>
@@ -446,19 +429,11 @@
 </details>
 
 <details>
-  <summary>
-  <pre>
-  纯十进制，必须以非__数字开头。
-  八进制，任何以__开头的数字（包括纯0）。
-  二进制，要求前缀__或__。
-  十六进制，要求前缀__或0X。
-  </pre>
-  </summary>
+  <summary>纯十进制，必须以非_1_数字开头；八进制，任何以_2_开头的数字（包括纯0）；二进制，要求前缀_3_或_4_；十六进制，要求前缀_5_或0X；</summary>
   <div>零</div>
   <div>零</div>
   <div>0b</div>
   <div>0B</div>
-  <div>0x</div>
   <div>0x</div>
 </details>
 
