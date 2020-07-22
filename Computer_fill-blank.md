@@ -129,7 +129,7 @@
 
 <details>
   <summary>UTF-8的特点是对不同__的字符使用不同__的编码。Unicode到UTF-8的编码方式如下：</summary>
-  <div>范围</div>
+  <div>码点范围</div>
   <div>长度</div>
   <pre>
   Unicode编码范围  位数  字节数　UTF-8 字节流(二进制)
@@ -329,7 +329,7 @@
 ## 算法的时间复杂度 -end-
 
 <details>
-  <summary>幂等(idempotent): 在相同输入下，多次运算的结果__。反之，非幂等。</summary>
+  <summary>幂等(idempotent): 函数在相同输入下，多次运算的结果__。反之，非幂等。</summary>
   <div>相等</div>
 </details>
 
@@ -369,15 +369,15 @@
   <div>格林尼治平均时间</div>
 </details>
 
-<details>
+<!-- <details>
   <summary>GMT是指位于英国伦敦郊区的皇家格林尼治天文台当地的平太阳时，因为本初子午线被定义为通过那里的__线。</summary>
   <div>经</div>
-</details>
+</details> -->
 
 <details>
-  <summary>由于地球每天的自转正在缓慢__速，因此GMT的误差越来越大，已被__钟报时的UTC取代。</summary>
+  <summary>由于地球每天的自转正在缓慢__速，因此GMT的误差越来越大，已被使用__报时的UTC取代。</summary>
   <div>减</div>
-  <div>原子</div>
+  <div>钟原子</div>
 </details>
 
 <details>

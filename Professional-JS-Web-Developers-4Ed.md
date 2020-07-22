@@ -3926,7 +3926,7 @@
 ## 10.18 函数柯里化(function Currying)
 
 <details>
-  <summary>在数学和计算机科学中，柯里化是一种将多个参数的一个函数转换成一系列使用__个参数的函数的技术。例子:</summary>
+  <summary>在数学和计算机科学中，柯里化是将一个接受多个参数的函数转换成一系列使用__个参数的函数的技术。例子:</summary>
   <div>一</div>
   <pre>
   function add(a, b) {

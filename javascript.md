@@ -69,7 +69,7 @@ querySelectorAll是很多现代浏览器都支持的原生Web API，但是有些
 
 - 使用硬件加速: translate3d, rotate3d, translateZ(0)
 
-## 宏任务和微任务
+## 宏任务(Macro task)和微任务(Micro task)
 
 微任务和宏任务皆为异步任务，它们都属于两个队列，主要区别在于他们的执行顺序，Event Loop的走向和取值。
 
