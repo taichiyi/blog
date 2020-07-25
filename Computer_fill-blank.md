@@ -460,11 +460,12 @@
   <summary>
   <pre>
   递归有以下两个特点:
-  1. 一个问题可以分解成具有__的子问题，子子问题，换句话说这些问题都能调用同一个函数。
-  2. 经过层层分解的子问题最后一定是有一个不能再分解的固定值的（即终止条件）。
+  1. 一个问题可以分解成具有__的子问题、子子问题。
+  2. 经过层层分解，最后的子问题一定是一个不能再分解的__（即终止条件）。
   </pre>
   </summary>
   <div>相同解决思路</div>
+  <div>固定值</div>
   <img src="https://oss.taichiyi.com/markdown/c7103bc4ded24320badbf88a9e4e43c6.png" />
 </details>
 
@@ -473,7 +474,7 @@
 ## 阶乘 -start-
 
 <details>
-  <summary>一个正整数的阶乘（factorial）是所有小于及等于该数的正整数的__。</summary>
+  <summary>一个正整数的阶乘（factorial[fækˈtɔːriəl]）是所有小于及等于该数的正整数的__。</summary>
   <div>积</div>
 </details>
 
@@ -495,3 +496,8 @@
 </details>
 
 ## 阶乘 -end-
+
+<details>
+  <summary>FPS 小于 __ 时会让人感觉到卡顿。</summary>
+  <div>24</div>
+</details>

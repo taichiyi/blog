@@ -1,4 +1,4 @@
-<!-- markdownlint-disable MD033 -->
+<!-- markdownlint-disable MD033 MD037 -->
 # JavaScript 知识点 填空
 
 <details>
@@ -311,4 +311,27 @@
 <details>
   <summary>在很多情况下，例如，如果不需要__，则可以将纯计算工作移至 Web Workers。</summary>
   <div>DOM访问</div>
+</details>
+
+<details>
+  <summary>强制同步布局(forced __ __)</summary>
+  <div>synchronous</div>
+  <div>layouts</div>
+</details>
+
+<details>
+  <summary>前一帧中的所有旧布局值都是已知的，可通过 __ 查询。但是查询前对元素的样式进行了修改(例如添加了一个 class)，这样种情况下浏览器需要只带当前元素的样式需要先 Layout ，这被称为__。</summary>
+  <div>JavaScript</div>
+  <div>强制同步布局</div>
+</details>
+
+<details>
+  <summary>渲染器进程(Renderer Process)中包含: 主线程(Main Thread)、合成器线程(Compositor Thread)、</summary>
+  <img src="https://oss.taichiyi.com/markdown/os0vx8yy.jpg" alt="img" />
+  <div></div>
+</details>
+
+<details>
+  <summary>操作系统通过垂直同步事件(vsync event)告诉浏览器的合成器线程什么时候创建新帧。</summary>
+  <div></div>
 </details>
