@@ -262,3 +262,53 @@
   <summary>所谓脚本，很多时候就是一次性书写甚至一次性运行，用后即抛。传统上，脚本语言的设计目标就是方便使用，怎么易用怎么来，所以在很多方面并不适合大型编程，甚至背道而驰。</summary>
   <div></div>
 </details>
+
+<details>
+  <summary>像素流水线(pixel pipeline，也称像素管道)，在浏览器中分为5个部分 JS / CSS > Style > Layout > Paint > Composite </summary>
+  <div></div>
+</details>
+
+<details>
+  <summary>
+  不是每一帧都经过5个步骤，当使用JS或CSS 对视图进行修改时，流水线一般有3种情况。
+  1. JS / CSS > Style > Layout > Paint > Composite
+  2. JS / CSS > Style > Paint > Composite
+  3. JS / CSS > Style > Composite
+  </summary>
+  <div></div>
+</details>
+
+<details>
+  <summary>JavaScript。不过，视觉变化不一定都是使用JavaScript触发的，CSS 的 Animations 和 Transitions 以及 Web Animations API 也常常触发 视觉变化。</summary>
+  <div></div>
+</details>
+
+<details>
+  <summary>布局（Layout）。在知道对一个元素应用哪些 CSS 规则之后，浏览器即可开始计算该元素要占据的空间大小及其在屏幕的位置。布局模式意味着一个元素可能影响其他元素，一般来说如果修改了某个元素的大小或者位置，则需要检查其他所有元素并重排（re-flow）整个页面。</summary>
+  <div></div>
+</details>
+
+<details>
+  <summary>绘制（Paint）。绘制是填充像素的过程。它涉及绘出文本、颜色、图像、边框和阴影，基本上包括元素的每个可视部分。绘制一般是在多个表面（通常称为层）上完成的，绘制包括两个步骤： 1) 创建绘图调用的列表， 2) 填充像素，后者也被称作栅格化。</summary>
+  <div></div>
+</details>
+
+<details>
+  <summary>合成（Composite）。由于页面的各部分可能被绘制到多个层上，因此它们需要按正确顺序绘制到屏幕上，才能正确地渲染页面。尤其对于与另一元素重叠的元素来说，这点特别重要，因为一个错误可能使一个元素错误地出现在另一个元素的上层。</summary>
+  <div></div>
+</details>
+
+<details>
+  <summary>触发 Layout 一会发触发 Paint。</summary>
+  <div></div>
+</details>
+
+<details>
+  <summary>如果一个属于 Layout 的 CSS 属性改变，则受影响的元素会进行 Layout。</summary>
+  <div></div>
+</details>
+
+<details>
+  <summary>在很多情况下，例如，如果不需要__，则可以将纯计算工作移至 Web Workers。</summary>
+  <div>DOM访问</div>
+</details>

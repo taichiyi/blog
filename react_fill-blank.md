@@ -471,6 +471,11 @@
   <div>_owner</div>
 </details>
 
+<details>
+  <summary>如果是容器的话，ReactDom 创建的 DOM 节点 会添加 __reactContainere 为属性。</summary>
+  <div></div>
+</details>
+
 首次渲染
 WorkInProgress = work-in-progress
 

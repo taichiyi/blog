@@ -3655,6 +3655,12 @@
 <details>
   <summary>默认参数可用于后面的默认参数吗?</summary>
   <div>是</div>
+  <pre>
+function foo(a = 1 + 1, b = a + 10) {
+  console.log(a, b); // 2 12
+}
+foo();
+  </pre>
 </details>
 
 ### 10.6.2 Rest Parameter
@@ -4395,6 +4401,11 @@
 <details>
   <summary>__(callback)方法向浏览器指示正在发生动画，以便浏览器可以依次确定安排重新绘制的最佳方法。</summary>
   <div>window.requestAnimationFrame</div>
+</details>
+
+<details>
+  <summary>注意，safari 在每次渲染__调用 requestAnimationFrame ，而不是渲染前。</summary>
+  <div>后</div>
 </details>
 
 <details>
