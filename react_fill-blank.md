@@ -476,6 +476,8 @@
   <div></div>
 </details>
 
+setState 有哪些触发方式?
+
 首次渲染
 WorkInProgress = work-in-progress
 
