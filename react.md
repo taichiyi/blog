@@ -56,11 +56,11 @@ react以组件的形式来实现模块化。所以组件这个概念在react中�
 
 ### 生命周期图谱(React version 16.3)
 
-![生命周期图谱16.3](https://oss.taichiyi.com/markdown/QQ20190507-115428%402x.jpg)
+![生命周期图谱16.3](https://oss.taichiyi.com/markdown/QQ20190410-0.jpg)
 
 ### 生命周期图谱(React version 16.4)
 
-![生命周期图谱16.4](https://oss.taichiyi.com/markdown/QQ20190507-120903%402x.jpg)
+![生命周期图谱16.4](https://oss.taichiyi.com/markdown/os96fh8k.jpg)
 
 ### React version 16.3 变动
 
