@@ -3099,7 +3099,7 @@
   </pre>
 </details>
 
-#### 8.4.4.5 Class Mixins(继承多个类)
+#### 8.4.4.5 Class Mixins
 
 <details>
   <summary>由于extends后可以接表达式，可以通过在表达式内链接多个mixin元素来实现__模式。</summary>
@@ -3117,10 +3117,11 @@
 </details>
 
 <details>
-  <summary>代码复用的几种方式: 1. __; 2. __; 3. __.</summary>
+  <summary>代码复用的几种方式: 1. __; 2. __; 3. __; 4.__.</summary>
   <div>1.Mixin</div>
-  <div>2.高阶组件（HOC）</div>
-  <div>3.Hooks</div>
+  <div>2.Render Prop</div>
+  <div>3.高阶组件（HOC）</div>
+  <div>4.Hooks</div>
 </details>
 
 <details>
@@ -3138,25 +3139,44 @@
 </details>
 
 <details>
-  <summary>HOC 的注意事项: 1. 传递静态__; 2. 不要在__内创建高阶组件; 3. 高阶组件是__函数; 4. 不要透传不相关的__; 5. 为了方便调试，加__.</summary>
-  <div>属性和refs</div>
+  <summary>术语 “render prop” 是指一种在 __ 之间使用一个值为函数的 prop 共享代码的技术。任何被用于告知组件需要渲染什么内容的函数 prop 在技术上都可以被称为 “render prop”.</summary>
+  <div>React 组件</div>
+</details>
+
+<!-- <details>
+  <summary>HOC 的注意事项: 1. 传递静态__; 2. 不要在__内创建高阶组件; 3. 高阶组件是__函数; 4. 要透传不相关的__; 5. 为了方便调试，高阶函数加__.</summary>
+  <div>属性、方法和refs</div>
   <div>render方法</div>
   <div>纯</div>
   <div>props</div>
   <div>displayName</div>
-</details>
+</details> -->
 
 <details>
-  <summary>HOC的缺陷: 1. 如果大量使用HOC，多层嵌套会让__变得非常困难; 2. HOC可以劫持__，在不遵守约定的情况下可能造成冲突。</summary>
+  <summary>HOC的缺陷: 1. 多层嵌套会让__变得非常困难; 2. 不遵守约定会降低HOC灵活性以及复用性。</summary>
   <div>调试</div>
   <div>props</div>
 </details>
 
 <details>
-  <summary>Hook的动机: 1. 减少__复用的风险; 2. 避免HOC__; 3. Hook更__。</summary>
+  <summary>Hook的动机: 1. 在组件之间复用 __ 很难; 2. __ 变得难以理解; 3. 难以理解的 __。</summary>
   <div>状态逻辑</div>
-  <div>地狱式嵌套</div>
-  <div>轻量</div>
+  <div>复杂组件</div>
+  <div>class</div>
+</details>
+
+<details>
+  <summary>
+  <pre>
+    Hook的优点:
+    1. 相比于 “render prop” 和 HOC Hook 不需要重新__。
+    2. 复用__的颗粒比 class 小。
+    3. FunctionComponent 比 ClassComponent 更好__。
+  </pre>
+  </summary>
+  <div>组织组件的结构</div>
+  <div>“状态逻辑”</div>
+  <div>理解</div>
 </details>
 
 # 第9章 PROXIES AND REFLECT
@@ -3165,16 +3185,6 @@
   <summary>无法通过__让ES6以前的编译器支持代理功能。</summary>
   <div>垫片(polyfill)</div>
 </details>
-
-<!-- <details> 没必要记
-  <summary>Proxy 属于一种“元编程”（meta programming），即对__进行编程。</summary>
-  <div>编程语言</div>
-</details> -->
-
-<!-- <details> 没必要记
-  <summary>在__对象之前加了一层。</summary>
-  <div>目标</div>
-</details> -->
 
 ## 9.1 Proxy Fundamentals
 

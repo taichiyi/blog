@@ -40,6 +40,6 @@ shouldUpdate 的值为：
 
 ## FunctionComponent
 
-memo 是一个 HOC 组件 shallowEqual(prevProps, nextProps) ，如果为真则复用 current
+memo 是一个 HOC 组件，通过劫持 props 判断组件是否需要重新渲染， shallowEqual(prevProps, nextProps) ，如果为真则复用 current fiber 
 
 如果你的 FunctionComponent 在给定相同 props 的情况下渲染相同的结果，那么你可以通过将其包装在 React.memo 中调用，以此通过记忆组件渲染结果的方式来提高组件的性能表现。

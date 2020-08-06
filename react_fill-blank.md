@@ -476,17 +476,12 @@
   <div></div>
 </details>
 
-setState 有哪些触发方式?
-
-首次渲染
-WorkInProgress = work-in-progress
-
-双缓冲
+<details>
+  <summary>如果是容器的话，ReactDom 创建的 DOM 节点 会添加 __reactContainere 为属性。</summary>
+  <div></div>
+</details>
 
 不明白 FiberStack.js 和 ReactFiberScope.js 是用途
-
-↓调用完 class 的 render 后获得下一代孩子(react elemnt)，然后调用 reconcileChildren 函数 把 react element 转为 fiber
-nextChildren = instance.render();
 
 - 更新队列
 - 双缓冲
@@ -496,3 +491,7 @@ nextChildren = instance.render();
 fiber 的遍历是广度优先还是深度优先？深度优先
 
 = 写个教程：一个熟练的JS开发者如果快速读懂React源码？
+
+- 总结 React 的一些概念，解释概念，然后串起来
+
+- 首次渲染怎么一次把全部 DOM node append 上去的？

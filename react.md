@@ -1,3 +1,4 @@
+<!-- markdownlint-disable MD033 -->
 # react 知识点
 
 ## JSX
@@ -238,3 +239,17 @@ pureComponent
 - 虚拟DOM，才催生出了RN。也应证了 Learn Once, Write Anywhere 这句口号。
 
 diff算法: 两个树的完全的diff算法是一个时间复杂度为 O(n3) 的问题。 但是在前端中，你会很少跨层地移动DOM元素，所以真实的DOM算法会对同一个层级的元素进行对比。
+
+## 什么是“横切关注点”？React 中的解决方案有哪些？举出优缺点
+
+如果不同的组件有相似的功能，就会产生“横切关注点（cross-cutting concerns）”问题。
+
+| sdf | Mixin | render prop | HOC | HOOK |
+| -   | -     | -            | -   | -    |
+| 缺点 | 1. Mixin 可能会相互依赖，相互耦合，不利于代码维护。<br /> 2. 不同的Mixin中的名称可能会冲突。 | 1. 层层嵌套 <br /> 2. 需要修改组件结构 | 1. 层层嵌套 <br /> 2. 需要修改组件结构 <br /> 3. 不遵守约定会降低HOC灵活性以及复用性 | 暂无
+| 优点 | 解决了“横切关注点”问题 | 耦合不严重 | 耦合不严重  | 1. 不用修改组件结构 <br /> 2. 状态组件的颗粒度更小
+
+## render prop 和 HOC 的关系
+
+render prop 像 call
+HOC 像 bind

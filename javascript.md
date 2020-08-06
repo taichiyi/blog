@@ -78,20 +78,25 @@ querySelectorAll是很多现代浏览器都支持的原生Web API，但是有些
 宏任务:
 
 | # | 浏览器 | Node |
-| :- | :- | :- |
+| - | - | - |
 | I/O | ✅ | ✅ |
+| MessageChannel | ✅ | ✅ |
 | setTimeout | ✅ | ✅ |
 | setInterval | ✅ | ✅ |
 | requestAnimationFrame | ✅ | ❌ |
 | setImmediate | ❌ | ✅ |
 
+[setTimeout, setInterval] > [MessageChannel]
+
 微任务:
 
 | # | 浏览器 | Node |
-| :- | :- | :- |
-| process.nextTick | ❌ | ✅ |
+| - | - | - |
 | MutationObserver | ✅ | ❌ |
-| Promise.then catch finally | ✅ | ✅ |
+| Promise.then | ✅ | ✅ |
+| Promise.catch | ✅ | ✅ |
+| Promise.finally | ✅ | ✅ |
+| process.nextTick | ❌ | ✅ |
 
 ## 纯函数
 

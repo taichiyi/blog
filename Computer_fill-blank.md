@@ -501,3 +501,103 @@
   <summary>FPS 小于 __ 时会让人感觉到卡顿。</summary>
   <div>24</div>
 </details>
+
+<details>
+  <summary>OOP(程序设计相关)英文全称__，中文全称__。</summary>
+  <div>Object Oriented['ɔːrɪentɪd] Programming[ˈproʊɡræmɪŋ]</div>
+  <div>面向对象程序设计(面向对象编程)</div>
+</details>
+
+<details>
+  <summary>POP(程序设计相关)英文全称__，中文全称__。</summary>
+  <div>Procedure[prəˈsiːdʒər] Oriented['ɔːrɪentɪd] Programming[ˈproʊɡræmɪŋ]</div>
+  <div>面向过程编程</div>
+</details>
+
+<details>
+  <summary>AOP(程序设计相关)英文全称__，中文全称__。</summary>
+  <div>Aspect[ˈæspekt] Oriented['ɔːrɪentɪd] Programming[ˈproʊɡræmɪŋ]</div>
+  <div>面向切面编程</div>
+</details>
+
+<details>
+  <summary>SP(程序设计相关)英文全称__，中文全称__。</summary>
+  <div>Structured['strʌktʃəd] Programming[ˈproʊɡræmɪŋ]</div>
+  <div>结构化程序设计</div>
+</details>
+
+<details>
+  <summary>面向对象程序设计是一种计算机__。OOP的一条基本原则是计算机程序由单个能够起到子程序作用的__或__组合而成。</summary>
+  <div>编程架构</div>
+  <div>单元</div>
+  <div>对象</div>
+</details>
+
+<details>
+  <summary>一个对象有__、__和__三种属性。</summary>
+  <div>状态</div>
+  <div>行为</div>
+  <div>标识</div>
+</details>
+
+<details>
+  <summary>类定义了事物的__和它可以做到的__。</summary>
+  <div>属性</div>
+  <div>行为</div>
+</details>
+
+<details>
+  <summary>面向对象的`封装`有两层意思：将__和__捆绑在一起；将__与__分离的过程。</summary>
+  <div>数据</div>
+  <div>行为</div>
+  <div>接口</div>
+  <div>实现</div>
+</details>
+
+<details>
+  <summary>面向对象的`多态`：相同的行为，不同的实现。</summary>
+  <div>输出</div>
+</details>
+
+<details>
+  <summary>面向对象的`继承`：子类可以对基类的行为进行__、__、__。</summary>
+  <div>扩展</div>
+  <div>覆盖</div>
+  <div>重定义</div>
+</details>
+
+<details>
+  <summary>面向对象的`消息传递`：指的是一个对象调用了另一个对象的__。</summary>
+  <div>方法</div>
+</details>
+
+<details>
+  <summary>“A extends B”。则 B 被称为父类、__类、__类，A 被称为__类或__类。</summary>
+  <div>基(基础类)</div>
+  <div>超</div>
+  <div>子</div>
+  <div>派生</div>
+</details>
+
+<details>
+  <summary>横切关注点（Cross-Cutting Concerns）：指的是一些具有横越多个__的共同点。</summary>
+  <div>模块</div>
+</details>
+
+<details>
+  <summary>IoC(面向对象编程)英文全称__，中文全称__。</summary>
+  <div>Inversion of Control</div>
+  <div>控制反转</div>
+</details>
+
+<details>
+  <summary>控制反转是一种是面向对象编程中的一种设计模式，用来减少计算机代码之间的__。其中最常见的方式叫做__，还有一种方式叫__。</summary>
+  <div>耦合度</div>
+  <div>依赖注入（Dependency Injection，简称DI）</div>
+  <div>依赖查找（Dependency Lookup）</div>
+</details>
+
+<details>
+  <summary>依赖注入：就是将__当变量传入到一个对象中去。</summary>
+  <div>实例</div>
+</details>
