@@ -1,5 +1,7 @@
 # React首次渲染主要流程
 
+例子：
+
 ``` js
 // <div id="root"></div>
 class ClickCounter extends React.Component {
