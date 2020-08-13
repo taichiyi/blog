@@ -332,6 +332,8 @@
 </details>
 
 <details>
-  <summary>操作系统通过垂直同步事件(vsync event)告诉浏览器的合成器线程什么时候创建新帧。</summary>
-  <div></div>
+  <summary>在 JavaScript 中声明变量有 __、__ 和 __ 3种方式。</summary>
+  <div>var[vɑ:]</div>
+  <div>let[let]</div>
+  <div>const[ˈkɒnst]</div>
 </details>
