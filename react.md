@@ -254,19 +254,3 @@ diff算法: 两个树的完全的diff算法是一个时间复杂度为 O(n3) 的
 render prop 像 call
 HOC 像 bind
 
-## other
-
-work 是什么呢？
-work 是制造 fiber 的。
-
-一个 work 的完成意味着一个 fiber 的完成。
-一个 进行中的 work : 分为几个 unit(单元)
-
-fiber 的 beginWork 阶段:
-
-- 把 React Element 转为 Fiber
-
-fiber 的 completeWork 阶段:
-
-- 设置 stateNode
-- 设置 returnFiber 的 firstEffect 和 lastEffect

@@ -30,21 +30,18 @@ class ClickCounter extends React.Component {
         React.createElement(
           'span',
           {
-            key: '1',
           },
           'Count',
         ),
         React.createElement(
           'span',
           {
-            key: '2',
           },
           ' : ',
         ),
         React.createElement(
           'span',
           {
-            key: '3',
           },
           this.state.count,
         ),
@@ -52,7 +49,6 @@ class ClickCounter extends React.Component {
       React.createElement(
         'button',
         {
-          key: '2',
           onClick: this.handleAdd,
         },
         'Add',
@@ -75,7 +71,7 @@ class AppHeader extends React.Component {
 
   static getDerivedStateFromProps() {
     console.log('getDerivedStateFromProps');
-    return undefined;
+    return null;
   }
 
   getSnapshotBeforeUpdate() {
