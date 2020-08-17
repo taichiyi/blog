@@ -240,7 +240,7 @@
 
  （2）M表示有效数字，大于等于__，小于__。
 
- （3）2^E表示指数位。
+ （3）E表示指数位。
   </pre>
   </summary>
   <div>正</div>
@@ -260,18 +260,18 @@
 <details>
   <summary>32位单精度</summary>
   <pre>
-  1            8                           23位长
-  S         Exponent                      Fraction
-  31 30至23 偏正值（实际的指数大小+127） 22至0位编号（从右边开始为0）
+  1              8                             23位长
+  S           Exponent                        Fraction(Mantissa)
+  31   30至23 偏正值（实际的指数大小+127）   22至0位编号（从右边开始为0）
   </pre>
 </details>
 
 <details>
   <summary>64位双精度</summary>
   <pre>
-  1            11                           52位长
-  S          Exponent                      Fraction
-  63 62至52 偏正值（实际的指数大小+1023） 51至0位编号（从右边开始为0）
+  1              11                             52位长
+  S            Exponent                        Fraction(Mantissa)
+  63   62至52 偏正值（实际的指数大小+1023）   51至0位编号（从右边开始为0）
   </pre>
 </details>
 

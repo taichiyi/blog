@@ -254,3 +254,4 @@ diff算法: 两个树的完全的diff算法是一个时间复杂度为 O(n3) 的
 render prop 像 call
 HOC 像 bind
 
+## redux

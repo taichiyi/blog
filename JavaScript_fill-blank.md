@@ -332,8 +332,13 @@
 </details>
 
 <details>
-  <summary>在 JavaScript 中声明变量有 __、__ 和 __ 3种方式。</summary>
+  <summary>在 JavaScript 中声明变量，可以通过__、__ 和 __ 3个关键字。</summary>
   <div>var[vɑ:]</div>
   <div>let[let]</div>
   <div>const[ˈkɒnst]</div>
+</details>
+
+<details>
+  <summary>JavaScript 读变量对应的二进制值时，怎么判断类型的？ </summary>
+  <div></div>
 </details>

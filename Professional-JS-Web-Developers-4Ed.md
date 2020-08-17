@@ -323,7 +323,7 @@
 </details>
 
 <details>
-  <summary>标识符的必须是__字母、__、__或__符号。第一个字符不能是__。</summary>
+  <summary>标识符必须是__字母、__、__或__符号。第一个字符不能是__。</summary>
   <div>Unicode</div>
   <div>数字</div>
   <div>下划线</div>
@@ -757,7 +757,7 @@
 </details>
 
 <details>
-  <summary>移码（又叫__）是对真值补码的__取反。</summary>
+  <summary>移码（又叫__、偏置码）是对真值补码的__取反。</summary>
   <div>增码</div>
   <div>符号位</div>
 </details>
