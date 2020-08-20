@@ -430,8 +430,8 @@
 
 <details>
   <summary>纯十进制，必须以非_1_数字开头；八进制，任何以_2_开头的数字（包括纯0）；二进制，要求前缀_3_或_4_；十六进制，要求前缀_5_或0X；</summary>
-  <div>零</div>
-  <div>零</div>
+  <div>0</div>
+  <div>0</div>
   <div>0b</div>
   <div>0B</div>
   <div>0x</div>
@@ -600,4 +600,104 @@
 <details>
   <summary>依赖注入：就是将__当变量传入到一个对象中去。</summary>
   <div>实例</div>
+</details>
+
+<details>
+  <summary>C 语言的8种语句: __、__、__、__、__、__。</summary>
+  <div>标号语句</div>
+  <div>复合语句</div>
+  <div>表达式语句</div>
+  <div>选择语句</div>
+  <div>循环语句</div>
+  <div>跳转语句</div>
+  <div>声明语句</div>
+  <div>try 块</div>
+  <div>【语句】</div>
+</details>
+
+<details>
+  <summary>表达式是__的代码，而语句是__的代码。</summary>
+  <div>可以被求值</div>
+  <div>一段可执行</div>
+  <div>【语句】【表达式】</div>
+</details>
+
+<details>
+  <summary>标号语句有3种语法：1.__ 2.__ 3.__。</summary>
+  <div>“标识符 : 语句”</div>
+  <div>“case 常量表达式 : 语句”</div>
+  <div>“default : 语句”</div>
+  <div>【标号语句】</div>
+</details>
+
+<details>
+  <summary>复合语句或（代码）块是__括号环绕的语句__。复合语句的括号“}”外不能__。</summary>
+  <div>花</div>
+  <div>序列</div>
+  <div>加分号</div>
+  <div>【复合语句】</div>
+</details>
+
+<details>
+  <summary>当期待一条语句，但需要依序执行多条语句时可使用__语句。</summary>
+  <div>复合</div>
+  <div>【复合语句】</div>
+</details>
+
+<details>
+  <summary>表达式语句语法：“表达式(可选)__”，大部分语句都是表达式语句，例如赋值或函数调用。</summary>
+  <div>;</div>
+  <div>【表达式语句】</div>
+</details>
+
+<details>
+  <summary>无表达式的表达式语句被称作__语句。</summary>
+  <div>空（null statement）</div>
+  <div>【表达式语句】</div>
+</details>
+
+<details>
+  <summary>选择语句在数个控制流中选择一个。有3种语法：1.__ 2.__ 3.__。</summary>
+  <div>“if ( 条件 ) 语句”</div>
+  <div>“if ( 条件 ) 语句 else 语句”</div>
+  <div>“switch ( 条件 ) 语句”</div>
+  <div>【选择语句】</div>
+</details>
+
+<details>
+  <summary>循环语句__执行一些代码。</summary>
+  <div>重复</div>
+  <div>【循环语句】</div>
+</details>
+
+<details>
+  <summary>跳转语句无条件地转移__。有3种语法：1.__ 2.__ 3.__。</summary>
+  <div>控制流</div>
+  <div>“break [标识符];”</div>
+  <div>“continue [标识符];”</div>
+  <div>“return [表达式];”</div>
+  <div>【跳转语句】</div>
+</details>
+
+<details>
+  <summary>声明语句包括变量声明和函数声明。有4种语法：1.__ 2.__ 3.__。一个语句以 __ 开头才是函数声明语句。</summary>
+  <div>“var 标识符 [= 表达式];”</div>
+  <div>“let 标识符 [= 表达式];”</div>
+  <div>“const 标识符 [= 表达式];”</div>
+  <div>“function [标识符] () {}”</div>
+  <div>function</div>
+  <div>【声明语句】</div>
+</details>
+
+<details>
+  <summary>try 块提供当执行其他语句时捕获其所抛出的异常的能力。语法: __。</summary>
+  <div>“try 复合语句 处理块序列”</div>
+  <div>【try 块】</div>
+</details>
+
+<details>
+  <summary>内存为变量分配存储空间的__个字节单元的地址, 称之为该变量的地址。在高级语言中变量的地址形象地称为__。</summary>
+  <div>首</div>
+  <div>指针</div>
+  <div>【指针】</div>
 </details>

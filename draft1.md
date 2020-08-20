@@ -59,3 +59,17 @@ SyntheticEvent 是一个包装器。
 SyntheticEvent 是合并而来。
 
 ## redux
+
+应用中所有的 state 都以一个对象树的形式储存在一个单一的 store 中。
+
+惟一改变 state 的办法是分发 action，一个描述发生什么的对象。 
+
+编写专门的函数来决定每个 action 如何改变应用的 state，这个函数被叫做 reducer。
+
+### action 是先到 middleware 还是 先到 reducers ? 
+先到 middleware
+
+### 当有多个 middleware 时，调用顺序是？
+从左到右
+
+### 实现一个函数 compose(f, g, h), 返回值为 (...args) => f(g(h(...args)))

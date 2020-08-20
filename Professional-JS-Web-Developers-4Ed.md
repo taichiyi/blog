@@ -367,8 +367,8 @@
 ## 3.3 Variables
 
 <details>
-  <summary>ECMAScript变量是__类型的，这意味着变量可以是__类型的数据。</summary>
-  <div>松散</div>
+  <summary>ECMAScript变量是__类型的，这意味着变量在运行时可以是__类型的数据。</summary>
+  <div>松散(弱)</div>
   <div>任何</div>
 </details>
 
@@ -381,8 +381,8 @@
 </details>
 
 <details>
-  <summary>使用const声明变量后，该变量指向的__就不可改变了。</summary>
-  <div>内存地址</div>
+  <summary>使用const声明变量后，该变量的__就不可改变了。</summary>
+  <div>指针</div>
 </details>
 
 ### 3.3.1 The ’var’ Keyword
@@ -391,7 +391,7 @@
 
 <details>
   <summary>使用var声明的变量，会被提升到作用域的__部。</summary>
-  <div>顶</div>
+    <div>顶</div>
 </details>
 
 ### 3.3.2 ’let’ Declarations
@@ -405,14 +405,14 @@
 #### 3.3.2.2 Global Declarations
 
 <details>
-  <summary>与var关键字不同，在全局执行上下文中使用let声明变量时，变量不会像使用var那样添加到__。</summary>
+  <summary>在全局执行上下文中使用let声明变量时，变量不会像使用var那样添加到__。</summary>
   <div>window对象</div>
 </details>
 
 ## 3.4 Data Types
 
 <details>
-  <summary>ECMAScript有8种数据类型。七种原始类型_1_、_2_、_3_、_4_、_5_、_6_、_7_和一种引用类型_8_。</summary>
+  <summary>ECMAScript有8种数据类型。七种原始(基本))类型_1_、_2_、_3_、_4_、_5_、_6_、_7_和一种引用()类型_8_。</summary>
   <div>1. Undefined(ES3)</div>
   <div>2. Null</div>
   <div>3. Boolean</div>
@@ -1760,11 +1760,11 @@
   <div>{}</div>
 </details>
 
-<details>
+<!-- <details>
   <summary>在严格模式下，在eval（）内部创建的__和__，外部无法访问。</summary>
   <div>变量</div>
   <div>函数</div>
-</details>
+</details> -->
 
 <details>
   <summary>如果你间接的使用 eval()，比如通过一个引用来调用它，而不是直接的调用 eval。 从 ECMAScript5 起，它工作在__作用域下，而不是__作用域中。</summary>
@@ -3583,7 +3583,7 @@
 ## 10.2 Function Names
 
 <details>
-  <summary>函数名称类似于变量，都有一个对应的__，指针指向某个内存地址。这意味着一个函数可以有多个__。</summary>
+  <summary>函数名称类似于变量，都有一个对应的__，一个函数可以有多个__。</summary>
   <div>指针</div>
   <div>名称</div>
 </details>

@@ -113,14 +113,6 @@
 </details>
 
 <details>
-  <summary>标识符就是一个__，通过__语句将指针(标识符)指向__。没有赋过值的标识符就是一个__。</summary>
-  <div>指针</div>
-  <div>赋值</div>
-  <div>内存地址</div>
-  <div>空指针</div>
-</details>
-
-<details>
   <summary>为了避免undefined被重写我们可以使用“__”，它和undefined等价的。</summary>
   <div>void 0</div>
   <div>等效写法：void (0)</div>
@@ -332,13 +324,76 @@
 </details>
 
 <details>
-  <summary>在 JavaScript 中声明变量，可以通过__、__ 和 __ 3个关键字。</summary>
-  <div>var[vɑ:]</div>
-  <div>let[let]</div>
-  <div>const[ˈkɒnst]</div>
+  <summary>严格模式下，无法再意外创建__。如果有则会抛出 __ 错误。</summary>
+  <div>全局变量</div>
+  <div>ReferenceError(引用错误)</div>
+  <div>【严格模式】</div>
 </details>
 
 <details>
-  <summary>JavaScript 读变量对应的二进制值时，怎么判断类型的？ </summary>
-  <div></div>
+  <summary>静默失败(silently fail)：就像__不存在一样。</summary>
+  <div>语句</div>
+  <div>【严格模式】</div>
+</details>
+
+<details>
+  <summary>严格模式下，错误的__操作将会抛出异常，而不是静默失败。</summary>
+  <div>赋值</div>
+  <div>【严格模式】</div>
+</details>
+
+<details>
+  <summary>严格模式下, 试图删除__的属性时会抛出异常，正常模式是静默错误。</summary>
+  <div>不可删除</div>
+  <div>【严格模式】</div>
+</details>
+
+<details>
+  <summary>严格模式下, 要求函数的__唯一，如果有则会抛出 __ 错误。</summary>
+  <div>参数名</div>
+  <div>SyntaxError(语法错误)</div>
+  <div>【严格模式】</div>
+</details>
+
+<details>
+  <summary>严格模式下, 禁止以零(0)开头的八进制语法，如果有则会抛出错误。ES6 中支持使用__前缀表示八进制数字。</summary>
+  <div>参数名</div>
+  <div>“0o”</div>
+  <div>【严格模式】</div>
+</details>
+
+<details>
+  <summary>严格模式下, 静止设置__类型值，如果有则会抛出错误。正常模式是静默错误。</summary>
+  <div>原始</div>
+  <div>【严格模式】</div>
+</details>
+
+<details>
+  <summary>严格模式下, 禁用 __ 关键字。</summary>
+  <div>with</div>
+  <div>【严格模式】</div>
+</details>
+
+<details>
+  <summary>严格模式下, eval（）有自己的__。</summary>
+  <div>执行上下文</div>
+  <div>【严格模式】</div>
+</details>
+
+<details>
+  <summary>严格模式下, 禁止删除__，正常模式是静默错误。</summary>
+  <div>变量</div>
+  <div>【严格模式】</div>
+</details>
+
+<details>
+  <summary>严格模式下, 函数参数的值不会随 __ 的值的改变而变化。</summary>
+  <div>arguments 对象</div>
+  <div>【严格模式】</div>
+</details>
+
+<details>
+  <summary>严格模式下, 不再支持 arguments.__。</summary>
+  <div>callee</div>
+  <div>【严格模式】</div>
 </details>
