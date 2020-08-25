@@ -58,7 +58,7 @@ SyntheticEvent 是一个包装器。
 
 SyntheticEvent 是合并而来。
 
-## redux
+## Redux
 
 应用中所有的 state 都以一个对象树的形式储存在一个单一的 store 中。
 
@@ -73,3 +73,27 @@ SyntheticEvent 是合并而来。
 从左到右
 
 ### 实现一个函数 compose(f, g, h), 返回值为 (...args) => f(g(h(...args)))
+
+## Redux 、Mobx 和 Flux 区别
+ 
+Redux 和 Flux
+相同：都是单向数据流
+不同：
+  Redux 的数据更新逻辑是在 reducer ，Flux 是在 store ；
+  Redux 状态对象不可变(Immutable)，Flux 的可变(Mutable)；
+  Redux 只有一个 store ，Flux 可以有多个 store ；
+
+Redux 和 Mobx
+不同：
+  Redux 只有一个 store ，Flux 可以有多个 Mobx ；
+  Redux 偏向函数式编程，Mobx 偏向面向对象编程；
+  Redux 单向数据流，Mobx 双向数据流；
+  Redux 状态对象不可变(Immutable)，Mobx 的可变(Mutable)；
+
+特点：
+  - Redux
+    - 模板代码较多，每次都要创建 action、reducer 和 中间件(saga／thunk)
+    - 大型复杂项目可维护性、拓展性更好
+  - Mobx 
+    - 模板代码少，比较自由，开发快
+    - 更适合中小型项目

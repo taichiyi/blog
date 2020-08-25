@@ -430,8 +430,8 @@
 
 <details>
   <summary>纯十进制，必须以非_1_数字开头；八进制，任何以_2_开头的数字（包括纯0）；二进制，要求前缀_3_或_4_；十六进制，要求前缀_5_或0X；</summary>
-  <div>0</div>
-  <div>0</div>
+  <div>0(o|O)</div>
+  <div>0(o|O)</div>
   <div>0b</div>
   <div>0B</div>
   <div>0x</div>
@@ -700,4 +700,11 @@
   <div>首</div>
   <div>指针</div>
   <div>【指针】</div>
+</details>
+
+<details>
+  <summary>前缀和(Prefix sum)是一个数组的某项__之前(包括此项元素)的所有数组元素的__。</summary>
+  <div>下标</div>
+  <div>和</div>
+  <div>【算法】【前缀和】</div>
 </details>

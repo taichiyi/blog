@@ -4,7 +4,7 @@
 ## Data URLs -start-
 
 <details>
-  <summary>Data URLs，即前缀为 __ 协议的URL，其允许内容创建者向文档中嵌入小文件。</summary>
+  <summary>Data URLs，即前缀为 `__` 协议的URL，其允许内容创建者向文档中嵌入小文件。</summary>
   <div>data:</div>
 </details>
 

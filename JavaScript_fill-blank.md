@@ -363,7 +363,7 @@
 </details>
 
 <details>
-  <summary>严格模式下, 静止设置__类型值，如果有则会抛出错误。正常模式是静默错误。</summary>
+  <summary>严格模式下, 静止对__类型的值赋值，如果有则会抛出错误。正常模式是静默错误。</summary>
   <div>原始</div>
   <div>【严格模式】</div>
 </details>

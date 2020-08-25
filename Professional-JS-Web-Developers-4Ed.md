@@ -776,9 +776,10 @@
 </details>
 
 <details>
-  <summary>特殊值__和__，为按位运算的操作数时，都被视为等于__。</summary>
+  <summary>特殊值__、__和__，为按位运算的操作数时，都被视为等于__。</summary>
   <div>NaN</div>
   <div>Infinity</div>
+  <div>undefined</div>
   <div>0</div>
 </details>
 
@@ -1170,7 +1171,7 @@
   <div>变量(VariableEnvironment)</div>
 </details>
 
-<details>
+<!-- <details>
   <summary>词法环境是保存“标识符—变量”映射的结构。（这里的标识符是指__和__的名称，变量是__值或__值）。例子：</summary>
   <div>变量</div>
   <div>函数</div>
@@ -1189,7 +1190,7 @@
     foo: < ref. to foo function >
   }
   </pre>
-</details>
+</details> -->
 
 <details>
   <summary>每个词法环境有三个组成部分：1)__ 2)__ 3)__。</summary>
@@ -3701,6 +3702,11 @@ foo();
 <details>
   <summary>在执行上下文的__阶段，JavaScript引擎会首先进行函数声明和赋值。</summary>
   <div>创建</div>
+</details>
+
+<details>
+  <summary>函数表达式的函数名是__。</summary>
+  <div>constant variable</div>
 </details>
 
 ## 10.8 Functions as Values
