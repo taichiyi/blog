@@ -123,7 +123,7 @@
 
 ### 2.2 示例解释
 
-<details>
+<!-- <details>
   <summary>C 语言的6种语句: __、__、__、__、__、__。</summary>
   <div>标号语句</div>
   <div>复合语句</div>
@@ -131,7 +131,7 @@
   <div>选择语句</div>
   <div>迭代语句</div>
   <div>跳转语句</div>
-</details>
+</details> -->
 
 <details>
   <summary>__ 是C编译器软件包的标准部分，它提供键盘输入和屏幕输出的支持。</summary>

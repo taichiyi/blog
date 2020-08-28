@@ -7,17 +7,17 @@
 
 ### 1.2.5 函数
 
-<details>
+<!-- <details>
   <summary>函数中如果没有显式返回值，这种函数有时 也叫做__或 void 函数。</summary>
   <div>子程</div>
-</details>
+</details> -->
 
 # 第2章 数组
 
-<details>
+<!-- <details>
   <summary>数组是计算机编程世界里很常见的__。</summary>
   <div>数据结构</div>
-</details>
+</details> -->
 
 ## 2.1 JavaScript中对数组的定义
 
@@ -31,10 +31,10 @@
 
 # 第3章 列表
 
-<details>
+<!-- <details>
   <summary>当不需要在一个很__的序列中查找元素，或者对其进行排序时，列表显得尤为有用。</summary>
   <div>长</div>
-</details>
+</details> -->
 
 <details>
   <summary>ADT：英文全称__；中文全称__。</summary>
@@ -50,7 +50,7 @@
   <div>任意</div>
 </details>
 
-<details>
+<!-- <details>
   <summary>列表的抽象数据类型定义: 有3个__和12个__。例子:</summary>
   <div>属性</div>
   <div>方法</div>
@@ -93,7 +93,7 @@
     this.contains = contains;
   }
   </pre>
-</details>
+</details> -->
 
 ## 3.3 使用迭代器访问列表
 
@@ -479,10 +479,10 @@
   <div>是</div>
 </details>
 
-<details>
+<!-- <details>
   <summary>如果变量值的大小是可变的，则该值在内存中可能是__连续的。</summary>
   <div>不</div>
-</details>
+</details> -->
 
 <details>
   <summary>关联数组和数组的唯一区别是，关联数组的__不是非负的整数而是任意的标量。JavaScript的对象就是一个关联数组。</summary>
