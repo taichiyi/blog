@@ -1,4 +1,4 @@
-<!-- markdownlint-disable MD033 -->
+<!-- markdownlint-disable MD033 MD037 -->
 # C-language-runoob-QA
 
 验证知识点的掌握程度
