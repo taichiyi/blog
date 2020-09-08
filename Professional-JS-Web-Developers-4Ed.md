@@ -845,7 +845,7 @@
 #### 3.5.2.4 Bitwise XOR
 
 <details>
-  <summary>符号“^”表示__运算符，是__元运算符。</summary>
+  <summary>脱字符号「^」表示__运算符，是__元运算符。</summary>
   <div>按位异或</div>
   <div>二</div>
 </details>

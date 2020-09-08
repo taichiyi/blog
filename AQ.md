@@ -1,4 +1,4 @@
-<!-- markdownlint-disable MD033 -->
+<!-- markdownlint-disable MD033 MD037 -->
 
 <details>
   <summary>问题？</summary>
@@ -52,4 +52,172 @@
   <div>10. 中介者模式（Mediator pattern）</div>
   <div>11. 责任链模式（Chain of responsibility pattern）</div>
   <div>【设计模式】</div>
+</details>
+
+<details>
+  <summary>正则表达式，就是一种描述字符串__的__化表达方式。</summary>
+  <div>结构模式</div>
+  <div>形式</div>
+  <div>【正则表达式】</div>
+</details>
+
+<details>
+  <summary>在计算机中，正则表达式处理的对象是字符串，或者抽象的说，是一个__。</summary>
+  <div>对象序列</div>
+  <div>【正则表达式】</div>
+</details>
+
+<details>
+  <summary>正则表达式（__ __ 简写regex）</summary>
+  <div>Regular[ˈreɡjələr]</div>
+  <div>Expression[ɪkˈspreʃn]</div>
+  <div>【正则表达式】</div>
+</details>
+
+<details>
+  <summary>完整的正则表达式由__字符和__字符两种字符构成。特殊字符也称为“元字符”，普通文本字符也称为“文本”。</summary>
+  <div>特殊</div>
+  <div>普通文本</div>
+  <div>【正则表达式】【元字符】</div>
+</details>
+
+<details>
+  <summary>正则表达式__，它容许使用者列出在某处期望匹配的字符，通常被称作__。一个字符组是一个__。</summary>
+  <div>结构体</div>
+  <div>字符组</div>
+  <div>元素</div>
+  <div>【正则表达式】【字符组】</div>
+</details>
+
+<details>
+  <summary>在正则表达式中，如果连字符出现在__中，且不在__，则连字符为元字符，否则为普通文本字符。</summary>
+  <div>字符组</div>
+  <div>开头</div>
+  <div>【正则表达式】【字符组】</div>
+</details>
+
+<details>
+  <summary>在正则表达式中，默认是一行文本模式，如果需要开启多行文本模式，需要添加__。</summary>
+  <div>修饰符m</div>
+  <div>【正则表达式】【多行模式】【修饰符】</div>
+</details>
+
+<details>
+  <summary>在正则表达式中，多行文本模式下，「$」的意义是匹配字符串内部的__。</summary>
+  <div>换行符</div>
+  <div>【正则表达式】【多行模式】</div>
+</details>
+
+<details>
+  <summary>在正则表达式中，__不是正则表达式的一部分，是软件工具提供的特性。</summary>
+  <div>修饰符</div>
+  <div>【正则表达式】【修饰符】</div>
+</details>
+
+<details>
+  <summary>在正则表达式中，「^tcy$」的文字意义是什么？</summary>
+  <div>匹配的条件是，行开头(每一行都有一个开头)，然后是字母 c a t，然后是行末尾。</div>
+  <div>[行开头][行锚点]</div>
+  <div>【正则表达式】</div>
+</details>
+
+<details>
+  <summary>在正则表达式中，排除型字符组，通过在字符组的__加入「^」来表示。</summary>
+  <div>开头</div>
+  <div>【正则表达式】【字符组】</div>
+</details>
+
+<details>
+  <summary>在正则表达式中，元字符在__的内部和外部，元字符的意义是不一样的。</summary>
+  <div>字符组</div>
+  <div>【正则表达式】【字符组】</div>
+</details>
+
+<details>
+  <summary>在正则表达式中，在检查正则表达式之前会把每一行的__去掉。</summary>
+  <div>换行符</div>
+  <div>【正则表达式】</div>
+</details>
+
+<details>
+  <summary>在正则表达式中，使用元字符「|」来实现__，它能够把不同的__组合成一个总表达式，这种子表达式又称为“多选分支”。</summary>
+  <div>多选结构</div>
+  <div>子表达式</div>
+  <div>【正则表达式】【多选结构】</div>
+</details>
+
+<details>
+  <summary>在正则表达式中，元字符「(」和「)」来__和__，分组就是确定__的范围。</summary>
+  <div>分组</div>
+  <div>捕获</div>
+  <div>子表达式</div>
+  <div>【正则表达式】【子表达式】</div>
+</details>
+
+<details>
+  <summary>在正则表达式中，之前紧邻元素（包含子表达式）出现一次或零次{0,1}，可以通过元字符「__」来表示，该元素称为__元素。</summary>
+  <div>?</div>
+  <div>可选项</div>
+  <div>【正则表达式】【可选项元素】</div>
+</details>
+
+<details>
+  <summary>在正则表达式中，限定所作用元素的匹配次数的元字符，统称为__。</summary>
+  <div>量词</div>
+  <div>【正则表达式】【量词】</div>
+</details>
+
+<details>
+  <summary>在正则表达式中，之前紧邻元素（包含子表达式）出现一次或多次{1,}，可以通过元字符「__」来表示。</summary>
+  <div>+</div>
+  <div>【正则表达式】【量词】</div>
+</details>
+
+<details>
+  <summary>在正则表达式中，之前紧邻元素（包含子表达式）出现任意多次{0,}，可以通过元字符「__」来表示。</summary>
+  <div>*</div>
+  <div>【正则表达式】【量词】</div>
+</details>
+
+<details>
+  <summary>在正则表达式中，“__”是正则表达式的特性之一，它容许我们匹配与子表达式先前部分匹配的同样的文本。</summary>
+  <div>反向引用</div>
+  <div>【正则表达式】【反向引用】</div>
+</details>
+
+<details>
+  <summary>在正则表达式中，“__”是正则表达式的特性之一，它不匹配字符，只匹配文本中特定的位置。环视不会占用“字符”。</summary>
+  <div>环视结构</div>
+  <div>【正则表达式】【环视结构】</div>
+</details>
+
+<details>
+  <summary>在正则表达式中，环视结构分为四种类型，__「(?=...)」、__「(?!...)」、__「(?<=...)」和__「(?<!...)」。</summary>
+  <div>肯定顺序环视</div>
+  <div>否定顺序环视</div>
+  <div>肯定逆序环视</div>
+  <div>否定逆序环视</div>
+  <div>【正则表达式】【环视结构】</div>
+</details>
+
+<details>
+  <summary>在正则表达式中，肯定顺序环视，匹配成功的条件是，子表达式能够匹配“位置”__则的文本。</summary>
+  <div>右</div>
+  <div>【正则表达式】【环视结构】</div>
+</details>
+
+<details>
+  <summary>在正则表达式中，子表达式的开头有五种，__、__、__、__、__。</summary>
+  <div>「?=」</div>
+  <div>「?!」</div>
+  <div>「?<=」</div>
+  <div>「?<!」</div>
+  <div>「?:」</div>
+  <div>【正则表达式】【子表达式】</div>
+</details>
+
+<details>
+  <summary>在正则表达式中，__括号「(?:...)」表示只分组不捕获。</summary>
+  <div>非捕获型</div>
+  <div>【正则表达式】【非捕获】</div>
 </details>
