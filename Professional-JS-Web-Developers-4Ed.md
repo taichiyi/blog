@@ -2118,7 +2118,7 @@
 
 <details>
   <summary>Object.assign(target, ...sources) 函数会触发 __，而展开语法则不会。</summary>
-  <div>setters</div>
+  <div>访问器(setter/getter)</div>
 </details>
 
 <details>

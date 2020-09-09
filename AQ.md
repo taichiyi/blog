@@ -158,7 +158,7 @@
   <summary>在正则表达式中，之前紧邻元素（包含子表达式）出现一次或零次{0,1}，可以通过元字符「__」来表示，该元素称为__元素。</summary>
   <div>?</div>
   <div>可选项</div>
-  <div>【正则表达式】【可选项元素】</div>
+  <div>【正则表达式】【可选项元素】【量词】</div>
 </details>
 
 <details>
@@ -220,4 +220,75 @@
   <summary>在正则表达式中，__括号「(?:...)」表示只分组不捕获。</summary>
   <div>非捕获型</div>
   <div>【正则表达式】【非捕获】</div>
+</details>
+
+<details>
+  <summary>在正则表达式中，正则引擎分为两大类，__ 和 __。JavaScript 是 __引擎。</summary>
+  <div>DFA(Deterministic finite automaton) 确定型有穷自动机</div>
+  <div>NFA(Non-deterministic finite automaton) 非确定型有穷自动机</div>
+  <div>NFA</div>
+  <div>【正则表达式】【正则引擎】</div>
+</details>
+
+<details>
+  <summary>在正则表达式中，优先选择最__端的某个匹配结果。有例子</summary>
+  <div>左</div>
+  <div>[例子]用「fat|cat|belly|your」来匹配字符串“The dragging belly indicates that your cat is too fat.”结果是“belly”</div>
+  <div>【正则表达式】【匹配优先】</div>
+</details>
+
+<details>
+  <summary>在正则表达式中，标准的匹配__词（「*」、「+」、「?」和「{m,n}」）是匹配优先的，匹配优先的意思是匹配尽可能多的字符。</summary>
+  <div>量</div>
+  <div>【正则表达式】【匹配优先】</div>
+</details>
+
+<details>
+  <summary>在正则表达式中，正则引擎是循环“匹配文本”还是“正则表达式”?</summary>
+  <div>匹配文本</div>
+  <div>【正则表达式】【匹配优先】</div>
+</details>
+
+<details>
+  <summary>在正则表达式中，锚点可以分为两大类：__和__。</summary>
+  <div>简单锚点</div>
+  <div>复杂锚点</div>
+  <div>【正则表达式】【锚点】</div>
+</details>
+
+<details>
+  <summary>在正则表达式中，简单锚点有四个__、__、__、__。</summary>
+  <div>「^」</div>
+  <div>「$」</div>
+  <div>「\b」</div>
+  <div>「\B」</div>
+  <div>【正则表达式】【锚点】</div>
+</details>
+
+<details>
+  <summary>在正则表达式中，__优先的结构只会在被迫的情况下交还字符。有例子。</summary>
+  <div>匹配</div>
+  <div>[例子]「^.*([0-9]+)」匹配“copyright 2003.”，子表达式只捕获到了“3”</div>
+  <div>【正则表达式】【匹配优先】</div>
+</details>
+
+<details>
+  <summary>在正则表达式中，NFA 引擎是__主导，DFA 引擎是__主导。</summary>
+  <div>表达式</div>
+  <div>文本</div>
+  <div>【正则表达式】【匹配优先】</div>
+</details>
+
+<details>
+  <summary>在正则表达式中，如果需要在“进行尝试”和“跳过尝试”之间选择，对于__，引擎会优先选择“进行尝试”，而对于__，会“跳过尝试”。</summary>
+  <div>匹配优先量词</div>
+  <div>忽略优先量词</div>
+  <div>[例子]「ab?c」“abc”，当下一个到「b」时</div>
+  <div>【正则表达式】【匹配优先】【回溯】</div>
+</details>
+
+<details>
+  <summary>在正则表达式中，要使用“忽略优先量词”需要在量词的后面加一个__。</summary>
+  <div>「?」问号</div>
+  <div>【正则表达式】【匹配优先】【量词】</div>
 </details>
