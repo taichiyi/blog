@@ -180,6 +180,15 @@
 </details>
 
 <details>
+  <summary>在正则表达式中，量词的表示有4种，__、__、__、__。</summary>
+  <div>问号     ?        </div>
+  <div>加号     +        </div>
+  <div>星号     *        </div>
+  <div>区间量词 {min,max} </div>
+  <div>【正则表达式】【量词】</div>
+</details>
+
+<details>
   <summary>在正则表达式中，“__”是正则表达式的特性之一，它容许我们匹配与子表达式先前部分匹配的同样的文本。</summary>
   <div>反向引用</div>
   <div>【正则表达式】【反向引用】</div>
@@ -207,19 +216,26 @@
 </details>
 
 <details>
-  <summary>在正则表达式中，子表达式的开头有五种，__、__、__、__、__。</summary>
+  <summary>在正则表达式中，子表达式的开头有六种，__、__、__、__、__。</summary>
   <div>「?=」</div>
   <div>「?!」</div>
   <div>「?<=」</div>
   <div>「?<!」</div>
   <div>「?:」</div>
+  <div>「?>」</div>
   <div>【正则表达式】【子表达式】</div>
 </details>
 
 <details>
-  <summary>在正则表达式中，__括号「(?:...)」表示只分组不捕获。</summary>
-  <div>非捕获型</div>
+  <summary>在正则表达式中，__型括号「(?:...)」表示只分组不捕获。</summary>
+  <div>非捕获</div>
   <div>【正则表达式】【非捕获】</div>
+</details>
+
+<details>
+  <summary>在正则表达式中，(JavaScript 不支持)固化分组「(?>...)」表示匹配到闭括号后，此结构体中的所有__都会被放弃。</summary>
+  <div>备用状态</div>
+  <div>【正则表达式】【备用状态】</div>
 </details>
 
 <details>
@@ -291,4 +307,10 @@
   <summary>在正则表达式中，要使用“忽略优先量词”需要在量词的后面加一个__。</summary>
   <div>「?」问号</div>
   <div>【正则表达式】【匹配优先】【量词】</div>
+</details>
+
+<details>
+  <summary>在正则表达式中，遇到“__失败”时，引擎会回归到备用状态。</summary>
+  <div>本地匹配</div>
+  <div>【正则表达式】</div>
 </details>

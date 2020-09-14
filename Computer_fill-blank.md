@@ -555,8 +555,8 @@
 </details>
 
 <details>
-  <summary>面向对象的`多态`：相同的行为，不同的实现。</summary>
-  <div>输出</div>
+  <summary>面向对象的`多态`：相同的行为，不同的__。</summary>
+  <div>实现</div>
 </details>
 
 <details>
