@@ -260,7 +260,7 @@
 </details>
 
 <details>
-  <summary>在正则表达式中，正则引擎是循环“匹配文本”还是“正则表达式”?</summary>
+  <summary>在正则表达式中，正则DFA引擎是循环“匹配文本”还是“正则表达式”?</summary>
   <div>匹配文本</div>
   <div>【正则表达式】【匹配优先】</div>
 </details>
