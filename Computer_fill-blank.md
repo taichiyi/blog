@@ -64,7 +64,7 @@
 
 <details>
   <summary>因为计算机只能处理__，如果要处理文本，就必须先把文本转换为数字才能处理。</summary>
-  <div>数字</div>
+  <div>二进制数字</div>
 </details>
 
 <details>
