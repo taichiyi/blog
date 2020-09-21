@@ -314,3 +314,16 @@
   <div>本地匹配</div>
   <div>【正则表达式】</div>
 </details>
+
+<details>
+  <summary>子序列（简称子列）：指序列的__项按原有__排列而得的序列。</summary>
+  <div>一部分</div>
+  <div>次序</div>
+  <div>【算法】</div>
+</details>
+
+<details>
+  <summary>子串：串中任意个__的字符组成的子序列称为该串的子串。</summary>
+  <div>连续</div>
+  <div>【算法】</div>
+</details>
