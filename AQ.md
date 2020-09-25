@@ -327,3 +327,12 @@
   <div>连续</div>
   <div>【算法】</div>
 </details>
+
+<details>
+  <summary>React 类组件的生命周期分为哪几个阶段？每个阶段分别按顺序触发哪些函数？</summary>
+  <div>分为“挂载”“更新”“卸载”三个阶段</div>
+  <div>“挂载”阶段：constructor -> getDerivedStateFromProps -> render -> componentDidMount</div>
+  <div>“更新”阶段：getStateFromProps -> shouldComponentUpdate -> render -> getSnapShotBeforeUpdate -> componentDidUpdate</div>
+  <div>“更新”阶段：componentWillUnMount</div>
+  <div>【React】【生命周期】</div>
+</details>
