@@ -550,7 +550,7 @@
 <details>
   <summary>表达式(expression)由__和__组成。最简单的表达式是不带运算符的一个常量或变量。(如: 22或beebop;带符号:55+22)</summary>
   <div>运算符</div>
-  <div>运算对象(运算操作符操作的对象)</div>
+  <div>运算对象(运算符操作的对象)</div>
 </details>
 
 <details>

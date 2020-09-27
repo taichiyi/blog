@@ -462,7 +462,7 @@
 </details>
 
 <details>
-  <summary>与javascript实例化类的方式不同，Python实例化类不需要使用__操作符。</summary>
+  <summary>与javascript实例化类的方式不同，Python实例化类不需要使用__运算符。</summary>
   <div>new</div>
 </details>
 
