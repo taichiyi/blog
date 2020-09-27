@@ -336,3 +336,53 @@
   <div>“更新”阶段：componentWillUnMount</div>
   <div>【React】【生命周期】</div>
 </details>
+
+<details>
+  <summary>子串：串中任意个__的字符组成的子序列称为该串的子串。</summary>
+  <div>连续</div>
+  <div>【算法】</div>
+</details>
+
+<details>
+  <summary>表达式(expression)由__和__组成。最简单的表达式是不带运算符的一个常量或变量。(如: 22或beebop;带符号:55+22)</summary>
+  <div>运算符</div>
+  <div>运算对象</div>
+  <div>【表达式】</div>
+</details>
+
+<details>
+  <summary>C表达式的重要特征之一是: 每个表达式都有一个__。</summary>
+  <div>值</div>
+  <div>【表达式】</div>
+</details>
+
+<details>
+  <summary>对表达式__时，有时会发生副作用。</summary>
+  <div>求值</div>
+  <div>【表达式】</div>
+</details>
+
+<details>
+  <summary>语句(statement)是程序的基本构建块。一条语句相当于一条完整的__。最简单的语句是空语句:";"。</summary>
+  <div>计算机指令</div>
+  <div>【语句】</div>
+</details>
+
+<details>
+  <summary>C中，赋值和函数调用都是表达式。没有所谓的“赋值语句”和“函数调用语句”，这些语句实际上都是__。</summary>
+  <div>表达式语句</div>
+  <div>【语句】</div>
+</details>
+
+<details>
+  <summary>while 语句是一种迭代语句，有时也被称为__语句。</summary>
+  <div>结构化</div>
+  <div>【语句】</div>
+</details>
+
+<details>
+  <summary>副作用(side effect)是对__或__的修改。</summary>
+  <div>数据对象</div>
+  <div>文件</div>
+  <div>【副作用】</div>
+</details>
