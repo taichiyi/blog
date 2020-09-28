@@ -412,7 +412,7 @@
 ## 3.4 Data Types
 
 <details>
-  <summary>ECMAScript有8种数据类型。七种原始(基本))类型_1_、_2_、_3_、_4_、_5_、_6_、_7_和一种引用()类型_8_。</summary>
+  <summary>ECMAScript有 8 种数据类型。七种原始(基本))类型_1_、_2_、_3_、_4_、_5_、_6_、_7_和一种引用()类型_8_。</summary>
   <div>1. Undefined(ES3)</div>
   <div>2. Null</div>
   <div>3. Boolean</div>
