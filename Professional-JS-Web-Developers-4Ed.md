@@ -1127,31 +1127,35 @@
 
 ## 4.2 Execution Context and Scope
 
-<details>
-  <summary>ECMAScript中有很多上下文，其中一种叫__上下文。</summary>
+<!-- <details>
+  <summary>ECMAScript 中有很多上下文，其中一种叫__上下文。</summary>
   <div>执行</div>
+</details> -->
+
+<details>
+  <summary>JavaScript 中，有 3 种执行上下文类型：__、__和__。</summary>
+  <div>全局(Global Execution Context)</div>
+  <div>函数(Functional Execution Context )</div>
+  <div>eval(Eval Function Execution Context)</div>
 </details>
 
 <details>
-  <summary>每个执行上下文都有一个关联的__，所有已定义的变量和函数都存在于该对象上。该对象无法通过代码访问。</summary>
-  <div>变量对象</div>
-</details>
-
-<details>
-  <summary>全局执行上下文(Global execution context)是最__的执行上下文。就像一个圆圈套一个圆圈。</summary>
-  <div>外层</div>
-</details>
-
-<details>
-  <summary>全局执行上下文(Global execution context)由__环境决定，在web浏览器中全局执行上下文(Global context)被称为Window执行上下文。</summary>
+  <summary>全局执行上下文(Global execution context)由__环境决定。一个__中只能有一个全局执行上下文。</summary>
   <div>宿主</div>
+  <div>程序</div>
 </details>
 
 <details>
-  <summary> 每当调用函数时，函数的__就会被压入执行上下文栈。函数完成执行后，将函数执行上下文__栈，将__返回到先前执行上下文。</summary>
-  <div>上下文</div>
+  <summary>当调用函数时，引擎都会创建一个新的__，创建完后就会被压入执行上下文栈。函数完成执行后，将函数执行上下文__栈，将__返回到先前执行上下文。</summary>
+  <div>局部执行上下文</div>
   <div>弹出</div>
   <div>控制权</div>
+</details>
+
+<details>
+  <summary>每次遇到新作用域时都会在当前执行上下文中创建__（例如，遇到if，for语句等）。有图</summary>
+  <div>词法环境</div>
+  <img src="https://oss.taichiyi.com/markdown/ov33jtml.png" alt="img">
 </details>
 
 <details>
@@ -1195,7 +1199,7 @@
 <details>
   <summary>每个词法环境有三个组成部分：1)__ 2)__ 3)__。</summary>
   <div>环境记录 EnvironmentRecord(Environment Record)</div>
-  <div>引用外部环境 outer(Reference to the outer environment)</div>
+  <div>引用外部环境 outer(Reference outer Lexical Environment)</div>
   <div>绑定this ThisBinding(This binding)</div>
 </details>
 
@@ -1205,15 +1209,13 @@
   <div>到值</div>
 </details>
 
-<!-- 不理解，暂时注释 -->
 <details>
   <summary>环境记录有两种类型：声明式环境记录(declarative)和对象环境记录(object)。</summary>
   <div></div>
 </details>
 
 <details>
-  <summary>声明式环境记录：存储变量、函数声明和参数。</summary>
-  <!-- 函数代码的词法环境包含声明性环境记录。 -->
+  <summary>声明式环境记录：存储变量(variable)、函数声明(function declaration)和参数。</summary>
   <div></div>
 </details>
 
@@ -1233,24 +1235,25 @@
 </details>
 
 <details>
-  <summary>变量环境：形式上和__环境只有一个区别，就是LexicalEnvironment换成了VariableEnvironment。</summary>
-  <div>词法</div>
-</details>
-
-<details>
-  <summary>在ES6中，LexicalEnvironment组件和VariableEnvironment组件之间的区别是前者用于存储__和变量（let和const），而后者仅用于存储变量（__）。</summary>
+  <summary>在 ES6 中，LexicalEnvironment 组件和 VariableEnvironment 组件之间的区别是前者用于存储__和变量（let和const），而后者仅用于存储变量（__）。</summary>
   <div>函数声明</div>
   <div>var</div>
 </details>
 
-<details>
+<!-- <details>
   <summary>执行阶段：完成对__的分配，并最终执行代码。</summary>
   <div>所有变量</div>
+</details> -->
+
+<details>
+  <summary>在 ES6 前，声明变量都是通过 var 关键字声明的，在 ES6 中则提倡使用 let 和 const 来声明变量，为了__var的写法，于是使用变量环境(VariableEnvironment)来存储var声明的变量。</summary>
+  <div>兼容</div>
 </details>
 
 <details>
-  <summary>在ES6前，声明变量都是通过var关键字声明的，在ES6中则提倡使用let和const来声明变量，为了__var的写法，于是使用变量环境(VariableEnvironment)来存储var声明的变量。</summary>
-  <div>兼容</div>
+  <summary>词法环境的“__”和“__”在执行上下文的创建阶段就已经确定。</summary>
+  <div>outer</div>
+  <div>ThisBinding</div>
 </details>
 
 <details>
@@ -1270,18 +1273,16 @@
     LexicalEnvironment: {
       EnvironmentRecord: {
         Type: "Object",
-        // Identifier bindings go here
-        a: < uninitialized >, // 使用为初始化(uninitialized)的变量，会报错
+        a: < uninitialized >, // 使用未初始化(uninitialized)的变量，会报错
         b: < uninitialized >,
         multiply: < func >
       },
-      outer: < null >,
+      outer(outer environment reference): < null >,
       ThisBinding: < Global Object>
     },
     VariableEnvironment: {
       EnvironmentRecord: {
         Type: "Object",
-        // Identifier bindings go here
         c: undefined,
       },
       outer: < null >,
@@ -1294,7 +1295,6 @@
     LexicalEnvironment: {
       EnvironmentRecord: {
         Type: "Object",
-        // Identifier bindings go here
         a: 20,
         b: 30,
         multiply: < func >
@@ -1305,7 +1305,6 @@
     VariableEnvironment: {
       EnvironmentRecord: {
         Type: "Object",
-        // Identifier bindings go here
         c: undefined,
       },
       outer: < null >,
@@ -1318,24 +1317,18 @@
     LexicalEnvironment: {
       EnvironmentRecord: {
         Type: "Declarative",
-        // Identifier bindings go here
         Arguments: {0: 20, 1: 30, length: 2},
       },
-      // 外部执行上下文
       outer: < GlobalLexicalEnvironment >,
-      // 如果是箭头函数创建的执行上下文则为undefined，
-      // ThisBinding为undefined时如果再上下文中调用this，
-      // 因为this是undefined所以使用上一个上下文绑定的this
-      ThisBinding: < Global Object or undefined >,
+      ThisBinding: < Global Object or undefined >,<!-- 严格模式 ? undefined : Global Object -->
     },
     VariableEnvironment: {
       EnvironmentRecord: {
         Type: "Declarative",
-        // Identifier bindings go here
         g: undefined
       },
       outer: < GlobalLexicalEnvironment >,
-      ThisBinding: < Global Object or undefined >
+      ThisBinding: < Global Object or undefined >,<!-- 严格模式 ? undefined : Global Object -->
     }
   }
   // 执行阶段
@@ -1343,20 +1336,18 @@
     LexicalEnvironment: {
       EnvironmentRecord: {
         Type: "Declarative",
-        // Identifier bindings go here
         Arguments: {0: 20, 1: 30, length: 2},
       },
       outer: < GlobalLexicalEnvironment >,
-      ThisBinding: < Global Object or undefined >,
+      ThisBinding: < Global Object or undefined >,<!-- 严格模式 ? undefined : Global Object -->
     },
     VariableEnvironment: {
       EnvironmentRecord: {
         Type: "Declarative",
-        // Identifier bindings go here
         g: 20
       },
       outer: < GlobalLexicalEnvironment >,
-      ThisBinding: < Global Object or undefine d>
+      ThisBinding: < Global Object or undefined >,<!-- 严格模式 ? undefined : Global Object -->
     }
   }
   </pre>
@@ -1365,15 +1356,8 @@
 ### 4.2.1 Scope Chain Augmentation
 
 <details>
-  <summary>有3种执行上下文类型：__、__和__。</summary>
-  <div>全局</div>
-  <div>局部(函数)</div>
-  <div>eval()</div>
-</details>
-
-<details>
-  <summary>但是还有其他方法可以扩展函数执行上下文(作用域链)。<!-- 某些语句会导致某个执行上下文临时添加到作用域链的__，然后在代码执行后将其__。-->分别是__和__。</summary>
-  <div>前端</div>
+  <summary>但是还有其他方法可以扩展执行上下文(作用域链)。某些语句可以在执行上下文中临时添加__(添加到最前端)，然后在代码执行后将其__。分别是__和__。</summary>
+  <div>作用域</div>
   <div>删除</div>
   <div>try-catch语句中的catch块</div>
   <div>with语句</div>
@@ -1382,6 +1366,11 @@
 <details>
   <summary>在 ES5 __中“with语句”已被禁止。</summary>
   <div>严格模式</div>
+</details>
+
+<details>
+  <summary>如果变量是通过 var 或函数声明，首先在当前执行上下文的变量环境(VariableEnvironment)环境记录(EnvironmentRecord)中查找，如果没有，才从变量环境的“outer”中查找。同理，可得 let 和 const。</summary>
+  <div></div>
 </details>
 
 #### 4.2.2.3 Constant Declaration Using const
@@ -3935,7 +3924,7 @@ foo();
 </details>
 
 <details>
-  <summary>声明一个函数时，将创建一个执行上下文，此时函数的__已经确定，调用函数时，将执行函数执行上下文。</summary>
+  <summary>声明一个函数时，此时函数执行上下文外层的__已经确定。</summary>
   <div>作用域</div>
 </details>
 
