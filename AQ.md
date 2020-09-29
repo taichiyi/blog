@@ -386,3 +386,126 @@
   <div>文件</div>
   <div>【副作用】</div>
 </details>
+
+<details>
+  <summary>在全局执行上下文中使用 let 声明变量时，变量不会像使用 var 那样添加到__。</summary>
+  <div>window对象</div>
+  <div>【执行上下文】【JavaScript】</div>
+</details>
+
+<details>
+  <summary>JavaScript 中，有 3 种执行上下文类型：__、__和__。</summary>
+  <div>全局(Global Execution Context)</div>
+  <div>函数(Functional Execution Context )</div>
+  <div>eval(Eval Function Execution Context)</div>
+  <div>【执行上下文】【JavaScript】</div>
+</details>
+
+<details>
+  <summary>JavaScript 中，全局执行上下文(Global execution context)由__环境决定。一个__中只能有一个全局执行上下文。</summary>
+  <div>宿主</div>
+  <div>程序</div>
+  <div>【执行上下文】【JavaScript】</div>
+</details>
+
+<details>
+  <summary>JavaScript 中，当调用函数时，引擎都会创建一个新的__，创建完后就会被压入执行上下文栈。函数完成执行后，将函数执行上下文__栈，将__返回到先前执行上下文。</summary>
+  <div>局部执行上下文</div>
+  <div>弹出</div>
+  <div>控制权</div>
+  <div>【执行上下文】【JavaScript】</div>
+</details>
+
+<details>
+  <summary>JavaScript 中，每次遇到新作用域时都会在当前执行上下文中创建__（例如，遇到if，for语句等）。有图</summary>
+  <div>词法环境</div>
+  <img src="https://oss.taichiyi.com/markdown/ov33jtml.png" alt="img">
+  <div>【执行上下文】【JavaScript】</div>
+</details>
+
+<details>
+  <summary>执行上下文栈就是其他编程语言所说的__栈。别称有：执行栈（execution stack）、控制栈（control stack）、运行时栈（run-time stack）与机器栈（machine stack）</summary>
+  <div>调用栈(call stack)</div>
+  <div>【执行上下文】【JavaScript】</div>
+</details>
+
+<details>
+  <summary>JavaScript 中，创建执行上下文有两个阶段：1) __阶段 和 2) __阶段。</summary>
+  <div>创建(Creation Phase)</div>
+  <div>执行(Execution Phase)</div>
+  <div>【执行上下文】【JavaScript】</div>
+</details>
+
+<details>
+  <summary>JavaScript 中，“创建阶段”主要发生了两个事情：1)创建__环境组件。2)创建__环境组件。</summary>
+  <div>词法(LexicalEnvironment)</div>
+  <div>变量(VariableEnvironment)</div>
+  <div>【执行上下文】【JavaScript】</div>
+</details>
+
+<details>
+  <summary>JavaScript 中，每个词法环境有三个组成部分：1)__ 2)__ 3)__。</summary>
+  <div>环境记录 EnvironmentRecord(Environment Record)</div>
+  <div>引用外部环境 outer(Reference outer Lexical Environment)</div>
+  <div>绑定this ThisBinding(This binding)</div>
+  <div>【执行上下文】【JavaScript】</div>
+</details>
+
+<details>
+  <summary>JavaScript 中，词法环境中的环境记录：记录了多个__映射__。</summary>
+  <div>标识符</div>
+  <div>到值</div>
+  <div>【执行上下文】【JavaScript】</div>
+</details>
+
+<details>
+  <summary>JavaScript 中，引用外部环境：外部执行上下文。对外部环境的引用意味着它可以访问其外部词法环境。这意味着，如果在当前__环境中找不到变量，则JavaScript引擎可以在外部环境中查找变量。</summary>
+  <div>词法</div>
+  <div>【执行上下文】【JavaScript】</div>
+</details>
+
+<details>
+  <summary>JavaScript 中，绑定this：__函数应该没有这个属性。</summary>
+  <div>箭头</div>
+  <div>【执行上下文】【JavaScript】</div>
+</details>
+
+<details>
+  <summary>在 ES6 中，LexicalEnvironment 组件和 VariableEnvironment 组件之间的区别是前者用于存储__和变量（let和const），而后者仅用于存储变量（__）。</summary>
+  <div>函数定义</div>
+  <div>var</div>
+  <div>【执行上下文】【JavaScript】</div>
+</details>
+
+<details>
+  <summary>JavaScript 中，词法环境的“__”和“__”在执行上下文的创建阶段就已经确定。</summary>
+  <div>outer</div>
+  <div>ThisBinding</div>
+  <div>【执行上下文】【JavaScript】</div>
+</details>
+
+<details>
+  <summary>声明：告诉编译器/解析器有这个变量的存在，但是不会分配__。例子</summary>
+  <div>内存空间</div>
+  <div>在 JavaScript 中，声明一个变量：var a;</div>
+  <div>【变量】【声明】</div>
+</details>
+
+<details>
+  <summary>定义：为__分配内存空间，在 C 语言中，一般__就包含了定义，例如：int a;(确定了变量和变量的类型，默认值一般为 0)，但是在 JavaScript 中，var a; 就只是声明。</summary>
+  <div>变量</div>
+  <div>声明</div>
+  <div>【变量】【定义】</div>
+</details>
+
+<details>
+  <summary>初始化：即__时赋的值。不指定的话开辟时赋该类型的默认值。初始化是编译器的行为。在 JavaScript 中，变量的初始化值为 undefined。</summary>
+  <div>开辟内存区域</div>
+  <div>【变量】【初始化】</div>
+</details>
+
+<details>
+  <summary>赋值：就是在__时，对变量的值进行刷新。赋值则是运行时的行为。</summary>
+  <div>运行</div>
+  <div>【变量】【赋值】</div>
+</details>

@@ -680,12 +680,11 @@
 </details>
 
 <details>
-  <summary>声明语句包括变量声明和函数声明。有4种语法：1.__ 2.__ 3.__。一个语句以 __ 开头才是函数声明语句。</summary>
+  <summary>声明语句包括变量声明和函数声明。有4种语法：1.__ 2.__ 3.__。</summary>
   <div>“var 标识符 [= 表达式];”</div>
   <div>“let 标识符 [= 表达式];”</div>
   <div>“const 标识符 [= 表达式];”</div>
   <div>“function [标识符] () {}”</div>
-  <div>function</div>
   <div>【声明语句】</div>
 </details>
 
