@@ -318,7 +318,7 @@
 ### 3.1.2 Identifiers
 
 <details>
-  <summary>__是变量，函数，属性或函数参数的总称。</summary>
+  <summary>__是变量，函数名，对象属性或函数参数的总称。</summary>
   <div>标识符</div>
 </details>
 
@@ -1236,7 +1236,7 @@
 
 <details>
   <summary>在 ES6 中，LexicalEnvironment 组件和 VariableEnvironment 组件之间的区别是前者用于存储__和变量（let和const），而后者仅用于存储变量（__）。</summary>
-  <div>函数声明</div>
+  <div>函数定义</div>
   <div>var</div>
 </details>
 
@@ -1410,7 +1410,7 @@
 <details>
   <summary>像C语言这样的底层语言一般都有底层的__接口。相反，JavaScript是在创建变量时自动进行了分配内存，并且在不使用它们时“自动”释放。释放的过程称为__。</summary>
   <div>内存管理</div>
-  <div>垃圾回收(garbage-collected，简称GC)</div>
+  <div>垃圾回收(garbage-collection，简称GC)</div>
 </details>
 
 <!-- <details>
@@ -1422,12 +1422,12 @@
 
 <details>
   <summary>浏览器中使用了两种策略：__和__。</summary>
-  <div>标记清除(Mark-and-Sweep)</div>
   <div>引用计数(reference counting)</div>
+  <div>标记清除(Mark-and-Sweep)</div>
 </details>
 
 <details>
-  <summary>到2008年为止，IE, Firefox, Opera, Chrome, and Safari 都是使用__策略。</summary>
+  <summary>到2012年为止，IE, Firefox, Opera, Chrome, and Safari 都是使用__策略。</summary>
   <div>标记清除</div>
 </details>
 
@@ -1745,16 +1745,16 @@
 
 #### 5.5.1.2 The eval() Method
 
-<details>
+<!-- <details>
   <summary>当解释器找到eval（）调用时，相当于在当前位置插入__，然后把代码插入到{}中。</summary>
   <div>{}</div>
-</details>
-
-<!-- <details>
-  <summary>在严格模式下，在eval（）内部创建的__和__，外部无法访问。</summary>
-  <div>变量</div>
-  <div>函数</div>
 </details> -->
+
+<details>
+  <summary>eval 有自己的执行上下文，不过应该没有 this，在严格模式下，eval 的行为是__作用域，反之是，__作用域。</summary>
+  <div>函数</div>
+  <div>块</div>
+</details>
 
 <details>
   <summary>如果你间接的使用 eval()，比如通过一个引用来调用它，而不是直接的调用 eval。 从 ECMAScript5 起，它工作在__作用域下，而不是__作用域中。</summary>
@@ -1763,7 +1763,13 @@
 </details>
 
 <details>
-  <summary>尽量使用__替代eval。</summary>
+  <summary>eval 的缺点：_1_、_2_。</summary>
+  <div>1: 安全性差，容易运行恶意代码</div>
+  <div>2: 性能差</div>
+</details>
+
+<details>
+  <summary>尽量使用__构造函数替代eval。</summary>
   <div>Function</div>
 </details>
 
@@ -3502,10 +3508,11 @@
 # 第10章 FUNCTIONS
 
 <details>
-  <summary>定义函数的方式有3中：__、__和__。</summary>
+  <summary>定义函数的方式有3中：__、__和__。function 在__时是函数声明，否则是函数表达式。</summary>
   <div>函数声明</div>
   <div>函数表达式</div>
   <div>Function构造函数</div>
+  <div>一个语句的开头</div>
 </details>
 
 <details>

@@ -509,3 +509,32 @@
   <div>运行</div>
   <div>【变量】【赋值】</div>
 </details>
+
+<details>
+  <summary>JavaScript 对象对其原型的引用是“__引用”，对其属性值的引用是“__引用”。</summary>
+  <div>隐式</div>
+  <div>显式</div>
+  <div>【引用类型】【JavaScript】</div>
+</details>
+
+<details>
+  <summary>JavaScript 中，装箱就是把__转变为__。装箱又分为隐示和显示，想好后看例子。</summary>
+  <div>原始类型</div>
+  <div>对应的对象</div>
+  <div>显示装箱：new String('abc').split('');</div>
+  <div>隐示装箱：'abc'.split('');</div>
+  <div>【JavaScript】【装箱】</div>
+</details>
+
+<details>
+  <summary>JavaScript 中，拆箱就是把__转变为__的值。</summary>
+  <div>对象</div>
+  <div>原始类型</div>
+  <div>【JavaScript】【拆箱】</div>
+</details>
+
+<details>
+  <summary>JavaScript 中，尝试把一个对象转换为原始值时，将调用 __ 方法。</summary>
+  <div>ToPrimitive ( input [ , PreferredType ] )</div>
+  <div>【JavaScript】【拆箱】</div>
+</details>
