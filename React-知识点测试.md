@@ -3,6 +3,12 @@
 
 ## React Context 是什么？什么情况下使用？有什么优缺点？
 
+[题目](#kg8uppvc-Q)
+[回答](#kg8uppvc-A)
+
+
+## 回答
+
 是什么：
 React Context 是一个对象，由工厂函数 createContext 创建。
 
