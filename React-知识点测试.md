@@ -3,26 +3,10 @@
 
 ## React Context 是什么？什么情况下使用？有什么优缺点？
 
-###### kg8uppvc-Q
+###### kg8uppvc-Q [查看回答](#kg8uppvc-A)
 
-[回答](#kg8uppvc-A)
+###### kg8uppvc-A [查看问题](#kg8uppvc-Q)
 
-<h1>123</h1>
-<h1>123</h1>
-<h1>123</h1>
-<h1>123</h1>
-<h1>123</h1>
-<h1>123</h1>
-<h1>123</h1>
-<h1>123</h1>
-<h1>123</h1>
-<h1>123</h1>
-<h1>123</h1>
-<h1>123</h1>
-
-###### kg8uppvc-A
-
-[问题](#kg8uppvc-Q)
 是什么：
 React Context 是一个对象，由工厂函数 createContext 创建。
 
