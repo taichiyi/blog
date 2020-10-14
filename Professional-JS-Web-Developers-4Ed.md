@@ -1253,7 +1253,7 @@
 <details>
   <summary>词法环境的“__”和“__”在执行上下文的创建阶段就已经确定。</summary>
   <div>outer</div>
-  <div>ThisBinding</div>
+  <div>EnvironmentRecord</div>
 </details>
 
 <details>
