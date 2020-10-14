@@ -1,14 +1,13 @@
-<!-- markdownlint-disable MD026 -->
+<!-- markdownlint-disable MD026 MD033 -->
 # React 知识点测试
 
 ## React Context 是什么？什么情况下使用？有什么优缺点？
 
-[题目](#kg8uppvc-Q)
-[回答](#kg8uppvc-A)
-
+<a id="#kg8uppvc-Q" href="#kg8uppvc-A">回答</a>
 
 ## 回答
 
+<a id="#kg8uppvc-A" href="#kg8uppvc-Q">题目</a>
 是什么：
 React Context 是一个对象，由工厂函数 createContext 创建。
 
