@@ -19,6 +19,12 @@
 
 [查看回答](#kg92kcfi-A)
 
+###### kg96w40y-Q
+
+## Context 的 Consumer 组件的作用是什么？
+
+[查看回答](#kg96w40y-A)
+
 ---
 
 ###### kg8uppvc-A
@@ -45,20 +51,20 @@ React Context 是一个对象，由工厂函数 createContext 创建。
 
 ``` text
 程度：中级
-知识点：React、React Context
-延伸知识点：设计模式、React 的上下文、控制反转
+知识点：React Context
+延伸知识点：设计模式、React 的执行上下文、控制反转
 ```
 
 ###### kg921vgx-A
 
 [查看问题](#kg921vgx-Q)
 
-Provider 接受可以 value 属性，value 会修改 Context 对象的值。
+Provider 接受 value 属性，value 会修改 React Context 对象的值。
 
 ``` text
 程度：中级
-知识点：React、React Context
-延伸知识点：React 的上下文
+知识点：React Context
+延伸知识点：React 的执行上下文
 ```
 
 ###### kg92kcfi-A
@@ -70,3 +76,21 @@ Provider 接受可以 value 属性，value 会修改 Context 对象的值。
 
 怎么赋值：
 实例化时类组件的父类会把 content 和 props 参数赋值给实例的 content 和 props 属性。
+
+``` text
+程度：中级
+知识点：React Context
+延伸知识点：React 的执行上下文
+```
+
+###### kg96w40y-A
+
+[查看问题](#kg96w40y-Q)
+
+基于 React Context 的值进行渲染
+
+``` text
+程度：中级
+知识点：React Context
+延伸知识点：React 的执行上下文
+```
