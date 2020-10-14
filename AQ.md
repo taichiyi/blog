@@ -480,7 +480,7 @@
 <details>
   <summary>JavaScript 中，词法环境的“__”和“__”在执行上下文的创建阶段就已经确定。</summary>
   <div>outer</div>
-  <div>ThisBinding</div>
+  <div>EnvironmentRecord</div>
   <div>【执行上下文】【JavaScript】</div>
 </details>
 
@@ -537,4 +537,16 @@
   <summary>JavaScript 中，尝试把一个对象转换为原始值时，将调用 __ 方法。</summary>
   <div>ToPrimitive ( input [ , PreferredType ] )</div>
   <div>【JavaScript】【拆箱】</div>
+</details>
+
+<details>
+  <summary>命令式编程（__ Programming）：详细的命令机器怎么一步一步的得到结果。</summary>
+  <div>Imperative[ɪmˈperətɪv]</div>
+  <div>【编程思想】</div>
+</details>
+
+<details>
+  <summary>声明式编程（__ Programming）：只告诉结果，不关心过程。</summary>
+  <div>Declarative[dɪˈklærətɪv]</div>
+  <div>【编程思想】</div>
 </details>
