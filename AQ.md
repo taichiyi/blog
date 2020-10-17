@@ -17,7 +17,7 @@
 
 <details>
   <summary>创建型模式有 5 种：_1_、_2_、_3_、_4_和_5_。</summary>
-  <div>1. 建造者模式（Builder pattern）</div>
+  <div>1. 建造者（生成器）模式（Builder pattern）</div>
   <div>2. 单例模式（Singleton pattern）</div>
   <div>3. 原型模式（Prototype pattern）</div>
   <div>4. 工厂模式（Factory pattern）</div>
@@ -549,4 +549,10 @@
   <summary>声明式编程（__ Programming）：只告诉结果，不关心过程。</summary>
   <div>Declarative[dɪˈklærətɪv]</div>
   <div>【编程思想】</div>
+</details>
+
+<details>
+  <summary>排序算法分为哪几类？常见的排序算法有哪些？</summary>
+  <div>排序算法分为内部和外部；</div>
+  <div>【算法】</div>
 </details>
