@@ -556,3 +556,106 @@
   <div>排序算法分为内部和外部；</div>
   <div>【算法】</div>
 </details>
+
+<details>
+  <summary>程序（计算机程序 Program）是一个__。</summary>
+  <div>指令序列</div>
+  <div>【计算机】</div>
+</details>
+
+<details>
+  <summary>软件(Software)包括计算机使用的程序和其他操作信息。软件可以由多个__组成。</summary>
+  <div>程序</div>
+  <div>软件>程序>应用程序</div>
+  <div>【计算机】</div>
+</details>
+
+<details>
+  <summary>__(Aplication software)和__(System software)都是一个程序或一组程序。应用程序软件面向__，系统软件面向__，应用程序软件无法自行运行，而是依赖于系统软件来执行。</summary>
+  <div>应用程序软件</div>
+  <div>系统软件</div>
+  <div>最终用户</div>
+  <div>开发者</div>
+  <div>【计算机】</div>
+</details>
+
+<details>
+  <summary>程序=__+__</summary>
+  <div>数据结构</div>
+  <div>算法</div>
+  <div>【计算机】</div>
+</details>
+
+<details>
+  <summary>目标程序：只包含__被编译器翻译成的__代码，这还不是一个完整的程序。</summary>
+  <div>源程序</div>
+  <div>机器语言</div>
+  <div>【计算机】</div>
+</details>
+
+<details>
+  <summary>目标程序要成为__，还缺少__和__。</summary>
+  <div>可执行文件</div>
+  <div>启动代码</div>
+  <div>库函数</div>
+  <div>【计算机】</div>
+</details>
+
+<details>
+  <summary>编译（全称：编译程序）：把__的工作过程。</summary>
+  <div>一个源程序翻译成目标程序</div>
+  <div>【计算机】</div>
+</details>
+
+<details>
+  <summary>源代码（也称__）是指未编译的按照一定的程序设计语言规范书写的文本文件，是一系列人类可读的计算机语言指令。</summary>
+  <div>源程序</div>
+  <div>【计算机】</div>
+</details>
+
+<details>
+  <summary>GUI 的英文全称__，中文全称__。</summary>
+  <div>Graphical User Interface</div>
+  <div>[ˈɡræfɪkl][ˈjuːzər][ˈɪntərfeɪs]</div>
+  <div>图形用户界面</div>
+  <div>【计算机】</div>
+</details>
+
+<details>
+  <summary>代码复用，也被称作软件复用。就是再利用已有的__，或者__去编写新的代码来构造软件。</summary>
+  <div>代码</div>
+  <div>相关的知识</div>
+  <div>【计算机】</div>
+</details>
+
+<details>
+  <summary>软件复用的抽象级别：源代码->继承/组合->程序库->框架->设计模式->分析</summary>
+  <div>代码</div>
+  <div>相关的知识</div>
+  <div>【计算机】</div>
+</details>
+
+<details>
+  <summary>类与类之间的耦合度从弱到强排列：__->__->__->__->__。</summary>
+  <div>依赖关系</div>
+  <div>关联关系</div>
+  <div>聚合关系</div>
+  <div>组合关系</div>
+  <div>泛化关系和实现关系</div>
+  <div>【面向对象】</div>
+</details>
+
+<details>
+  <summary>依赖（Dependency）关系是一种__关系，它是对象之间耦合度最弱的一种关联方式，是临时性的关联。在代码中，某个类的方法通过__、__或者__来访问另一个类（被依赖类）中的某些方法来完成一些职责。</summary>
+  <div>使用</div>
+  <div>局部变量</div>
+  <div>方法的参数</div>
+  <div>对静态方法的调用</div>
+  <div>【面向对象】【类之间的关系】</div>
+</details>
+
+<details>
+  <summary>关联（Association）关系是对象之间的一种__关系，用于表示一类对象与另一类对象之间的联系。</summary>
+  <div>引用</div>
+  <div>【面向对象】【类之间的关系】</div>
+</details>
