@@ -484,14 +484,14 @@ const data: QAs[] = [
   },
   {
     id: 54,
-    title: `使用 const 声明变量后，该变量的__就不可改变了。`,
+    title: `使用 const 声明常量后，该常量的__就不可改变了。`,
     answers: ['指针'],
     tags: ['计算机科学', '程序设计语言'],
     type: '基础知识',
   },
   {
     id: 55,
-    title: `在 JavaScript 中声明变量，可以通过__、__ 和 __ 3个关键字。`,
+    title: `在 JavaScript 中，声明可以通过__、__ 和 __ 3个关键字。`,
     answers: ['var[vɑ:]', 'let[let]', 'const[ˈkɒnst]'],
     tags: ['计算机科学', '程序设计语言', 'JavaScript'],
     type: '通用领域知识',
