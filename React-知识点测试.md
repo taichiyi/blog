@@ -75,7 +75,7 @@ Provider 接受 value 属性，value 会修改 React Context 对象的值。
 当类组件存在静态属性 contextType 时，会从静态属性 contextType 中读取出 context 的值，并当做第二个参数，实例化类。
 
 怎么赋值：
-实例化时类组件的父类会把 content 和 props 参数赋值给实例的 content 和 props 属性。
+实例化时类组件的父类会把 context 和 props 参数赋值给实例的 context 和 props 属性。
 
 ``` text
 程度：中级
