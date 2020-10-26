@@ -409,7 +409,7 @@ const data: QAs[] = [
       '固定值',
       {
         tag: 'img',
-        val: '<img src="https://oss.taichiyi.com/markdown/c7103bc4ded24320badbf88a9e4e43c6.png" />',
+        val: '<img style="width: 100%" src="https://oss.taichiyi.com/markdown/c7103bc4ded24320badbf88a9e4e43c6.png" />',
       },
     ],
     tags: ['计算机科学', '算法'],
@@ -1755,7 +1755,7 @@ const data: QAs[] = [
       '词法环境',
       {
         tag: 'img',
-        val:'<img src="https://oss.taichiyi.com/markdown/ov33jtml.png" alt="img">',
+        val:'<img style="width: 100%" src="https://oss.taichiyi.com/markdown/ov33jtml.png" alt="img">',
       },
     ],
     tags: ['计算机科学', '程序设计语言', 'JavaScript'],
@@ -1961,7 +1961,7 @@ const data: QAs[] = [
       `基数排序`,
       {
         tag:'img',
-        val:'<img src="https://oss.taichiyi.com/markdown/kghpr87l.png" />'
+        val:'<img style="width: 100%" src="https://oss.taichiyi.com/markdown/kghpr87l.png" />'
       },
     ],
     tags: ['计算机科学', '算法', '排序算法',],
@@ -2232,7 +2232,7 @@ const data: QAs[] = [
     answers: [
       {
         tag:'img',
-        val:'<img src="https://oss.taichiyi.com/markdown/kghpr87l.png" />'
+        val:'<img style="width: 100%" src="https://oss.taichiyi.com/markdown/kghpr87l.png" />'
       },
     ],
     tags: ['计算机科学', '算法', '排序算法',],
@@ -2311,8 +2311,8 @@ const data: QAs[] = [
     id: 233,
     title: '快速排序算法的应用场景（优点）是什么？',
     answers: [
+      '序列重复率越低，速度越快。',
       '序列的长度 n 较大时，较快。',
-      '序列越无序，速度越快。',
     ],
     tags: ['计算机科学', '算法', '排序算法',],
     type: '基础知识',
@@ -2371,7 +2371,7 @@ const data: QAs[] = [
     answers: [
       {
         tag:'img',
-        val: '<img src="https://oss.taichiyi.com/markdown/kgnfhya9.png" />',
+        val: '<img style="width: 100%" src="https://oss.taichiyi.com/markdown/kgnfhya9.png" />',
       }
     ],
     tags: ['计算机科学', '算法', '排序算法',],
@@ -2408,9 +2408,28 @@ const data: QAs[] = [
     id: 242,
     title: 'React Router DOM 有几种路由器？说说优缺点',
     answers: [
-      'React Router DOM 提供两个路由器 BroswerRouter 和 HashRouter，前者基于 History API ，后者基于 hash。',
-      'hash 的优点：浏览器兼容性好，不需要改动服务器。',
-      'History API 的优点：URL更直观，更常见；IE9及其以下不支持 History API',
+      {
+        tag:'pre',
+        val:
+        `
+        React Router DOM 提供两个路由器：
+          BroswerRouter（基于 History API）
+          HashRouter（基于 URL Hash）
+        URL Hash：
+          优点
+            1. 浏览器兼容性好
+            2. 不需要服务器端的支持。
+          缺点
+            1. 对服务端渲染不友好（服务器无法获取 hash 的内容）
+            2. 需要自己去实现页面锚点导航
+        History API：
+          优点
+            1. URL 更直观，更常见
+          缺点
+            1. 需要服务器端的支持
+            2. 不支持 IE9 及其以下
+        `
+      },
     ],
     tags: ['计算机科学', 'React', 'React Router',],
     type: '专用领域知识',
@@ -2422,7 +2441,8 @@ const data: QAs[] = [
       '<BrowserRouter>',
       '<HashRouter>',
       '<MemoryRouter>',
-      '以上组件将创建browser，hash和memory的 history 实例。',
+      '<StaticRouter>',
+      '以上组件将创建 Browser，Hash，Memory 和 StaticRouter 的 history 实例。',
     ],
     tags: ['计算机科学', 'React', 'React Router',],
     type: '专用领域知识',
