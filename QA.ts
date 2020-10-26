@@ -15,6 +15,7 @@ export interface QAs {
   tags: (
     '生命周期' |
     'React' |
+    'React Router' |
     'C' |
     'JavaScript' |
     'CPU' |
@@ -2349,10 +2350,17 @@ const data: QAs[] = [
     id: 237,
     title: '快速排序算法的思想（原理）是什么？',
     answers: [
-      '1. 快速排序算法采用了分治策略，首选选择任意一个元素当做基准值（放了简化代码的书写，一般选择两端的元素当做基准值；',
-      '2. 然后进行分区，小与基准值的放左边，大于等于放右边；然后找出了基准（pivot）',
-      '3. 根据基准分出两个子序列',
-      '4. 递归',
+      {
+        tag:'pre',
+        val:
+        `
+        - 快速排序算法采用了分治策略，怎么分？
+        - 把序列当做一个分区，然后根据基准（pivot[ˈpɪvət]），把分区(partition[pɑːrˈtɪʃn])一分为二；
+        - 然后递归此步骤，直至每个分区只有一个元素，基准怎么找？分 2 步。
+          1. 选择分区的任意一个元素当做基准值（为了简化代码的书写，一般选择分区两端的元素当做基准值）
+          2. 小于基准值的放左边，大于等于放右边；至此就找出了基准（pivot[ˈpɪvət]）
+        `,
+      }
     ],
     tags: ['计算机科学', '算法', '排序算法',],
     type: '基础知识',
@@ -2368,6 +2376,56 @@ const data: QAs[] = [
     ],
     tags: ['计算机科学', '算法', '排序算法',],
     type: '基础知识',
+  },
+  {
+    id: 239,
+    title: '写一下，“冒泡排序”、“选择排序”、“插入排序”、“希尔排序”、“快速排序”的伪代码？脑里写也行',
+    answers: [
+      '参看 “排序算法.md”',
+    ],
+    tags: ['计算机科学', '算法', '排序算法',],
+    type: '基础知识',
+  },
+  {
+    id: 240,
+    title: 'React Router（React 路由）是什么？',
+    answers: [
+      'React Router 是一个基于 React 的声明式的路由库。',
+    ],
+    tags: ['计算机科学', 'React', 'React Router',],
+    type: '专用领域知识',
+  },
+  {
+    id: 241,
+    title: 'React Router 和 客户端(浏览器|普通)路由有什么区别？',
+    answers: [
+      '客户端路由映射的是 html 文件，React Router 映射的是 React 组件；React Router 路由的变动不会刷新页面。',
+    ],
+    tags: ['计算机科学', 'React', 'React Router',],
+    type: '专用领域知识',
+  },
+  {
+    id: 242,
+    title: 'React Router DOM 有几种路由器？说说优缺点',
+    answers: [
+      'React Router DOM 提供两个路由器 BroswerRouter 和 HashRouter，前者基于 History API ，后者基于 hash。',
+      'hash 的优点：浏览器兼容性好，不需要改动服务器。',
+      'History API 的优点：URL更直观，更常见；IE9及其以下不支持 History API',
+    ],
+    tags: ['计算机科学', 'React', 'React Router',],
+    type: '专用领域知识',
+  },
+  {
+    id: 243,
+    title: 'React Router 提供了哪几种类型的 <Router> 组件？',
+    answers: [
+      '<BrowserRouter>',
+      '<HashRouter>',
+      '<MemoryRouter>',
+      '以上组件将创建browser，hash和memory的 history 实例。',
+    ],
+    tags: ['计算机科学', 'React', 'React Router',],
+    type: '专用领域知识',
   },
 ];
 
