@@ -16,8 +16,8 @@ export interface QAs {
     '生命周期' |
     'React' |
     'React Router' |
-    'C' |
     'JavaScript' |
+    'C' |
     'CPU' |
     '内存' |
     '正则表达式' |
@@ -600,12 +600,12 @@ const data: QAs[] = [
   },
   {
     id: 67,
-    title: `xxx`,
+    title: `为什么要遵守设计模式的原则，或者说为什么要学习和使用设计模式？`,
     answers: [
-      'xxx',
+      '为了提高软件的可维护性、可复用性、可拓展性和灵活性。',
     ],
-    tags: ['计算机科学', '程序设计语言', 'JavaScript'],
-    type: '通用领域知识',
+    tags: ['计算机科学', '设计模式'],
+    type: '基础知识',
   },
   {
     id: 68,
@@ -973,7 +973,7 @@ const data: QAs[] = [
       {
         tag: 'pre',
         val:
-        `
+          `
         [data:data]
         data:,Hello%2C%20World!
         <!--  -->
@@ -1030,9 +1030,9 @@ const data: QAs[] = [
   },
   {
     id: 108,
-    title: '在列表中，数据项的顺序是__定的，__可以存在多个相同的数据项。',
+    title: '在列表中，数据项的顺序是确定的吗？是否可以存在多个相同的数据项？',
     answers: [
-      '确',
+      '是',
       '是',
     ],
     tags: ['计算机科学', '数学', '算法',],
@@ -1627,7 +1627,7 @@ const data: QAs[] = [
       '一部分',
       '次序',
     ],
-    tags: ['数学','计算机科学',],
+    tags: ['数学', '计算机科学',],
     type: '基础知识',
   },
   {
@@ -1636,7 +1636,7 @@ const data: QAs[] = [
     answers: [
       '连续',
     ],
-    tags: ['数学','计算机科学',],
+    tags: ['数学', '计算机科学',],
     type: '基础知识',
   },
   {
@@ -1648,7 +1648,7 @@ const data: QAs[] = [
       '“更新”阶段：getStateFromProps -> shouldComponentUpdate -> render -> getSnapShotBeforeUpdate -> componentDidUpdate',
       '“更新”阶段：componentWillUnMount',
     ],
-    tags: ['计算机科学','React','生命周期'],
+    tags: ['计算机科学', 'JavaScript', 'React', '生命周期'],
     type: '专用领域知识',
   },
   {
@@ -1658,7 +1658,7 @@ const data: QAs[] = [
       '运算符',
       '运算对象',
     ],
-    tags: ['计算机科学','程序设计语言','C'],
+    tags: ['计算机科学', '程序设计语言', 'C'],
     type: '基础知识',
   },
   {
@@ -1667,7 +1667,7 @@ const data: QAs[] = [
     answers: [
       '值',
     ],
-    tags: ['计算机科学','程序设计语言','C'],
+    tags: ['计算机科学', '程序设计语言', 'C'],
     type: '基础知识',
   },
   {
@@ -1676,7 +1676,7 @@ const data: QAs[] = [
     answers: [
       '求值',
     ],
-    tags: ['计算机科学','程序设计语言','C'],
+    tags: ['计算机科学', '程序设计语言', 'C'],
     type: '基础知识',
   },
   {
@@ -1685,7 +1685,7 @@ const data: QAs[] = [
     answers: [
       '计算机指令',
     ],
-    tags: ['计算机科学','程序设计语言','C'],
+    tags: ['计算机科学', '程序设计语言', 'C'],
     type: '基础知识',
   },
   {
@@ -1694,7 +1694,7 @@ const data: QAs[] = [
     answers: [
       '表达式语句',
     ],
-    tags: ['计算机科学','程序设计语言','C'],
+    tags: ['计算机科学', '程序设计语言', 'C'],
     type: '基础知识',
   },
   {
@@ -1703,7 +1703,7 @@ const data: QAs[] = [
     answers: [
       '结构化',
     ],
-    tags: ['计算机科学','程序设计语言','C'],
+    tags: ['计算机科学', '程序设计语言', 'C'],
     type: '基础知识',
   },
   {
@@ -1755,7 +1755,7 @@ const data: QAs[] = [
       '词法环境',
       {
         tag: 'img',
-        val:'<img style="width: 100%" src="https://oss.taichiyi.com/markdown/ov33jtml.png" alt="img">',
+        val: '<img style="width: 100%" src="https://oss.taichiyi.com/markdown/ov33jtml.png" alt="img">',
       },
     ],
     tags: ['计算机科学', '程序设计语言', 'JavaScript'],
@@ -1856,7 +1856,7 @@ const data: QAs[] = [
       '内存空间',
       '在 JavaScript 中，声明一个变量：var a;',
     ],
-    tags: ['计算机科学', '程序设计语言','C'],
+    tags: ['计算机科学', '程序设计语言', 'C'],
     type: '通用领域知识',
   },
   {
@@ -1960,8 +1960,8 @@ const data: QAs[] = [
       `堆排序`,
       `基数排序`,
       {
-        tag:'img',
-        val:'<img style="width: 100%" src="https://oss.taichiyi.com/markdown/kghpr87l.png" />'
+        tag: 'img',
+        val: '<img style="width: 100%" src="https://oss.taichiyi.com/markdown/kghpr87l.png" />'
       },
     ],
     tags: ['计算机科学', '算法', '排序算法',],
@@ -2053,7 +2053,7 @@ const data: QAs[] = [
       '源程序',
       '机器语言',
     ],
-    tags: ['计算机科学','编译原理'],
+    tags: ['计算机科学', '编译原理'],
     type: '基础知识',
   },
   {
@@ -2063,7 +2063,7 @@ const data: QAs[] = [
       '源程序',
       '机器语言',
     ],
-    tags: ['计算机科学','编译原理'],
+    tags: ['计算机科学', '编译原理'],
     type: '基础知识',
   },
   {
@@ -2074,7 +2074,7 @@ const data: QAs[] = [
       '启动代码',
       '库函数',
     ],
-    tags: ['计算机科学','编译原理'],
+    tags: ['计算机科学', '编译原理'],
     type: '基础知识',
   },
   {
@@ -2084,7 +2084,7 @@ const data: QAs[] = [
       '源程序',
       '目标程序',
     ],
-    tags: ['计算机科学','编译原理'],
+    tags: ['计算机科学', '编译原理'],
     type: '基础知识',
   },
   {
@@ -2104,7 +2104,7 @@ const data: QAs[] = [
       '[ˈɡræfɪkl][ˈjuːzər][ˈɪntərfeɪs]',
       '图形用户界面',
     ],
-    tags: ['计算机科学','图形学',],
+    tags: ['计算机科学', '图形学',],
     type: '基础知识',
   },
   {
@@ -2137,7 +2137,7 @@ const data: QAs[] = [
       '组合关系',
       '泛化关系和实现关系',
     ],
-    tags: ['计算机科学','编程思想',],
+    tags: ['计算机科学', '编程思想',],
     type: '基础知识',
   },
   {
@@ -2149,7 +2149,7 @@ const data: QAs[] = [
       '方法的参数',
       '对静态方法的调用',
     ],
-    tags: ['计算机科学','编程思想',],
+    tags: ['计算机科学', '编程思想',],
     type: '基础知识',
   },
   {
@@ -2158,7 +2158,7 @@ const data: QAs[] = [
     answers: [
       '引用',
     ],
-    tags: ['计算机科学','编程思想',],
+    tags: ['计算机科学', '编程思想',],
     type: '基础知识',
   },
   {
@@ -2169,27 +2169,29 @@ const data: QAs[] = [
       '聚合关系',
       '组合关系',
     ],
-    tags: ['计算机科学','编程思想',],
+    tags: ['计算机科学', '编程思想',],
     type: '基础知识',
   },
   {
     id: 220,
-    title: `在面向对象程序设计（OOP）中，聚合（Aggregation[ˌæɡrɪˈɡeɪʃn]）关系是强关联关系，是整体和部分之间的关系，是 __-a 的关系。部分对象可以脱离整体对象而独立存在吗？`,
+    title: `在面向对象程序设计（OOP）中，聚合（Aggregation[ˌæɡrɪˈɡeɪʃn]）关系是强关联关系，是整体__部分的关系（是 __-a 的关系）。部分对象可以脱离整体对象而独立存在吗？`,
     answers: [
+      '包含',
       'has',
       '可以',
     ],
-    tags: ['计算机科学','编程思想',],
+    tags: ['计算机科学', '编程思想',],
     type: '基础知识',
   },
   {
     id: 221,
-    title: `在面向对象程序设计（OOP）中，组合（Composition[ˌkɑːmpəˈzɪʃn]）关系是一种更强烈的聚合关系，表示类之间的整体与部分的关系，但它是 __-a 关系。部分对象可以脱离整体对象而独立存在吗？`,
+    title: `在面向对象程序设计（OOP）中，组合（Composition[ˌkɑːmpəˈzɪʃn]）关系是一种更强烈的聚合关系，表示整体由部分__的关系（是 __-a 关系）。部分对象可以脱离整体对象而独立存在吗？`,
     answers: [
+      '构成',
       'cxmtains',
       '不可以',
     ],
-    tags: ['计算机科学','编程思想',],
+    tags: ['计算机科学', '编程思想',],
     type: '基础知识',
   },
   {
@@ -2200,7 +2202,7 @@ const data: QAs[] = [
       '特殊',
       'is',
     ],
-    tags: ['计算机科学','编程思想',],
+    tags: ['计算机科学', '编程思想',],
     type: '基础知识',
   },
   {
@@ -2211,7 +2213,7 @@ const data: QAs[] = [
       '实现类',
       'is',
     ],
-    tags: ['计算机科学','编程思想',],
+    tags: ['计算机科学', '编程思想',],
     type: '基础知识',
   },
   {
@@ -2223,7 +2225,7 @@ const data: QAs[] = [
       '属性',
       '外',
     ],
-    tags: ['计算机科学','编程思想',],
+    tags: ['计算机科学', '编程思想',],
     type: '基础知识',
   },
   {
@@ -2231,8 +2233,8 @@ const data: QAs[] = [
     title: '介绍一下“冒泡排序”、“选择排序”、“插入排序”、“希尔排序”、“快速排序”的时间复杂度、空间复杂度、排序方式和稳定性。',
     answers: [
       {
-        tag:'img',
-        val:'<img style="width: 100%" src="https://oss.taichiyi.com/markdown/kghpr87l.png" />'
+        tag: 'img',
+        val: '<img style="width: 100%" src="https://oss.taichiyi.com/markdown/kghpr87l.png" />'
       },
     ],
     tags: ['计算机科学', '算法', '排序算法',],
@@ -2351,9 +2353,9 @@ const data: QAs[] = [
     title: '快速排序算法的思想（原理）是什么？',
     answers: [
       {
-        tag:'pre',
+        tag: 'pre',
         val:
-        `
+          `
         - 快速排序算法采用了分治策略，怎么分？
         - 把序列当做一个分区，然后根据基准（pivot[ˈpɪvət]），把分区(partition[pɑːrˈtɪʃn])一分为二；
         - 然后递归此步骤，直至每个分区只有一个元素，基准怎么找？分 2 步。
@@ -2370,7 +2372,7 @@ const data: QAs[] = [
     title: '排序算法可以分类为哪些？',
     answers: [
       {
-        tag:'img',
+        tag: 'img',
         val: '<img style="width: 100%" src="https://oss.taichiyi.com/markdown/kgnfhya9.png" />',
       }
     ],
@@ -2388,11 +2390,11 @@ const data: QAs[] = [
   },
   {
     id: 240,
-    title: 'React Router（React 路由）是什么？',
+    title: 'React Router[ˈraʊtər]（React 路由）是什么？',
     answers: [
       'React Router 是一个基于 React 的声明式的路由库。',
     ],
-    tags: ['计算机科学', 'React', 'React Router',],
+    tags: ['计算机科学', 'JavaScript', 'React', 'React Router',],
     type: '专用领域知识',
   },
   {
@@ -2401,7 +2403,7 @@ const data: QAs[] = [
     answers: [
       '客户端路由映射的是 html 文件，React Router 映射的是 React 组件；React Router 路由的变动不会刷新页面。',
     ],
-    tags: ['计算机科学', 'React', 'React Router',],
+    tags: ['计算机科学', 'JavaScript', 'React', 'React Router',],
     type: '专用领域知识',
   },
   {
@@ -2409,9 +2411,9 @@ const data: QAs[] = [
     title: 'React Router DOM 有几种路由器？说说优缺点',
     answers: [
       {
-        tag:'pre',
+        tag: 'pre',
         val:
-        `
+          `
         React Router DOM 提供两个路由器：
           BroswerRouter（基于 History API）
           HashRouter（基于 URL Hash）
@@ -2431,7 +2433,7 @@ const data: QAs[] = [
         `
       },
     ],
-    tags: ['计算机科学', 'React', 'React Router',],
+    tags: ['计算机科学', 'JavaScript', 'React', 'React Router',],
     type: '专用领域知识',
   },
   {
@@ -2444,8 +2446,216 @@ const data: QAs[] = [
       '<StaticRouter>',
       '以上组件将创建 Browser，Hash，Memory 和 StaticRouter 的 history 实例。',
     ],
-    tags: ['计算机科学', 'React', 'React Router',],
+    tags: ['计算机科学', 'JavaScript', 'React', 'React Router',],
     type: '专用领域知识',
+  },
+  {
+    id: 244,
+    title: 'React Router 中，有哪些方式可以访问 history 对象？',
+    answers: [
+      {
+        tag: 'pre',
+        val:
+          `
+        - 首先哪些对象存了 history 对象的引用？
+          1. React 上下文：RouterContext
+          2. React 上下文：HistoryContext
+        - 答
+         1. 要访问 RouterContent 中的 history 对象可以通过高阶组件 withRouter。
+         2. 要访问 HistoryContext 可以通过调用 React Router 的 hook 方法 useHistory
+        `,
+      },
+    ],
+    tags: ['计算机科学', 'JavaScript', 'React', 'React Router',],
+    type: '专用领域知识',
+  },
+  {
+    id: 245,
+    title: `执行上下文，是这块代码执行时的__，它包含了代码执行所需的所有信息，其中包括 this 引用，以及所有变量、对象和函数定义。`,
+    answers: [
+      '环境',
+    ],
+    tags: ['计算机科学', '程序设计语言', 'JavaScript'],
+    type: '通用领域知识',
+  },
+  {
+    id: 246,
+    title: `计算机的最下层是 CPU 指令，其本质就是用“__定义+__执行+__判断+__”所表达的逻辑过程。`,
+    answers: [
+      '变量',
+      '顺序',
+      '分支',
+      '循环',
+    ],
+    tags: ['计算机科学', 'CPU',],
+    type: '基础知识',
+  },
+  {
+    id: 247,
+    title: 'React Router 的 <Link> 标签和 <a> 标签有什么区别？',
+    answers: [
+      'Link 做了些其他操作，例如对 History 对象做了修改',
+    ],
+    tags: ['计算机科学', 'JavaScript', 'React', 'React Router',],
+    type: '专用领域知识',
+  },
+  {
+    id: 248,
+    title: '高阶组件（HOC）是 React 中用于__的一种高级技巧。高阶组件是__为__，返回值为__的__。',
+    answers: [
+      '复用组件逻辑',
+      '参数',
+      '组件',
+      '新组件',
+      '函数',
+    ],
+    tags: ['计算机科学', 'JavaScript', 'React',],
+    type: '专用领域知识',
+  },
+  {
+    id: 249,
+    title: 'HOC 是__函数。基于__的设计模式，符合设计模式的组合复用原则。',
+    answers: [
+      '纯',
+      '组合模式',
+    ],
+    tags: ['计算机科学', 'JavaScript', 'React',],
+    type: '专用领域知识',
+  },
+  {
+    id: 250,
+    title: '__是 React 中代码复用的基本单元。',
+    answers: [
+      '组件',
+    ],
+    tags: ['计算机科学', 'JavaScript', 'React',],
+    type: '专用领域知识',
+  },
+  {
+    id: 251,
+    title: `设计模式是什么？`,
+    answers: [
+      '设计模式是软件设计中常见问题的典型解决方案。',
+    ],
+    tags: ['计算机科学', '设计模式'],
+    type: '基础知识',
+  },
+  {
+    id: 252,
+    title: `介绍一下设计模式 7 原则。`,
+    answers: [
+      '1. 开闭原则的含义：在不修改二进制(源)代码的前提下，可以拓展模块的功能。',
+      '2. 里式替换原则的含义：子类可以拓展父类的功能，但不改变父类的原有功能。',
+      '3. 依赖倒置原则的含义：面相接口编程，而不是面相实现编程。',
+      '4. 单一职责原则的含义：控制类的粒度大小、将对象解耦、提高其内聚性。',
+      `5. 接口隔离原则的含义：
+       和单一职责原则类似都是为了提高内聚性，降低耦合性。
+       单一职责原则注重的是职责，而接口隔离原则注重的是对接口依赖的隔离。
+       单一职责原则主要是约束类，它针对的是程序中的实现和细节；接口隔离原则主要约束接口，针对抽象和程序整体框架的构建。`,
+      `6. 迪米特法则的含义：如果两个软件实体无须直接通信，那么就不应当发生直接的相互调用，可以通过第三方转发该调用。`,
+      `7. 组合复用原则的含义：软件复用时，尽量先使用组合或者聚合等关联关系来实现，其次才考虑使用继承关系来实现。`,
+    ],
+    tags: ['计算机科学', '设计模式'],
+    type: '基础知识',
+  },
+  {
+    id: 253,
+    title: `内聚性是什么？`,
+    answers: [
+      '内聚性是指机能相关的程序组合成一模块的程度。与耦合性是一个相对的概念。',
+    ],
+    tags: ['计算机科学', '设计模式'],
+    type: '基础知识',
+  },
+  {
+    id: 254,
+    title: `计算机软件的健壮性（鲁棒性）是什么？`,
+    answers: [
+      '在异常和危险的情况下的生存能力。例如在计算机软件中，当意外输入时，是否能够不崩溃、不死机。',
+    ],
+    tags: ['计算机科学', '设计模式'],
+    type: '基础知识',
+  },
+  {
+    id: 255,
+    title: `介绍一下设计模式的几大类型？根据什么来分的类？`,
+    answers: [
+      '创建型模式：提供创建对象的机制。',
+      '结构型模式：描述如何将对象和类组装成更大的结构。',
+      '行为型模式：负责对象间的高效沟通和职责委派。',
+      '根据设计模式的意图或目的来分的类。',
+    ],
+    tags: ['计算机科学', '设计模式'],
+    type: '基础知识',
+  },
+  {
+    id: 256,
+    title: `说说组合模式的定义、应用场景和优缺点。`,
+    answers: [
+      {
+        tag:'pre',
+        val:
+        `
+        定义：
+          是一种将对象组合成树状的层次结构的模式，用来表示“部分-整体”的关系，使用户对单个对象和组合对象具有一致的访问性。
+        优点：
+          1. 使得客户端代码可以无须关心自己处理的是单个对象还是组合对象，这简化了客户端代码；
+          2. 加入新对象时，无需修改源代码。遵守“开闭原则”。
+        缺点：
+          1. 对于功能差异较大的类，提供公共接口会有困难。
+        应用场景：
+          1. 需要实现树状对象结构时。
+          2. 希望客户端代码以相同方式处理单个对象和组合对象时。
+        `,
+      }
+    ],
+    tags: ['计算机科学', '设计模式'],
+    type: '基础知识',
+  },
+  {
+    id: 257,
+    title: `说说装饰模式的定义、应用场景和优缺点。`,
+    answers: [
+      {
+        tag:'pre',
+        val:
+        `
+        定义：
+          在不改变现有对象的情况下，动态地给该对象增加一些职责（功能）。
+        优点：
+          1. 在不改变原有对象的情况下，动态的给一个对象扩展功能。
+          2. 可以用多个装饰封装对象来组合几种行为。
+          3. 遵守开闭原则，单一职责原则。
+        缺点：
+          1. 装饰模式会增加许多子类，过度使用会增加程序得复杂性。
+        应用场景：
+          1. 当需要在不改变对象的情况下，动态地给该对象增加一些职责（功能）。
+          2. 当使用继承的方式来扩展对象难以实现或者根本不可行时。
+        `,
+      }
+    ],
+    tags: ['计算机科学', '设计模式'],
+    type: '基础知识',
+  },
+  {
+    id: 258,
+    title: `“聚合或组合”与“继承”的工作方式几乎一样，但是“继承”是__态的，“聚合或组合”__态的（运行时可更改）。`,
+    answers: [
+      '静',
+      '动',
+    ],
+    tags: ['计算机科学', '设计模式'],
+    type: '基础知识',
+  },
+  {
+    id: 259,
+    title: `装饰为被封装对象添加了额外的__，组合仅对其子节点的结果进行了__。`,
+    answers: [
+      '职责',
+      '“求和”',
+    ],
+    tags: ['计算机科学', '设计模式'],
+    type: '基础知识',
   },
 ];
 
