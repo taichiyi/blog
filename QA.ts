@@ -139,16 +139,16 @@ const data: QAs[] = [
       {
         tag: 'pre',
         val: `
-        00号平面 U+0000 - U+FFFF
-        01号平面 U+10000 - U+1FFFF
-        02号平面 U+20000 - U+2FFFF
-        03号平面 U+30000 - U+3FFFF
-        04号平面 U+40000
-        -       -
-        13号平面 U+DFFFF
-        14号平面 U+E0000 - U+EFFFF
-        15号平面 U+F0000 - U+FFFFF
-        16号平面 U+100000 - U+10FFFF
+00号平面 U+0000 - U+FFFF
+01号平面 U+10000 - U+1FFFF
+02号平面 U+20000 - U+2FFFF
+03号平面 U+30000 - U+3FFFF
+04号平面 U+40000
+-       -
+13号平面 U+DFFFF
+14号平面 U+E0000 - U+EFFFF
+15号平面 U+F0000 - U+FFFFF
+16号平面 U+100000 - U+10FFFF
         `,
       },
     ],
@@ -185,11 +185,11 @@ const data: QAs[] = [
       {
         tag: 'pre',
         val: `
-        Unicode编码范围  位数  字节数  UTF-8 字节流(二进制)
-        000000-00007F    7    1     0xxxxxxx
-        000080-0007FF   11    2     110xxxxx 10xxxxxx
-        000800-00FFFF   16    3     1110xxxx 10xxxxxx 10xxxxxx
-        010000-10FFFF   21    4     11110xxx 10xxxxxx 10xxxxxx 10xxxxxx
+Unicode编码范围  位数  字节数  UTF-8 字节流(二进制)
+000000-00007F    7    1     0xxxxxxx
+000080-0007FF   11    2     110xxxxx 10xxxxxx
+000800-00FFFF   16    3     1110xxxx 10xxxxxx 10xxxxxx
+010000-10FFFF   21    4     11110xxx 10xxxxxx 10xxxxxx 10xxxxxx
         `,
       },
     ],
@@ -399,9 +399,9 @@ const data: QAs[] = [
     title: {
       tag: 'pre',
       val: `
-      递归有以下两个特点:
-      1. 一个问题可以分解成具有__的子问题、子子问题。
-      2. 经过层层分解，最后的子问题一定是一个不能再分解的__（即终止条件）。
+递归有以下两个特点:
+1. 一个问题可以分解成具有__的子问题、子子问题。
+2. 经过层层分解，最后的子问题一定是一个不能再分解的__（即终止条件）。
       `,
     },
     answers: [
@@ -974,15 +974,15 @@ const data: QAs[] = [
         tag: 'pre',
         val:
           `
-        [data:data]
-        data:,Hello%2C%20World!
-        <!--  -->
-        [data:mediatype;base64,data]
-        data:text/plain;base64,SGVsbG8sIFdvcmxkIQ==
-        <!--  -->
-        [data:mediatype,data]
-        data:text/html;charset=utf8,%3Ch1%3EHello%2C%20World %E7%BE%BD%E7%BF%BC!%3C%2Fh1%3E
-        `
+[data:data]
+data:,Hello%2C%20World!
+<!--  -->
+[data:mediatype;base64,data]
+data:text/plain;base64,SGVsbG8sIFdvcmxkIQ==
+<!--  -->
+[data:mediatype,data]
+data:text/html;charset=utf8,%3Ch1%3EHello%2C%20World %E7%BE%BD%E7%BF%BC!%3C%2Fh1%3E
+        `,
       }
     ],
     tags: ['计算机科学', '计算机网络',],
@@ -1204,7 +1204,7 @@ const data: QAs[] = [
       '1. 建造者（生成器）模式（Builder pattern）',
       '2. 单例模式（Singleton pattern）',
       '3. 原型模式（Prototype pattern）',
-      '4. 工厂模式（Factory pattern）',
+      '4. 工厂方法模式（Factory method pattern）',
       '5. 抽象工厂模式（Abstract factory pattern）',
     ],
     tags: ['计算机科学', '设计模式',],
@@ -2245,7 +2245,7 @@ const data: QAs[] = [
     title: '冒泡排序算法的思想（原理）是什么？哪个排序算法是它的改进算法？',
     answers: [
       '1. 比较两个相邻的元素，如果第一个大于第二个则调换这两个元素位置；',
-      '2. 直到没有需要调换的元素。',
+      '2. 从右至左逐渐有序',
       '快速排序',
     ],
     tags: ['计算机科学', '算法', '排序算法',],
@@ -2314,7 +2314,7 @@ const data: QAs[] = [
     title: '快速排序算法的应用场景（优点）是什么？',
     answers: [
       '序列重复率越低，速度越快。',
-      '序列的长度 n 较大时，较快。',
+      '序列的长度 n 较大时，速度较快。',
     ],
     tags: ['计算机科学', '算法', '排序算法',],
     type: '基础知识',
@@ -2323,7 +2323,7 @@ const data: QAs[] = [
     id: 234,
     title: '插入排序算法的思想（原理）是什么？哪个排序算法是它的改进算法？',
     answers: [
-      '1. 将排序序列第一个元素看做一个有序序列，把第二个元素到最后一个元素当成是未排序序列。',
+      '1. 将排序序列第一个元素看做一个有序序列，把其他元素当成是未排序序列。',
       '2. 从头到尾依次扫描未排序序列，将扫描到的每个元素插入有序序列的适当位置。',
       '希尔排序',
     ],
@@ -2334,7 +2334,8 @@ const data: QAs[] = [
     id: 235,
     title: '选择排序算法的思想（原理）是什么？',
     answers: [
-      '1. 从头到尾找最大',
+      '1. 每一个位置选择未排序序列中最小的元素',
+      '2. 从左至右逐渐有序',
     ],
     tags: ['计算机科学', '算法', '排序算法',],
     type: '基础知识',
@@ -2356,11 +2357,14 @@ const data: QAs[] = [
         tag: 'pre',
         val:
           `
-        - 快速排序算法采用了分治策略，怎么分？
-        - 把序列当做一个分区，然后根据基准（pivot[ˈpɪvət]），把分区(partition[pɑːrˈtɪʃn])一分为二；
-        - 然后递归此步骤，直至每个分区只有一个元素，基准怎么找？分 2 步。
-          1. 选择分区的任意一个元素当做基准值（为了简化代码的书写，一般选择分区两端的元素当做基准值）
-          2. 小于基准值的放左边，大于等于放右边；至此就找出了基准（pivot[ˈpɪvət]）
+快速排序思想：
+  1. 快速排序算法采用了分治策略，怎么分？
+  2. 把序列当做一个分区(partition[pɑːrˈtɪʃn])，然后根据基准（pivot[ˈpɪvət]）排序，把分区一分为二；
+  3. 然后递归此步骤，直至把每个分区分到只有一个元素。
+基准怎么找？分 3 步。
+  1. 选择分区的任意一个元素当做基准值（为了简化代码的书写，一般选择分区两端的元素当做基准值）。
+  2. 小于基准值的放左边，大于等于放右边。
+  3. 基准值所在的下标就是基准。
         `,
       }
     ],
@@ -2401,7 +2405,7 @@ const data: QAs[] = [
     id: 241,
     title: 'React Router 和 客户端(浏览器|普通)路由有什么区别？',
     answers: [
-      '客户端路由映射的是 html 文件，React Router 映射的是 React 组件；React Router 路由的变动不会刷新页面。',
+      '客户端路由映射的是 html 文件，React Router 映射的是 React 组件；React Router 路由的变动不会重新加载页面。',
     ],
     tags: ['计算机科学', 'JavaScript', 'React', 'React Router',],
     type: '专用领域知识',
@@ -2414,23 +2418,24 @@ const data: QAs[] = [
         tag: 'pre',
         val:
           `
-        React Router DOM 提供两个路由器：
-          BroswerRouter（基于 History API）
-          HashRouter（基于 URL Hash）
-        URL Hash：
-          优点
-            1. 浏览器兼容性好
-            2. 不需要服务器端的支持。
-          缺点
-            1. 对服务端渲染不友好（服务器无法获取 hash 的内容）
-            2. 需要自己去实现页面锚点导航
-        History API：
-          优点
-            1. URL 更直观，更常见
-          缺点
-            1. 需要服务器端的支持
-            2. 不支持 IE9 及其以下
-        `
+React Router DOM 提供两个路由器：
+  BroswerRouter（基于 History API）
+  HashRouter（基于 URL Hash）
+History API：
+  优点
+    1. 对服务器端友好，例如：SSR 和 SEO。
+    2. URL 更直观，更常见
+  缺点
+    1. 需要服务器端的支持
+    2. 不支持 IE9 及其以下浏览器
+URL Hash：
+  优点
+    1. 浏览器兼容性好
+    2. 不需要服务器端的支持。
+  缺点
+    1. 对服务端不友好（服务器无法获取 hash 的内容）
+    2. 需要自己去实现页面锚点导航
+          `,
       },
     ],
     tags: ['计算机科学', 'JavaScript', 'React', 'React Router',],
@@ -2457,12 +2462,12 @@ const data: QAs[] = [
         tag: 'pre',
         val:
           `
-        - 首先哪些对象存了 history 对象的引用？
-          1. React 上下文：RouterContext
-          2. React 上下文：HistoryContext
-        - 答
-         1. 要访问 RouterContent 中的 history 对象可以通过高阶组件 withRouter。
-         2. 要访问 HistoryContext 可以通过调用 React Router 的 hook 方法 useHistory
+- 首先哪些对象存了 history 对象的引用？
+  1. React 上下文：RouterContext
+  2. React 上下文：HistoryContext
+- 答
+  1. 要访问 RouterContent 中的 history 对象可以通过高阶组件 withRouter。
+  2. 要访问 HistoryContext 可以通过调用 React Router 的 hook 方法 useHistory
         `,
       },
     ],
@@ -2494,7 +2499,19 @@ const data: QAs[] = [
     id: 247,
     title: 'React Router 的 <Link> 标签和 <a> 标签有什么区别？',
     answers: [
-      'Link 做了些其他操作，例如对 History 对象做了修改',
+      {
+        tag:'pre',
+        val:
+          `
+Link 组件渲染到 DOM 中也是 a 标签，他们的区别主要提现在点击后的行为上。
+  a 标签：
+    - 会触发默认行为，会重新加载链接指定的页面。
+  Link 组件：
+    - Link 取消了 a 标签的默认行为。
+    - 调用 History API 修改 URL。
+    - setState 更新 history 对象，进而触发 React 渲染。
+          `,
+      },
     ],
     tags: ['计算机科学', 'JavaScript', 'React', 'React Router',],
     type: '专用领域知识',
@@ -2544,16 +2561,22 @@ const data: QAs[] = [
     id: 252,
     title: `介绍一下设计模式 7 原则。`,
     answers: [
-      '1. 开闭原则的含义：在不修改二进制(源)代码的前提下，可以拓展模块的功能。',
-      '2. 里式替换原则的含义：子类可以拓展父类的功能，但不改变父类的原有功能。',
-      '3. 依赖倒置原则的含义：面相接口编程，而不是面相实现编程。',
-      '4. 单一职责原则的含义：控制类的粒度大小、将对象解耦、提高其内聚性。',
-      `5. 接口隔离原则的含义：
-       和单一职责原则类似都是为了提高内聚性，降低耦合性。
-       单一职责原则注重的是职责，而接口隔离原则注重的是对接口依赖的隔离。
-       单一职责原则主要是约束类，它针对的是程序中的实现和细节；接口隔离原则主要约束接口，针对抽象和程序整体框架的构建。`,
-      `6. 迪米特法则的含义：如果两个软件实体无须直接通信，那么就不应当发生直接的相互调用，可以通过第三方转发该调用。`,
-      `7. 组合复用原则的含义：软件复用时，尽量先使用组合或者聚合等关联关系来实现，其次才考虑使用继承关系来实现。`,
+      {
+        tag: 'pre',
+        val:
+          `
+1. 开闭原则的含义：在不修改二进制(源)代码的前提下，可以拓展模块的功能。
+2. 里式替换原则的含义：子类可以拓展父类的功能，但不改变父类的原有功能。
+3. 依赖倒置原则的含义：面相接口编程，而不是面相实现编程。
+4. 单一职责原则的含义：控制类的粒度大小、将对象解耦、提高其内聚性。
+5. 接口隔离原则的含义：
+  和单一职责原则类似都是为了提高内聚性，降低耦合性。
+  单一职责原则注重的是职责，而接口隔离原则注重的是对接口依赖的隔离。
+  单一职责原则主要是约束类，它针对的是程序中的实现和细节；接口隔离原则主要约束接口，针对抽象和程序整体框架的构建。
+6. 迪米特法则的含义：如果两个软件实体无须直接通信，那么就不应当发生直接的相互调用，可以通过第三方转发该调用。
+7. 组合复用原则的含义：软件复用时，尽量先使用组合或者聚合等关联关系来实现，其次才考虑使用继承关系来实现。
+          `,
+      },
     ],
     tags: ['计算机科学', '设计模式'],
     type: '基础知识',
@@ -2593,20 +2616,20 @@ const data: QAs[] = [
     title: `说说组合模式的定义、应用场景和优缺点。`,
     answers: [
       {
-        tag:'pre',
+        tag: 'pre',
         val:
-        `
-        定义：
-          是一种将对象组合成树状的层次结构的模式，用来表示“部分-整体”的关系，使用户对单个对象和组合对象具有一致的访问性。
-        优点：
-          1. 使得客户端代码可以无须关心自己处理的是单个对象还是组合对象，这简化了客户端代码；
-          2. 加入新对象时，无需修改源代码。遵守“开闭原则”。
-        缺点：
-          1. 对于功能差异较大的类，提供公共接口会有困难。
-        应用场景：
-          1. 需要实现树状对象结构时。
-          2. 希望客户端代码以相同方式处理单个对象和组合对象时。
-        `,
+          `
+定义：
+  是一种将对象组合成树状的层次结构的模式，用来表示“部分-整体”的关系，使用户对单个对象和组合对象具有一致的访问性。
+优点：
+  1. 使得客户端代码可以无须关心自己处理的是单个对象还是组合对象，这简化了客户端代码；
+  2. 加入新对象时，无需修改源代码。遵守“开闭原则”。
+缺点：
+  1. 对于功能差异较大的类，提供公共接口会有困难。
+应用场景：
+  1. 需要实现树状对象结构时。
+  2. 希望客户端代码以相同方式处理单个对象和组合对象时。
+          `,
       }
     ],
     tags: ['计算机科学', '设计模式'],
@@ -2617,21 +2640,21 @@ const data: QAs[] = [
     title: `说说装饰模式的定义、应用场景和优缺点。`,
     answers: [
       {
-        tag:'pre',
+        tag: 'pre',
         val:
-        `
-        定义：
-          在不改变现有对象的情况下，动态地给该对象增加一些职责（功能）。
-        优点：
-          1. 在不改变原有对象的情况下，动态的给一个对象扩展功能。
-          2. 可以用多个装饰封装对象来组合几种行为。
-          3. 遵守开闭原则，单一职责原则。
-        缺点：
-          1. 装饰模式会增加许多子类，过度使用会增加程序得复杂性。
-        应用场景：
-          1. 当需要在不改变对象的情况下，动态地给该对象增加一些职责（功能）。
-          2. 当使用继承的方式来扩展对象难以实现或者根本不可行时。
-        `,
+          `
+定义：
+  在不改变现有对象的情况下，动态地给该对象增加一些职责（功能）。
+优点：
+  1. 在不改变原有对象的情况下，动态的给一个对象扩展功能。
+  2. 可以用多个装饰封装对象来组合几种行为。
+  3. 遵守开闭原则，单一职责原则。
+缺点：
+  1. 装饰模式会增加许多子类，过度使用会增加程序得复杂性。
+应用场景：
+  1. 当需要在不改变对象的情况下，动态地给该对象增加一些职责（功能）。
+  2. 当使用继承的方式来扩展对象难以实现或者根本不可行时。
+          `,
       }
     ],
     tags: ['计算机科学', '设计模式'],
@@ -2656,6 +2679,145 @@ const data: QAs[] = [
     ],
     tags: ['计算机科学', '设计模式'],
     type: '基础知识',
+  },
+  {
+    id: 260,
+    title: `说说观察者模式的定义、应用场景和优缺点。`,
+    answers: [
+      {
+        tag: 'pre',
+        val:
+          `
+定义：
+  当被“观察”对象状态发生变化时，所有“观察”它的其他对象都会得到通知。
+优点：
+  1. 目标与观察者的耦合性较低。
+  2. 遵守“开闭原则”。
+缺点：
+  1. 目标与观察者可能会出现循环引用。
+  2. 当观察者较多时，会降低通知的效率。
+应用场景：
+  1. 当对象间存在一对多关系，一个对象的状态发生改变会影响其他对象时。
+          `,
+      }
+    ],
+    tags: ['计算机科学', '设计模式'],
+    type: '基础知识',
+  },
+  {
+    id: 261,
+    title: `轮询：__发出询问。`,
+    answers: [
+      '定时',
+    ],
+    tags: ['计算机科学',],
+    type: '基础知识',
+  },
+  {
+    id: 262,
+    title: `什么时候用轮询？什么时候用观察者模式？`,
+    answers: [
+      '只有信息源支出观察者模式模式，就用观察者模式。',
+      '观察者模式效率高。',
+    ],
+    tags: ['计算机科学',],
+    type: '基础知识',
+  },
+  {
+    id: 263,
+    title: `如何为 React Router 添加 Google Analytics?`,
+    answers: [
+      '通过 history 对象的 listen 方法添加一个观察者就可以了',
+    ],
+    tags: ['计算机科学', 'JavaScript', 'React', 'React Router',],
+    type: '专用领域知识',
+  },
+  {
+    id: 264,
+    title: `React Router 和 history 库是什么关系？`,
+    answers: [
+      '简介：React Router 是 history 库的 React 实现。',
+      '详细：React Router 使用了 Ioc 模式，把 history 库的实例，当做参数传给 React 元素。',
+    ],
+    tags: ['计算机科学', 'JavaScript', 'React', 'React Router',],
+    type: '专用领域知识',
+  },
+  {
+    id: 265,
+    title: `React Router 怎样在路由变化时重新渲染一个组件？`,
+    answers: [
+      '当调用 history 对象的 push、place 和 block 方法时，会向观察者发出通知。',
+      '然后调动 Router 类组件的 setState 方法，更新 location，触发 React 的重新渲染。',
+    ],
+    tags: ['计算机科学', 'JavaScript', 'React', 'React Router',],
+    type: '专用领域知识',
+  },
+  {
+    id: 266,
+    title: `React 如何判断组件是否需要渲染？`,
+    answers: [
+      {
+        tag:'img',
+        val: '<img style="width: 100%" src="https://oss.taichiyi.com/markdown/kgt7va9x.jpg" />',
+      },
+    ],
+    tags: ['计算机科学', 'JavaScript', 'React',],
+    type: '专用领域知识',
+  },
+  {
+    id: 267,
+    title: `React 是怎么浅比较两个对象的？`,
+    answers: [
+      '1. 首先使用 Object.is(objA, objB) 如果返回 true，则返回 true。',
+      '2. 如果其中一个值不等于 object 类型，则返回 false',
+      '3. 如果其中一个值等于 null，则返回 false',
+      '4. 如果两个对象的属性的个数不相等，则返回 false',
+      '5. 如果两个对象的属性的个数不相等，则返回 false',
+      '6. 循环对象的属性用 Object.is 比较两个对象的属性值，有为 false，则返回 false。',
+      '7. 返回 true。',
+    ],
+    tags: ['计算机科学', 'JavaScript', 'React',],
+    type: '专用领域知识',
+  },
+  {
+    id: 268,
+    title: `ES2015中有四种相等算法: ①__；②__；③__；④__。`,
+    answers: [
+      '相等',
+      '全等',
+      '同值相等',
+      '零值相等',
+    ],
+    tags: ['计算机科学', 'JavaScript',],
+    type: '通用领域知识',
+  },
+  {
+    id: 269,
+    title: `React Router 怎么获取 URL 的参数？`,
+    answers: [
+      '通过 history 对象的 location 属性获取。',
+    ],
+    tags: ['计算机科学', 'JavaScript', 'React', 'React Router',],
+    type: '专用领域知识',
+  },
+  {
+    id: 270,
+    title: `在 history 模式中 push 和 replace 有什么区别？`,
+    answers: [
+      'push 是往 history 栈顶添加一个新记录',
+      'replace 是把 history 栈顶的记录换成一个新的记录',
+    ],
+    tags: ['计算机科学', 'JavaScript', 'React', 'React Router',],
+    type: '专用领域知识',
+  },
+  {
+    id: 271,
+    title: `如何使用在 React Router 中以编程的方式进行导航？`,
+    answers: [
+      '通过 history 对象的 push、replace 和 go 等方法。',
+    ],
+    tags: ['计算机科学', 'JavaScript', 'React', 'React Router',],
+    type: '专用领域知识',
   },
 ];
 
