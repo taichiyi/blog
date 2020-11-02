@@ -1336,7 +1336,7 @@ data:text/html;charset=utf8,%3Ch1%3EHello%2C%20World %E7%BE%BD%E7%BF%BC!%3C%2Fh1
     id: 137,
     title: '在正则表达式中，「^tcy$」的文字意义是什么？',
     answers: [
-      '匹配的条件是，行开头(每一行都有一个开头)，然后是字母 c a t，然后是行末尾。',
+      '匹配的条件是，行开头(每一行都有一个开头)，然后是字母 t c y，然后是行末尾。',
       '[行开头][锚点]',
     ],
     tags: ['计算机科学', '正则表达式',],
@@ -1362,7 +1362,7 @@ data:text/html;charset=utf8,%3Ch1%3EHello%2C%20World %E7%BE%BD%E7%BF%BC!%3C%2Fh1
   },
   {
     id: 140,
-    title: '在正则表达式中，在检查正则表达式之前会把每一行的__去掉。',
+    title: '在正则表达式中，在检查正则表达式之前会把文本每一行的__去掉。',
     answers: [
       '换行符',
     ],
@@ -2689,7 +2689,7 @@ Link 组件渲染到 DOM 中也是 a 标签，他们的区别主要提现在点�
         val:
           `
 定义：
-  当被“观察”对象状态发生变化时，所有“观察”它的其他对象都会得到通知。
+  当被“观察”对象发生状态变化时，所有“观察”它的其他对象都会得到通知。
 优点：
   1. 目标与观察者的耦合性较低。
   2. 遵守“开闭原则”。
@@ -2748,6 +2748,7 @@ Link 组件渲染到 DOM 中也是 a 标签，他们的区别主要提现在点�
     answers: [
       '当调用 history 对象的 push、place 和 block 方法时，会向观察者发出通知。',
       '然后调动 Router 类组件的 setState 方法，更新 location，触发 React 的重新渲染。',
+      '注：直接调用 history API 的 pushState 方法，不会触发 history 对象的变化。',
     ],
     tags: ['计算机科学', 'JavaScript', 'React', 'React Router',],
     type: '专用领域知识',
@@ -2860,6 +2861,23 @@ Link 组件渲染到 DOM 中也是 a 标签，他们的区别主要提现在点�
     ],
     tags: ['计算机科学', 'JavaScript',],
     type: '通用领域知识',
+  },
+  {
+    id: 276,
+    title: `React Router 是怎么通过 Redirect 函数组件实现重定向的？`,
+    answers: [
+      {
+        tag:'pre',
+        val:
+`
+首先明确 Redirect 组件是否为 Switch 组件的子组件？
+  是：如果被 Switch 组件匹配成功，默认将调用 history 对象的 replace 方法，把 history 栈顶的记录换成一个新的记录。
+  否：直接调用 history 对象的 replace 方法。
+`,
+      },
+    ],
+    tags: ['计算机科学', 'JavaScript', 'React', 'React Router',],
+    type: '专用领域知识',
   },
 ];
 
