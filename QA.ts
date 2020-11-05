@@ -31,6 +31,7 @@ export interface QAs {
     '计算机网络' |
     '软件编程' |
     '编译原理' |
+    '柯里化' |
     '数学' |
     '代数' |
     '计算机科学' |
@@ -637,7 +638,7 @@ Unicode编码范围  位数  字节数  UTF-8 字节流(二进制)
   },
   {
     id: 71,
-    title: `严格模式下，错误的__操作将会抛出异常，而不是静默失败。`,
+    title: `严格模式下，错误的__运算将会抛出异常，而不是静默失败。`,
     answers: [
       '赋值',
     ],
@@ -1930,18 +1931,21 @@ data:text/html;charset=utf8,%3Ch1%3EHello%2C%20World %E7%BE%BD%E7%BF%BC!%3C%2Fh1
   },
   {
     id: 197,
-    title: '命令式编程（__ Programming）：详细的命令机器怎么一步一步的得到结果。',
+    title: '命令式编程（Imperative[ɪmˈperətɪv] Programming）是什么？',
     answers: [
-      `Imperative[ɪmˈperətɪv]`,
+      `命令式编程：着重于如何执行，将控制流定义为更改程序状态的语句。`,
+      `例子：C 语言、汇编语言。`,
     ],
     tags: ['计算机科学', '编程思想',],
     type: '基础知识',
   },
   {
     id: 198,
-    title: '声明式编程（__ Programming）：只告诉结果，不关心过程。',
+    title: '声明式编程（Declarative[dɪˈklærətɪv] Programming）是什么？',
     answers: [
-      `Declarative[dɪˈklærətɪv]`,
+      `声明式编程：着重于结果，定义程序逻辑，而不是详细的控制流程。`,
+      `声明式编程让我们重回数学思维：函数式编程类似代数中的表达式变换和计算，逻辑式编程则类似数理逻辑推理。其中的变量也如数学中的一样，是抽象符号而非内存地址，因此没有赋值运算，不会产生变量被改写的副作用（side-effect），也不存在内存分配和释放的问题。这既简化了代码，也减少了调试`,
+      `例子：数据库语言 SQL，正则表达式，标记语言 HTML`,
     ],
     tags: ['计算机科学', '编程思想',],
     type: '基础知识',
@@ -2878,6 +2882,142 @@ Link 组件渲染到 DOM 中也是 a 标签，他们的区别主要提现在点�
     ],
     tags: ['计算机科学', 'JavaScript', 'React', 'React Router',],
     type: '专用领域知识',
+  },
+  {
+    id: 277,
+    title: `函数柯里化是什么？有什么优点？`,
+    answers: [
+      '在数学和计算机科学中，柯里化是将一个接受多个参数的函数转换成一系列使用一个参数的函数的技术。',
+      '优点',
+    ],
+    tags: ['数学','计算机科学', '柯里化',],
+    type: '基础知识',
+  },
+  {
+    id: 278,
+    title: {
+      tag:'pre',
+      val:
+      `
+问题：下文中的柯里化函数“currying”应该怎么实现？
+
+function add(a, b) {
+  return a + b;
+}
+add(1, 2) // 3
+
+const addCurry = currying(add);
+addCurry(1)(2) // 3
+      `,
+    },
+    answers: [
+      {
+        tag:'pre',
+        val:
+        `
+// 知识点：闭包、作用域
+function currying(func) {
+  switch (func.length) {
+    case 1: return (a0) => func(a0)
+    case 2: return (a0) => (a1) => func(a0, a1)
+    case 3: return (a0) => (a1) => (a2) => func(a0, a1, a2)
+    case 4: return (a0) => (a1) => (a2) => (a3) => func(a0, a1, a2, a3)
+    case 5: return (a0) => (a1) => (a2) => (a3) => (a4) => func(a0, a1, a2, a3, a4)
+    case 6: return (a0) => (a1) => (a2) => (a3) => (a4) => (a5) => func(a0, a1, a2, a3, a4, a5)
+    default: return func
+  }
+}
+        `,
+      },
+    ],
+    tags: ['数学','计算机科学', '柯里化',],
+    type: '基础知识',
+  },
+  {
+    id: 279,
+    title: `函数式编程有哪些特性？`,
+    answers: [
+      '- 不变性（Immutability）',
+      '- 纯函数（Pure function）：',
+      '- 高阶函数（Higher-order function）',
+      '- 柯里化（Currying）',
+      '- 闭包（Closure）',
+      '- 模式匹配（Pattern Match）',
+      '- 变量像数学中的一样，是抽象符号而非内存地址',
+      '- 没有赋值运算、循环语句',
+    ],
+    tags: ['计算机科学', '编程思想',],
+    type: '基础知识',
+  },
+  {
+    id: 280,
+    title: `什么是“思想”？`,
+    answers: [
+      '思想是“客观存在反映在人的意识中经过思维活动而产生的结果”。',
+    ],
+    tags: [],
+    type: '基础知识',
+  },
+  {
+    id: 281,
+    title: `什么是“编程思想（编程范式）”？`,
+    answers: [
+      '和计算机沟通的方式。',
+    ],
+    tags: ['计算机科学', '编程思想',],
+    type: '基础知识',
+  },
+  {
+    id: 282,
+    title: '声明式（函数式）编程有哪些优缺点？',
+    answers: [
+      {
+        tag:'pre',
+        val:
+        `
+优点：
+  擅长基于数理逻辑的应用
+    - 不会产生变量被改写的副作用（side-effect）
+    - 引用透明（Referential transparency）：不是特别关注执行步骤，所以可以“惰性求值”和“并行处理”
+    - 不存在内存分配和释放的问题
+    - 可维护性好：代码简洁清晰，容易单元测试和调试。
+    - 不共享状态，不会造成竞争（竞态）条件（Race condition）
+    - 不需要锁来保护状态，有更好的并发式计算，可以更好的利用多核处理器
+    - 是数学中的函数，即自变量的映射。也就是说一个函数的值仅决定于函数参数的值，不依赖其他状态。
+        `
+      },
+    ],
+    tags: ['计算机科学', '编程思想',],
+    type: '基础知识',
+  },
+  {
+    id: 283,
+    title: '命令式编程的适用场景是什么？',
+    answers: [
+      `- 处理可变状态`,
+      `- 处理 IO`,
+    ],
+    tags: ['计算机科学', '编程思想',],
+    type: '基础知识',
+  },
+  {
+    id: 284,
+    title: '命令式编程的优缺点有哪些？',
+    answers: [
+      {
+        tag:'pre',
+        val:
+        `
+优点：
+  擅长基于业务逻辑的应用
+    - 交互式的应用
+    - 驱动型的应用
+    - 业务逻辑千差万别
+        `
+      },
+    ],
+    tags: ['计算机科学', '编程思想',],
+    type: '基础知识',
   },
 ];
 
