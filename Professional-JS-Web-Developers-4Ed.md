@@ -3534,9 +3534,9 @@
 </details>
 
 <details>
-  <summary>如果箭头函数不使用花括号的话，只能使用__个表达式，__将隐式返回。</summary>
+  <summary>如果箭头函数不使用花括号的话，则函数体只能使用__个表达式，__将隐式返回。</summary>
   <div>一</div>
-  <div>该表达式的值</div>
+  <div>表达式的值</div>
 </details>
 
 <details>
