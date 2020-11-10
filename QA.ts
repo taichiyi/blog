@@ -25,6 +25,7 @@ export interface QAs {
     '程序设计语言' |
     '设计模式' |
     '函数式编程' |
+    '响应式编程' |
     '编程思想' |
     '排序算法' |
     '算法' |
@@ -213,21 +214,24 @@ Unicode编码范围  位数  字节数  UTF-8 字节流(二进制)
   {
     id: 19,
     title: `BE (字节序相关)英文全称__，中文全称__。顺序为从__到__。`,
-    answers: ['Big Endian', '大端字节序', '左', '右'],
+    answers: [`Big Endian['endɪən]`, `大端字节序`, `左`, `右`],
     tags: ['计算机科学', '编码'],
     type: '基础知识',
   },
   {
     id: 20,
     title: `LE (字节序相关)英文全称__，中文全称__。顺序为从__到__。`,
-    answers: ['Little Endian', '小端字节序', '右', '左'],
+    answers: [`Little Endian['endɪən]`, `小端字节序`, `右`, `左`],
     tags: ['计算机科学', '编码'],
     type: '基础知识',
   },
   {
     id: 21,
     title: `BOM (字节序相关)英文全称__，中文全称__。`,
-    answers: ['Little Endian', '小端字节序', '右', '左'],
+    answers: [
+      'Byte Order Mark',
+      '字节顺序标记',
+    ],
     tags: ['计算机科学', '编码'],
     type: '基础知识',
   },
@@ -375,23 +379,25 @@ Unicode编码范围  位数  字节数  UTF-8 字节流(二进制)
   },
   {
     id: 41,
-    title: `如果在函数中存在着调用__的情况，这种现象就叫递归。`,
-    answers: ['函数本身'],
-    tags: ['计算机科学', '算法'],
+    title: `递归是什么？`,
+    answers: [
+      `递归是一种将问题转化为较小的与原问题相似的问题来求解的技术。`,
+    ],
+    tags: ['计算机科学', '算法', '函数式编程',],
     type: '基础知识',
   },
   {
     id: 42,
     title: `「递」的意思是将问题__来解决。`,
     answers: ['拆解成子问题'],
-    tags: ['计算机科学', '算法'],
+    tags: ['计算机科学', '算法', '函数式编程',],
     type: '基础知识',
   },
   {
     id: 43,
     title: `「归」的意思是__解决后，子问题一层一层的回归。`,
     answers: ['最小的子问题'],
-    tags: ['计算机科学', '算法'],
+    tags: ['计算机科学', '算法', '函数式编程',],
     type: '基础知识',
   },
   {
@@ -784,7 +790,7 @@ Unicode编码范围  位数  字节数  UTF-8 字节流(二进制)
   },
   {
     id: 85,
-    title: `try 块提供当执行其他语句时捕获其所抛出的异常的能力。语法: __。`,
+    title: `在命令式编程中，try 块提供当执行其他语句时捕获其所抛出的异常的能力。语法: __。`,
     answers: [
       '“try 复合语句 处理块序列”',
     ],
@@ -1590,7 +1596,7 @@ data:text/html;charset=utf8,%3Ch1%3EHello%2C%20World %E7%BE%BD%E7%BF%BC!%3C%2Fh1
       {
         tag: 'pre',
         val:
-        `
+          `
         "<div>c</div><div>xy</div>".match(/<div>.*?<\/div>/) // <div>c</div>
         "<div>c</div><div>xy</div>".match(/<div>.*<\/div>/)  // <div>c</div><div>xy</div>
         `,
@@ -1681,9 +1687,9 @@ data:text/html;charset=utf8,%3Ch1%3EHello%2C%20World %E7%BE%BD%E7%BF%BC!%3C%2Fh1
   },
   {
     id: 171,
-    title: '对表达式__时，有时会发生副作用。',
+    title: 'xxx TODO',
     answers: [
-      '求值',
+      '',
     ],
     tags: ['计算机科学', '程序设计语言', 'C'],
     type: '基础知识',
@@ -1717,9 +1723,10 @@ data:text/html;charset=utf8,%3Ch1%3EHello%2C%20World %E7%BE%BD%E7%BF%BC!%3C%2Fh1
   },
   {
     id: 175,
-    title: '在计算机科学中，副作用（side effect）是什么？',
+    title: '在计算机科学中，副作用（side effect）是什么？有例子',
     answers: [
       '跟函数外部环境发生的交互，称为副作用。',
+      '例子：1. 抛出一个被外部捕获的异常；2. 访问 DOM；3. 修改文件；4. 访问外部数据。',
     ],
     tags: ['计算机科学', '编程思想'],
     type: '基础知识',
@@ -1747,9 +1754,9 @@ data:text/html;charset=utf8,%3Ch1%3EHello%2C%20World %E7%BE%BD%E7%BF%BC!%3C%2Fh1
   },
   {
     id: 178,
-    title: 'JavaScript 中，当调用函数时，引擎都会创建一个新的__，创建完后就会被压入执行上下文栈。函数完成执行后，将函数执行上下文__栈，将__返回到先前执行上下文。',
+    title: 'JavaScript 中，当调用函数时，将把__推入到执行上下文栈。函数完成执行后，将函数执行上下文__栈，把__返回到先前执行上下文。',
     answers: [
-      '局部执行上下文',
+      '此函数的执行上下文',
       '弹出',
       '控制权',
     ],
@@ -1780,10 +1787,12 @@ data:text/html;charset=utf8,%3Ch1%3EHello%2C%20World %E7%BE%BD%E7%BF%BC!%3C%2Fh1
   },
   {
     id: 181,
-    title: 'JavaScript 中，创建执行上下文有两个阶段：1) __阶段 和 2) __阶段。',
+    title: 'JavaScript 中，执行上下文有两个阶段：1) __阶段 和 2) __阶段。其中创建阶段是在函数的__时，执行阶段是在函数的__时。',
     answers: [
       '创建(Creation Phase)',
       '执行(Execution Phase)',
+      '声明',
+      '调用',
     ],
     tags: ['计算机科学', '程序设计语言', 'JavaScript'],
     type: '通用领域知识',
@@ -1800,11 +1809,56 @@ data:text/html;charset=utf8,%3Ch1%3EHello%2C%20World %E7%BE%BD%E7%BF%BC!%3C%2Fh1
   },
   {
     id: 183,
-    title: 'JavaScript 中，每个词法环境有三个组成部分：1)__ 2)__ 3)__。',
+    title: 'JavaScript 中，每个词法环境有三个组成部分：1)__ 2)__ 3)__。例子：',
     answers: [
       '环境记录 EnvironmentRecord(Environment Record)',
       '引用外部环境 outer(Reference outer Lexical Environment)',
       '绑定this ThisBinding(This binding)',
+      {
+        tag: 'pre',
+        val:
+          `
+GlobalExecutionContext = {
+  LexicalEnvironment: {
+    Outer(outer environment reference): < null >,
+    ThisBinding: < Global Object>
+    EnvironmentRecord: {
+      Type: "Object",
+      a: < uninitialized >, // 读取未初始化(uninitialized)的变量，会报错
+      b: < uninitialized >,
+      multiply: < func >
+    },
+  },
+  VariableEnvironment: {
+    Outer: < null >,
+    ThisBinding: < Global Object >
+    EnvironmentRecord: {
+      Type: "Object",
+      c: undefined,
+    },
+  }
+}
+
+FunctionExecutionContext = {
+  LexicalEnvironment: {
+    Outer: < GlobalLexicalEnvironment >,
+    ThisBinding: < Global Object or undefined >,
+    EnvironmentRecord: {
+      Type: "Declarative",
+      Arguments: {0: 20, 1: 30, length: 2},
+    },
+  },
+  VariableEnvironment: {
+    Outer: < GlobalLexicalEnvironment >,
+    ThisBinding: < Global Object or undefined >,
+    EnvironmentRecord: {
+      Type: "Declarative",
+      g: undefined
+    },
+  }
+}
+        `
+      }
     ],
     tags: ['计算机科学', '程序设计语言', 'JavaScript'],
     type: '通用领域知识',
@@ -1821,7 +1875,7 @@ data:text/html;charset=utf8,%3Ch1%3EHello%2C%20World %E7%BE%BD%E7%BF%BC!%3C%2Fh1
   },
   {
     id: 185,
-    title: 'JavaScript 中，引用外部环境：外部执行上下文。对外部环境的引用意味着它可以访问其外部词法环境。这意味着，如果在当前__环境中找不到变量，则JavaScript引擎可以在外部环境中查找变量。',
+    title: 'JavaScript 中，引用外部环境（outer environment reference）：外部__环境（outer Lexical Environment）。',
     answers: [
       '词法',
     ],
@@ -1849,10 +1903,9 @@ data:text/html;charset=utf8,%3Ch1%3EHello%2C%20World %E7%BE%BD%E7%BF%BC!%3C%2Fh1
   },
   {
     id: 188,
-    title: 'JavaScript 中，词法环境的“__”和“__”在执行上下文的创建阶段就已经确定。',
+    title: 'JavaScript 中，词法环境的“__”在执行上下文的创建阶段就已经确定。',
     answers: [
       'outer',
-      'ThisBinding',
     ],
     tags: ['计算机科学', '程序设计语言', 'JavaScript'],
     type: '通用领域知识',
@@ -1940,7 +1993,7 @@ data:text/html;charset=utf8,%3Ch1%3EHello%2C%20World %E7%BE%BD%E7%BF%BC!%3C%2Fh1
     id: 197,
     title: '命令式编程（Imperative[ɪmˈperətɪv] Programming）是什么？',
     answers: [
-      `命令式编程，是一种注重如何执行的、控制程序流程（状态）的编程范式（编程思想）。`,
+      `命令式编程，是一种注重如何执行的、控制程序流程（状态）的编程范式。`,
       `例子：C 语言、汇编语言。`,
     ],
     tags: ['计算机科学', '编程思想',],
@@ -1950,7 +2003,7 @@ data:text/html;charset=utf8,%3Ch1%3EHello%2C%20World %E7%BE%BD%E7%BF%BC!%3C%2Fh1
     id: 198,
     title: '声明式编程（Declarative[dɪˈklærətɪv] Programming）是什么？',
     answers: [
-      `声明式编程，是一种注重定义程序逻辑和注重结果的编程范式（编程思想）。`,
+      `声明式编程，是一种注重定义程序逻辑和注重结果的编程范式。`,
       `例子：数据库语言 SQL，正则表达式，标记语言 HTML`,
     ],
     tags: ['计算机科学', '编程思想',],
@@ -2950,6 +3003,7 @@ function currying(func) {
       '- 模式匹配（Pattern Match）',
       '- 变量像数学中的一样，是抽象符号而非内存地址',
       '- 没有赋值运算、循环语句',
+      '- 函数组合（compose）',
       '- 函数式编程让我们重回数学思维，类似代数中的表达式变换和计算',
     ],
     tags: ['计算机科学', '编程思想', '函数式编程',],
@@ -2966,16 +3020,17 @@ function currying(func) {
   },
   {
     id: 281,
-    title: `什么是“编程思想（编程范式）”？`,
+    title: `编程思想（编程范式）是什么？`,
     answers: [
-      '和计算机沟通的方式。',
+      '是和计算机沟通的方式。',
+      '也可以理解为编程风格。',
     ],
     tags: ['计算机科学', '编程思想',],
     type: '基础知识',
   },
   {
     id: 282,
-    title: '声明式（函数式）编程有哪些优缺点？',
+    title: '声明式（函数式）编程有哪些优缺点（应用场景）？',
     answers: [
       {
         tag: 'pre',
@@ -2993,7 +3048,7 @@ function currying(func) {
     - 降低代码的复杂性，提高可维护性
     - 抽象层次高，颗粒度小，复用性高
 缺点：
-  - 效率较高
+  - 效率较低
         `
       },
     ],
@@ -3038,8 +3093,8 @@ function currying(func) {
     id: 285,
     title: '函数柯里化的优点有哪些？',
     answers: [
-      '- 函数式编程',
       '- 提升函数的复用性',
+      '- 函数式编程',
     ],
     tags: ['数学', '计算机科学', '柯里化',],
     type: '基础知识',
@@ -3119,7 +3174,7 @@ function currying(func) {
   },
   {
     id: 293,
-    title: 'JavaScript 中，箭头函数执行上下文可能没有`__`。',
+    title: 'JavaScript 中，箭头函数执行上下文的 __ 可能是个特殊值，例如：null 和 undefined。',
     answers: [
       'ThisBinding',
     ],
@@ -3188,21 +3243,18 @@ function currying(func) {
   },
   {
     id: 300,
-    title: '在函数式编程中，响应式编程的主要好处是提高__，更专注__。',
+    title: '响应式编程是什么？',
     answers: [
-      '代码的抽象级别',
-      '业务逻辑',
-      '',
+      '响应式编程（Reactive Programming），一种面向数据流和变化传播的异步的编程范式。',
     ],
-    tags: ['计算机科学', '编程思想', '函数式编程',],
+    tags: ['计算机科学', '编程思想', '响应式编程',],
     type: '基础知识',
   },
   {
     id: 301,
     title: '闭包（Closures）是什么？',
     answers: [
-      '闭包是一种在函数声明过程中将自身上下文与所属函数词法环境绑定的数据结构。',
-      '',
+      '闭包是一种在函数声明过程中将自身上下文与所属函数词法环境绑定的技术。',
     ],
     tags: ['计算机科学', '编程思想', '函数式编程',],
     type: '基础知识',
@@ -3235,6 +3287,67 @@ function currying(func) {
       '数据结构',
     ],
     tags: ['计算机科学', '编程思想', '函数式编程',],
+    type: '基础知识',
+  },
+  {
+    id: 305,
+    title: '从引擎的角度说说，一段 JS 代码是如何执行的？',
+    answers: [
+      {
+        tag: 'pre',
+        val:
+          `
+在执行一段代码前，引擎会首先创建一个执行栈。
+然后引擎会创建一个全局执行上下文，创建过程中会初始化变量，创建完后将其推入执行栈。
+
+开始依次执行代码，为变量赋值。
+如果有函数声明则会创建一个函数执行上下文，如果有函数调用将会把该函数的执行上下文推入栈。
+
+如果子函数在执行过程中，父函数已经 return，引擎会将父函数执行上下文弹出调用栈。
+父函数的执行上下文不会被 GC，因为子函数的执行上下文与父函数的词法环境形成了闭包，所以子函数依旧可以访问父函数的变量。
+
+JS 引擎是单线程的，那是如何处理高并发的呢？如果进行异步编程？
+核心：事件循环
+TODO：有时间再补充
+        `
+      },
+    ],
+    tags: ['计算机科学', '程序设计语言', 'JavaScript'],
+    type: '通用领域知识',
+  },
+  {
+    id: 306,
+    title: '函数式编程的设计模式，主要目的是消除__。',
+    answers: [
+      '副作用',
+    ],
+    tags: ['计算机科学', '编程思想', '函数式编程',],
+    type: '基础知识',
+  },
+  {
+    id: 307,
+    title: '响应式编程适合哪些应用场景（优点）？',
+    answers: [
+      {
+        tag: 'pre',
+        val:
+          `
+基于事件驱动的系统
+  - UI 相关的，因为用户与程序的交互是通过事件来实现的。
+  - 异步处理 IO。
+        `
+      },
+    ],
+    tags: ['计算机科学', '编程思想', '响应式编程',],
+    type: '基础知识',
+  },
+  {
+    id: 308,
+    title: '函数响应式编程是什么？',
+    answers: [
+      '函数响应式编程（Functional Reactive Programming），是一种结合了函数式编程和响应式编程优点的编程范式。',
+    ],
+    tags: ['计算机科学', '编程思想', '响应式编程', '函数式编程',],
     type: '基础知识',
   },
 ];
