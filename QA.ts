@@ -13,6 +13,7 @@ export interface QAs {
   title: Title;
   answers: Answers[];
   tags: (
+    '摄影' |
     '生命周期' |
     'React' |
     'React Router' |
@@ -613,14 +614,16 @@ m
     id: 51,
     title: `在计算机科学中，AOP 是什么？与面向对象编程的目标有什么区别？`,
     answers: [
-      `AOP 全称“面向切面编程”是一种通过预编译方式和运行期动态代理实现在不修改源代码的情况下给程序动态统一添加功能的一种技术。`,
+      `AOP 全称“面向切面编程”是一种通过预编译方式和运行时动态代理方式实现在不修改源代码的情况下给程序动态添加功能的一种技术。`,
       {
         tag:'pre',
         val:
         `
 区别：
-  面向对象编程的目标是：将需求功能划分为不同的相对独立的封装良好的类，依靠继承和多态来定义彼此的关系。
-  面向切面编程的目标是：将需求功能充不相关的类当中分离出来，能够使多个类共享一个行为，一旦发生变化，不必修改多个类，只需要修改这个行为。
+  面向对象编程的目标是：
+    将需求功能划分为不同的相对独立的封装良好的类，依靠继承和多态来定义彼此的关系。
+  面向切面编程的目标是：
+    将需求功能从不相关的类当中分离出来，能够使多个类共享一个行为，一旦发生变化，不必修改多个类，只需要修改这个行为。
 
         `,
       },
@@ -997,12 +1000,22 @@ m
   },
   {
     id: 89,
-    title: `TODO xxx`,
+    title: 'JavaScript 中，Symbol 是什么？有什么用？',
     answers: [
-      ``,
+      `Symbol 是一种所有值都是唯一的原始数据类型。`,
+      {
+        tag:'pre',
+        val:
+        `
+作用：
+1. 避免对象的属性冲突
+2. 创建私有属性
+3. 作为对象的身份标识
+        `,
+      },
     ],
-    tags: ['计算机科学', '编程思想', '命令式编程',],
-    type: '基础知识',
+    tags: ['计算机科学', '程序设计语言', 'JavaScript'],
+    type: '通用领域知识',
   },
   {
     id: 90,
@@ -1089,12 +1102,12 @@ m
   },
   {
     id: 98,
-    title: `TODO xxx`,
+    title: 'JavaScript 中，如果获取对象中所有为 Symbol 的属性？',
     answers: [
-      '',
+      `通过 Object 函数的静态方法 getOwnPropertySymbols`,
     ],
-    tags: ['计算机科学', 'CPU',],
-    type: '基础知识',
+    tags: ['计算机科学', '程序设计语言', 'JavaScript'],
+    type: '通用领域知识',
   },
   {
     id: 99,
@@ -1467,12 +1480,23 @@ data:text/html;charset=utf8,%3Ch1%3EHello%2C%20World %E7%BE%BD%E7%BF%BC!%3C%2Fh1
   },
   {
     id: 133,
-    title: 'TODO xxx',
+    title: 'JavaScript 中，有哪几种生成 Symbol 值的方式？有什么区别？',
     answers: [
-      '',
+      {
+        tag:'pre',
+        val:
+        `
+有两种
+  1.直接调用 Symbol 函数。
+  2.调用 Symbol 函数的静态方法 for。
+区别
+  直接调用 Symbol 函数，每次返回一个新的 Symbol 值；但是通过 Symbol 的 for 方法生成的 Symbol 值不一定是新的，可能是之前创建过的 Symbol 值。
+        `,
+      },
+      `只能通过直接调用 Symbol 函数还生成 Symbol 值，没有字面量表示法。`,
     ],
-    tags: ['计算机科学', '正则表达式',],
-    type: '基础知识',
+    tags: ['计算机科学', '程序设计语言', 'JavaScript'],
+    type: '通用领域知识',
   },
   {
     id: 134,
@@ -1494,12 +1518,12 @@ data:text/html;charset=utf8,%3Ch1%3EHello%2C%20World %E7%BE%BD%E7%BF%BC!%3C%2Fh1
   },
   {
     id: 136,
-    title: 'TODO xxx',
+    title: 'JavaScript 中，hoist-non-react-statics 是什么？',
     answers: [
-      '',
+      'hoist-non-react-statics 是一个将源对象中除了 React 静态关键词以外的全部属性复制到目标对象的程序包。',
     ],
-    tags: ['计算机科学', '正则表达式',],
-    type: '基础知识',
+    tags: ['计算机科学', 'JavaScript', 'React'],
+    type: '专用领域知识',
   },
   {
     id: 137,
@@ -1531,11 +1555,11 @@ data:text/html;charset=utf8,%3Ch1%3EHello%2C%20World %E7%BE%BD%E7%BF%BC!%3C%2Fh1
   },
   {
     id: 140,
-    title: 'TODO xxx',
+    title: '摄影是什么？',
     answers: [
-      '',
+      '摄影是被摄体通过镜头在感光片上形成影像的过程。',
     ],
-    tags: ['计算机科学', '正则表达式',],
+    tags: ['摄影', ],
     type: '基础知识',
   },
   {
@@ -1718,7 +1742,7 @@ data:text/html;charset=utf8,%3Ch1%3EHello%2C%20World %E7%BE%BD%E7%BF%BC!%3C%2Fh1
   },
   {
     id: 157,
-    title: '在正则表达式中，锚点可以分为两大类：__和__。',
+    title: '在正则表达式中，锚点可以分为哪几类？',
     answers: [
       '简单锚点',
       '复杂锚点',
@@ -1728,7 +1752,7 @@ data:text/html;charset=utf8,%3Ch1%3EHello%2C%20World %E7%BE%BD%E7%BF%BC!%3C%2Fh1
   },
   {
     id: 158,
-    title: '在正则表达式中，简单锚点有四个__、__、__、__。',
+    title: '在正则表达式中，简单锚点有哪几个？',
     answers: [
       '「^」',
       '「$」',
@@ -2499,7 +2523,7 @@ FunctionExecutionContext = {
     id: 227,
     title: '冒泡排序算法的应用场景（优点）是什么？',
     answers: [
-      '序列越接近正序速度越快。',
+      '序列元素越接近正序速度越快。',
     ],
     tags: ['计算机科学', '算法', '排序算法',],
     type: '基础知识',
@@ -2525,10 +2549,9 @@ FunctionExecutionContext = {
   },
   {
     id: 230,
-    title: '选择排序算法的应用场景（优点）是什么？',
+    title: 'TODO xxx',
     answers: [
-      '未知!',
-      '囧',
+      '',
     ],
     tags: ['计算机科学', '算法', '排序算法',],
     type: '基础知识',
@@ -2606,9 +2629,9 @@ FunctionExecutionContext = {
   2. 把序列当做一个分区(partition[pɑːrˈtɪʃn])，然后根据基准（pivot[ˈpɪvət]）排序，把分区一分为二；
   3. 然后递归此步骤，直至把每个分区分到只有一个元素。
 基准怎么找？分 3 步。
-  1. 选择分区的任意一个元素当做基准值（为了简化代码的书写，一般选择分区两端的元素当做基准值）。
-  2. 小于基准值的放左边，大于等于放右边。
-  3. 基准值所在的下标就是基准。
+  1. 选择分区的任意一个元素当做基准（为了简化代码的书写，一般选择分区两端的元素当做基准）。
+  2. 小于基准的放左边，大于等于放右边。
+  3. 基准所在的下标将分区一分为二。
         `,
       }
     ],
@@ -2740,11 +2763,14 @@ URL Hash：
   },
   {
     id: 246,
-    title: `TODO xxx`,
+    title: `光圈是什么？怎么表示光圈的大小？光圈大小、进光量和景深是什么相互关系？`,
     answers: [
-      'xxx',
+      '光圈是一个控制进光量的装置。',
+      '光圈的大小：“F/数值”',
+      '光圈越大，进光量越多，景深越浅。',
+      '注：光圈F值=镜头的焦距/镜头光圈的直径',
     ],
-    tags: ['计算机科学', 'CPU',],
+    tags: ['摄影',],
     type: '基础知识',
   },
   {
@@ -3863,6 +3889,15 @@ Reactive
       '在函数式编程中，把这个概念称为 monads。',
     ],
     tags: ['计算机科学', '设计模式'],
+    type: '基础知识',
+  },
+  {
+    id: 337,
+    title: `景深是什么？`,
+    answers: [
+      '景深是焦点前后所呈现清晰图像的范围。',
+    ],
+    tags: ['摄影',],
     type: '基础知识',
   },
 ];
