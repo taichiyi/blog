@@ -161,17 +161,18 @@ const data: QAs[] = [
     id: 10,
     title: `为什么会存在 Unicode 和 UCS 等这些字符编码标准？`,
     answers: [
-      `因为计算机只能处理二进制数字，如果要处理文本，就必须先把文本转换为数字才能处理。`,
+      `因为冯诺依曼机只能处理二进制数字，如果要处理文本，就必须先把文本转换为数字才能处理。`,
     ],
     tags: ['计算机科学', '编码', '字符编码',],
     type: '基础知识',
   },
   {
     id: 11,
-    title: `在数学和计算机科学汇总，表达式（Expression[ɪkˈspreʃn]）是什么？有哪几种分类？`,
+    title: `在数学和计算机科学中，表达式（Expression[ɪkˈspreʃn]）是什么？有哪几种分类？最简单的表达式由什么组成？`,
     answers: [
-      `表达式是数字、运算符和变量等能求得数值的组合。`,
+      `表达式是由数字、变量和运算符等能求得数值的组合。`,
       `有两种：算术表达式和逻辑表达式。`,
+      `最简单的表达式：由数字或变量组成。`,
     ],
     tags: ['数学', '计算机科学',],
     type: '基础知识',
@@ -255,7 +256,7 @@ Unicode 编码范围  位数  字节数  UTF-8 字节流(二进制)
     id: 17,
     title: `UTF-8 与 UTF-16 相比，UTF-8 有什么优点。`,
     answers: [
-      `对零平面的字符编码内存利用率较高。`,
+      `UTF-8 对零平面的字符，编码内存利用率较高。`,
     ],
     tags: ['计算机科学', '编码', '字符编码',],
     type: '基础知识',
@@ -497,7 +498,7 @@ m
   },
   {
     id: 39,
-    title: `4 种常用的进制: _1_、_2_、_3_、_4_。`,
+    title: `4 种常用的进制是哪些？`,
     answers: [
       '二进制(Binary)',
       '八进制(Octal)',
@@ -1840,19 +1841,18 @@ data:text/html;charset=utf8,%3Ch1%3EHello%2C%20World %E7%BE%BD%E7%BF%BC!%3C%2Fh1
   },
   {
     id: 166,
-    title: '子序列（简称子列）：指序列的__项按原有__排列而得的序列。',
+    title: '子序列是什么？',
     answers: [
-      '一部分',
-      '次序',
+      '子序列（简称子列）是序列的一部分项按原有次序排列而得的序列。',
     ],
     tags: ['数学', '计算机科学',],
     type: '基础知识',
   },
   {
     id: 167,
-    title: '子串：串中任意个__的字符组成的子序列称为该串的子串。',
+    title: '子串，是什么？',
     answers: [
-      '连续',
+      '子串是串中任意个连续的字符组成的序列。',
     ],
     tags: ['数学', '计算机科学',],
     type: '基础知识',
@@ -1871,19 +1871,18 @@ data:text/html;charset=utf8,%3Ch1%3EHello%2C%20World %E7%BE%BD%E7%BF%BC!%3C%2Fh1
   },
   {
     id: 169,
-    title: '表达式（expression）由__和__组成。最简单的表达式是不带运算符的一个常量或变量。(如: 22或beebop;带符号:55+22)',
+    title: 'TODO xxx',
     answers: [
-      '运算符',
-      '运算对象',
+      '',
     ],
     tags: ['计算机科学', '程序设计语言', 'C'],
     type: '基础知识',
   },
   {
     id: 170,
-    title: 'C 表达式的重要特征之一是: 每个表达式都有一个__。',
+    title: 'TODO xxx',
     answers: [
-      '值',
+      '',
     ],
     tags: ['计算机科学', '程序设计语言', 'C'],
     type: '基础知识',
@@ -1910,18 +1909,18 @@ data:text/html;charset=utf8,%3Ch1%3EHello%2C%20World %E7%BE%BD%E7%BF%BC!%3C%2Fh1
   },
   {
     id: 173,
-    title: 'C 中，赋值和函数调用都是表达式。没有所谓的“赋值语句”和“函数调用语句”，这些语句实际上都是__。',
+    title: 'TODO xxx',
     answers: [
-      '表达式语句',
+      '',
     ],
     tags: ['计算机科学', '程序设计语言', 'C'],
     type: '基础知识',
   },
   {
     id: 174,
-    title: 'while 语句是一种迭代语句，有时也被称为__语句。',
+    title: 'while 语句是什么？',
     answers: [
-      '结构化',
+      'while 语句是一种循环语句。',
     ],
     tags: ['计算机科学', '程序设计语言', 'C'],
     type: '基础知识',
@@ -3366,31 +3365,27 @@ function curry(func){
   },
   {
     id: 290,
-    title: 'JavaScript 中，如果箭头函数不使用花括号的话，则函数体只能使用__个表达式，__将隐式返回。',
+    title: 'TODO xxx',
     answers: [
-      '一',
-      '表达式的值',
+      '',
     ],
     tags: ['计算机科学', '程序设计语言', 'JavaScript'],
     type: '通用领域知识',
   },
   {
     id: 291,
-    title: 'JavaScript 中，箭头函数中不允许使用__、__和__。不能作为__。',
+    title: 'TODO xxx',
     answers: [
-      'arguments',
-      'super',
-      'new.target',
-      '构造函数(因为没有内部方法[[Construct]])',
+      '',
     ],
     tags: ['计算机科学', '程序设计语言', 'JavaScript'],
     type: '通用领域知识',
   },
   {
     id: 292,
-    title: 'JavaScript 中，箭头函数对象没有__属性。',
+    title: 'TODO xxx',
     answers: [
-      '原型(prototype)',
+      '',
     ],
     tags: ['计算机科学', '程序设计语言', 'JavaScript'],
     type: '通用领域知识',
@@ -3406,13 +3401,26 @@ function curry(func){
   },
   {
     id: 294,
-    title: 'JavaScript 中，箭头函数和普通函数的区别：1)箭头函数的上下文没有 __、__、__、__。 2)箭头函数没有__型。',
+    title: 'JavaScript 中，箭头函数和普通函数的区别有哪些？',
     answers: [
-      `arguments`,
-      `super`,
-      `this`,
-      `new.target`,
-      `原`,
+      {
+        tag:'pre',
+        val:
+        `
+箭头函数
+  对象
+    没有
+      原型(prototype)属性
+  上下文
+    没有
+      关键字
+        this
+    不能使用
+        super
+        new.target
+        arguments
+        `,
+      },
     ],
     tags: ['计算机科学', '程序设计语言', 'JavaScript'],
     type: '通用领域知识',
