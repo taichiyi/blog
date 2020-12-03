@@ -1012,7 +1012,7 @@ m
           `
 作用：
 1. 避免对象的属性冲突
-2. 创建私有属性
+2. 创建对象私有属性
 3. 作为对象的身份标识
         `,
       },
@@ -1022,7 +1022,7 @@ m
   },
   {
     id: 90,
-    title: `一个对象有哪几种属性。`,
+    title: `面相对象编程中，一个对象有哪几种属性？`,
     answers: [
       '状态',
       '行为',
@@ -1043,12 +1043,9 @@ m
   },
   {
     id: 92,
-    title: `面向对象的“封装”有两层意思：将__和__捆绑在一起；将__与__分离的过程。`,
+    title: `面向对象编程中，封装是什么？`,
     answers: [
-      '数据',
-      '行为',
-      '接口',
-      '实现',
+      `封装是一种将数据和方法结合成整体，将接口和实现分离的行为。`,
     ],
     tags: ['计算机科学', '编程思想', '命令式编程',],
     type: '基础知识',
@@ -1929,7 +1926,7 @@ data:text/html;charset=utf8,%3Ch1%3EHello%2C%20World %E7%BE%BD%E7%BF%BC!%3C%2Fh1
     id: 175,
     title: '在计算机科学中，副作用（side effect）是什么？有例子',
     answers: [
-      '跟函数外部环境发生的交互，称为副作用。',
+      '副作用是跟函数外部环境发生的交互。',
       '例子：1. 抛出一个被外部捕获的异常；2. 访问 DOM；3. 修改文件；4. 访问外部数据。',
     ],
     tags: ['计算机科学', '编程思想'],
@@ -1937,7 +1934,7 @@ data:text/html;charset=utf8,%3Ch1%3EHello%2C%20World %E7%BE%BD%E7%BF%BC!%3C%2Fh1
   },
   {
     id: 176,
-    title: 'JavaScript 中，有 3 种执行上下文类型：__、__和__。',
+    title: 'JavaScript 中，有哪几种执行上下文类型？',
     answers: [
       '全局(Global Execution Context)',
       '函数(Functional Execution Context )',
@@ -1951,18 +1948,16 @@ data:text/html;charset=utf8,%3Ch1%3EHello%2C%20World %E7%BE%BD%E7%BF%BC!%3C%2Fh1
     title: 'JavaScript 中，全局执行上下文(Global execution context)由__环境决定。一个__中只能有一个全局执行上下文。',
     answers: [
       '宿主',
-      '程序',
+      '进程',
     ],
     tags: ['计算机科学', '程序设计语言', 'JavaScript'],
     type: '通用领域知识',
   },
   {
     id: 178,
-    title: 'JavaScript 中，当调用函数时，将把__推入到执行上下文栈。函数完成执行后，将函数执行上下文__栈，把__返回到先前执行上下文。',
+    title: 'TODO xxx',
     answers: [
-      '此函数的执行上下文',
-      '弹出',
-      '控制权',
+      '',
     ],
     tags: ['计算机科学', '程序设计语言', 'JavaScript'],
     type: '通用领域知识',
@@ -1982,9 +1977,13 @@ data:text/html;charset=utf8,%3Ch1%3EHello%2C%20World %E7%BE%BD%E7%BF%BC!%3C%2Fh1
   },
   {
     id: 180,
-    title: '执行上下文栈就是其他编程语言所说的__栈。别称有：执行栈（execution stack）、控制栈（control stack）、运行时栈（run-time stack）与机器栈（machine stack）',
+    title: '执行上下文栈的别称有哪些？',
     answers: [
       '调用栈（call stack）',
+      '执行栈（execution stack）',
+      '控制栈（control stack）',
+      '运行时栈（run-time stack）',
+      '机器栈（machine stack）',
     ],
     tags: ['计算机科学', '程序设计语言', 'JavaScript'],
     type: '通用领域知识',
@@ -2003,17 +2002,17 @@ data:text/html;charset=utf8,%3Ch1%3EHello%2C%20World %E7%BE%BD%E7%BF%BC!%3C%2Fh1
   },
   {
     id: 182,
-    title: 'JavaScript 中，“创建阶段”主要发生了两个事情：1)创建__环境组件。2)创建__环境组件。',
+    title: 'JavaScript 中，“创建阶段”主要发生了哪两件事情？',
     answers: [
-      '词法(LexicalEnvironment)',
-      '变量(VariableEnvironment)',
+      '创建 词法(LexicalEnvironment)环境组件',
+      '创建 变量(VariableEnvironment)环境组件',
     ],
     tags: ['计算机科学', '程序设计语言', 'JavaScript'],
     type: '通用领域知识',
   },
   {
     id: 183,
-    title: 'JavaScript 中，每个词法环境有三个组成部分：1)__ 2)__ 3)__。例子：',
+    title: 'JavaScript 中，每个词法环境由哪三个部分组成？例子：',
     answers: [
       '环境记录 EnvironmentRecord(Environment Record)',
       '引用外部环境 outer(Reference outer Lexical Environment)',
@@ -2069,77 +2068,77 @@ FunctionExecutionContext = {
   },
   {
     id: 184,
-    title: 'JavaScript 中，词法环境中的环境记录：记录了多个__映射__。',
+    title: 'JavaScript 中，词法环境中，环境记录是什么？',
     answers: [
-      '标识符',
-      '到值',
+      `环境记录是多个标识符映射到值的记录。`,
     ],
     tags: ['计算机科学', '程序设计语言', 'JavaScript'],
     type: '通用领域知识',
   },
   {
     id: 185,
-    title: 'JavaScript 中，引用外部环境（outer environment reference）：外部__环境（outer Lexical Environment）。',
+    title: 'JavaScript 中，词法环境中，引用外部环境（outer environment reference）是什么？',
     answers: [
-      '词法',
+      '引用外部环境是引用外部的词法环境。',
     ],
     tags: ['计算机科学', '程序设计语言', 'JavaScript'],
     type: '通用领域知识',
   },
   {
     id: 186,
-    title: 'JavaScript 中，绑定this：__函数应该没有这个属性。',
+    title: 'TODO xxx',
     answers: [
-      '箭头',
+      '',
     ],
     tags: ['计算机科学', '程序设计语言', 'JavaScript'],
     type: '通用领域知识',
   },
   {
     id: 187,
-    title: '在 ES6 中，LexicalEnvironment 组件和 VariableEnvironment 组件之间的区别是前者用于存储__和变量（let和const），而后者仅用于存储变量（__）。',
+    title: '在 ES6 中，词法环境组件和变量环境组件有什么区别？',
     answers: [
-      '函数定义',
-      'var',
+      `词法环境组件储存“函数定义”和“变量（let和const）”。`,
+      `变量环境组件仅用于存储变量 var。`,
     ],
     tags: ['计算机科学', '程序设计语言', 'JavaScript'],
     type: '通用领域知识',
   },
   {
     id: 188,
-    title: 'JavaScript 中，词法环境的“__”和“__”在执行上下文的创建阶段就已经确定。',
+    title: 'JavaScript 中，词法环境的哪几个部分在上下文创建阶段就已经确定？',
     answers: [
-      'outer',
-      'EnvironmentRecord（环境记录）',
+      '1. outer（引用外部环境）',
+      '2. EnvironmentRecord（环境记录）',
     ],
     tags: ['计算机科学', '程序设计语言', 'JavaScript'],
     type: '通用领域知识',
   },
   {
     id: 189,
-    title: '声明：告诉编译器/解析器有这个变量的存在，但是不会分配__。例子',
+    title: '在计算机科学中，声明是什么？',
     answers: [
-      '内存空间',
-      '在 JavaScript 中，声明一个变量：var a;',
+      '声明是一种将变量标识符信息告诉编译器但不分配内存空间的行为。',
+      '例如：在 JavaScript 中，声明一个变量：var a;',
     ],
     tags: ['计算机科学', '程序设计语言', 'C'],
     type: '通用领域知识',
   },
   {
     id: 190,
-    title: '定义：为__分配内存空间，在 C 语言中，一般__就包含了定义，例如：int a;(确定了变量和变量的类型，默认值一般为 0)，但是在 JavaScript 中，var a; 就只是声明。',
+    title: '在计算机科学中，定义是什么？',
     answers: [
-      '变量',
-      '声明',
+      '定义是一种将变量标识符信息告诉编译器并分配内存空间的行为。',
+      '例如：在 C 语言中，一般声明就包含了定义，int a;(确定了变量和变量的类型，默认值一般为 0)，但是在 JavaScript 中，var a; 就只是声明。',
     ],
     tags: ['计算机科学', '程序设计语言', 'C'],
     type: '通用领域知识',
   },
   {
     id: 191,
-    title: '初始化：即__时赋的值。不指定的话开辟时赋该类型的默认值。初始化是编译器的行为。在 JavaScript 中，变量的初始化值为 undefined。',
+    title: '计算机科学中，初始化是什么？',
     answers: [
-      '开辟内存区域',
+      '初始化是在变量开辟内存空间时赋默认值的行为。',
+      '不指定的话开辟时赋该类型的默认值。初始化是编译器的行为。在 JavaScript 中，变量的初始化值为 undefined。',
     ],
     tags: ['计算机科学', '程序设计语言', 'JavaScript'],
     type: '通用领域知识',
@@ -2393,97 +2392,90 @@ FunctionExecutionContext = {
   },
   {
     id: 216,
-    title: `在面向对象程序设计（OOP）中，类与类之间的耦合度从弱到强排列：__->__->__->__->__。`,
+    title: `在面向对象程序设计（OOP）中，类与类之间的耦合度有哪些？从弱到强说一下`,
     answers: [
-      '依赖关系',
-      '关联关系',
-      '聚合关系',
-      '组合关系',
-      '泛化关系和实现关系',
+      '1.依赖关系',
+      '2.关联关系',
+      '3.聚合关系',
+      '4.组合关系',
+      '5.泛化关系和实现关系',
     ],
     tags: ['计算机科学', '编程思想', '命令式编程',],
     type: '基础知识',
   },
   {
     id: 217,
-    title: `在面向对象程序设计（OOP）中，依赖（Dependency）关系是一种__关系，它是对象之间耦合度最弱的一种关联方式，是临时性的关联。在代码中，某个类的方法通过__、__或者__来访问另一个类（被依赖类）中的某些方法来完成一些职责。`,
+    title: `在面向对象程序设计（OOP）中，依赖（Dependency）关系是什么？`,
     answers: [
-      '使用',
-      '局部变量',
-      '方法的参数',
-      '对静态方法的调用',
+      `依赖（Dependency）关系是一种对象之间耦合度最弱的临时性的关系。`,
+      `在代码中，某个类的方法通过局部变量、方法的参数或者对静态方法的调用来访问另一个类（被依赖类）中的某些方法来完成一些职责。`,
     ],
     tags: ['计算机科学', '编程思想', '命令式编程',],
     type: '基础知识',
   },
   {
     id: 218,
-    title: `在面向对象程序设计（OOP）中，关联（Association）关系是对象之间的一种__关系，用于表示一类对象与另一类对象之间的联系。`,
+    title: `TODO xxx`,
     answers: [
-      '引用',
+      '',
     ],
     tags: ['计算机科学', '编程思想', '命令式编程',],
     type: '基础知识',
   },
   {
     id: 219,
-    title: `在面向对象程序设计（OOP）中，关联关系是类与类之间最常用的一种关系，分为__、__和__。`,
+    title: `在面向对象程序设计（OOP）中，关联关系是什么？分为哪几种？`,
     answers: [
-      '一般关联关系',
-      '聚合关系',
-      '组合关系',
+      `关联关系是对象之间的一种引用关系。`,
+      '1.一般关联关系',
+      '2.聚合关系',
+      '3.组合关系',
     ],
     tags: ['计算机科学', '编程思想', '命令式编程',],
     type: '基础知识',
   },
   {
     id: 220,
-    title: `在面向对象程序设计（OOP）中，聚合（Aggregation[ˌæɡrɪˈɡeɪʃn]）关系是强关联关系，是整体__部分的关系（是 __-a 的关系）。部分对象可以脱离整体对象而独立存在吗？`,
+    title: `在面向对象程序设计（OOP）中，聚合（Aggregation[ˌæɡrɪˈɡeɪʃn]）关系是什么？`,
     answers: [
-      '包含',
-      'has',
-      '可以',
+      `聚合关系是一种整体包含部分的部分可以独立存在的关系。`,
     ],
     tags: ['计算机科学', '编程思想', '命令式编程',],
     type: '基础知识',
   },
   {
     id: 221,
-    title: `在面向对象程序设计（OOP）中，组合（Composition[ˌkɑːmpəˈzɪʃn]）关系是一种更强烈的聚合关系，表示整体由部分__的关系（是 __-a 关系）。部分对象可以脱离整体对象而独立存在吗？`,
+    title: `在面向对象程序设计（OOP）中，组合（Composition[ˌkɑːmpəˈzɪʃn]）关系是什么？`,
     answers: [
-      '构成',
-      'cxmtains',
-      '不可以',
+      `组合关系是一种整体由部分构成的部分不能独立于整体的关系。`,
     ],
     tags: ['计算机科学', '编程思想', '命令式编程',],
     type: '基础知识',
   },
   {
     id: 222,
-    title: `在面向对象程序设计（OOP）中，泛化（Generalization[ˌdʒenrələˈzeɪʃn]）关系是对象之间耦合度最大的一种关系，表示__与__的关系，是父类与子类之间的关系，是一种继承关系，是 __-a 的关系。`,
+    title: `在面向对象程序设计（OOP）中，泛化（Generalization[ˌdʒenrələˈzeɪʃn]）关系是什么？`,
     answers: [
-      '一般',
-      '特殊',
-      'is',
+      `泛化关系是对象之间耦合度最大的表示一般与特殊，父类与子类的关系。`,
     ],
     tags: ['计算机科学', '编程思想', '命令式编程',],
     type: '基础知识',
   },
   {
     id: 223,
-    title: `在面向对象程序设计（OOP）中，实现（Realization[ˌriːələˈzeɪʃn]）关系是__与__之间的关系。在这种关系中，类实现了接口，类中的操作实现了接口中所声明的所有的抽象操作。`,
+    title: `在面向对象程序设计（OOP）中，实现（Realization[ˌriːələˈzeɪʃn]）关系是什么？`,
     answers: [
-      '接口',
-      '实现类',
-      'is',
+      `实现关系是接口与实现类之间的关系。`,
+      '在这种关系中，类实现了接口，类中的操作实现了接口中所声明的所有的抽象操作。',
     ],
     tags: ['计算机科学', '编程思想', '命令式编程',],
     type: '基础知识',
   },
   {
     id: 224,
-    title: `接口（Interface）是一种特殊的类，它具有类的结构但不可被__化，只可以被子类实现。它包含抽象__，但不包含__。它描述了类或组件对__可见的动作。`,
+    title: `在面向对象中，接口（Interface）是什么？`,
     answers: [
+      `接口是一种只包含属性和方法的定义而不包含实现的约束形式。`,
       '实例',
       '操作',
       '属性',
@@ -3365,9 +3357,10 @@ function curry(func){
   },
   {
     id: 290,
-    title: 'TODO xxx',
+    title: '在 JavaScript 中，prototype 和 __proto__ 有什么区别？',
     answers: [
-      '',
+      `每个 Object 构造函数的实例默认都有 __proto__ 属性。`,
+      `除了箭头函数实例以外，每个 Function 构造函数的实例默认都有 prototype 属性`,
     ],
     tags: ['计算机科学', '程序设计语言', 'JavaScript'],
     type: '通用领域知识',
@@ -3716,9 +3709,10 @@ TODO：有时间再补充
   },
   {
     id: 322,
-    title: '在 JavaScript 中，所有的函数都有“原型对象”（ prototype 属性）对吗？',
+    title: '在 JavaScript 中，所有的函数都有“原型对象”（ prototype 属性）吗？所有的对象都有 __proto__ 吗？',
     answers: [
-      `对`,
+      `不是，箭头函数没有。`,
+      `不是，Object 构造函数的原型对象 (prototype) 就没有 __proto__ 属性。`,
     ],
     tags: ['计算机科学', '程序设计语言', 'JavaScript'],
     type: '通用领域知识',
