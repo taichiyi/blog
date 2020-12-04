@@ -61,7 +61,7 @@ const data: QAs[] = [
 主要包括什么？
   包括字符集和编码方案。
 有什么用？
-  用于对世界上大多数书写系统中表示的文本进行一致的编码、表示和处理。
+  用于对文本进行一致的编码、表示和处理。
         `,
       },
     ],
@@ -419,7 +419,7 @@ m
     id: 30,
     title: `在计算机科学中，防抖（Debouncing），是什么？`,
     answers: [
-      `防抖，是一种限制函数调用速率的技术。当满足一个周期时，则能触发一次事件。`,
+      `防抖，是一种限制函数调用速率的技术。当满足一个周期时，则能触发一次函数。`,
       `重点在于重置周期。`,
       `[di'bausiŋ]`,
     ],
@@ -1860,7 +1860,7 @@ data:text/html;charset=utf8,%3Ch1%3EHello%2C%20World %E7%BE%BD%E7%BF%BC!%3C%2Fh1
     answers: [
       '分为“挂载”“更新”“卸载”三个阶段',
       '“挂载”阶段：constructor -> getDerivedStateFromProps -> render -> componentDidMount',
-      '“更新”阶段：getStateFromProps -> shouldComponentUpdate -> render -> getSnapShotBeforeUpdate -> componentDidUpdate',
+      '“更新”阶段：getDerivedStateFromProps -> shouldComponentUpdate -> render -> getSnapShotBeforeUpdate -> componentDidUpdate',
       '“更新”阶段：componentWillUnMount',
     ],
     tags: ['计算机科学', 'JavaScript', 'React', '生命周期'],
@@ -2236,14 +2236,16 @@ FunctionExecutionContext = {
   },
   {
     id: 200,
-    title: `编码（Encoding）：将文字、数字或其它对象编成__，或将信息、数据转换成规定的电脉冲信号。`,
-    answers: ['数码',],
+    title: `编码（Encoding）是什么？`,
+    answers: [
+      `编码是将文字、数字或其它对象编成数码，或将信息、数据转换成规定的电脉冲信号的过程。`
+    ],
     tags: ['计算机科学', '编码'],
     type: '基础知识',
   },
   {
     id: 201,
-    title: `数字系统中常用的编码有两类，__和__。`,
+    title: `数字系统中常用的编码有哪几类？`,
     answers: [
       '二进制编码',
       '十进制编码',
@@ -2253,9 +2255,9 @@ FunctionExecutionContext = {
   },
   {
     id: 202,
-    title: `解码（Decoding）：将__还原成它所代表的内容或将电脉冲信号、光信号、无线电波等转换成它所代表的信息、数据等的过程。`,
+    title: `解码（Decoding）是什么？`,
     answers: [
-      '数码',
+      '解码是将数码还原成它所代表的内容或将电脉冲信号、光信号、无线电波等转换成它所代表的信息、数据等的过程。',
     ],
     tags: ['计算机科学', '编码'],
     type: '基础知识',
@@ -3217,7 +3219,7 @@ function curry(func){
   },
   {
     id: 279,
-    title: `函数式编程有哪些特性？`,
+    title: `函数式编程有哪些特性（术语）？`,
     answers: [
       '- 不可变性（Immutability、immutable）：变量像数学中的一样，是抽象符号而非内存地址（变量不可变）',
       '- 纯函数（Pure function）：',
@@ -3578,7 +3580,7 @@ TODO：有时间再补充
     id: 309,
     title: '尾部调用优化（Tail Call Optimization，TCO），是什么？',
     answers: [
-      `尾部调用优化是一种当递归满足一定条件时的使用新栈帧替换旧栈帧始终只使用一帧的技术。`,
+      `尾部调用优化是一种当递归满足一定条件时的使用新栈帧替换旧栈帧并始终只使用一帧的技术。`,
       `[teɪl] [kɔːl] [,ɒptɪmaɪ'zeɪʃən]`,
     ],
     tags: ['计算机科学', '编程思想', '声明式编程', '函数式编程',],
