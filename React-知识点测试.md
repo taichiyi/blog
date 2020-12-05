@@ -21,7 +21,7 @@
 
 ###### kg96w40y-Q
 
-## Context 的 Consumer 组件的作用是什么？
+## Context 的 Consumer [kənˈsuːmər] 组件是什么？作用是什么？
 
 [查看回答](#kg96w40y-A)
 
@@ -87,7 +87,9 @@ Provider 接受 value 属性，value 会修改 React Context 对象的值。
 
 [查看问题](#kg96w40y-Q)
 
-基于 React Context 的值进行渲染
+Consumer 组件是 React Context 对象的一个属性，它的值指向自身所在的 React Context。
+
+作用：基于 React Context 的值进行渲染
 
 ``` text
 程度：中级
