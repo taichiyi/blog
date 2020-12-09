@@ -1112,12 +1112,12 @@ m
   },
   {
     id: 99,
-    title: `TODO xxx`,
+    title: '在 JavaScript 中，怎么判断一个对象是否默认支持迭代器模式？',
     answers: [
-      '',
+      `如果对象有 Symbol.AsyncIterator 或 Symbol.Iterator`,
     ],
-    tags: ['计算机科学', '编程思想', '命令式编程',],
-    type: '基础知识',
+    tags: ['计算机科学', '程序设计语言', 'JavaScript'],
+    type: '通用领域知识',
   },
   {
     id: 100,
@@ -1312,18 +1312,18 @@ data:text/html;charset=utf8,%3Ch1%3EHello%2C%20World %E7%BE%BD%E7%BF%BC!%3C%2Fh1
   },
   {
     id: 117,
-    title: '使用迭代器，可以不必关心数据的__，以实现对列表的遍历。',
+    title: '迭代器（Iterator），是什么？',
     answers: [
-      '数据结构',
+      '迭代器是集合对象提供的可以顺序访问集合元素的一个对象。',
     ],
     tags: ['计算机科学', '算法',],
     type: '基础知识',
   },
   {
     id: 118,
-    title: '栈是一种很简单很高效的数据结构，因为数据只能在__添加和删除。',
+    title: '在计算机科学中，栈是什么？',
     answers: [
-      '栈顶',
+      '栈是一种只能在栈顶添加和删除元素的列表。',
     ],
     tags: ['计算机科学', '算法',],
     type: '基础知识',
@@ -1885,11 +1885,19 @@ data:text/html;charset=utf8,%3Ch1%3EHello%2C%20World %E7%BE%BD%E7%BF%BC!%3C%2Fh1
   },
   {
     id: 170,
-    title: 'TODO xxx',
+    title: '在 JavaScript 中，哪些原生语言结构会自动使用迭代器模式？',
     answers: [
-      '',
+      `for-of`,
+      `Array destructuring(数组结构)`,
+      `The spread operator(展开运算符)`,
+      `Array.from()`,
+      `Set construction(构建)`,
+      `Map construction(构建)`,
+      `Promise.all()`,
+      `Promise.race()`,
+      `yield* operator`,
     ],
-    tags: ['计算机科学', '程序设计语言', 'C'],
+    tags: ['计算机科学', '程序设计语言', 'JavaScript'],
     type: '基础知识',
   },
   {
@@ -2955,14 +2963,14 @@ Link 组件渲染到 DOM 中也是 a 标签，他们的区别主要提现在点�
   },
   {
     id: 260,
-    title: `说说观察者模式的定义、应用场景和优缺点。`,
+    title: `观察者模式是什么？应用场景？优缺点？`,
     answers: [
       {
         tag: 'pre',
         val:
           `
 定义：
-  当被“观察”对象发生状态变化时，所有“观察”它的其他对象都会得到通知。
+  观察者模式是一种当被“观察”对象发生状态变化时，所有“观察者”都会得到通知的设计模式。。
 优点：
   1. 目标与观察者的耦合性较低。
   2. 遵守“开闭原则”。
@@ -3377,18 +3385,37 @@ function curry(func){
   },
   {
     id: 291,
-    title: 'TODO xxx',
+    title: '在 JavaScript 中，迭代协议是什么？和迭代器模式有什么区别?',
     answers: [
-      '',
+      {
+        tag:'pre',
+        val:
+        `
+迭代协议, 分为两个协议:
+  可迭代协议
+  迭代器协议
+        `
+      },
+      '没有本质的区别',
     ],
     tags: ['计算机科学', '程序设计语言', 'JavaScript'],
     type: '通用领域知识',
   },
   {
     id: 292,
-    title: 'TODO xxx',
+    title: '在 JavaScript 中，迭代器协议是什么？',
     answers: [
-      '',
+      '迭代器协议是一个定义了对象产生一系列值的方式的协议.',
+      {
+        tag:'pre',
+        val:
+        `
+具体还说, 定义了对象必须有一个 next 方法,
+  该方法总是返回一个叫做 IteratorResult 的对象,
+    IteratorResult 对象必须有一个 boolean 类型的 done 属性,
+    可能有任意类型的 value 属性, 当 done 为 true 时可以省略.
+        `
+      },
     ],
     tags: ['计算机科学', '程序设计语言', 'JavaScript'],
     type: '通用领域知识',
@@ -3654,11 +3681,19 @@ TODO：有时间再补充
   },
   {
     id: 316,
-    title: '如果一个对象设置了 Symbol.__ 属性，则这个对象就是异步可迭代对象。属性值是一个方法，该方法返回对象的__。该方法返回一个实现了__ 协议的对象。',
+    title: '在 JavaScript 中，可迭代协议是什么？',
     answers: [
-      `asyncIterator`,
-      `异步迭代器（AsyncIterator）`,
-      `迭代器`,
+      '可迭代协议是一个允许定制迭代行为的协议.',
+      {
+        tag:'pre',
+        val:
+        `
+具体还说,
+  定义了对象必须有一个键为 Symbol.iterator 的属性,
+  并且值为一个无参数的的函数,
+    函数的返回值为一个符合迭代器协议的对象.
+        `
+      },
     ],
     tags: ['计算机科学', '程序设计语言', 'JavaScript'],
     type: '通用领域知识',
