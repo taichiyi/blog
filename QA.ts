@@ -1210,11 +1210,19 @@ data:text/html;charset=utf8,%3Ch1%3EHello%2C%20World %E7%BE%BD%E7%BF%BC!%3C%2Fh1
   },
   {
     id: 107,
-    title: 'TODO xxx',
+    title: '在正则表达式中，元字符括号「(」和「)」有哪几种用途?',
     answers: [
-      '',
+      {
+        tag: 'pre',
+        val:
+        `
+1. 限制子表达式的范围（分组）。
+2. 将若干字符组合成一个元素。
+3. 反向引用。
+        `,
+      },
     ],
-    tags: ['计算机科学', '数学', '数据结构',],
+    tags: ['计算机科学', '正则表达式',],
     type: '基础知识',
   },
   {
@@ -1583,11 +1591,9 @@ data:text/html;charset=utf8,%3Ch1%3EHello%2C%20World %E7%BE%BD%E7%BF%BC!%3C%2Fh1
   },
   {
     id: 142,
-    title: '在正则表达式中，元字符「(」和「)」来__和__，分组就是确定__的范围。',
+    title: 'TODO xxx',
     answers: [
-      '分组',
-      '捕获',
-      '子表达式',
+      '',
     ],
     tags: ['计算机科学', '正则表达式',],
     type: '基础知识',
@@ -1634,9 +1640,23 @@ data:text/html;charset=utf8,%3Ch1%3EHello%2C%20World %E7%BE%BD%E7%BF%BC!%3C%2Fh1
   },
   {
     id: 147,
-    title: '在正则表达式中，“__”是正则表达式的特性之一，它容许我们匹配与子表达式先前部分匹配的同样的文本。',
+    title: '在正则表达式中，“反向引用”是什么？由哪几部分组成？',
     answers: [
-      '反向引用',
+      '“反向引用”是一种匹配子表达式所匹配文本的正则表达式特性。',
+      '由两部分组成：子表达式和元字符序列。',
+      {
+        tag:'pre',
+        val:
+        `
+例子：
+"ooo111ooo222ooo123".match(/(\\d)\\1/)
+  ["11", "1", index: 3, input: "ooo111ooo222ooo123", groups: undefined]
+"ooo111ooo222ooo123".match(/(\\d)\\1/g)
+  ["11", "22"]
+"abcdebbcde".match(/([ab])\\1/)
+  ["bb", "b", index: 5, input: "abcdebbcde", groups: undefined]
+        `,
+      },
     ],
     tags: ['计算机科学', '正则表达式',],
     type: '基础知识',
@@ -1921,11 +1941,11 @@ data:text/html;charset=utf8,%3Ch1%3EHello%2C%20World %E7%BE%BD%E7%BF%BC!%3C%2Fh1
   },
   {
     id: 173,
-    title: 'TODO xxx',
+    title: '若干是什么？',
     answers: [
-      '',
+      '若干是一个表示一个或多个的量词。',
     ],
-    tags: ['计算机科学', '程序设计语言', 'C'],
+    tags: ['词语',],
     type: '基础知识',
   },
   {
@@ -3933,7 +3953,7 @@ Reactive
     id: 336,
     title: `发布订阅（Publisher/Subscriber）模式是什么？与观察者（Observer）模式和 monads 有什么区别？`,
     answers: [
-      '发布订阅模式是一种信息源发生事件时将通知所有观察者的同步信息的解决方案。',
+      '发布订阅模式是一种信息源发生事件时将通知所有订阅者的同步信息的解决方案。',
       '在面向对象编程中，把这个概念称为观察者模式。',
       '在函数式编程中，把这个概念称为 monads。',
     ],
