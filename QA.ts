@@ -380,11 +380,11 @@ m
         val:
           `
 编码方案：UTF-8
-表示字符方式：&#xxx
+表示字符方式：&#xxx;
   十进制
-    &#48
+    &#48;
   十六进制
-    &#x30
+    &#x30;
         `,
       },
     ],
@@ -1655,7 +1655,7 @@ data:text/html;charset=utf8,%3Ch1%3EHello%2C%20World %E7%BE%BD%E7%BF%BC!%3C%2Fh1
   ["11", "22"]
 "abcdebbcde".match(/([ab])\\1/)
   ["bb", "b", index: 5, input: "abcdebbcde", groups: undefined]
-        `,
+        `.replace(/\\/g,'&#92;'),
       },
     ],
     tags: ['计算机科学', '正则表达式',],
@@ -1816,8 +1816,8 @@ data:text/html;charset=utf8,%3Ch1%3EHello%2C%20World %E7%BE%BD%E7%BF%BC!%3C%2Fh1
     answers: [
       `本质区别：忽略优先量词不会保存备用状态。`,
       `忽略优先量词会把控制权交给表达式后面的元素。`,
-      `"<div>abc</div><div>xyz</div>".match(/<div>.*?<\/div>/); // <div>abc</div>`.replace(/</g,'&#60').replace(/>/g,'&#62'),
-      `"<div>abc</div><div>xyz</div>".match(/<div>.*<\/div>/);  // <div>abc</div><div>xyz</div>`.replace(/</g,'&#60').replace(/>/g,'&#62'),
+      `"<div>abc</div><div>xyz</div>".match(/<div>.*?<\/div>/); // <div>abc</div>`.replace(/</g,'&#60;').replace(/>/g,'&#62;'),
+      `"<div>abc</div><div>xyz</div>".match(/<div>.*<\/div>/);  // <div>abc</div><div>xyz</div>`.replace(/</g,'&#60;').replace(/>/g,'&#62;'),
     ],
     tags: ['计算机科学', '正则表达式',],
     type: '基础知识',
@@ -1827,8 +1827,8 @@ data:text/html;charset=utf8,%3Ch1%3EHello%2C%20World %E7%BE%BD%E7%BF%BC!%3C%2Fh1
     title: '在正则表达式中，怎么表示“忽略优先量词”？有例子',
     answers: [
       '“忽略优先量词”通过在量词后面加一个“「?」问号”来表示。',
-      `"<div>abc</div><div>xyz</div>".match(/<div>.*?<\/div>/); // <div>abc</div>`.replace(/</g,'&#60').replace(/>/g,'&#62'),
-      `"<div>abc</div><div>xyz</div>".match(/<div>.*<\/div>/);  // <div>abc</div><div>xyz</div>`.replace(/</g,'&#60').replace(/>/g,'&#62'),
+      `"<div>abc</div><div>xyz</div>".match(/<div>.*?<\/div>/); // <div>abc</div>`.replace(/</g,'&#60;').replace(/>/g,'&#62;'),
+      `"<div>abc</div><div>xyz</div>".match(/<div>.*<\/div>/);  // <div>abc</div><div>xyz</div>`.replace(/</g,'&#60;').replace(/>/g,'&#62;'),
     ],
     tags: ['计算机科学', '正则表达式',],
     type: '基础知识',
