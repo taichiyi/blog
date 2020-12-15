@@ -2402,11 +2402,9 @@ FunctionExecutionContext = {
   },
   {
     id: 213,
-    title: `GUI 的英文全称__，中文全称__。`,
+    title: `TODO xxx`,
     answers: [
-      'Graphical User Interface',
-      '[ˈɡræfɪkl][ˈjuːzər][ˈɪntərfeɪs]',
-      '图形用户界面',
+      '',
     ],
     tags: ['计算机科学', '图形学',],
     type: '基础知识',
@@ -2653,9 +2651,9 @@ FunctionExecutionContext = {
           `
 快速排序思想：
   1. 快速排序算法采用了分治策略，怎么分？
-  2. 把序列当做一个分区(partition[pɑːrˈtɪʃn])，然后根据基准（pivot[ˈpɪvət]）排序，把分区一分为二；
+  2. 把序列当做一个分区(partition[pɑːrˈtɪʃn])，然后根据基准下标（pivot[ˈpɪvət]）排序，把分区一分为二；
   3. 然后递归此步骤，直至把每个分区分到只有一个元素。
-基准怎么找？分 3 步。
+基准下标怎么找？分 3 步。
   1. 选择分区的任意一个元素当做基准（为了简化代码的书写，一般选择分区两端的元素当做基准）。
   2. 小于基准的放左边，大于等于放右边。
   3. 基准所在的下标将分区一分为二。
@@ -2750,10 +2748,10 @@ URL Hash：
     id: 243,
     title: 'React Router 提供了哪几种类型的 <Router> 组件？',
     answers: [
-      '<BrowserRouter>',
-      '<HashRouter>',
-      '<MemoryRouter>',
-      '<StaticRouter>',
+      `<BrowserRouter>`.replace(/</g,'&#60;').replace(/>/g,'&#62;'),
+      `<HashRouter>`.replace(/</g,'&#60;').replace(/>/g,'&#62;'),
+      `<MemoryRouter>`.replace(/</g,'&#60;').replace(/>/g,'&#62;'),
+      `<StaticRouter>`.replace(/</g,'&#60;').replace(/>/g,'&#62;'),
       '以上组件将创建 Browser，Hash，Memory 和 StaticRouter 的 history 实例。',
     ],
     tags: ['计算机科学', 'JavaScript', 'React', 'React Router',],
