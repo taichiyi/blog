@@ -1147,7 +1147,7 @@
 
 <details>
   <summary>当调用函数时，引擎都会创建一个新的__，创建完后就会被压入执行上下文栈。函数完成执行后，将函数执行上下文__栈，将__返回到先前执行上下文。</summary>
-  <div>局部执行上下文</div>
+  <div>函数执行上下文</div>
   <div>弹出</div>
   <div>控制权</div>
 </details>
@@ -1271,83 +1271,83 @@
   // 创建阶段
   GlobalExecutionContext = {
     LexicalEnvironment: {
+      outer(outer environment reference): < null >,
+      ThisBinding: < Global Object>
       EnvironmentRecord: {
         Type: "Object",
-        a: < uninitialized >, // 使用未初始化(uninitialized)的变量，会报错
+        a: < uninitialized >, // 读取未初始化(uninitialized)的变量，会报错
         b: < uninitialized >,
         multiply: < func >
       },
-      outer(outer environment reference): < null >,
-      ThisBinding: < Global Object>
     },
     VariableEnvironment: {
+      outer: < null >,
+      ThisBinding: < Global Object >
       EnvironmentRecord: {
         Type: "Object",
         c: undefined,
       },
-      outer: < null >,
-      ThisBinding: < Global Object >
     }
   }
   <!--  -->
   // 执行阶段
   GlobalExecutionContext = {
     LexicalEnvironment: {
+      outer: < null >,
+      ThisBinding: < Global Object >
       EnvironmentRecord: {
         Type: "Object",
         a: 20,
         b: 30,
         multiply: < func >
       },
-      outer: < null >,
-      ThisBinding: < Global Object >
     },
     VariableEnvironment: {
+      outer: < null >,
+      ThisBinding: < Global Object >
       EnvironmentRecord: {
         Type: "Object",
         c: undefined,
       },
-      outer: < null >,
-      ThisBinding: < Global Object >
     }
   }
   // 当遇到对函数multiple（20，30）的调用时，将创建一个新的函数执行上下文来执行功能代码。
   // 创建阶段
   FunctionExecutionContext = {
     LexicalEnvironment: {
+      outer: < GlobalLexicalEnvironment >,
+      ThisBinding: < Global Object or undefined >,<!-- 严格模式 ? undefined : Global Object -->
       EnvironmentRecord: {
         Type: "Declarative",
         Arguments: {0: 20, 1: 30, length: 2},
       },
-      outer: < GlobalLexicalEnvironment >,
-      ThisBinding: < Global Object or undefined >,<!-- 严格模式 ? undefined : Global Object -->
     },
     VariableEnvironment: {
+      outer: < GlobalLexicalEnvironment >,
+      ThisBinding: < Global Object or undefined >,<!-- 严格模式 ? undefined : Global Object -->
       EnvironmentRecord: {
         Type: "Declarative",
         g: undefined
       },
-      outer: < GlobalLexicalEnvironment >,
-      ThisBinding: < Global Object or undefined >,<!-- 严格模式 ? undefined : Global Object -->
     }
   }
   // 执行阶段
   FunctionExecutionContext = {
     LexicalEnvironment: {
+      outer: < GlobalLexicalEnvironment >,
+      ThisBinding: < Global Object or undefined >,<!-- 严格模式 ? undefined : Global Object -->
       EnvironmentRecord: {
         Type: "Declarative",
         Arguments: {0: 20, 1: 30, length: 2},
       },
-      outer: < GlobalLexicalEnvironment >,
-      ThisBinding: < Global Object or undefined >,<!-- 严格模式 ? undefined : Global Object -->
     },
     VariableEnvironment: {
+      outer: < GlobalLexicalEnvironment >,
+      ThisBinding: < Global Object or undefined >,<!-- 严格模式 ? undefined : Global Object -->
       EnvironmentRecord: {
         Type: "Declarative",
         g: 20
       },
-      outer: < GlobalLexicalEnvironment >,
-      ThisBinding: < Global Object or undefined >,<!-- 严格模式 ? undefined : Global Object -->
     }
   }
   </pre>
