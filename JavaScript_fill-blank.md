@@ -201,13 +201,18 @@
 ## 事件循环 -start-
 
 <details>
-  <summary>JavaScript运行时实际上由2个组件组成：__和__。消息队列也称为回调队列或任务队列。</summary>
-  <div>事件循环</div>
-  <div>消息队列</div>
+  <summary>单线程意味着只有一个__栈。</summary>
+  <div>调用</div>
 </details>
 
 <details>
-  <summary>事件循环先__任务队列再执行宏任务队列。</summary>
+  <summary>JavaScript 运行时实际上由2个组件组成：__和__。回调队列也称为消息队列或任务队列。</summary>
+  <div>事件循环</div>
+  <div>回调队列</div>
+</details>
+
+<details>
+  <summary>事件循环先执行__任务队列再执行宏任务队列。</summary>
   <div>微</div>
 </details>
 
@@ -220,7 +225,7 @@
 
 ![https://oss.taichiyi.com/markdown/1_lZ-KXoVNUSOwaq7q8zUBDg.png](https://oss.taichiyi.com/markdown/1_lZ-KXoVNUSOwaq7q8zUBDg.png)
 
-![https://oss.taichiyi.com/markdown/1_9mv-g9E-87Sji9j7YR08Fw.gif](https://oss.taichiyi.com/markdown/1_9mv-g9E-87Sji9j7YR08Fw.gif)
+![Event Loop 动图](https://oss.taichiyi.com/markdown/1_9mv-g9E-87Sji9j7YR08Fw.gif)
 
 ## 事件循环 -end-
 
