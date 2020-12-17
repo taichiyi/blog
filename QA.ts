@@ -1127,9 +1127,9 @@ m
     answers: [
       '控制反转是一种面向对象编程中用来减少对象之间耦合度的设计模式。',
       {
-        tag:'pre',
+        tag: 'pre',
         val:
-        `
+          `
         常见的实现方式：
           依赖注入（Dependency Injection，简称 DI）
           依赖查找（Dependency Lookup）
@@ -1217,7 +1217,7 @@ data:text/html;charset=utf8,%3Ch1%3EHello%2C%20World %E7%BE%BD%E7%BF%BC!%3C%2Fh1
       {
         tag: 'pre',
         val:
-        `
+          `
 1. 限制子表达式的范围（分组）。
 2. 将若干字符组合成一个元素。
 3. 反向引用。
@@ -1647,9 +1647,9 @@ data:text/html;charset=utf8,%3Ch1%3EHello%2C%20World %E7%BE%BD%E7%BF%BC!%3C%2Fh1
       '“反向引用”是一种匹配子表达式所匹配文本的正则表达式特性。',
       '由两部分组成：子表达式和元字符序列。',
       {
-        tag:'pre',
+        tag: 'pre',
         val:
-        `
+          `
 例子：
 "ooo111ooo222ooo123".match(/(\\d)\\1/)
   ["11", "1", index: 3, input: "ooo111ooo222ooo123", groups: undefined]
@@ -1657,7 +1657,7 @@ data:text/html;charset=utf8,%3Ch1%3EHello%2C%20World %E7%BE%BD%E7%BF%BC!%3C%2Fh1
   ["11", "22"]
 "abcdebbcde".match(/([ab])\\1/)
   ["bb", "b", index: 5, input: "abcdebbcde", groups: undefined]
-        `.replace(/\\/g,'&#92;'),
+        `.replace(/\\/g, '&#92;'),
       },
     ],
     tags: ['计算机科学', '正则表达式',],
@@ -1788,8 +1788,8 @@ data:text/html;charset=utf8,%3Ch1%3EHello%2C%20World %E7%BE%BD%E7%BF%BC!%3C%2Fh1
     answers: [
       '「^」',
       '「$」',
-      '「\b」',
-      '「\B」',
+      '「\\b」'.replace(/\\/g, '&#92;'),
+      '「\\B」'.replace(/\\/g, '&#92;'),
     ],
     tags: ['计算机科学', '正则表达式',],
     type: '基础知识',
@@ -1820,8 +1820,8 @@ data:text/html;charset=utf8,%3Ch1%3EHello%2C%20World %E7%BE%BD%E7%BF%BC!%3C%2Fh1
     answers: [
       `本质区别：忽略优先量词不会保存备用状态。`,
       `忽略优先量词会把控制权交给表达式后面的元素。`,
-      `"<div>abc</div><div>xyz</div>".match(/<div>.*?<\/div>/); // <div>abc</div>`.replace(/</g,'&#60;').replace(/>/g,'&#62;'),
-      `"<div>abc</div><div>xyz</div>".match(/<div>.*<\/div>/);  // <div>abc</div><div>xyz</div>`.replace(/</g,'&#60;').replace(/>/g,'&#62;'),
+      `"<div>abc</div><div>xyz</div>".match(/<div>.*?<\/div>/); // <div>abc</div>`.replace(/</g, '&#60;').replace(/>/g, '&#62;'),
+      `"<div>abc</div><div>xyz</div>".match(/<div>.*<\/div>/);  // <div>abc</div><div>xyz</div>`.replace(/</g, '&#60;').replace(/>/g, '&#62;'),
     ],
     tags: ['计算机科学', '正则表达式',],
     type: '基础知识',
@@ -1831,8 +1831,8 @@ data:text/html;charset=utf8,%3Ch1%3EHello%2C%20World %E7%BE%BD%E7%BF%BC!%3C%2Fh1
     title: '在正则表达式中，怎么表示“忽略优先量词”？有例子',
     answers: [
       '“忽略优先量词”通过在量词后面加一个“「?」问号”来表示。',
-      `"<div>abc</div><div>xyz</div>".match(/<div>.*?<\/div>/); // <div>abc</div>`.replace(/</g,'&#60;').replace(/>/g,'&#62;'),
-      `"<div>abc</div><div>xyz</div>".match(/<div>.*<\/div>/);  // <div>abc</div><div>xyz</div>`.replace(/</g,'&#60;').replace(/>/g,'&#62;'),
+      `"<div>abc</div><div>xyz</div>".match(/<div>.*?<\/div>/); // <div>abc</div>`.replace(/</g, '&#60;').replace(/>/g, '&#62;'),
+      `"<div>abc</div><div>xyz</div>".match(/<div>.*<\/div>/);  // <div>abc</div><div>xyz</div>`.replace(/</g, '&#60;').replace(/>/g, '&#62;'),
     ],
     tags: ['计算机科学', '正则表达式',],
     type: '基础知识',
@@ -1998,9 +1998,9 @@ data:text/html;charset=utf8,%3Ch1%3EHello%2C%20World %E7%BE%BD%E7%BF%BC!%3C%2Fh1
     answers: [
       'Redux 提供了 5个 API。',
       {
-        tag:'pre',
+        tag: 'pre',
         val:
-        `
+          `
 1. createStore
   是一个用于创建 Store 的函数。
   注意：一个应用应该只有一个 Store.
@@ -2351,9 +2351,9 @@ FunctionExecutionContext = {
     title: `应用程序软件(Aplication software)和系统软件(System software)有什么区别？`,
     answers: [
       {
-        tag:'pre',
+        tag: 'pre',
         val:
-        `
+          `
 相同
   “应用程序软件”和“系统软件”都是一个程序或一组程序。
 不同
@@ -2422,12 +2422,14 @@ FunctionExecutionContext = {
   },
   {
     id: 213,
-    title: `TODO xxx`,
+    title: 'Redux 中，术语 State 是什么？',
     answers: [
-      '',
+      'State 是',
+      'State 中文称为状态，可以是任意类型的值，但通常是一个深层嵌套的对象，所以也称为状态树。',
+      '按照约定，应该尽量保持 State 的可序列化。',
     ],
-    tags: ['计算机科学', '图形学',],
-    type: '基础知识',
+    tags: ['计算机科学', 'JavaScript', 'Redux'],
+    type: '专用领域知识',
   },
   {
     id: 214,
@@ -2472,11 +2474,11 @@ FunctionExecutionContext = {
   },
   {
     id: 218,
-    title: `TODO xxx`,
+    title: `在计算机科学中，序列化是什么？`,
     answers: [
-      '',
+      `序列化是将对象转化为可以存储或传输的形式的过程。`,
     ],
-    tags: ['计算机科学', '编程思想', '命令式编程',],
+    tags: ['计算机科学',],
     type: '基础知识',
   },
   {
@@ -2584,12 +2586,14 @@ FunctionExecutionContext = {
   },
   {
     id: 229,
-    title: 'TODO xxx',
+    title: 'Redux 中，术语 Action 是什么？',
     answers: [
-      '',
+      'Action 是一个表示改变状态的意图的对象。',
+      'Action 是将数据存储到 Store 中的唯一方式。',
+      '按照约定，Action 对象必须包含一个 type 属性，表示改变状态的意图。',
     ],
-    tags: ['计算机科学', '算法', '排序算法',],
-    type: '基础知识',
+    tags: ['计算机科学', 'JavaScript', 'Redux'],
+    type: '专用领域知识',
   },
   {
     id: 230,
@@ -2767,10 +2771,10 @@ URL Hash：
     id: 243,
     title: 'React Router 提供了哪几种类型的 <Router> 组件？',
     answers: [
-      `<BrowserRouter>`.replace(/</g,'&#60;').replace(/>/g,'&#62;'),
-      `<HashRouter>`.replace(/</g,'&#60;').replace(/>/g,'&#62;'),
-      `<MemoryRouter>`.replace(/</g,'&#60;').replace(/>/g,'&#62;'),
-      `<StaticRouter>`.replace(/</g,'&#60;').replace(/>/g,'&#62;'),
+      `<BrowserRouter>`.replace(/</g, '&#60;').replace(/>/g, '&#62;'),
+      `<HashRouter>`.replace(/</g, '&#60;').replace(/>/g, '&#62;'),
+      `<MemoryRouter>`.replace(/</g, '&#60;').replace(/>/g, '&#62;'),
+      `<StaticRouter>`.replace(/</g, '&#60;').replace(/>/g, '&#62;'),
       '以上组件将创建 Browser，Hash，Memory 和 StaticRouter 的 history 实例。',
     ],
     tags: ['计算机科学', 'JavaScript', 'React', 'React Router',],
@@ -2852,12 +2856,14 @@ Link 组件渲染到 DOM 中也是 a 标签，他们的区别主要提现在点�
   },
   {
     id: 249,
-    title: 'TODO xxx',
+    title: 'Redux 中，术语 Reducer 是什么？为什么要做成纯函数？',
     answers: [
-      '',
-      '',
+      `Reducer 是一个接受累加值和新值并返回新累加值的纯函数。`,
+      `Reducer 和 Array.prototype.reduce 是一个概念。`,
+      `纯函数的原因：为了实现“热更新”和 time travel。`,
+      `[rɪ'djuːsə]`,
     ],
-    tags: ['计算机科学', 'JavaScript', 'React',],
+    tags: ['计算机科学', 'JavaScript', 'Redux'],
     type: '专用领域知识',
   },
   {
@@ -3268,7 +3274,7 @@ function curry(func){
     }
   }
 }
-        `.replace(/</g,'&#60;').replace(/>/g,'&#62;'),
+        `.replace(/</g, '&#60;').replace(/>/g, '&#62;'),
       },
     ],
     tags: ['计算机科学', '柯里化',],
@@ -3429,9 +3435,9 @@ function curry(func){
     title: '在 JavaScript 中，迭代协议是什么？和迭代器模式有什么区别?',
     answers: [
       {
-        tag:'pre',
+        tag: 'pre',
         val:
-        `
+          `
 迭代协议, 分为两个协议:
   可迭代协议
   迭代器协议
@@ -3448,9 +3454,9 @@ function curry(func){
     answers: [
       '迭代器协议是一个定义了对象产生一系列值的方式的协议.',
       {
-        tag:'pre',
+        tag: 'pre',
         val:
-        `
+          `
 具体还说, 定义了对象必须有一个 next 方法,
   该方法总是返回一个叫做 IteratorResult 的对象,
     IteratorResult 对象必须有一个 boolean 类型的 done 属性,
@@ -3475,9 +3481,9 @@ function curry(func){
     title: 'JavaScript 中，箭头函数和普通函数的区别有哪些？',
     answers: [
       {
-        tag:'pre',
+        tag: 'pre',
         val:
-        `
+          `
 箭头函数
   对象
     没有
@@ -3726,9 +3732,9 @@ TODO：有时间再补充
     answers: [
       '可迭代协议是一个允许定制迭代行为的协议.',
       {
-        tag:'pre',
+        tag: 'pre',
         val:
-        `
+          `
 具体还说,
   定义了对象必须有一个键为 Symbol.iterator 的属性,
   并且值为一个无参数的的函数,
@@ -4030,9 +4036,9 @@ Reactive
     title: '中介者模式和外观模式有什么区别？',
     answers: [
       {
-        tag:'pre',
+        tag: 'pre',
         val:
-        `
+          `
 两个模式都是提供一个新对象，让相关对象只与新对象进行交互，
 区别就在于相关对象和新对象的关系：
   中介者模式
