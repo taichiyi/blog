@@ -1806,7 +1806,7 @@ data:text/html;charset=utf8,%3Ch1%3EHello%2C%20World %E7%BE%BD%E7%BF%BC!%3C%2Fh1
   },
   {
     id: 160,
-    title: '在正则表达式中，NFA 引擎和 DFA 引擎有什么区别别？',
+    title: '在正则表达式中，NFA 引擎和 DFA 引擎主要区别是什么？',
     answers: [
       'NFA 引擎是表达式主导的。',
       'DFA 引擎是文本主导的。',
@@ -1860,12 +1860,13 @@ data:text/html;charset=utf8,%3Ch1%3EHello%2C%20World %E7%BE%BD%E7%BF%BC!%3C%2Fh1
   },
   {
     id: 165,
-    title: '在正则表达式中，遇到“__失败”时，引擎会回归到备用状态。',
+    title: 'Redux 中，术语（4/10）Dispatching Function 是什么？',
     answers: [
-      '本地匹配',
+      `Dispatching Function 是一个接受 action 或 async action 对象的函数。`,
+      `[dɪˈspætʃɪŋ]`,
     ],
-    tags: ['计算机科学', '正则表达式',],
-    type: '基础知识',
+    tags: ['计算机科学', 'JavaScript', 'Redux'],
+    type: '专用领域知识',
   },
   {
     id: 166,
@@ -2320,7 +2321,7 @@ FunctionExecutionContext = {
   },
   {
     id: 203,
-    title: `纯函数，是什么是？`,
+    title: `纯函数，是什么？`,
     answers: [
       `纯函数是相同输入总是等于相同输出的没有副作用的引用透明的函数。`,
     ],
@@ -2422,7 +2423,7 @@ FunctionExecutionContext = {
   },
   {
     id: 213,
-    title: 'Redux 中，术语 State 是什么？',
+    title: 'Redux 中，术语（1/10）State 是什么？',
     answers: [
       'State 是',
       'State 中文称为状态，可以是任意类型的值，但通常是一个深层嵌套的对象，所以也称为状态树。',
@@ -2586,7 +2587,7 @@ FunctionExecutionContext = {
   },
   {
     id: 229,
-    title: 'Redux 中，术语 Action 是什么？',
+    title: 'Redux 中，术语（2/10）Action 是什么？',
     answers: [
       'Action 是一个表示改变状态的意图的对象。',
       'Action 是将数据存储到 Store 中的唯一方式。',
@@ -2856,7 +2857,7 @@ Link 组件渲染到 DOM 中也是 a 标签，他们的区别主要提现在点�
   },
   {
     id: 249,
-    title: 'Redux 中，术语 Reducer 是什么？为什么要做成纯函数？',
+    title: 'Redux 中，术语（3/10）Reducer 是什么？为什么要做成纯函数？',
     answers: [
       `Reducer 是一个接受累加值和新值并返回新累加值的纯函数。`,
       `Reducer 和 Array.prototype.reduce 是一个概念。`,
@@ -4086,6 +4087,15 @@ Reactive
     ],
     tags: ['计算机科学', '算法',],
     type: '基础知识',
+  },
+  {
+    id: 347,
+    title: 'Redux 中，术语（5/10）Action Creator 是什么？',
+    answers: [
+      `Action Creator 是一个专门创建 Action 或 Async Action 的工厂函数。`,
+    ],
+    tags: ['计算机科学', 'JavaScript', 'Redux'],
+    type: '专用领域知识',
   },
 ];
 
