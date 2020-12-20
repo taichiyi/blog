@@ -141,12 +141,12 @@ const data: QAs[] = [
   },
   {
     id: 8,
-    title: `一个中文的偏旁有没有可能成为一个 Unicode 的码点？`,
+    title: 'Redux 中，术语（6/10）Async Action 是什么？',
     answers: [
-      '可能',
+      `Async Action 是一个先通过中间件转换为 Action 再传递给 dispath 的值。`,
     ],
-    tags: ['计算机科学', '编码', '字符编码',],
-    type: '基础知识',
+    tags: ['计算机科学', 'JavaScript', 'Redux'],
+    type: '专用领域知识',
   },
   {
     id: 9,
@@ -2425,7 +2425,8 @@ FunctionExecutionContext = {
     id: 213,
     title: 'Redux 中，术语（1/10）State 是什么？',
     answers: [
-      'State 是',
+      'State 通常是一个可序列化的深层嵌套的对象。',
+      '',
       'State 中文称为状态，可以是任意类型的值，但通常是一个深层嵌套的对象，所以也称为状态树。',
       '按照约定，应该尽量保持 State 的可序列化。',
     ],
@@ -4016,7 +4017,7 @@ Reactive
     id: 340,
     title: '外观模式是什么？',
     answers: [
-      '外观模式是一种为多个子系统提供一个统一接口的结构型设计模式。',
+      '外观模式是一种通过外观子对象为多个子系统提供一个统一接口的结构型设计模式。',
       '有时需要通过一个父对象完成一个功能，客户对象需要调用多个子对象，这样违背了“开闭原则”和“迪米特法则”。',
       '因此，外观模式提供了一个外观子对象，客户对象只要调用外观子对象的一个接口就能实现相关功能。',
     ],
@@ -4027,7 +4028,7 @@ Reactive
     id: 341,
     title: '中介者模式是什么？',
     answers: [
-      '中介者模式是一种定义一个中介对象来封装一系列对象之间的交互的行为型设计模式。',
+      '中介者模式是一种通过中介对象来封装一系列对象之间的交互的行为型设计模式。',
     ],
     tags: ['计算机科学', '设计模式',],
     type: '基础知识',
@@ -4040,7 +4041,7 @@ Reactive
         tag: 'pre',
         val:
           `
-两个模式都是提供一个新对象，让相关对象只与新对象进行交互，
+两个模式都是提供一个新对象，让新对象只与相关对象进行交互，
 区别就在于相关对象和新对象的关系：
   中介者模式
     新对象是独立于相关对象的，就像是两家人。
@@ -4093,6 +4094,45 @@ Reactive
     title: 'Redux 中，术语（5/10）Action Creator 是什么？',
     answers: [
       `Action Creator 是一个专门创建 Action 或 Async Action 的工厂函数。`,
+    ],
+    tags: ['计算机科学', 'JavaScript', 'Redux'],
+    type: '专用领域知识',
+  },
+  {
+    id: 348,
+    title: 'Redux 中，术语（7/10）MiddleWare 是什么？',
+    answers: [
+      `MiddleWare 是一个接受 Dispatch 函数然后返回新 Dispatch 函数的高阶函数。`,
+      `通常是将 Async Actions 转为 Actions。`,
+      `[ˈmɪdlwer]`,
+    ],
+    tags: ['计算机科学', 'JavaScript', 'Redux'],
+    type: '专用领域知识',
+  },
+  {
+    id: 349,
+    title: 'Redux 中，术语（8/10）Store 是什么？',
+    answers: [
+      `Store 是一个保存状态和拥有多个与状态操作相关方法的对象。`,
+    ],
+    tags: ['计算机科学', 'JavaScript', 'Redux'],
+    type: '专用领域知识',
+  },
+  {
+    id: 350,
+    title: 'Redux 中，术语（9/10）Store Creator 是什么？',
+    answers: [
+      `Store Creator 是一个创建并返回 Store 对象的函数。`,
+    ],
+    tags: ['计算机科学', 'JavaScript', 'Redux'],
+    type: '专用领域知识',
+  },
+  {
+    id: 351,
+    title: 'Redux 中，术语（10/10）Store enhancer 是什么？',
+    answers: [
+      `Store enhancer 是接受一个 Store Creator 然后返回一个增强后的 Store Creator 的高阶函数。`,
+      `[ɪnˈhænsər]`,
     ],
     tags: ['计算机科学', 'JavaScript', 'Redux'],
     type: '专用领域知识',
