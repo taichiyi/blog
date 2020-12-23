@@ -180,12 +180,27 @@ const data: QAs[] = [
   },
   {
     id: 12,
-    title: `TODO`,
+    title: `在 JavaScript 中，垃圾回收（GC）有哪几种算法？分别介绍一下原理和缺点。`,
     answers: [
-      ``,
+      {
+        tag:'pre',
+        val:
+        `
+引用计数
+  原理
+    根据对象是否被引用判断是否要回收对象。
+  缺点
+    存在循环引用问题
+扫描标记
+  原理
+    从全局对象开始查找所有对象，那些访问不到的对象将会被回收。
+  问题
+    无
+        `,
+      },
     ],
-    tags: ['计算机科学', '编码', '字符编码',],
-    type: '基础知识',
+    tags: ['计算机科学', '程序设计语言', 'JavaScript'],
+    type: '通用领域知识',
   },
   {
     id: 13,
@@ -667,8 +682,8 @@ m
     answers: [
       `使用 const 关键字声明的变量，指针在程序运行期间不可改变。`,
     ],
-    tags: ['计算机科学', '程序设计语言'],
-    type: '基础知识',
+    tags: ['计算机科学', '程序设计语言', 'JavaScript'],
+    type: '通用领域知识',
   },
   {
     id: 55,
@@ -3405,12 +3420,25 @@ function curry(func){
   },
   {
     id: 288,
-    title: 'TODO xxx',
+    title: '为什么要使用 Redux ？使用 Redux 有哪些好处？',
     answers: [
-      '',
+      `因为单个页面的状态越来越多，交互越来越复杂，状态的储存与修改，往往散落四处，使得代码难以维护。`,
+      {
+        tag:'pre',
+        val:`
+好处
+  总则
+    提高代码可维护性
+  细则
+    可预测
+    中心化
+    可调适
+    灵活性
+        `,
+      },
     ],
-    tags: ['计算机科学', '程序设计语言', 'JavaScript'],
-    type: '通用领域知识',
+    tags: ['计算机科学', 'JavaScript', 'Redux'],
+    type: '专用领域知识',
   },
   {
     id: 289,
@@ -4098,7 +4126,7 @@ Reactive
     id: 348,
     title: 'Redux 中，术语（7/10）MiddleWare 是什么？',
     answers: [
-      `MiddleWare 是一个接受 Dispatch 函数然后返回新 Dispatch 函数的高阶函数。`,
+      `MiddleWare（中间件） 是一个接受 Dispatch 函数然后返回新 Dispatch 函数的高阶函数。`,
       `通常是将 Async Actions 转为 Actions。`,
       `[ˈmɪdlwer]`,
     ],
@@ -4129,6 +4157,24 @@ Reactive
     answers: [
       `Store enhancer 是接受一个 Store Creator 然后返回一个增强后的 Store Creator 的高阶函数。`,
       `[ɪnˈhænsər]`,
+    ],
+    tags: ['计算机科学', 'JavaScript', 'Redux'],
+    type: '专用领域知识',
+  },
+  {
+    id: 352,
+    title: 'Redux 中，使用了哪些设计模式？和编程思想？',
+    answers: [
+      {
+        tag:'pre',
+        val:
+        `
+设计模式
+  观察者模式
+编程思想
+  函数式编程
+        `,
+      },
     ],
     tags: ['计算机科学', 'JavaScript', 'Redux'],
     type: '专用领域知识',
