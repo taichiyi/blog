@@ -143,7 +143,7 @@ const data: QAs[] = [
     id: 8,
     title: 'Redux 中，术语（6/10）Async Action 是什么？',
     answers: [
-      `Async Action 是一个先通过中间件转换为 Action 再传递给 dispath 的值。`,
+      `Async Action 是一个先通过中间件转换为 Action 再传递给 dispatch 的值。`,
     ],
     tags: ['计算机科学', 'JavaScript', 'Redux'],
     type: '专用领域知识',
@@ -1042,11 +1042,11 @@ m
   },
   {
     id: 90,
-    title: `面向对象编程中，一个对象有哪几种属性？`,
+    title: `面向对象编程中，对象的“状态”、“行为”和“标识”分别是什么？`,
     answers: [
-      '状态',
-      '行为',
-      '标识',
+      '状态是对象的所有属性。',
+      '行为是对象状态改变和消息传递的方法。',
+      '标识是对象间相区别的变量名称。',
     ],
     tags: ['计算机科学', '编程思想', '命令式编程',],
     type: '基础知识',
@@ -1877,7 +1877,7 @@ data:text/html;charset=utf8,%3Ch1%3EHello%2C%20World %E7%BE%BD%E7%BF%BC!%3C%2Fh1
     id: 165,
     title: 'Redux 中，术语（4/10）Dispatching Function 是什么？',
     answers: [
-      `Dispatching Function 是一个接受 action 或 async action 对象的函数。`,
+      `Dispatching Function 是接受一个 action 对象并 dispatch 到所有 reducer 的函数。`,
       `[dɪˈspætʃɪŋ]`,
     ],
     tags: ['计算机科学', 'JavaScript', 'Redux'],
@@ -2025,9 +2025,9 @@ data:text/html;charset=utf8,%3Ch1%3EHello%2C%20World %E7%BE%BD%E7%BF%BC!%3C%2Fh1
 3. bindActionCreators
   是一个将 actions 绑定到指定 dispatch 的函数。
 4. applyMiddleware
-  是一个中间件函数。
+  是创建一个将中间件引用于 dispatch 的 store enhancer 函数。
 5. compose
-  是一个用非嵌套方式写嵌套函数的函数。
+  是一个从右至左依次传入参数调用所有函数的函数。
         `,
       }
     ],
@@ -3764,7 +3764,7 @@ function curry(func){
 具体还说,
   定义了对象必须有一个键为 Symbol.iterator 的属性,
   并且值为一个无参数的的函数,
-    函数的返回值为一个符合迭代器协议的对象.
+    函数的返回值是一个符合迭代器协议的对象.
         `
       },
     ],
@@ -4173,6 +4173,25 @@ Reactive
   观察者模式
 编程思想
   函数式编程
+        `,
+      },
+    ],
+    tags: ['计算机科学', 'JavaScript', 'Redux'],
+    type: '专用领域知识',
+  },
+  {
+    id: 353,
+    title: 'Redux 中，Store 有哪些 API？',
+    answers: [
+      {
+        tag:'pre',
+        val:
+        `
+有 4 个 API。
+dispatch
+subscribe
+getState
+replaceReducer
         `,
       },
     ],
