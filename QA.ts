@@ -3840,15 +3840,15 @@ function curry(func){
     id: 323,
     title: '在 JavaScript 中，Function 构造函数的“原型对象”（ prototype 属性）有哪些属性？',
     answers: [
-      `apply`,
-      `arguments`,
-      `bind`,
-      `call`,
-      `constructor`,
-      `length`,
-      `name`,
-      `Symbol.hasInstance`,
-      `toString`,
+      `1. apply`,
+      `2. arguments`,
+      `3. bind`,
+      `4. call`,
+      `5. constructor`,
+      `6. length`,
+      `7. name`,
+      `8. Symbol.hasInstance`,
+      `9. toString`,
     ],
     tags: ['计算机科学', '程序设计语言', 'JavaScript'],
     type: '通用领域知识',
@@ -3869,6 +3869,24 @@ function curry(func){
       `arguments.callee 会改变函数 this 的指向。`,
       `访问 arguments 对象比较慢。`,
       `不利于引擎的优化。`,
+      {
+        tag:'pre',
+        val:
+        `
+arguments.callee 会改变 this 指向的例子：
+
+(function (num){
+  console.log(this);
+  if(num<2)return arguments.callee(num+1)
+})(1)
+
+第 1 次打印：
+Window {window: Window, self: Window, document: document, name: "", location: Location, …}
+
+第 2 次打印：
+Arguments [1, callee: ƒ, Symbol(Symbol.iterator): ƒ]
+        `,
+      }
     ],
     tags: ['计算机科学', '程序设计语言', 'JavaScript'],
     type: '通用领域知识',
