@@ -1451,7 +1451,7 @@ data:text/html;charset=utf8,%3Ch1%3EHello%2C%20World %E7%BE%BD%E7%BF%BC!%3C%2Fh1
       '3. 访问者模式（Visitor pattern）',
       '4. 策略模式（Strategy pattern）',
       '5. 状态模式（State pattern）',
-      '6. 观察者模式（Observer pattern）',
+      '6. 观察者模式（Observer pattern）| 反应器模式（Reactor pattern）',
       '7. 备忘录模式（Memento pattern）',
       '8. 迭代器模式（Iterator pattern）',
       '9. 命令模式（Command pattern）',
@@ -2236,10 +2236,9 @@ FunctionExecutionContext = {
   },
   {
     id: 194,
-    title: 'JavaScript 中，装箱就是把__转变为__。装箱又分为隐示和显示，想好后看例子。',
+    title: 'JavaScript 中，装箱是什么？装箱又分为隐示和显示，想好后看例子。',
     answers: [
-      `原始类型`,
-      `对应的对象`,
+      `装箱就是把原始类型转变为对象的过程。`,
       `显示装箱：new String('abc').split('');`,
       `隐示装箱：'abc'.split('');`,
     ],
@@ -2248,10 +2247,9 @@ FunctionExecutionContext = {
   },
   {
     id: 195,
-    title: 'JavaScript 中，拆箱就是把__转变为__的值。',
+    title: 'JavaScript 中，拆箱 是什么？',
     answers: [
-      `对象`,
-      `原始类型`,
+      `拆箱就是把对象转变为原始类型的值的过程。`,
     ],
     tags: ['计算机科学', '程序设计语言', 'JavaScript'],
     type: '通用领域知识',
@@ -3434,7 +3432,7 @@ function curry(func){
   细则
     可预测
     中心化
-    可调适
+    可调试
     灵活性
         `,
       },
@@ -3720,7 +3718,7 @@ function curry(func){
     id: 312,
     title: '惰性求值（Lazy Evaluation），是什么？',
     answers: [
-      `惰性求值，是一个计算机科学中的当表达式的引用被使用是才对表达式求值的概念。`,
+      `惰性求值，是当表达式的引用被使用是才对表达式求值的概念。`,
     ],
     tags: ['计算机科学', '编程思想', '声明式编程', '函数式编程',],
     type: '基础知识',
@@ -4025,7 +4023,7 @@ Reactive
     answers: [
       '发布订阅模式是一种信息源发生事件时将通知所有订阅者的同步信息的解决方案。',
       '在面向对象编程中，把这个概念称为观察者模式。',
-      '在函数式编程中，把这个概念称为 monads。',
+      '[存疑]在函数式编程中，把这个概念称为 monads[ˈmoʊnæd]。',
     ],
     tags: ['计算机科学', '设计模式'],
     type: '基础知识',
@@ -4157,7 +4155,7 @@ Reactive
     id: 349,
     title: 'Redux 中，术语（8/10）Store 是什么？',
     answers: [
-      `Store 是一个保存状态和拥有多个与状态操作相关方法的对象。`,
+      `Store 是一个存储有状态和拥有多个与状态操作相关方法的对象。`,
     ],
     tags: ['计算机科学', 'JavaScript', 'Redux',],
     type: '专用领域知识',
@@ -4337,6 +4335,99 @@ store.dispatch(thunk)
     tags: ['计算机科学', 'JavaScript', 'Redux',],
     type: '专用领域知识',
   },
+  {
+    id: 362,
+    title: 'RxJS 是什么？',
+    answers: [
+      `RxJS 是一个通过使用 observable 序列来编写异步和基于事件的库。`,
+    ],
+    tags: ['计算机科学', '响应式编程', 'JavaScript',],
+    type: '专用领域知识',
+  },
+  {
+    id: 363,
+    title: '响应式编程术语（1/6），Observable 是什么？',
+    answers: [
+      `Observable(可观察对象) 是一个可观察的对象。`,
+      `[əbˈzɜːrvəbl]`,
+    ],
+    tags: ['计算机科学', '响应式编程',],
+    type: '专用领域知识',
+  },
+  {
+    id: 364,
+    title: '响应式编程术语（2/6），Observer 是什么？',
+    answers: [
+      `Observer(观察者) 是可观察对象发送的值的消费者（consumer）。`,
+    ],
+    tags: ['计算机科学', '响应式编程',],
+    type: '专用领域知识',
+  },
+  {
+    id: 365,
+    title: 'ReactiveX，使用了哪些设计模式和编程范式？',
+    answers: [
+      {
+        tag:'pre',
+        val:
+        `
+设计模式：
+  观察者模式
+  迭代器模式
+编程范式
+  函数式编程
+        `,
+      },
+    ],
+    tags: ['计算机科学', '设计模式', '响应式编程', '函数式编程',],
+    type: '专用领域知识',
+  },
+  {
+    id: 366,
+    title: '响应式编程术语（4/6），Subscription（订阅）是什么？',
+    answers: [
+      `Subscription 是表示可清理的资源的对象。`,
+    ],
+    tags: ['计算机科学', '响应式编程',],
+    type: '专用领域知识',
+  },
+  {
+    id: 367,
+    title: '响应式编程术语（5/6），Subject (主体) 是什么？',
+    answers: [
+      `Subject 是支持多播的特殊的 Observable。`,
+    ],
+    tags: ['计算机科学', '响应式编程',],
+    type: '专用领域知识',
+  },
+  {
+    id: 368,
+    title: '响应式编程术语（6/6），Scheduler (调度器) 是什么？',
+    answers: [
+      `Scheduler 是控制着何时启动 subscription 和何时发送通知的对象。`,
+      `[ˈskedʒuːlər] `,
+    ],
+    tags: ['计算机科学', '响应式编程',],
+    type: '专用领域知识',
+  },
+  {
+    id: 369,
+    title: '响应式编程术语（3/6），Operators (操作符) 是什么？',
+    answers: [
+      `Operators 是 Observable 类型上的方法。`,
+    ],
+    tags: ['计算机科学', '响应式编程',],
+    type: '专用领域知识',
+  },
+  {
+    id: 370,
+    title: 'redux-observable 是什么？',
+    answers: [
+      `redux-observable 是 通过组合和取消 async action 来创建副作用的 redux 的中间件(middleware)。`,
+    ],
+    tags: ['计算机科学', 'JavaScript', 'Redux',],
+    type: '专用领域知识',
+  },
 ];
 
 export default data;
@@ -4344,6 +4435,5 @@ export default data;
 redux 中间件(middleware)中，redux-thunk、redux-saga 和 redux-observable 各自的使用场景是什么？
 添加定义
   reselect
-  redux-observable
   Immer
  */
