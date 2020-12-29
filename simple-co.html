@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>simple-co</title>
+</head>
+
+<body>
+  <script>
+    const co = (generator) => {
+      const generatorObject = generator()
+        ; (function next(result) {
+          const { value, done } = generatorObject.next(result)
+          if (done) return
+          if (
+            typeof value === 'object' &&
+            Object.prototype.toString.call(value) === '[object Promise]'
+          ) {
+            value.then(next)
+          } else {
+            next(value)
+          }
+        })()
+    }
+    co(function* () {
+      const url = 'https://jsonplaceholder.typicode.com/todos/1';
+      const response = yield fetch(url);
+      const data = yield response.json();
+      const title = data.title;
+      console.log('Title: ', title);
+    })
+  </script>
+</body>
+
+</html>
