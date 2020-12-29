@@ -5,6 +5,7 @@
   <summary>为什么会产生TypeScript？</summary>
   <div>- 可读性</div>
   <div>- 可维护性</div>
+  <div>- 面向对象编程</div>
 </details>
 
 <details>

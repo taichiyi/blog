@@ -34,23 +34,3 @@
 = 是什么
 YAML（/ˈjæməl/）是一个可读性高，用来表达数据序列化的格式。Clark Evans在2001-05-11首次发表了这种语言。
 扩展名：.yaml，.yml
-
-## “面向过程编程”和“面向结构编程”的区别
-
-题目：10个1相加的值是多少？
-
-``` JavaScript
-// 面向过程
-function POP() {
-  return 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1;
-}
-
-// 面向结构
-function SOP() {
-  let num = 0;
-  for (let index = 0; index < 10; index++) {
-    num += 1;
-  }
-  return num;
-}
-```
