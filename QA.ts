@@ -3985,7 +3985,7 @@ Go，erlang：默认提供“隔离”方式，然后基于“隔离”又提供
         tag: 'pre',
         val:
           `
-Preactive
+Proactive
   优点
     容易实现
 Reactive
