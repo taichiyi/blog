@@ -181,9 +181,9 @@ const data: QAs[] = [
     title: `在 JavaScript 中，垃圾回收（GC）有哪几种算法？分别介绍一下原理和缺点。`,
     answers: [
       {
-        tag:'pre',
+        tag: 'pre',
         val:
-        `
+          `
 引用计数
   原理
     根据对象是否被引用判断是否要回收对象。
@@ -3425,8 +3425,8 @@ function curry(func){
       `状态的储存与修改，往往散落四处，`,
       `使得代码难以维护。`,
       {
-        tag:'pre',
-        val:`
+        tag: 'pre',
+        val: `
 好处
   总则
     提高代码可维护性
@@ -3871,9 +3871,9 @@ function curry(func){
       `访问 arguments 对象比较慢。`,
       `不利于引擎的优化。`,
       {
-        tag:'pre',
+        tag: 'pre',
         val:
-        `
+          `
 arguments.callee 会改变 this 指向的例子：
 
 (function (num){
@@ -4220,9 +4220,9 @@ Reactive
     title: 'Redux 中，使用了哪些设计模式？和编程思想？',
     answers: [
       {
-        tag:'pre',
+        tag: 'pre',
         val:
-        `
+          `
 设计模式
   观察者模式
 编程思想
@@ -4238,9 +4238,9 @@ Reactive
     title: 'Redux 中，Store 有哪些 API？',
     answers: [
       {
-        tag:'pre',
+        tag: 'pre',
         val:
-        `
+          `
 有 4 个 API。
 dispatch
 subscribe
@@ -4258,9 +4258,9 @@ replaceReducer
     answers: [
       `Redux ToolKit 是一个可以高效使用 Redux 的工具包。`,
       {
-        tag:'pre',
+        tag: 'pre',
         val:
-        `
+          `
 为什么有：
   1. 配置 Store 过于复杂。
   2. 为了让 Redux 更有用，必须添加许多其他的包。(redux-thunk、reselect)
@@ -4278,9 +4278,9 @@ replaceReducer
       `thunk 是一个接受 dispatch 和 getState 两个参数的函数。`,
       `应该是一个概念。`,
       {
-        tag:'pre',
+        tag: 'pre',
         val:
-        `
+          `
 const thunk = (dispatch, getState) => {
   setTimeout(dispatch, 1000, {
     type: 'decrement',
@@ -4299,9 +4299,9 @@ store.dispatch(thunk)
     answers: [
       `通过中间件(middleware)来处理异步数据流。`,
       {
-        tag:'pre',
+        tag: 'pre',
         val:
-        `
+          `
 以 redux-thunk 为例：
   当 redux-thunk 中间件，接受到 action 并且函数时，我们把这个函数称为 thunk 函数。
   然后把 store 的 dispatch 和 getState 传参给 thunk 函数。
@@ -4345,9 +4345,9 @@ store.dispatch(thunk)
   {
     id: 360,
     title: {
-      tag:'pre',
+      tag: 'pre',
       val:
-      `
+        `
 在 redux 中
   1. applyMiddleware(a,b) 会先调用哪个中间件的 dispatch ？
   2. compose(applyMiddleware(a),applyMiddleware(b)) 会先调用哪个中间件的 dispatch ？
@@ -4404,9 +4404,9 @@ store.dispatch(thunk)
     title: 'ReactiveX，使用了哪些设计模式和编程范式？',
     answers: [
       {
-        tag:'pre',
+        tag: 'pre',
         val:
-        `
+          `
 设计模式：
   观察者模式
   迭代器模式
