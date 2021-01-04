@@ -16,6 +16,7 @@ export interface QAs {
     '词语' |
     '摄影' |
     '生命周期' |
+    'CSS' |
     'Redux' |
     'React' |
     'React Router' |
@@ -141,7 +142,7 @@ const data: QAs[] = [
     id: 8,
     title: 'Redux 中，术语（6/10）Async Action 是什么？',
     answers: [
-      `Async Action 是一个先通过中间件转换为 Action 再传递给 dispatch 的值。`,
+      `Async Action 是一个先通过中间件转换为 Action 再传递给 dispatch 的对象。`,
     ],
     tags: ['计算机科学', 'JavaScript', 'Redux',],
     type: '专用领域知识',
@@ -725,7 +726,7 @@ m
   },
   {
     id: 60,
-    title: `ECMAScript 几种数据数据类型？分为哪几类？分别是什么？`,
+    title: `ECMAScript 几种数据类型？分为哪几类？分别是什么？`,
     answers: [
       `八种`,
       `两类：原始类型和引用类型。`,
@@ -864,7 +865,7 @@ m
   },
   {
     id: 74,
-    title: `C 语言有哪几种语句？`,
+    title: `C 语言有哪几种语句？有例子`,
     answers: [
       '1. 标号语句',
       '2. 复合语句',
@@ -874,6 +875,25 @@ m
       '6. 跳转语句',
       '7. 声明语句',
       '8. try 块',
+      {
+        tag:'pre',
+        val:
+        `
+try {
+  let count = 1+2;
+  while (true) {
+    switch (count++) {
+      case 1: {
+        return count;
+      }
+      default: {
+        return 0;
+      }
+    }
+  }
+} catch (error) {}
+        `,
+      }
     ],
     tags: ['计算机科学', '程序设计语言', 'C'],
     type: '通用领域知识',
@@ -902,7 +922,7 @@ m
     id: 77,
     title: `复合语句是什么？`,
     answers: [
-      '复合语句是花括号环绕的语句序列。',
+      '复合语句是花括号包括起来的语句序列。',
       '复合语句的括号“}”外不能加分号。',
     ],
     tags: ['计算机科学', '程序设计语言', 'C'],
@@ -914,7 +934,7 @@ m
     answers: [
       '1.由“存储器+运算器+控制器+输入设备+输出设备”组成。',
       '2.数制采用的是二进制。',
-      '3.按顺序执行。',
+      '3.指令按顺序执行。',
     ],
     tags: ['计算机科学',],
     type: '基础知识',
@@ -1127,7 +1147,7 @@ m
   },
   {
     id: 99,
-    title: '在 JavaScript 中，怎么判断一个对象是否默认支持迭代器模式？',
+    title: '在 JavaScript 中，怎么判断一个对象是否支持迭代器模式？',
     answers: [
       `如果对象有 Symbol.AsyncIterator 或 Symbol.Iterator`,
     ],
@@ -1173,7 +1193,7 @@ m
   },
   {
     id: 103,
-    title: 'Data URLs 由四个部分组成：__:[&lt;__&gt;][;__],&lt;__&gt;。例子：',
+    title: 'TODO',
     answers: [
       'data mediatype base64 data',
       {
@@ -1196,7 +1216,7 @@ data:text/html;charset=utf8,%3Ch1%3EHello%2C%20World %E7%BE%BD%E7%BF%BC!%3C%2Fh1
   },
   {
     id: 104,
-    title: '(接上文)MediaType 是一个__类型的字符串，默认值为 text/plain;charset=__；(chartset可选)如果非__则为可选的base64标记；data为数据本身。',
+    title: 'TODO',
     answers: [
       'MIME US-ASCII',
       '文本',
@@ -1206,7 +1226,7 @@ data:text/html;charset=utf8,%3Ch1%3EHello%2C%20World %E7%BE%BD%E7%BF%BC!%3C%2Fh1
   },
   {
     id: 105,
-    title: '常用的 MediaType 有`text/plain;charset=UTF-8`；`text/html`；`__/jpeg`；`multipart/form-data`',
+    title: 'TODO',
     answers: [
       'image',
     ],
@@ -1273,7 +1293,7 @@ data:text/html;charset=utf8,%3Ch1%3EHello%2C%20World %E7%BE%BD%E7%BF%BC!%3C%2Fh1
     id: 111,
     title: '多重集和集的唯一区别是，__可以存在相同数据项。',
     answers: [
-      '是',
+      '多重集',
     ],
     tags: ['计算机科学', '数学', '算法',],
     type: '基础知识',
@@ -1282,8 +1302,8 @@ data:text/html;charset=utf8,%3Ch1%3EHello%2C%20World %E7%BE%BD%E7%BF%BC!%3C%2Fh1
     id: 112,
     title: '关联数组和数组的唯一区别是什么？',
     answers: [
-      '关联数组的下标可以是任意字符串和数字。',
-      '数组的下标只能是非负整数。',
+      '关联数组的下标可以是任意字符串。',
+      '数组的下标只能是非负整数字符串。',
       '',
       'JavaScript的对象就是一个关联数组。',
     ],
@@ -1304,7 +1324,8 @@ data:text/html;charset=utf8,%3Ch1%3EHello%2C%20World %E7%BE%BD%E7%BF%BC!%3C%2Fh1
     id: 114,
     title: '在图论中, 图是什么?',
     answers: [
-      '图是一个表示物件与物件之间的关系的图论中的术语.',
+      '图是一个表示物件与物件之间关系的图论中的术语.',
+      '',
       '其中每个节点都是平等的',
     ],
     tags: ['计算机科学', '数学', '算法',],
@@ -1402,11 +1423,9 @@ data:text/html;charset=utf8,%3Ch1%3EHello%2C%20World %E7%BE%BD%E7%BF%BC!%3C%2Fh1
   },
   {
     id: 124,
-    title: '设计模式，分为哪几种类型？',
+    title: 'TODO ',
     answers: [
-      '结构型模式（Structural Patterns）',
-      '创建型模式（Creational Patterns）',
-      '行为型模式（Behavioral Patterns）',
+      ``,
     ],
     tags: ['计算机科学', '设计模式',],
     type: '基础知识',
@@ -2922,7 +2941,9 @@ Link 组件渲染到 DOM 中也是 a 标签，他们的区别主要提现在点�
     id: 253,
     title: `内聚性是什么？`,
     answers: [
-      '内聚性是指将机能相关的程序组合到一个模块的程度。与耦合性是一个相对的概念。',
+      '内聚性是指将机能相关的程序组合到一个模块的程度。',
+      ``,
+      `与耦合性是一个相对的概念。`,
     ],
     tags: ['计算机科学', '设计模式'],
     type: '基础知识',
@@ -2981,7 +3002,7 @@ Link 组件渲染到 DOM 中也是 a 标签，他们的区别主要提现在点�
         val:
           `
 定义：
-  装饰模式是一种在不改变对象的情况下, 动态地给对象添加职责（功能）的结构型设计模式.
+  装饰模式是一种在不改变对象的情况下, 动态地为对象添加职责（功能）的结构型设计模式.
 
 实现方式
   "装饰对象", 中定义了一些可动态添加到"组件对象"的功能.
@@ -2989,7 +3010,7 @@ Link 组件渲染到 DOM 中也是 a 标签，他们的区别主要提现在点�
 
 优点
   在不改变原有对象的情况下，动态的给一个对象扩展功能。
-  可以用多个装饰封装对象来组合几种行为。
+  可以用多个装饰对象嵌套来组合几种行为。
   遵守开闭原则，单一职责原则。
 
 缺点
@@ -2998,7 +3019,7 @@ Link 组件渲染到 DOM 中也是 a 标签，他们的区别主要提现在点�
 
 应用场景
   当需要在不改变对象的情况下，动态地给该对象增加一些职责（功能）。
-  不能采用生成子类的方法进行扩充时。
+  不能采用生成子类的方法进行拓展时。
           `,
       }
     ],
@@ -3016,12 +3037,13 @@ Link 组件渲染到 DOM 中也是 a 标签，他们的区别主要提现在点�
   },
   {
     id: 259,
-    title: `TODO`,
+    title: 'Redux 中，如何判断 prevState 和 nextState 是否变化？如果 reducers 后所有子 state 没有 changed 则父 state 的指针会改变吗？',
     answers: [
-      ``,
+      `通过全等运算符。`,
+      `不会`,
     ],
-    tags: ['计算机科学',],
-    type: '基础知识',
+    tags: ['计算机科学', 'JavaScript', 'Redux',],
+    type: '专用领域知识',
   },
   {
     id: 260,
@@ -3032,7 +3054,7 @@ Link 组件渲染到 DOM 中也是 a 标签，他们的区别主要提现在点�
         val:
           `
 定义：
-  观察者模式是一种当被“观察”对象发生状态变化时，所有“观察者”都会得到通知的设计模式。。
+  观察者模式是一种当可观察对象发生状态变化时，通知所有“观察者”的设计模式。
 优点：
   1. 目标与观察者的耦合性较低。
   2. 遵守“开闭原则”。
@@ -4003,6 +4025,7 @@ Reactive
     answers: [
       'Reactor 是处理和发出事件的主体。',
       '他们之间通过消息管道（channel）来传递消息。',
+      'Reactor 概念和 ReactiveX 概念 Observable 是一个概念？',
     ],
     tags: ['计算机科学', '编程思想', '声明式编程', '函数式编程', '响应式编程',],
     type: '基础知识',
@@ -4303,7 +4326,7 @@ store.dispatch(thunk)
         val:
           `
 以 redux-thunk 为例：
-  当 redux-thunk 中间件，接受到 action 并且函数时，我们把这个函数称为 thunk 函数。
+  当 redux-thunk 中间件，接受到 action 并且为函数时，我们把这个函数称为 thunk 函数。
   然后把 store 的 dispatch 和 getState 传参给 thunk 函数。
   thunk 函数执行完异步操作后，再 dispatch action
         `,
@@ -4375,7 +4398,7 @@ store.dispatch(thunk)
     id: 362,
     title: 'RxJS 是什么？',
     answers: [
-      `RxJS 是一个通过使用 observable 序列来编写异步和基于事件的库。`,
+      `RxJS 是一个通过使用 observable 序列来异步编程的基于事件的库。`,
     ],
     tags: ['计算机科学', '响应式编程', 'JavaScript',],
     type: '专用领域知识',
@@ -4384,7 +4407,7 @@ store.dispatch(thunk)
     id: 363,
     title: '响应式编程术语（1/6），Observable 是什么？',
     answers: [
-      `Observable(可观察对象) 是一个可观察的对象。`,
+      `Observable(可观察对象) 是多个值的惰性推送集合。`,
       `[əbˈzɜːrvəbl]`,
     ],
     tags: ['计算机科学', '响应式编程',],
@@ -4450,7 +4473,7 @@ store.dispatch(thunk)
     id: 369,
     title: '响应式编程术语（3/6），Operators (操作符) 是什么？',
     answers: [
-      `Operators 是 Observable 类型上的方法。`,
+      `Operators 是 Observable 类型上的纯函数。`,
     ],
     tags: ['计算机科学', '响应式编程',],
     type: '专用领域知识',
@@ -4523,6 +4546,72 @@ store.dispatch(thunk)
     ],
     tags: ['计算机科学', '设计模式'],
     type: '基础知识',
+  },
+  {
+    id: 373,
+    title: 'CSS 术语，BFC 是什么？能解决什么问题？',
+    answers: [
+      {
+        tag:'pre',
+        val:
+        `
+BFC 是一种拥有独立容器特性的上下文。
+
+解决的问题
+  1. 外边距重叠
+  2. 高度坍塌（清除浮动）
+  3. 防止被浮动元素覆盖
+
+每一个元素都会在特定的上下文中渲染。不同的上下文导致不同的渲染结果。
+容器里面的元素不会在布局上影响到外面的元素。
+
+块级格式化上下文
+Block Formatting Contexts
+        `,
+      },
+    ],
+    tags: ['计算机科学', 'CSS',],
+    type: '通用领域知识',
+  },
+  {
+    id: 374,
+    title: 'CSS 中，元素有哪几种定位方案？分别介绍一下',
+    answers: [
+      {
+        tag:'pre',
+        val:
+        `
+
+普通流(normal flow)
+  元素按照在 HTML 中的先后位置至上而下布局，块元素会占满整行，行内元素会水平排列，占满整行后会换行。
+浮动(float)
+  元素首先按照普通流的位置出现，然后脱离普通流根据浮动方向向左或向右移动。
+绝对定位(absolute positioning)
+  绝对定位元素会脱离普通流，具体位置由定位的坐标决定。
+        `,
+      }
+    ],
+    tags: ['计算机科学', 'CSS',],
+    type: '通用领域知识',
+  },
+  {
+    id: 374,
+    title: 'CSS 中，怎么让元素拥有 BFC？',
+    answers: [
+      {
+        tag:'pre',
+        val:
+        `
+1. body 元素
+2. 浮动元素，float 值不为 none
+3. 绝对定位元素，position 值为 absolute、fixed
+4. display 的值为 inline-block、flex、inline-flex、table-caption、table-cell
+5. overflow 的值不为 visible
+        `,
+      },
+    ],
+    tags: ['计算机科学', 'CSS',],
+    type: '通用领域知识',
   },
 ];
 
