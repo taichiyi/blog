@@ -1193,45 +1193,54 @@ try {
   },
   {
     id: 103,
-    title: 'TODO',
+    title: 'react-redux 是这么触发 react 重新渲染的？',
     answers: [
-      'data mediatype base64 data',
-      {
-        tag: 'pre',
-        val:
-          `
-[data:data]
-data:,Hello%2C%20World!
-<!--  -->
-[data:mediatype;base64,data]
-data:text/plain;base64,SGVsbG8sIFdvcmxkIQ==
-<!--  -->
-[data:mediatype,data]
-data:text/html;charset=utf8,%3Ch1%3EHello%2C%20World %E7%BE%BD%E7%BF%BC!%3C%2Fh1%3E
-        `,
-      }
+      'react-redux 在 redux 中添加了一个观察者，当可观察对象变化时，观察者会 dispatch 一个 action，装饰对象的 state 发生改变，进而引起重新渲染（计算 fiber）。',
+      '',
+      '对象 Subscription，这个对象即时观察者也是可观察对象，',
     ],
-    tags: ['计算机科学', '计算机网络',],
-    type: '基础知识',
+    tags: ['计算机科学', 'JavaScript', 'React', 'Redux',],
+    type: '专用领域知识',
   },
   {
     id: 104,
-    title: 'TODO',
+    title: '在正则表达式中，怎么弄环视为数值添加逗号？以 123456789.00 为例说明。',
     answers: [
-      'MIME US-ASCII',
-      '文本',
+      {
+        tag: 'pre',
+        val:
+        `
+输入 123456789.00
+输出 123,456,789.00
+1. 目标：在字符串中找到所有逗号的位置，然后添加逗号(,)
+2. 根据输出发现规律：逗号的位置右侧的数字的个数为 3 的倍数
+  得：/(?=(\d{3})+)/g -> '123456789.00'.replace(/(?=(\d{3})+)/g,',')
+  结果：",1,2,3,4,5,6,789.,00"
+3. 改进：不应该匹配词的边界
+  ,1,2,3,4,5,6,789.,00
+  ^
+  得：/\B(?=(\d{3})+)/g -> '123456789.00'.replace(/\B(?=(\d{3})+)/g,',')
+  结果："1,2,3,4,5,6,789.00"
+4. 改进：逗号插入问题
+  1,2,3,4,5,6,789.00
+   ^
+  用“(?!\d)”来标记 3 位数字起始计数位置
+  得：/\B(?=(\d{3})+(?!\d))/g -> '123456789.00'.replace(/\B(?=(\d{3})+(?!\d))/g,',')
+  结果："123,456,789.00"
+        `,
+      },
     ],
-    tags: ['计算机科学', '计算机网络',],
+    tags: ['计算机科学', '正则表达式',],
     type: '基础知识',
   },
   {
     id: 105,
-    title: 'TODO',
+    title: `在 React 中，如何判断函数组件还是类组件？`,
     answers: [
-      'image',
+      '判断函数原型对象的 isReactComponent 属性值是否为真。',
     ],
-    tags: ['计算机科学', '计算机网络',],
-    type: '基础知识',
+    tags: ['计算机科学', 'JavaScript', 'React',],
+    type: '专用领域知识',
   },
   {
     id: 106,
@@ -1356,7 +1365,7 @@ data:text/html;charset=utf8,%3Ch1%3EHello%2C%20World %E7%BE%BD%E7%BF%BC!%3C%2Fh1
     id: 117,
     title: '迭代器（Iterator），是什么？',
     answers: [
-      '迭代器是集合对象提供的可以顺序访问集合元素的一个对象。',
+      '迭代器是可以顺序访问集合对象元素的一个对象。',
     ],
     tags: ['计算机科学', '算法',],
     type: '基础知识',
@@ -1721,7 +1730,7 @@ data:text/html;charset=utf8,%3Ch1%3EHello%2C%20World %E7%BE%BD%E7%BF%BC!%3C%2Fh1
     id: 150,
     title: '在正则表达式中，肯定顺序环视，是什么？有例子',
     answers: [
-      '肯定顺序环视，是一个匹配自身左侧位置的表达式。',
+      '肯定顺序环视，是匹配成功条件为子表达式能够匹配右侧文本的表达式。',
       `例子：'Im a human'.replace(/(?=m)/,'\'') -> I'm a human`,
     ],
     tags: ['计算机科学', '正则表达式',],
@@ -1729,14 +1738,10 @@ data:text/html;charset=utf8,%3Ch1%3EHello%2C%20World %E7%BE%BD%E7%BF%BC!%3C%2Fh1
   },
   {
     id: 151,
-    title: '在正则表达式中，子表达式的开头有哪几种？',
+    title: '在正则表达式中，否定顺序环视，是什么？有例子',
     answers: [
-      '1.肯定顺序环视「(?=...)」',
-      '2.否定顺序环视「(?!...)」',
-      '3.肯定逆序环视「(?<=...)」',
-      '4.否定逆序环视「(?<!...)」',
-      '5.非捕获型「(?:...)」',
-      '6.固化分组「(?>...)」',
+      '肯定顺序环视，是匹配成功条件为子表达式不能匹配右侧文本的表达式。',
+      `例子：'12345.67'.replace(/(?!\\d)/g,',') -> “2345,.67,”`,
     ],
     tags: ['计算机科学', '正则表达式',],
     type: '基础知识',
@@ -3138,9 +3143,8 @@ Link 组件渲染到 DOM 中也是 a 标签，他们的区别主要提现在点�
       '2. 如果其中一个值不等于 object 类型，则返回 false',
       '3. 如果其中一个值等于 null，则返回 false',
       '4. 如果两个对象的属性的个数不相等，则返回 false',
-      '5. 如果两个对象的属性的个数不相等，则返回 false',
-      '6. 循环对象的属性用 Object.is 比较两个对象的属性值，有为 false，则返回 false。',
-      '7. 返回 true。',
+      '5. 循环对象的属性用 Object.is 比较两个对象的属性值，有为 false，则返回 false。',
+      '6. 返回 true。',
     ],
     tags: ['计算机科学', 'JavaScript', 'React',],
     type: '专用领域知识',
@@ -3594,7 +3598,7 @@ function curry(func){
   },
   {
     id: 299,
-    title: '在函数式编程中，可以通过高阶函数 compose 和函数链两种方式构建__的、__的代码？',
+    title: '在函数式编程中，可以通过高阶函数 compose 和函数链两种方式构建__的、__的代码。',
     answers: [
       '流式',
       '模块化 ',
@@ -4214,7 +4218,7 @@ Reactive
     id: 349,
     title: 'Redux 中，术语（8/10）Store 是什么？',
     answers: [
-      `Store 是一个存储有状态和拥有多个与状态操作相关方法的对象。`,
+      `Store 是存储有状态和拥有状态操作相关方法的对象。`,
     ],
     tags: ['计算机科学', 'JavaScript', 'Redux',],
     type: '专用领域知识',
