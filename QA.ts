@@ -23,6 +23,8 @@ export interface QAs {
     'C' |
     'CPU' |
     'RAM' |
+    '浏览器' |
+    'Event Loop' |
     '正则表达式' |
     '图形学' |
     '程序设计语言' |
@@ -3166,7 +3168,7 @@ Link 组件渲染到 DOM 中也是 a 标签，他们的区别主要提现在点�
   },
   {
     id: 267,
-    title: `React 是怎么浅比较两个对象的？`,
+    title: `React 是怎么浅比较两个对象的？或者说 shallowEqual 的算法是怎么写的？`,
     answers: [
       '1. 首先使用 Object.is(objA, objB) 如果返回 true，则返回 true。',
       '2. 如果其中一个值不等于 object 类型，则返回 false',
@@ -4076,7 +4078,7 @@ Reactive
   },
   {
     id: 336,
-    title: `发布订阅（Publisher/Subscriber）模式是什么？与观察者（Observer）模式有什么区别？`,
+    title: `发布订阅（Publisher/Subscriber）模式是什么？与观察者（Observer）模式有什么区别？各举例一个使用场景`,
     answers: [
       {
         tag: 'pre',
@@ -4091,6 +4093,11 @@ Reactive
   耦合角度
     观察者模式是松耦合的。
     发布订阅模式是完全解耦的，发布者和订阅者没有直接联系。
+例子
+  观察者模式
+    redux
+  发布订阅模式
+    react-redux
         `,
       }
     ],
@@ -4657,6 +4664,81 @@ Block Formatting Contexts
     ],
     tags: ['计算机科学', 'CSS',],
     type: '通用领域知识',
+  },
+  {
+    id: 376,
+    title: '在浏览器中，ASAP 是什么？',
+    answers: [
+      {
+        tag: 'pre',
+        val:
+          `
+ASAP 全称 as soon as possible，中文意思为“尽快” 是将任务添加到微任务(micro-task)队列中的函数。
+        `,
+      },
+    ],
+    tags: ['计算机科学', '浏览器',],
+    type: '通用领域知识',
+  },
+  {
+    id: 377,
+    title: `回调函数(callback)一定是异步的吗？怎么判断回调函数是否为异步？`,
+    answers: [
+      `回调函数不一定是异步执行的！`,
+      `如果回调函数添加微任务或宏任务队列，则可以说这个回调函数是异步执行的。`,
+    ],
+    tags: ['计算机科学', '程序设计语言', 'JavaScript'],
+    type: '通用领域知识',
+  },
+  {
+    id: 378,
+    title: '在浏览器中，异步任务分为哪几类？为什么这么分？',
+    answers: [
+      {
+        tag: 'pre',
+        val:
+          `
+分为两类
+  微任务(micro-task)
+    优先执行
+  宏任务/任务队列(macro-task/task queue)
+为什么这么分
+  因为异步任务是有优先级的，
+  例如一些紧急的、对用户体验影响较大的属于优先级较高的，应该优先处理。
+        `,
+      },
+    ],
+    tags: ['计算机科学', '浏览器','Event Loop'],
+    type: '通用领域知识',
+  },
+  {
+    id: 379,
+    title: '在 JavaScript 中，Sets 是什么？',
+    answers: [
+      'Sets 是有序的不相同的元素集合。',
+    ],
+    tags: ['计算机科学', '数学', '数据结构','JavaScript'],
+    type: '基础知识',
+  },
+  {
+    id: 380,
+    title: `触发 React 渲染的方式有哪些？`,
+    answers: [
+      {
+        tag: 'pre',
+        val:
+        `
+类组件
+  setState
+  forceUpdate
+函数组件
+  useSate
+  useReducer
+        `,
+      },
+    ],
+    tags: ['计算机科学', 'JavaScript', 'React',],
+    type: '专用领域知识',
   },
 ];
 
