@@ -1196,9 +1196,9 @@ try {
     id: 103,
     title: 'react-redux 是这么触发 react 重新渲染的？',
     answers: [
-      'react-redux 在 redux 中添加了一个观察者，当可观察对象变化时，观察者会 useReducer Hook dispatch 一个 action，装饰对象的 state 发生改变，进而引起重新渲染（计算 fiber）。',
-      '',
-      '对象 Subscription，这个对象即时观察者也是可观察对象，',
+      `react-redux 用了发布订阅模式，redux 是发布者，react 是订阅者，react-redux 是消息管道。`,
+      `具体来说，消息管道是 react-redux API 提供的 connect 高阶函数返回的高阶组件。`,
+      `当发布者发布信息后，高阶组件会通过 React 的 useReducer Hook 返回的 dispatch 函数 dispatch action ，进而让 React 重新调度/重新渲染。`,
     ],
     tags: ['计算机科学', 'JavaScript', 'React', 'Redux',],
     type: '专用领域知识',
@@ -1954,7 +1954,7 @@ Promise 是用于表示异步操作完成或失败的结果的对象。
   },
   {
     id: 168,
-    title: 'React 类组件的生命周期分为哪几个阶段？每个阶段分别按顺序触发哪些函数？',
+    title: 'React 类组件的生命周期分为哪几个阶段？每个阶段分别按顺序触发哪些生命周期函数？',
     answers: [
       '分为“挂载”“更新”“卸载”三个阶段',
       '“挂载”阶段：constructor -> getDerivedStateFromProps -> render -> componentDidMount',
@@ -2900,7 +2900,7 @@ URL Hash：
           `
 Link 组件渲染到 DOM 中也是 a 标签，他们的区别主要提现在点击后的行为上。
   a 标签：
-    - 会触发默认行为，会重新加载链接指定的页面。
+    - 会触发默认行为，会加载链接指定的页面。
   Link 组件：
     - Link 取消了 a 标签的默认行为。
     - 调用 History API 修改 URL。
