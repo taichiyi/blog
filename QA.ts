@@ -113,7 +113,7 @@ const data: QAs[] = [
     title: `在字符编码术语中，编码位置是什么？有什么相似的术语吗？`,
     answers: [
       `编码位置（Code position）是字符集中字符对应的数字。`,
-      `编码位置（Code position）也称为码点（Code point）。`,
+      `编码位置也称为码点（Code point）。`,
     ],
     tags: ['计算机科学', '编码', '字符编码',],
     type: '基础知识',
@@ -4862,13 +4862,17 @@ React 用于构建用户界面的声明式的 JavaScript 库。
   },
   {
     id: 387,
-    title: `React Element 是什么？有哪些介绍一下属性？`,
+    title: `React element 是什么？分别介绍一下属性？`,
     answers: [
       {
         tag:'pre',
         val:
         `
-React Element 是表示 React 元素的对象。
+React element 是描述组件实例或 DOM 节点和相关属性的普通对象。
+当元素的 type 是字符串时，它表示 DOM 节点和节点相关的属性。
+React element 对象一旦创建就不会对其修改。
+
+总结：React element 只是用来描述 UI 的，不需要解析和实例化。
 
 属性(5)
   $$typeof
@@ -4895,33 +4899,209 @@ React Element 是表示 React 元素的对象。
   },
   {
     id: 388,
-    title: `ReactElement 和 fiberNode 是什么关系？`,
+    title: `React 术语，work 是什么？`,
+    answers: [
+      `work(工作) 是必须被执行的计算。`,
+      `工作通常是 update 的结果。`,
+      `[wɜːrk]`,
+    ],
+    tags: ['计算机科学', 'JavaScript', 'React',],
+    type: '专用领域知识',
+  },
+  {
+    id: 389,
+    title: `说说 React 渲染到 DOM 的过程。`,
     answers: [
       {
         tag:'pre',
         val:
         `
-React Element 是表示 React 元素的对象。
+TODO
+调用 ReactDom 的 render 方法后，会创建 FiberRootNode 和对应的 FiberNode，然后把 FiberFootNode 挂载在对应的 DOM 节点上。
 
-属性(5)
-  $$typeof
-    判断此对象是否属于 React
-  type
-    表示 React 元素的类型
-      字符串
-        'div', 'span'
-      对象
-        函数组件
-        类组件
-  key
-    用于判断兄弟间的身份
-  ref
-    指向宿主的节点
-  props
-    元素的全部属性
-    children?: 子元素
+在 function beginWork 在
+
+在 function updateHostRoot 中，处理 FiberRootNode.current.alternate.updateQueue
+
+function processUpdateQueue() 用来处理当前 fiber 的 updateQueue
+
+  updateQueue 里的 update 是为了更新 queue 的 state
+
+function getStateFromUpdate() 根据 update 的 type 判断计算 state 的方式
+  update 的结构有点像 action
+
+function reconcileChildren 这个函数把 fiber updateQueue 得到的 React element 转为 FiberNode
         `,
       },
+    ],
+    tags: ['计算机科学', 'JavaScript', 'React',],
+    type: '专用领域知识',
+  },
+  {
+    id: 390,
+    title: `React 术语，Fiber 是什么？`,
+    answers: [
+      `Fiber 是一个使用链表来遍历树的协调器。`,
+    ],
+    tags: ['计算机科学', 'JavaScript', 'React',],
+    type: '专用领域知识',
+  },
+  {
+    id: 391,
+    title: `React 术语，React element tree 是什么？和 Virtual DOM(VDOM、虚拟 DOM) 是什么关系？`,
+    answers: [
+      {
+        tag:'pre',
+        val:
+        `
+“Virtual DOM”是一个编程中的将 UI 以“虚拟”形式保存在内存中的概念。
+
+  需要说明的是，React 中的 虚拟 DOM 就是 React element tree，较早的时候称为“虚拟 DOM”是为了方便大家理解 React，
+但现在这个概念容易引起混乱，因为 React element tree 不仅可以通过 ReactDOM 渲染成 DOM，也可以通过 RN 渲染成原生视图.
+        `,
+      },
+    ],
+    tags: ['计算机科学', 'JavaScript', 'React',],
+    type: '专用领域知识',
+  },
+  {
+    id: 392,
+    title: `在 React 中，Fiber tree 是什么？`,
+    answers: [
+      {
+        tag:'pre',
+        val:
+        `
+Fiber tree 是在浏览器环境下 React element tree 的实现。
+        `,
+      },
+    ],
+    tags: ['计算机科学', 'JavaScript', 'React',],
+    type: '专用领域知识',
+  },
+  {
+    id: 393,
+    title: `在 React 中，Fiber 为什么是用链表(linked list)而不是栈（stack）来遍历组件树？各自的优点？`,
+    answers: [
+      {
+        tag:'pre',
+        val:
+        `
+在 V16 之前，React 是通过 stack 来遍历组件树的。
+使用栈来遍历树，每次更新将立即重新渲染整个树，一次执行太多的工作，可能会导致掉帧。
+
+链表
+  可以暂停工作
+  根据优先级工作
+  重用之前的工作
+栈
+  实现简单
+        `,
+      },
+    ],
+    tags: ['计算机科学', 'JavaScript', 'React',],
+    type: '专用领域知识',
+  },
+  {
+    id: 394,
+    title: `React 术语，reconciliation 是什么？`,
+    answers: [
+      `reconciliation(协调) 是 React 使用算法将旧树和新树进行对比，计算出发生更改的部分的过程。`,
+      `[ˌrekənsɪliˈeɪʃn]`,
+    ],
+    tags: ['计算机科学', 'JavaScript', 'React',],
+    type: '专用领域知识',
+  },
+  {
+    id: 395,
+    title: `React 术语，update 是什么？`,
+    answers: [
+      `update 是由用于 React 渲染的数据变动产生的变化。`,
+      `通常是由 setState 产生，update 会导致重新渲染。`,
+      `[ˌrekənsɪliˈeɪʃn]`,
+    ],
+    tags: ['计算机科学', 'JavaScript', 'React',],
+    type: '专用领域知识',
+  },
+  {
+    id: 396,
+    title: `React 术语，Renderer 是什么？`,
+    answers: [
+      `Renderer(渲染器)用于管理 React 树，让 React 树 根据底层平台进行不同的调用，从而渲染出视图。`,
+      `[ˈrendər]`,
+    ],
+    tags: ['计算机科学', 'JavaScript', 'React',],
+    type: '专用领域知识',
+  },
+  {
+    id: 397,
+    title: `React 术语，Reconciler 是什么？`,
+    answers: [
+      `Reconciler(协调器)是一个渲染器的切面。`,
+      `虽然不同平台的渲染器区别很大，但是有些逻辑是相通的，例如“协调算法”。把这部分通用的逻辑称为协调器。`,
+      `协调器的主要职责是计算出两棵树发生更改的部分。`,
+      `[ˈrekənsaɪlər]`,
+    ],
+    tags: ['计算机科学', 'JavaScript', 'React',],
+    type: '专用领域知识',
+  },
+  {
+    id: 398,
+    title: `React 术语，Scheduling 是什么？`,
+    answers: [
+      `Scheduling(调度) 是决定何时执行 work 的过程。`,
+      `['ʃedʒʊəlɪŋ]`,
+    ],
+    tags: ['计算机科学', 'JavaScript', 'React',],
+    type: '专用领域知识',
+  },
+  {
+    id: 399,
+    title: `React 中，Fiber 分为那两个阶段？`,
+    answers: [
+      `协调阶段`,
+      `渲染阶段`,
+      `在源码中，协调阶段称为“渲染阶段(render phase)”，渲染阶段称为“提交阶段(commit phase)”`,
+    ],
+    tags: ['计算机科学', 'JavaScript', 'React',],
+    type: '专用领域知识',
+  },
+  {
+    id: 400,
+    title: `React 中，Fiber 的提交阶段又分为哪几个子阶段？会处理哪些副作用？`,
+    answers: [
+      {
+        tag:'pre',
+        val:
+        `
+commit phase 子阶段
+  before mutation
+    Snapshot
+    Passive
+  mutation
+    ContentReset
+    Ref
+    Placement
+    PlacementAndUpdate
+    HydratingAndUpdate
+    Update
+    Deletion
+  layout
+    Update
+    Callback
+    Ref
+        `,
+      },
+    ],
+    tags: ['计算机科学', 'JavaScript', 'React',],
+    type: '专用领域知识',
+  },
+  {
+    id: 401,
+    title: `React Fiber 中，新树替换旧树是在 提交阶段的哪个子阶段？`,
+    answers: [
+      `mutation phase 之后`,
+      `layout   phase 之前`,
     ],
     tags: ['计算机科学', 'JavaScript', 'React',],
     type: '专用领域知识',
@@ -4930,6 +5110,7 @@ React Element 是表示 React 元素的对象。
 
 export default data;
 /*
+
 redux 中间件(middleware)中，redux-thunk、redux-saga 和 redux-observable 各自的使用场景是什么？
 添加定义
   reselect
