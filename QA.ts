@@ -4630,27 +4630,27 @@ store.dispatch(thunk)
   },
   {
     id: 373,
-    title: 'CSS 术语，BFC 是什么？能解决什么问题？IFC 是什么？',
+    title: 'CSS 术语，FC、BFC、IFC 是什么？能解决什么问题？',
     answers: [
       {
         tag: 'pre',
         val:
           `
-BFC 是拥有独立容器特性的上下文。
+Formatting Context aka. FC
+  FC 是一个 CSS 的布局模式。例如: 一个节点有 display: flex 就是一个 Flex Formatting Context。
 
-解决的问题
-  1. 外边距重叠
-  2. 高度坍塌（清除浮动）
-  3. 防止被浮动元素覆盖
+Inline Formatting Context aka. IFC
+  内联格式上下文
+
+Block Formatting Context aka. BFC
+  BFC 是拥有独立容器特性的上下文。
+  解决的问题
+    1. 外边距重叠
+    2. 高度坍塌（清除浮动）
+    3. 防止被浮动元素覆盖
 
 每一个元素都会在特定的上下文中渲染。不同的上下文导致不同的渲染结果。
 容器里面的元素不会在布局上影响到外面的元素。
-
-块级格式化上下文
-Block Formatting Contexts
-
-IFC = Inline Formatting Contexts
-内联格式上下文
         `,
       },
     ],
@@ -5343,12 +5343,111 @@ DOM Levels 指的是 DOM 的标准。
     tags: ['计算机科学', '浏览器',],
     type: '基础知识',
   },
-
+  {
+    id: 415,
+    title: `在计算机科学中，IPC 是什么？`,
+    answers: [
+      `IPC 全称“进程间通信”是指操作系统提供的允许进程管理共享数据的机制。`,
+      `inter-process communication`,
+    ],
+    tags: ['计算机科学',],
+    type: '基础知识',
+  },
+  {
+    id: 416,
+    title: `为什么浏览器设计成了多进程架构？`,
+    answers: [
+      `1. 稳定：避免一个页面奔溃了影响其他页面`,
+      `2. 安全：由于 OS 对的 IPC 是有权限控制的，一个 process 就相当与一个沙箱。`,
+    ],
+    tags: ['计算机科学', '浏览器',],
+    type: '基础知识',
+  },
+  {
+    id: 417,
+    title: `当在浏览器地址栏输入回车后，会发生什么？`,
+    answers: [
+      {
+        tag:'pre',
+        val:
+        `
+输入“换行符”前：
+  Browser process 的 UI thread 判断输入的是 URL 还是查询词条？
+输入“换行符”后：
+  UI thread 发起一个 network thread 调用来获取站点内容
+  network thread 接受到响应主体后，为了确定数据类型，进行 MIME Type 嗅探，根据响应头属性 Context-Type 判断文件类型
+  检查
+    域名或响应数据被检查出有恶意行为，network thread 发出报警以显示警告页面，
+    CORB(非重点)
+  如果是 HTML 文件，则把实际数据(payload) 通过 browser process 传给 renderer process。
+  Main thread 开始解析 HTML 文本，构建 DOM 树。
+  在解析构建 DOM 时，遇到外部资源，HTML 解析器会生成 token，预加载器会查看 token 并通过 browser process 的 network thread 一个借一个的发出网络请求。
+  但是 HTML 解析器 script 标签时，必须加载，解析和执行 JavaScript 后，才继续解析 HTML。
+    也可以通过添加 async defer preload 属性来修改 HTML 解析器的行为。
+  Main thread 解析 CSS，并向 DOM 节点添加计算样式。
+  Main thread Layout(布局): 遍历 DOM 树和 计算 CSS 生成 Layout tree(与 DOM tree)
+    伪类不在 DOM 树中，但是在 Layout 树中。
+  Main thread Paint: 遍历 Layout 树创建 paint 记录。
+  Main thread Composite: 遍历 Layout 树创建 layer tree(Update Layer Tree)
+  Main thread Commit 信息给 compositor thread。
+  compositor thread: 合成器线程将每个图层栅格化。一层可能像页面的整个长度一样大，因此合成器线程将它们划分为图块，并将每个图块发送给 raster thread。Raster thread 栅格化每个图块(tiles)生成位图(bitmap)。完成后，compositor thread 通过收集全部图块(也称为 draw quads)信息来创建一个 compositor frame(帧)。
+  compositor thread: compositor frame 通过 IPC commit 给 browser process。
+  browser process: 把所有 compositor frame 发送到 GPU。
+  browser process 监听到 renderer process 的 commit，意味这导航完成了，文档的加载阶段开始了。
+  当 renderer process 完成渲染将触发 onload 事件，执行完后，向 browser process 发送一个 IPC。
+关闭
+  当要关闭 Tab 时，会触发 beforeunload 事件。
+        `,
+      },
+    ],
+    tags: ['计算机科学', '浏览器',],
+    type: '基础知识',
+  },
+  {
+    id: 418,
+    title: `浏览器术语，Layout 是什么？`,
+    answers: [
+      `Layout 是寻找元素几何形状的过程。`,
+      `确定单个元素的 大小、形状、换行、位置(x,y) 和 边框的信息。`,
+    ],
+    tags: ['计算机科学', '浏览器',],
+    type: '基础知识',
+  },
+  {
+    id: 419,
+    title: `图形学术语，jank(janky) 是什么意思？`,
+    answers: [
+      `掉帧，的意思`,
+      `[dʒæŋk]`,
+    ],
+    tags: ['计算机科学', '图形学',],
+    type: '基础知识',
+  },
+  {
+    id: 420,
+    title: `图形学术语，rasterize 是什么意思？`,
+    answers: [
+      `栅格化是把文档的结构，每个元素的样式，页面的几何形状以及绘制顺序，信息转换成屏幕上的像素的过程。`,
+      `[ˈræstəraɪz]`,
+    ],
+    tags: ['计算机科学', '图形学',],
+    type: '基础知识',
+  },
+  {
+    id: 421,
+    title: `图形学术语，composite 是什么意思？`,
+    answers: [
+      `composite 的一种将页面的各个部分分成若干层，分别对其进行栅格化并在称为合成器线程的单独线程中作为页面进行合成的技术`,
+      `[kəmˈpɑːzət]`,
+    ],
+    tags: ['计算机科学', '图形学',],
+    type: '基础知识',
+  },
 ];
 
 export default data;
 /*
-建议 JavaScript 每帧运行时间在 3-4ms
+React 自己的调用栈，在帧中最长 work 时间 5ms
 
 
 timerQueue taskQueue 为什么要分两个队列？
