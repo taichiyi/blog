@@ -19,6 +19,7 @@ export interface QAs {
     'Redux' |
     'React' |
     'React Router' |
+    'DOM' |
     'JavaScript' |
     'C' |
     'CPU' |
@@ -363,7 +364,7 @@ m
     id: 23,
     title: '在电子计算机中，字符是什么？',
     answers: [
-      '字符是字母、数字、符号的统称。是数据结构中最小的数据存取单位。',
+      '字符是包括字母、数字、符号的码点。是数据结构中最小的数据存取单位。',
     ],
     tags: ['计算机科学', '编码', '字符编码',],
     type: '基础知识',
@@ -1236,9 +1237,20 @@ try {
   },
   {
     id: 105,
-    title: `在 React 中，如何判断函数组件还是类组件？`,
+    title: `在 React 中，如何判断函数组件还是类组件？为什么不用 instanceof 判断？为什么不是布尔值而是对象？`,
     answers: [
-      '判断函数原型对象的 isReactComponent 属性值是否为真。',
+      {
+        tag: 'pre',
+        val:
+          `
+判断函数原型对象的 isReactComponent 属性值是否为真。
+
+为什么不是 instanceof
+  因为用一个页面上可能会存在多个 React 版本
+为什么不是 bool
+  因为原始类型数据会影响 Jest 的检查。Jest 开源之前，生成的模拟数据省略了原始类型。
+        `,
+      },
     ],
     tags: ['计算机科学', 'JavaScript', 'React',],
     type: '专用领域知识',
@@ -1529,9 +1541,9 @@ Promise 是用于表示异步操作完成或失败的结果的对象。
     title: `装饰模式和代理模式有什么区别？`,
     answers: [
       {
-        tag:'pre',
+        tag: 'pre',
         val:
-        `
+          `
 职能角度
   装饰模式用于动态的向对象添加功能。
   代理模式用于限制对对象的访问。
@@ -2051,10 +2063,9 @@ Promise 是用于表示异步操作完成或失败的结果的对象。
   },
   {
     id: 177,
-    title: 'JavaScript 中，全局执行上下文(Global execution context)由__环境决定。一个__中只能有一个全局执行上下文。',
+    title: 'TODO',
     answers: [
-      '宿主',
-      '进程',
+      '',
     ],
     tags: ['计算机科学', '程序设计语言', 'JavaScript'],
     type: '通用领域知识',
@@ -2517,7 +2528,7 @@ FunctionExecutionContext = {
   },
   {
     id: 216,
-    title: `在面向对象的程序设计（OOP）中，类与类之间有哪些表示耦合度的关系？从弱到强说一下`,
+    title: `在面向对象的程序设计（OOP）中，对象之间有哪些表示耦合度的关系？从弱到强说一下`,
     answers: [
       '1.依赖关系',
       '2.关联关系',
@@ -2533,7 +2544,25 @@ FunctionExecutionContext = {
     title: `在面向对象的程序设计（OOP）中，依赖（Dependency）关系是什么？`,
     answers: [
       `依赖（Dependency）关系是对象之间耦合度最弱的临时性的关系。`,
-      `在代码中，某个类的方法通过局部变量、方法的参数或者对静态方法的调用来访问另一个类（被依赖类）中的某些方法来完成一些职责。`,
+      {
+        tag:'pre',
+        val:
+        `
+在代码中，类的方法通过局部变量、方法的参数或者对静态方法的调用来访问另一个类（被依赖类）中的某些方法来完成一些职责。
+例如：
+// 被依赖类
+class MobilePhone {
+  transfer(){
+    ...
+  }
+}
+class Person {
+  call(mp: MobilePhone){
+    mp.transfer();
+  }
+}
+        `,
+      },
     ],
     tags: ['计算机科学', '编程思想', '命令式编程',],
     type: '基础知识',
@@ -3500,10 +3529,9 @@ function curry(func){
   },
   {
     id: 289,
-    title: 'JavaScript 中，如果箭头函数不使用花括号的话，则函数体只能使用__个表达式，__将隐式返回。',
+    title: 'TODO',
     answers: [
-      '一',
-      '表达式的值',
+      '',
     ],
     tags: ['计算机科学', '程序设计语言', 'JavaScript'],
     type: '通用领域知识',
@@ -3547,8 +3575,8 @@ function curry(func){
           `
 具体还说, 定义了对象必须有一个 next 方法,
   该方法总是返回一个叫做 IteratorResult 的对象,
-    IteratorResult 对象必须有一个 boolean 类型的 done 属性,
-    可能有任意类型的 value 属性, 当 done 为 true 时可以省略.
+    IteratorResult 对象必须有一个 boolean 类型的 done 属性(done 为 false，这个属性可缺失),
+    可能有任意类型的 value 属性.
         `
       },
     ],
@@ -3699,7 +3727,7 @@ function curry(func){
 然后引擎开始依次执行代码，为变量赋值。
 执行过程中，如果有函数声明则会创建一个函数执行上下文，如果有函数调用将会把该函数的执行上下文推入栈。
 
-如果在子函数执行过程中，父函数已经 return，引擎会将父函数执行上下文弹出调用栈。
+如果在子函数异步执行过程中，父函数已经 return，引擎会将父函数执行上下文弹出调用栈。
 但是父函数的执行上下文不会被 GC，因为子函数的执行上下文与父函数的词法环境形成了闭包，所以子函数依旧可以访问父函数的变量。
         `
       },
@@ -3997,7 +4025,8 @@ Go，erlang：默认提供“隔离”方式，然后基于“隔离”又提供
     id: 329,
     title: '并发，是什么？',
     answers: [
-      `在一个时间段内发生若干事件。`,
+      `并发运行是在一个时间段内发生若干事件。`,
+      `并发运行是指CPU的一个核心交错(上下文切换)执行一个进程的指令和另一个进程的指令。`,
     ],
     tags: ['计算机科学',],
     type: '基础知识',
@@ -4711,7 +4740,7 @@ ASAP 全称 as soon as possible，中文意思为“尽快” 是将任务添加
         `,
       },
     ],
-    tags: ['计算机科学', '浏览器','Event Loop'],
+    tags: ['计算机科学', '浏览器', 'Event Loop'],
     type: '通用领域知识',
   },
   {
@@ -4720,7 +4749,7 @@ ASAP 全称 as soon as possible，中文意思为“尽快” 是将任务添加
     answers: [
       'Sets 是有序的不相同的元素集合。',
     ],
-    tags: ['计算机科学', '数学', '数据结构','JavaScript'],
+    tags: ['计算机科学', '数学', '数据结构', 'JavaScript'],
     type: '基础知识',
   },
   {
@@ -4730,7 +4759,7 @@ ASAP 全称 as soon as possible，中文意思为“尽快” 是将任务添加
       {
         tag: 'pre',
         val:
-        `
+          `
 类组件
   setState
   forceUpdate
@@ -4748,9 +4777,9 @@ ASAP 全称 as soon as possible，中文意思为“尽快” 是将任务添加
     title: `React Context 是什么？为什么有？有什么用？优缺点？`,
     answers: [
       {
-        tag:'pre',
+        tag: 'pre',
         val:
-        `
+          `
 是什么？
   React Context 是 React 上下文的对象。
 为什么有？
@@ -4775,9 +4804,9 @@ ASAP 全称 as soon as possible，中文意思为“尽快” 是将任务添加
     title: `React Context 的 Provider 组件，作用是什么？`,
     answers: [
       {
-        tag:'pre',
+        tag: 'pre',
         val:
-        `
+          `
 Provider 接受一个 value 属性，用来修改 React Context 对象的值。
         `,
       },
@@ -4790,11 +4819,11 @@ Provider 接受一个 value 属性，用来修改 React Context 对象的值。
     title: `React 中，类组件是如何获取 React Context 的值的？React Context 的值是怎么赋值到类实例的 content 属性的？`,
     answers: [
       {
-        tag:'pre',
+        tag: 'pre',
         val:
-        `
+          `
 如何获取？
-  当类组件存在一个静态属性 contextType 时，React 会从 contextType 中读取 这个 React Context 的值，并当做第二个参数，实例化类组件
+  类组件实例化前，当类组件存在一个静态属性 contextType 时，React 会从 contextType 中读取 这个 React Context 的值，并当做第二个参数，实例化类组件
 怎么赋值？
   当实例化类时，父类会把 props 和 context 参数赋值到实例的 props 和 context 属性
         `,
@@ -4808,9 +4837,9 @@ Provider 接受一个 value 属性，用来修改 React Context 对象的值。
     title: `React Context 的 Consumer 组件的作用是什么？`,
     answers: [
       {
-        tag:'pre',
+        tag: 'pre',
         val:
-        `
+          `
 是什么？
   Consumer 是可以将 Context 传递给子组件的高阶组件。
   React Context 对象有一个 Consumer 属性，属性值指向对象自身。
@@ -4827,9 +4856,9 @@ Provider 接受一个 value 属性，用来修改 React Context 对象的值。
     title: `React 是什么？`,
     answers: [
       {
-        tag:'pre',
+        tag: 'pre',
         val:
-        `
+          `
 React 用于构建用户界面的声明式的 JavaScript 库。
         `,
       },
@@ -4842,18 +4871,20 @@ React 用于构建用户界面的声明式的 JavaScript 库。
     title: `React V16 对生命周期做了哪些修改？为什么？`,
     answers: [
       {
-        tag:'pre',
+        tag: 'pre',
         val:
-        `
+          `
 不再推荐使用
   componentWillReceiveProps
   componentWillUpdate
   componentWillMount
-新增两个声明周期函数
+新增两个生命周期函数
   static getDerivedStateFromProps
   getSnapshotBeforeUpdate
 为什么？
-  因为 render 阶段的更新不应该产生用户视觉可见的副作用。
+  因为 fiber 的 协调阶段不应该产生用户视觉可见的副作用。
+  具体来说，在 will 相关的生命周期中，调用类实例 setState 可能会导致
+    在协调阶段，一个生命周期方法被多次调用。
         `,
       },
     ],
@@ -4865,9 +4896,9 @@ React 用于构建用户界面的声明式的 JavaScript 库。
     title: `React element 是什么？分别介绍一下属性？`,
     answers: [
       {
-        tag:'pre',
+        tag: 'pre',
         val:
-        `
+          `
 React element 是描述组件实例或 DOM 节点和相关属性的普通对象。
 当元素的 type 是字符串时，它表示 DOM 节点和节点相关的属性。
 React element 对象一旦创建就不会对其修改。
@@ -4913,9 +4944,9 @@ React element 对象一旦创建就不会对其修改。
     title: `说说 React 渲染到 DOM 的过程。`,
     answers: [
       {
-        tag:'pre',
+        tag: 'pre',
         val:
-        `
+          `
 TODO
 调用 ReactDom 的 render 方法后，会创建 FiberRootNode 和对应的 FiberNode，然后把 FiberFootNode 挂载在对应的 DOM 节点上。
 
@@ -4951,9 +4982,9 @@ function reconcileChildren 这个函数把 fiber updateQueue 得到的 React ele
     title: `React 术语，React element tree 是什么？和 Virtual DOM(VDOM、虚拟 DOM) 是什么关系？`,
     answers: [
       {
-        tag:'pre',
+        tag: 'pre',
         val:
-        `
+          `
 “Virtual DOM”是一个编程中的将 UI 以“虚拟”形式保存在内存中的概念。
 
   需要说明的是，React 中的 虚拟 DOM 就是 React element tree，较早的时候称为“虚拟 DOM”是为了方便大家理解 React，
@@ -4969,9 +5000,9 @@ function reconcileChildren 这个函数把 fiber updateQueue 得到的 React ele
     title: `在 React 中，Fiber tree 是什么？`,
     answers: [
       {
-        tag:'pre',
+        tag: 'pre',
         val:
-        `
+          `
 Fiber tree 是在浏览器环境下 React element tree 的实现。
         `,
       },
@@ -4984,18 +5015,19 @@ Fiber tree 是在浏览器环境下 React element tree 的实现。
     title: `在 React 中，Fiber 为什么是用链表(linked list)而不是栈（stack）来遍历组件树？各自的优点？`,
     answers: [
       {
-        tag:'pre',
+        tag: 'pre',
         val:
-        `
+          `
 在 V16 之前，React 是通过 stack 来遍历组件树的。
-使用栈来遍历树，每次更新将立即重新渲染整个树，一次执行太多的工作，可能会导致掉帧。
+使用栈来遍历树，每次 update 将立即重新渲染整个树，一次执行太多的工作，可能会导致掉帧。
 
 链表
   可以暂停工作
   根据优先级工作
   重用之前的工作
 栈
-  实现简单
+  简单易懂
+  好实现
         `,
       },
     ],
@@ -5018,7 +5050,6 @@ Fiber tree 是在浏览器环境下 React element tree 的实现。
     answers: [
       `update 是由用于 React 渲染的数据变动产生的变化。`,
       `通常是由 setState 产生，update 会导致重新渲染。`,
-      `[ˌrekənsɪliˈeɪʃn]`,
     ],
     tags: ['计算机科学', 'JavaScript', 'React',],
     type: '专用领域知识',
@@ -5071,9 +5102,9 @@ Fiber tree 是在浏览器环境下 React element tree 的实现。
     title: `React 中，Fiber 的提交阶段又分为哪几个子阶段？会处理哪些副作用？`,
     answers: [
       {
-        tag:'pre',
+        tag: 'pre',
         val:
-        `
+          `
 commit phase 子阶段
   before mutation
     Snapshot
@@ -5106,10 +5137,235 @@ commit phase 子阶段
     tags: ['计算机科学', 'JavaScript', 'React',],
     type: '专用领域知识',
   },
+  {
+    id: 402,
+    title: `DOM 中，ownerDocument 是什么？`,
+    answers: [
+      `每个 DOM node(节点) 都会有 ownerDocument 属性，改属性值为当前节点的顶层 document 对象。`,
+    ],
+    tags: ['计算机科学', 'DOM',],
+    type: '通用领域知识',
+  },
+  {
+    id: 403,
+    title: `被动事件监听器是什么？为什么有？有什么用？`,
+    answers: [
+      {
+        tag: 'pre',
+        val:
+        `
+是什么？
+  被动事件监听器是一个不阻止事件默认行为的监听器。
+为什么有？
+  在以前只有主动事件监听器，如果 被触摸的 DOM 元素，上有 touch 相关的监听器，当滑动屏幕，
+  浏览器会先调用监听器函数，判断是否调用了事件对象的 preventDefault 方法，来取消事件的默认行为（例如：缩放，滚动），
+  及时监听器是空函数，执行的时间也足以让用户感觉到卡顿。
+有什么用？
+  因为被动事件监听器是不会阻止事件默认行为的，所以浏览器不需要等待事件监听器的结果，可以立即响应滚动。
+
+        `,
+      },
+    ],
+    tags: ['计算机科学', 'DOM',],
+    type: '通用领域知识',
+  },
+  {
+    id: 404,
+    title: `React，为什么 根据 W3C 规范实现了一套事件系统？`,
+    answers: [
+      `1. 兼容性：为了让事件在不同浏览器中有一致的表现.`,
+      `2. 跨平台：像 React tree`,
+      `3. 优化：根据事件优先级处理事件`,
+    ],
+    tags: ['计算机科学', 'JavaScript', 'React',],
+    type: '专用领域知识',
+  },
+  {
+    id: 405,
+    title: `DOM Levels 是什么？`,
+    answers: [
+      {
+        tag: 'pre',
+        val:
+        `
+DOM Levels 指的是 DOM 的标准。
+
+“DOM Level 1”、“DOM Level 2”就像“HTML4”、“HTML5”
+
+新的 DOM 标准都会在之前的标准上拓展：
+  最初的 DOM 标准 Level 1，只是映射文档模型。
+  DOM 标准 2，支持了 CSS 和一些事件。
+        `,
+      },
+    ],
+    tags: ['计算机科学', 'DOM',],
+    type: '通用领域知识',
+  },
+  {
+    id: 406,
+    title: `Fabric 是什么？`,
+    answers: [
+      `Fabric 是 React Native 新的负责 Native 端的渲染器。`,
+    ],
+    tags: ['计算机科学', 'JavaScript', 'React',],
+    type: '专用领域知识',
+  },
+  {
+    id: 407,
+    title: `进程(process) 是什么？`,
+    answers: [
+      `进程是操作系统对一个正在运行的程序的一种抽象。`,
+      ``,
+      `在一个系统上可以同时运行多个进程，而每个进程都好像在独立地使用硬件。`,
+      `['prɑses]`,
+    ],
+    tags: ['计算机科学',],
+    type: '基础知识',
+  },
+  {
+    id: 408,
+    title: `线程(thread) 是什么？`,
+    answers: [
+      `一个进程可以由多个称为线程的执行单元组成，每个线程都运行在进程的上下文中，并共享同样的代码和全局的数据。`,
+      ``,
+      `多线程比多进程之间更容易共享数据。`,
+      `[θred]`,
+    ],
+    tags: ['计算机科学',],
+    type: '基础知识',
+  },
+  {
+    id: 409,
+    title: `为什么 JavaScript 是单线程？`,
+    answers: [
+      {
+        tag: 'pre',
+        val:
+          `
+如果 Javascript 是多线程的话，在多线程的交互下，处于UI中的 DOM 节点就可能成为一个临界资源，假设存在两个线程同时操作一个 DOM，一个负责修改一个负责删除，那么这个时候就需要浏览器来裁决如何生效哪个线程的执行结果。
+当然我们可以通过锁来解决上面的问题。但为了避免因为引入了锁而带来更大的复杂性，Javascript 在最初就选择了单线程执行。
+        `,
+      },
+    ],
+    tags: ['计算机科学', '程序设计语言', 'JavaScript'],
+    type: '通用领域知识',
+  },
+  {
+    id: 410,
+    title: `在 BOM 中，otherWindow.postMessage 是什么？有什么用？怎么用？`,
+    answers: [
+      {
+        tag: 'pre',
+        val:
+          `
+是什么？
+  otherWindow.postMessage 是可以“多播”实现跨源通信的方法。
+  前提: 得有其他窗口的引用。
+有什么用？
+  实现线程间的通信，window(iframe) 与 iframe(window)
+怎么用？
+  otherWindow.addEvenListener('message',e=>{...})
+特点
+  发送方可以限制目标源
+         `,
+      },
+    ],
+    tags: ['计算机科学', '浏览器',],
+    type: '通用领域知识',
+  },
+  {
+    id: 411,
+    title: `在 BOM 中，MessageChannel 是什么？有什么用？`,
+    answers: [
+      {
+        tag: 'pre',
+        val:
+          `
+是什么？
+  MessageChannel 是可以建立“单播”单工消息通道的构造函数。
+有什么用？
+  实现线程间的通信，worker 与 worker ，window(iframe) 与 iframe(window)
+特点
+  发送方不可以限制目标源
+         `,
+      },
+    ],
+    tags: ['计算机科学', '浏览器',],
+    type: '通用领域知识',
+  },
+  {
+    id: 412,
+    title: `React 中，调度器是通过 MessageChannel 实现安排浏览器绘制后执行一个 task 的。为什么不是 window.postMessage 或 window.setTimeout ?`,
+    answers: [
+      {
+        tag:'pre',
+        val:
+        `
+为什么不是 window.setTimeout ？
+  因为消息事件能最快的添加到任务队列，因为是同步添加的。
+  setTimeout 添加到任务队列一般要 3 个步骤：
+    1. 定时器线程，声明一个定时器
+    2. 判断时间满足，则添加到任务队列
+    3. 触发任务
+
+为什么不是 window.postMessage ？
+  因为当触发 message 事件后，其他的 message 事件处理器也会被调用：
+    可能会立即取消事件的传播；
+    会加大每一帧的开销。
+
+        `,
+      },
+    ],
+    tags: ['计算机科学', 'JavaScript', 'React',],
+    type: '专用领域知识',
+  },
+  {
+    id: 413,
+    title: `FPS 是什么？`,
+    answers: [
+      'FPS 全称“每秒传输帧数”是测量显示帧数的量度。',
+      `别称：帧率(Frame rate)`,
+      `单位：FPS、Hz`,
+      'Frames Per Second',
+    ],
+    tags: ['计算机科学', '图形学',],
+    type: '基础知识',
+  },
+  {
+    id: 414,
+    title: `浏览器中，一个帧的生命周期(pixel pipeline)是怎样的？`,
+    answers: [
+      {
+        tag: 'img',
+        val: '<img style="width: 100%" src="https://oss.taichiyi.com/markdown/os0vx8yy.jpg" />',
+      },
+    ],
+    tags: ['计算机科学', '浏览器',],
+    type: '基础知识',
+  },
+
 ];
 
 export default data;
 /*
+建议 JavaScript 每帧运行时间在 3-4ms
+
+
+timerQueue taskQueue 为什么要分两个队列？
+
+pending(挂起) discrete updates 是为有用？
+
+内部事件处理器，是为有用？
+InsideEventHandler
+
+离散事件是什么？连续事件是什么？
+
+
+
+Time slicing(时间分片)
+Suspense(悬停)
+
+reflow
 
 redux 中间件(middleware)中，redux-thunk、redux-saga 和 redux-observable 各自的使用场景是什么？
 添加定义
