@@ -5443,22 +5443,102 @@ DOM Levels 指的是 DOM 的标准。
     tags: ['计算机科学', '图形学',],
     type: '基础知识',
   },
+  {
+    id: 422,
+    title: `How to avoid jank in the browser?`,
+    answers: [
+      {
+        tag: 'img',
+        val: '<img style="width: 100%" src="https://oss.taichiyi.com/markdown/os0vx8yy.jpg" />',
+      },
+      {
+        tag: 'img',
+        val: '<img style="width: 100%" src="https://oss.taichiyi.com/markdown/rmti03jarld.png" />',
+      },
+      {
+        tag: 'img',
+        val: '<img style="width: 100%" src="https://oss.taichiyi.com/markdown/yinewse8ibb.jpg" />',
+      },
+    ],
+    tags: ['计算机科学', '浏览器',],
+    type: '基础知识',
+  },
+  {
+    id: 423,
+    title: `浏览器，Renderer Process 的 Main Thread 流程是什么？`,
+    answers: [
+      {
+        tag: 'img',
+        val: '<img style="width: 100%" src="https://oss.taichiyi.com/markdown/os0vx8yy.jpg" />',
+      },
+    ],
+    tags: ['计算机科学', '浏览器',],
+    type: '基础知识',
+  },
+  {
+    id: 424,
+    title: `taskQueue timerQueue 为什么要分两个队列？`,
+    answers: [
+      `timerQueue 是个时间触发器队列。用于延迟触发 flushWork`,
+    ],
+    tags: ['计算机科学', 'JavaScript', 'React',],
+    type: '专用领域知识',
+  },
+  {
+    id: 425,
+    title: `In React, when is pending discrete update on root?`,
+    answers: [
+      `当 scheduleUpdateOnFiber 时，执行上下文为 DiscreteEventContext ，并且优先级为 Blocking 或 Immediate 时。`,
+    ],
+    tags: ['计算机科学', 'JavaScript', 'React',],
+    type: '专用领域知识',
+  },
+  {
+    id: 426,
+    title: `useEffect 和 useLayoutEffect 有什么区别？`,
+    answers: [
+      `useEffect 在 commit phase 的子阶段 layout phase 之前执行。`,
+      `useLayoutEffect 在 layout phase 执行，也就是 DOM 变更后同步执行。`,
+    ],
+    tags: ['计算机科学', 'JavaScript', 'React',],
+    type: '专用领域知识',
+  },
+  {
+    id: 427,
+    title: `React Flare，是什么？`,
+    answers: [
+      `React events 别称 React Flare(内部代号) 是允许行为一致的跨设备和跨平台的高级事件的 React 事件系统的扩展。`,
+    ],
+    tags: ['计算机科学', 'JavaScript', 'React',],
+    type: '专用领域知识',
+  },
+  {
+    id: 428,
+    title: `浏览器中，每帧的事件处理器是怎么执行的？`,
+    answers: [
+      {
+        tag: 'pre',
+        val:
+        `
+chrome，在帧开始后，给 event handlers 的最长运行时间是 100ms，
+  所以一帧内可以调用多个 event handler;
+  至少调用一个 event handler。
+        `,
+      },
+    ],
+    tags: ['计算机科学', '浏览器',],
+    type: '基础知识',
+  },
+
 ];
 
 export default data;
 /*
-React 自己的调用栈，在帧中最长 work 时间 5ms
-
-
-timerQueue taskQueue 为什么要分两个队列？
-
-pending(挂起) discrete updates 是为有用？
 
 内部事件处理器，是为有用？
 InsideEventHandler
 
 离散事件是什么？连续事件是什么？
-
 
 
 Time slicing(时间分片)
