@@ -2085,7 +2085,12 @@ Promise 是用于表示异步操作完成或失败的结果的对象。
 2. combineReducers
   是一个将多个 reducer 转换为单个 reducer 的辅助函数。
 3. bindActionCreators
-  是一个将 actions 绑定到指定 dispatch 的函数。
+  是一个将 actions 绑定到指定 dispatch 的 ActionCreattor 函数。
+  function bindActionCreator(actionCreator, dispatch) {
+    return function() {
+      return dispatch(actionCreator.apply(this, arguments))
+    }
+  }
 4. applyMiddleware
   是创建一个将中间件引用于 dispatch 的 store enhancer 函数。
 5. compose
@@ -4295,7 +4300,7 @@ Reactive
     id: 349,
     title: 'Redux 中，术语（8/10）Store 是什么？',
     answers: [
-      `Store 是存储有状态和拥有状态操作相关方法的对象。`,
+      `Store 是存储有状态和拥有状态操作方法的对象。`,
     ],
     tags: ['计算机科学', 'JavaScript', 'Redux',],
     type: '专用领域知识',
@@ -4420,7 +4425,8 @@ store.dispatch(thunk)
     id: 357,
     title: 'react-redux 是什么？',
     answers: [
-      `react-redux 是一个让 React 组件可以从 Redux Store 中读取数据，并向 store dispatch action 以更新数据的库。`,
+      `react-redux 是一个允许 react 组件读写 store 的消息管道。`,
+      // `react-redux 是一个让 React 组件可以从 Redux Store 中读取数据，并向 store dispatch action 以更新数据的库。`,
     ],
     tags: ['计算机科学', 'JavaScript', 'Redux',],
     type: '专用领域知识',
@@ -4453,7 +4459,7 @@ store.dispatch(thunk)
       val:
         `
 在 redux 中
-  1. applyMiddleware(a,b) 会先调用哪个中间件的 dispatch ？
+  1. applyMiddleware(a,b) 会返回一个 “createStore”，调用这个 store 的 dispatch 方法，会先调用哪个中间件的 dispatch ？
   2. compose(applyMiddleware(a),applyMiddleware(b)) 会先调用哪个中间件的 dispatch ？
   3. 如果 store 是通过 enhancer 创建，当 disapth 时，会先调用 store 的 dispatch 还是 中间件的 dispatch？
       `,
@@ -5529,17 +5535,94 @@ chrome，在帧开始后，给 event handlers 的最长运行时间是 100ms，
     tags: ['计算机科学', '浏览器',],
     type: '基础知识',
   },
+  {
+    id: 429,
+    title: `React V16 -> V17 有哪些变化？(V17 是为有用？)`,
+    answers: [
+      {
+        tag:'pre',
+        val:
+        `
+是什么？
+  V17 是支持一个应用中局部大版本迭代的 React 版本。
+为什么？
+  因为一个大型应用中可能会存在不同的 React 版本，当需要更新大版本时，如果一起更新那是最好的，也不会有什么问题。
+  但是因为各种原因会存在一个应用中有不同大版本的 React 例如 V15 和 V16。
+  在 V17 以前，这两个版本的 React 的事件系统可能会相互干扰，会存在出现未知风险。
+有什么用？
+  事件系统
+    Event Delegation，Event Delegation node changed from document node to root container node(React tree root node)
+    用 focusin/focusout 替代 onFocus/onBlur
+    scroll event 如果被事件处理器处理，则不会在冒泡。
+    删除事件池
+  New JSX Transform
+    是什么？
+      从 React 中剥离出来的专门给编译器用的 jsx runtime。
+    为什么？
+      有时候函数组件只是单纯的创建无状态的 React tree 时，没必要引入整个 React 库。
+      简化和提高性能
+        `,
+      },
+    ],
+    tags: ['计算机科学', 'JavaScript', 'React',],
+    type: '专用领域知识',
+  },
+  {
+    id: 430,
+    title: `React 中，setState 是同步的还是异步的？`,
+    answers: [
+      {
+        tag:'pre',
+        val:
+        `
+先说一下 React 的更新机制
+  当产生 update 时(例如: setState)，React 会安排 Fiber 树更新(scheduleUpdateOnFiber)。
+  但是有些 update 的是不需要立即更新的，出于性能考虑会批量更新。
+  所以 React 会根据优先级，选择 Fiber 的更新时机。
+
+分两个角度看
+  代码
+    React executionContext 8421码(BCD)的情况。
+    过期时间(安排 Fiber 更新的时间)
+      同步
+        executionContext 中含有 Unbatched 上下文
+        executionContext 不含有 Commit 和 Render
+        executionContext 为 0(NoContext)
+      异步
+        非同步
+  使用者
+    同步
+      事件触发 update，例如：click
+    异步
+      update 是异步产生的，例如：setTimeout、then
+
+        `,
+      },
+    ],
+    tags: ['计算机科学', 'JavaScript', 'React',],
+    type: '专用领域知识',
+  },
 
 ];
 
 export default data;
 /*
 
+什么情况下调用 enqueueStateRestore 方法
+
+immediateQueueCallbackNode 和 syncQueue 什么时候添加到队列的？
+
+做一个受控主键的流程图
+
+批处理事件 update , 是为有用？batchedEventUpdate
+
 内部事件处理器，是为有用？
 InsideEventHandler
 
-离散事件是什么？连续事件是什么？
+nestedUpdate，是为有用？
+嵌套更新
 
+离散事件是什么？连续事件是什么？
 
 Time slicing(时间分片)
 Suspense(悬停)
