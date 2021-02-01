@@ -298,3 +298,8 @@ systemctl restart nginx
   "transport": {}
 }
 ```
+
+## 参考
+
+- <https://github.com/v2fly/fhs-install-v2ray/blob/master/README.zh-Hans-CN.md>
+- <https://github.com/v2fly/v2ray-core>
