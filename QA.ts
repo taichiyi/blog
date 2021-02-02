@@ -5025,7 +5025,7 @@ Fiber tree 是在浏览器环境下 React element tree 的实现。
         val:
           `
 在 V16 之前，React 是通过 stack 来遍历组件树的。
-使用栈来遍历树，每次 update 将立即重新渲染整个树，一次执行太多的工作，可能会导致掉帧。
+使用栈来遍历树，每次 update 将立即重新渲染整个树，一次执行太多的 work，可能会导致掉帧。
 
 链表
   可以暂停工作
@@ -5044,7 +5044,7 @@ Fiber tree 是在浏览器环境下 React element tree 的实现。
     id: 394,
     title: `React 术语，reconciliation 是什么？`,
     answers: [
-      `reconciliation(协调) 是 React 使用算法将旧树和新树进行对比，计算出发生更改的部分的过程。`,
+      `reconciliation(协调) 是 React 通过算法计算出新树和旧树差异的过程。`,
       `[ˌrekənsɪliˈeɪʃn]`,
     ],
     tags: ['计算机科学', 'JavaScript', 'React',],
@@ -5054,7 +5054,7 @@ Fiber tree 是在浏览器环境下 React element tree 的实现。
     id: 395,
     title: `React 术语，update 是什么？`,
     answers: [
-      `update 是由用于 React 渲染的数据变动产生的变化。`,
+      `update 是由用于 React 渲染的数据变化产生的更新。`,
       `通常是由 setState 产生，update 会导致重新渲染。`,
     ],
     tags: ['计算机科学', 'JavaScript', 'React',],
@@ -5064,7 +5064,7 @@ Fiber tree 是在浏览器环境下 React element tree 的实现。
     id: 396,
     title: `React 术语，Renderer 是什么？`,
     answers: [
-      `Renderer(渲染器)用于管理 React 树，让 React 树 根据底层平台进行不同的调用，从而渲染出视图。`,
+      `Renderer(渲染器)，根据平台环境将 React Tree 渲染到视图上。`,
       `[ˈrendər]`,
     ],
     tags: ['计算机科学', 'JavaScript', 'React',],
@@ -5582,8 +5582,8 @@ chrome，在帧开始后，给 event handlers 的最长运行时间是 100ms，
 
 分两个角度看
   代码
-    React executionContext 8421码(BCD)的情况。
     过期时间(安排 Fiber 更新的时间)
+    React executionContext 8421码(BCD)的情况。
       同步
         executionContext 中含有 Unbatched 上下文
         executionContext 不含有 Commit 和 Render
@@ -5602,17 +5602,85 @@ chrome，在帧开始后，给 event handlers 的最长运行时间是 100ms，
     tags: ['计算机科学', 'JavaScript', 'React',],
     type: '专用领域知识',
   },
+  {
+    id: 431,
+    title: `In JavaScript，The expression returns true when value not equel to undefined and null. How to write this expression？`,
+    answers: [
+      `value != null`,
+    ],
+    tags: ['计算机科学', '程序设计语言', 'JavaScript'],
+    type: '通用领域知识',
+  },
+  {
+    id: 432,
+    title: `In React, What is SyncCallbackQueue `,
+    answers: [
+      {
+        tag:'pre',
+        val:
+        `
+        We'll flush SyncCallbackQueue either in the next tick, or earlier if something calls 'flushSyncCallbackQueue'
+        `,
+      },
+    ],
+    tags: ['计算机科学', 'JavaScript', 'React',],
+    type: '专用领域知识',
+  },
+  {
+    id: 433,
+    title: `What is BCD code?`,
+    answers: [
+      `BCD code is a class of binary encodings of decimal numbers.`,
+      `Binary-coded decimal aka BCD.`,
+    ],
+    tags: ['计算机科学', '编码'],
+    type: '基础知识',
+  },
+  {
+    id: 434,
+    title: 'What is "aka"?',
+    answers: [
+      'aka = also known as',
+    ],
+    tags: ['词语',],
+    type: '基础知识',
+  },
+  {
+    id: 435,
+    title: `What is BitMask(位掩码)?`,
+    answers: [
+      `BitMast is bit operation that masks specified bit by operating with the target binary number.`,
+      `Binary-coded decimal aka BCD.`,
+    ],
+    tags: ['计算机科学', '编码'],
+    type: '基础知识',
+  },
 
 ];
 
 export default data;
 /*
 
-什么情况下调用 enqueueStateRestore 方法
+Diffing Algorithm
+  判断 oldProps 和 newProps 是否相等
 
-immediateQueueCallbackNode 和 syncQueue 什么时候添加到队列的？
 
-做一个受控主键的流程图
+lane，是为有用？
+What？
+  is a concept of task priority in React.
+Why？
+  In the old model, we determine the priority based on the expiration time of work.
+  old model concept
+    prioritization
+    batching
+  new model concept
+    lane
+    lanes
+
+
+跟一下 React 的 github commit
+
+custom Hook，是为有用？
 
 批处理事件 update , 是为有用？batchedEventUpdate
 
