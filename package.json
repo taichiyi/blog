@@ -4,8 +4,8 @@
   "description": "",
   "private": true,
   "scripts": {
-    "update": "git add . && git commit -m 'update' && git push gitee master",
-    "commit": "git commit -m 'update' && git push gitee master"
+    "update": "git add . && git commit -m 'update' && git push gitee master && git push origin master",
+    "commit": "git commit -m 'update' && git push gitee master && git push origin master"
   },
   "repository": {
     "type": "git",
