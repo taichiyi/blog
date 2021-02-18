@@ -23,7 +23,8 @@ export interface QAs {
     'JavaScript' |
     'C' |
     'CPU' |
-    'RAM' |
+    'GPU' |
+    'Memory' |
     '浏览器' |
     'Event Loop' |
     '正则表达式' |
@@ -1020,14 +1021,14 @@ try {
     answers: [
       '指针是变量在内存空间的首个字节单元的内存地址。',
     ],
-    tags: ['计算机科学', 'RAM'],
+    tags: ['计算机科学', 'Memory'],
     type: '基础知识',
   },
   {
     id: 87,
     title: `前缀和（Prefix sum）是什么？`,
     answers: [
-      `前缀和（Prefix sum）是数组中某项元素(包括此项元素)之前的所有元素的和。`,
+      `前缀和（Prefix sum）是数组中某项元素及之前的所有元素的和。`,
     ],
     tags: ['计算机科学', '算法',],
     type: '基础知识',
@@ -1140,7 +1141,7 @@ try {
   },
   {
     id: 98,
-    title: 'JavaScript 中，如果获取对象中所有为 Symbol 的属性？',
+    title: 'JavaScript 中，如何获取对象中所有为 Symbol 的属性？',
     answers: [
       `通过 Object 函数的静态方法 getOwnPropertySymbols`,
     ],
@@ -1206,7 +1207,7 @@ try {
   },
   {
     id: 104,
-    title: '在正则表达式中，怎么弄环视为数值添加逗号？以 123456789.00 为例说明。',
+    title: '在正则表达式中，怎么用环视为数值添加逗号？以 123456789.00 为例说明。',
     answers: [
       {
         tag: 'pre',
@@ -4031,7 +4032,7 @@ Go，erlang：默认提供“隔离”方式，然后基于“隔离”又提供
     title: '并发，是什么？',
     answers: [
       `并发运行是在一个时间段内发生若干事件。`,
-      `并发运行是指CPU的一个核心交错(上下文切换)执行一个进程的指令和另一个进程的指令。`,
+      `并发运行是指 CPU 的一个核心以纳秒数量级的时间尺度在线程间来回切换(上下文切换)执行指令。`,
     ],
     tags: ['计算机科学',],
     type: '基础知识',
@@ -5655,6 +5656,69 @@ chrome，在帧开始后，给 event handlers 的最长运行时间是 100ms，
     tags: ['计算机科学', '编码'],
     type: '基础知识',
   },
+  {
+    id: 436,
+    title: `What is words in computer science?`,
+    answers: [
+      `Word is the length of data accessed, transmitted and processed in a single time when the computer processes data.`,
+      `字是计算机处理数据时单次存取、传输和加工的数据长度。`,
+    ],
+    tags: ['计算机科学',],
+    type: '基础知识',
+  },
+  {
+    id: 437,
+    title: '抽象是什么？为什么有有什么用？',
+    answers: [
+      '抽象是找共同点的过程。',
+      '为什么有：为了更好的理解事物。',
+      '有什么用：更好的看清事物的本质，更好的解决问题。',
+    ],
+    tags: ['词语',],
+    type: '基础知识',
+  },
+  {
+    id: 438,
+    title: `单线程和多线程，多线程的优点？`,
+    answers: [
+      `提高进程 IO 时，CPU 的利用率`,
+    ],
+    tags: ['数学', '计算机科学',],
+    type: '基础知识',
+  },
+  {
+    id: 439,
+    title: `GPU 是什么？优缺点？`,
+    answers: [
+      'GPU 是由成千上万个微核组成的处理器。',
+      '优点：擅长处理大量并行简单运算。例如：图形渲染，加密，处理网络传输。',
+      '缺点：不擅长串行任务，很难编程。',
+    ],
+    tags: ['计算机科学', 'CPU',],
+    type: '基础知识',
+  },
+  {
+    id: 440,
+    title: `存储器是什么？`,
+    answers: [
+      '储存器是用来存储数据和指令的记忆部件。',
+    ],
+    tags: ['计算机科学', 'Memory'],
+    type: '基础知识',
+  },
+  {
+    id: 441,
+    title: `存储器的理想条件是什么？为了达到理想条件使用了哪种实现的方式？存储器的典型访问时间排行是什么？`,
+    answers: [
+      '理想条件：1. 速度快 2. 足够大 3.价格便宜',
+      '使用了分层次的结构。',
+      '寄存器 < 高速缓存 < 主存 < 磁盘',
+      '1ns   < 2ns    < 10ns < 20ms',
+      '<1KB  < 4MB    < 1-8G < >1TB',
+    ],
+    tags: ['计算机科学', 'Memory'],
+    type: '基础知识',
+  },
 
 ];
 
@@ -5669,7 +5733,11 @@ lane，是为有用？
 What？
   is a concept of task priority in React.
 Why？
+  low priority updates cannot finish without also finishing high priority ones. // 低优先级的更新没有完成高优先级的更新就无法完成。
   In the old model, we determine the priority based on the expiration time of work.
+  you can have a scenario where a higher priority IO-bound task blocks a lower-priority CPU-bound task from completing.
+  A similar flaw of Expiration Times is that it's limited in how we can express a group of multiple priority levels.
+
   old model concept
     prioritization
     batching
@@ -5677,8 +5745,6 @@ Why？
     lane
     lanes
 
-
-跟一下 React 的 github commit
 
 custom Hook，是为有用？
 
