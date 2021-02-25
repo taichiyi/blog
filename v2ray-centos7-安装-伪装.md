@@ -14,6 +14,9 @@ sudo su
 # 安装
 bash <(curl -L https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/install-release.sh)
 
+# 如果速度慢可以使用这个
+bash <(curl -L https://oss.taichiyi.com/v2ray/install-release.sh)
+
 # 一些输出信息
 # /usr/local/bin/v2ray
 # /usr/local/bin/v2ctl
@@ -24,6 +27,9 @@ bash <(curl -L https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/
 
 # 卸载
 bash <(curl -L https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/install-release.sh) --remove
+
+# 如果速度慢可以使用这个
+bash <(curl -L https://oss.taichiyi.com/v2ray/install-release.sh) --remove
 ```
 
 ### 修改配置文件
@@ -296,6 +302,98 @@ systemctl restart nginx
     }
   },
   "transport": {}
+}
+```
+
+## 仅仅使用加密代理的配置（非翻墙）
+
+客户端
+
+``` json
+{
+  "log": {
+    "error": "",
+    "loglevel": "info",
+    "access": ""
+  },
+  "inbounds": [
+    {
+      "listen": "127.0.0.1",
+      "protocol": "socks",
+      "settings": {
+        "udp": false,
+        "auth": "noauth"
+      },
+      "port": "43783"
+    },
+    {
+      "listen": "127.0.0.1",
+      "protocol": "http",
+      "settings": {
+        "timeout": 360
+      },
+      "port": "43782"
+    }
+  ],
+  "outbounds": [
+    {
+      "protocol": "vmess",
+      "settings": {
+        "vnext": [
+          {
+            "address": "xxx.xxx.xxx.xxx",
+            "port": 4278,
+            "users": [
+              {
+                "id": "c8246337-f3e9-4bb8-9d4e-1e0cc9b88675"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "protocol": "freedom",
+      "tag": "direct"
+    }
+  ],
+  "routing": {
+    "domainStrategy": "IPOnDemand",
+    "rules": [
+      {
+        "type": "field",
+        "ip": [
+          "geoip:private"
+        ],
+        "outboundTag": "direct"
+      }
+    ]
+  }
+}
+```
+
+服务端
+
+``` json
+{
+  "inbounds": [
+    {
+      "port": 4278,
+      "protocol": "vmess",
+      "settings": {
+        "clients": [
+          {
+            "id": "c8246337-f3e9-4bb8-9d4e-1e0cc9b88675"
+          }
+        ]
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "protocol": "freedom"
+    }
+  ]
 }
 ```
 
