@@ -1728,7 +1728,7 @@ Promise 是用于表示异步操作完成或失败的结果的对象。
     id: 147,
     title: '在正则表达式中，“反向引用”是什么？由哪几部分组成？',
     answers: [
-      '“反向引用”是匹配子表达式所匹配文本的正则表达式特性。',
+      '“反向引用”是引用（复用）之前表达式的正则表达式特性。',
       '由两部分组成：子表达式和元字符序列。',
       {
         tag: 'pre',
@@ -1991,15 +1991,18 @@ Promise 是用于表示异步操作完成或失败的结果的对象。
     id: 170,
     title: '在 JavaScript 中，哪些原生语言结构会自动使用迭代器模式？',
     answers: [
-      `for-of`,
-      `Array destructuring(数组结构)`,
-      `The spread operator(展开运算符)`,
-      `Array.from()`,
-      `Set construction(构建)`,
-      `Map construction(构建)`,
-      `Promise.all()`,
-      `Promise.race()`,
-      `yield* operator`,
+      'The spread operator(展开运算符)',
+      '',
+      'for-of',
+      'yield* operator',
+      '',
+      'Array.from()',
+      'Array destructuring(数组结构)',
+      'Set construction(构建)',
+      'Map construction(构建)',
+      '',
+      'Promise.all()',
+      'Promise.race()',
     ],
     tags: ['计算机科学', '程序设计语言', 'JavaScript'],
     type: '基础知识',
@@ -2650,17 +2653,13 @@ class Person {
     title: `在面向对象中，接口（Interface）是什么？`,
     answers: [
       `接口是只包含属性和方法的定义而不包含实现的约束形式。`,
-      '实例',
-      '操作',
-      '属性',
-      '外',
     ],
     tags: ['计算机科学', '编程思想', '命令式编程',],
     type: '基础知识',
   },
   {
     id: 225,
-    title: '介绍一下“冒泡排序”、“选择排序”、“插入排序”、“希尔排序”、“快速排序”的时间复杂度、空间复杂度、排序方式和稳定性。',
+    title: '介绍一下“冒泡排序”、“选择排序”、“插入排序”、“快速排序”的时间复杂度、空间复杂度、排序方式和稳定性。',
     answers: [
       {
         tag: 'img',
@@ -2753,11 +2752,10 @@ class Person {
   },
   {
     id: 234,
-    title: '插入排序算法的思想（原理）是什么？哪个排序算法是它的改进算法？',
+    title: '插入排序算法的思想（原理）是什么？',
     answers: [
       '1. 将排序序列第一个元素看做一个有序序列，把其他元素当成是未排序序列。',
       '2. 从头到尾依次扫描未排序序列，将扫描到的每个元素插入有序序列的适当位置。',
-      '希尔排序',
     ],
     tags: ['计算机科学', '算法', '排序算法',],
     type: '基础知识',
@@ -2774,7 +2772,7 @@ class Person {
   },
   {
     id: 236,
-    title: '希尔排序算法的思想（原理）是什么？',
+    title: 'TODO',
     answers: [
       '1. 在插入排序的基础上，外面套一个动态间隔循环。',
     ],
@@ -2817,7 +2815,7 @@ class Person {
   },
   {
     id: 239,
-    title: '写一下，“冒泡排序”、“选择排序”、“插入排序”、“希尔排序”、“快速排序”的伪代码？脑里写也行',
+    title: '写一下，“冒泡排序”、“选择排序”、“插入排序”、“快速排序”的伪代码？脑里写也行',
     answers: [
       '参看 “排序算法.md”',
     ],
@@ -5782,6 +5780,33 @@ function* generatorFn(){
       }
     ],
     tags: ['计算机科学', 'JavaScript',],
+    type: '通用领域知识',
+  },
+  {
+    id: 443,
+    title: `DOM 中，删除某个 node 的所有子 node 的方式有哪些？速度都怎么样？为什么？`,
+    answers: [
+      {
+        tag:'pre',
+        val:
+        `
+主要有 3 中方式
+  1:
+    while(myNode.firstNode) myNode.removeChild(myNode.lastChild)
+  2:
+    myNode.textContent = ''
+  3:
+    myNode.innerHTML = ''
+
+速度
+  1 > 2 > 3
+因为
+  innerHTML 需要调用浏览器的解析器(parser)
+  textContent 会创建一个 "#text" node
+        `,
+      },
+    ],
+    tags: ['计算机科学', 'DOM',],
     type: '通用领域知识',
   },
 
