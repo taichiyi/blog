@@ -1162,17 +1162,20 @@ try {
     id: 100,
     title: `控制反转（IoC）是什么？有哪两种实现方式？`,
     answers: [
-      '控制反转是一种面向对象编程中用来减少对象之间耦合度的设计模式。',
       {
         tag: 'pre',
         val:
           `
-        常见的实现方式：
-          依赖注入（Dependency Injection，简称 DI）
-          依赖查找（Dependency Lookup）
+控制反转（Inversion of Control）是一种是面向对象编程中的一种设计原则，用来降低对象之间耦合度。
+
+IoC 是一种思想。
+DI 是一种设计模式。
+
+IoC 常见的实现方式：
+  依赖注入（Dependency Injection，a.k.a. DI）
+  依赖查找（Dependency Lookup）
         `
       },
-      'Inversion of Control',
     ],
     tags: ['计算机科学', '编程思想', '命令式编程',],
     type: '基础知识',
@@ -1239,13 +1242,13 @@ try {
   },
   {
     id: 105,
-    title: `在 React 中，如何判断函数组件还是类组件？为什么不用 instanceof 判断？为什么不是布尔值而是对象？`,
+    title: `在 React 中，如何判断 React Element 函数组件还是类组件？为什么不用 instanceof 判断？为什么不是布尔值而是对象？`,
     answers: [
       {
         tag: 'pre',
         val:
           `
-判断函数原型对象的 isReactComponent 属性值是否为真。
+判断 React Element 的 type 属性值是否有 prototype(原型对象)，以及的 prototype 的 isReactComponent 属性值是否为真。
 
 为什么不是 instanceof
   因为用一个页面上可能会存在多个 React 版本
@@ -2772,11 +2775,22 @@ class Person {
   },
   {
     id: 236,
-    title: 'TODO',
+    title: `怎么组织闭环单链表？例如：[{name:'a'},{name:'b'},{name:'c'}]`,
     answers: [
-      '1. 在插入排序的基础上，外面套一个动态间隔循环。',
+      {
+        tag:'pre',
+        val:
+        `
+1.要注意形成闭环，新 node 要先指到第一个 node
+
+伪代码
+  newNode.next = node.next
+  node.next = newNode
+  node = newNode
+        `,
+      },
     ],
-    tags: ['计算机科学', '算法', '排序算法',],
+    tags: ['计算机科学', '算法',],
     type: '基础知识',
   },
   {
@@ -3198,7 +3212,7 @@ Link 组件渲染到 DOM 中也是 a 标签，他们的区别主要提现在点�
     title: `React Router 和 history 库是什么关系？`,
     answers: [
       '简介：React Router 是 history 库的 React 实现。',
-      '详细：React Router 使用了 Ioc 模式，把 history 库的实例，当做参数传给 React 元素。',
+      '详细：React Router 使用了 DI 设计模式，把 history 库的实例，当做参数传给 React 元素。',
     ],
     tags: ['计算机科学', 'JavaScript', 'React Router',],
     type: '专用领域知识',
@@ -3435,7 +3449,7 @@ function curry(func){
     answers: [
       '思想是“客观存在反映在人的意识中经过思维活动而产生的结果”。',
     ],
-    tags: [],
+    tags: ['词语'],
     type: '基础知识',
   },
   {
@@ -3568,6 +3582,8 @@ function curry(func){
           `
 设计模式
   组合模式
+  装饰器模式
+  依赖注入模式
 编程思想
   函数式编程
   面向对象编程
@@ -5029,7 +5045,7 @@ function reconcileChildren 这个函数把 fiber updateQueue 得到的 React ele
           `
 “Virtual DOM”是一个编程中的将 UI 以“虚拟”形式保存在内存中的概念。
 
-  需要说明的是，React 中的 虚拟 DOM 就是 React element tree，较早的时候称为“虚拟 DOM”是为了方便大家理解 React，
+  需要说明的是，React 中的“虚拟 DOM”就是 React element tree，较早的时候称为“虚拟 DOM”是为了方便大家理解 React，
 但现在这个概念容易引起混乱，因为 React element tree 不仅可以通过 ReactDOM 渲染成 DOM，也可以通过 RN 渲染成原生视图.
         `,
       },
@@ -5815,43 +5831,7 @@ function* generatorFn(){
 export default data;
 /*
 
-Diffing Algorithm
-  判断 oldProps 和 newProps 是否相等
-
-
-lane，是为有用？
-What？
-  is a concept of task priority in React.
-Why？
-  low priority updates cannot finish without also finishing high priority ones. // 低优先级的更新没有完成高优先级的更新就无法完成。
-  In the old model, we determine the priority based on the expiration time of work.
-  you can have a scenario where a higher priority IO-bound task blocks a lower-priority CPU-bound task from completing.
-  A similar flaw of Expiration Times is that it's limited in how we can express a group of multiple priority levels.
-
-  old model concept
-    prioritization
-    batching
-  new model concept
-    lane
-    lanes
-
-
-custom Hook，是为有用？
-
-批处理事件 update , 是为有用？batchedEventUpdate
-
-内部事件处理器，是为有用？
-InsideEventHandler
-
-nestedUpdate，是为有用？
-嵌套更新
-
-离散事件是什么？连续事件是什么？
-
-Time slicing(时间分片)
-Suspense(悬停)
-
-reflow
+"是为有用？" = "是什么？为什么有？有什么用？"
 
 redux 中间件(middleware)中，redux-thunk、redux-saga 和 redux-observable 各自的使用场景是什么？
 添加定义
