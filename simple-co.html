@@ -23,7 +23,8 @@
             next(value)
           }
         })()
-    }
+    };
+
     co(function* () {
       const url = 'https://jsonplaceholder.typicode.com/todos/1';
       const response = yield fetch(url);
