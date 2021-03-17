@@ -13,6 +13,7 @@ export interface QAs {
   title: Title;
   answers: Answers[];
   tags: (
+    '操作系统' |
     '词语' |
     '摄影' |
     'CSS' |
@@ -3574,7 +3575,7 @@ function curry(func){
   },
   {
     id: 289,
-    title: 'React 中，使用了哪些设计模式？和编程思想？',
+    title: 'React 中，使用了哪些设计模式？编程思想？和概念？',
     answers: [
       {
         tag: 'pre',
@@ -3587,6 +3588,9 @@ function curry(func){
 编程思想
   函数式编程
   面向对象编程
+概念
+  上下文切换
+  闭环单链表
         `,
       },
     ],
@@ -4080,12 +4084,12 @@ Go，erlang：默认提供“隔离”方式，然后基于“隔离”又提供
   },
   {
     id: 329,
-    title: '并发，是什么？',
+    title: '并发，是什么？把这种机制称为什么？',
     answers: [
-      `并发运行是在一个时间段内发生若干事件。`,
-      `并发运行是指 CPU 的一个核心以纳秒数量级的时间尺度在线程间来回切换(上下文切换)执行指令。`,
+      `并发（全称“并发运行”）是一个核心以纳秒数量级的时间尺度在一个进程的指令和另一个进程的指令交错执行的行为。`,
+      `操作系统中，把这种交错执行的机制称为“上下文切换”`,
     ],
-    tags: ['计算机科学',],
+    tags: ['计算机科学', 'CPU',],
     type: '基础知识',
   },
   {
@@ -5275,9 +5279,10 @@ DOM Levels 指的是 DOM 的标准。
       `进程是操作系统对一个正在运行的程序的一种抽象。`,
       ``,
       `在一个系统上可以同时运行多个进程，而每个进程都好像在独立地使用硬件。`,
+      `进程是计算机科学中最重要和最成功的概念之一`,
       `['prɑses]`,
     ],
-    tags: ['计算机科学',],
+    tags: ['计算机科学', '操作系统',],
     type: '基础知识',
   },
   {
@@ -5289,7 +5294,7 @@ DOM Levels 指的是 DOM 的标准。
       `多线程比多进程之间更容易共享数据。`,
       `[θred]`,
     ],
-    tags: ['计算机科学',],
+    tags: ['计算机科学', '操作系统',],
     type: '基础知识',
   },
   {
@@ -5734,7 +5739,7 @@ chrome，在帧开始后，给 event handlers 的最长运行时间是 100ms，
     answers: [
       `提高进程 IO 时，CPU 的利用率`,
     ],
-    tags: ['数学', '计算机科学',],
+    tags: ['计算机科学', '操作系统',],
     type: '基础知识',
   },
   {
@@ -5902,6 +5907,73 @@ function* generatorFn(){
     ],
     tags: ['计算机科学', 'DOM',],
     type: '通用领域知识',
+  },
+  {
+    id: 451,
+    title: `为什么要了解编译系统？`,
+    answers: [
+      '优化程序性能',
+      '理解链接时出现的错误',
+      '避免安全漏洞，例如：缓冲区溢出',
+    ],
+    tags: ['计算机科学',],
+    type: '基础知识',
+  },
+  {
+    id: 452,
+    title: `从 C 语言源文件到目标文件，依次经过哪 4 个程序?`,
+    answers: [
+      '1. 预处理器',
+      '2. 汇编器',
+      '3. 编译器',
+      '4. 链接器',
+    ],
+    tags: ['计算机科学', '编译原理'],
+    type: '基础知识',
+  },
+  {
+    id: 453,
+    title: `在 React 中，受控组件(controlled component)是什么？有哪些？`,
+    answers: [
+      {
+        tag: 'pre',
+        val:
+          `
+3 种
+- input
+- textarea
+- select
+
+受控组件，是值和某个状态相关联的组件。
+
+入队条件
+(elem.nodeName === select || (elem.nodeName === input && elem.type === file)) &&
+domEventName === change
+
+(elem.nodeName === input || elem.nodeName === textarea) &&
+(domEventName === input || domEventName === change) &&
+tracker.value !== elem.value
+
+出队条件
+(elem.nodeName === input || elem.nodeName === textarea || elem.nodeName === select) &&
+(elem.checked !== null && elem.checked !== undefined) ||
+(elem.value !== null && elem.value !== undefined)
+
+          `,
+      },
+    ],
+    tags: ['计算机科学', 'JavaScript', 'React',],
+    type: '专用领域知识',
+  },
+  {
+    id: 454,
+    title: `操作系统的基本功能或者说基本作用是什么？`,
+    answers: [
+      `- 防止硬件被失控的引用程序滥用`,
+      `- 向应用程序提供简单的一致的机制来控制复杂的通常不相同的低级硬件设备`,
+    ],
+    tags: ['计算机科学', '操作系统',],
+    type: '基础知识',
   },
 
 ];
