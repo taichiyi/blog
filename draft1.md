@@ -16,20 +16,6 @@
 shouldComponentUpdate 、React.PureComponent 只适用于 ClassComponent；
 React.memo 只适用于 FunctionComponent。
 
-## 什么是受控(controlled component)和非受控？
-
-受控和非受控是相对与表单元素而言的，受控是指元素的值与对应 state 绑定(实际上是输入后的值是被覆盖还原的)。change event 被触发后被覆盖
-
-在 React 中如果表单元素的 props 中有 value 和 onChange 两个属性，则这个组件是受控组件。
-
-## React中的合成事件是什么？
-
-SyntheticEvent 实例将被传递给你的事件处理函数，它是浏览器的原生事件的跨浏览器包装器。除兼容所有浏览器外，它还拥有和浏览器原生事件相同的接口。
-
-SyntheticEvent 是一个包装器。
-
-SyntheticEvent 是合并而来。
-
 ## Redux
 
 ## React-Redux 中，Store 变化时，是怎么触发 React 重新渲染的？
@@ -102,8 +88,6 @@ Redux 和 Mobx
 
 
 # 执行上下文 Scope 堆内存 栈内存 他们之间的关系？
-
-# React 的事件对象
 
 # redux 测试检验
 
@@ -203,8 +187,6 @@ redux-thunk
 https://www.youtube.com/watch?v=8aGhZQkoFbQ
 https://oss.taichiyi.com/markdown/1_9mv-g9E-87Sji9j7YR08Fw.gif
 https://oss.taichiyi.com/markdown/1_lZ-KXoVNUSOwaq7q8zUBDg.png
-
-# 用“命令式”和“函数式”两种方式实现，二叉树反转
 
 # react-redux 是这么触发 react更新的
 
