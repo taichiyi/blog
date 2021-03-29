@@ -5288,12 +5288,13 @@ DOM Levels 指的是 DOM 的标准。
   },
   {
     id: 407,
-    title: `进程(process) 是什么？`,
+    title: `进程(process) 是什么？进程这种抽象由什么组成？`,
     answers: [
       `进程是操作系统对一个正在运行的程序的一种抽象。`,
       ``,
       `在一个系统上可以同时运行多个进程，而每个进程都好像在独立地使用硬件。`,
       `进程是计算机科学中最重要和最成功的概念之一`,
+      `组成：处理器、虚拟内存、文件`,
       `['prɑses]`,
     ],
     tags: ['计算机科学', '操作系统',],
@@ -6021,16 +6022,81 @@ tracker.value !== elem.value
     tags: ['计算机科学', 'Memory'],
     type: '基础知识',
   },
+  {
+    id: 458,
+    title: `在 JavaScript 中，isNaN 和 Number.isNaN 有什么区别？`,
+    answers: [
+      {
+        tag: 'pre',
+        val:
+          `
+isNaN(x)
+  可以理解为 x == NaN
+  x 的类型如果不为 number 的话，会先进行类型转换
+Number.isNaN(x)
+  可以理解为 x === NaN
+        `,
+      },
+    ],
+    tags: ['计算机科学', '程序设计语言', 'JavaScript'],
+    type: '通用领域知识',
+  },
+  {
+    id: 459,
+    title: `为什么操作系统提供了许多层次的抽象？`,
+    answers: [
+      `为了隐藏实际的复杂度`,
+    ],
+    tags: ['计算机科学', '操作系统',],
+    type: '基础知识',
+  },
+  {
+    id: 460,
+    title: `在 JavaScript 中，isNaN 和 Number.isNaN 有什么区别？`,
+    answers: [
+      {
+        tag: 'pre',
+        val:
+          `
+isNaN(x)
+  可以理解为 x == NaN
+  x 的类型如果不为 number 的话，会先进行类型转换
+Number.isNaN(x)
+  可以理解为 x === NaN
+        `,
+      },
+    ],
+    tags: ['计算机科学', '程序设计语言', 'JavaScript'],
+    type: '通用领域知识',
+  },
+  {
+    id: 461,
+    title: `位向量是什么？`,
+    answers: [
+      `位向量就是固定长度为 w、由 0 和 1 组成的串。`,
+    ],
+    tags: ['计算机科学', 'Memory',],
+    type: '基础知识',
+  },
+  {
+    id: 462,
+    title: `机器支持两种形式的右移？JavaScript 中怎么表示？`,
+    answers: [
+      {
+        tag:'pre',
+        val:
+        `
+逻辑右移和算术右移。
+在 JavaScript 中的表达方式：
+  逻辑右移 >>>
+  算术右移 >>
+        `,
+      },
+    ],
+    tags: ['计算机科学',],
+    type: '基础知识',
+  },
 
 ];
 
 export default data;
-/*
-
-"是为有用？" = "是什么？为什么有？有什么用？"
-
-redux 中间件(middleware)中，redux-thunk、redux-saga 和 redux-observable 各自的使用场景是什么？
-添加定义
-  reselect
-  Immer
- */
