@@ -33,19 +33,21 @@
 
 ## 在 HTML 中使用 (Integration with HTML)
 
-设置全局默认的 Referrer policy
+两种方式：
 
-``` html
-<meta name="referrer" content="none"><!-- 等价与 no-referrer -->
-<meta name="referrer" content="no-referrer">
-<meta name="referrer" content="strict-origin-when-cross-origin">
-```
+1. 设置全局默认的 Referrer policy
 
-设置单个请求的 Referrer policy
+    ``` html
+    <meta name="referrer" content="none"><!-- 等价与 no-referrer -->
+    <meta name="referrer" content="no-referrer">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    ```
 
-``` html
-<a href="http://example.com" referrerpolicy="origin">
-<a href="http://example.com" referrerpolicy="no-referrer">
-<a href="http://example.com" referrerpolicy="unsafe-url">
-<a href="http://example.com" rel="noreferrer">
-```
+2. 设置单个请求的 Referrer policy
+
+    ``` html
+    <a href="http://example.com" referrerpolicy="origin">
+    <a href="http://example.com" referrerpolicy="no-referrer">
+    <a href="http://example.com" referrerpolicy="unsafe-url">
+    <a href="http://example.com" rel="noreferrer">
+    ```
