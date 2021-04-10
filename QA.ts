@@ -3964,6 +3964,7 @@ function curry(func){
     title: '在 JavaScript 中，Function.prototype 和 Funtion.__proto__ 是一个对象吗？',
     answers: [
       `是一个对象（指向同一个指针）`,
+      `自己实例化自己`,
     ],
     tags: ['计算机科学', '程序设计语言', 'JavaScript'],
     type: '通用领域知识',
@@ -4514,7 +4515,7 @@ store.dispatch(thunk)
     id: 359,
     title: '在计算机科学中，语法糖是什么？',
     answers: [
-      `语法糖是一个在语言层面通过添加语法，来提高代码可维护性和编码效率的计算机科学术语。`,
+      `语法糖是一个在语言层面通过添加语法，来提高代码可维护性和编码效率的技术。`,
       '',
       `没有语法糖，不会影响程序的功能。`,
       `从编译层面来看，只有计算机指令才不是语法糖，编译器都是语法糖行为。`,
@@ -4602,7 +4603,7 @@ store.dispatch(thunk)
     id: 366,
     title: '响应式编程术语（4/6），Subscription（订阅）是什么？',
     answers: [
-      `Subscription 是表示可清理的资源的对象。`,
+      `Subscription 是数据流的容器。`,
     ],
     tags: ['计算机科学', '响应式编程',],
     type: '专用领域知识',
@@ -6095,6 +6096,25 @@ Number.isNaN(x)
     ],
     tags: ['计算机科学',],
     type: '基础知识',
+  },
+  {
+    id: 463,
+    title: `Ajax 是什么？`,
+    answers: [
+      `Ajax 是一个流行词语，意思是：网页可以在不刷新的情况下通过 JavaScript 发出 HTTP 请求。`,
+      `在 Web API 中目前有两种 Ajax 实现：XMLHttpRequest 和 Fetch`,
+    ],
+    tags: ['计算机科学', 'DOM',],
+    type: '通用领域知识',
+  },
+  {
+    id: 464,
+    title: `在浏览器中，JavaScript 可以设置请求头吗？`,
+    answers: [
+      `在用户代理中，脚本可以设置部分请求头。`,
+    ],
+    tags: ['计算机科学', '浏览器',],
+    type: '通用领域知识',
   },
 
 ];
