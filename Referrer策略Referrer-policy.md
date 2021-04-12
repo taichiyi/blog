@@ -7,7 +7,7 @@
 |no-referrer|https://example.com/page|anywhere|(no referrer)|
 |no-referrer-when-downgrade|同上|https://example.com/otherpage|https://example.com/page|
 |同上|同上|https://mozilla.org|https://example.com/page|
-|同上|同上|<b>http</b>://example.org|https://example.com/|
+|同上|同上|<b>http</b>://example.org|(no referrer)|
 |origin|同上|anywhere|https://example.com/|
 |origin-when-cross-origin|同上|https://example.com/otherpage|https://example.com/page|
 |同上|同上|https://mozilla.org|https://example.com/|
