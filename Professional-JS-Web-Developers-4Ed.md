@@ -3127,54 +3127,6 @@
   <div>方法名称</div>
 </details>
 
-<details>
-  <summary>高阶组件可以看作React对__模式的一种实现，高阶组件就是一个__，且该函数接受一个__作为参数，并返回一个新的组件。</summary>
-  <div>装饰</div>
-  <div>函数</div>
-  <div>组件</div>
-</details>
-
-<details>
-  <summary>术语 “render prop” 是指一种在 __ 之间使用一个值为函数的 prop 共享代码的技术。任何被用于告知组件需要渲染什么内容的函数 prop 在技术上都可以被称为 “render prop”.</summary>
-  <div>React 组件</div>
-</details>
-
-<!-- <details>
-  <summary>HOC 的注意事项: 1. 传递静态__; 2. 不要在__内创建高阶组件; 3. 高阶组件是__函数; 4. 要透传不相关的__; 5. 为了方便调试，高阶函数加__.</summary>
-  <div>属性、方法和refs</div>
-  <div>render方法</div>
-  <div>纯</div>
-  <div>props</div>
-  <div>displayName</div>
-</details> -->
-
-<details>
-  <summary>HOC的缺陷: 1. 多层嵌套会让__变得非常困难; 2. 不遵守约定会降低HOC灵活性以及复用性。</summary>
-  <div>调试</div>
-  <div>props</div>
-</details>
-
-<details>
-  <summary>Hook的动机: 1. 在组件之间复用 __ 很难; 2. __ 变得难以理解; 3. 难以理解的 __。</summary>
-  <div>状态逻辑</div>
-  <div>复杂组件</div>
-  <div>class</div>
-</details>
-
-<details>
-  <summary>
-  <pre>
-    Hook的优点:
-    1. 相比于 “render prop” 和 HOC Hook 不需要重新__。
-    2. 复用__的颗粒比 class 小。
-    3. FunctionComponent 比 ClassComponent 更好__。
-  </pre>
-  </summary>
-  <div>组织组件的结构</div>
-  <div>“状态逻辑”</div>
-  <div>理解</div>
-</details>
-
 # 第9章 PROXIES AND REFLECT
 
 <details>

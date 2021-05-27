@@ -9,13 +9,6 @@
 -->
 # 草稿
 
-# shouldComponentUpdate 、React.PureComponent 和 React.memo 之间的关系。
-
-上面 3 个东西都和提高组件的性能有关。
-
-shouldComponentUpdate 、React.PureComponent 只适用于 ClassComponent；
-React.memo 只适用于 FunctionComponent。
-
 ## Redux
 
 ## React-Redux 中，Store 变化时，是怎么触发 React 重新渲染的？
