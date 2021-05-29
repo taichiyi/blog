@@ -6184,6 +6184,39 @@ Number.isNaN(x)
     tags: ['计算机科学', '程序设计语言', 'JavaScript'],
     type: '通用领域知识',
   },
+  {
+    id: 468,
+    title: 'React 事件和 DOM 事件有什么区别？',
+    answers: [
+      {
+        tag: 'pre',
+        val:
+        `
+3 个方面
+  事件的订阅
+    React
+      - React 17 后，事件的订阅会委托到容器节点
+      - 只能在元素属性上添加事件处理器
+      - 事件名使用小驼峰命名
+      - 每个元素的每种事件只能添加一个事件处理器
+    DOM
+      DOM0级
+        只能在元素属性上添加事件处理器
+      DOM2级
+  事件的传播
+    React
+      所有事件都会冒泡
+    DOM
+      focus, blur 事件不会冒泡
+  事件的处理
+    React
+      不支持通过 return false 来阻止事件的默认行为
+        `,
+      },
+    ],
+    tags: ['计算机科学', 'JavaScript', 'React'],
+    type: '专用领域知识',
+  },
 ];
 
 export default data;
