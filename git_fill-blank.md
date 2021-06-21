@@ -51,3 +51,8 @@
   <summary>拉指定的 tag 到本地, 假设 tag 为“v17.0.1”</summary>
   <div>git fetch -unf origin v17.0.1:refs/tags/v17.0.1</div>
 </details>
+
+<details>
+  <summary>将远程主机的某个分支下载（更新）到本地，git __ origin xxxbranch。</summary>
+  <div>fetch</div>
+</details>

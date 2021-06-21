@@ -592,7 +592,7 @@
 
 <details>
   <summary>控制反转是一种是面向对象编程中的一种设计模式，用来减少计算机代码之间的__。其中最常见的方式叫做__，还有一种方式叫__。</summary>
-  <div>耦合度</div>
+  <div>耦合性</div>
   <div>依赖注入（Dependency Injection，简称DI）</div>
   <div>依赖查找（Dependency Lookup）</div>
 </details>

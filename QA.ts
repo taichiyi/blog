@@ -1199,7 +1199,7 @@ C 语言中一个指针的值是某个储存块的第一个字节的虚拟地址
         tag: 'pre',
         val:
           `
-控制反转（Inversion of Control）是一种是面向对象编程中的一种设计原则，用来降低对象之间耦合度。
+控制反转（Inversion of Control）是一种是面向对象编程中的一种设计原则，用来降低对象之间耦合性。
 
 IoC 是一种思想。
 DI 是一种设计模式。
@@ -1417,7 +1417,7 @@ IoC 常见的实现方式：
     id: 117,
     title: '迭代器（Iterator），是什么？',
     answers: [
-      '迭代器是可以顺序访问集合对象元素的一个对象。',
+      '迭代器是一个按某种次序访问集合对象中的每个元素的对象。',
     ],
     tags: ['计算机科学', '数据结构',],
     type: '基础知识',
@@ -1716,7 +1716,7 @@ Promise 是用于表示异步操作完成或失败的结果的对象。
     id: 142,
     title: 'JavaScript 中，Redux 是什么？',
     answers: [
-      'Redux 是一个用来管理 JavaScript 应用的可预测的状态容器。',
+      'Redux 是一个用于管理可预测状态容器的 JavaScript 库。',
     ],
     tags: ['计算机科学', 'JavaScript', 'Redux',],
     type: '专用领域知识',
@@ -2009,7 +2009,7 @@ Promise 是用于表示异步操作完成或失败的结果的对象。
     answers: [
       '分为“挂载”“更新”“卸载”三个阶段',
       '“挂载”阶段：constructor -> getDerivedStateFromProps -> render -> componentDidMount',
-      '“更新”阶段：getDerivedStateFromProps -> shouldComponentUpdate -> render -> getSnapShotBeforeUpdate -> componentDidUpdate',
+      '“更新”阶段：getDerivedStateFromProps -> shouldComponentUpdate -> render -> getSnapshotBeforeUpdate -> componentDidUpdate',
       '“更新”阶段：componentWillUnMount',
     ],
     tags: ['计算机科学', 'JavaScript', 'React',],
@@ -2158,7 +2158,10 @@ Promise 是用于表示异步操作完成或失败的结果的对象。
 2. combineReducers
   是一个将多个 reducer 转换为单个 reducer 的辅助函数。
 3. bindActionCreators
-  是一个将 actions 绑定到指定 dispatch 的 ActionCreattor 函数。
+  是一个将 dispatch 绑定到指定 ActionCreator 的函数。
+
+  bindActionCreator(actionCreator, dispatch) 相当于 actionCreator.bind(dispatch)
+
   function bindActionCreator(actionCreator, dispatch) {
     return function() {
       return dispatch(actionCreator.apply(this, arguments))
@@ -2189,7 +2192,7 @@ Promise 是用于表示异步操作完成或失败的结果的对象。
   },
   {
     id: 180,
-    title: '执行上下文栈的别称有哪些？',
+    title: 'TODO',
     answers: [
       '调用栈（call stack）',
       '执行栈（execution stack）',
@@ -2202,7 +2205,7 @@ Promise 是用于表示异步操作完成或失败的结果的对象。
   },
   {
     id: 181,
-    title: 'JavaScript 中，执行上下文有两个阶段：1) __阶段 和 2) __阶段。其中创建阶段是在函数的__时，执行阶段是在函数的__时。',
+    title: 'TODO',
     answers: [
       '创建(Creation Phase)',
       '执行(Execution Phase)',
@@ -2227,7 +2230,7 @@ Promise 是用于表示异步操作完成或失败的结果的对象。
     title: 'JavaScript 中，每个词法环境由哪三个部分组成？例子：',
     answers: [
       '环境记录 EnvironmentRecord(Environment Record)',
-      '引用外部环境 outer(Reference outer Lexical Environment)',
+      '外层环境引用 Outer(Outer Environment Reference)',
       '绑定this ThisBinding(This binding)',
       {
         tag: 'pre',
@@ -2289,9 +2292,9 @@ FunctionExecutionContext = {
   },
   {
     id: 185,
-    title: 'JavaScript 中，词法环境中，引用外部环境（outer environment reference）是什么？',
+    title: 'JavaScript 中，词法环境中，Outer 属性是什么？外层环境引用(outer environment reference)是什么？',
     answers: [
-      '引用外部环境是引用外部的词法环境。',
+      '全称“外层环境引用”，外层环境引用是一个外层执行上下的词法环境或变量环境的引用。',
     ],
     tags: ['计算机科学', '程序设计语言', 'JavaScript'],
     type: '通用领域知识',
@@ -2317,9 +2320,9 @@ FunctionExecutionContext = {
   },
   {
     id: 188,
-    title: 'JavaScript 中，词法环境的哪几个部分在上下文创建阶段就已经确定？',
+    title: 'TODO',
     answers: [
-      '1. outer（引用外部环境）',
+      '1. outer（外层环境引用）',
       '2. EnvironmentRecord（环境记录）',
     ],
     tags: ['计算机科学', '程序设计语言', 'JavaScript'],
@@ -2376,9 +2379,10 @@ FunctionExecutionContext = {
   },
   {
     id: 194,
-    title: 'JavaScript 中，装箱是什么？装箱又分为隐示和显示，想好后看例子。',
+    title: 'JavaScript 中，装箱是什么？如何想任意类型的值转为对象？装箱又分为隐示和显示，想好后看例子。',
     answers: [
       `装箱就是把原始类型转变为对象的过程。`,
+      `new Object(任意类型的值)`,
       `显示装箱：new String('abc').split('');`,
       `隐示装箱：'abc'.split('');`,
     ],
@@ -2606,7 +2610,7 @@ FunctionExecutionContext = {
   },
   {
     id: 216,
-    title: `在面向对象的程序设计（OOP）中，对象之间有哪些表示耦合度的关系？从弱到强说一下`,
+    title: `在面向对象的程序设计（OOP）中，对象之间有哪些表示耦合性的关系？从弱到强说一下`,
     answers: [
       '1.依赖关系',
       '2.关联关系',
@@ -2621,7 +2625,7 @@ FunctionExecutionContext = {
     id: 217,
     title: `在面向对象的程序设计（OOP）中，依赖（Dependency）关系是什么？`,
     answers: [
-      `依赖（Dependency）关系是对象之间耦合度最弱的临时性的关系。`,
+      `依赖（Dependency）关系是对象之间耦合性最弱的临时性的关系。`,
       {
         tag: 'pre',
         val:
@@ -2688,7 +2692,7 @@ class Person {
     id: 222,
     title: `在面向对象的程序设计（OOP）中，泛化（Generalization[ˌdʒenrələˈzeɪʃn]）关系是什么？`,
     answers: [
-      `泛化关系是对象之间耦合度最大的表示一般与特殊，父类与子类的关系。`,
+      `泛化关系是对象之间耦合性最大的表示一般与特殊，父类与子类的关系。`,
     ],
     tags: ['计算机科学', '编程思想', '命令式编程',],
     type: '基础知识',
@@ -2759,7 +2763,7 @@ class Person {
     answers: [
       'Action 是一个表示改变状态的意图的对象。',
       'Action 是将数据存储到 Store 中的唯一方式。',
-      '按照约定，Action 对象必须包含一个 type 属性，表示改变状态的意图。',
+      'Action 对象必须包含一个 type 属性，表示改变状态的意图。',
     ],
     tags: ['计算机科学', 'JavaScript', 'Redux',],
     type: '专用领域知识',
@@ -3041,7 +3045,7 @@ Link 组件渲染到 DOM 中也是 a 标签，他们的区别主要提现在点�
     answers: [
       `Reducer 是一个接受累加值和新值并返回新累加值的纯函数。`,
       `Reducer 和 Array.prototype.reduce 是一个概念。`,
-      `纯函数的原因：为了实现“热更新”和 time travel。`,
+      `纯函数的原因：为了状态可预测。`,
       `[rɪ'djuːsə]`,
     ],
     tags: ['计算机科学', 'JavaScript', 'Redux',],
@@ -3581,7 +3585,8 @@ function curry(func){
     id: 286,
     title: '在计算机科学中，引用透明的定义是什么？',
     answers: [
-      '输出值只依赖于输入值，则称为引用透明。',
+      '没有使用作用域之外的变量，则称为引用透明。',
+      // '输出值只依赖于输入值，则称为引用透明。',
       '引用透明又称为等式正确性。',
     ],
     tags: ['计算机科学', '编程思想', '声明式编程',],
@@ -3680,14 +3685,14 @@ function curry(func){
     id: 292,
     title: '在 JavaScript 中，迭代器协议是什么？',
     answers: [
-      '迭代器协议是一个定义了对象产生一系列值的方式的协议.',
+      '迭代器协议是一个定义了对象产生一系列值的协议.',
       {
         tag: 'pre',
         val:
           `
 具体还说, 定义了对象必须有一个 next 方法,
   该方法总是返回一个叫做 IteratorResult 的对象,
-    IteratorResult 对象必须有一个 boolean 类型的 done 属性(done 为 false，这个属性可缺失),
+    IteratorResult 对象可能有一个 boolean 类型的 done 属性(done 为 false，这个属性可缺失),
     可能有任意类型的 value 属性.
         `
       },
@@ -3697,7 +3702,7 @@ function curry(func){
   },
   {
     id: 293,
-    title: 'JavaScript 中，箭头函数执行上下文的 __ 可能是个特殊值，例如：null 和 undefined。',
+    title: 'TODO',
     answers: [
       'ThisBinding',
     ],
@@ -3790,8 +3795,7 @@ function curry(func){
     id: 301,
     title: '闭包（Closures）是什么？',
     answers: [
-      '通俗说法：闭包是在函数声明过程中将自身上下文与所属函数词法环境绑定的概念。',
-      '严谨说法：闭包是在函数声明过程中将所在函数的执行上下文的词法环境的指针保存在自身执行上下文的词法环境中的概念。',
+      '严谨说法：闭包是在函数声明过程中将所在函数的执行上下文的词法环境的指针保存到自身执行上下文的词法环境中的概念。',
     ],
     tags: ['计算机科学', '编程思想', '声明式编程', '函数式编程',],
     type: '基础知识',
@@ -3809,12 +3813,31 @@ function curry(func){
   },
   {
     id: 303,
-    title: '什么是控制流？',
+    title: '在 JavaScript 中，创建函数有几种方式？各自的使用场景是什么？',
     answers: [
-      '控制流，是程序为实现业务目标所要进行的路径。',
+      {
+        tag: 'pre',
+        val: `
+三种：
+- 函数声明
+- 函数表达式
+- Function 构造函数
+
+场景：
+- 函数表达式
+  - 需要使用箭头函数时
+  - 有时为了避免变量改变后，递归函数内部访问不了自身，就会使用命令函数表达式
+  - 不希望变量提升时
+- Function 构造函数
+  - 需要在运行时，动态创建函数的时候
+  - 不需要使用闭包时
+- 函数声明
+  - 以上场景之外
+        `,
+      },
     ],
-    tags: ['计算机科学', '编程思想', '声明式编程', '函数式编程',],
-    type: '基础知识',
+    tags: ['计算机科学', '程序设计语言', 'JavaScript'],
+    type: '通用领域知识',
   },
   {
     id: 304,
@@ -3834,11 +3857,14 @@ function curry(func){
         val:
           `
 在执行一段代码前，引擎会首先创建一个执行栈。
-然后引擎会创建一个全局执行上下文，创建过程中会初始化变量，创建完后将其推入执行栈。
+然后引擎会创建一个全局执行上下文，创建过程中会初始化变量，创建完后将其 push 执行栈。
 
 然后引擎开始依次执行代码，为变量赋值。
-执行过程中，如果有函数声明则会创建一个函数执行上下文，如果有函数调用将会把该函数的执行上下文推入栈。
+执行过程中，如果有函数声明则会创建一个函数执行上下文，如果有函数调用将会把该函数的执行上下文 push 栈。
+然后引擎执行栈顶的上下文，上下文执行完后，会被 pop 出栈。
+然后循环这个步骤直到调用栈为空，然后就是事件循环
 
+这个过程中需要说明的是
 如果在子函数异步执行过程中，父函数已经 return，引擎会将父函数执行上下文弹出调用栈。
 但是父函数的执行上下文不会被 GC，因为子函数的执行上下文与父函数的词法环境形成了闭包，所以子函数依旧可以访问父函数的变量。
         `
@@ -3849,7 +3875,7 @@ function curry(func){
   },
   {
     id: 306,
-    title: '函数式编程的设计模式，主要目的是消除__。',
+    title: '函数式编程这种编程范式，主要目的是消除__。',
     answers: [
       '副作用',
     ],
@@ -3858,20 +3884,11 @@ function curry(func){
   },
   {
     id: 307,
-    title: '响应式编程适合哪些应用场景（优点）？',
+    title: '“命名函数表达式”的函数名相当于通过 __ 关键字声明。',
     answers: [
-      {
-        tag: 'pre',
-        val:
-          `
-基于事件驱动的系统
-  例如：
-    - UI 相关的，因为用户与程序的交互是通过事件来实现的
-    [存疑]- 异步处理 IO
-        `
-      },
+      'const',
     ],
-    tags: ['计算机科学', '编程思想', '声明式编程', '响应式编程',],
+    tags: ['计算机科学', 'JavaScript', '函数式编程',],
     type: '基础知识',
   },
   {
@@ -3916,7 +3933,7 @@ function curry(func){
     id: 312,
     title: '惰性求值（Lazy Evaluation），是什么？',
     answers: [
-      `惰性求值，是当表达式的引用被使用是才对表达式求值的概念。`,
+      `惰性求值，是当表达式的引用被使用时才对表达式求值的概念。`,
     ],
     tags: ['计算机科学', '编程思想', '声明式编程', '函数式编程',],
     type: '基础知识',
@@ -3932,13 +3949,12 @@ function curry(func){
   },
   {
     id: 314,
-    title: '惰性求值，有什么优点？',
+    title: '在 JavaScript 中，通过 call 等方式指定 this 时，如果 传入的值是分为有效值和无效值，无效值有哪些？',
     answers: [
-      `- 节省计算量`,
-      `- 可计算无限列表`,
+      `除了 null 和 undefined 以外的值都是 this 的有效值。`,
     ],
-    tags: ['计算机科学', '编程思想', '声明式编程', '函数式编程',],
-    type: '基础知识',
+    tags: ['计算机科学', '程序设计语言', 'JavaScript'],
+    type: '通用领域知识',
   },
   {
     id: 315,
@@ -3960,7 +3976,7 @@ function curry(func){
         val:
           `
 具体还说,
-  定义了对象必须有一个键为 Symbol.iterator 的属性,
+  规定了对象必须有一个属性名为 Symbol.iterator 的属性,
   并且值为一个无参数的的函数,
     函数的返回值是一个符合迭代器协议的对象.
         `
@@ -4030,7 +4046,7 @@ function curry(func){
     title: '在 JavaScript 中，所有的函数都有“原型对象”（ prototype 属性）吗？所有的对象都有 __proto__ 吗？',
     answers: [
       `不是，箭头函数没有。`,
-      `不是，Object 构造函数的原型对象 (prototype) 就没有 __proto__ 属性。`,
+      `是（如果是对象是某个构造函数的实例则会有 __proto__），虽然 Object 构造函数的原型对象 (prototype) 有 __proto__ 属性，但是 属性值为 null。`,
     ],
     tags: ['计算机科学', '程序设计语言', 'JavaScript'],
     type: '通用领域知识',
@@ -4285,7 +4301,7 @@ Reactive
   外观模式是通过外观对象为多个子系统提供统一接口的结构型设计模式。
 
 优点
-  降低了子系统与客户端之间的耦合度。
+  降低了子系统与客户端之间的耦合性。
 
 缺点
   会增加许多外观对象，过度使用会增加程序得复杂性。
@@ -4408,7 +4424,7 @@ Reactive
     id: 349,
     title: 'Redux 中，术语（8/10）Store 是什么？',
     answers: [
-      `Store 是存储有状态和拥有状态操作方法的对象。`,
+      `Store 是拥有存储状态和状态操作方法的对象。`,
     ],
     tags: ['计算机科学', 'JavaScript', 'Redux',],
     type: '专用领域知识',
@@ -4533,7 +4549,7 @@ store.dispatch(thunk)
     id: 357,
     title: 'react-redux 是什么？',
     answers: [
-      `react-redux 是一个允许 react 组件读写 store 的消息管道。`,
+      `react-redux 是一个允许 react 组件读写 store 的 JavaScript 库。`,
       // `react-redux 是一个让 React 组件可以从 Redux Store 中读取数据，并向 store dispatch action 以更新数据的库。`,
     ],
     tags: ['计算机科学', 'JavaScript', 'Redux',],
@@ -4695,7 +4711,7 @@ store.dispatch(thunk)
 
 优点
   可以在遵守开闭原则的前提下，拓展目标对象。
-  将客户端与目标对象分离，降低了系统的耦合度。
+  将客户端与目标对象分离，降低了系统的耦合性。
 
 缺点
   会增加许多代理对象，过度使用会增加程序得复杂性。
@@ -4897,11 +4913,11 @@ ASAP 全称 as soon as possible，中文意思为“尽快” 是将任务添加
 是什么？
   React Context 是 React 上下文的对象。
 为什么有？
-  通常不同组件的需要共享某个状态时，是通过逐层传递 Props 方式。但是中间的某个组件并不需要这个状态，这样违反了迪米特法则，增加了组件的耦合度。
+  通常不同组件的需要共享某个状态时，是通过逐层传递 Props 方式。但是中间的某个组件并不需要这个状态，这样违反了迪米特法则，增加了组件的耦合性。
 有什么用？
   可以方便的让不同层级的组件访问同一个状态。
 优点
-  降低组件的耦合度
+  降低组件的耦合性
 缺点
   过多的使用会产生大量的中介对象，增加系统的复杂性
 延伸知识点
@@ -6121,7 +6137,7 @@ Number.isNaN(x)
   },
   {
     id: 462,
-    title: `机器支持两种形式的右移？JavaScript 中怎么表示？`,
+    title: `机器支持哪两种形式的右移？JavaScript 中怎么表示？`,
     answers: [
       {
         tag:'pre',
@@ -6215,6 +6231,102 @@ Number.isNaN(x)
       },
     ],
     tags: ['计算机科学', 'JavaScript', 'React'],
+    type: '专用领域知识',
+  },
+  {
+    id: 469,
+    title: `React 有什么特点？（与 Vue、Angular）`,
+    answers: [
+      {
+        tag: 'pre',
+        val:
+          `
+1. 声明式的
+2. 基于组件的
+3. 多端复用的
+        `,
+      },
+    ],
+    tags: ['计算机科学', 'JavaScript', 'React',],
+    type: '专用领域知识',
+  },
+  {
+    id: 470,
+    title: `React 有什么特点？（与 Vue、Angular）`,
+    answers: [
+      {
+        tag: 'pre',
+        val:
+          `
+1. 声明式的
+2. 基于组件的
+3. 多端复用的
+        `,
+      },
+    ],
+    tags: ['计算机科学', 'JavaScript', 'React',],
+    type: '专用领域知识',
+  },
+  {
+    id: 471,
+    title: `JSX 是为怎？`,
+    answers: [
+      {
+        tag: 'pre',
+        val:
+          `
+是什么？
+  JSX 是一个类似于 XML的语法拓展。
+  在 React 中，是 createElement 函数的语法糖。
+为什么？
+  表达能力更强，可读性更好
+怎么做？
+  通过转译器
+        `,
+      },
+    ],
+    tags: ['计算机科学', 'JavaScript', 'React',],
+    type: '专用领域知识',
+  },
+  {
+    id: 472,
+    title: `React 元素 是什么？组件是什么？有什么区别？`,
+    answers: [
+      {
+        tag: 'pre',
+        val:
+          `
+是什么？
+  React 元素是一个用来描述组件属性或宿主元素属性的普通对象。
+
+组件是什么？
+  组件是独立的、可复用的 React 代码。
+
+拓展
+  React 树，虚拟 DOM
+        `,
+      },
+    ],
+    tags: ['计算机科学', 'JavaScript', 'React',],
+    type: '专用领域知识',
+  },
+  {
+    id: 473,
+    title: `React，什么时候使用函数组件？什么时候使用类组件？`,
+    answers: [
+      {
+        tag: 'pre',
+        val:
+          `
+有两种情况需要使用类组件：
+  1. 如果是要实现错误边界组件时。
+  2. 如果要使用一些特殊的生命周期函数时
+
+其他情况下，使用类组件和函数组件都可以。
+        `,
+      },
+    ],
+    tags: ['计算机科学', 'JavaScript', 'React',],
     type: '专用领域知识',
   },
 ];

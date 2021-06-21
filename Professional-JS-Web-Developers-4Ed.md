@@ -1199,7 +1199,7 @@
 <details>
   <summary>每个词法环境有三个组成部分：1)__ 2)__ 3)__。</summary>
   <div>环境记录 EnvironmentRecord(Environment Record)</div>
-  <div>引用外部环境 outer(Reference outer Lexical Environment)</div>
+  <div>外层环境引用 outer(Reference outer Lexical Environment)</div>
   <div>绑定this ThisBinding(This binding)</div>
 </details>
 
@@ -1225,7 +1225,7 @@
 </details>
 
 <details>
-  <summary>引用外部环境：外部执行上下文。对外部环境的引用意味着它可以访问其外部词法环境。这意味着，如果在当前__环境中找不到变量，则JavaScript引擎可以在外部环境中查找变量。</summary>
+  <summary>外层环境引用：外部执行上下文。对外部环境的引用意味着它可以访问其外部词法环境。这意味着，如果在当前__环境中找不到变量，则JavaScript引擎可以在外部环境中查找变量。</summary>
   <div>词法</div>
 </details>
 
