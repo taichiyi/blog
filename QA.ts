@@ -1032,9 +1032,9 @@ try {
     title: `指针是什么？包括哪两个方面？`,
     answers: [
       {
-        tag:'pre',
+        tag: 'pre',
         val:
-        `
+          `
 C 语言中一个指针的值是某个储存块的第一个字节的虚拟地址。
 大多数计算机使用 8 位的块（字节），作为最小的可寻址的内存单元。
 指针是储存块变量在内存空间的首个字节单元的内存地址。
@@ -1276,7 +1276,7 @@ IoC 常见的实现方式：
   },
   {
     id: 105,
-    title: `在 React 中，如何判断 React Element 函数组件还是类组件？为什么不用 instanceof 判断？为什么不是布尔值而是对象？`,
+    title: `在 React 中，如何判断 React Element 是函数组件还是类组件？为什么不用 instanceof 判断？为什么不是布尔值而是对象？`,
     answers: [
       {
         tag: 'pre',
@@ -2089,7 +2089,7 @@ Promise 是用于表示异步操作完成或失败的结果的对象。
       {
         tag: 'pre',
         val:
-        `
+          `
 在计算机科学中，
   一个运算、函数、表达式如果在局部环境（上下文）之内修改某个状态变量的值，则被称为有主作用。
   一个运算、函数、表达式如果在局部环境（上下文）之外修改某个状态变量的值，则被称为有副作用。
@@ -2132,11 +2132,12 @@ Promise 是用于表示异步操作完成或失败的结果的对象。
         val:
           `
 总的来说
-  是为了更快的找出两颗树 Fiber 树（也可以理解为 React Element tree）的差异。
+  是为了更快的找出两颗树的差异。
 具体来说
-  在一些通用的算法中，即时是最好的时间复杂度也得是 O(n³)，为了将算法优化至 O(n)，React 根据场景做了 2 个假设：
-    1. 如果元素的类型不同，则渲染出的树也不同（元素不会跨层移动）
-    2. 开发者为列表(数组)元素设置一个 key 属性，作为元素在列表中的唯一 id，帮助 React 识别元素是否被添加或删除
+  在一些通用的算法中，即时是最好的时间复杂度也得是 O(n³)，为了将算法优化至 O(n)，React 根据场景做了 3 个假设：
+    1. 如果元素的类型不同，则渲染出的树也不同
+    2. 元素不会跨层移动
+    3. 开发者为列表(数组)元素设置一个 key 属性，作为元素在列表中的唯一 id，帮助 React 识别元素是否被添加或删除。
           `,
       },
     ],
@@ -2192,27 +2193,27 @@ Promise 是用于表示异步操作完成或失败的结果的对象。
   },
   {
     id: 180,
-    title: 'TODO',
+    title: '在 React 中，纯函数组件是什么？有展开的问题。',
     answers: [
-      '调用栈（call stack）',
-      '执行栈（execution stack）',
-      '控制栈（control stack）',
-      '运行时栈（run-time stack）',
-      '机器栈（machine stack）',
+      '纯函数组件是假定输入等于输出的一种组件。',
+      '怎么做：所以会浅比较 props 和 state，如果没有改变则不会重新渲染。',
+      '展开：组件的输入值只有 props 为什么要比较 state?',
+      '答：因为 Props 可能会产生派生状态，所以也要比较 State。',
+      '展开：React 内部如果判断组件是否需要渲染的机制？',
+      '答：参看“React 如何判断是否需要渲染组件，流程图”',
     ],
-    tags: ['计算机科学', '程序设计语言', 'JavaScript'],
+    tags: ['计算机科学', 'JavaScript', 'React'],
     type: '通用领域知识',
   },
   {
     id: 181,
-    title: 'TODO',
+    title: 'React 的状态(state)是什么？有展开问题。',
     answers: [
-      '创建(Creation Phase)',
-      '执行(Execution Phase)',
-      '声明',
-      '调用',
+      '通过事件可以被改变的，自身变动可能会引起视图变化的数据。',
+      '展开：React 组件的状态，为什么只能通过相关的函数修改，不能直接通过变量修改？',
+      '答：请查看同名问题。',
     ],
-    tags: ['计算机科学', '程序设计语言', 'JavaScript'],
+    tags: ['计算机科学', 'JavaScript', 'React'],
     type: '通用领域知识',
   },
   {
@@ -2320,12 +2321,11 @@ FunctionExecutionContext = {
   },
   {
     id: 188,
-    title: 'TODO',
+    title: 'React 的属性(Props)是什么？',
     answers: [
-      '1. outer（外层环境引用）',
-      '2. EnvironmentRecord（环境记录）',
+      'Props 代表 React 组件的输入值。',
     ],
-    tags: ['计算机科学', '程序设计语言', 'JavaScript'],
+    tags: ['计算机科学', 'JavaScript', 'React'],
     type: '通用领域知识',
   },
   {
@@ -2834,9 +2834,9 @@ class Person {
     title: `怎么组织闭环单链表？例如：[{name:'a'},{name:'b'},{name:'c'}]`,
     answers: [
       {
-        tag:'pre',
+        tag: 'pre',
         val:
-        `
+          `
 1.要注意形成闭环，新 node 要先指到第一个 node
 
 伪代码
@@ -3702,11 +3702,14 @@ function curry(func){
   },
   {
     id: 293,
-    title: 'TODO',
+    title: 'React 的状态和属性有什么区别？',
     answers: [
-      'ThisBinding',
+      '打个比方：组件相当于一个函数，属性相当于函数的参数，状态相当于在函数中声明的变量。',
+      '状态和属性都会影响组件的输出。',
+      '状态可以通过属性初始化；',
+      '它们的主要区别是属性在组件中不会被改变，状态可以通过事件被改变。',
     ],
-    tags: ['计算机科学', '程序设计语言', 'JavaScript'],
+    tags: ['计算机科学', 'JavaScript', 'React'],
     type: '通用领域知识',
   },
   {
@@ -4154,7 +4157,7 @@ Go，erlang：默认提供“隔离”方式，然后基于“隔离”又提供
     id: 329,
     title: '并发，是什么？把这种机制称为什么？',
     answers: [
-      `并发（全称“并发运行”）是一个核心以纳秒数量级的时间尺度在一个进程的指令和另一个进程的指令交错执行的行为。`,
+      `并发（全称“并发运行”）是一个核心以纳秒数量级的时间尺度在一个进程的指令和另一个进程的指令间交错执行的行为。`,
       `操作系统中，把这种交错执行的机制称为“上下文切换”`,
     ],
     tags: ['计算机科学', 'CPU',],
@@ -4904,18 +4907,16 @@ ASAP 全称 as soon as possible，中文意思为“尽快” 是将任务添加
   },
   {
     id: 381,
-    title: `React Context 是什么？为什么有？有什么用？优缺点？`,
+    title: `React Context 是为有怎？优缺点？`,
     answers: [
       {
         tag: 'pre',
         val:
           `
 是什么？
-  React Context 是 React 上下文的对象。
+  React 上下文是可以让不同层级的组件访问同一个数据的对象。
 为什么有？
-  通常不同组件的需要共享某个状态时，是通过逐层传递 Props 方式。但是中间的某个组件并不需要这个状态，这样违反了迪米特法则，增加了组件的耦合性。
-有什么用？
-  可以方便的让不同层级的组件访问同一个状态。
+  通常不同组件的需要共享某个数据时，是通过逐层传递 Props 方式。但是中间的某个组件并不需要这个数据，这样违反了迪米特法则，增加了组件的耦合性。
 优点
   降低组件的耦合性
 缺点
@@ -5063,9 +5064,7 @@ React element 对象一旦创建就不会对其修改。
     id: 388,
     title: `React 术语，work 是什么？`,
     answers: [
-      `work(工作) 是必须被执行的计算。`,
-      `工作通常是 update 的结果。`,
-      `[wɜːrk]`,
+      `work 是从旧树到显示新树的过程中，所需要的计算`,
     ],
     tags: ['计算机科学', 'JavaScript', 'React',],
     type: '专用领域知识',
@@ -5110,13 +5109,18 @@ function reconcileChildren 这个函数把 fiber updateQueue 得到的 React ele
   },
   {
     id: 391,
-    title: `React 术语，React element tree 是什么？和 Virtual DOM(VDOM、虚拟 DOM) 是什么关系？`,
+    title: `React 术语，React element tree 是什么？和 Virtual DOM(VDOM、虚拟 DOM) 是什么关系？为什么？`,
     answers: [
       {
         tag: 'pre',
         val:
           `
 “Virtual DOM”是一个编程中的将 UI 以“虚拟”形式保存在内存中的概念。
+
+为什么
+  页面的更新理想情况下，是只修改需要修改的部分。
+怎么做
+  当页面有更新时，根据更新生成新的“虚拟 DOM”树，然后对比新旧树，得出差异然后把差异更新到 DOM 上。
 
   需要说明的是，React 中的“虚拟 DOM”就是 React element tree，较早的时候称为“虚拟 DOM”是为了方便大家理解 React，
 但现在这个概念容易引起混乱，因为 React element tree 不仅可以通过 ReactDOM 渲染成 DOM，也可以通过 RN 渲染成原生视图.
@@ -5128,14 +5132,12 @@ function reconcileChildren 这个函数把 fiber updateQueue 得到的 React ele
   },
   {
     id: 392,
-    title: `在 React 中，Fiber tree 是什么？`,
+    title: `TODO`,
     answers: [
       {
         tag: 'pre',
         val:
           `
-详见 Fiber
-Fiber tree 和 React element tree 的节点是一一对应的。
         `,
       },
     ],
@@ -5144,14 +5146,14 @@ Fiber tree 和 React element tree 的节点是一一对应的。
   },
   {
     id: 393,
-    title: `在 React 中，Fiber 为什么是用链表(linked list)而不是栈（stack）来遍历组件树？各自的优点？`,
+    title: `在 React 中，Fiber 为什么通过链表(linked list)而不是栈（stack）来遍历组件树？各自的优点？`,
     answers: [
       {
         tag: 'pre',
         val:
           `
-在 V16 之前，React 是通过 stack 来遍历组件树的。
-使用栈来遍历树，每次 update 将立即重新渲染整个树，一次执行太多的 work，可能会导致掉帧。
+// 在 V16 之前，React 是通过 stack 来遍历组件树的。
+因为使用栈来遍历树时，必须一次性遍历整颗树，当树比较大时，会导致掉帧，进而影响用户体验。
 
 链表
   可以暂停工作
@@ -5181,8 +5183,7 @@ Fiber tree 和 React element tree 的节点是一一对应的。
     id: 395,
     title: `React 术语，update 是什么？`,
     answers: [
-      `update 是由用于 React 渲染的数据变化产生的更新。`,
-      `通常是由 setState 产生，update 会导致重新渲染。`,
+      'update 是由状态变化而产生的一个普通对象。',
     ],
     tags: ['计算机科学', 'JavaScript', 'React',],
     type: '专用领域知识',
@@ -5221,7 +5222,7 @@ Fiber tree 和 React element tree 的节点是一一对应的。
   },
   {
     id: 399,
-    title: `React 中，Fiber 分为那两个阶段？`,
+    title: `React 中，Work 分为那两个阶段？`,
     answers: [
       `渲染阶段(render phase)`,
       `提交阶段(commit phase)`,
@@ -5742,7 +5743,7 @@ chrome，在帧开始后，给 event handlers 的最长运行时间是 100ms，
   },
   {
     id: 432,
-    title: `In React, What is SyncCallbackQueue `,
+    title: `TODO`,
     answers: [
       {
         tag: 'pre',
@@ -5880,9 +5881,9 @@ function* generatorFn(){
     title: `DOM 中，删除某个 node 的所有子 node 的方式有哪些？速度都怎么样？为什么？`,
     answers: [
       {
-        tag:'pre',
+        tag: 'pre',
         val:
-        `
+          `
 主要有 3 中方式
   1:
     while(myNode.firstNode) myNode.removeChild(myNode.lastChild)
@@ -6016,7 +6017,7 @@ function* generatorFn(){
 - textarea
 - select
 
-受控组件，是值和某个状态相关联的组件。
+受控组件，是表单元素的值和 React 的状态相关联的组件。
 
 入队条件
 (elem.nodeName === select || (elem.nodeName === input && elem.type === file)) &&
@@ -6140,9 +6141,9 @@ Number.isNaN(x)
     title: `机器支持哪两种形式的右移？JavaScript 中怎么表示？`,
     answers: [
       {
-        tag:'pre',
+        tag: 'pre',
         val:
-        `
+          `
 逻辑右移和算术右移。
 在 JavaScript 中的表达方式：
   逻辑右移 >>>
@@ -6207,7 +6208,7 @@ Number.isNaN(x)
       {
         tag: 'pre',
         val:
-        `
+          `
 3 个方面
   事件的订阅
     React
@@ -6276,7 +6277,7 @@ Number.isNaN(x)
         val:
           `
 是什么？
-  JSX 是一个类似于 XML的语法拓展。
+  JSX 是一个类似于 XML 的语法拓展。用于对 UI 进行声明式描述。
   在 React 中，是 createElement 函数的语法糖。
 为什么？
   表达能力更强，可读性更好
@@ -6298,12 +6299,13 @@ Number.isNaN(x)
           `
 是什么？
   React 元素是一个用来描述组件属性或宿主元素属性的普通对象。
+  元素的类型有两种：
+    - 组件
+    - 宿主元素
 
 组件是什么？
   组件是独立的、可复用的 React 代码。
 
-拓展
-  React 树，虚拟 DOM
         `,
       },
     ],
@@ -6328,6 +6330,32 @@ Number.isNaN(x)
     ],
     tags: ['计算机科学', 'JavaScript', 'React',],
     type: '专用领域知识',
+  },
+  {
+    id: 474,
+    title: 'React 组件的状态，为什么只能通过相关的函数修改，不能直接通过变量修改？有展开问题',
+    answers: [
+      {
+        tag: 'pre',
+        val:
+          `
+这跟 React 树（虚拟 DOM）的更新机制有关。
+在 React 中，只有 Update 对象才能导致 React 树变化。
+展开：哪些函数能产生 Update 对象：1，2，3，4
+        `,
+      }
+    ],
+    tags: ['计算机科学', 'JavaScript', 'React'],
+    type: '专用领域知识'
+  },
+  {
+    id: 475,
+    title: 'React 的合成事件是什么？',
+    answers: [
+      '合成事件是根据 W3C 规范实现的跨浏览器的事件对象。',
+    ],
+    tags: ['计算机科学', 'JavaScript', 'React'],
+    type: '专用领域知识'
   },
 ];
 
