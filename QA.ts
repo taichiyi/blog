@@ -3610,8 +3610,7 @@ function curry(func){
     title: '为什么要使用 Redux ？使用 Redux 有哪些好处？',
     answers: [
       `因为单个页面的状态越来越多，状态的修改逻辑越来越复杂，`,
-      `状态的储存与修改，往往散落四处，`,
-      `使得代码难以维护。`,
+      `状态的储存与修改，往往散落四处，使得可维护性很差。`,
       {
         tag: 'pre',
         val: `
@@ -5103,6 +5102,7 @@ function reconcileChildren 这个函数把 fiber updateQueue 得到的 React ele
     title: `React 术语，Fiber 是什么？`,
     answers: [
       `Fiber 是一个使用链表来遍历树的协调器。`,
+      `展开：Fiber 为什么通过链表(linked list)而不是栈（stack）来遍历组件树？`,
     ],
     tags: ['计算机科学', 'JavaScript', 'React',],
     type: '专用领域知识',
@@ -5132,13 +5132,15 @@ function reconcileChildren 这个函数把 fiber updateQueue 得到的 React ele
   },
   {
     id: 392,
-    title: `TODO`,
+    title: `React 18 有什么变化？todo`,
     answers: [
       {
         tag: 'pre',
         val:
           `
-        `,
+1. SSR 支持 Suspense
+
+          `,
       },
     ],
     tags: ['计算机科学', 'JavaScript', 'React',],
@@ -5152,7 +5154,6 @@ function reconcileChildren 这个函数把 fiber updateQueue 得到的 React ele
         tag: 'pre',
         val:
           `
-// 在 V16 之前，React 是通过 stack 来遍历组件树的。
 因为使用栈来遍历树时，必须一次性遍历整颗树，当树比较大时，会导致掉帧，进而影响用户体验。
 
 链表
@@ -5232,7 +5233,7 @@ function reconcileChildren 这个函数把 fiber updateQueue 得到的 React ele
   },
   {
     id: 400,
-    title: `React 中，Fiber 的提交阶段又分为哪几个子阶段？会处理哪些副作用？`,
+    title: `React 中，提交阶段又分为哪几个子阶段？会处理哪些副作用？`,
     answers: [
       {
         tag: 'pre',
@@ -5308,7 +5309,7 @@ commit phase 子阶段
     answers: [
       `1. 兼容性：为了让事件在不同浏览器中有一致的表现.`,
       `2. 跨平台：像 React tree`,
-      `3. 优化：根据事件优先级处理事件`,
+      `3. 优化：允许根据事件优先级处理事件`,
     ],
     tags: ['计算机科学', 'JavaScript', 'React',],
     type: '专用领域知识',
@@ -5436,18 +5437,18 @@ DOM Levels 指的是 DOM 的标准。
         tag: 'pre',
         val:
           `
-为什么不是 window.setTimeout ？
+为什么用 MessageChannl 将任务添加到浏览器的任务队列？
   因为消息事件能最快的添加到任务队列，因为是同步添加的。
-  setTimeout 添加到任务队列一般要 3 个步骤：
+为什么不是 window.setTimeout ？
+  因为不能同步的将任务添加到任务队列。
+  setTimeout 添加到任务队列一般要 2 个步骤：
     1. 定时器线程，声明一个定时器
     2. 判断时间满足，则添加到任务队列
-    3. 触发任务
 
 为什么不是 window.postMessage ？
   因为当触发 message 事件后，其他的 message 事件处理器也会被调用：
     可能会立即取消事件的传播；
     会加大每一帧的开销。
-
         `,
       },
     ],
@@ -5621,9 +5622,24 @@ DOM Levels 指的是 DOM 的标准。
   },
   {
     id: 425,
-    title: `In React, when is pending discrete update on root?`,
+    title: `React 的 Suspense 是什么? 怎么做?`,
     answers: [
-      `当 scheduleUpdateOnFiber 时，执行上下文为 DiscreteEventContext ，并且优先级为 Blocking 或 Immediate 时。`,
+      `
+是一个支持按需加载的组件.
+
+Suspense Lazy 两个组件是为有用？
+  当 React 渲染遇到 Lazy 组件的时候，会发生什么？
+     如果 Lazy 的 status 不是 Resolved，则 throw 一个异常，错误值是一个 Promise。
+     然后捕获到这个错误后，就交给 handleError 这个函数处理，实际是 throwException 函数处理。
+      沿着父代(workInProgress.return)寻找 Suspense，如果找到的话，
+        给 Suspense 记上 DidCaptrue 副作用
+        给 Lazy 记上 ForceUpdateForLegacySuspense 副作用，删除 Incomplete 和 LifecycleEffectMask 副作用
+      然后从 抛出错误的 Lazy fiber 开始 completeUnitOfWork 知道遇到 Suspense fiber 并且有 DidCaptrue 副作用，
+      workInProgress.lanes = renderLanes; return workInProgress，然后继续 workLoop
+  Suspense 怎么知道是显示子代还是显示 fallback?
+    Suspense 如果不需要展示 fallback 的话，会把子元素包裹在 OffscreenComponent 中
+
+      `,
     ],
     tags: ['计算机科学', 'JavaScript', 'React',],
     type: '专用领域知识',
@@ -5632,7 +5648,19 @@ DOM Levels 指的是 DOM 的标准。
     id: 426,
     title: `useEffect 和 useLayoutEffect 有什么区别？`,
     answers: [
-      '错误',
+      {
+        tag: 'pre',
+        val:
+        `
+概况：
+  副作用触发的时机不同。
+具体：
+  layout effect 会在 React 的提交阶段的 layout 子阶段触发，也就是 DOM 变更之后。
+  effect 会被加入到浏览器的任务队列等待 flush。
+拓展：
+  事件循环
+        `,
+      },
       `useEffect 在 commit phase 的子阶段 layout phase 之前执行。`,
       `useLayoutEffect 在 layout phase 执行，也就是 DOM 变更后同步执行。`,
     ],
@@ -5667,7 +5695,7 @@ chrome，在帧开始后，给 event handlers 的最长运行时间是 100ms，
   },
   {
     id: 429,
-    title: `React V16 -> V17 有哪些变化？(V17 是为有用？)`,
+    title: `React V16 -> V17 有哪些变化？`,
     answers: [
       {
         tag: 'pre',
@@ -5676,15 +5704,20 @@ chrome，在帧开始后，给 event handlers 的最长运行时间是 100ms，
 是什么？
   V17 是一个支持应用中局部大版本迭代的 React 版本。
 为什么？
-  因为一个大型应用中可能会存在不同的 React 版本，当需要更新大版本时，如果一起更新那是最好的，也不会有什么问题。
-  但是因为各种原因会存在一个应用中有不同大版本的 React 例如 V15 和 V16。
+  因为一个大型应用中可能有不同大版本的 React 例如 V15 和 V16。
   在 V17 以前，这两个版本的 React 的事件系统可能会相互干扰，会存在出现未知风险。
 有什么用？
+
   事件系统
-    Event Delegation，Event Delegation node changed from document node to root container node(React tree root node)
-    用 focusin/focusout 替代 onFocus/onBlur
-    scroll event 如果被事件处理器处理，则不会在冒泡。
-    删除事件池
+    1. 事件委托，事件委托的额节点由 document 节点，改为“根容器”节点。
+      为什么
+        在 17 版本以前，如果一个应用有 2 个及以上的 React 版本，事件系统之间可能会相互干扰。
+    2. 删除事件池
+      事件池是在高频创建事件对象的情况下通过复用之前的事件对象节省开销的一个技术。
+      但实际上并没有节省多少开销，反而增加了代码的复杂性。
+    3. 用 focus/blur 替代 focusin/focusout
+      在 React 事件系统中 除了 scroll 事件之外，都会冒泡
+    4. scroll event 不会再冒泡。
   New JSX Transform
     是什么？
       从 React 中剥离出来的专门给编译器用的 jsx runtime。
@@ -5743,13 +5776,15 @@ chrome，在帧开始后，给 event handlers 的最长运行时间是 100ms，
   },
   {
     id: 432,
-    title: `TODO`,
+    title: `React 中，如何避免不必要的 render？`,
     answers: [
       {
         tag: 'pre',
         val:
           `
-        We'll flush SyncCallbackQueue either in the next tick, or earlier if something calls 'flushSyncCallbackQueue'
+1. 减少渲染的触发
+2. 避免重复渲染
+3. 避免重复计算
         `,
       },
     ],
@@ -6353,6 +6388,42 @@ Number.isNaN(x)
     title: 'React 的合成事件是什么？',
     answers: [
       '合成事件是根据 W3C 规范实现的跨浏览器的事件对象。',
+    ],
+    tags: ['计算机科学', 'JavaScript', 'React'],
+    type: '专用领域知识'
+  },
+  {
+    id: 476,
+    title: 'React 中，说说 Mixin -> Render Props -> 高阶组件 的演变。',
+    answers: [
+      {
+        tag: 'pre',
+        val:
+        `
+为什么
+  为了解决横切关注点（代码复用）
+演变
+  Mixin 缺点
+    1. 可能会相互依赖，相互耦合，不利于代码维护。
+    2. 不同的 Mixin 中的名称可能会冲突。
+  Render Props 缺点
+    1. 层层嵌套
+    2. 需要修改组件结构
+  高阶组件 缺点
+    1. 需要遵守约定，否则会降低 高阶组件 灵活性以及复用性
+        `,
+      },
+    ],
+    tags: ['计算机科学', 'JavaScript', 'React'],
+    type: '专用领域知识'
+  },
+  {
+    id: 477,
+    title: 'React 的插槽(Portals)是什么？有什么用？实现原理？',
+    answers: [
+      'Portals 是一种将子节点渲染的 DOM 中任意地方的方案。',
+      '原理：在渲染阶段，创建 Protal 会把“DOM 容器节点”和“子节点”保存在 fiber 的 stateNode 属性上',
+      '接上：在提交阶段，处理 mutation 副作用时，把“子节点”插入“DOM 容器节点”',
     ],
     tags: ['计算机科学', 'JavaScript', 'React'],
     type: '专用领域知识'
