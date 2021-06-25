@@ -2193,10 +2193,11 @@ Promise 是用于表示异步操作完成或失败的结果的对象。
   },
   {
     id: 180,
-    title: '在 React 中，纯函数组件是什么？有展开的问题。',
+    title: '在 React 中，纯函数组件是什么？',
     answers: [
-      '纯函数组件是假定输入等于输出的一种组件。',
-      '怎么做：所以会浅比较 props 和 state，如果没有改变则不会重新渲染。',
+      '纯函数组件是输入等于输出没有一种组件。输入不变则不用重新渲染。',
+      '展开：React 是怎么判断 纯函数组件 是否需要渲染的?',
+      '答：浅比较 props 和 state',
       '展开：组件的输入值只有 props 为什么要比较 state?',
       '答：因为 Props 可能会产生派生状态，所以也要比较 State。',
       '展开：React 内部如果判断组件是否需要渲染的机制？',
@@ -5738,27 +5739,15 @@ chrome，在帧开始后，给 event handlers 的最长运行时间是 100ms，
         tag: 'pre',
         val:
           `
-先说一下 React 的更新机制
-  当产生 update 时(例如: setState)，React 会安排 Fiber 树更新(scheduleUpdateOnFiber)。
-  但是有些 update 的是不需要立即更新的，出于性能考虑会批量更新。
-  所以 React 会根据优先级，选择 Fiber 的更新时机。
+需要先介绍一下 React 的更新机制
+  当产生 update 时(例如: setState)，React 会安排 React 树更新(scheduleUpdateOnFiber)。
+  出于性能考虑 React 会根据当前自身的执行上下文判断是否需要立即更新，否则等待其他 update 批量更新
 
-分两个角度看
-  代码
-    过期时间(安排 Fiber 更新的时间)
-    React executionContext 8421码(BCD)的情况。
-      同步
-        executionContext 中含有 Unbatched 上下文
-        executionContext 不含有 Commit 和 Render
-        executionContext 为 0(NoContext)
-      异步
-        非同步
-  使用者
-    同步
-      事件触发 update，例如：click
-    异步
-      update 是异步产生的，例如：setTimeout、then
+所以，结论是要看当时 React 的执行上下文才能确定是异步还是同步。
 
+一般来说
+  如果在更新实在事件处理函数(onCick)中产生，则会异步更新。
+  在任务队列(setTimeout, then)中产生，则会同步更新
         `,
       },
     ],
