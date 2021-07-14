@@ -17,6 +17,7 @@ export interface QAs {
     '词语' |
     '摄影' |
     'CSS' |
+    'HTTP' |
     'Redux' |
     'React' |
     'React Router' |
@@ -1484,20 +1485,20 @@ IoC 常见的实现方式：
   },
   {
     id: 124,
-    title: `在 JavaScript 中，Promise 是什么？为什么有？有什么用？`,
+    title: `在 JavaScript 中，Promise 是什么？为什么有？优点？`,
     answers: [
       {
         tag: 'pre',
         val:
           `
-Promise 是用于表示异步操作完成或失败的结果的对象。
+Promise 是用于表示异步操作结果的对象。
 
 为什么有？
   在没有 Promise 之前，都是通过回调函数（callback）来处理异步操作的。
   但是回调函数有些缺点：
-    当多个回调函数嵌套时，降低代码的可维护性。(回调地狱)
-    对异步操作中异常的处理不好。
-有什么用？
+    当多个回调函数嵌套时，会降低代码的可维护性。(回调地狱)
+    不好处理异步操作中产生的异常。
+优点
   Promise 可以优雅的链式的处理异步操作的结果以及中间发生的异常。
         `,
       },
@@ -5133,14 +5134,17 @@ function reconcileChildren 这个函数把 fiber updateQueue 得到的 React ele
   },
   {
     id: 392,
-    title: `React 18 有什么变化？todo`,
+    title: `React 18 有什么变化？`,
     answers: [
       {
         tag: 'pre',
         val:
           `
-1. SSR 支持 Suspense
-
+1. SSR 支持 Suspense。
+2. 对更新的优先级做了 2 点升级
+  1. 在并发模式下，所有更新默认是批处理的。如果想同步处理更新可以使用 flushSync 方法
+  2. 新增了一个 startTransition 方法，过渡更新
+  3. 新增了一个 useDeferredValue 方法
           `,
       },
     ],
@@ -5174,7 +5178,6 @@ function reconcileChildren 这个函数把 fiber updateQueue 得到的 React ele
     id: 394,
     title: `React 术语，reconciliation 是什么？`,
     answers: [
-      `reconciliation(协调) 是 React 通过算法计算出新树和旧树差异的过程。`,
       `reconciliation(协调) 是一个根据 update 生成新树并找出与旧树差异的过程。`,
       `[ˌrekənsɪliˈeɪʃn]`,
     ],
@@ -5703,14 +5706,14 @@ chrome，在帧开始后，给 event handlers 的最长运行时间是 100ms，
         val:
           `
 是什么？
-  V17 是一个支持应用中局部大版本迭代的 React 版本。
+  V17 是允许一个应用中有多个 React 版本。
 为什么？
   因为一个大型应用中可能有不同大版本的 React 例如 V15 和 V16。
   在 V17 以前，这两个版本的 React 的事件系统可能会相互干扰，会存在出现未知风险。
 有什么用？
 
   事件系统
-    1. 事件委托，事件委托的额节点由 document 节点，改为“根容器”节点。
+    1. 事件委托，事件委托的节点由 document 节点，改为“根容器”节点。
       为什么
         在 17 版本以前，如果一个应用有 2 个及以上的 React 版本，事件系统之间可能会相互干扰。
     2. 删除事件池
@@ -6277,20 +6280,114 @@ Number.isNaN(x)
   },
   {
     id: 470,
-    title: `React 有什么特点？（与 Vue、Angular）`,
+    title: `口喷 Promise 核心库。`,
     answers: [
       {
         tag: 'pre',
         val:
           `
-1. 声明式的
-2. 基于组件的
-3. 多端复用的
+核心概念：
+1. promise 对象 只受一个 then 函数影响
+2. promise 的 state 和 value 由 then 函数决定
+3. promise 的 state 由 then 函数的参数决定
+4. promise 的 value 由 then 函数的来源决定
+
+声明一个 Promise 构造函数，
+函数有一个形参，是一个 then 函数， promise 有两类 then 函数，分别是内部 then 和外部 then，不同的 then 会影响 promise 的 value。
+属性 state 表示 promise 的状态，
+有 4 个枚举值：
+0 表示进行中；
+1 表示已完成；
+2 表示已拒绝；
+3 表示替换，此时 value 是一个 promise，使用这个 promise 替换当前 promise；
+默认为进行中
+属性 value 表示 promise 的值，默认为 null；
+属性 deferreds 表示“延迟的 promise 列表”，需要等待父 promise 确定了才执行，
+默认值为空数组。
+
+方法 then ，属于内部 then，有两个形参：
+第一个是“完成函数”，如果用户调用此函数，所属的 promise 的状态将改为已完成。
+第二个是“拒绝函数”，如果用户调用此函数，所属的 promise 的状态将改为已拒绝；
+
+接下来描述一下构造函数的主体逻辑，
+如果 then 是内部 then 则直接返回 this，
+如果是外部 then ，则交给“外部 then 处理器”，构造函数的主体逻辑就完了。
+
+
+接下来声明一个“外部 then 处理器”，它是个函数，有两个形参，
+第一个是 promise ，表示 promise 对象，
+第二个是 then ，表示“外部 then 函数”
+接下来介绍函数主体逻辑，
+使用 let 关键字声明一个默认值为 false 的 done 变量，用于限制“完成函数”和“拒绝函数”的调用，因为 promise 的状态只能改变一次，
+然后声明一个 try catch，在 try 块中声明一个“完成函数的包装函数”和一个“拒绝函数的包装函数”，
+“完成函数的包装函数”有一个 value 形参，表示 promise 对象 value 的值，
+接下来是函数主体逻辑，
+如果 done 为 true，则函数直接 return，
+如果为 false，则把 true 赋值给 done 变量，并调用“完成函数”；
+“拒绝函数的包装函数”同理；
+如果捕获到异常，如果 done 为 true 则 return，否则把 true 赋值给 done 变量，并调用“拒绝函数”。
+
+
+接下来声明一个 reject 函数，也就是“拒绝函数”，
+函数有两个形参，
+一个是 promise，表示 promise 对象，
+一个是 value，表示 promise 对象的值，
+然后是函数的主体逻辑，
+将 promise state 设置为已拒绝，
+把参数 value 赋值到 promise 的 value 属性，
+调用“执行延迟 promise”函数。
+
+
+接下来声明“执行延迟 promise”函数，
+函数有一个 promise 形参，表示 promise 对象，
+接下来是函数主体，
+循环“延迟的 promise 列表”，
+循环体中只调用了“内部 then 处理器”这一个函数，
+循环结束，将空对象赋值到“延迟的 promise 列表”
+
+接下来声明“内部 then 处理器”，
+函数有两个形参，
+第一个形参是 promise，表示 promise 对象，
+第二个形参是“子 promise 信息”，
+然后是函数主体，
+while 循环判断 promise 的状态是“替换”，则把 promise 的 value 属性赋值到当前 promise。
+如果状态是进行中，则把“子 promise 信息” push 到“延迟的 promise 列表”，并 return。
+否则，把 这个两个形参绑定到“内部 then 处理器实现”函数，
+然后把绑定后的函数作为参数，调用“入队任务”函数，
+“入队任务”函数会把参数透传给“尽快调用”函数，
+“尽快调用”函数，会通过 setTimeout 函数把“绑定后的函数”尽快加入到任务队列中，等待下一个 tick。
+
+
+接下来声明“内部 then 处理器实现”，
+形参和“内部 then 处理器”一样，
+然后是函数主体，
+根据父 promise 的状态，获取回调函数，例如：如果是已完成，回调函数是“完成函数”，否则是“拒绝函数”，
+如果回调函数不为 null，
+如果“父 promise”的状态是已完成，
+则把“子 promise”和“父 promise”的 value 作为参数，调用“完成函数”，反之，调用“拒绝函数”，然后 return
+回调函数为 null，则声明一个 try catch，
+把“子 promise”和回调函数的返回值，当做参数，调用“完成函数”，
+如果捕获到异常，则在 catch 块中，以“子 promise”和错误对象为参数，调用“决绝函数”
+
+
+接下来声明一个 resolve 函数，也就是“完成函数”，
+形参和“拒绝函数”的形参是一样的
+然后是函数主体逻辑，
+如果 value 不等于 null 并且是对象或函数类型，并且严格相等于 promise 对象，则调用“拒绝函数”，并 return；
+如果 value 属于 promise 构造函数的实例，
+把 promise 的状态改为“替换”，把值改为 value，然后以 promise 对象为参数调用“执行延迟 promise”函数，并 return；
+在 try 块中尝试读取 value 的 then 属性，如果捕获到异常则调用“拒绝函数”，并 return，
+如果 then 是函数类型，则以 promise 对象，then 绑定 value 后的函数，为参数调用“外部 then 处理器”，并 return；
+
+将 promise 的状态改为“已完成”，
+将 value 赋值到 promise 的 value，
+以 promise 为参数，调用“执行延迟 promise”函数。
+
         `,
       },
     ],
-    tags: ['计算机科学', 'JavaScript', 'React',],
-    type: '专用领域知识',
+    tags: ['计算机科学', '程序设计语言', 'JavaScript'],
+    type: '通用领域知识',
   },
   {
     id: 471,
@@ -6416,6 +6513,48 @@ Number.isNaN(x)
     ],
     tags: ['计算机科学', 'JavaScript', 'React'],
     type: '专用领域知识'
+  },
+  {
+    id: 478,
+    title: 'HTTP 的报文（Message）结构是怎样的？',
+    answers: [
+      '起始行(Start line)，分两种',
+      '报文头(Message header)，分四类',
+      '回车换行(CRLF)',
+      '报文体(Message body)',
+    ],
+    tags: ['HTTP'],
+    type: '基础知识'
+  },
+  {
+    id: 479,
+    title: '介绍一下 HTTP 的请求方法。',
+    answers: [
+      '8 种'
+    ],
+    tags: ['HTTP'],
+    type: '基础知识'
+  },
+  {
+    id: 480,
+    title: 'GET 和 POST 的区别。',
+    answers: [
+      '有两个角度，每个角度有两个点。'
+    ],
+    tags: ['HTTP'],
+    type: '基础知识'
+  },
+  {
+    id: 481,
+    title: '介绍一下 HTTP 的状态码。',
+    answers: [
+      '1. 所属结构',
+      '2. 是什么',
+      '3. 类型介绍',
+      '4. 典型状态码介绍',
+    ],
+    tags: ['HTTP'],
+    type: '基础知识'
   },
 ];
 
