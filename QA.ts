@@ -18,6 +18,7 @@ export interface QAs {
     '摄影' |
     'CSS' |
     'HTTP' |
+    'TCP' |
     'Redux' |
     'React' |
     'React Router' |
@@ -4764,71 +4765,39 @@ store.dispatch(thunk)
   },
   {
     id: 373,
-    title: 'CSS 术语，FC、BFC、IFC 是什么？能解决什么问题？',
+    title: '介绍一下 CSS 格式化上下。',
     answers: [
-      {
-        tag: 'pre',
-        val:
-          `
-Formatting Context aka. FC
-  FC 是一个 CSS 的布局模式。例如: 一个节点有 display: flex 就是一个 Flex Formatting Context。
-
-Inline Formatting Context aka. IFC
-  内联格式上下文
-
-Block Formatting Context aka. BFC
-  BFC 是拥有独立容器特性的上下文。
-  解决的问题
-    1. 外边距重叠
-    2. 高度坍塌（清除浮动）
-    3. 防止被浮动元素覆盖
-
-每一个元素都会在特定的上下文中渲染。不同的上下文导致不同的渲染结果。
-容器里面的元素不会在布局上影响到外面的元素。
-        `,
-      },
+      '思维导图走起!',
     ],
-    tags: ['计算机科学', 'CSS',],
+    tags: ['CSS'],
     type: '通用领域知识',
   },
   {
     id: 374,
-    title: 'CSS 中，元素有哪几种定位方案？分别介绍一下',
+    title: '介绍一下 CSS 定位。',
     answers: [
-      {
-        tag: 'pre',
-        val:
-          `
-
-普通流(normal flow)
-  元素按照在 HTML 中的先后位置至上而下布局，块元素会占满整行，行内元素会水平排列，占满整行后会换行。
-浮动(float)
-  元素首先按照普通流的位置出现，然后脱离普通流根据浮动方向向左或向右移动。
-绝对定位(absolute positioning)
-  绝对定位元素会脱离普通流，具体位置由定位的坐标决定。
-        `,
-      }
+      '知识点树走起！',
     ],
-    tags: ['计算机科学', 'CSS',],
+    tags: ['CSS'],
     type: '通用领域知识',
   },
   {
     id: 375,
-    title: 'CSS 中，怎么让元素拥有 BFC？',
+    title: '布局题：div垂直居中，左右10px，高度始终为宽度一半。',
     answers: [
       {
         tag: 'pre',
         val:
           `
-1. body 元素
-2. 浮动元素，float 值不为 none
-3. 绝对定位元素，position 值为 absolute、fixed
-4. display 的值为 inline-block、flex、inline-flex、table-caption、table-cell
-5. overflow 的值不为 visible
+问题描述: 实现一个div垂直居中, 其距离屏幕左右两边各10px, 其高度始终是宽度的50%。同时div中有一个文字A，文字需要水平垂直居中。
+
+有两个方案：
+1. padding 百分比值的继承
+2. calc
         `,
       },
     ],
-    tags: ['计算机科学', 'CSS',],
+    tags: ['CSS'],
     type: '通用领域知识',
   },
   {
@@ -5505,7 +5474,7 @@ DOM Levels 指的是 DOM 的标准。
   },
   {
     id: 417,
-    title: `当在浏览器地址栏输入回车后，会发生什么？`,
+    title: `在浏览器地址栏输入 URL 回车之后发生了什么？`,
     answers: [
       {
         tag: 'pre',
@@ -5850,7 +5819,7 @@ chrome，在帧开始后，给 event handlers 的最长运行时间是 100ms，
       '优点：擅长处理大量并行简单运算。例如：图形渲染，加密，处理网络传输。',
       '缺点：不擅长串行任务，很难编程。',
     ],
-    tags: ['计算机科学', 'CPU',],
+    tags: ['计算机科学', 'GPU',],
     type: '基础知识',
   },
   {
@@ -6523,7 +6492,7 @@ while 循环判断 promise 的状态是“替换”，则把 promise 的 value �
       '回车换行(CRLF)',
       '报文体(Message body)',
     ],
-    tags: ['HTTP'],
+    tags: ['计算机网络', 'HTTP'],
     type: '基础知识'
   },
   {
@@ -6532,7 +6501,7 @@ while 循环判断 promise 的状态是“替换”，则把 promise 的 value �
     answers: [
       '8 种'
     ],
-    tags: ['HTTP'],
+    tags: ['计算机网络', 'HTTP'],
     type: '基础知识'
   },
   {
@@ -6541,7 +6510,7 @@ while 循环判断 promise 的状态是“替换”，则把 promise 的 value �
     answers: [
       '有两个角度，每个角度有两个点。'
     ],
-    tags: ['HTTP'],
+    tags: ['计算机网络', 'HTTP'],
     type: '基础知识'
   },
   {
@@ -6553,7 +6522,150 @@ while 循环判断 promise 的状态是“替换”，则把 promise 的 value �
       '3. 类型介绍',
       '4. 典型状态码介绍',
     ],
-    tags: ['HTTP'],
+    tags: ['计算机网络', 'HTTP'],
+    type: '基础知识'
+  },
+  {
+    id: 482,
+    title: '介绍一下 HTTP 特点。',
+    answers: [
+      '无状态',
+      '可靠传输（TCP）',
+      '请求-响应',
+    ],
+    tags: ['计算机网络', 'HTTP'],
+    type: '基础知识'
+  },
+  {
+    id: 483,
+    title: '介绍一下 HTTP 缺点。',
+    answers: [
+      '无状态，无法做身份识别，后来 cookie 解决了这个问题',
+      '报文起始行和头部，明文传输',
+      '队头阻塞',
+    ],
+    tags: ['计算机网络', 'HTTP'],
+    type: '基础知识'
+  },
+  {
+    id: 484,
+    title: '介绍一下 HTTP Accept 相关的请求头字段。',
+    answers: [
+      '5 种',
+    ],
+    tags: ['计算机网络', 'HTTP'],
+    type: '基础知识'
+  },
+  {
+    id: 485,
+    title: '对于定长或不定长的请求体，HTTP 是怎么传输的？',
+    answers: [
+      '如果是定长，则在请求头中指定 Content-Length 字段的大小。',
+      '如果是不定长，把请求头中 Transfer-Encoding 字段的值设置为 chunked。',
+    ],
+    tags: ['计算机网络', 'HTTP'],
+    type: '基础知识'
+  },
+  {
+    id: 486,
+    title: 'HTTP 如何处理大文件的传输？',
+    answers: [
+      '通过 Range 相关的头字段',
+    ],
+    tags: ['计算机网络', 'HTTP'],
+    type: '基础知识'
+  },
+  {
+    id: 487,
+    title: 'React Hook 为什么只能在函数最外层使用？',
+    answers: [
+      '为了保证 Hook 每一次渲染都能被调用，并且按照同样的顺序被调用。',
+    ],
+    tags: ['React'],
+    type: '专用领域知识'
+  },
+  {
+    id: 488,
+    title: '说一下 React Hook 的工作原理。',
+    answers: [
+      'TODO',
+    ],
+    tags: ['React'],
+    type: '专用领域知识'
+  },
+  {
+    id: 489,
+    title: 'CSS，三个元素如何“品”字布局？',
+    answers: [
+      '1. margin + calc',
+      '2. float + translate',
+    ],
+    tags: ['CSS'],
+    type: '通用领域知识'
+  },
+  {
+    id: 490,
+    title: '介绍一下 HTTP 代理',
+    answers: [
+      '知识点树走起！',
+    ],
+    tags: ['计算机网络', 'HTTP'],
+    type: '基础知识'
+  },
+  {
+    id: 491,
+    title: '介绍一下 HTTP Cookie',
+    answers: [
+      '知识点树走起！',
+    ],
+    tags: ['计算机网络', 'HTTP'],
+    type: '基础知识'
+  },
+  {
+    id: 492,
+    title: 'TODO',
+    answers: [
+      '浏览器 ->',
+      '计算机网络 ->',
+      '浏览器',
+    ],
+    tags: ['计算机科学'],
+    type: '基础知识'
+  },
+  {
+    id: 493,
+    title: '介绍一下 TCP 的握手',
+    answers: [
+      '知识点树走起！',
+    ],
+    tags: ['计算机网络', 'TCP'],
+    type: '基础知识'
+  },
+  {
+    id: 494,
+    title: '说说 TCP 和 UDP 的区别？',
+    answers: [
+      '知识点树走起！',
+    ],
+    tags: ['计算机网络', 'TCP'],
+    type: '基础知识'
+  },
+  {
+    id: 495,
+    title: '介绍一下 TCP 的挥手',
+    answers: [
+      '知识点树走起！',
+    ],
+    tags: ['计算机网络', 'TCP'],
+    type: '基础知识'
+  },
+  {
+    id: 496,
+    title: '介绍一下 TCP 的 SYN Flood 攻击',
+    answers: [
+      '知识点树走起！',
+    ],
+    tags: ['计算机网络', 'TCP'],
     type: '基础知识'
   },
 ];
