@@ -145,11 +145,11 @@ const data: QAs[] = [
   },
   {
     id: 8,
-    title: 'Redux 中，术语（6/10）Async Action 是什么？',
+    title: '说说 Redux 的术语。',
     answers: [
-      `Async Action 是一个先通过中间件转换为 Action 再传递给 dispatch 的对象。`,
+      '思维导图走起!',
     ],
-    tags: ['计算机科学', 'JavaScript', 'Redux'],
+    tags: ['Redux'],
     type: '专用领域知识',
   },
   {
@@ -327,7 +327,7 @@ Big Endian：
     answers: [
       '点号是一个可以匹配除了换行符以外的任意字符的字符组。',
     ],
-    tags: ['计算机科学', '正则表达式'],
+    tags: ['正则表达式'],
     type: '基础知识',
   },
   {
@@ -360,7 +360,7 @@ m
         `,
       },
     ],
-    tags: ['计算机科学', '正则表达式'],
+    tags: ['正则表达式'],
     type: '基础知识',
   },
   {
@@ -442,9 +442,7 @@ m
     id: 30,
     title: `在计算机科学中，防抖（Debouncing），是什么？`,
     answers: [
-      `防抖，是满足一个周期时才能触发一次的限制函数调用速率的技术。`,
-      `重点在于重置周期。`,
-      `[di'bausiŋ]`,
+      '思维导图走起!',
     ],
     tags: ['计算机科学'],
     type: '基础知识',
@@ -672,12 +670,9 @@ m
     id: 53,
     title: `依赖注入，是什么？产生的背景是什么？`,
     answers: [
-      `依赖注入，全称“依赖注入到容器”是将实例当参数传入到一个对象中去的技术。`,
-      '背景：',
-      `在面向对象编程时，在使用一个类时，往往需要实例化这个类，生成一个对象。`,
-      `但是有的类的实例化的过程中需要使用其它类，如果其它类还依赖其它类，则会出现重复实例化的情况。`,
+      '思维导图走起!',
     ],
-    tags: ['计算机科学', '设计模式'],
+    tags: ['设计模式'],
     type: '基础知识',
   },
   {
@@ -807,10 +802,9 @@ m
     id: 67,
     title: `为什么要遵守设计模式的原则，或者说为什么要学习和使用设计模式？`,
     answers: [
-      '为了提高软件的可维护性、可复用性、可拓展性和灵活性。',
-      '灵活性：redux 可以与任何 UI 层一起工作。可以通过中间件进行拓展。'
+      '思维导图走起!',
     ],
-    tags: ['计算机科学', '设计模式'],
+    tags: ['设计模式'],
     type: '基础知识',
   },
   {
@@ -1236,10 +1230,7 @@ IoC 常见的实现方式：
     id: 103,
     title: 'react-redux 是这么触发 react 重新渲染的？',
     answers: [
-      `react-redux 用了发布订阅模式，redux 是发布者，react 是订阅者，react-redux 是消息管道。`,
-      `具体来说，消息管道是 react-redux API 提供的 connect 高阶函数返回的高阶组件（在源码中叫做 ConnectFunction）。`,
-      `在这个高阶组件中，调用 React 的 useReducer Hook，然后返回一个 dispatch 函数。`,
-      `当发布者发布信息后，高阶组件会调用 dispatch 函数 dispatch 一个 action ，进而让 React 重新调度/重新渲染。`,
+      '思维导图走起!',
     ],
     tags: ['React', 'Redux'],
     type: '专用领域知识',
@@ -1272,7 +1263,7 @@ IoC 常见的实现方式：
         `,
       },
     ],
-    tags: ['计算机科学', '正则表达式'],
+    tags: ['正则表达式'],
     type: '基础知识',
   },
   {
@@ -1510,48 +1501,27 @@ Promise 是用于表示异步操作结果的对象。
     id: 125,
     title: '创建型模式，有哪几种？',
     answers: [
-      '1. 建造者（生成器）模式（Builder pattern）',
-      '2. 单例模式（Singleton pattern）',
-      '3. 原型模式（Prototype pattern）',
-      '4. 工厂方法模式（Factory method pattern）',
-      '5. 抽象工厂模式（Abstract factory pattern）',
+      '思维导图走起!',
     ],
-    tags: ['计算机科学', '设计模式'],
+    tags: ['设计模式'],
     type: '基础知识',
   },
   {
     id: 126,
     title: '结构型模式，有哪几种？',
     answers: [
-      '1. 适配器模式（Adapter pattern）',
-      '2. 桥接模式（Bridge pattern）',
-      '3. 过滤器模式（Filter pattern）',
-      '4. 组合模式（Composite pattern）',
-      '5. 外观模式（Facade pattern）',
-      '6. 装饰模式（Decorator pattern）',
-      '7. 代理模式（Proxy pattern）',
-      '8. 享元模式（Flyweight pattern）',
+      '思维导图走起!',
     ],
-    tags: ['计算机科学', '设计模式'],
+    tags: ['设计模式'],
     type: '基础知识',
   },
   {
     id: 127,
     title: '行为型模式，有哪几种？',
     answers: [
-      '1. 解释器模式（Interpreter pattern）',
-      '2. 模板模式（Template pattern）',
-      '3. 访问者模式（Visitor pattern）',
-      '4. 策略模式（Strategy pattern）',
-      '5. 状态模式（State pattern）',
-      '6. 观察者模式（Observer pattern）| 反应器模式（Reactor pattern）',
-      '7. 备忘录模式（Memento pattern）',
-      '8. 迭代器模式（Iterator pattern）',
-      '9. 命令模式（Command pattern）',
-      '10. 中介者模式（Mediator pattern）',
-      '11. 责任链模式（Chain of responsibility pattern）',
+      '思维导图走起!',
     ],
-    tags: ['计算机科学', '设计模式'],
+    tags: ['设计模式'],
     type: '基础知识',
   },
   {
@@ -1564,7 +1534,7 @@ Promise 是用于表示异步操作结果的对象。
       `Regular Expression`,
       `[ˈreɡjələr] [ɪkˈspreʃn]`,
     ],
-    tags: ['计算机科学', '正则表达式'],
+    tags: ['正则表达式'],
     type: '基础知识',
   },
   {
@@ -1573,27 +1543,27 @@ Promise 是用于表示异步操作结果的对象。
     answers: [
       '对象序列',
     ],
-    tags: ['计算机科学', '正则表达式'],
+    tags: ['正则表达式'],
     type: '基础知识',
   },
   {
     id: 130,
-    title: `装饰模式和代理模式有什么区别？`,
+    title: `装饰器模式和代理模式有什么区别？`,
     answers: [
       {
         tag: 'pre',
         val:
           `
 职能角度
-  装饰模式用于动态的向对象添加功能。
+  装饰器模式用于动态的向对象添加功能。
   代理模式用于限制对对象的访问。
 运行时角度
-  装饰模式只有在运行时，才能确定装饰对象的行为
+  装饰器模式只有在运行时，才能确定装饰对象的行为
   代理模式在编译时，就能确定代理对象的行为
         `,
       },
     ],
-    tags: ['计算机科学', '设计模式'],
+    tags: ['设计模式'],
     type: '基础知识',
   },
   {
@@ -1603,7 +1573,7 @@ Promise 是用于表示异步操作结果的对象。
       '由特殊字符和普通文本字符构成。',
       '特殊字符也称为“元字符”，普通文本字符也称为“文本”。',
     ],
-    tags: ['计算机科学', '正则表达式'],
+    tags: ['正则表达式'],
     type: '基础知识',
   },
   {
@@ -1614,7 +1584,7 @@ Promise 是用于表示异步操作结果的对象。
       `子表达式也称为结构体`,
       '元素包括字符、子表达式',
     ],
-    tags: ['计算机科学', '正则表达式'],
+    tags: ['正则表达式'],
     type: '基础知识',
   },
   {
@@ -1644,7 +1614,7 @@ Promise 是用于表示异步操作结果的对象。
     answers: [
       '有两种文本模式：单行文本模式和多行文本模式，通过添加修饰符 m 使用。',
     ],
-    tags: ['计算机科学', '正则表达式'],
+    tags: ['正则表达式'],
     type: '基础知识',
   },
   {
@@ -1653,7 +1623,7 @@ Promise 是用于表示异步操作结果的对象。
     answers: [
       '多行文本模式下，「$」是一个匹配字符串内部的换行符的简单锚点。',
     ],
-    tags: ['计算机科学', '正则表达式'],
+    tags: ['正则表达式'],
     type: '基础知识',
   },
   {
@@ -1671,7 +1641,7 @@ Promise 是用于表示异步操作结果的对象。
     answers: [
       '匹配的条件是，行开头(每一行都有一个开头)，然后是字母 t c y，然后是行末尾。',
     ],
-    tags: ['计算机科学', '正则表达式'],
+    tags: ['正则表达式'],
     type: '基础知识',
   },
   {
@@ -1681,7 +1651,7 @@ Promise 是用于表示异步操作结果的对象。
       '排除型字符组是一个非字符组内的元素。',
       '表示：通过在字符组的开头加入「^」来表示。',
     ],
-    tags: ['计算机科学', '正则表达式'],
+    tags: ['正则表达式'],
     type: '基础知识',
   },
   {
@@ -1690,7 +1660,7 @@ Promise 是用于表示异步操作结果的对象。
     answers: [
       `如果字符“-”出现在字符组的开头则表示普通字符，否则表示连字符（元字符）。`,
     ],
-    tags: ['计算机科学', '正则表达式'],
+    tags: ['正则表达式'],
     type: '基础知识',
   },
   {
@@ -1710,16 +1680,16 @@ Promise 是用于表示异步操作结果的对象。
       '子表达式又称为多选分支。',
       '通过使用元字符“|”来实现多选结构。',
     ],
-    tags: ['计算机科学', '正则表达式'],
+    tags: ['正则表达式'],
     type: '基础知识',
   },
   {
     id: 142,
-    title: 'JavaScript 中，Redux 是什么？',
+    title: '说说 Redux。',
     answers: [
-      'Redux 是一个用于管理可预测状态容器的 JavaScript 库。',
+      '思维导图走起!',
     ],
-    tags: ['计算机科学', 'JavaScript', 'Redux'],
+    tags: ['Redux'],
     type: '专用领域知识',
   },
   {
@@ -1730,7 +1700,7 @@ Promise 是用于表示异步操作结果的对象。
       '使用元字符“?”来表示。',
       '区间量词：{0,1}',
     ],
-    tags: ['计算机科学', '正则表达式'],
+    tags: ['正则表达式'],
     type: '基础知识',
   },
   {
@@ -1739,7 +1709,7 @@ Promise 是用于表示异步操作结果的对象。
     answers: [
       '量词是限定所作用元素的匹配次数的元字符。',
     ],
-    tags: ['计算机科学', '正则表达式'],
+    tags: ['正则表达式'],
     type: '基础知识',
   },
   {
@@ -1749,7 +1719,7 @@ Promise 是用于表示异步操作结果的对象。
       '元字符“+”是匹配元素至少一次的量词。',
       '{1,}',
     ],
-    tags: ['计算机科学', '正则表达式'],
+    tags: ['正则表达式'],
     type: '基础知识',
   },
   {
@@ -1759,7 +1729,7 @@ Promise 是用于表示异步操作结果的对象。
       '元字符“*”是匹配元素任意次的量词。',
       `{0,}`,
     ],
-    tags: ['计算机科学', '正则表达式'],
+    tags: ['正则表达式'],
     type: '基础知识',
   },
   {
@@ -1782,7 +1752,7 @@ Promise 是用于表示异步操作结果的对象。
         `.replace(/\\/g, '&#92;'),
       },
     ],
-    tags: ['计算机科学', '正则表达式'],
+    tags: ['正则表达式'],
     type: '基础知识',
   },
   {
@@ -1792,7 +1762,7 @@ Promise 是用于表示异步操作结果的对象。
       '“环视结构”是不匹配字符，只匹配文本中特定位置的正则表达式特性。',
       '环视不会占用“字符”。。',
     ],
-    tags: ['计算机科学', '正则表达式'],
+    tags: ['正则表达式'],
     type: '基础知识',
   },
   {
@@ -1804,7 +1774,7 @@ Promise 是用于表示异步操作结果的对象。
       '肯定逆序环视「(?<=...)」',
       '否定逆序环视「(?<!...)」',
     ],
-    tags: ['计算机科学', '正则表达式'],
+    tags: ['正则表达式'],
     type: '基础知识',
   },
   {
@@ -1814,7 +1784,7 @@ Promise 是用于表示异步操作结果的对象。
       '肯定顺序环视，是匹配成功条件为子表达式能够匹配右侧文本的表达式。',
       `例子：'Im a human'.replace(/(?=m)/,'\'') -> I'm a human`,
     ],
-    tags: ['计算机科学', '正则表达式'],
+    tags: ['正则表达式'],
     type: '基础知识',
   },
   {
@@ -1824,7 +1794,7 @@ Promise 是用于表示异步操作结果的对象。
       '肯定顺序环视，是匹配成功条件为子表达式不能匹配右侧文本的表达式。',
       `例子：'12345.67'.replace(/(?!\\d)/g,',') -> “2345,.67,”`,
     ],
-    tags: ['计算机科学', '正则表达式'],
+    tags: ['正则表达式'],
     type: '基础知识',
   },
   {
@@ -1834,7 +1804,7 @@ Promise 是用于表示异步操作结果的对象。
       `非捕获型表达式是只分组不捕获的表达式。`,
       '在元字符括号的开头依次添加问号和冒号表示。「(?:...)」',
     ],
-    tags: ['计算机科学', '正则表达式'],
+    tags: ['正则表达式'],
     type: '基础知识',
   },
   {
@@ -1846,7 +1816,7 @@ Promise 是用于表示异步操作结果的对象。
       'DFA(Deterministic finite automaton) 确定型有穷自动机',
       'NFA(Non-deterministic finite automaton) 非确定型有穷自动机',
     ],
-    tags: ['计算机科学', '正则表达式'],
+    tags: ['正则表达式'],
     type: '基础知识',
   },
   {
@@ -1868,7 +1838,7 @@ Promise 是用于表示异步操作结果的对象。
         `,
       },
     ],
-    tags: ['计算机科学', '正则表达式'],
+    tags: ['正则表达式'],
     type: '基础知识',
   },
   {
@@ -1878,7 +1848,7 @@ Promise 是用于表示异步操作结果的对象。
       '是',
       '匹配优先是尽可能多的匹配字符的匹配方式。',
     ],
-    tags: ['计算机科学', '正则表达式'],
+    tags: ['正则表达式'],
     type: '基础知识',
   },
   {
@@ -1887,7 +1857,7 @@ Promise 是用于表示异步操作结果的对象。
     answers: [
       '匹配文本',
     ],
-    tags: ['计算机科学', '正则表达式'],
+    tags: ['正则表达式'],
     type: '基础知识',
   },
   {
@@ -1897,7 +1867,7 @@ Promise 是用于表示异步操作结果的对象。
       '简单锚点',
       '复杂锚点',
     ],
-    tags: ['计算机科学', '正则表达式'],
+    tags: ['正则表达式'],
     type: '基础知识',
   },
   {
@@ -1909,7 +1879,7 @@ Promise 是用于表示异步操作结果的对象。
       '「\\b」'.replace(/\\/g, '&#92;'),
       '「\\B」'.replace(/\\/g, '&#92;'),
     ],
-    tags: ['计算机科学', '正则表达式'],
+    tags: ['正则表达式'],
     type: '基础知识',
   },
   {
@@ -1919,7 +1889,7 @@ Promise 是用于表示异步操作结果的对象。
       '匹配',
       '[例子]「^.*([0-9]+)」匹配“copyright 2003.”，子表达式只捕获到了“3”',
     ],
-    tags: ['计算机科学', '正则表达式'],
+    tags: ['正则表达式'],
     type: '基础知识',
   },
   {
@@ -1929,7 +1899,7 @@ Promise 是用于表示异步操作结果的对象。
       'NFA 引擎是表达式主导的。',
       'DFA 引擎是文本主导的。',
     ],
-    tags: ['计算机科学', '正则表达式'],
+    tags: ['正则表达式'],
     type: '基础知识',
   },
   {
@@ -1941,7 +1911,7 @@ Promise 是用于表示异步操作结果的对象。
       `"<div>abc</div><div>xyz</div>".match(/<div>.*?<\/div>/); // <div>abc</div>`.replace(/</g, '&#60;').replace(/>/g, '&#62;'),
       `"<div>abc</div><div>xyz</div>".match(/<div>.*<\/div>/);  // <div>abc</div><div>xyz</div>`.replace(/</g, '&#60;').replace(/>/g, '&#62;'),
     ],
-    tags: ['计算机科学', '正则表达式'],
+    tags: ['正则表达式'],
     type: '基础知识',
   },
   {
@@ -1952,7 +1922,7 @@ Promise 是用于表示异步操作结果的对象。
       `"<div>abc</div><div>xyz</div>".match(/<div>.*?<\/div>/); // <div>abc</div>`.replace(/</g, '&#60;').replace(/>/g, '&#62;'),
       `"<div>abc</div><div>xyz</div>".match(/<div>.*<\/div>/);  // <div>abc</div><div>xyz</div>`.replace(/</g, '&#60;').replace(/>/g, '&#62;'),
     ],
-    tags: ['计算机科学', '正则表达式'],
+    tags: ['正则表达式'],
     type: '基础知识',
   },
   {
@@ -1964,7 +1934,7 @@ Promise 是用于表示异步操作结果的对象。
       '星号     *        ',
       '区间量词 {min,max} ',
     ],
-    tags: ['计算机科学', '正则表达式'],
+    tags: ['正则表达式'],
     type: '基础知识',
   },
   {
@@ -1973,17 +1943,16 @@ Promise 是用于表示异步操作结果的对象。
     answers: [
       '备用状态',
     ],
-    tags: ['计算机科学', '正则表达式'],
+    tags: ['正则表达式'],
     type: '基础知识',
   },
   {
     id: 165,
-    title: 'Redux 中，术语（4/10）Dispatching Function 是什么？',
+    title: '说说浏览器的性能优化',
     answers: [
-      `Dispatching Function 是接受一个 action 对象并 dispatch 到所有 reducer 的函数。`,
-      `[dɪˈspætʃɪŋ]`,
+      '思维导图走起!',
     ],
-    tags: ['计算机科学', 'JavaScript', 'Redux'],
+    tags: ['浏览器'],
     type: '专用领域知识',
   },
   {
@@ -2046,9 +2015,7 @@ Promise 是用于表示异步操作结果的对象。
     id: 171,
     title: `在计算机科学中，节流（throttling），是什么？`,
     answers: [
-      `节流，是一个周期内，只能触发指定次数的限制函数调用速率的技术。`,
-      `重点在于加锁和解锁`,
-      `['θrɒtlɪŋ]`,
+      '思维导图走起!',
     ],
     tags: ['计算机科学'],
     type: '基础知识',
@@ -2144,36 +2111,15 @@ Promise 是用于表示异步操作结果的对象。
   },
   {
     id: 178,
-    title: 'JavaScript 中，Redux 有几个 API？各自的作用是什么？',
+    title: 'TODO',
     answers: [
       'Redux 提供了 5个 API。',
       {
         tag: 'pre',
-        val:
-          `
-1. createStore
-  是一个用于创建 Store 的函数。
-  注意：一个应用应该只有一个 Store.
-2. combineReducers
-  是一个将多个 reducer 转换为单个 reducer 的辅助函数。
-3. bindActionCreators
-  是一个将 dispatch 绑定到指定 ActionCreator 的函数。
-
-  bindActionCreator(actionCreator, dispatch) 相当于 actionCreator.bind(dispatch)
-
-  function bindActionCreator(actionCreator, dispatch) {
-    return function() {
-      return dispatch(actionCreator.apply(this, arguments))
-    }
-  }
-4. applyMiddleware
-  是创建一个将中间件引用于 dispatch 的 store enhancer 函数。
-5. compose
-  是一个从右至左依次传入参数调用所有函数的函数。
-        `,
+        val: '',
       }
     ],
-    tags: ['计算机科学', 'JavaScript', 'Redux'],
+    tags: [],
     type: '专用领域知识',
   },
   {
@@ -2579,13 +2525,13 @@ FunctionExecutionContext = {
   },
   {
     id: 213,
-    title: 'Redux 中，术语（1/10）State 是什么？',
+    title: 'TODO',
     answers: [
       'State 中文称为状态，可以是任意类型的值，但通常是一个可序列化的深层嵌套的对象，所以也称为状态树。',
       '',
       '按照约定，应该尽量保持 State 的可序列化。',
     ],
-    tags: ['计算机科学', 'JavaScript', 'Redux'],
+    tags: [],
     type: '专用领域知识',
   },
   {
@@ -2758,13 +2704,13 @@ class Person {
   },
   {
     id: 229,
-    title: 'Redux 中，术语（2/10）Action 是什么？',
+    title: 'TODO',
     answers: [
       'Action 是一个表示改变状态的意图的对象。',
       'Action 是将数据存储到 Store 中的唯一方式。',
       'Action 对象必须包含一个 type 属性，表示改变状态的意图。',
     ],
-    tags: ['计算机科学', 'JavaScript', 'Redux'],
+    tags: [],
     type: '专用领域知识',
   },
   {
@@ -3033,21 +2979,21 @@ Link 组件渲染到 DOM 中也是 a 标签，他们的区别主要提现在点�
     answers: [
       'HOC 是一个参数为组件，返回值为新组件的纯函数。',
       '用作：组件逻辑复用',
-      '用了：装饰模式',
+      '用了：装饰器模式',
     ],
     tags: ['React'],
     type: '专用领域知识',
   },
   {
     id: 249,
-    title: 'Redux 中，术语（3/10）Reducer 是什么？为什么要做成纯函数？',
+    title: 'TODO',
     answers: [
       `Reducer 是一个接受累加值和新值并返回新累加值的纯函数。`,
       `Reducer 和 Array.prototype.reduce 是一个概念。`,
       `纯函数的原因：为了状态可预测。`,
       `[rɪ'djuːsə]`,
     ],
-    tags: ['计算机科学', 'JavaScript', 'Redux'],
+    tags: [],
     type: '专用领域知识',
   },
   {
@@ -3063,30 +3009,18 @@ Link 组件渲染到 DOM 中也是 a 标签，他们的区别主要提现在点�
     id: 251,
     title: `设计模式是什么？`,
     answers: [
-      '设计模式是软件设计中常见问题的典型解决方案。',
+      '思维导图走起!',
     ],
-    tags: ['计算机科学', '设计模式'],
+    tags: ['设计模式'],
     type: '基础知识',
   },
   {
     id: 252,
     title: `设计模式有哪几个原则？分别是什么？`,
     answers: [
-      {
-        tag: 'pre',
-        val:
-          `
-1. 开闭原则，   是在不修改二进制(源)代码的前提下拓展模块功能的原则。
-2. 里式替换原则，是子类可以拓展父类功能但不改变父类原有功能的原则。
-3. 依赖倒置原则，是面向接口编程，而不是面向实现编程的原则。
-4. 单一职责原则，是通过控制类粒度大小来提高内聚性降低耦合性的原则。
-5. 接口隔离原则，是通过控制接口粒度大小来提高内聚性降低耦合性的原则。
-6. 迪米特法则， 是两个对象无须直接通信，则不发生直接相互调用，而通过第三方转发该调用的原则。
-7. 组合复用原则，是软件复用尽量使用组合或者聚合等关联关系来实现，其次使用继承关系来实现的原则。
-          `,
-      },
+      '思维导图走起!',
     ],
-    tags: ['计算机科学', '设计模式'],
+    tags: ['设计模式'],
     type: '基础知识',
   },
   {
@@ -3097,7 +3031,7 @@ Link 组件渲染到 DOM 中也是 a 标签，他们的区别主要提现在点�
       ``,
       `与耦合性是一个相对的概念。`,
     ],
-    tags: ['计算机科学', '设计模式'],
+    tags: ['设计模式'],
     type: '基础知识',
   },
   {
@@ -3106,7 +3040,7 @@ Link 组件渲染到 DOM 中也是 a 标签，他们的区别主要提现在点�
     answers: [
       '健壮性是指系统在非预期参数输入的情况下，维持系统稳定的特性。',
     ],
-    tags: ['计算机科学', '设计模式'],
+    tags: ['设计模式'],
     type: '基础知识',
   },
   {
@@ -3131,64 +3065,25 @@ Link 组件渲染到 DOM 中也是 a 标签，他们的区别主要提现在点�
         `,
       },
     ],
-    tags: ['计算机科学', '设计模式'],
+    tags: ['设计模式'],
     type: '基础知识',
   },
   {
     id: 256,
     title: `组合模式是什么？应用场景？优缺点？`,
     answers: [
-      {
-        tag: 'pre',
-        val:
-          `
-定义：
-  组合模式，是将拥有相同接口的对象组合成树状层次结构的拥有一致访问性的结构型设计模式。
-优点：
-  1. 使得客户端代码可以无须关心自己处理的是单个对象还是组合对象，这简化了客户端代码；
-  2. 加入新对象时，无需修改源代码。遵守“开闭原则”。
-缺点：
-  1. 对于功能差异较大的类，提供公共接口会有困难。
-应用场景：
-  1. 需要将拥有相同接口的对象组合成树状结构时。
-  2. 希望客户端代码以相同方式处理单个对象和组合对象时。
-          `,
-      }
+      '思维导图走起!',
     ],
-    tags: ['计算机科学', '设计模式'],
+    tags: ['设计模式'],
     type: '基础知识',
   },
   {
     id: 257,
-    title: `说说装饰模式的定义、应用场景和优缺点。`,
+    title: `说说装饰器模式的定义、应用场景和优缺点。`,
     answers: [
-      {
-        tag: 'pre',
-        val:
-          `
-定义：
-  装饰模式是在不改变对象的情况下, 通过装饰对象动态地为对象添加职责（功能）的结构型设计模式.
-
-实现方式
-  "装饰对象", 中定义了一些可动态添加到"组件对象"的功能.
-  "组件对象"会作为"装饰对象"的参数传入到"装饰对象".
-
-优点
-  在不改变原有对象的情况下，动态的给一个对象扩展功能。
-  可以用多个装饰对象嵌套来组合几种行为。
-  遵守开闭原则，单一职责原则。
-
-缺点
-  会增加许多装饰对象，过度使用会增加程序得复杂性。
-  装饰对象到后面往往会越来越复杂，难以维护。
-
-应用场景
-  当需要在不改变对象的情况下，动态地给该对象增加一些职责（功能）。
-  不能采用生成子类的方法进行拓展时。
-          `,
-      }
+      '思维导图走起!',
     ],
-    tags: ['计算机科学', '设计模式'],
+    tags: ['设计模式'],
     type: '基础知识',
   },
   {
@@ -3197,7 +3092,7 @@ Link 组件渲染到 DOM 中也是 a 标签，他们的区别主要提现在点�
     answers: [
       '两者工作方式几乎一样，但是“继承”是静态的，“聚合或组合”动态的（运行时可更改）。',
     ],
-    tags: ['计算机科学', '设计模式'],
+    tags: ['设计模式'],
     type: '基础知识',
   },
   {
@@ -3207,31 +3102,16 @@ Link 组件渲染到 DOM 中也是 a 标签，他们的区别主要提现在点�
       `通过严格相等运算符。`,
       `不会`,
     ],
-    tags: ['计算机科学', 'JavaScript', 'Redux'],
+    tags: ['Redux'],
     type: '专用领域知识',
   },
   {
     id: 260,
     title: `观察者模式是什么？应用场景？优缺点？`,
     answers: [
-      {
-        tag: 'pre',
-        val:
-          `
-定义：
-  观察者模式是当可观察对象发生状态变化时，通知所有“观察者”的设计模式。
-优点：
-  1. 目标与观察者的耦合性较低。
-  2. 遵守“开闭原则”。
-缺点：
-  1. 目标与观察者可能会出现循环引用。
-  2. 当观察者较多时，会降低通知的效率。
-应用场景：
-  1. 当对象间存在一对多关系，一个对象的状态发生改变会影响其他对象时。
-          `,
-      }
+      '思维导图走起!',
     ],
-    tags: ['计算机科学', '设计模式'],
+    tags: ['设计模式'],
     type: '基础知识',
   },
   {
@@ -3457,16 +3337,16 @@ addCurry(1)(2) // 3
         val:
           `
 // 知识点：闭包、作用域
-function curry(func){
-  let args=[]
-  return function f(){
-    args=[...args,...arguments]
-    if(args.length<func.length){
+function currying(func) {
+  let args = []
+  return function f() {
+    args = [...args, ...arguments]
+    if (args.length < func.length) {
       return f
-    }else{
-      const argsFunc=args
-      args=[]
-      return func.apply(null,argsFunc)
+    } else {
+      const result = func.apply(null, args)
+      args.length = 0
+      return result
     }
   }
 }
@@ -3601,25 +3481,12 @@ function curry(func){
   },
   {
     id: 288,
-    title: '为什么要使用 Redux ？使用 Redux 有哪些好处？',
+    title: 'TODO',
     answers: [
       `因为单个页面的状态越来越多，状态的修改逻辑越来越复杂，`,
       `状态的储存与修改，往往散落四处，使得可维护性很差。`,
-      {
-        tag: 'pre',
-        val: `
-好处
-  总则
-    提高代码可维护性
-  细则
-    可预测
-    中心化
-    可调试
-    灵活性
-        `,
-      },
     ],
-    tags: ['计算机科学', 'JavaScript', 'Redux'],
+    tags: [],
     type: '专用领域知识',
   },
   {
@@ -4234,28 +4101,9 @@ Reactive
     id: 336,
     title: `发布订阅（Publisher/Subscriber）模式是什么？与观察者（Observer）模式有什么区别？各举例一个使用场景`,
     answers: [
-      {
-        tag: 'pre',
-        val:
-          `
-发布订阅模式是信息源发生事件时将通知所有订阅者的同步信息的解决方案。
-
-区别
-  角色角度
-    观察者模式有 2 个：可观察对象、观察者
-    发布订阅模式有 3 个：发布者、订阅者、事件通道
-  耦合角度
-    观察者模式是松耦合的。
-    发布订阅模式是完全解耦的，发布者和订阅者没有直接联系。
-例子
-  观察者模式
-    redux
-  发布订阅模式
-    react-redux
-        `,
-      }
+      '思维导图走起!',
     ],
-    tags: ['计算机科学', '设计模式'],
+    tags: ['设计模式'],
     type: '基础知识',
   },
   {
@@ -4273,7 +4121,7 @@ Reactive
     answers: [
       '备用状态是正则表达式和字符串的位置标记。',
     ],
-    tags: ['计算机科学', '正则表达式'],
+    tags: ['正则表达式'],
     type: '基础知识',
   },
   {
@@ -4282,62 +4130,25 @@ Reactive
     answers: [
       '减少回溯',
     ],
-    tags: ['计算机科学', '正则表达式'],
+    tags: ['正则表达式'],
     type: '基础知识',
   },
   {
     id: 340,
     title: `外观模式是什么？有什么优缺点？有哪些应用场景？`,
     answers: [
-      {
-        tag: 'pre',
-        val:
-          `
-定义
-  外观模式是通过外观对象为多个子系统提供统一接口的结构型设计模式。
-
-优点
-  降低了子系统与客户端之间的耦合性。
-
-缺点
-  会增加许多外观对象，过度使用会增加程序得复杂性。
-  外观对象到后面往往会越来越复杂，难以维护。
-
-应用场景
-  需要将子系统组织为多层结构时。
-  当客户端与多个子系统之间存在很大的联系时。
-          `,
-      },
+      '思维导图走起!',
     ],
-    tags: ['计算机科学', '设计模式'],
+    tags: ['设计模式'],
     type: '基础知识',
   },
   {
     id: 341,
     title: '中介者模式是什么？有什么优缺点？有哪些应用场景？',
     answers: [
-      {
-        tag: 'pre',
-        val:
-          `
-定义
-  中介者模式是一种通过中介对象来使各个对象进行合作的行为型设计模式。
-
-优点
-  降低了对象之间的耦合性。
-  提高拓展性：将对象间的一对多关联转变为一对一。
-
-缺点
-  会增加许多中介对象，过度使用会增加程序得复杂性。
-  中介对象到后面往往会越来越复杂，难以维护。
-
-应用场景
-  当一些对象和其他对象紧密耦合以致难以对其进行修改时。
-  当组件因过于依赖其他组件而无法在不同应用中复用时。
-          `,
-      },
+      '思维导图走起!',
     ],
-    tags: ['计算机科学', '设计模式'],
+    tags: ['设计模式'],
     type: '基础知识',
   },
   {
@@ -4357,7 +4168,7 @@ Reactive
         `,
       },
     ],
-    tags: ['计算机科学', '设计模式'],
+    tags: ['设计模式'],
     type: '基础知识',
   },
   {
@@ -4373,7 +4184,7 @@ Reactive
     id: 344,
     title: `在算法中，空间复杂度是什么？`,
     answers: [
-      `空间复杂度是一个描述输入值大小与占用储存空间大小关系的函数。`,
+      `空间复杂度是一个描述输入值大小与储存空间大小关系的函数。`,
     ],
     tags: ['计算机科学', '算法'],
     type: '基础知识',
@@ -4398,50 +4209,50 @@ Reactive
   },
   {
     id: 347,
-    title: 'Redux 中，术语（5/10）Action Creator 是什么？',
+    title: 'TODO',
     answers: [
       `Action Creator 是一个专门创建 Action 或 Async Action 的工厂函数。`,
     ],
-    tags: ['计算机科学', 'JavaScript', 'Redux'],
+    tags: [],
     type: '专用领域知识',
   },
   {
     id: 348,
-    title: 'Redux 中，术语（7/10）MiddleWare 是什么？',
+    title: 'TODO',
     answers: [
       `MiddleWare（中间件） 是一个接受 Dispatch 函数然后返回新 Dispatch 函数的高阶函数。`,
       `通常是将 Async Actions 转为 Actions。`,
       `[ˈmɪdlwer]`,
     ],
-    tags: ['计算机科学', 'JavaScript', 'Redux'],
+    tags: [],
     type: '专用领域知识',
   },
   {
     id: 349,
-    title: 'Redux 中，术语（8/10）Store 是什么？',
+    title: 'TODO',
     answers: [
       `Store 是拥有存储状态和状态操作方法的对象。`,
     ],
-    tags: ['计算机科学', 'JavaScript', 'Redux'],
+    tags: [],
     type: '专用领域知识',
   },
   {
     id: 350,
-    title: 'Redux 中，术语（9/10）Store Creator 是什么？',
+    title: 'TODO',
     answers: [
       `Store Creator 是一个创建并返回 Store 对象的函数。`,
     ],
-    tags: ['计算机科学', 'JavaScript', 'Redux'],
+    tags: [],
     type: '专用领域知识',
   },
   {
     id: 351,
-    title: 'Redux 中，术语（10/10）Store enhancer 是什么？',
+    title: 'TODO',
     answers: [
       `Store enhancer 是接受一个 Store Creator 然后返回一个增强后的 Store Creator 的高阶函数。`,
       `[ɪnˈhænsər]`,
     ],
-    tags: ['计算机科学', 'JavaScript', 'Redux'],
+    tags: [],
     type: '专用领域知识',
   },
   {
@@ -4459,67 +4270,34 @@ Reactive
         `,
       },
     ],
-    tags: ['计算机科学', 'JavaScript', 'Redux'],
+    tags: ['Redux'],
     type: '专用领域知识',
   },
   {
     id: 353,
-    title: 'Redux 中，Store 有哪些 API？',
+    title: 'TODO',
     answers: [
-      {
-        tag: 'pre',
-        val:
-          `
-有 4 个 API。
-dispatch
-subscribe
-getState
-replaceReducer
-        `,
-      },
+      '',
     ],
-    tags: ['计算机科学', 'JavaScript', 'Redux'],
+    tags: [],
     type: '专用领域知识',
   },
   {
     id: 354,
-    title: 'Redux ToolKit 是什么？为什么有有什么用？',
+    title: '说说 Redux ToolKit',
     answers: [
-      `Redux ToolKit 是一个可以高效使用 Redux 的工具包。`,
-      {
-        tag: 'pre',
-        val:
-          `
-为什么有：
-  1. 配置 Store 过于复杂。
-  2. 为了让 Redux 更有用，必须添加许多其他的包。(redux-thunk、reselect)
-  3. Redux 需要添加许多样板代码。
-        `,
-      },
+      '思维导图走起!',
     ],
-    tags: ['计算机科学', 'JavaScript', 'Redux'],
+    tags: ['Redux'],
     type: '专用领域知识',
   },
   {
     id: 355,
-    title: 'redux-thunk 术语，thunk 是什么？和 术语 Async Action 有什么区别？有例子',
+    title: 'TODO',
     answers: [
-      `thunk 是一个接受 dispatch 和 getState 两个参数的函数。`,
-      `thunk 是 redux 中的一个概念。`,
-      {
-        tag: 'pre',
-        val:
-          `
-const thunk = (dispatch, getState) => {
-  setTimeout(dispatch, 1000, {
-    type: 'decrement',
-  })
-}
-store.dispatch(thunk)
-        `,
-      },
+      '思维导图走起!',
     ],
-    tags: ['计算机科学', 'JavaScript', 'Redux'],
+    tags: [],
     type: '专用领域知识',
   },
   {
@@ -4538,17 +4316,16 @@ store.dispatch(thunk)
         `,
       },
     ],
-    tags: ['计算机科学', 'JavaScript', 'Redux'],
+    tags: ['Redux'],
     type: '专用领域知识',
   },
   {
     id: 357,
-    title: 'react-redux 是什么？',
+    title: '说说 react-redux。',
     answers: [
-      `react-redux 是一个允许 react 组件读写 store 的 JavaScript 库。`,
-      // `react-redux 是一个让 React 组件可以从 Redux Store 中读取数据，并向 store dispatch action 以更新数据的库。`,
+      '思维导图走起!',
     ],
-    tags: ['计算机科学', 'JavaScript', 'Redux'],
+    tags: ['React', 'Redux'],
     type: '专用领域知识',
   },
   {
@@ -4557,7 +4334,7 @@ store.dispatch(thunk)
     answers: [
       `redux-thunk 是一个支持异步更新 store 的 redux 的中间件(middleware)。`,
     ],
-    tags: ['计算机科学', 'JavaScript', 'Redux'],
+    tags: ['Redux'],
     type: '专用领域知识',
   },
   {
@@ -4589,7 +4366,7 @@ store.dispatch(thunk)
       `2. 先调用 a 中间件的 dispatch`,
       `3. 先调用 中间件的 dispatch`,
     ],
-    tags: ['计算机科学', 'JavaScript', 'Redux'],
+    tags: ['Redux'],
     type: '专用领域知识',
   },
   {
@@ -4598,7 +4375,7 @@ store.dispatch(thunk)
     answers: [
       `redux-saga 是一个为了让副作用更易于管理、更有效的执行、更易于测试和调试 的 redux 的中间件(middleware)。`,
     ],
-    tags: ['计算机科学', 'JavaScript', 'Redux'],
+    tags: ['Redux'],
     type: '专用领域知识',
   },
   {
@@ -4691,67 +4468,25 @@ store.dispatch(thunk)
     answers: [
       `redux-observable 是 通过组合和取消 async action 来创建副作用的 redux 的中间件(middleware)。`,
     ],
-    tags: ['计算机科学', 'JavaScript', 'Redux'],
+    tags: ['Redux'],
     type: '专用领域知识',
   },
   {
     id: 371,
     title: `代理模式是什么？有什么优缺点？有哪些应用场景？`,
     answers: [
-      {
-        tag: 'pre',
-        val:
-          `
-定义
-  代理模式是通过代理对象对目标对象进行访问控制的结构型设计模式。
-
-优点
-  可以在遵守开闭原则的前提下，拓展目标对象。
-  将客户端与目标对象分离，降低了系统的耦合性。
-
-缺点
-  会增加许多代理对象，过度使用会增加程序得复杂性。
-
-应用场景
-  保护代理，对目标对象进行访问控制时。
-  远程代理，通过代理对象客户端程序可以访问在远程主机上的对象。
-  智能引用，在没有客户端使用对象时立即销毁该对象。
-  虚拟代理，加快响应时间，当对象的加载需要较长的时间时。
-  延迟加载，节省内存，当对象的加载开销非常大时。
-          `,
-      },
+      '思维导图走起!',
     ],
-    tags: ['计算机科学', '设计模式'],
+    tags: ['设计模式'],
     type: '基础知识',
   },
   {
     id: 372,
     title: `单例模式是什么？有什么优缺点？有哪些应用场景？有几种实现方式，各自的特点？`,
     answers: [
-      {
-        tag: 'pre',
-        val:
-          `
-定义
-  代理模式是一个类只能有一个实例，并提供一个访问该实例的全局节点的创建型设计模式。
-
-优点
-  避免对资源的多重占用
-
-缺点
-  单例模式的功能代码通常写在一个类中，如果功能设计不合理，则很容易违背单一职责原则。
-  在多线程环境下需要进行特殊处理，避免多个线程多次创建单例对象。
-  单元测试可能会比较困难
-
-实现方式
-  饿汉式
-    线程安全
-  懒汉式
-    非线程安全
-          `,
-      },
+      '思维导图走起!',
     ],
-    tags: ['计算机科学', '设计模式'],
+    tags: ['设计模式'],
     type: '基础知识',
   },
   {
@@ -6224,8 +5959,7 @@ Number.isNaN(x)
         val:
           `
 核心概念：
-1. promise 对象 只受一个 then 函数影响
-2. promise 的 state 和 value 由 then 函数决定
+2. promise 的 state 和 value 由 一个 then 函数决定
 3. promise 的 state 由 then 函数的参数决定
 4. promise 的 value 由 then 函数的来源决定
 
@@ -6239,7 +5973,7 @@ Number.isNaN(x)
 3 表示替换，此时 value 是一个 promise，使用这个 promise 替换当前 promise；
 默认为进行中
 属性 value 表示 promise 的值，默认为 null；
-属性 deferreds 表示“延迟的 promise 列表”，需要等待父 promise 确定了才执行，
+属性 deferreds 表示“延迟的 promise 数组”，需要等待父 promise 确定了才执行，
 默认值为空数组。
 
 方法 then ，属于内部 then，有两个形参：
@@ -6262,6 +5996,7 @@ Number.isNaN(x)
 如果 done 为 true，则函数直接 return，
 如果为 false，则把 true 赋值给 done 变量，并调用“完成函数”；
 “拒绝函数的包装函数”同理；
+以“完成函数的包装函数”和“拒绝函数的包装函数”为参数，调用 then 函数
 如果捕获到异常，如果 done 为 true 则 return，否则把 true 赋值给 done 变量，并调用“拒绝函数”。
 
 
@@ -6278,9 +6013,9 @@ Number.isNaN(x)
 接下来声明“执行延迟 promise”函数，
 函数有一个 promise 形参，表示 promise 对象，
 接下来是函数主体，
-循环“延迟的 promise 列表”，
+循环“延迟的 promise 数组”，
 循环体中只调用了“内部 then 处理器”这一个函数，
-循环结束，将空对象赋值到“延迟的 promise 列表”
+循环结束，将空对象赋值到“延迟的 promise 数组”
 
 接下来声明“内部 then 处理器”，
 函数有两个形参，
@@ -6288,29 +6023,41 @@ Number.isNaN(x)
 第二个形参是“子 promise 信息”，
 然后是函数主体，
 while 循环判断 promise 的状态是“替换”，则把 promise 的 value 属性赋值到当前 promise。
-如果状态是进行中，则把“子 promise 信息” push 到“延迟的 promise 列表”，并 return。
-否则，把 这个两个形参绑定到“内部 then 处理器实现”函数，
+如果状态是进行中，则把“子 promise 信息” push 到“延迟的 promise 数组”，并 return。
+否则，把这个两个形参绑定到“内部 then 处理器实现”函数，
 然后把绑定后的函数作为参数，调用“入队任务”函数，
 “入队任务”函数会把参数透传给“尽快调用”函数，
 “尽快调用”函数，会通过 setTimeout 函数把“绑定后的函数”尽快加入到任务队列中，等待下一个 tick。
+
+接下来声明“子 promise 信息”对象构造函数
+有三个形参：
+第一个是“子 promise ”
+第二个是“子 promise ”的完成函数
+第三个是“子 promise ”的拒绝函数
+有三个属性：
+第一个是 promise，也就是“子 promise ”
+第二个是“子 promise ”的完成函数，如果完成函数不是函数类型，则设置为 null
+第三个是“子 promise ”的拒绝函数，如果拒绝函数不是函数类型，则设置为 null
+
 
 
 接下来声明“内部 then 处理器实现”，
 形参和“内部 then 处理器”一样，
 然后是函数主体，
 根据父 promise 的状态，获取回调函数，例如：如果是已完成，回调函数是“完成函数”，否则是“拒绝函数”，
-如果回调函数不为 null，
+如果回调函数为 null，
 如果“父 promise”的状态是已完成，
 则把“子 promise”和“父 promise”的 value 作为参数，调用“完成函数”，反之，调用“拒绝函数”，然后 return
-回调函数为 null，则声明一个 try catch，
-把“子 promise”和回调函数的返回值，当做参数，调用“完成函数”，
-如果捕获到异常，则在 catch 块中，以“子 promise”和错误对象为参数，调用“决绝函数”
+回调函数不为 null，则声明一个 try catch，
+以“父 promise”的 value 为参数调用回调函数，然后得到回调函数的返回值，
+以“子 promise”和回调函数的返回值，为参数，调用“完成函数”，
+如果捕获到异常，则在 catch 块中，以“子 promise”和错误对象为参数，调用“拒绝函数”
 
 
 接下来声明一个 resolve 函数，也就是“完成函数”，
 形参和“拒绝函数”的形参是一样的
 然后是函数主体逻辑，
-如果 value 不等于 null 并且是对象或函数类型，并且严格相等于 promise 对象，则调用“拒绝函数”，并 return；
+如果 value 不等于 null 并且是对象或函数类型，并且严格相等于 promise 实参，则调用“拒绝函数”，并 return；
 如果 value 属于 promise 构造函数的实例，
 把 promise 的状态改为“替换”，把值改为 value，然后以 promise 对象为参数调用“执行延迟 promise”函数，并 return；
 在 try 块中尝试读取 value 的 then 属性，如果捕获到异常则调用“拒绝函数”，并 return，

@@ -80,8 +80,6 @@ Redux 和 Mobx
   第 3 步：根据“状态转移方程”实现代码
 
 
-# 执行上下文 Scope 堆内存 栈内存 他们之间的关系？
-
 # redux 测试检验
 
 - Redux 的中间件是什么？用过哪些？redux-thunk，redux-saga 和 redux-observable 的优缺点？

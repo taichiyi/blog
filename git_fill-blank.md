@@ -6,6 +6,7 @@
   <div>reset</div>
   <div>hard</div>
   <div>例子: git reset --hard 8ab3475</div>
+  <div>例子: git reset --hard v16.12.0</div>
 </details>
 
 <details>
